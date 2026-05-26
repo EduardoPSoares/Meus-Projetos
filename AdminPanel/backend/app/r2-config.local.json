@@ -1,0 +1,11 @@
+﻿{
+    "enabled":  true,
+    "endpoint":  "https://64744bf41d88189cab20f7b756f52e7d.r2.cloudflarestorage.com/warface-survival",
+    "bucket":  "warface-survival",
+    "accessKeyId":  "253aa4a435b581b482cf725a0bfa3068",
+    "secretAccessKey":  "e72a670934342cc74d208e74bb80d65d203b94f556442365bd31c32d0b600e96",
+    "publicBaseUrl":  "https://pub-5359fa4ead8743cbbc40f1166dd089f1.r2.dev/",
+    "prefix":  "",
+    "sourceDir":  "C:\\WarfaceSurvivor\\WarfaceSurvivor",
+    "launcherSourceDir":  "C:\\Users\\ray\\Pictures\\WarfaceSurvivor\\WarfaceLauncherJS"
+}
