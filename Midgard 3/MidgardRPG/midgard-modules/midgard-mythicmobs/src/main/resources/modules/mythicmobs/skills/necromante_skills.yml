@@ -1,0 +1,712 @@
+﻿# ============================================================================
+#  ███╗   ██╗███████╗ ██████╗██████╗  ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗████████╗███████╗
+#  ████╗  ██║██╔════╝██╔════╝██╔══██╗██╔═══██╗████╗ ████║██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
+#  ██╔██╗ ██║█████╗  ██║     ██████╔╝██║   ██║██╔████╔██║███████║██╔██╗ ██║   ██║   █████╗
+#  ██║╚██╗██║██╔══╝  ██║     ██╔══██╗██║   ██║██║╚██╔╝██║██╔══██║██║╚██╗██║   ██║   ██╔══╝
+#  ██║ ╚████║███████╗╚██████╗██║  ██║╚██████╔╝██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   ███████╗
+#  ╚═╝  ╚═══╝╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+#
+#  Necromante (Necromancer) — Master of Death and Undeath
+#  Dark purple (#330066, #6600cc) | Black (#1a1a1a) | Green (#00cc00, #006600)
+#  Soul blue (#00ccff) | Dark red (#660000)
+#
+#  Minecraft 1.21.1 — Folia Compatible
+#  All dynamic values use <skill.var.VARIABLE_NAME> syntax
+# ============================================================================
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  1. PACTO SOMBRIO — Dark Pact (PASSIVE)                                   ║
+# ║  A dark pact that enhances all dark magic with unholy power.               ║
+# ║  Variables: dark_damage_bonus (3.0 base / 1.5 per level)                  ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+PactoSombrio:
+  Skills:
+  - skill{s=PactoSombrio_Cast} @self
+
+PactoSombrio_Cast:
+  Skills:
+  - sound{s=entity.wither.ambient;v=0.6;p=0.5} @self
+  - effect:particles{p=soul;a=8;s=0.3;y=1.0} @self
+  - effect:particles{p=dust_color_transition;color=#330066;toColor=#1a1a1a;size=1.2;a=6;s=0.4;y=0.8} @self
+  - effect:particles{p=smoke;a=4;s=0.2;y=0.5} @self
+  - midgardDamage{type=DARK;bonus=<skill.var.dark_damage_bonus>} @self
+
+# --- Mk2 (Milestone: dark_pact_shadow) ---
+PactoSombrioMk2:
+  Skills:
+  - skill{s=PactoSombrioMk2_Cast} @self
+
+PactoSombrioMk2_Cast:
+  Skills:
+  - sound{s=entity.wither.ambient;v=0.7;p=0.4} @self
+  - effect:particles{p=soul;a=12;s=0.4;y=1.0} @self
+  - effect:particles{p=dust_color_transition;color=#330066;toColor=#6600cc;size=1.4;a=8;s=0.5;y=0.8} @self
+  - effect:particles{p=sculk_soul;a=6;s=0.3;y=0.6} @self
+  - effect:particles{p=smoke;a=6;s=0.3;y=0.5} @self
+  - midgardDamage{type=DARK;bonus=<skill.var.dark_damage_bonus>} @self
+
+# --- Mk3 (Milestone: dark_pact_abyss) ---
+PactoSombrioMk3:
+  Skills:
+  - skill{s=PactoSombrioMk3_Cast} @self
+
+PactoSombrioMk3_Cast:
+  Skills:
+  - sound{s=entity.wither.ambient;v=0.8;p=0.3} @self
+  - sound{s=entity.phantom.ambient;v=0.4;p=0.6} @self
+  - effect:particles{p=soul;a=16;s=0.5;y=1.0} @self
+  - effect:particles{p=soul_fire_flame;a=8;s=0.4;y=0.8} @self
+  - effect:particles{p=dust_color_transition;color=#6600cc;toColor=#1a1a1a;size=1.6;a=10;s=0.6;y=0.8} @self
+  - effect:particles{p=sculk_soul;a=10;s=0.4;y=0.6} @self
+  - effect:particles{p=reverse_portal;a=8;s=0.3;y=1.0} @self
+  - midgardDamage{type=DARK;bonus=<skill.var.dark_damage_bonus>} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  2. ALMA CORROMPIDA — Corrupted Soul (PASSIVE)                            ║
+# ║  A corrupted soul that drains life from all damage dealt.                  ║
+# ║  Variables: life_steal (3.0 base / 1.0 per level)                         ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+AlmaCorrompida:
+  Skills:
+  - skill{s=AlmaCorrompida_Cast} @self
+
+AlmaCorrompida_Cast:
+  Skills:
+  - sound{s=entity.zombie.ambient;v=0.5;p=0.6} @self
+  - effect:particles{p=witch;a=6;s=0.3;y=1.0} @self
+  - effect:particles{p=dust_color_transition;color=#00cc00;toColor=#006600;size=1.0;a=6;s=0.3;y=0.8} @self
+  - effect:particles{p=smoke;a=4;s=0.2;y=0.5} @self
+  - heal{a=<skill.var.life_steal>} @self
+
+# --- Mk2 (Milestone: corrupted_soul_drain) ---
+AlmaCorrompidaMk2:
+  Skills:
+  - skill{s=AlmaCorrompidaMk2_Cast} @self
+
+AlmaCorrompidaMk2_Cast:
+  Skills:
+  - sound{s=entity.zombie.ambient;v=0.6;p=0.5} @self
+  - effect:particles{p=witch;a=10;s=0.4;y=1.0} @self
+  - effect:particles{p=dust_color_transition;color=#00cc00;toColor=#1a1a1a;size=1.2;a=8;s=0.4;y=0.8} @self
+  - effect:particles{p=soul;a=4;s=0.2;y=0.6} @self
+  - effect:particles{p=large_smoke;a=4;s=0.3;y=0.5} @self
+  - heal{a=<skill.var.life_steal>} @self
+
+# --- Mk3 (Milestone: corrupted_soul_devour) ---
+AlmaCorrompidaMk3:
+  Skills:
+  - skill{s=AlmaCorrompidaMk3_Cast} @self
+
+AlmaCorrompidaMk3_Cast:
+  Skills:
+  - sound{s=entity.zombie.ambient;v=0.7;p=0.4} @self
+  - sound{s=entity.wither.ambient;v=0.3;p=0.7} @self
+  - effect:particles{p=witch;a=14;s=0.5;y=1.0} @self
+  - effect:particles{p=dust_color_transition;color=#006600;toColor=#660000;size=1.4;a=10;s=0.5;y=0.8} @self
+  - effect:particles{p=soul;a=8;s=0.3;y=0.6} @self
+  - effect:particles{p=sculk_soul;a=6;s=0.3;y=0.6} @self
+  - effect:particles{p=reverse_portal;a=6;s=0.3;y=1.0} @self
+  - heal{a=<skill.var.life_steal>} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  3. DRENAR VIDA — Drain Life (COMMON)                                     ║
+# ║  Drains life force from the target, healing the caster.                    ║
+# ║  Variables: damage (10.0/3.0), heal (5.0/1.5)                             ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+DrenarVida:
+  Skills:
+  - skill{s=DrenarVida_Cast} @self
+
+DrenarVida_Cast:
+  Skills:
+  - sound{s=entity.wither.ambient;v=0.8;p=0.6} @self
+  - effect:particles{p=dust_color_transition;color=#660000;toColor=#00cc00;size=1.0;a=12;s=0.1;y=0.5} @target
+  - effect:particles{p=soul;a=6;s=0.2;y=1.0} @target
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @target
+  - delay 5
+  - effect:particles{p=dust_color_transition;color=#00cc00;toColor=#006600;size=1.0;a=8;s=0.3;y=1.0} @self
+  - effect:particles{p=witch;a=6;s=0.2;y=0.8} @self
+  - heal{a=<skill.var.heal>} @self
+
+# --- Mk2 (Milestone: drain_life_siphon) ---
+DrenarVidaMk2:
+  Skills:
+  - skill{s=DrenarVidaMk2_Cast} @self
+
+DrenarVidaMk2_Cast:
+  Skills:
+  - sound{s=entity.wither.ambient;v=0.9;p=0.5} @self
+  - effect:particles{p=dust_color_transition;color=#660000;toColor=#00cc00;size=1.2;a=16;s=0.1;y=0.5} @target
+  - effect:particles{p=soul;a=10;s=0.3;y=1.0} @target
+  - effect:particles{p=sculk_soul;a=4;s=0.2;y=0.8} @target
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @target
+  - delay 5
+  - effect:particles{p=dust_color_transition;color=#00cc00;toColor=#006600;size=1.2;a=12;s=0.4;y=1.0} @self
+  - effect:particles{p=witch;a=8;s=0.3;y=0.8} @self
+  - effect:particles{p=soul;a=4;s=0.2;y=0.6} @self
+  - heal{a=<skill.var.heal>} @self
+
+# --- Mk3 (Milestone: drain_life_devour) ---
+DrenarVidaMk3:
+  Skills:
+  - skill{s=DrenarVidaMk3_Cast} @self
+
+DrenarVidaMk3_Cast:
+  Skills:
+  - sound{s=entity.wither.ambient;v=1.0;p=0.4} @self
+  - sound{s=entity.ghast.scream;v=0.4;p=0.5} @self
+  - effect:particles{p=dust_color_transition;color=#660000;toColor=#00cc00;size=1.4;a=20;s=0.1;y=0.5} @target
+  - effect:particles{p=soul;a=14;s=0.4;y=1.0} @target
+  - effect:particles{p=sculk_soul;a=8;s=0.3;y=0.8} @target
+  - effect:particles{p=reverse_portal;a=6;s=0.2;y=1.0} @target
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @target
+  - delay 5
+  - effect:particles{p=dust_color_transition;color=#00cc00;toColor=#006600;size=1.4;a=16;s=0.5;y=1.0} @self
+  - effect:particles{p=witch;a=12;s=0.4;y=0.8} @self
+  - effect:particles{p=soul_fire_flame;a=6;s=0.3;y=0.6} @self
+  - heal{a=<skill.var.heal>} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  4. INVOCAR ESQUELETO — Summon Skeleton (COMMON)                          ║
+# ║  Summons a skeleton minion from the grave to fight alongside the caster.   ║
+# ║  Variables: minion_health (20.0/5.0), minion_damage (5.0/2.0),            ║
+# ║             duration (15.0/1.0)                                            ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+InvocarEsqueleto:
+  Skills:
+  - skill{s=InvocarEsqueleto_Cast} @self
+
+InvocarEsqueleto_Cast:
+  Skills:
+  - sound{s=entity.skeleton.ambient;v=1.0;p=0.6} @self
+  - sound{s=entity.wither.spawn;v=0.4;p=0.8} @self
+  - effect:particles{p=dust_color_transition;color=#330066;toColor=#1a1a1a;size=1.5;a=20;s=1.5;y=0.1} @self
+  - effect:particles{p=soul;a=10;s=0.5;y=0.0} @self
+  - effect:particles{p=large_smoke;a=8;s=1.0;y=0.2} @self
+  - delay 10
+  - effect:particles{p=soul;a=16;s=0.3;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=8;s=0.3;y=1.0} @self
+  - summon{type=SKELETON;amount=1;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+
+# --- Mk2 (Milestone: skeleton_armored) ---
+InvocarEsqueletoMk2:
+  Skills:
+  - skill{s=InvocarEsqueletoMk2_Cast} @self
+
+InvocarEsqueletoMk2_Cast:
+  Skills:
+  - sound{s=entity.skeleton.ambient;v=1.0;p=0.5} @self
+  - sound{s=entity.wither.spawn;v=0.5;p=0.7} @self
+  - effect:particles{p=dust_color_transition;color=#330066;toColor=#6600cc;size=1.8;a=24;s=1.8;y=0.1} @self
+  - effect:particles{p=soul;a=14;s=0.6;y=0.0} @self
+  - effect:particles{p=large_smoke;a=10;s=1.2;y=0.2} @self
+  - effect:particles{p=smoke;a=6;s=0.8;y=0.3} @self
+  - delay 10
+  - effect:particles{p=soul;a=20;s=0.4;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=12;s=0.4;y=1.0} @self
+  - effect:particles{p=reverse_portal;a=6;s=0.3;y=0.8} @self
+  - summon{type=SKELETON;amount=1;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+
+# --- Mk3 (Milestone: skeleton_wither) ---
+InvocarEsqueletoMk3:
+  Skills:
+  - skill{s=InvocarEsqueletoMk3_Cast} @self
+
+InvocarEsqueletoMk3_Cast:
+  Skills:
+  - sound{s=entity.skeleton.ambient;v=1.0;p=0.4} @self
+  - sound{s=entity.wither.spawn;v=0.7;p=0.6} @self
+  - sound{s=entity.phantom.ambient;v=0.4;p=0.5} @self
+  - effect:particles{p=dust_color_transition;color=#6600cc;toColor=#1a1a1a;size=2.0;a=30;s=2.0;y=0.1} @self
+  - effect:particles{p=soul_fire_flame;a=16;s=0.7;y=0.0} @self
+  - effect:particles{p=soul;a=18;s=0.7;y=0.0} @self
+  - effect:particles{p=large_smoke;a=14;s=1.5;y=0.2} @self
+  - delay 10
+  - effect:particles{p=soul;a=24;s=0.5;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=16;s=0.5;y=1.0} @self
+  - effect:particles{p=reverse_portal;a=10;s=0.4;y=0.8} @self
+  - effect:particles{p=soul_fire_flame;a=8;s=0.3;y=1.2} @self
+  - summon{type=WITHER_SKELETON;amount=1;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  5. MALDICAO — Curse (COMMON)                                             ║
+# ║  Hurls a vile curse at the target, inflicting weakness and decay.          ║
+# ║  Variables: damage (8.0/2.5), weakness_duration (3.0/0.5)                 ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+Maldicao:
+  Skills:
+  - skill{s=Maldicao_Cast} @self
+
+Maldicao_Cast:
+  Skills:
+  - sound{s=entity.wither.ambient;v=0.8;p=0.7} @self
+  - effect:particles{p=dust_color_transition;color=#330066;toColor=#1a1a1a;size=1.0;a=10;s=0.1;y=1.0} @target
+  - effect:particles{p=smoke;a=8;s=0.3;y=1.0} @target
+  - effect:particles{p=soul;a=6;s=0.2;y=1.5} @target
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @target
+  - potion{t=WEAKNESS;d=<skill.var.weakness_duration>;l=1} @target
+  - potion{t=WITHER;d=<skill.var.weakness_duration>;l=0} @target
+
+# --- Mk2 (Milestone: curse_shadow) ---
+MaldicaoMk2:
+  Skills:
+  - skill{s=MaldicaoMk2_Cast} @self
+
+MaldicaoMk2_Cast:
+  Skills:
+  - sound{s=entity.wither.ambient;v=0.9;p=0.6} @self
+  - sound{s=entity.phantom.ambient;v=0.3;p=0.7} @self
+  - effect:particles{p=dust_color_transition;color=#330066;toColor=#6600cc;size=1.2;a=14;s=0.1;y=1.0} @target
+  - effect:particles{p=large_smoke;a=8;s=0.4;y=1.0} @target
+  - effect:particles{p=soul;a=10;s=0.3;y=1.5} @target
+  - effect:particles{p=sculk_soul;a=4;s=0.2;y=0.8} @target
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @target
+  - potion{t=WEAKNESS;d=<skill.var.weakness_duration>;l=1} @target
+  - potion{t=WITHER;d=<skill.var.weakness_duration>;l=1} @target
+
+# --- Mk3 (Milestone: curse_damnation) ---
+MaldicaoMk3:
+  Skills:
+  - skill{s=MaldicaoMk3_Cast} @self
+
+MaldicaoMk3_Cast:
+  Skills:
+  - sound{s=entity.wither.ambient;v=1.0;p=0.5} @self
+  - sound{s=entity.ghast.scream;v=0.4;p=0.6} @self
+  - effect:particles{p=dust_color_transition;color=#6600cc;toColor=#660000;size=1.4;a=18;s=0.1;y=1.0} @target
+  - effect:particles{p=large_smoke;a=12;s=0.5;y=1.0} @target
+  - effect:particles{p=soul;a=14;s=0.4;y=1.5} @target
+  - effect:particles{p=sculk_soul;a=8;s=0.3;y=0.8} @target
+  - effect:particles{p=reverse_portal;a=6;s=0.3;y=1.0} @target
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @target
+  - potion{t=WEAKNESS;d=<skill.var.weakness_duration>;l=2} @target
+  - potion{t=WITHER;d=<skill.var.weakness_duration>;l=1} @target
+  - potion{t=SLOWNESS;d=<skill.var.weakness_duration>;l=1} @target
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  6. TOQUE DA MORTE — Touch of Death (COMMON)                              ║
+# ║  The necromancer channels death itself through their hands.                ║
+# ║  Variables: damage (25.0/6.0)                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+ToqueDaMorte:
+  Skills:
+  - skill{s=ToqueDaMorte_Cast} @self
+
+ToqueDaMorte_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=0.7;p=1.2} @self
+  - effect:particles{p=dust_color_transition;color=#1a1a1a;toColor=#330066;size=1.5;a=16;s=0.3;y=1.0} @target
+  - effect:particles{p=soul;a=10;s=0.4;y=1.0} @target
+  - effect:particles{p=smoke;a=12;s=0.5;y=0.5} @target
+  - effect:particles{p=large_smoke;a=6;s=0.3;y=0.8} @target
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @target
+
+# --- Mk2 (Milestone: death_touch_shadow) ---
+ToqueDaMorteMk2:
+  Skills:
+  - skill{s=ToqueDaMorteMk2_Cast} @self
+
+ToqueDaMorteMk2_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=0.8;p=1.0} @self
+  - sound{s=entity.phantom.ambient;v=0.3;p=0.8} @self
+  - effect:particles{p=dust_color_transition;color=#1a1a1a;toColor=#6600cc;size=1.8;a=20;s=0.4;y=1.0} @target
+  - effect:particles{p=soul;a=14;s=0.5;y=1.0} @target
+  - effect:particles{p=sculk_soul;a=6;s=0.3;y=0.8} @target
+  - effect:particles{p=large_smoke;a=10;s=0.4;y=0.5} @target
+  - effect:particles{p=smoke;a=8;s=0.5;y=0.8} @target
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @target
+
+# --- Mk3 (Milestone: death_touch_reaper) ---
+ToqueDaMorteMk3:
+  Skills:
+  - skill{s=ToqueDaMorteMk3_Cast} @self
+
+ToqueDaMorteMk3_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.8} @self
+  - sound{s=entity.ghast.scream;v=0.5;p=0.6} @self
+  - sound{s=entity.phantom.ambient;v=0.4;p=0.5} @self
+  - effect:particles{p=dust_color_transition;color=#1a1a1a;toColor=#660000;size=2.0;a=24;s=0.5;y=1.0} @target
+  - effect:particles{p=soul_fire_flame;a=12;s=0.5;y=1.0} @target
+  - effect:particles{p=soul;a=16;s=0.6;y=1.0} @target
+  - effect:particles{p=sculk_soul;a=10;s=0.4;y=0.8} @target
+  - effect:particles{p=reverse_portal;a=8;s=0.4;y=1.0} @target
+  - effect:particles{p=large_smoke;a=14;s=0.6;y=0.5} @target
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @target
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  7. ENXAME DE ALMAS — Soul Swarm (COMMON)                                 ║
+# ║  Unleashes a swarm of tormented souls that tear through all nearby foes.   ║
+# ║  Variables: damage (18.0/5.0), radius (4.0/0.3)                           ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+EnxameDeAlmas:
+  Skills:
+  - skill{s=EnxameDeAlmas_Cast} @self
+
+EnxameDeAlmas_Cast:
+  Skills:
+  - sound{s=entity.ghast.scream;v=0.6;p=1.2} @self
+  - sound{s=entity.phantom.ambient;v=0.5;p=0.8} @self
+  - effect:particles{p=soul;a=20;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=dust_color_transition;color=#00ccff;toColor=#330066;size=1.0;a=14;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=sculk_soul;a=8;s=<skill.var.radius>;y=0.6} @self
+  - effect:particles{p=smoke;a=10;s=<skill.var.radius>;y=0.5} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+
+# --- Mk2 (Milestone: soul_swarm_ghosts) ---
+EnxameDeAlmasMk2:
+  Skills:
+  - skill{s=EnxameDeAlmasMk2_Cast} @self
+
+EnxameDeAlmasMk2_Cast:
+  Skills:
+  - sound{s=entity.ghast.scream;v=0.7;p=1.0} @self
+  - sound{s=entity.phantom.ambient;v=0.6;p=0.7} @self
+  - effect:particles{p=soul;a=28;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=dust_color_transition;color=#00ccff;toColor=#6600cc;size=1.2;a=18;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=sculk_soul;a=12;s=<skill.var.radius>;y=0.6} @self
+  - effect:particles{p=soul_fire_flame;a=6;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=large_smoke;a=8;s=<skill.var.radius>;y=0.5} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+
+# --- Mk3 (Milestone: soul_swarm_torment) ---
+EnxameDeAlmasMk3:
+  Skills:
+  - skill{s=EnxameDeAlmasMk3_Cast} @self
+
+EnxameDeAlmasMk3_Cast:
+  Skills:
+  - sound{s=entity.ghast.scream;v=0.8;p=0.8} @self
+  - sound{s=entity.phantom.ambient;v=0.7;p=0.6} @self
+  - sound{s=entity.wither.ambient;v=0.4;p=0.5} @self
+  - effect:particles{p=soul;a=36;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=soul_fire_flame;a=14;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=dust_color_transition;color=#00ccff;toColor=#660000;size=1.4;a=22;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=sculk_soul;a=16;s=<skill.var.radius>;y=0.6} @self
+  - effect:particles{p=reverse_portal;a=10;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=large_smoke;a=12;s=<skill.var.radius>;y=0.5} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  8. EXPLOSAO NECROTICA — Necrotic Explosion (COMMON)                      ║
+# ║  Detonates a mass of necrotic energy, poisoning and withering all nearby.  ║
+# ║  Variables: damage (22.0/5.5), radius (4.0/0.3)                           ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+ExplosaoNecrotica:
+  Skills:
+  - skill{s=ExplosaoNecrotica_Cast} @self
+
+ExplosaoNecrotica_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=0.8;p=1.0} @self
+  - effect:particles{p=dust_color_transition;color=#00cc00;toColor=#1a1a1a;size=1.5;a=20;s=<skill.var.radius>;y=0.5} @self
+  - effect:particles{p=witch;a=14;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=large_smoke;a=16;s=<skill.var.radius>;y=0.3} @self
+  - effect:particles{p=smoke;a=10;s=<skill.var.radius>;y=0.5} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+  - potion{t=WITHER;d=3;l=0} @EntitiesInRadius{r=<skill.var.radius>}
+
+# --- Mk2 (Milestone: necrotic_burst) ---
+ExplosaoNecroticaMk2:
+  Skills:
+  - skill{s=ExplosaoNecroticaMk2_Cast} @self
+
+ExplosaoNecroticaMk2_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=0.9;p=0.8} @self
+  - sound{s=entity.zombie.ambient;v=0.4;p=0.6} @self
+  - effect:particles{p=dust_color_transition;color=#00cc00;toColor=#330066;size=1.8;a=26;s=<skill.var.radius>;y=0.5} @self
+  - effect:particles{p=witch;a=18;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=large_smoke;a=20;s=<skill.var.radius>;y=0.3} @self
+  - effect:particles{p=soul;a=8;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=sculk_soul;a=6;s=<skill.var.radius>;y=0.6} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+  - potion{t=WITHER;d=4;l=1} @EntitiesInRadius{r=<skill.var.radius>}
+  - potion{t=POISON;d=3;l=0} @EntitiesInRadius{r=<skill.var.radius>}
+
+# --- Mk3 (Milestone: necrotic_devastation) ---
+ExplosaoNecroticaMk3:
+  Skills:
+  - skill{s=ExplosaoNecroticaMk3_Cast} @self
+
+ExplosaoNecroticaMk3_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.6} @self
+  - sound{s=entity.ghast.scream;v=0.5;p=0.7} @self
+  - sound{s=entity.phantom.ambient;v=0.4;p=0.5} @self
+  - effect:particles{p=dust_color_transition;color=#006600;toColor=#660000;size=2.0;a=32;s=<skill.var.radius>;y=0.5} @self
+  - effect:particles{p=witch;a=24;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=large_smoke;a=24;s=<skill.var.radius>;y=0.3} @self
+  - effect:particles{p=soul;a=14;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=soul_fire_flame;a=10;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=sculk_soul;a=10;s=<skill.var.radius>;y=0.6} @self
+  - effect:particles{p=reverse_portal;a=8;s=<skill.var.radius>;y=1.0} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+  - potion{t=WITHER;d=5;l=1} @EntitiesInRadius{r=<skill.var.radius>}
+  - potion{t=POISON;d=4;l=1} @EntitiesInRadius{r=<skill.var.radius>}
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  9. EXERCITO DOS MORTOS — Army of the Dead (ULTIMATE — Channeled)         ║
+# ║  Opens a gateway to the underworld, summoning an army of undead servants.  ║
+# ║  Variables: minion_count (3.0/1.0), minion_health (15.0/4.0),             ║
+# ║             minion_damage (4.0/1.5), duration (20.0/1.0)                  ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+ExercitoDosMortos:
+  Skills:
+  - skill{s=ExercitoDosMortos_Cast} @self
+
+ExercitoDosMortos_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.5} @self
+  - sound{s=entity.zombie.ambient;v=0.8;p=0.4} @self
+  # Dark ritual circle forms on the ground
+  - effect:particles{p=dust_color_transition;color=#330066;toColor=#1a1a1a;size=2.0;a=30;s=3.0;y=0.1} @self
+  - effect:particles{p=soul;a=20;s=2.0;y=0.0} @self
+  - effect:particles{p=large_smoke;a=16;s=2.5;y=0.2} @self
+  - delay 10
+  # First wave — skeletons rise
+  - sound{s=entity.skeleton.ambient;v=0.8;p=0.5} @self
+  - effect:particles{p=soul;a=14;s=1.0;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=8;s=1.0;y=1.0} @self
+  - summon{type=SKELETON;amount=1;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+  - delay 15
+  # Second wave — zombies claw out
+  - sound{s=entity.zombie.ambient;v=0.8;p=0.5} @self
+  - effect:particles{p=soul;a=14;s=1.2;y=1.5} @self
+  - effect:particles{p=large_smoke;a=10;s=1.0;y=0.5} @self
+  - summon{type=ZOMBIE;amount=1;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+  - delay 15
+  # Third wave — more undead emerge
+  - sound{s=entity.skeleton.ambient;v=0.9;p=0.6} @self
+  - effect:particles{p=soul;a=14;s=1.0;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=10;s=0.8;y=1.0} @self
+  - summon{type=SKELETON;amount=1;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+
+# --- Mk2 (Milestone: army_of_dead_horde) ---
+ExercitoDosMortosMk2:
+  Skills:
+  - skill{s=ExercitoDosMortosMk2_Cast} @self
+
+ExercitoDosMortosMk2_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.4} @self
+  - sound{s=entity.zombie.ambient;v=0.9;p=0.3} @self
+  - sound{s=entity.phantom.ambient;v=0.5;p=0.6} @self
+  # Larger dark ritual circle
+  - effect:particles{p=dust_color_transition;color=#330066;toColor=#6600cc;size=2.2;a=36;s=3.5;y=0.1} @self
+  - effect:particles{p=soul;a=26;s=2.5;y=0.0} @self
+  - effect:particles{p=soul_fire_flame;a=10;s=2.0;y=0.1} @self
+  - effect:particles{p=large_smoke;a=20;s=3.0;y=0.2} @self
+  - delay 10
+  # First wave
+  - sound{s=entity.skeleton.ambient;v=0.9;p=0.5} @self
+  - effect:particles{p=soul;a=18;s=1.2;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=10;s=1.0;y=1.0} @self
+  - summon{type=SKELETON;amount=2;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+  - delay 15
+  # Second wave
+  - sound{s=entity.zombie.ambient;v=0.9;p=0.4} @self
+  - effect:particles{p=soul;a=18;s=1.5;y=1.5} @self
+  - effect:particles{p=large_smoke;a=14;s=1.2;y=0.5} @self
+  - effect:particles{p=reverse_portal;a=6;s=1.0;y=0.8} @self
+  - summon{type=ZOMBIE;amount=2;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+  - delay 15
+  # Third wave
+  - sound{s=entity.skeleton.ambient;v=1.0;p=0.6} @self
+  - effect:particles{p=soul;a=18;s=1.2;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=14;s=1.0;y=1.0} @self
+  - summon{type=SKELETON;amount=1;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+
+# --- Mk3 (Milestone: army_of_dead_legion) ---
+ExercitoDosMortosMk3:
+  Skills:
+  - skill{s=ExercitoDosMortosMk3_Cast} @self
+
+ExercitoDosMortosMk3_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.3} @self
+  - sound{s=entity.zombie.ambient;v=1.0;p=0.3} @self
+  - sound{s=entity.ghast.scream;v=0.6;p=0.5} @self
+  - sound{s=entity.phantom.ambient;v=0.5;p=0.4} @self
+  # Massive dark ritual circle — the underworld opens
+  - effect:particles{p=dust_color_transition;color=#6600cc;toColor=#660000;size=2.5;a=44;s=4.0;y=0.1} @self
+  - effect:particles{p=soul_fire_flame;a=20;s=3.0;y=0.0} @self
+  - effect:particles{p=soul;a=32;s=3.0;y=0.0} @self
+  - effect:particles{p=large_smoke;a=24;s=3.5;y=0.2} @self
+  - effect:particles{p=reverse_portal;a=14;s=2.5;y=0.1} @self
+  - delay 10
+  # First wave — wither skeletons
+  - sound{s=entity.skeleton.ambient;v=1.0;p=0.4} @self
+  - effect:particles{p=soul;a=22;s=1.5;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=14;s=1.2;y=1.0} @self
+  - effect:particles{p=soul_fire_flame;a=8;s=1.0;y=1.2} @self
+  - summon{type=WITHER_SKELETON;amount=2;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+  - delay 12
+  # Second wave — zombies and skeletons
+  - sound{s=entity.zombie.ambient;v=1.0;p=0.3} @self
+  - effect:particles{p=soul;a=22;s=1.8;y=1.5} @self
+  - effect:particles{p=large_smoke;a=18;s=1.5;y=0.5} @self
+  - effect:particles{p=reverse_portal;a=10;s=1.2;y=0.8} @self
+  - summon{type=ZOMBIE;amount=2;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+  - summon{type=SKELETON;amount=1;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+  - delay 12
+  # Third wave — more wither skeletons rise
+  - sound{s=entity.wither.ambient;v=0.8;p=0.4} @self
+  - effect:particles{p=soul;a=22;s=1.5;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=16;s=1.2;y=1.0} @self
+  - effect:particles{p=soul_fire_flame;a=12;s=1.0;y=1.2} @self
+  - summon{type=WITHER_SKELETON;amount=2;health=<skill.var.minion_health>;damage=<skill.var.minion_damage>;duration=<skill.var.duration>} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  10. CEIFADOR DE ALMAS — Soul Reaper (ULTIMATE — Channeled)               ║
+# ║  Becomes the avatar of death, reaping souls in a devastating vortex.       ║
+# ║  Variables: damage (45.0/10.0), radius (6.0/0.4), life_steal (15.0/2.0)  ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+CeifadorDeAlmas:
+  Skills:
+  - skill{s=CeifadorDeAlmas_Cast} @self
+
+CeifadorDeAlmas_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.4} @self
+  - sound{s=entity.ghast.scream;v=0.8;p=0.5} @self
+  # Dark vortex forms around the caster
+  - effect:particles{p=dust_color_transition;color=#330066;toColor=#660000;size=2.0;a=30;s=<skill.var.radius>;y=0.5} @self
+  - effect:particles{p=soul;a=24;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=sculk_soul;a=14;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=large_smoke;a=20;s=<skill.var.radius>;y=0.3} @self
+  - delay 5
+  # Reaper scythe sweep — first pulse
+  - sound{s=entity.phantom.ambient;v=0.7;p=0.6} @self
+  - effect:particles{p=soul_fire_flame;a=16;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=soul;a=20;s=<skill.var.radius>;y=1.5} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+  - delay 10
+  # Souls converge on caster — lifesteal
+  - sound{s=entity.wither.ambient;v=0.8;p=0.5} @self
+  - effect:particles{p=dust_color_transition;color=#00ccff;toColor=#006600;size=1.5;a=20;s=1.0;y=1.0} @self
+  - effect:particles{p=soul;a=16;s=0.5;y=1.0} @self
+  - effect:particles{p=witch;a=10;s=0.4;y=0.8} @self
+  - heal{a=<skill.var.life_steal>} @self
+
+# --- Mk2 (Milestone: soul_reaper_shadow) ---
+CeifadorDeAlmasMk2:
+  Skills:
+  - skill{s=CeifadorDeAlmasMk2_Cast} @self
+
+CeifadorDeAlmasMk2_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.3} @self
+  - sound{s=entity.ghast.scream;v=0.9;p=0.4} @self
+  - sound{s=entity.phantom.ambient;v=0.5;p=0.5} @self
+  # Intensified dark vortex
+  - effect:particles{p=dust_color_transition;color=#6600cc;toColor=#660000;size=2.2;a=38;s=<skill.var.radius>;y=0.5} @self
+  - effect:particles{p=soul;a=30;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=soul_fire_flame;a=12;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=sculk_soul;a=18;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=large_smoke;a=24;s=<skill.var.radius>;y=0.3} @self
+  - effect:particles{p=reverse_portal;a=10;s=<skill.var.radius>;y=1.0} @self
+  - delay 5
+  # First reaper pulse
+  - sound{s=entity.phantom.ambient;v=0.8;p=0.5} @self
+  - effect:particles{p=soul_fire_flame;a=22;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=soul;a=26;s=<skill.var.radius>;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=10;s=<skill.var.radius>;y=0.8} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+  - delay 10
+  # Second pulse — continued drain
+  - effect:particles{p=soul_fire_flame;a=18;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=soul;a=20;s=<skill.var.radius>;y=1.5} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+  - delay 10
+  # Souls converge — lifesteal
+  - sound{s=entity.wither.ambient;v=0.9;p=0.4} @self
+  - effect:particles{p=dust_color_transition;color=#00ccff;toColor=#006600;size=1.8;a=26;s=1.2;y=1.0} @self
+  - effect:particles{p=soul;a=22;s=0.6;y=1.0} @self
+  - effect:particles{p=soul_fire_flame;a=8;s=0.4;y=0.8} @self
+  - effect:particles{p=witch;a=14;s=0.5;y=0.8} @self
+  - heal{a=<skill.var.life_steal>} @self
+
+# --- Mk3 (Milestone: soul_reaper_death) ---
+CeifadorDeAlmasMk3:
+  Skills:
+  - skill{s=CeifadorDeAlmasMk3_Cast} @self
+
+CeifadorDeAlmasMk3_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.2} @self
+  - sound{s=entity.ghast.scream;v=1.0;p=0.3} @self
+  - sound{s=entity.phantom.ambient;v=0.7;p=0.4} @self
+  - sound{s=entity.wither.ambient;v=0.6;p=0.3} @self
+  # Apocalyptic dark vortex — death incarnate
+  - effect:particles{p=dust_color_transition;color=#6600cc;toColor=#1a1a1a;size=2.5;a=46;s=<skill.var.radius>;y=0.5} @self
+  - effect:particles{p=soul_fire_flame;a=24;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=soul;a=36;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=sculk_soul;a=22;s=<skill.var.radius>;y=0.8} @self
+  - effect:particles{p=large_smoke;a=30;s=<skill.var.radius>;y=0.3} @self
+  - effect:particles{p=reverse_portal;a=16;s=<skill.var.radius>;y=1.0} @self
+  - delay 5
+  # First reaper pulse — devastating
+  - sound{s=entity.ghast.scream;v=0.7;p=0.5} @self
+  - effect:particles{p=soul_fire_flame;a=28;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=soul;a=32;s=<skill.var.radius>;y=1.5} @self
+  - effect:particles{p=sculk_soul;a=14;s=<skill.var.radius>;y=0.8} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+  - delay 8
+  # Second pulse — the reaper swings again
+  - sound{s=entity.phantom.ambient;v=0.6;p=0.4} @self
+  - effect:particles{p=soul_fire_flame;a=24;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=soul;a=28;s=<skill.var.radius>;y=1.5} @self
+  - effect:particles{p=reverse_portal;a=10;s=<skill.var.radius>;y=1.0} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+  - delay 8
+  # Third pulse — death's crescendo
+  - sound{s=entity.wither.ambient;v=0.8;p=0.3} @self
+  - effect:particles{p=soul_fire_flame;a=20;s=<skill.var.radius>;y=1.0} @self
+  - effect:particles{p=soul;a=24;s=<skill.var.radius>;y=1.5} @self
+  - midgardDamage{a=<skill.var.damage>;type=DARK} @EntitiesInRadius{r=<skill.var.radius>}
+  - delay 8
+  # All souls converge — massive lifesteal
+  - sound{s=entity.wither.spawn;v=0.8;p=0.4} @self
+  - effect:particles{p=dust_color_transition;color=#00ccff;toColor=#660000;size=2.0;a=34;s=1.5;y=1.0} @self
+  - effect:particles{p=soul;a=30;s=0.8;y=1.0} @self
+  - effect:particles{p=soul_fire_flame;a=16;s=0.6;y=0.8} @self
+  - effect:particles{p=sculk_soul;a=12;s=0.5;y=0.6} @self
+  - effect:particles{p=witch;a=18;s=0.6;y=0.8} @self
+  - heal{a=<skill.var.life_steal>} @self
+
+
+# ============================================================================
+#  End of Necromante Skills — May the dead serve you well.
+# ============================================================================

@@ -1,0 +1,82 @@
+name: "<aqua>ᴇxᴘʟᴏsᴀᴏ ᴀʀᴄᴀɴᴀ</aqua>"
+mythic-skill: "ExplosaoArcana"
+spell-type: COMMON
+
+cooldown:
+  base: 14.0
+  per-level: -0.4
+mana:
+  base: 38.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Mago"
+  level: 12
+
+icon:
+  material: END_CRYSTAL
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<aqua><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></aqua>"
+  - ""
+  - "<gray>ᴏ ᴍᴀɢᴏ ʟɪʙᴇʀᴀ ᴜᴍᴀ ᴏɴᴅᴀ ᴅᴇ</gray>"
+  - "<gray>ᴇɴᴇʀɢɪᴀ ᴀʀᴄᴀɴᴀ ǫᴜᴇ ᴇxᴘʟᴏᴅᴇ ᴇᴍ</gray>"
+  - "<gray>ᴛᴏᴅᴀs ᴀs ᴅɪʀᴇᴄᴏᴇs, ᴅᴇᴠᴀsᴛᴀɴᴅᴏ ᴛᴜᴅᴏ.</gray>"
+  - ""
+  - "<aqua><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></aqua>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ʀᴀɪᴏ:<aqua>{radius}</aqua>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴀɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>12</yellow>"
+
+variables:
+  damage:
+    base: 22.0
+    per-level: 5.5
+  radius:
+    base: 4.0
+    per-level: 0.3
+
+milestones:
+  3:
+    visual: "arcane_burst"
+    mechanic-override: "ExplosaoArcanaMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "arcane_nova"
+    mechanic-override: "ExplosaoArcanaMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.ender_dragon.growl"
+    volume: 0.8
+    pitch: 1.5
+  cast-finish:
+    sound: "entity.generic.explode"
+    volume: 1.0
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

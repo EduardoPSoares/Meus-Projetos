@@ -1,0 +1,109 @@
+stats:
+  mining_speed:
+    name: '<gradient:#ffff55:#ffaa00><b>⛏ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇ ᴍɪɴᴇʀᴀᴄᴀᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇ ǫᴜᴇʙʀᴀʀ ʙʟᴏᴄᴏꜱ ᴄᴏᴍ ᴀ ꜰᴇʀʀᴀᴍᴇɴᴛᴀ.'
+      - ''
+      - '<gray>ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+  mining_efficiency:
+    name: '<gradient:#ffff55:#ffaa00><b>⚡ ᴇꜰɪᴄɪᴇɴᴄɪᴀ</b></gradient>'
+    lore:
+      - '<gray>ᴇꜰɪᴄɪᴇɴᴄɪᴀ ᴅᴇ ǫᴜᴇʙʀᴀʀ ʙʟᴏᴄᴏꜱ (> 10 = ɪɴꜱᴛᴀɴᴛᴀɴᴇᴏ)'
+      - ''
+      - '<gray>ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+  submerged_mining_speed:
+    name: '<gradient:#55ffff:#00aaaa><b>🌊 ᴍɪɴᴇʀᴀᴄᴀᴏ ꜱᴜʙᴍᴇʀꜱᴀ</b></gradient>'
+    lore:
+      - '<gray>ᴍᴜʟᴛɪᴘʟɪᴄᴀ ᴀ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇ ǫᴜᴇʙʀᴀʀ ᴀᴏ ᴇꜱᴛᴀʀ ɴᴀ ᴀɢᴜᴀ.'
+      - ''
+      - '<gray>ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+  block_interaction_range:
+    name: '<gradient:#55ff55:#00aa00><b>📏 ᴀʟᴄᴀɴᴄᴇ (ʙʟᴏᴄᴏꜱ)</b></gradient>'
+    lore:
+      - '<gray>ᴀʟᴄᴀɴᴄᴇ ᴅᴀ ꜰᴇʀʀᴀᴍᴇɴᴛᴀ ᴀᴏ ǫᴜᴇʙʀᴀʀ/ɪɴᴛᴇʀᴀɢɪʀ ᴄᴏᴍ ʙʟᴏᴄᴏꜱ.'
+      - ''
+      - '<gray>ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+  entity_interaction_range:
+    name: '<gradient:#55ff55:#00aa00><b>📏 ᴀʟᴄᴀɴᴄᴇ (ᴇɴᴛɪᴅᴀᴅᴇꜱ)</b></gradient>'
+    lore:
+      - '<gray>ᴀʟᴄᴀɴᴄᴇ ᴅᴀ ꜰᴇʀʀᴀᴍᴇɴᴛᴀ ᴀᴏ ᴀᴛᴀᴄᴀʀ/ɪɴᴛᴇʀᴀɢɪʀ ᴄᴏᴍ ᴇɴᴛɪᴅᴀᴅᴇꜱ.'
+      - ''
+      - '<gray>ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+  bonus_oxygen:
+    name: '<gradient:#55ffff:#00aaaa><b>🫧 ᴏxɪɢᴇɴɪᴏ ʙᴏɴᴜꜱ</b></gradient>'
+    lore:
+      - '<gray>ᴄʜᴀɴᴄᴇ ᴅᴇ ɴᴀᴏ ᴄᴏɴꜱᴜᴍɪʀ ᴀʀ ᴀᴏ ʀᴇꜱᴘɪʀᴀʀ ɴᴀ ᴀɢᴜᴀ.'
+      - ''
+      - '<gray>ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+  burning_time:
+    name: '<gradient:#ff5555:#aa0000><b>🔥 ᴛᴇᴍᴘᴏ ᴅᴇ ǫᴜᴇɪᴍᴀ</b></gradient>'
+    lore:
+      - '<gray>ʀᴇᴅᴜᴢ ᴏ ᴛᴇᴍᴘᴏ ᴅᴇ ǫᴜᴇɪᴍᴀ (ꜰᴏɢᴏ).'
+      - ''
+      - '<gray>ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+  max_custom_durability:
+    name: '<gradient:#aaaaaa:#555555><b>🛡 ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ ᴍᴍᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ ᴍᴀxɪᴍᴀ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴀ (ᴘᴀʀᴀ ʀᴘɢꜱ).'
+      - ''
+      - '<gray>ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+  max_vanilla_durability:
+    name: '<gradient:#aaaaaa:#555555><b>🔨 ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ ᴠᴀɴɪʟʟᴀ</b></gradient>'
+    lore:
+      - '<gray>ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ ᴍᴀxɪᴍᴀ ᴠᴀɴɪʟʟᴀ.'
+      - ''
+      - '<gray>ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+  lost_when_broken:
+    name: '<gradient:#ff5555:#aa0000><b>🗑 ᴘᴇʀᴅᴇʀ ᴀᴏ ǫᴜᴇʙʀᴀʀ</b></gradient>'
+    lore:
+      - '<gray>ꜱᴇ ᴅᴇᴠᴇ ʀᴇᴍᴏᴠᴇʀ ᴏ ɪᴛᴇᴍ ǫᴜᴀɴᴅᴏ ᴀ ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ ᴄʜᴇɢᴀ ᴀ 0.'
+      - ''
+      - '<gray>ꜱᴛᴀᴛᴜꜱ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ</yellow>'
+    hide_attributes: true
+  unbreakable:
+    name: '<gradient:#aa00ff:#5500aa><b>♾ ɪɴǫᴜᴇʙʀᴀᴠᴇʟ</b></gradient>'
+    lore:
+      - '<gray>ᴛᴏʀɴᴀ ᴏ ɪᴛᴇᴍ ᴄᴏᴍᴘʟᴇᴛᴀᴍᴇɴᴛᴇ ɪɴᴅᴇꜱᴛʀᴜᴄᴛɪᴠᴇʟ.'
+      - ''
+      - '<gray>ꜱᴛᴀᴛᴜꜱ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ</yellow>'
+    hide_attributes: true

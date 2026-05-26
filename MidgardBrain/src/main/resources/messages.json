@@ -1,0 +1,41 @@
+{
+  "config_version": 3,
+  "queue": {
+    "joined-title": "<gold><bold>ᴍɪᴅɢᴀʀᴅ ʀᴘɢ",
+    "joined-subtitle": "<gray>ᴇɴᴛʀᴏᴜ ɴᴀ ꜰɪʟᴀ! <yellow>{position}</yellow><gray>/<yellow>{total}</yellow> <dark_gray>• ᴀɢᴜᴀʀᴅᴇ...",
+    "already-in-queue": "<gray>ᴊá ɴᴀ ꜰɪʟᴀ! <yellow>{position}<gray>/<yellow>{total}",
+    "already-connected": "<gray>ᴊá ᴄᴏɴᴇᴄᴛᴀᴅᴏ ᴀᴏ <yellow>{server}",
+    "full": "<red>ꜰɪʟᴀ ᴄʜᴇɪᴀ! <gray>ᴛᴇɴᴛᴇ ɴᴏᴠᴀᴍᴇɴᴛᴇ ᴇᴍ ᴀʟɢᴜɴs ɪɴsᴛᴀɴᴛᴇs.",
+    "left": "<gray>ᴠᴏᴄê sᴀɪᴜ ᴅᴀ ꜰɪʟᴀ.",
+    "not-in-queue": "<gray>ᴠᴏᴄê ɴãᴏ ᴇsᴛá ɴᴀ ꜰɪʟᴀ.",
+    "position": "<gray>ᴘᴏsɪçãᴏ: <yellow>{position}</yellow><gray>/<yellow>{total}</yellow>",
+    "position-update": "<gold>ꜰɪʟᴀ: <yellow>{position}<gray>/<yellow>{total}",
+    "connecting-title": "<gold><bold>ᴄᴏɴᴇᴄᴛᴀɴᴅᴏ...",
+    "connecting-subtitle": "<gray>ᴇɴᴛʀᴀɴᴅᴏ ɴᴏ <yellow>{server}",
+    "transfer-failed": "<red>ꜰᴀʟʜᴀ ᴀᴏ ᴄᴏɴᴇᴄᴛᴀʀ. <gray>ᴛᴇɴᴛᴇ ɴᴏᴠᴀᴍᴇɴᴛᴇ.",
+    "server-unavailable-title": "<red><bold>ɪɴᴅɪsᴘᴏɴíᴠᴇʟ",
+    "server-unavailable-subtitle": "<gray>ᴏ sᴇʀᴠɪᴅᴏʀ ɴãᴏ ᴇsᴛá ᴅɪsᴘᴏɴíᴠᴇʟ ɴᴏ ᴍᴏᴍᴇɴᴛᴏ",
+    "server-maintenance-title": "<red><bold>ᴍᴀɴᴜᴛᴇɴçãᴏ",
+    "server-maintenance-subtitle": "<gray>ᴏ sᴇʀᴠɪᴅᴏʀ <yellow>{server}</yellow> <gray>ᴇsᴛá ᴇᴍ ᴍᴀɴᴜᴛᴇɴçãᴏ",
+    "staff-bypass": "<green>ᴄᴏɴᴇᴄᴛᴀɴᴅᴏ ᴅɪʀᴇᴛᴀᴍᴇɴᴛᴇ... <dark_gray>(sᴛᴀꜰꜰ)",
+    "vip-priority-title": "<gold><bold>ᴍɪᴅɢᴀʀᴅ ʀᴘɢ",
+    "vip-priority-subtitle": "<green>ᴘʀɪᴏʀɪᴅᴀᴅᴇ ᴠɪᴘ {tier} <dark_gray>• <gray>ᴘᴏsɪçãᴏ: <yellow>{position}</yellow><gray>/<yellow>{total}</yellow>",
+    "status": "<gold><bold>sᴛᴀᴛᴜs ᴅᴀ ꜰɪʟᴀ\n<gray>sᴇʀᴠɪᴅᴏʀ: <yellow>{server}\n<gray>ɴᴀ ꜰɪʟᴀ: <yellow>{size}<gray>/<yellow>{max}\n<gray>ɪɴᴛᴇʀᴠᴀʟᴏ: <yellow>{delay}s",
+    "cleared": "<green>ꜰɪʟᴀ ʟɪᴍᴘᴀ! <gray>{count} ᴊᴏɢᴀᴅᴏʀ(ᴇs) ʀᴇᴍᴏᴠɪᴅᴏ(s)."
+  },
+  "maintenance": {
+    "kick-title": "<gold><bold>ᴍɪᴅɢᴀʀᴅ ʀᴘɢ",
+    "kick-subtitle": "<red>ᴍᴀɴᴜᴛᴇɴçãᴏ ᴛéᴄɴɪᴄᴀ",
+    "kick-message": "\n<gray>ᴏ sᴇʀᴠɪᴅᴏʀ <yellow>{server}</yellow> ᴇsᴛá ᴛᴇᴍᴘᴏʀᴀʀɪᴀᴍᴇɴᴛᴇ ɪɴᴅɪsᴘᴏɴíᴠᴇʟ.\n\n<dark_gray>ᴀɢʀᴀᴅᴇᴄᴇᴍᴏs sᴜᴀ ᴄᴏᴍᴘʀᴇᴇɴsãᴏ.\n<aqua>discord.gg/midgardrpg\n",
+    "lobby-title": "<red>ᴍᴀɴᴜᴛᴇɴçãᴏ ɪɴɪᴄɪᴀᴅᴀ",
+    "lobby-message": "\n<gray>ᴏ sᴇʀᴠɪᴅᴏʀ <yellow>{server}</yellow> ᴇɴᴛʀᴏᴜ ᴇᴍ ᴍᴀɴᴜᴛᴇɴçãᴏ.\n<gray>ᴠᴏᴄê ꜰᴏɪ ʀᴇᴅɪʀᴇᴄɪᴏɴᴀᴅᴏ ᴘᴀʀᴀ ᴏ ʟᴏʙʙʏ.\n\n<aqua>discord.gg/midgardrpg\n",
+    "stop-title": "<green>ᴍᴀɴᴜᴛᴇɴçãᴏ ᴄᴏɴᴄʟᴜíᴅᴀ",
+    "stop-message": "\n<gray>ᴏ sᴇʀᴠɪᴅᴏʀ <yellow>{server}</yellow> ᴇsᴛá ɴᴏᴠᴀᴍᴇɴᴛᴇ ᴅɪsᴘᴏɴíᴠᴇʟ.\n\n<aqua>discord.gg/midgardrpg\n",
+    "warning-start-title": "<yellow><bold>ᴍᴀɴᴜᴛᴇɴçãᴏ ᴘʀᴏɢʀᴀᴍᴀᴅᴀ",
+    "warning-start-subtitle": "<gray>sᴇʀᴠɪᴅᴏʀ <yellow>{server}</yellow> ᴇᴍ <red><bold>{time}",
+    "warning-start-chat": "<gray>ᴏ sᴇʀᴠɪᴅᴏʀ <yellow>{server}</yellow> ᴇɴᴛʀᴀʀá ᴇᴍ ᴍᴀɴᴜᴛᴇɴçãᴏ ᴇᴍ <red><bold>{time}</bold></red><gray>. sᴀʟᴠᴇ sᴇᴜ ᴘʀᴏɢʀᴇssᴏ.",
+    "warning-end-title": "<yellow><bold>ʀᴇᴛᴏʀɴᴏ ᴅᴇ ᴍᴀɴᴜᴛᴇɴçãᴏ",
+    "warning-end-subtitle": "<gray>sᴇʀᴠɪᴅᴏʀ <yellow>{server}</yellow> ᴇᴍ <green><bold>{time}",
+    "warning-end-chat": "<gray>ᴏ sᴇʀᴠɪᴅᴏʀ <yellow>{server}</yellow> sᴇʀá ʀᴇsᴛᴀʙᴇʟᴇᴄɪᴅᴏ ᴇᴍ <green><bold>{time}</bold></green><gray>."
+  }
+}

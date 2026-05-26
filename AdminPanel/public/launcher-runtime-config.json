@@ -1,0 +1,25 @@
+{
+  "configVersion": "1",
+  "server": {
+    "host": "warface",
+    "ip": "subscriber-margaret.with.playit.plus",
+    "port": 1050,
+    "useTLS": true,
+    "useProtect": false,
+    "checkCertificate": false,
+    "disableHashValidation": true,
+    "disableAntiCheat": true
+  },
+  "links": {
+    "discordInviteUrl": "https://discord.gg/YOUR_INVITE"
+  },
+  "launcherUi": {
+    "slides": [],
+    "news": []
+  },
+  "urls": {
+    "gameVersionUrl": "",
+    "gameManifestUrl": "",
+    "launcherConfigUrl": ""
+  }
+}

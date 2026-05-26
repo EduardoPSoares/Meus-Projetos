@@ -1,0 +1,35 @@
+name: MidgardVoice
+version: ${version}
+main: de.maxhenkel.voicechat.Voicechat
+api-version: 1.13
+prefix: MidgardVoice
+authors: ["rayzzis"]
+description: Chat de voz para Minecraft - MidgardVoice
+folia-supported: true
+commands:
+  mvoice:
+    description: Comando central do MidgardVoice
+    usage: /mvoice <subcomando>
+    aliases: [voicechat, mv]
+permissions:
+  voicechat.listen:
+    description: Permite ouvir o chat de voz
+  voicechat.speak:
+    description: Permite falar no chat de voz
+  voicechat.groups:
+    description: Permite entrar em grupos
+  voicechat.admin:
+    description: Permite testar conexoes do chat de voz
+  voicechat.zone.bypass:
+    description: Permite falar em zonas restritas de voz
+  voicechat.zone.admin:
+    description: Permite gerenciar zonas restritas de voz
+  voicechat.range.admin:
+    description: Permite gerenciar range de voz de jogadores
+  voicechat.global.admin:
+    description: Permite gerenciar jogadores com voz global
+  voicechat.recording.admin:
+    description: Permite gravar audio de voz de jogadores
+  voicechat.admin.hub:
+    description: Permite acessar o painel de administracao
+softdepend: [PlaceholderAPI, ViaVersion]

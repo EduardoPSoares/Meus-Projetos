@@ -1,0 +1,125 @@
+# ============================================
+# MIDGARD ITEM - GUI: NAVEGADOR DE ITENS
+# ============================================
+# Padrão V2.0 - Oficial
+# ============================================
+
+
+title: "<gradient:#55ffff:#00aaaa><bold>⚡ ɴᴀᴠᴇɢᴀᴅᴏʀ ᴅᴇ ɪᴛᴇɴꜱ ⚡</bold></gradient>"
+
+# Chaves com hífen (usadas no código)
+next-page: "<gray>• <white>ᴘʀᴏxɪᴍᴀ ᴘᴀɢɪɴᴀ"
+previous-page: "<white>ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ <yellow>➡"
+close: "<gray>• <gray>ꜰᴇᴄʜᴀʀ"
+click-to-get: "<gray>• <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴘᴇɢᴀʀ"
+shift-click-to-edit: "<yellow>✎ <gray>ꜱʜɪꜰᴛ-ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ"
+click-to-delete-item: "<gray>• ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇʟᴇᴛᴀʀ"
+category-lore: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴠᴇʀ <yellow>%d <gray>ɪᴛᴇɴꜱ ɴᴇꜱᴛᴀ ᴄᴀᴛᴇɢᴏʀɪᴀ."
+
+# ============================================
+# NAVEGAÇÃO
+# ============================================
+navigation:
+  next_page: "<gray>• <white>ᴘʀᴏxɪᴍᴀ ᴘᴀɢɪɴᴀ"
+  previous_page: "<white>ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ <yellow>➡"
+
+# ============================================
+# CATEGORIAS
+# ============================================
+category:
+  lore: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴠᴇʀ ɪᴛᴇɴꜱ ɴᴇꜱᴛᴀ ᴄᴀᴛᴇɢᴏʀɪᴀ."
+  lore_fallback: "<gray>ᴇxɪꜱᴛᴇᴍ <yellow>%d <gray>ɪᴛᴇɴꜱ ɴᴇꜱᴛᴇ ᴛɪᴘᴏ."
+
+# ============================================
+# AÇÕES DE ITENS
+# ============================================
+item_actions:
+  click_to_get: "<gray>• <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴘᴇɢᴀʀ"
+  shift_click_to_edit: "<yellow>✎ <gray>ꜱʜɪꜰᴛ-ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ"
+  click_to_delete: "<gray>• ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇʟᴇᴛᴀʀ"
+
+# ============================================
+# BOTÕES
+# ============================================
+buttons:
+  delete:
+    name: "<gradient:#ff5555:#aa0000><bold>✖ ᴅᴇʟᴇᴛᴀʀ ɪᴛᴇᴍ</bold></gradient>"
+    mode-active: "<gray>• ᴍᴏᴅᴏ ᴅᴇ ᴅᴇʟᴇᴄᴀᴏ ᴀᴛɪᴠᴏ"
+    click-to-delete: "<gray>ᴄʟɪǫᴜᴇ ᴇᴍ ᴜᴍ ɪᴛᴇᴍ ᴘᴀʀᴀ ᴅᴇʟᴇᴛᴀ-ʟᴏ."
+    click-to-cancel: "<gray>ᴄʟɪǫᴜᴇ ᴀǫᴜɪ ɴᴏᴠᴀᴍᴇɴᴛᴇ ᴘᴀʀᴀ ᴄᴀɴᴄᴇʟᴀʀ."
+    click-to-enable: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏ ᴍᴏᴅᴏ ᴅᴇ ᴅᴇʟᴇᴄᴀᴏ."
+    mode_active: "<gray>• ᴍᴏᴅᴏ ᴅᴇ ᴅᴇʟᴇᴄᴀᴏ ᴀᴛɪᴠᴏ"
+    click_to_delete: "<gray>ᴄʟɪǫᴜᴇ ᴇᴍ ᴜᴍ ɪᴛᴇᴍ ᴘᴀʀᴀ ᴅᴇʟᴇᴛᴀ-ʟᴏ."
+    click_to_cancel: "<gray>ᴄʟɪǫᴜᴇ ᴀǫᴜɪ ɴᴏᴠᴀᴍᴇɴᴛᴇ ᴘᴀʀᴀ ᴄᴀɴᴄᴇʟᴀʀ."
+    click_to_enable: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏ ᴍᴏᴅᴏ ᴅᴇ ᴅᴇʟᴇᴄᴀᴏ."
+  
+  back:
+    name: "<gray>• ᴠᴏʟᴛᴀʀ"
+  
+  create:
+    name: "<gradient:#55ff55:#00aa00><bold>✚ ᴄʀɪᴀʀ ɴᴏᴠᴏ ɪᴛᴇᴍ</bold></gradient>"
+
+# ============================================
+# MENSAGENS (formato hífen - usado no código)
+# ============================================
+messages:
+  # Formato com hífen (usado no código Java)
+  enter-id: "<yellow>✎ <gray>ᴇꜱᴄʀᴇᴠᴀ ɴᴏ ᴄʜᴀᴛ ᴏ ɪᴅ ᴅᴏ ɴᴏᴠᴏ ɪᴛᴇᴍ."
+  cancel-abort: "<gray>ᴅɪɢɪᴛᴇ <white>ᴄᴀɴᴄᴇʟ <gray>ᴘᴀʀᴀ ᴄᴀɴᴄᴇʟᴀʀ."
+  id-exists: "<gray>• <gray>ɪᴛᴇᴍ ᴄᴏᴍ ɪᴅ <white>%s <gray>ᴊᴀ ᴇxɪꜱᴛᴇ!"
+  creating-item: "<gray>• <white>ᴄʀɪᴀɴᴅᴏ ɪᴛᴇᴍ <yellow>%s<white>..."
+  edit-error: "<red>✖ <gray>ᴇʀʀᴏ ᴀᴏ ᴇɴᴄᴏɴᴛʀᴀʀ ɪᴛᴇᴍ ᴘᴀʀᴀ ᴇᴅɪᴄᴀᴏ: <white>%s"
+  received: "<gray>• <white>ᴠᴏᴄᴇ ʀᴇᴄᴇʙᴇᴜ <yellow>%amount%x <white>%s"
+  delete-not-implemented: "<gray>• <gray>ꜰᴜɴᴄᴀᴏ ᴅᴇ ᴅᴇʟᴇᴛᴀʀ ᴀɪɴᴅᴀ ɴᴀᴏ ɪᴍᴘʟᴇᴍᴇɴᴛᴀᴅᴀ."
+  
+  # Formato com underscore (legado)
+  enter_id: "<yellow>✎ <gray>ᴇꜱᴄʀᴇᴠᴀ ɴᴏ ᴄʜᴀᴛ ᴏ ɪᴅ ᴅᴏ ɴᴏᴠᴏ ɪᴛᴇᴍ."
+  cancel_abort: "<gray>ᴅɪɢɪᴛᴇ <white>ᴄᴀɴᴄᴇʟ <gray>ᴘᴀʀᴀ ᴄᴀɴᴄᴇʟᴀʀ."
+  id_exists: "<gray>• <gray>ɪᴛᴇᴍ ᴄᴏᴍ ɪᴅ <white>%s <gray>ᴊᴀ ᴇxɪꜱᴛᴇ!"
+  creating_item: "<gray>• <white>ᴄʀɪᴀɴᴅᴏ ɪᴛᴇᴍ <yellow>%s<white>..."
+  edit_error: "<red>✖ <gray>ᴇʀʀᴏ ᴀᴏ ᴇɴᴄᴏɴᴛʀᴀʀ ɪᴛᴇᴍ ᴘᴀʀᴀ ᴇᴅɪᴄᴀᴏ: <white>%s"
+  delete_not_implemented: "<gray>• <gray>ꜰᴜɴᴄᴀᴏ ᴅᴇ ᴅᴇʟᴇᴛᴀʀ ᴀɪɴᴅᴀ ɴᴀᴏ ɪᴍᴘʟᴇᴍᴇɴᴛᴀᴅᴀ."
+
+# ============================================
+# CONFIRMAÇÃO DE DELEÇÃO (com underscore)
+# ============================================
+delete_confirmation:
+  title: "<dark_gray>ᴄᴏɴꜰɪʀᴍᴀʀ ᴅᴇʟᴇᴄᴀᴏ: <white>%s"
+  
+  confirm:
+    name: "<gray>• ᴄᴏɴꜰɪʀᴍᴀʀ ᴅᴇʟᴇᴄᴀᴏ</bold>"
+    lore:
+      - ""
+      - "<gray>• ᴇꜱᴛᴀ ᴀᴄᴀᴏ ɴᴀᴏ ᴘᴏᴅᴇ ꜱᴇʀ ᴅᴇꜱꜰᴇɪᴛᴀ."
+      - ""
+      - "<gray>• <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴄᴏɴꜰɪʀᴍᴀʀ"
+  
+  cancel:
+    name: "<gray>• ᴄᴀɴᴄᴇʟᴀʀ</bold>"
+    lore:
+      - ""
+      - "<gray>ᴠᴏʟᴛᴀʀ ꜱᴇᴍ ᴅᴇʟᴇᴛᴀʀ."
+  
+  success: "<green>✔ <white>ɪᴛᴇᴍ ᴅᴇʟᴇᴛᴀᴅᴏ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ."
+
+# ============================================
+# CONFIRMAÇÃO DE DELEÇÃO (com hífen - compatibilidade)
+# ============================================
+delete-confirmation:
+  title: "<dark_gray>ᴄᴏɴꜰɪʀᴍᴀʀ ᴅᴇʟᴇᴄᴀᴏ: <white>%s"
+  
+  confirm:
+    name: "<gray>• ᴄᴏɴꜰɪʀᴍᴀʀ ᴅᴇʟᴇᴄᴀᴏ</bold>"
+    lore:
+      - ""
+      - "<gray>• ᴇꜱᴛᴀ ᴀᴄᴀᴏ ɴᴀᴏ ᴘᴏᴅᴇ ꜱᴇʀ ᴅᴇꜱꜰᴇɪᴛᴀ."
+      - ""
+      - "<gray>• <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴄᴏɴꜰɪʀᴍᴀʀ"
+  
+  cancel:
+    name: "<gray>• ᴄᴀɴᴄᴇʟᴀʀ</bold>"
+    lore:
+      - ""
+      - "<gray>ᴠᴏʟᴛᴀʀ ꜱᴇᴍ ᴅᴇʟᴇᴛᴀʀ."
+  
+  success: "<green>✔ <white>ɪᴛᴇᴍ ᴅᴇʟᴇᴛᴀᴅᴏ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ."

@@ -1,0 +1,44 @@
+# ==============================================================================
+# EXEMPLO DE MOB COM DRENAGEM DE RECURSOS (MIDGARD RPG)
+# ==============================================================================
+# Este arquivo demonstra como criar mobs que afetam Mana e Stamina dos jogadores.
+#
+# Novas Skills:
+# 1. midgard-mana: Adiciona ou remove Mana.
+#    - amount: Quantidade (pode ser placeholder)
+#    - mode: GIVE, TAKE, SET (Padrão: GIVE)
+#
+# 2. midgard-stamina: Adiciona ou remove Stamina.
+#    - amount: Quantidade
+#    - mode: GIVE, TAKE, SET
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Espectro Sugador de Mana
+# Este mob drena mana do jogador a cada ataque.
+# ------------------------------------------------------------------------------
+ManaWraith:
+  Type: WITHER_SKELETON
+  Display: '<aqua>Espectro Arcano'
+  Health: 100
+  Damage: 8
+  Skills:
+  - message{m="<aqua>[Wraith] <white>Sua magia me alimenta!"} @target ~onCombatEnter
+  # Drena 15 de Mana a cada 5 segundos se o jogador tiver mais de 15 de mana
+  - midgard-mana{amount=15;mode=TAKE} @PlayersInRadius{r=5} ~onTimer:100 ?midgardmana{amount=>15}
+  - effect:particles{p=WITCH;a=20} @self ~onTimer:100
+
+# ------------------------------------------------------------------------------
+# 2. Gigante Esmagador (Stamina)
+# Este mob possui um ataque pesado que retira Stamina, cansando o jogador.
+# ------------------------------------------------------------------------------
+StaminaCrusher:
+  Type: IRON_GOLEM
+  Display: '<gold>Gigante Esmagador'
+  Health: 300
+  Damage: 15
+  Skills:
+  - message{m="<gold>[Crusher] <white>VOCÊ VAI SE CANSAR!"} @target ~onCombatEnter
+  # Ataque pesado que tira 30 de Stamina, mas só se o jogador tiver stamina
+  - midgard-stamina{amount=30;mode=TAKE} @target ~onAttack ?midgardstamina{amount=>0}
+  - message{m="<gray>*Você perdeu o fôlego com o impacto!*"} @target ~onAttack ?midgardstamina{amount=>0}

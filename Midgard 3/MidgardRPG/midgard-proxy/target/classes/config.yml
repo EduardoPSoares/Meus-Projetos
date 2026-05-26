@@ -1,0 +1,31 @@
+# MidgardProxy Configuration
+redis:
+  address: "127.0.0.1"
+  port: 6379
+  password: ""
+  ssl: false
+
+messages:
+  global-chat-format: "<green>[G] <white><sender>: <message>"
+  reload-success: "<green>✔</green> <gray>Configuração recarregada com sucesso!</gray>"
+  only-players: "<red>✖</red> <gray>Apenas jogadores podem usar este comando.</gray>"
+  global-chat-usage: "<red>✖</red> <gray>Uso: <yellow>/g <mensagem></yellow></gray>"
+  global-chat-unavailable: "<red>✖</red> <gray>Chat global indisponível no momento.</gray>"
+  lobby-no-servers: "<red>✖</red> <gray>Nenhum servidor de lobby configurado.</gray>"
+  lobby-already: "<yellow>⚠</yellow> <gray>Você já está no lobby.</gray>"
+  lobby-connecting: "<aqua>ℹ</aqua> <gray>Conectando ao lobby...</gray>"
+  lobby-connect-failed: "<red>✖</red> <gray>Falha ao conectar: <white>%reason%</white></gray>"
+  lobby-not-found: "<red>✖</red> <gray>Servidor de lobby não encontrado na rede.</gray>"
+  reload-no-permission: "<red>✖</red> <gray>Você não tem permissão para isso.</gray>"
+  reload-usage: "<yellow>MidgardProxy v1.0.0. Use <white>/midgardproxy reload</white></yellow>"
+
+# Lista de servidores considerados Lobby
+lobby-servers:
+  - "lobby"
+  - "lobby-1"
+  - "lobby-2"
+
+# Outros servidores (opcional)
+servers:
+  survival: "survival-1"
+  pvp: "arena-1"

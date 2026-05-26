@@ -1,0 +1,83 @@
+name: "<yellow>ʟᴜᴢ sᴀɢʀᴀᴅᴀ</yellow>"
+mythic-skill: "LuzSagrada"
+spell-type: COMMON
+
+cooldown:
+  base: 12.0
+  per-level: -0.4
+mana:
+  base: 28.0
+  per-level: -0.7
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Clerigo"
+  level: 8
+
+icon:
+  material: SEA_LANTERN
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<yellow><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></yellow>"
+  - ""
+  - "<gray>ɪɴᴠᴏᴄᴀ ᴜᴍ ꜰᴇɪxᴇ ᴅᴇ ʟᴜᴢ sᴀɢʀᴀᴅᴀ</gray>"
+  - "<gray>ǫᴜᴇ ᴄᴀᴜsᴀ ᴅᴀɴᴏ ᴀᴏs ɪɴɪᴍɪɢᴏs ᴇ</gray>"
+  - "<gray>ᴄᴜʀᴀ ᴏs ᴀʟɪᴀᴅᴏs ɴᴀ ᴀʀᴇᴀ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ᴄᴜʀᴀ:<green>{heal}</green>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴄʟᴇʀɪɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>8</yellow>"
+
+variables:
+  damage:
+    base: 18.0
+    per-level: 4.0
+  heal:
+    base: 12.0
+    per-level: 3.0
+
+milestones:
+  3:
+    visual: "luz_sagrada_beam"
+    mechanic-override: "LuzSagradaMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "luz_sagrada_nova"
+    mechanic-override: "LuzSagradaMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 3
+    vitality: 2
+
+sounds:
+  cast-start:
+    sound: "block.beacon.activate"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "block.beacon.power_select"
+    volume: 0.8
+    pitch: 1.4
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

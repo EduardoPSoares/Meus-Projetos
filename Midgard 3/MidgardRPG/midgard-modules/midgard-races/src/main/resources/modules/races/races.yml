@@ -1,0 +1,770 @@
+races:
+  # ══════════════════════════════════════════════════════
+  #  RAÇA 1: HUMANO — Versátil e Adaptável
+  # ══════════════════════════════════════════════════════
+  human:
+    display-name: '<white>ʜᴜᴍᴀɴᴏ</white>'
+    slot: 10
+    icon: PLAYER_HEAD
+    min-level: 0
+    description:
+      - '<gray>ᴛɪᴘᴏ:<white><bold>ʀᴀᴄᴀ ʙᴀsᴇ</bold></white>'
+      - ''
+      - '<gray>ᴀ ʀᴀᴄᴀ ᴍᴀɪs ᴀᴅᴀᴘᴛᴀᴠᴇʟ ᴅᴇ ᴍɪᴅɢᴀʀᴅ.</gray>'
+      - '<gray>ᴄᴏɴʜᴇᴄɪᴅᴏs ᴘᴏʀ sᴜᴀ ᴅᴇᴛᴇʀᴍɪɴᴀᴄᴀᴏ</gray>'
+      - '<gray>ᴇ ᴄᴀᴘᴀᴄɪᴅᴀᴅᴇ ᴅᴇ sᴜᴘᴇʀᴀᴄᴀᴏ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ʀᴀᴄɪᴀɪs ✦</bold></yellow>'
+      - ''
+      - '<gray>❤ ᴠɪᴅᴀ:<white>+4</white>'
+      - '<gray>✦ ᴛᴏᴅᴏs ᴏs ᴀᴛʀɪʙᴜᴛᴏs:<white>+1</white>'
+      - '<gray>♻ ᴇxᴘ ʙᴏɴᴜs:<green>+15%</green>'
+    on-select-commands:
+      - "lp user {player} parent add human"
+    on-remove-commands:
+      - "lp user {player} parent remove human"
+    attributes:
+      max_health: 4.0
+      strength: 1.0
+      defense: 1.0
+      intelligence: 1.0
+      dexterity: 1.0
+      agility: 1.0
+    per-level-attributes:
+      max_health: 0.5
+      strength: 0.15
+      defense: 0.15
+    traits:
+      adaptive_learner:
+        type: exp_boost
+        trigger: ON_EXP_GAIN
+        description:
+          - '<dark_gray>ᴀᴘʀᴇɴᴅᴇᴍ ʀᴀᴘɪᴅᴏ ᴇᴍ ǫᴜᴀʟǫᴜᴇʀ ᴏꜰɪᴄɪᴏ.</dark_gray>'
+          - '<green>+15% ᴅᴇ ᴇxᴘ ᴇᴍ ᴛᴏᴅᴀs ᴀs ꜰᴏɴᴛᴇs.</green>'
+        multiplier: 1.15
+        chance: 100.0
+      iron_will:
+        type: damage_modifier
+        trigger: ON_DEFEND
+        description:
+          - '<dark_gray>ᴠᴏɴᴛᴀᴅᴇ ɪɴǫᴜᴇʙʀᴀᴠᴇʟ.</dark_gray>'
+          - '<green>-15% ᴅᴀɴᴏ ᴅᴇ ᴠᴇɴᴇɴᴏ ᴇ ᴀꜰᴏɢᴀᴍᴇɴᴛᴏ.</green>'
+        causes:
+          - POISON
+          - DROWNING
+        operation: MULTIPLY
+        value: 0.85
+
+  knight_human:
+    display-name: '<gold>ᴄᴀᴠᴀʟᴇɪʀᴏ</gold>'
+    parent-race: human
+    min-level: 10
+    tree-slot: 20
+    icon: GOLDEN_SWORD
+    description:
+      - '<gray>ᴛɪᴘᴏ:<gold><bold>ᴇᴠᴏʟᴜᴄᴀᴏ</bold></gold>'
+      - ''
+      - '<gray>ɢᴜᴇʀʀᴇɪʀᴏs sᴀɢʀᴀᴅᴏs ǫᴜᴇ ᴘʀᴏᴛᴇɢᴇᴍ ᴏs ꜰʀᴀᴄᴏs.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></yellow>'
+      - '<gray>❤ ᴠɪᴅᴀ:<red>+15</red>'
+      - '<gray>🛡 ᴅᴇꜰᴇsᴀ:<blue>+10</blue>'
+      - '<gray>✦ ꜰᴏʀᴄᴀ:<white>+5</white>'
+    attributes:
+      max_health: 15.0
+      defense: 10.0
+      strength: 5.0
+    traits:
+      holy_strike:
+        type: damage_modifier
+        trigger: ON_ATTACK
+        description:
+          - '<gold>+20% ᴅᴀɴᴏ ᴄᴏᴍ ᴇsᴘᴀᴅᴀs.</gold>'
+        weapons:
+          - SWORD
+        operation: MULTIPLY
+        value: 1.2
+
+  sage_human:
+    display-name: '<aqua>sᴀʙɪᴏ</aqua>'
+    parent-race: human
+    min-level: 10
+    tree-slot: 24
+    icon: ENCHANTED_BOOK
+    description:
+      - '<gray>ᴛɪᴘᴏ:<aqua><bold>ᴇᴠᴏʟᴜᴄᴀᴏ</bold></aqua>'
+      - ''
+      - '<gray>ᴇsᴛᴜᴅɪᴏsᴏs ǫᴜᴇ ᴅᴏᴍɪɴᴀᴍ ᴏ ᴀʀᴄᴀɴᴏ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></yellow>'
+      - '<gray>✦ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ:<aqua>+15</aqua>'
+      - '<gray>✦ ᴍᴀɴᴀ:<blue>+30</blue>'
+    attributes:
+      intelligence: 15.0
+      max_mana: 30.0
+      magic_damage: 5.0
+    traits:
+      arcane_mind:
+        type: exp_boost
+        trigger: ON_EXP_GAIN
+        description:
+          - '<aqua>+30% ᴅᴇ ᴇxᴘ ᴇᴍ ᴛᴏᴅᴀs ᴀs ꜰᴏɴᴛᴇs.</aqua>'
+        multiplier: 1.3
+        chance: 100.0
+
+  # ══════════════════════════════════════════════════════
+  #  RAÇA 2: ELFO — Ágil e Mágico
+  # ══════════════════════════════════════════════════════
+  elf:
+    display-name: '<green>ᴇʟꜰᴏ</green>'
+    slot: 11
+    icon: OAK_SAPLING
+    min-level: 0
+    description:
+      - '<gray>ᴛɪᴘᴏ:<green><bold>ʀᴀᴄᴀ ʙᴀsᴇ</bold></green>'
+      - ''
+      - '<gray>sᴇʀᴇs ᴀɴᴄᴇsᴛʀᴀɪs ʟɪɢᴀᴅᴏs ᴀ ɴᴀᴛᴜʀᴇᴢᴀ.</gray>'
+      - '<gray>ᴀɢᴇɪs, sᴀʙɪᴏs ᴇ ᴇxᴛʀᴇᴍᴀᴍᴇɴᴛᴇ ᴘʀᴇᴄɪsᴏs.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ʀᴀᴄɪᴀɪs ✦</bold></yellow>'
+      - '<gray>✦ ᴅᴇxᴛᴇʀɪᴅᴀᴅᴇ:<green>+4</green>'
+      - '<gray>✦ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ:<aqua>+3</aqua>'
+      - '<gray>✦ ᴀɢɪʟɪᴅᴀᴅᴇ:<yellow>+2</yellow>'
+    on-select-commands:
+      - "lp user {player} parent add elf"
+    on-remove-commands:
+      - "lp user {player} parent remove elf"
+    attributes:
+      dexterity: 4.0
+      intelligence: 3.0
+      agility: 2.0
+      movement_speed: 0.02
+    night-attributes:
+      dexterity: 2.0
+      intelligence: 1.0
+    per-level-attributes:
+      dexterity: 0.3
+      intelligence: 0.2
+    xp-multipliers:
+      harvesting: 1.5
+      woodcutting: 1.3
+      combat: 0.8
+    traits:
+      forest_harmony:
+        type: biome_buff
+        trigger: PASSIVE_TICK
+        description:
+          - '<green>ʀᴇɢᴇɴ ᴇ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴇᴍ ꜰʟᴏʀᴇsᴛᴀs.</green>'
+        biomes: [FOREST, BIRCH_FOREST, OLD_GROWTH_BIRCH_FOREST, JUNGLE]
+        effects:
+          REGENERATION: 0
+          SPEED: 0
+      herbivore:
+        type: diet_restriction
+        trigger: ON_EAT
+        description:
+          - '<green>ᴀᴘᴇɴᴀs ᴠᴇɢᴇᴛᴀɪs ᴇ ꜰʀᴜᴛᴀs.</green>'
+        food_types:
+          - APPLE
+          - GOLDEN_APPLE
+          - ENCHANTED_GOLDEN_APPLE
+          - CARROT
+          - GOLDEN_CARROT
+          - POTATO
+          - BAKED_POTATO
+          - BEETROOT
+          - MELON_SLICE
+          - SWEET_BERRIES
+          - GLOW_BERRIES
+          - BREAD
+          - COOKIE
+          - PUMPKIN_PIE
+          - MUSHROOM_STEW
+          - CHORUS_FRUIT
+      night_sight:
+        type: potion_effect
+        trigger: PASSIVE_TICK
+        description:
+          - '<green>ᴠɪsᴀᴏ ɴᴏᴛᴜʀɴᴀ ɴᴀᴛᴜʀᴀʟ.</green>'
+        effect: NIGHT_VISION
+        amplifier: 0
+        particles: false
+
+  wood_elf:
+    display-name: '<dark_green>ᴇʟꜰᴏ ᴅᴀ ꜰʟᴏʀᴇsᴛᴀ</dark_green>'
+    parent-race: elf
+    min-level: 10
+    tree-slot: 20
+    icon: DARK_OAK_SAPLING
+    description:
+      - '<gray>ᴛɪᴘᴏ:<dark_green><bold>ᴇᴠᴏʟᴜᴄᴀᴏ</bold></dark_green>'
+      - ''
+      - '<gray>ɢᴜᴀʀᴅɪᴀᴇs ᴅᴀ ꜰʟᴏʀᴇsᴛᴀ ᴀɴᴛɪɢᴀ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></yellow>'
+      - '<gray>✦ ᴅᴇxᴛᴇʀɪᴅᴀᴅᴇ:<green>+10</green>'
+      - '<gray>✦ ᴀɢɪʟɪᴅᴀᴅᴇ:<yellow>+8</yellow>'
+    attributes:
+      dexterity: 10.0
+      agility: 8.0
+      dodge_chance: 5.0
+      movement_speed: 0.03
+    traits:
+      arrow_mastery:
+        type: damage_modifier
+        trigger: ON_ATTACK
+        description:
+          - '<green>+25% ᴅᴀɴᴏ ᴄᴏᴍ ᴀʀᴄᴏs.</green>'
+        weapons:
+          - BOW
+        operation: MULTIPLY
+        value: 1.25
+
+  high_elf:
+    display-name: '<aqua>ᴀʟᴛᴏ ᴇʟꜰᴏ</aqua>'
+    parent-race: elf
+    min-level: 10
+    tree-slot: 24
+    icon: END_CRYSTAL
+    description:
+      - '<gray>ᴛɪᴘᴏ:<aqua><bold>ᴇᴠᴏʟᴜᴄᴀᴏ</bold></aqua>'
+      - ''
+      - '<gray>ᴍᴇsᴛʀᴇs ᴅᴀ ᴍᴀɢɪᴀ ᴀʀᴄᴀɴᴀ ᴇʟꜰɪᴄᴀ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></yellow>'
+      - '<gray>✦ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ:<aqua>+15</aqua>'
+      - '<gray>✦ ᴍᴀɴᴀ:<blue>+40</blue>'
+    attributes:
+      intelligence: 15.0
+      max_mana: 40.0
+      magic_damage: 8.0
+      cooldown_reduction: 5.0
+
+  # ══════════════════════════════════════════════════════
+  #  RAÇA 3: ANÃO — Resistente e Forte
+  # ══════════════════════════════════════════════════════
+  dwarf:
+    display-name: '<gold>ᴀɴᴀᴏ</gold>'
+    slot: 12
+    icon: IRON_PICKAXE
+    min-level: 0
+    description:
+      - '<gray>ᴛɪᴘᴏ:<gold><bold>ʀᴀᴄᴀ ʙᴀsᴇ</bold></gold>'
+      - ''
+      - '<gray>ᴍᴇsᴛʀᴇs ᴅᴀ ꜰᴏʀᴊᴀ ᴇ ᴅᴀs ᴍɪɴᴀs.</gray>'
+      - '<gray>ʀᴏʙᴜsᴛᴏs ᴄᴏᴍᴏ ᴀ ᴍᴏɴᴛᴀɴʜᴀ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ʀᴀᴄɪᴀɪs ✦</bold></yellow>'
+      - '<gray>❤ ᴠɪᴅᴀ:<red>+8</red>'
+      - '<gray>✦ ᴅᴇꜰᴇsᴀ:<blue>+4</blue>'
+      - '<gray>✦ ꜰᴏʀᴄᴀ:<white>+3</white>'
+    on-select-commands:
+      - "lp user {player} parent add dwarf"
+    on-remove-commands:
+      - "lp user {player} parent remove dwarf"
+    attributes:
+      max_health: 8.0
+      defense: 4.0
+      strength: 3.0
+      scale: -0.1
+    per-level-attributes:
+      max_health: 0.6
+      defense: 0.3
+      strength: 0.2
+    xp-multipliers:
+      mining: 1.5
+      crafting: 1.3
+      harvesting: 0.7
+    traits:
+      stone_skin:
+        type: damage_modifier
+        trigger: ON_DEFEND
+        description:
+          - '<blue>-10% ᴅᴀɴᴏ ꜰɪsɪᴄᴏ ʀᴇᴄᴇʙɪᴅᴏ.</blue>'
+        causes:
+          - ENTITY_ATTACK
+          - ENTITY_SWEEP_ATTACK
+          - PROJECTILE
+        operation: MULTIPLY
+        value: 0.9
+      fire_resist:
+        type: potion_effect
+        trigger: PASSIVE_TICK
+        description:
+          - '<gold>ʀᴇsɪsᴛᴇɴᴄɪᴀ ɴᴀᴛᴜʀᴀʟ ᴀᴏ ꜰᴏɢᴏ.</gold>'
+        effect: FIRE_RESISTANCE
+        amplifier: 0
+        particles: false
+
+  forge_dwarf:
+    display-name: '<red>ᴀɴᴀᴏ ꜰᴏʀᴊᴀᴅᴏʀ</red>'
+    parent-race: dwarf
+    min-level: 10
+    tree-slot: 20
+    icon: ANVIL
+    description:
+      - '<gray>ᴛɪᴘᴏ:<red><bold>ᴇᴠᴏʟᴜᴄᴀᴏ</bold></red>'
+      - ''
+      - '<gray>ᴍᴇsᴛʀᴇs ᴅᴀ ᴍᴇᴛᴀʟᴜʀɢɪᴀ ᴅɪᴠɪɴᴀ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></yellow>'
+      - '<gray>✦ ꜰᴏʀᴄᴀ:<red>+12</red>'
+      - '<gray>✦ ᴅᴇꜰᴇsᴀ:<blue>+8</blue>'
+    attributes:
+      strength: 12.0
+      defense: 8.0
+      fire_defense: 15.0
+      physical_damage: 5.0
+    traits:
+      hammer_mastery:
+        type: damage_modifier
+        trigger: ON_ATTACK
+        description:
+          - '<red>+30% ᴅᴀɴᴏ ᴄᴏᴍ ᴍᴀᴄʜᴀᴅᴏs.</red>'
+        weapons:
+          - AXE
+        operation: MULTIPLY
+        value: 1.3
+      fire_immunity:
+        type: damage_modifier
+        trigger: ON_DEFEND
+        description:
+          - '<red>ɪᴍᴜɴɪᴅᴀᴅᴇ ᴀᴏ ꜰᴏɢᴏ.</red>'
+        causes:
+          - FIRE
+          - FIRE_TICK
+          - LAVA
+          - HOT_FLOOR
+        operation: MULTIPLY
+        value: 0.0
+
+  # ══════════════════════════════════════════════════════
+  #  RAÇA 4: DRACONIANO — Poderoso e Antigo
+  # ══════════════════════════════════════════════════════
+  draconian:
+    display-name: '<red>ᴅʀᴀᴄᴏɴɪᴀɴᴏ</red>'
+    slot: 13
+    icon: DRAGON_HEAD
+    min-level: 0
+    description:
+      - '<gray>ᴛɪᴘᴏ:<red><bold>ʀᴀᴄᴀ ʙᴀsᴇ</bold></red>'
+      - ''
+      - '<gray>ᴅᴇsᴄᴇɴᴅᴇɴᴛᴇs ᴅᴏs ᴅʀᴀɢᴏᴇs ᴀɴᴛɪɢᴏs.</gray>'
+      - '<gray>sᴇᴜ sᴀɴɢᴜᴇ ᴄᴀʀʀᴇɢᴀ ᴏ ꜰᴏɢᴏ ᴘʀɪᴍᴏʀᴅɪᴀʟ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ʀᴀᴄɪᴀɪs ✦</bold></yellow>'
+      - '<gray>❤ ᴠɪᴅᴀ:<red>+6</red>'
+      - '<gray>✦ ꜰᴏʀᴄᴀ:<white>+4</white>'
+      - '<gray>🔥 ᴅᴀɴᴏ ᴅᴇ ꜰᴏɢᴏ:<red>+3</red>'
+      - '<gray>🔥 ᴅᴇꜰᴇsᴀ ᴅᴇ ꜰᴏɢᴏ:<red>+5</red>'
+    on-select-commands:
+      - "lp user {player} parent add draconian"
+    on-remove-commands:
+      - "lp user {player} parent remove draconian"
+    attributes:
+      max_health: 6.0
+      strength: 4.0
+      fire_damage: 3.0
+      fire_defense: 5.0
+      scale: 0.1
+    per-level-attributes:
+      max_health: 0.5
+      strength: 0.25
+      fire_damage: 0.2
+    traits:
+      carnivore:
+        type: diet_restriction
+        trigger: ON_EAT
+        description:
+          - '<red>ᴀᴘᴇɴᴀs ᴄᴀʀɴᴇs sᴀᴏ ᴘᴇʀᴍɪᴛɪᴅᴀs.</red>'
+        food_types:
+          - BEEF
+          - PORKCHOP
+          - CHICKEN
+          - MUTTON
+          - COOKED_BEEF
+          - COOKED_PORKCHOP
+          - COOKED_CHICKEN
+          - COOKED_MUTTON
+          - ROTTEN_FLESH
+          - RABBIT
+          - COOKED_RABBIT
+      dragon_blood:
+        type: damage_modifier
+        trigger: ON_DEFEND
+        description:
+          - '<red>-50% ᴅᴀɴᴏ ᴅᴇ ꜰᴏɢᴏ.</red>'
+        causes:
+          - FIRE
+          - FIRE_TICK
+          - LAVA
+        operation: MULTIPLY
+        value: 0.5
+
+  infernal_draconian:
+    display-name: '<dark_red>ᴅʀᴀᴄᴏɴɪᴀɴᴏ ɪɴꜰᴇʀɴᴀʟ</dark_red>'
+    parent-race: draconian
+    min-level: 10
+    tree-slot: 20
+    icon: MAGMA_CREAM
+    description:
+      - '<gray>ᴛɪᴘᴏ:<dark_red><bold>ᴇᴠᴏʟᴜᴄᴀᴏ</bold></dark_red>'
+      - ''
+      - '<gray>ꜰᴏʀᴊᴀᴅᴏs ɴᴏ ɴᴜᴄʟᴇᴏ ᴅᴏ ᴍᴜɴᴅᴏ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></yellow>'
+      - '<gray>❤ ᴠɪᴅᴀ:<red>+12</red>'
+      - '<gray>🔥 ᴅᴀɴᴏ ᴅᴇ ꜰᴏɢᴏ:<red>+15</red>'
+      - '<gray>🔥 ᴅᴇꜰᴇsᴀ ᴅᴇ ꜰᴏɢᴏ:<red>+25</red>'
+    attributes:
+      max_health: 12.0
+      strength: 8.0
+      fire_damage: 15.0
+      fire_defense: 25.0
+      scale: 0.3
+    traits:
+      fire_immunity:
+        type: damage_modifier
+        trigger: ON_DEFEND
+        description:
+          - '<red>ɪᴍᴜɴɪᴅᴀᴅᴇ ᴛᴏᴛᴀʟ ᴀᴏ ꜰᴏɢᴏ.</red>'
+        causes:
+          - FIRE
+          - FIRE_TICK
+          - LAVA
+          - HOT_FLOOR
+        operation: MULTIPLY
+        value: 0.0
+
+  # ══════════════════════════════════════════════════════
+  #  RAÇA 5: ORC — Bruto e Tenaz
+  # ══════════════════════════════════════════════════════
+  orc:
+    display-name: '<dark_green>ᴏʀᴄ</dark_green>'
+    slot: 14
+    icon: ZOMBIE_HEAD
+    min-level: 0
+    description:
+      - '<gray>ᴛɪᴘᴏ:<dark_green><bold>ʀᴀᴄᴀ ʙᴀsᴇ</bold></dark_green>'
+      - ''
+      - '<gray>ɢᴜᴇʀʀᴇɪʀᴏs ʙʀᴜᴛᴀɪs ᴅᴀs ᴛᴇʀʀᴀs sᴇʟᴠᴀɢᴇɴs.</gray>'
+      - '<gray>sᴜᴀ ꜰᴏʀᴄᴀ sᴜᴘᴇʀᴀ ᴀ ᴅᴇ ǫᴜᴀʟǫᴜᴇʀ ʀᴀᴄᴀ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ʀᴀᴄɪᴀɪs ✦</bold></yellow>'
+      - '<gray>❤ ᴠɪᴅᴀ:<red>+6</red>'
+      - '<gray>✦ ꜰᴏʀᴄᴀ:<white>+5</white>'
+      - '<gray>✦ ᴅᴇꜰᴇsᴀ:<blue>+2</blue>'
+    on-select-commands:
+      - "lp user {player} parent add orc"
+    on-remove-commands:
+      - "lp user {player} parent remove orc"
+    attributes:
+      max_health: 6.0
+      strength: 5.0
+      defense: 2.0
+      scale: 0.15
+    per-level-attributes:
+      max_health: 0.6
+      strength: 0.3
+    traits:
+      battle_frenzy:
+        type: damage_modifier
+        trigger: ON_ATTACK
+        description:
+          - '<dark_green>+10% ᴅᴀɴᴏ ᴇᴍ ᴛᴏᴅᴏs ᴀᴛᴀǫᴜᴇs.</dark_green>'
+        operation: MULTIPLY
+        value: 1.1
+      thick_hide:
+        type: regen
+        trigger: ON_REGEN
+        description:
+          - '<green>ʀᴇɢᴇɴ ᴀᴄᴇʟᴇʀᴀᴅᴀ.</green>'
+        value: 1.3
+        operation: MULTIPLY
+
+  berserker_orc:
+    display-name: '<dark_red>ᴏʀᴄ ʙᴇʀsᴇʀᴋᴇʀ</dark_red>'
+    parent-race: orc
+    min-level: 10
+    tree-slot: 20
+    icon: NETHERITE_AXE
+    description:
+      - '<gray>ᴛɪᴘᴏ:<dark_red><bold>ᴇᴠᴏʟᴜᴄᴀᴏ</bold></dark_red>'
+      - ''
+      - '<gray>ꜰᴜʀɪᴀ ɪɴᴄᴏɴᴛʀᴏʟᴀᴠᴇʟ ᴇᴍ ꜰᴏʀᴍᴀ ᴠɪᴠᴀ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></yellow>'
+      - '<gray>✦ ꜰᴏʀᴄᴀ:<red>+15</red>'
+      - '<gray>✦ ᴅᴀɴᴏ ꜰɪsɪᴄᴏ:<white>+10</white>'
+    attributes:
+      strength: 15.0
+      physical_damage: 10.0
+      critical_chance: 8.0
+      critical_damage: 20.0
+    traits:
+      bloodlust:
+        type: life_steal
+        trigger: ON_ATTACK
+        description:
+          - '<red>ʀᴏᴜʙᴀ 8% ᴅᴀ ᴠɪᴅᴀ ᴀᴏ ᴀᴛᴀᴄᴀʀ.</red>'
+        percentage: 8.0
+        chance: 100.0
+
+  # ══════════════════════════════════════════════════════
+  #  RAÇA 6: DEMÔNIO — Sombrio e Poderoso
+  # ══════════════════════════════════════════════════════
+  demon:
+    display-name: '<dark_red>ᴅᴇᴍᴏɴɪᴏ</dark_red>'
+    slot: 15
+    icon: BLAZE_ROD
+    min-level: 0
+    description:
+      - '<gray>ᴛɪᴘᴏ:<dark_red><bold>ʀᴀᴄᴀ ʙᴀsᴇ</bold></dark_red>'
+      - ''
+      - '<gray>sᴇʀᴇs ɴᴀsᴄɪᴅᴏs ᴅᴀs ᴛʀᴇᴠᴀs ᴘʀɪᴍᴏʀᴅɪᴀɪs.</gray>'
+      - '<gray>ᴘᴏᴅᴇʀᴏsᴏs ᴍᴀs ᴠᴜʟɴᴇʀᴀᴠᴇɪs ᴀ ʟᴜᴢ sᴏʟᴀʀ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ʀᴀᴄɪᴀɪs ✦</bold></yellow>'
+      - '<gray>✦ ꜰᴏʀᴄᴀ:<red>+3</red>'
+      - '<gray>✦ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ:<dark_purple>+4</dark_purple>'
+      - '<gray>🌑 ᴅᴀɴᴏ ᴅᴀs ᴛʀᴇᴠᴀs:<dark_purple>+5</dark_purple>'
+    on-select-commands:
+      - "lp user {player} parent add demon"
+    on-remove-commands:
+      - "lp user {player} parent remove demon"
+    attributes:
+      strength: 3.0
+      intelligence: 4.0
+      darkness_damage: 5.0
+      darkness_defense: 5.0
+      life_steal: 3.0
+    per-level-attributes:
+      intelligence: 0.3
+      darkness_damage: 0.3
+    traits:
+      sun_weakness:
+        type: sun_burn
+        trigger: PASSIVE_TICK
+        description:
+          - '<red>ᴀ ʟᴜᴢ sᴏʟᴀʀ ǫᴜᴇɪᴍᴀ sᴜᴀ ᴘᴇʟᴇ.</red>'
+        damage: 1.0
+        interval: 80
+        active-at: DAY
+      dark_vision:
+        type: potion_effect
+        trigger: PASSIVE_TICK
+        description:
+          - '<dark_purple>ᴠɪsᴀᴏ ɴᴏᴛᴜʀɴᴀ ᴘᴇʀᴍᴀɴᴇɴᴛᴇ.</dark_purple>'
+        effect: NIGHT_VISION
+        amplifier: 0
+        particles: false
+      night_power:
+        type: time_buff
+        trigger: PASSIVE_TICK
+        description:
+          - '<dark_purple>ᴍᴀɪs ꜰᴏʀᴛᴇ a ɴᴏɪᴛᴇ.</dark_purple>'
+        active-at: NIGHT
+        effects:
+          STRENGTH: 1
+          SPEED: 0
+
+  abyssal_demon:
+    display-name: '<dark_purple>ᴅᴇᴍᴏɴɪᴏ ᴀʙɪssᴀʟ</dark_purple>'
+    parent-race: demon
+    min-level: 10
+    tree-slot: 20
+    icon: WITHER_SKELETON_SKULL
+    description:
+      - '<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴇᴠᴏʟᴜᴄᴀᴏ</bold></dark_purple>'
+      - ''
+      - '<gray>ᴀ ꜰᴏʀᴍᴀ ᴍᴀɪs ᴘᴜʀᴀ ᴅᴏ ᴄᴀᴏs.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></yellow>'
+      - '<gray>🌑 ᴅᴀɴᴏ ᴅᴀs ᴛʀᴇᴠᴀs:<dark_purple>+20</dark_purple>'
+      - '<gray>✦ ᴠɪᴅᴀ ʀᴏᴜʙᴀᴅᴀ:<red>+10%</red>'
+    attributes:
+      darkness_damage: 20.0
+      darkness_defense: 15.0
+      life_steal: 10.0
+      intelligence: 10.0
+    traits:
+      soul_drain:
+        type: life_steal
+        trigger: ON_ATTACK
+        description:
+          - '<dark_purple>ʀᴏᴜʙᴀ 12% ᴅᴀ ᴠɪᴅᴀ ᴀᴏ ᴀᴛᴀᴄᴀʀ.</dark_purple>'
+        percentage: 12.0
+        chance: 100.0
+
+  # ══════════════════════════════════════════════════════
+  #  RAÇA 7: CELESTIAL — Divino e Puro
+  # ══════════════════════════════════════════════════════
+  celestial:
+    display-name: '<yellow>ᴄᴇʟᴇsᴛɪᴀʟ</yellow>'
+    slot: 16
+    icon: SUNFLOWER
+    min-level: 0
+    description:
+      - '<gray>ᴛɪᴘᴏ:<yellow><bold>ʀᴀᴄᴀ ʙᴀsᴇ</bold></yellow>'
+      - ''
+      - '<gray>sᴇʀᴇs ᴅᴇ ʟᴜᴢ ᴘᴜʀᴀ ᴅᴏs ᴄᴇᴜs.</gray>'
+      - '<gray>ʙᴇɴᴅɪᴛᴏs ᴄᴏᴍ ᴘᴏᴅᴇʀᴇs ᴅɪᴠɪɴᴏs.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ʀᴀᴄɪᴀɪs ✦</bold></yellow>'
+      - '<gray>❤ ᴠɪᴅᴀ:<red>+4</red>'
+      - '<gray>✦ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ:<aqua>+3</aqua>'
+      - '<gray>☀ ᴅᴀɴᴏ sᴀɢʀᴀᴅᴏ:<yellow>+5</yellow>'
+    on-select-commands:
+      - "lp user {player} parent add celestial"
+    on-remove-commands:
+      - "lp user {player} parent remove celestial"
+    attributes:
+      max_health: 4.0
+      intelligence: 3.0
+      divine_damage: 5.0
+      divine_defense: 5.0
+      light_damage: 3.0
+    per-level-attributes:
+      divine_damage: 0.3
+      intelligence: 0.2
+    traits:
+      solar_blessing:
+        type: time_buff
+        trigger: PASSIVE_TICK
+        description:
+          - '<yellow>ꜰᴏʀᴛᴀʟᴇᴄɪᴅᴏ ᴘᴇʟᴀ ʟᴜᴢ ᴅᴏ sᴏʟ.</yellow>'
+        active-at: DAY
+        effects:
+          REGENERATION: 0
+          SPEED: 0
+      holy_diet:
+        type: diet_restriction
+        trigger: ON_EAT
+        description:
+          - '<yellow>ᴀᴘᴇɴᴀs ᴀʟɪᴍᴇɴᴛᴏs ᴘᴜʀᴏs.</yellow>'
+        food_types:
+          - GOLDEN_APPLE
+          - ENCHANTED_GOLDEN_APPLE
+          - GOLDEN_CARROT
+          - HONEY_BOTTLE
+          - BREAD
+          - COOKIE
+          - PUMPKIN_PIE
+
+  seraphim:
+    display-name: '<gold>sᴇʀᴀꜰɪᴍ</gold>'
+    parent-race: celestial
+    min-level: 10
+    tree-slot: 20
+    icon: NETHER_STAR
+    description:
+      - '<gray>ᴛɪᴘᴏ:<gold><bold>ᴇᴠᴏʟᴜᴄᴀᴏ</bold></gold>'
+      - ''
+      - '<gray>ᴏ ᴍᴀɪs ᴀʟᴛᴏ ɢʀᴀᴜ ᴅᴇ ᴅɪᴠɪɴᴅᴀᴅᴇ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></yellow>'
+      - '<gray>☀ ᴅᴀɴᴏ sᴀɢʀᴀᴅᴏ:<gold>+20</gold>'
+      - '<gray>❤ ᴠɪᴅᴀ:<red>+15</red>'
+    attributes:
+      divine_damage: 20.0
+      divine_defense: 15.0
+      light_damage: 10.0
+      max_health: 15.0
+      regeneration_modifier: 0.5
+
+  # ══════════════════════════════════════════════════════
+  #  RAÇA 8: LUPINO — Selvagem e Feroz
+  # ══════════════════════════════════════════════════════
+  lupino:
+    display-name: '<gray>ʟᴜᴘɪɴᴏ</gray>'
+    slot: 19
+    icon: WOLF_SPAWN_EGG
+    min-level: 0
+    description:
+      - '<gray>ᴛɪᴘᴏ:<gray><bold>ʀᴀᴄᴀ ʙᴀsᴇ</bold></gray>'
+      - ''
+      - '<gray>ᴍᴇɪᴏ ʜᴜᴍᴀɴᴏs, ᴍᴇɪᴏ ʟᴏʙᴏs.</gray>'
+      - '<gray>ɪɴsᴛɪɴᴛᴏs ᴀɢᴜᴄᴀᴅᴏs ᴇ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ʀᴀᴄɪᴀɪs ✦</bold></yellow>'
+      - '<gray>✦ ᴀɢɪʟɪᴅᴀᴅᴇ:<yellow>+5</yellow>'
+      - '<gray>✦ ꜰᴏʀᴄᴀ:<white>+3</white>'
+      - '<gray>✦ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ:<green>+ʀᴀᴘɪᴅᴏ</green>'
+    on-select-commands:
+      - "lp user {player} parent add lupino"
+    on-remove-commands:
+      - "lp user {player} parent remove lupino"
+    attributes:
+      agility: 5.0
+      strength: 3.0
+      movement_speed: 0.04
+      attack_speed: 3.0
+      dodge_chance: 3.0
+    per-level-attributes:
+      agility: 0.3
+      strength: 0.2
+    traits:
+      pack_hunter:
+        type: exp_boost
+        trigger: ON_KILL
+        description:
+          - '<green>+25% ᴅᴇ ᴇxᴘ ᴀᴏ ᴍᴀᴛᴀʀ.</green>'
+        multiplier: 1.25
+        chance: 100.0
+      night_hunter:
+        type: time_buff
+        trigger: PASSIVE_TICK
+        description:
+          - '<gray>ᴍᴀɪs ᴘᴏᴅᴇʀᴏsᴏ a ɴᴏɪᴛᴇ.</gray>'
+        active-at: NIGHT
+        effects:
+          SPEED: 1
+          STRENGTH: 0
+          NIGHT_VISION: 0
+      carnivore:
+        type: diet_restriction
+        trigger: ON_EAT
+        description:
+          - '<gray>ᴀᴘᴇɴᴀs ᴄᴀʀɴᴇs.</gray>'
+        food_types:
+          - BEEF
+          - COOKED_BEEF
+          - PORKCHOP
+          - COOKED_PORKCHOP
+          - CHICKEN
+          - COOKED_CHICKEN
+          - MUTTON
+          - COOKED_MUTTON
+          - RABBIT
+          - COOKED_RABBIT
+          - ROTTEN_FLESH
+
+  alpha_lupino:
+    display-name: '<dark_red>ʟᴜᴘɪɴᴏ ᴀʟꜰᴀ</dark_red>'
+    parent-race: lupino
+    min-level: 10
+    tree-slot: 20
+    icon: BONE
+    description:
+      - '<gray>ᴛɪᴘᴏ:<dark_red><bold>ᴇᴠᴏʟᴜᴄᴀᴏ</bold></dark_red>'
+      - ''
+      - '<gray>ᴏ ʟɪᴅᴇʀ ᴅᴀ ᴍᴀᴛɪʟʜᴀ.</gray>'
+      - ''
+      - '<yellow><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></yellow>'
+      - '<gray>✦ ᴀɢɪʟɪᴅᴀᴅᴇ:<yellow>+12</yellow>'
+      - '<gray>✦ ꜰᴏʀᴄᴀ:<red>+10</red>'
+    attributes:
+      agility: 12.0
+      strength: 10.0
+      movement_speed: 0.06
+      attack_speed: 8.0
+      critical_chance: 10.0
+      dodge_chance: 8.0
+    traits:
+      feral_fury:
+        type: life_steal
+        trigger: ON_ATTACK
+        description:
+          - '<red>ʀᴏᴜʙᴀ 10% ᴅᴀ ᴠɪᴅᴀ ᴀᴏ ᴀᴛᴀᴄᴀʀ.</red>'
+        percentage: 10.0
+        chance: 100.0

@@ -1,0 +1,13 @@
+{
+  "version": "1.0.14",
+  "update_mode": "manifest",
+  "manifest_url": "https://pub-5359fa4ead8743cbbc40f1166dd089f1.r2.dev/warface-launcher/launcher-manifest.json",
+  "base_url": "https://pub-5359fa4ead8743cbbc40f1166dd089f1.r2.dev/warface-launcher/",
+  "required": true,
+  "notes": "",
+  "file_count": 78,
+  "total_size": 1138464177,
+  "changed_count": 4,
+  "removed_count": 0,
+  "updatedAt": "2026-05-18T05:23:49.847Z"
+}

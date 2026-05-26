@@ -1,0 +1,78 @@
+name: "<dark_gray>ɢᴏʟᴘᴇ ᴄʀɪᴛɪᴄᴏ</dark_gray>"
+mythic-skill: "GolpeCritico"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Ladino"
+  level: 5
+
+icon:
+  material: IRON_SWORD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></dark_gray>"
+  - ""
+  - "<gray>ᴏ ʟᴀᴅɪɴᴏ ᴅᴏᴍɪɴᴀ ᴀ ᴀʀᴛᴇ ᴅᴏs ɢᴏʟᴘᴇs</gray>"
+  - "<gray>ᴄʀɪᴛɪᴄᴏs, ᴀᴜᴍᴇɴᴛᴀɴᴅᴏ ᴀ ᴄʜᴀɴᴄᴇ ᴅᴇ</gray>"
+  - "<gray>ᴅᴇsꜰᴇʀɪʀ ɢᴏʟᴘᴇs ᴅᴇᴠᴀsᴛᴀᴅᴏʀᴇs.</gray>"
+  - ""
+  - "<dark_gray><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></dark_gray>"
+  - ""
+  - "<gray>ᴄʜᴀɴᴄᴇ ᴅᴇ ᴄʀɪᴛɪᴄᴏ:<dark_purple>{crit_chance}%</dark_purple>"
+  - "<gray>ᴅᴀɴᴏ ᴄʀɪᴛɪᴄᴏ:<dark_purple>{crit_damage}%</dark_purple>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ʟᴀᴅɪɴᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  crit_chance:
+    base: 5.0
+    per-level: 2.0
+  crit_damage:
+    base: 10.0
+    per-level: 5.0
+
+milestones:
+  3:
+    visual: "golpe_critico_slash"
+    mechanic-override: "GolpeCriticoMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "golpe_critico_lethal"
+    mechanic-override: "GolpeCriticoMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.player.attack.crit"
+    volume: 0.6
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.experience_orb.pickup"
+    volume: 0.5
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

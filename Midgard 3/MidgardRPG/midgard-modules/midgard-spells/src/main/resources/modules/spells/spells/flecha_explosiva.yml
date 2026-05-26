@@ -1,0 +1,78 @@
+name: "<green>ꜰʟᴇᴄʜᴀ ᴇxᴘʟᴏsɪᴠᴀ</green>"
+mythic-skill: "FlechaExplosiva"
+spell-type: COMMON
+
+cooldown:
+  base: 14.0
+  per-level: -0.4
+mana:
+  base: 15.0
+  per-level: -0.5
+stamina: 28.0
+
+max-level: 10
+
+requirements:
+  class: "Arqueiro"
+  level: 12
+
+icon:
+  material: FIREWORK_ROCKET
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<green><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></green>"
+  - ""
+  - "<gray>ᴅɪsᴘᴀʀᴀ ᴜᴍᴀ ꜰʟᴇᴄʜᴀ ǫᴜᴇ ᴇxᴘʟᴏᴅᴇ</gray>"
+  - "<gray>ᴀᴏ ɪᴍᴘᴀᴄᴛᴏ, ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ ᴇᴍ</gray>"
+  - "<gray>ᴀʀᴇᴀ ᴀᴏs ɪɴɪᴍɪɢᴏs ᴘʀᴏxɪᴍᴏs.</gray>"
+  - ""
+  - "<green><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></green>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴀʀǫᴜᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>12</yellow>"
+
+variables:
+  damage:
+    base: 25.0
+    per-level: 6.0
+
+milestones:
+  3:
+    visual: "flecha_explosiva_spark"
+    mechanic-override: "FlechaExplosivaMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "flecha_explosiva_blast"
+    mechanic-override: "FlechaExplosivaMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.arrow.shoot"
+    volume: 1.0
+    pitch: 0.8
+  cast-finish:
+    sound: "entity.generic.explode"
+    volume: 1.0
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

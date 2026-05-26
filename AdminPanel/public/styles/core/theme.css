@@ -1,0 +1,5 @@
+/* Core theme placeholders for progressive extraction */
+:root {
+  --ap-font-ui: "Rajdhani", "Segoe UI", sans-serif;
+  --ap-font-mono: "Share Tech Mono", monospace;
+}

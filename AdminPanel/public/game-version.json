@@ -1,0 +1,17 @@
+{
+  "version": "1.0.11",
+  "update_mode": "manifest",
+  "manifest_url": "https://pub-5359fa4ead8743cbbc40f1166dd089f1.r2.dev/game-manifest.json",
+  "base_url": "https://pub-5359fa4ead8743cbbc40f1166dd089f1.r2.dev/",
+  "required": true,
+  "notes": "Atualizacao publicada automaticamente pelo painel",
+  "file_count": 460,
+  "total_size": 18871975687,
+  "uploaded_count": 4,
+  "uploaded_size": 149600,
+  "skipped_existing_count": 0,
+  "skipped_existing_size": 0,
+  "removed_count": 1,
+  "source": "r2-folder",
+  "updatedAt": "2026-05-18T06:27:44.195Z"
+}

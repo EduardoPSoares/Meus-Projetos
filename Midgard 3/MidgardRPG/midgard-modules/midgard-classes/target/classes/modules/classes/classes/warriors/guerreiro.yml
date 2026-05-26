@@ -1,0 +1,62 @@
+display-name: '<red>ɢᴜᴇʀʀᴇɪʀᴏ</red>'
+icon: IRON_SWORD
+lore:
+  - '<gray>ᴛɪᴘᴏ:<red><bold>ᴄʟᴀssᴇ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ</bold></red>'
+  - ''
+  - '<gray>ɢᴜᴇʀʀᴇɪʀᴏs sᴀᴏ ᴍᴇsᴛʀᴇs ᴅᴏ ᴄᴏᴍʙᴀᴛᴇ ᴄᴏʀᴘᴏ</gray>'
+  - '<gray>ᴀ ᴄᴏʀᴘᴏ, ᴄᴀᴘᴀᴢᴇs ᴅᴇ ᴅᴇsꜰᴇʀɪʀ ɢᴏʟᴘᴇs</gray>'
+  - '<gray>ᴅᴇᴠᴀsᴛᴀᴅᴏʀᴇs ᴄᴏᴍ ꜰᴏʀᴄᴀ ʙʀᴜᴛᴀ.</gray>'
+  - ''
+  - '<yellow><bold>✦ ᴇsᴛɪʟᴏ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ ✦</bold></yellow>'
+  - ''
+  - '<gray>• ᴅᴀɴᴏ:<red>ᴀʟᴛᴏ</red>'
+  - '<gray>• ᴅᴇꜰᴇsᴀ:<red>ᴀʟᴛᴀ</red>'
+  - '<gray>• ᴀʟᴄᴀɴᴄᴇ:<yellow>ʙᴀɪxᴏ</yellow>'
+attributes:
+  base:
+    strength: 10
+    defense: 8
+    vitality: 10
+    intelligence: 2
+    dexterity: 5
+  per-level:
+    strength: 2
+    vitality: 1
+    defense: 0.5
+health:
+  base: 20
+  per-level: 5
+mana:
+  base: 10
+  per-level: 2
+skills:
+  FURIA_GUERREIRA:
+    level: 1
+    type: passive
+  RESISTENCIA_MARCIAL:
+    level: 5
+    type: passive
+  GOLPE_BRUTAL:
+    level: 1
+    type: active
+  INVESTIDA:
+    level: 3
+    type: active
+  GRITO_DE_GUERRA:
+    level: 5
+    type: active
+  CORTE_GIRATORIO:
+    level: 8
+    type: active
+  PROVOCAR:
+    level: 10
+    type: active
+  ESMAGAR:
+    level: 12
+    type: active
+  FURIA_BERSERKER:
+    level: 15
+    type: ultimate
+  GOLPE_DEVASTADOR:
+    level: 20
+    type: ultimate

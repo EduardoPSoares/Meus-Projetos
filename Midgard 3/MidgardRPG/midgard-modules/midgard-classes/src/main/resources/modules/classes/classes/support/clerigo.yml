@@ -1,0 +1,62 @@
+display-name: '<gold>ᴄʟᴇʀɪɢᴏ</gold>'
+icon: GOLDEN_APPLE
+lore:
+  - '<gray>ᴛɪᴘᴏ:<gold><bold>sᴜᴘᴏʀᴛᴇ sᴀɢʀᴀᴅᴏ</bold></gold>'
+  - ''
+  - '<gray>ᴄʟᴇʀɪɢᴏs ᴄᴀɴᴀʟɪᴢᴀᴍ ᴏ ᴘᴏᴅᴇʀ ᴅɪᴠɪɴᴏ,</gray>'
+  - '<gray>ᴄᴜʀᴀɴᴅᴏ ꜰᴇʀɪᴅᴀs ᴇ ᴘʀᴏᴛᴇɢᴇɴᴅᴏ sᴇᴜs</gray>'
+  - '<gray>ᴀʟɪᴀᴅᴏs ᴄᴏᴍ ʙᴇɴᴄᴀᴏs sᴀɢʀᴀᴅᴀs.</gray>'
+  - ''
+  - '<yellow><bold>✦ ᴇsᴛɪʟᴏ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ ✦</bold></yellow>'
+  - ''
+  - '<gray>• ᴅᴀɴᴏ:<yellow>ʙᴀɪxᴏ</yellow>'
+  - '<gray>• ᴅᴇꜰᴇsᴀ:<yellow>ᴍᴇᴅɪᴀ</yellow>'
+  - '<gray>• ᴀʟᴄᴀɴᴄᴇ:<yellow>ᴍᴇᴅɪᴏ</yellow>'
+attributes:
+  base:
+    strength: 3
+    defense: 5
+    vitality: 8
+    intelligence: 11
+    dexterity: 3
+  per-level:
+    intelligence: 2
+    vitality: 1
+    defense: 0.5
+health:
+  base: 20
+  per-level: 4
+mana:
+  base: 25
+  per-level: 5
+skills:
+  BENCAO_DIVINA:
+    level: 1
+    type: passive
+  AURA_SAGRADA:
+    level: 5
+    type: passive
+  CURAR:
+    level: 1
+    type: active
+  ESCUDO_DE_FE:
+    level: 3
+    type: active
+  PURIFICAR:
+    level: 5
+    type: active
+  LUZ_SAGRADA:
+    level: 8
+    type: active
+  RENOVAR:
+    level: 10
+    type: active
+  PRECE_PROTETORA:
+    level: 12
+    type: active
+  RESSURREICAO:
+    level: 15
+    type: ultimate
+  JULGAMENTO_DIVINO:
+    level: 20
+    type: ultimate

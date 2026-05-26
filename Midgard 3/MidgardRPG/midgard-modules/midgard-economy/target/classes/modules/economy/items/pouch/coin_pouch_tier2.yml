@@ -1,0 +1,22 @@
+coin_pouch_tier2:
+  base:
+    material: BUNDLE
+    name: '<white>ʙᴏʟsᴀ ᴅᴇ ᴍᴏᴇᴅᴀs ɪɪ</white>'
+    tier: RARE
+    type: MISCELLANEOUS
+    model-data: 1011
+  mechanics:
+    lore:
+      - '<gray>ʀᴀʀɪᴅᴀᴅᴇ:<blue><bold>ʀᴀʀᴏ</bold></blue>'
+      - ''
+      - '<gray>ᴜᴍᴀ ʙᴏʟsᴀ ᴍᴀɢɪᴄᴀ ǫᴜᴇ ᴄᴏʟᴇᴛᴀ</gray>'
+      - '<gray>ᴍᴏᴇᴅᴀs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀᴍᴇɴᴛᴇ.</gray>'
+      - ''
+      - '<blue><bold>✦ ɪɴꜰᴏʀᴍᴀᴄᴏᴇs ✦</bold></blue>'
+      - ''
+      - '<gray>ᴄᴀᴘᴀᴄɪᴅᴀᴅᴇ:<white>1.000.000</white> <gray>ᴍᴏᴇᴅᴀs</gray>'
+      - '<gray>ᴇsᴘᴀᴄᴏ:<white>27</white> <gray>sʟᴏᴛs</gray>'
+      - '<gray>ᴄᴏɴᴛᴇᴍ:<green>0</green>'
+      - '<dark_gray><i>ᴄᴏᴍᴘᴀᴄᴛᴀᴄᴀᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ: ᴀᴛɪᴠᴀᴅᴀ</i></dark_gray>'
+      - ''
+      - '<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɢᴇʀᴇɴᴄɪᴀʀ</gray>'

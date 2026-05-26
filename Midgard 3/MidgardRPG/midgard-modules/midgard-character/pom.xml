@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>me.ray.midgard</groupId>
+        <artifactId>midgard-modules</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>midgard-character</artifactId>
+    <name>midgard-character</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-classes</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-combat</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-races</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-spells</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-economy</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-professions</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>

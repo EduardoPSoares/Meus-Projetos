@@ -1,0 +1,62 @@
+display-name: '<dark_purple>ᴍᴀɢᴏ</dark_purple>'
+icon: BLAZE_ROD
+lore:
+  - '<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴍᴀɢᴏ ᴇʟᴇᴍᴇɴᴛᴀʟ</bold></dark_purple>'
+  - ''
+  - '<gray>ᴍᴀɢᴏs ᴅᴏᴍɪɴᴀᴍ ᴀs ꜰᴏʀᴄᴀs ᴇʟᴇᴍᴇɴᴛᴀɪs,</gray>'
+  - '<gray>ᴅᴇsᴛʀᴜɪɴᴅᴏ ɪɴɪᴍɪɢᴏs ᴀ ᴅɪsᴛᴀɴᴄɪᴀ ᴄᴏᴍ</gray>'
+  - '<gray>ᴘᴏᴅᴇʀᴏsᴏs ꜰᴇɪᴛɪᴄᴏs ᴀʀᴄᴀɴᴏs.</gray>'
+  - ''
+  - '<yellow><bold>✦ ᴇsᴛɪʟᴏ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ ✦</bold></yellow>'
+  - ''
+  - '<gray>• ᴅᴀɴᴏ:<dark_red>ᴍᴜɪᴛᴏ ᴀʟᴛᴏ</dark_red>'
+  - '<gray>• ᴅᴇꜰᴇsᴀ:<red>ʙᴀɪxᴀ</red>'
+  - '<gray>• ᴀʟᴄᴀɴᴄᴇ:<green>ᴀʟᴛᴏ</green>'
+attributes:
+  base:
+    strength: 2
+    defense: 3
+    vitality: 5
+    intelligence: 14
+    dexterity: 4
+  per-level:
+    intelligence: 2.5
+    vitality: 0.5
+    dexterity: 0.5
+health:
+  base: 15
+  per-level: 3
+mana:
+  base: 30
+  per-level: 5
+skills:
+  SABEDORIA_ARCANA:
+    level: 1
+    type: passive
+  FLUXO_DE_MANA:
+    level: 5
+    type: passive
+  BOLA_DE_FOGO:
+    level: 1
+    type: active
+  RAIO_GLACIAL:
+    level: 3
+    type: active
+  RELAMPAGO:
+    level: 5
+    type: active
+  ESCUDO_MAGICO:
+    level: 8
+    type: active
+  METEORO:
+    level: 10
+    type: active
+  EXPLOSAO_ARCANA:
+    level: 12
+    type: active
+  TEMPESTADE_ELEMENTAL:
+    level: 15
+    type: ultimate
+  APOCALIPSE_ARCANO:
+    level: 20
+    type: ultimate

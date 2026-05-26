@@ -1,0 +1,241 @@
+# This is your quest configuration file, where you define quests for your game.
+# This is a BETA feature and is subject to change.
+
+# Event Types:
+# Define the event types and their potential arguments here.
+# - 'BLOCK-BREAK:BLOCK_TYPE:AMOUNT' - Player breaks a specific type of block a certain number of times.
+# - 'BLOCK-PLACE:BLOCK_TYPE:AMOUNT' - Player places a specific type of block a certain number of times.
+# - 'KILL-ENTITY:ENTITY_TYPE:AMOUNT' - Player kills a specific type of entity a certain number of times.
+# - 'ITEM-PICKUP:ITEM_NAME:AMOUNT' - Player picks up a specific item a certain number of times.
+# - 'ITEM-DROP:ITEM_NAME:AMOUNT' - Player drops a specific item a certain number of times.
+# - 'ITEM-CRAFT:ITEM_NAME:AMOUNT' - Player crafts a specific item a certain number of times.
+# - 'TRAVEL-WORLD:WORLD_NAME:AMOUNT' - Player travels to a world a certain amount of times.
+# - 'TRAVEL-BIOME:BIOME_NAME:AMOUNT' - Player travels to a biome a certain amount of times.
+# - 'KILL-ENTITY-PROJECTILE:ENTITY_TYPE:AMOUNT' - Player kills a specific type of entity with a projectile a certain number of times.
+# - 'ITEM-CRAFT:ITEM:AMOUNT' - Player travels to a biome a certain amount of times.
+
+# Placeholders:
+# For commands only:
+# Use these placeholders in starting and ending commands to provide dynamic information.
+# {x}, {y}, {z} - Player's coordinates
+# {player} - Player's name
+# {world} - World name
+
+# AssignedTo can be a race or a class name, with 'ALL' meaning all races and all classes
+# To add more races or classes assigned to a quest
+# Simply add their race/class name to the 'assignedTo' list
+# Example
+# assignedTo:
+#  - 'Elf'
+#  - 'Human'
+
+sql:
+  use_uuids: true
+
+  connection_type: "local"  # or "remote"
+
+  # Your remote db string if connection_type is "remote"
+  connection_string: "jdbc:mysql://localhost:3306/your_database_name?user=your_username&password=your_password"
+
+# Enable log filter for quest start/end commands
+enableLogFilter: true
+
+# Enable quests or not (Default: false)
+enableQuests: false
+
+
+quests:
+  Beginning:
+    displayName: "Beginning"
+    description: "The beginning of your journey"
+    lore:
+      - "&6&lBEGINNING"
+      - "&f-------------------------"
+      - "&e&lObjective:"
+      - "&7Break 10 grass blocks"
+      - "&7Break 10 dirt blocks"
+      - "&f-------------------------"
+      - "&e&lRewards:"
+      - "&7- 1 diamond"
+      - "&f-------------------------"
+    events:
+      - 'BLOCK-BREAK:GRASS_BLOCK:10'
+      - 'BLOCK-BREAK:DIRT:10'
+    assignedTo:
+      - 'ALL'
+    startingQuestCommands:
+      - 'execute at {player} run playsound minecraft:ui.toast.challenge_complete player {player} {x} {y} {z}'
+      - 'tellraw {player} {"text":"Started the quest Beginning! To view the quest, use /races questview Beginning","color":"yellow"}'
+    finishedQuestCommands:
+      - 'execute at {player} run playsound minecraft:entity.player.levelup player {player} {x} {y} {z}'
+      - 'minecraft:give {player} diamond 1'
+      - 'tellraw {player} {"text":"You have completed the quest Beginning!","color":"yellow"}'
+
+  Hunting:
+    displayName: "Master Hunter"
+    description: "Master Hunter"
+    lore:
+      - "&5Become the hunter you were meant to be"
+      - "&5Kill 1000 zombies"
+      - "&5Break 1000 skeletons"
+      - "&f-------------------------"
+      - "&6Rewards:"
+      - "&f- 1 diamond"
+      - "&f- 3 emeralds"
+      - "&f- 1 nether star"
+    events:
+      - 'KILL-ENTITY:ZOMBIE:1000'
+      - 'KILL-ENTITY:SKELETON:1000'
+    assignedTo:
+      - 'ALL'
+    startingQuestCommands:
+      - 'execute at {player} run playsound minecraft:ui.toast.challenge_complete player {player} {x} {y} {z}'
+      - 'tellraw {player} {"text":"Started the quest Hunting! To view the quest, use /races questview Hunting","color":"yellow"}'
+    finishedQuestCommands:
+      - 'execute at {player} run playsound minecraft:entity.player.levelup player {player} {x} {y} {z}'
+      - 'minecraft:give {player} diamond 1'
+      - 'minecraft:give {player} emerald 3'
+      - 'minecraft:give {player} nether_star 1'
+      - 'tellraw {player} {"text":"You have completed the quest Hunting!","color":"yellow"}'
+  Explorer:
+    displayName: "Explorer's Challenge"
+    description: "Discover new horizons."
+    lore:
+      - "&5Explore the vast lands"
+      - "&5Travel to the following biomes:"
+      - "&5Stony Peaks, Snowy Taiga, Savanna Plateau, Plains, River"
+      - "&f-------------------------"
+      - "&6Rewards:"
+      - "&f- 5 gold ingots"
+    events:
+      - 'TRAVEL-WORLD:STONY_PEAKS:1'
+      - 'TRAVEL-WORLD:SNOWY_TAIGA:1'
+      - 'TRAVEL-WORLD:SAVANNA_PLATEAU:1'
+      - 'TRAVEL-WORLD:PLAINS:1'
+      - 'TRAVEL-WORLD:RIVER:1'
+    assignedTo:
+      - 'ALL'
+    startingQuestCommands:
+      - 'execute at {player} run playsound minecraft:ui.toast.challenge_complete player {player} {x} {y} {z}'
+      - 'tellraw {player} {"text":"Started the Explorers Challenge!","color":"green"}'
+    finishedQuestCommands:
+      - 'minecraft:give {player} gold_ingot 5'
+      - 'tellraw {player} {"text":"You have completed the Explorers Challenge!","color":"green"}'
+      - 'execute at {player} run playsound minecraft:entity.player.levelup player {player} {x} {y} {z}'
+
+  Architect:
+    displayName: "Architect's Dream"
+    description: "Build masterful structures."
+    lore:
+      - "&5Show your architectural skills"
+      - "&5Build 100 Stone Bricks"
+      - "&5Build 50 Glass Blocks"
+      - "&f-------------------------"
+      - "&6Rewards:"
+      - "&f- 10 iron ingots"
+    events:
+      - 'BLOCK-PLACE:STONE_BRICK:100'
+      - 'BLOCK-PLACE:GLASS:50'
+    assignedTo:
+      - 'ALL'
+    startingQuestCommands:
+      - 'tellraw {player} {"text":"Started the Architects Dream quest!","color":"blue"}'
+      - 'execute at {player} run playsound minecraft:ui.toast.challenge_complete player {player} {x} {y} {z}'
+    finishedQuestCommands:
+      - 'minecraft:give {player} iron_ingot 10'
+      - 'tellraw {player} {"text":"You have completed the Architects Dream quest!","color":"blue"}'
+      - 'execute at {player} run playsound minecraft:entity.player.levelup player {player} {x} {y} {z}'
+  Farmers_Duty:
+    displayName: "Farmer's Duty"
+    description: "Harvest and cultivate."
+    lore:
+      - "&5Tend to the fields and feed the world"
+      - "&5Harvest 200 Wheat"
+      - "&5Plant 100 Carrots"
+      - "&f-------------------------"
+      - "&6Rewards:"
+      - "&f- 3 bread"
+      - "&f- 1 golden apple"
+    events:
+      - 'BLOCK-BREAK:WHEAT:200'
+      - 'BLOCK-PLACE:CARROT:100'
+    assignedTo:
+      - 'ALL'
+    startingQuestCommands:
+      - 'tellraw {player} {"text":"Started the Farmers Duty quest!","color":"yellow"}'
+      - 'execute at {player} run playsound minecraft:ui.toast.challenge_complete player {player} {x} {y} {z}'
+    finishedQuestCommands:
+      - 'minecraft:give {player} bread 3'
+      - 'minecraft:give {player} golden_apple 1'
+      - 'tellraw {player} {"text":"You have completed the Farmers Duty quest!","color":"yellow"}'
+      - 'execute at {player} run playsound minecraft:entity.player.levelup player {player} {x} {y} {z}'
+  Treasure_Hunter:
+    displayName: "Treasure Hunter"
+    description: "Seek out hidden treasures."
+    lore:
+      - "&5Embark on a treasure hunt"
+      - "&5Pick up 100 chests"
+      - "&f-------------------------"
+      - "&6Rewards:"
+      - "&f- 5 diamonds"
+    events:
+      - 'ITEM-PICKUP:CHEST:100'
+    assignedTo:
+      - 'ALL'
+    startingQuestCommands:
+      - 'tellraw {player} {"text":"Started the Treasure Hunter quest!","color":"dark_blue"}'
+      - 'execute at {player} run playsound minecraft:ui.toast.challenge_complete player {player} {x} {y} {z}'
+    finishedQuestCommands:
+      - 'minecraft:give {player} diamond 5'
+      - 'tellraw {player} {"text":"You have completed the Treasure Hunter quest!","color":"dark_blue"}'
+      - 'execute at {player} run playsound minecraft:entity.player.levelup player {player} {x} {y} {z}'
+  ChefChallenge:
+    displayName: "Chef's Challenge"
+    description: "Prove your culinary skills by preparing a feast fit for a king."
+    lore:
+      - "&5Showcase your cooking talent"
+      - "&5Cook 100 pieces of any food"
+      - "&f-------------------------"
+      - "&6Rewards:"
+      - "&f- Chef's Special Kit (Includes custom food items with special effects)"
+    events:
+      - 'ITEM-CRAFT:COOKED_BEEF:25'
+      - 'ITEM-CRAFT:BAKED_POTATO:25'
+      - 'ITEM-CRAFT:COOKED_CHICKEN:25'
+      - 'ITEM-CRAFT:COOKED_MUTTON:25'
+    assignedTo:
+      - 'ALL'
+    startingQuestCommands:
+      - 'tellraw {player} {"text":"Youve started the Chefs Challenge! Time to cook up a storm.","color":"gold"}'
+    finishedQuestCommands:
+      - 'minecraft:give {player} golden_apple 10'
+      - 'tellraw {player} {"text":"Congratulations, Chef! Your culinary skills have earned you a special Chefs Kit.","color":"gold"}'
+  MinerMadness:
+    displayName: "Miner's Madness"
+    description: "Delve into the depths and mine rare ores under challenging conditions."
+    lore:
+      - "&5Explore the deep mines"
+      - "&5Mine 20 diamonds and 30 gold ores"
+      - "&f-------------------------"
+      - "&6Rewards:"
+      - "&f- Miner's Fury Pickaxe (Efficiency VI, Unbreaking IV, Fortune III)"
+    events:
+      - 'BLOCK-BREAK:DIAMOND_ORE:20'
+      - 'BLOCK-BREAK:GOLD_ORE:30'
+    assignedTo:
+      - 'ALL'
+    startingQuestCommands:
+      - 'tellraw {player} {"text":"The Miners Madness quest has begun! Descend and conquer.","color":"dark_green"}'
+    finishedQuestCommands:
+      - 'minecraft:give {player} diamond_pickaxe{Enchantments:[{id:"efficiency",lvl:6},{id:"unbreaking",lvl:4},{id:"fortune",lvl:3}]} 1'
+      - 'tellraw {player} {"text":"You have braved the depths and emerged victorious! Your Miners Fury Pickaxe awaits.","color":"dark_green"}'
+
+
+questList: '&2The quests assigned to your race & class are: {quests}'
+invalidQuest: '&4Invalid quest'
+questsDisabled: '&4Quests are disabled for mythical races'
+
+# Individual progress will be added at end of questProgress automatically
+questProgress:
+  - '&2----- {questDisplayName} &2-----'
+  - '&2Total Progress: {progressBar}'

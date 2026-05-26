@@ -1,0 +1,223 @@
+stats:
+  display_name:
+    name: '<gradient:#55ff55:#00aa00><b>✎ ɴᴏᴍᴇ ᴅᴇ ᴇxɪʙɪᴄᴀᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴏ ɴᴏᴍᴇ ᴅᴇ ᴇxɪʙɪᴄᴀᴏ ᴅᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀʟᴛᴇʀᴀʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+    hide_attributes: true
+
+  lore:
+    name: '<gradient:#aaaaaa:#555555><b>📜 ʟᴏʀᴇ</b></gradient>'
+    lore:
+      - '<gray>ᴀ ʟᴏʀᴇ ᴅᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ʟɪɴʜᴀꜱ: <green>%size%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ ᴜᴍᴀ ɴᴏᴠᴀ ʟɪɴʜᴀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴀ ᴜʟᴛɪᴍᴀ ʟɪɴʜᴀ.'
+    hide_attributes: true
+
+  lore_format:
+    name: '<gradient:#ffff55:#aaaa00><b>📝 ꜰᴏʀᴍᴀᴛᴏ ᴅᴇ ʟᴏʀᴇ</b></gradient>'
+    lore:
+      - '<gray>ᴏ ꜰᴏʀᴍᴀᴛᴏ ᴅᴇ ʟᴏʀᴇ ᴅᴇᴄɪᴅᴇ'
+      - '<gray>ǫᴜᴀɪꜱ ꜱᴛᴀᴛꜱ ꜱᴀᴏ ᴇxɪʙɪᴅᴏꜱ ᴇ ꜱᴜᴀ'
+      - '<gray>ᴏʀᴅᴇᴍ ɴᴀ ʟᴏʀᴇ ᴅᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀʟᴛᴇʀᴀʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+    hide_attributes: true
+
+  custom_model_data:
+    name: '<gradient:#ffaa00:#aa5500><b>🎨 ᴄᴜꜱᴛᴏᴍ ᴍᴏᴅᴇʟ ᴅᴀᴛᴀ</b></gradient>'
+    lore:
+      - '<gray>ꜱᴇᴜ ᴄᴜꜱᴛᴏᴍ ᴍᴏᴅᴇʟ ᴅᴀᴛᴀ ɪɴᴛᴇɪʀᴏ 1.14+.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀʟᴛᴇʀᴀʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+    hide_attributes: true
+
+  custom_model_data_strings:
+    name: '<gradient:#ffaa00:#ff5500><b>🎨 ꜱᴛʀɪɴɢꜱ ᴅᴇ ᴄᴜꜱᴛᴏᴍ ᴍᴏᴅᴇʟ ᴅᴀᴛᴀ</b></gradient>'
+    lore:
+      - '<gray>ꜱᴛʀɪɴɢꜱ ᴘᴀʀᴀ ꜱᴇᴜ ᴄᴜꜱᴛᴏᴍ ᴍᴏᴅᴇʟ ᴅᴀᴛᴀ. ᴄᴏɴꜱɪᴅᴇʀᴇ ᴜꜱᴀʀ'
+      - '<gray>ᴏ ᴄᴏᴍᴘᴏɴᴇɴᴛᴇ ɪᴛᴇᴍ_ᴍᴏᴅᴇʟ ᴀᴏ ɪɴᴠᴇꜱ.'
+      - ''
+      - '<gray>ꜱᴛʀɪɴɢꜱ: <green>%size%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ ᴜᴍᴀ ɴᴏᴠᴀ ꜱᴛʀɪɴɢ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴀ ᴜʟᴛɪᴍᴀ ꜱᴛʀɪɴɢ.'
+    hide_attributes: true
+
+  custom_model_data_floats:
+    name: '<gradient:#ffaa00:#ffff55><b>🎨 ꜰʟᴏᴀᴛꜱ ᴅᴇ ᴄᴜꜱᴛᴏᴍ ᴍᴏᴅᴇʟ ᴅᴀᴛᴀ</b></gradient>'
+    lore:
+      - '<gray>ꜰʟᴏᴀᴛꜱ ᴘᴀʀᴀ ꜱᴇᴜ ᴄᴜꜱᴛᴏᴍ ᴍᴏᴅᴇʟ ᴅᴀᴛᴀ. ᴄᴏɴꜱɪᴅᴇʀᴇ ᴜꜱᴀʀ'
+      - '<gray>ᴏ ᴄᴏᴍᴘᴏɴᴇɴᴛᴇ ɪᴛᴇᴍ_ᴍᴏᴅᴇʟ ᴀᴏ ɪɴᴠᴇꜱ.'
+      - ''
+      - '<gray>ꜰʟᴏᴀᴛꜱ: <green>%size%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ ᴜᴍ ɴᴏᴠᴏ ꜰʟᴏᴀᴛ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴏ ᴜʟᴛɪᴍᴏ ꜰʟᴏᴀᴛ.'
+    hide_attributes: true
+
+  item_model:
+    name: '<gradient:#55ffff:#00aaaa><b>💠 ᴍᴏᴅᴇʟᴏ ᴅᴏ ɪᴛᴇᴍ</b></gradient>'
+    lore:
+      - '<gray>ᴍᴏᴅᴇʟᴏ ᴀ ꜱᴇʀ ᴜꜱᴀᴅᴏ ᴘᴀʀᴀ ʀᴇɴᴅᴇʀɪᴢᴀʀ ᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ᴅɪꜱᴘᴏɴɪᴠᴇʟ ᴀᴘᴇɴᴀꜱ ɴᴀ 1.21.2+'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀʟᴛᴇʀᴀʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+    hide_attributes: true
+
+  item_color:
+    name: '<gradient:#ff55ff:#aa00aa><b>🎨 ᴄᴏʀ ᴅᴏ ɪᴛᴇᴍ</b></gradient>'
+    lore:
+      - '<gray>ᴅᴇꜰɪɴᴇ ᴀ ᴄᴏʀ ʀɢʙ ᴘᴀʀᴀ:</gray>'
+      - '<gray>• ᴀʀᴍᴀᴅᴜʀᴀꜱ ᴅᴇ ᴄᴏᴜʀᴏ</gray>'
+      - '<gray>• ᴘᴏᴄᴏᴇꜱ</gray>'
+      - '<gray>• ꜰᴏɢᴏꜱ ᴅᴇ ᴀʀᴛɪꜰɪᴄɪᴏ</gray>'
+      - ''
+      - '<dark_gray>ʀɢʙ: <white>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ ᴄᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇꜱᴇᴛᴀʀ.'
+    hide_attributes: true
+
+  skull_texture:
+    name: '<gradient:#aaaaaa:#ffffff><b>💀 ᴛᴇxᴛᴜʀᴀ ᴅᴀ ᴄᴀʙᴇᴄᴀ</b></gradient>'
+    lore:
+      - '<gray>ᴠᴀʟᴏʀ ʙᴀꜱᴇ64 ᴅᴀ ꜱᴋɪɴ ᴅᴀ ᴄᴀʙᴇᴄᴀ.</gray>'
+      - '<gray>ꜰᴜɴᴄɪᴏɴᴀ ᴀᴘᴇɴᴀꜱ ᴇᴍ <white>ᴘʟᴀʏᴇʀ_ʜᴇᴀᴅ</white>.</gray>'
+      - ''
+      - '<gray>ᴘᴇɢᴜᴇ ᴠᴀʟᴏʀᴇꜱ ᴇᴍ:</gray>'
+      - '<underlined><aqua>ᴍɪɴᴇᴄʀᴀꜰᴛ-ʜᴇᴀᴅꜱ.ᴄᴏᴍ</aqua></underlined>'
+      - ''
+      - '<dark_gray>ꜱᴛᴀᴛᴜꜱ: <white>%status%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴄᴏʟᴀʀ ʙᴀꜱᴇ64.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  trim_material:
+    name: '<gradient:#ff55ff:#5500ff><b>🛡 ᴍᴀᴛᴇʀɪᴀʟ ᴅᴇ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴍᴀᴛᴇʀɪᴀʟ ᴘᴀʀᴀ ᴅᴀʀ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ ᴀ ꜱᴜᴀ ᴀʀᴍᴀᴅᴜʀᴀ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴄɪᴄʟᴀʀ ᴏᴘᴄᴏᴇꜱ:'
+    hide_attributes: true
+
+  trim_pattern:
+    name: '<gradient:#ff55ff:#5500ff><b>🛡 ᴘᴀᴅʀᴀᴏ ᴅᴇ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴘᴀᴅʀᴀᴏ ᴅᴀ ᴀʀᴍᴀᴅᴜʀᴀ ᴄᴏᴍ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴄɪᴄʟᴀʀ ᴏᴘᴄᴏᴇꜱ:'
+    hide_attributes: true
+
+  hide_armor_trim:
+    name: '<gradient:#777777:#333333><b>👁 ᴇꜱᴄᴏɴᴅᴇʀ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀ</b></gradient>'
+    lore:
+      - '<gray>ᴇꜱᴄᴏɴᴅᴇ ᴏ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ ᴅᴀ ᴀʀᴍᴀᴅᴜʀᴀ ɴᴀ ʟᴏʀᴇ ᴅᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ᴀᴛɪᴠᴏ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ ᴀ ᴘʀᴏʙᴀʙɪʟɪᴅᴀᴅᴇ ᴅᴇ ᴛᴇʀ ᴇꜱᴛᴀ ᴏᴘᴄᴀᴏ.'
+    hide_attributes: true
+
+  custom_tooltip:
+    name: '<gradient:#55aaff:#0055ff><b>💬 ᴛᴏᴏʟᴛɪᴘ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴀ</b></gradient>'
+    lore:
+      - '<gray>ᴏ ɪᴅᴇɴᴛɪꜰɪᴄᴀᴅᴏʀ ᴅᴀ ᴛᴇxᴛᴜʀᴀ ᴅᴇ ᴛᴏᴏʟᴛɪᴘ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴀ ᴅᴏ ᴍᴍᴏɪᴛᴇᴍꜱ'
+      - '<gray>ǫᴜᴇ ᴇꜱᴛᴇ ɪᴛᴇᴍ ɪʀᴀ ᴜꜱᴀʀ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀʟᴛᴇʀᴀʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+    hide_attributes: true
+
+  vanilla_tooltip_style:
+    name: '<gradient:#55aaff:#0055ff><b>💬 ᴇꜱᴛɪʟᴏ ᴅᴇ ᴛᴏᴏʟᴛɪᴘ ᴠᴀɴɪʟʟᴀ</b></gradient>'
+    lore:
+      - '<gray>ᴇꜱᴛɪʟᴏ ᴅᴇ ᴛᴏᴏʟᴛɪᴘ ᴠᴀɴɪʟʟᴀ ᴅᴏ ꜱᴇᴜ ɪᴛᴇᴍ'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀʟᴛᴇʀᴀʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+    hide_attributes: true
+
+  hide_tooltip:
+    name: '<gradient:#ff5555:#aa0000><b>🚫 ᴇꜱᴄᴏɴᴅᴇʀ ᴛᴏᴏʟᴛɪᴘ</b></gradient>'
+    lore:
+      - '<gray>ᴇꜱᴄᴏɴᴅᴇ ᴄᴏᴍᴘʟᴇᴛᴀᴍᴇɴᴛᴇ ᴀ ᴛᴏᴏʟᴛɪᴘ ᴅᴏ ɪᴛᴇᴍ,'
+      - '<gray>ᴇxᴄʟᴜɪɴᴅᴏ ɴᴏᴍᴇ ᴇ ʟᴏʀᴇ!'
+      - ''
+      - '<gray>ᴀᴛɪᴠᴏ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ ᴜᴍᴀ ᴘʀᴏʙᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀʀᴀ ᴛᴇʀ ᴇꜱᴛᴀ ᴏᴘᴄᴀᴏ.'
+    hide_attributes: true
+
+  hide_durability_bar:
+    name: '<gradient:#ff5555:#aa0000><b>🚫 ᴇꜱᴄᴏɴᴅᴇʀ ʙᴀʀʀᴀ ᴅᴇ ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ</b></gradient>'
+    lore:
+      - '<gray>ᴀᴛɪᴠᴇ ɪꜱꜱᴏ ᴘᴀʀᴀ ᴛᴇʀ ᴀ ʙᴀʀʀᴀ ᴠᴇʀᴅᴇ'
+      - '<gray>ᴀᴄɪᴍᴀ ᴅᴏꜱ ꜱʟᴏᴛꜱ ɴᴀᴏ ʜᴏᴛ-ʙᴀʀ ᴄᴏᴍᴘʟᴇᴛᴀᴍᴇɴᴛᴇ'
+      - '<gray>ᴇꜱᴄᴏɴᴅɪᴅᴀ, ᴍᴇꜱᴍᴏ ꜱᴇ ᴏ ɪᴛᴇᴍ ᴛɪᴠᴇʀ ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ!'
+      - ''
+      - '<gray>ᴀᴛɪᴠᴏ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ ᴀ ᴘʀᴏʙᴀʙɪʟɪᴅᴀᴅᴇ ᴅᴇ ᴛᴇʀ ᴇꜱᴛᴀ ᴏᴘᴄᴀᴏ.'
+    hide_attributes: true
+
+  hide_enchantments:
+    name: '<gradient:#aa55ff:#5500aa><b>✨ ᴇꜱᴄᴏɴᴅᴇʀ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏꜱ</b></gradient>'
+    lore:
+      - '<gray>ᴀᴛɪᴠᴇ ᴘᴀʀᴀ ᴇꜱᴄᴏɴᴅᴇʀ ᴄᴏᴍᴘʟᴇᴛᴀᴍᴇɴᴛᴇ ᴏꜱ'
+      - '<gray>ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏꜱ ᴅᴀ ʟᴏʀᴇ ᴅᴏ ɪᴛᴇᴍ!'
+      - ''
+      - '<gray>ᴀᴛɪᴠᴏ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ ᴜᴍᴀ ᴘʀᴏʙᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀʀᴀ ᴛᴇʀ ᴇꜱᴛᴀ ᴏᴘᴄᴀᴏ.'
+    hide_attributes: true
+
+  displayed_type:
+    name: '<gradient:#55ff55:#00aa00><b>🏷 ᴛɪᴘᴏ ᴇxɪʙɪᴅᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴇꜱᴛᴀ ᴏᴘᴄᴀᴏ ᴀꜰᴇᴛᴀʀᴀ ᴀᴘᴇɴᴀꜱ ᴏ'
+      - '<gray>ᴛɪᴘᴏ ᴇxɪʙɪᴅᴏ ɴᴀ ʟᴏʀᴇ ᴅᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀʟᴛᴇʀᴀʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴇꜱᴛᴇ ᴠᴀʟᴏʀ.'
+    hide_attributes: true
+
+  item_particles:
+    name: '<gradient:#ff55ff:#00aaff><b>✨ ᴘᴀʀᴛɪᴄᴜʟᴀꜱ</b></gradient>'
+    lore:
+      - '<gray>ᴇᴍɪᴛᴇ ᴘᴀʀᴛɪᴄᴜʟᴀꜱ ᴀᴏ ʀᴇᴅᴏʀ ᴅᴏ ᴊᴏɢᴀᴅᴏʀ.</gray>'
+      - ''
+      - '<dark_gray>ᴘᴀʀᴛɪᴄᴜʟᴀ: <white>%particle%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴄᴏɴꜰɪɢᴜʀᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true

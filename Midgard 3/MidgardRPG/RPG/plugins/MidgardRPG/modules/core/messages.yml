@@ -1,0 +1,87 @@
+# ============================================
+# MIDGARD CORE - MESSAGES
+# ============================================
+
+# ============================================
+# SYSTEM MESSAGES
+# ============================================
+system:
+  loading: "<gray>ᴄᴀʀʀᴇɢᴀɴᴅᴏ sɪsᴛᴇᴍᴀ...</gray>"
+  loaded: "<green>✔</green> <gray>sɪsᴛᴇᴍᴀ ᴄᴀʀʀᴇɢᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!</gray>"
+  reload: "<aqua>⟳</aqua> <gray>ᴄᴏɴꜰɪɢᴜʀᴀᴄᴀᴏ ʀᴇᴄᴀʀʀᴇɢᴀᴅᴀ!</gray>"
+  language_changed: "<green>✔</green> <gray>ɪᴅɪᴏᴍᴀ ᴀʟᴛᴇʀᴀᴅᴏ ᴘᴀʀᴀ <aqua>ᴘᴏʀᴛᴜɢᴜᴇs</aqua>.</gray>"
+
+# ============================================
+# SUCCESS MESSAGES
+# ============================================
+success:
+  generic: "<green>✔</green> <gray>ᴏᴘᴇʀᴀᴄᴀᴏ ʀᴇᴀʟɪzᴀᴅᴀ ᴄᴏᴍ sᴜᴄᴇssᴏ!</gray>"
+  saved: "<green>✔</green> <gray>ᴅᴀᴅᴏs sᴀʟᴠᴏs ᴄᴏᴍ sᴜᴄᴇssᴏ!</gray>"
+  created: "<green>✔</green> <white>%target%</white> <gray>ꜰᴏɪ ᴄʀɪᴀᴅᴏ!</gray>"
+  deleted: "<yellow>✔</yellow> <white>%target%</white> <gray>ꜰᴏɪ ʀᴇᴍᴏᴠɪᴅᴏ.</gray>"
+  updated: "<aqua>✔</aqua> <white>%target%</white> <gray>ꜰᴏɪ ᴀᴛᴜᴀʟɪzᴀᴅᴏ!</gray>"
+
+# ============================================
+# ERROR MESSAGES
+# ============================================
+error:
+  generic: "<red>✖</red> <gray>ᴏᴄᴏʀʀᴇᴜ ᴜᴍ ᴇʀʀᴏ ɪɴᴇsᴘᴇʀᴀᴅᴏ.</gray>"
+  no_permission: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ɪssᴏ.</gray>"
+  player_only: "<red>✖</red> <gray>ᴀᴘᴇɴᴀs ᴊᴏɢᴀᴅᴏʀᴇs ᴘᴏᴅᴇᴍ ᴜsᴀʀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ.</gray>"
+  invalid_args: "<red>✖</red> <gray>ᴜsᴏ ᴄᴏʀʀᴇᴛᴏ: <white>%usage%</white></gray>"
+  not_found: "<red>✖</red> <white>%target%</white> <gray>ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ!</gray>"
+  cooldown: "<red>✖</red> <gray>ᴀɢᴜᴀʀᴅᴇ <white>%time%s</white> ᴘᴀʀᴀ ᴜsᴀʀ ɴᴏᴠᴀᴍᴇɴᴛᴇ.</gray>"
+
+# ============================================
+# INFO MESSAGES
+# ============================================
+info:
+  hint: "<yellow>💡</yellow> <gray>%message%</gray>"
+  warning: "<gold>⚠</gold> <gray>%message%</gray>"
+
+# ============================================
+# CORE GENERAL
+# ============================================
+core:
+  prefix: "<gradient:#5e4fa2:#f79459><bold>ᴍɪᴅɢᴀʀᴅ</bold></gradient> <dark_gray>»</dark_gray> <gray>"
+  formats:
+    success: "<green>✔ <white>%message%"
+    error: "<red>✖ <gray>%message%"
+    warning: "<gold>⚠ <gray>%message%"
+    info: "<aqua>ℹ <gray>%message%"
+  general:
+    players_only: "<red>✖</red> <gray>ᴀᴘᴇɴᴀs ᴊᴏɢᴀᴅᴏʀᴇs ᴘᴏᴅᴇᴍ ᴇxᴇᴄᴜᴛᴀʀ ᴇsᴛᴀ ᴀᴄᴀᴏ.</gray>"
+    no-permission: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏssᴜɪ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ᴇxᴇᴄᴜᴛᴀʀ ᴇsᴛᴀ ᴀᴄᴀᴏ.</gray>"
+
+# ============================================
+# COMMAND SYSTEM MESSAGES
+# ============================================
+commands:
+  no_permission_admin: "<red>✖</red> <gray>Você não tem permissão para usar comandos administrativos.</gray>"
+  no_permission: "<red>✖</red> <gray>Você não tem permissão para usar este comando.</gray>"
+  unknown_command: "<red>✖</red> <gray>Comando desconhecido: <white>%command%</white></gray>"
+  unknown_subcommand: "<red>✖</red> <gray>Subcomando desconhecido: <white>%command%</white></gray>"
+  use_help: "<gray>Use <yellow>/rpg help</yellow> para ver os comandos disponíveis.</gray>"
+  use_admin_help: "<gray>Use <yellow>/rpg admin help</yellow> para ver os comandos disponíveis.</gray>"
+  player_only: "<red>✖</red> <gray>Este comando só pode ser usado por jogadores.</gray>"
+
+# ============================================
+# HELP SYSTEM MESSAGES
+# ============================================
+help:
+  header: "<gradient:#a855f7:#ec4899><bold>⚔ MidgardRPG - Comandos</bold></gradient>"
+  admin_header: "<gradient:#a855f7:#ec4899><bold>⚔ MidgardRPG - Admin</bold></gradient>"
+  separator: "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</dark_gray>"
+  footer_hint: "<gray>Use <yellow>/rpg help <comando></yellow> para mais detalhes.</gray>"
+  aliases_footer: "<gray>Aliases: <yellow>/rpg</yellow>, <yellow>/mrpg</yellow>, <yellow>/midgard</yellow></gray>"
+  category_player: "<yellow><bold>🎮 Comandos de Jogador:</bold></yellow>"
+  category_moderator: "<yellow><bold>🛡️ Comandos de Moderador:</bold></yellow>"
+  category_admin: "<yellow><bold>⚙️ Comandos Administrativos:</bold></yellow>"
+  admin_entry: "<gray>• <yellow>/rpg admin</yellow> <dark_gray>-</dark_gray> <gray>Comandos de administração</gray>"
+  command_not_found: "<red>✖</red> <gray>Comando não encontrado: <white>%command%</white></gray>"
+  no_permission_view: "<red>✖</red> <gray>Você não tem permissão para ver este comando.</gray>"
+  detail_description: "<gray>Descrição: <white>%description%</white></gray>"
+  detail_usage: "<gray>Uso: <yellow>%usage%</yellow></gray>"
+  detail_aliases: "<gray>Aliases: <yellow>%aliases%</yellow></gray>"
+  detail_permission: "<gray>Permissão: <aqua>%permission%</aqua></gray>"
+  detail_module: "<gray>Módulo: <white>%module%</white></gray>"

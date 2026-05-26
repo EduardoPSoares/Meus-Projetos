@@ -1,0 +1,142 @@
+# ============================================
+# FERREIRO - Definição e Recompensas
+# ============================================
+
+definition:
+  menu-icon: ANVIL
+  gradient: "<gradient:#f59e0b:#dc2626>"
+  description: "Forje armas, armaduras e ferramentas e refine metais para ganhar XP."
+  bonuses:
+    - "<green>▸ Qualidade da forja</green>"
+    - "<green>▸ Bônus de durabilidade</green>"
+    - "<green>▸ Chance de upgrade</green>"
+    - "<green>▸ Eficiência com metais</green>"
+  xp-source-icon: IRON_INGOT
+  extra-button-icon: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+  extra-button-name: "<gold>Técnicas de Forja"
+  extra-button-lore:
+    - "<gray>Visualize suas técnicas de forja"
+    - "<gray>e especializações com metais."
+
+rewards:
+  1:
+    name: "Aprendiz Ferreiro"
+    bonuses:
+      - "+2% qualidade da forja"
+  5:
+    bonuses:
+      - "+5% qualidade da forja"
+      - "+3% bônus de durabilidade"
+  10:
+    name: "Ferreiro"
+    bonuses:
+      - "+10% qualidade da forja"
+    ability: "Martelada Precisa"
+    ability-desc: "Impacto no minigame da forja é mais preciso."
+  25:
+    name: "Mestre Ferreiro"
+    bonuses:
+      - "+5% chance de upgrade"
+    ability: "Têmpera Reforçada"
+    ability-desc: "Armas forjadas ganham +10% durabilidade."
+  50:
+    name: "Ferreiro Lendário"
+    bonuses:
+      - "+30% qualidade da forja"
+    ability: "Liga Superior"
+    ability-desc: "Pode criar ligas especiais na fundição."
+  75:
+    name: "Grão-Mestre Ferreiro"
+    bonuses:
+      - "+10% eficiência com metais"
+    perks:
+      - "Chance de preservar lingote"
+  100:
+    name: "Lenda da Forja"
+    bonuses:
+      - "+50% qualidade da forja"
+    ability: "Reforja Eficiente"
+    ability-desc: "Reforjar itens não consome materiais extras."
+    perks:
+      - "Título: Lenda da Forja"
+
+# ============================================
+# FONTES DE XP
+# ============================================
+# smelt: XP ao fundir metais (material do lingote)
+# craft: XP ao forjar equipamentos (material do item)
+xp-config:
+  smelt:
+    IRON_INGOT: 8.0
+    GOLD_INGOT: 10.0
+    COPPER_INGOT: 6.0
+    NETHERITE_SCRAP: 25.0
+  craft:
+    IRON_SWORD: 8.0
+    IRON_AXE: 8.0
+    IRON_PICKAXE: 10.0
+    IRON_SHOVEL: 6.0
+    IRON_HOE: 6.0
+    IRON_HELMET: 12.0
+    IRON_CHESTPLATE: 18.0
+    IRON_LEGGINGS: 15.0
+    IRON_BOOTS: 10.0
+    DIAMOND_SWORD: 15.0
+    DIAMOND_AXE: 15.0
+    DIAMOND_PICKAXE: 18.0
+    DIAMOND_SHOVEL: 12.0
+    DIAMOND_HOE: 12.0
+    DIAMOND_HELMET: 20.0
+    DIAMOND_CHESTPLATE: 28.0
+    DIAMOND_LEGGINGS: 24.0
+    DIAMOND_BOOTS: 18.0
+    ANVIL: 15.0
+    IRON_BLOCK: 10.0
+    GOLD_BLOCK: 12.0
+    SHIELD: 8.0
+    CHAIN: 5.0
+    IRON_BARS: 3.0
+    IRON_DOOR: 6.0
+    IRON_TRAPDOOR: 5.0
+    HEAVY_WEIGHTED_PRESSURE_PLATE: 4.0
+
+# ============================================
+# PENALIDADES PARA NÃO-FERREIROS
+# ============================================
+# Jogadores sem a profissão de Ferreiro ativa sofrem estas penalidades
+# ao craftar armas, armaduras e ferramentas metálicas.
+penalties:
+  enabled: true
+  show-message: true
+
+  # Apenas equipamentos e armas sofrem penalidade (não blocos decorativos)
+  affected-materials:
+    - IRON_SWORD
+    - IRON_AXE
+    - IRON_PICKAXE
+    - IRON_SHOVEL
+    - IRON_HOE
+    - IRON_HELMET
+    - IRON_CHESTPLATE
+    - IRON_LEGGINGS
+    - IRON_BOOTS
+    - DIAMOND_SWORD
+    - DIAMOND_AXE
+    - DIAMOND_PICKAXE
+    - DIAMOND_SHOVEL
+    - DIAMOND_HOE
+    - DIAMOND_HELMET
+    - DIAMOND_CHESTPLATE
+    - DIAMOND_LEGGINGS
+    - DIAMOND_BOOTS
+    - SHIELD
+
+  # Penalidade ao craftar equipamentos
+  craft:
+    fail-chance: 0.30          # 30% de chance de falhar o craft
+    # fail-result: null        # Sem item de falha — materiais simplesmente perdidos
+
+  # Penalidade ao fundir metais
+  smelt:
+    fail-chance: 0.20          # 20% de chance de perder o lingote
+    fail-result: IRON_NUGGET   # Recebe nugget ao invés de ingot

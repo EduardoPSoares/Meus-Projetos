@@ -1,0 +1,20 @@
+# ============================================
+# MIDGARD ITEM - GUI: Item Edition
+# Arquivo Principal
+# ============================================
+
+title: '<gradient:#55ffff:#00aaaa><b>🛠 ᴇᴅɪᴄᴀᴏ ᴅᴇ ɪᴛᴇᴍ</b></gradient> <dark_gray>• <white>%id%'
+
+messages:
+  editing: '<yellow>ᴇᴅɪᴛᴀɴᴅᴏ: <white>%s'
+  no-editor: '<red>ɴᴇɴʜᴜᴍ ᴇᴅɪᴛᴏʀ ᴀᴛʀɪʙᴜɪᴅᴏ ᴘᴀʀᴀ ᴇꜱᴛᴇ ᴀᴛʀɪʙᴜᴛᴏ ᴀɪɴᴅᴀ.'
+  material-updated: '<green>ᴍᴀᴛᴇʀɪᴀʟ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ!'
+
+buttons:
+  get_item:
+    name: '<gradient:#55ff55:#00aa00><b>✦ ᴏʙᴛᴇʀ ɪᴛᴇᴍ</b></gradient>'
+    lore:
+      - '<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴏʙᴛᴇʀ ᴇꜱᴛᴇ ɪᴛᴇᴍ.'
+  
+  close:
+    name: '<gradient:#ff5555:#aa0000><b>✖ ꜰᴇᴄʜᴀʀ</b></gradient>'

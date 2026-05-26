@@ -1,0 +1,80 @@
+name: "<dark_blue>ʙᴀsᴛɪᴀᴏ ɪᴍᴏʀᴛᴀʟ</dark_blue>"
+mythic-skill: "BastiaoImortal"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 50.0
+  per-level: -0.5
+mana:
+  base: 65.0
+  per-level: -1.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guardiao"
+  level: 15
+
+icon:
+  material: NETHER_STAR
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_blue><bold>ᴍᴀɢɪᴀ sᴜᴘʀᴇᴍᴀ</bold></dark_blue>"
+  - ""
+  - "<gray>ᴛᴏʀɴᴀ-sᴇ ᴜᴍ ʙᴀsᴛɪᴀᴏ ɪᴍᴏʀᴛᴀʟ,</gray>"
+  - "<gray>ꜰɪᴄᴀɴᴅᴏ ɪɴᴠᴜʟɴᴇʀᴀᴠᴇʟ ᴘᴏʀ ᴜᴍ</gray>"
+  - "<gray>ᴄᴜʀᴛᴏ ᴘᴇʀɪᴏᴅᴏ ᴇ ᴀᴛʀᴀɪɴᴅᴏ</gray>"
+  - "<gray>ᴛᴏᴅᴏs ᴏs ɪɴɪᴍɪɢᴏs.</gray>"
+  - ""
+  - "<blue><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></blue>"
+  - ""
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<blue>{duration}s</blue>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<blue>ɢᴜᴀʀᴅɪᴀᴏ</blue>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>15</yellow>"
+
+variables:
+  duration:
+    base: 4.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "bastion_glow"
+    mechanic-override: "BastiaoImortalMk2"
+    stat-bonus:
+      defense: 2.0
+  5:
+    visual: "bastion_divine"
+    mechanic-override: "BastiaoImortalMk3"
+    stat-bonus:
+      defense: 4.0
+
+mastery:
+  attribute-bonus:
+    defense: 10
+
+sounds:
+  cast-start:
+    sound: "item.totem.use"
+    volume: 1.0
+    pitch: 0.8
+  cast-finish:
+    sound: "entity.wither.spawn"
+    volume: 0.8
+    pitch: 1.4
+  cast-fail:
+    sound: "item.shield.break"
+    volume: 0.5
+    pitch: 0.8

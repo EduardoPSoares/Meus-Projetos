@@ -1,0 +1,1002 @@
+# ══════════════════════════════════════════════════════════════════
+#  MIDGARD GUERREIRO (WARRIOR) SKILLS — MythicMobs Skill Definitions
+#  Classe de combate corpo-a-corpo focada em força bruta e resistência.
+#  Todas as skills usam variáveis injetadas pelo SpellManager.
+#  Variáveis disponíveis:  <skill.var.NOME>
+#  Minecraft 1.21.1 / Folia / MythicMobs
+# ══════════════════════════════════════════════════════════════════
+
+
+# ─────────────────────────────────────────────
+#  1. FÚRIA GUERREIRA (PASSIVA) — Aura de força aumentada
+#     Variables: strength_bonus
+#     Milestones: lvl3=fury_aura, lvl5=fury_blaze
+# ─────────────────────────────────────────────
+
+FuriaGuerreira:
+  Skills:
+  - skill{s=FuriaGuerreira_Cast} @self
+
+FuriaGuerreira_Cast:
+  Skills:
+  - potion{type=STRENGTH;duration=999999;level=<skill.var.strength_bonus>;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ff6600;amount=15;hS=0.5;vS=0.8;y=0.5;size=1.2;speed=0} @self
+  - particles{p=flame;amount=8;hS=0.4;vS=0.6;y=0.5;speed=0.02} @self
+  - sound{s=entity.blaze.ambient;v=0.6;p=1.2} @self
+
+# === FÚRIA GUERREIRA MK2 (Milestone lvl 3 — fury_aura) ===
+FuriaGuerreiraMk2:
+  Skills:
+  - skill{s=FuriaGuerreiraMk2_Cast} @self
+
+FuriaGuerreiraMk2_Cast:
+  Skills:
+  - potion{type=STRENGTH;duration=999999;level=<skill.var.strength_bonus>;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=25;hS=0.6;vS=1.0;y=0.5;size=1.5;speed=0} @self
+  - particles{p=flame;amount=15;hS=0.5;vS=0.8;y=0.5;speed=0.03} @self
+  - particles{p=enchant;amount=10;hS=0.5;vS=0.8;y=0.5;speed=0.05} @self
+  # Fury aura orbital
+  - orbital{auraName=fury_aura;bulletType=ITEM;bulletItem=BLAZE_POWDER;radius=1.2;points=3;interval=1;duration=999999;oy=1.0} @self
+  - sound{s=entity.blaze.ambient;v=0.8;p=1.0} @self
+
+# === FÚRIA GUERREIRA MK3 (Milestone lvl 5 — fury_blaze) ===
+FuriaGuerreiraMk3:
+  Skills:
+  - skill{s=FuriaGuerreiraMk3_Cast} @self
+
+FuriaGuerreiraMk3_Cast:
+  Skills:
+  - potion{type=STRENGTH;duration=999999;level=<skill.var.strength_bonus>;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#990000;color2=#ffcc00;amount=40;hS=0.8;vS=1.2;y=0.5;size=2.0;speed=0} @self
+  - particles{p=flame;amount=25;hS=0.6;vS=1.0;y=0.5;speed=0.05} @self
+  - particles{p=soul_fire_flame;amount=12;hS=0.4;vS=0.8;y=0.5;speed=0.03} @self
+  - particles{p=lava;amount=6;hS=0.3;vS=0.5;y=0.3;speed=0} @self
+  # Blaze fury orbital
+  - orbital{auraName=fury_blaze;bulletType=ITEM;bulletItem=FIRE_CHARGE;radius=1.5;points=5;interval=1;duration=999999;oy=1.0} @self
+  - sound{s=entity.blaze.shoot;v=1.0;p=0.6} @self
+  - sound{s=entity.ender_dragon.growl;v=0.5;p=1.5} @self
+
+
+# ─────────────────────────────────────────────
+#  2. RESISTÊNCIA MARCIAL (PASSIVA) — Aura defensiva de ferro/aço
+#     Variables: defense_bonus
+#     Milestones: lvl3=iron_skin, lvl5=steel_skin
+# ─────────────────────────────────────────────
+
+ResistenciaMarcial:
+  Skills:
+  - skill{s=ResistenciaMarcial_Cast} @self
+
+ResistenciaMarcial_Cast:
+  Skills:
+  - potion{type=RESISTANCE;duration=999999;level=<skill.var.defense_bonus>;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#8c8c8c;color2=#c0c0c0;amount=12;hS=0.5;vS=0.8;y=0.5;size=1.0;speed=0} @self
+  - particles{p=enchant;amount=8;hS=0.4;vS=0.6;y=0.5;speed=0.1} @self
+  - sound{s=item.armor.equip_iron;v=0.6;p=1.2} @self
+
+# === RESISTÊNCIA MARCIAL MK2 (Milestone lvl 3 — iron_skin) ===
+ResistenciaMarcialMk2:
+  Skills:
+  - skill{s=ResistenciaMarcialMk2_Cast} @self
+
+ResistenciaMarcialMk2_Cast:
+  Skills:
+  - potion{type=RESISTANCE;duration=999999;level=<skill.var.defense_bonus>;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#666666;color2=#c0c0c0;amount=20;hS=0.6;vS=1.0;y=0.5;size=1.5;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=10;hS=0.4;vS=0.6;y=0.5;speed=0.05} @self
+  - particles{p=enchant;amount=12;hS=0.5;vS=0.8;y=0.5;speed=0.1} @self
+  # Iron skin orbital
+  - orbital{auraName=iron_skin;bulletType=ITEM;bulletItem=IRON_NUGGET;radius=1.3;points=4;interval=1;duration=999999;oy=1.0} @self
+  - sound{s=block.anvil.land;v=0.6;p=1.0} @self
+
+# === RESISTÊNCIA MARCIAL MK3 (Milestone lvl 5 — steel_skin) ===
+ResistenciaMarcialMk3:
+  Skills:
+  - skill{s=ResistenciaMarcialMk3_Cast} @self
+
+ResistenciaMarcialMk3_Cast:
+  Skills:
+  - potion{type=RESISTANCE;duration=999999;level=<skill.var.defense_bonus>;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=999999;level=1;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#4a4a4a;color2=#d4af37;amount=30;hS=0.7;vS=1.2;y=0.5;size=2.0;speed=0} @self
+  - particles{p=block_crack;m=NETHERITE_BLOCK;amount=15;hS=0.5;vS=0.8;y=0.5;speed=0.08} @self
+  - particles{p=soul_fire_flame;amount=8;hS=0.3;vS=0.6;y=0.5;speed=0.02} @self
+  - particles{p=end_rod;amount=6;hS=0.4;vS=0.8;y=0.5;speed=0.03} @self
+  # Steel skin orbital
+  - orbital{auraName=steel_skin;bulletType=ITEM;bulletItem=NETHERITE_SCRAP;radius=1.5;points=6;interval=1;duration=999999;oy=1.0} @self
+  - sound{s=block.anvil.land;v=0.8;p=0.6} @self
+  - sound{s=item.armor.equip_netherite;v=0.8;p=1.0} @self
+
+
+# ─────────────────────────────────────────────
+#  3. GOLPE BRUTAL (COMUM) — Golpe devastador frontal em cone
+#     Variables: damage
+#     Milestones: lvl3=brutal_impact, lvl5=brutal_flame
+# ─────────────────────────────────────────────
+
+GolpeBrutal:
+  Skills:
+  - skill{s=GolpeBrutal_Cast} @self
+
+GolpeBrutal_Cast:
+  Skills:
+  # Vento antes do golpe
+  - sound{s=entity.player.attack.sweep;v=1.2;p=0.7} @self
+  - particles{p=sweep_attack;amount=3;hS=0.3;vS=0.1;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - delay 2
+  # Impacto
+  - skill{s=GolpeBrutal_Impact} @self
+
+GolpeBrutal_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.5;p=0.6} @self
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=70;range=4;rotation=0;length=4}
+  # Partículas de impacto
+  - particles{p=sweep_attack;amount=5;hS=0.5;vS=0.2;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#990000;amount=20;hS=1.0;vS=0.3;y=0.5;size=1.5;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=block_crack;m=REDSTONE_BLOCK;amount=15;hS=1.5;vS=0.2;y=0.1;speed=0.1} @forward{f=2;lockpitch=true}
+  - particles{p=explosion;amount=2;hS=0.3;vS=0.2;y=0.5;speed=0} @forward{f=2;lockpitch=true}
+  # Rachaduras no chão
+  - particles{p=block_crack;m=STONE;amount=20;hS=1.5;vS=0.1;y=0.05;speed=0.15} @forward{f=2;lockpitch=true}
+  - particles{p=smoke;amount=8;hS=1.0;vS=0.2;y=0.1;speed=0.05} @forward{f=2;lockpitch=true}
+
+# === GOLPE BRUTAL MK2 (Milestone lvl 3 — brutal_impact) ===
+GolpeBrutalMk2:
+  Skills:
+  - skill{s=GolpeBrutalMk2_Cast} @self
+
+GolpeBrutalMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.4;p=0.6} @self
+  - particles{p=sweep_attack;amount=5;hS=0.4;vS=0.2;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ff6600;color2=#ff0000;amount=12;hS=0.3;vS=0.5;y=1.0;size=1.2;speed=0} @self
+  - delay 2
+  - skill{s=GolpeBrutalMk2_Impact} @self
+
+GolpeBrutalMk2_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.8;p=0.5} @self
+  - sound{s=entity.generic.explode;v=0.5;p=1.5} @self
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=80;range=4.5;rotation=0;length=4.5}
+  - throw{velocity=0.8;velocityY=0.3} @EntitiesInCone{angle=80;range=4.5;rotation=0;length=4.5}
+  # Impacto visual aprimorado
+  - particles{p=sweep_attack;amount=8;hS=0.8;vS=0.3;y=1.0;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#990000;amount=30;hS=1.5;vS=0.4;y=0.5;size=2.0;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=block_crack;m=REDSTONE_BLOCK;amount=25;hS=2.0;vS=0.3;y=0.1;speed=0.15} @forward{f=2.5;lockpitch=true}
+  - particles{p=explosion;amount=3;hS=0.5;vS=0.3;y=0.5;speed=0} @forward{f=2.5;lockpitch=true}
+  # Onda de choque no chão
+  - particlering{p=block_crack;m=STONE;radius=2;points=30;amount=3;hS=0.2;vS=0.1;y=0.1;speed=0.1} @forward{f=2;lockpitch=true}
+  - particlering{p=dust_color_transition;color1=#990000;color2=#ff0000;radius=3;points=30;amount=2;hS=0.1;vS=0.1;y=0.1;size=1.5;speed=0;delay=1} @forward{f=2;lockpitch=true}
+  - particles{p=smoke;amount=15;hS=1.5;vS=0.3;y=0.1;speed=0.08} @forward{f=2.5;lockpitch=true}
+
+# === GOLPE BRUTAL MK3 (Milestone lvl 5 — brutal_flame) ===
+GolpeBrutalMk3:
+  Skills:
+  - skill{s=GolpeBrutalMk3_Cast} @self
+
+GolpeBrutalMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.5;p=0.5} @self
+  - sound{s=entity.blaze.shoot;v=0.8;p=1.0} @self
+  - particles{p=sweep_attack;amount=6;hS=0.5;vS=0.3;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=flame;amount=20;hS=0.4;vS=0.6;y=1.0;speed=0.08} @self
+  - delay 2
+  - skill{s=GolpeBrutalMk3_Impact} @self
+
+GolpeBrutalMk3_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.4} @self
+  - sound{s=entity.generic.explode;v=0.8;p=1.2} @self
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=90;range=5;rotation=0;length=5}
+  - ignite{ticks=40} @EntitiesInCone{angle=90;range=5;rotation=0;length=5}
+  - throw{velocity=1.2;velocityY=0.5} @EntitiesInCone{angle=90;range=5;rotation=0;length=5}
+  # Impacto flamejante
+  - particles{p=sweep_attack;amount=10;hS=1.0;vS=0.4;y=1.0;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=flame;amount=50;hS=2.0;vS=0.5;y=0.5;speed=0.2} @forward{f=3;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=35;hS=2.0;vS=0.5;y=0.5;size=2.5;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=lava;amount=12;hS=1.5;vS=0.3;y=0.2;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=explosion;amount=4;hS=0.8;vS=0.4;y=0.5;speed=0} @forward{f=3;lockpitch=true}
+  # Chão em chamas
+  - particlering{p=flame;radius=2;points=25;amount=4;hS=0.2;vS=0.1;y=0.1;speed=0.1} @forward{f=2.5;lockpitch=true}
+  - particlering{p=flame;radius=3.5;points=35;amount=3;hS=0.2;vS=0.1;y=0.1;speed=0.08;delay=1} @forward{f=2.5;lockpitch=true}
+  - particles{p=soul_fire_flame;amount=15;hS=2.0;vS=0.2;y=0.1;speed=0.05} @forward{f=3;lockpitch=true}
+  - particles{p=block_crack;m=MAGMA_BLOCK;amount=20;hS=2.0;vS=0.1;y=0.05;speed=0.15} @forward{f=3;lockpitch=true}
+
+
+# ─────────────────────────────────────────────
+#  4. INVESTIDA (COMUM) — Carga frontal com dano e knockback
+#     Variables: damage, distance
+#     Milestones: lvl3=charge_trail, lvl5=charge_flame
+# ─────────────────────────────────────────────
+
+Investida:
+  Skills:
+  - skill{s=Investida_Cast} @self
+
+Investida_Cast:
+  Skills:
+  # Grito de carga
+  - sound{s=entity.ravager.roar;v=1.0;p=1.2} @self
+  - particles{p=dust_color_transition;color1=#ff6600;color2=#ff0000;amount=15;hS=0.4;vS=0.8;y=0.5;size=1.5;speed=0} @self
+  - delay 2
+  # Lunge para frente
+  - lunge{velocity=2.5;velocityY=0.1} @forward{f=<skill.var.distance>;lockpitch=true}
+  # Dano no caminho
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=40;range=<skill.var.distance>;rotation=0;length=<skill.var.distance>}
+  - throw{velocity=1.5;velocityY=0.4} @EntitiesInCone{angle=40;range=<skill.var.distance>;rotation=0;length=<skill.var.distance>}
+  # Trail de carga
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ff6600;amount=10;hS=0.3;vS=0.2;y=0.3;size=1.2;speed=0;repeat=6;repeati=2} @self
+  - particles{p=block_crack;m=STONE;amount=5;hS=0.3;vS=0.1;y=0.05;speed=0.1;repeat=6;repeati=2} @self
+  - particles{p=smoke;amount=5;hS=0.3;vS=0.2;y=0.2;speed=0.05;repeat=6;repeati=2} @self
+  # Impacto final
+  - delay 6
+  - sound{s=entity.player.attack.strong;v=1.2;p=0.8} @self
+  - particles{p=explosion;amount=2;hS=0.3;vS=0.2;y=0.5;speed=0} @self
+
+# === INVESTIDA MK2 (Milestone lvl 3 — charge_trail) ===
+InvestidaMk2:
+  Skills:
+  - skill{s=InvestidaMk2_Cast} @self
+
+InvestidaMk2_Cast:
+  Skills:
+  - sound{s=entity.ravager.roar;v=1.2;p=1.0} @self
+  - particles{p=dust_color_transition;color1=#ff6600;color2=#ff0000;amount=25;hS=0.5;vS=1.0;y=0.5;size=2.0;speed=0} @self
+  - delay 2
+  - lunge{velocity=3.0;velocityY=0.1} @forward{f=<skill.var.distance>;lockpitch=true}
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=45;range=<skill.var.distance>;rotation=0;length=<skill.var.distance>}
+  - throw{velocity=2.0;velocityY=0.5} @EntitiesInCone{angle=45;range=<skill.var.distance>;rotation=0;length=<skill.var.distance>}
+  # Trail aprimorado com fogo
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=15;hS=0.4;vS=0.3;y=0.3;size=1.8;speed=0;repeat=8;repeati=2} @self
+  - particles{p=flame;amount=8;hS=0.3;vS=0.2;y=0.3;speed=0.05;repeat=8;repeati=2} @self
+  - particles{p=block_crack;m=STONE;amount=8;hS=0.4;vS=0.1;y=0.05;speed=0.12;repeat=8;repeati=2} @self
+  - particles{p=smoke;amount=8;hS=0.4;vS=0.3;y=0.2;speed=0.08;repeat=8;repeati=2} @self
+  # Onda de choque no final
+  - delay 8
+  - sound{s=entity.player.attack.strong;v=1.5;p=0.7} @self
+  - sound{s=entity.generic.explode;v=0.5;p=1.5} @self
+  - particlering{p=dust_color_transition;color1=#ff6600;color2=#990000;radius=2;points=25;amount=3;hS=0.1;vS=0.1;y=0.2;size=1.5;speed=0} @self
+  - particles{p=explosion;amount=3;hS=0.5;vS=0.3;y=0.5;speed=0} @self
+
+# === INVESTIDA MK3 (Milestone lvl 5 — charge_flame) ===
+InvestidaMk3:
+  Skills:
+  - skill{s=InvestidaMk3_Cast} @self
+
+InvestidaMk3_Cast:
+  Skills:
+  - sound{s=entity.ravager.roar;v=1.5;p=0.8} @self
+  - sound{s=entity.blaze.shoot;v=0.8;p=0.8} @self
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=35;hS=0.6;vS=1.2;y=0.5;size=2.5;speed=0} @self
+  - particles{p=flame;amount=20;hS=0.5;vS=0.8;y=0.5;speed=0.08} @self
+  - delay 2
+  - lunge{velocity=3.5;velocityY=0.15} @forward{f=<skill.var.distance>;lockpitch=true}
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=50;range=<skill.var.distance>;rotation=0;length=<skill.var.distance>}
+  - ignite{ticks=60} @EntitiesInCone{angle=50;range=<skill.var.distance>;rotation=0;length=<skill.var.distance>}
+  - throw{velocity=2.5;velocityY=0.6} @EntitiesInCone{angle=50;range=<skill.var.distance>;rotation=0;length=<skill.var.distance>}
+  # Trail flamejante
+  - particles{p=flame;amount=20;hS=0.5;vS=0.4;y=0.3;speed=0.1;repeat=10;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=18;hS=0.5;vS=0.4;y=0.3;size=2.0;speed=0;repeat=10;repeati=2} @self
+  - particles{p=lava;amount=4;hS=0.3;vS=0.2;y=0.2;speed=0;repeat=10;repeati=2} @self
+  - particles{p=soul_fire_flame;amount=5;hS=0.3;vS=0.3;y=0.3;speed=0.03;repeat=10;repeati=2} @self
+  # Explosão flamejante no final
+  - delay 10
+  - skill{s=InvestidaMk3_Explosion} @self
+
+InvestidaMk3_Explosion:
+  Skills:
+  - sound{s=entity.generic.explode;v=1.2;p=0.8} @self
+  - damage{a=<skill.var.damage> * 0.5;pkb=true;hnp=true} @EntitiesNearOrigin{r=3}
+  - ignite{ticks=40} @EntitiesNearOrigin{r=3}
+  - particles{p=flame;amount=60;hS=2.0;vS=1.0;y=0.5;speed=0.2} @self
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=30;hS=2.0;vS=1.0;y=0.5;size=2.5;speed=0} @self
+  - particles{p=explosion;amount=3;hS=0.5;vS=0.3;y=0.5;speed=0} @self
+  - particles{p=lava;amount=15;hS=1.5;vS=0.5;y=0.3;speed=0} @self
+  - particlering{p=flame;radius=2;points=25;amount=4;hS=0.2;vS=0.1;y=0.2;speed=0.15} @self
+  - particlering{p=flame;radius=3;points=30;amount=3;hS=0.2;vS=0.1;y=0.2;speed=0.1;delay=1} @self
+
+
+# ─────────────────────────────────────────────
+#  5. GRITO DE GUERRA (COMUM) — Buff AoE para aliados
+#     Variables: strength_buff, duration
+#     Milestones: lvl3=war_shout, lvl5=war_roar
+# ─────────────────────────────────────────────
+
+GritoDeGuerra:
+  Skills:
+  - skill{s=GritoDeGuerra_Cast} @self
+
+GritoDeGuerra_Cast:
+  Skills:
+  # Grito
+  - sound{s=entity.evoker.prepare_attack;v=1.5;p=0.6} @self
+  - sound{s=entity.player.attack.strong;v=1.0;p=0.5} @self
+  # Buff de força no caster e aliados
+  - potion{type=STRENGTH;duration=<skill.var.duration>;level=<skill.var.strength_buff>;hasParticles=true} @self
+  - potion{type=STRENGTH;duration=<skill.var.duration>;level=<skill.var.strength_buff>;hasParticles=true} @PlayersNearOrigin{r=8}
+  # Onda de choque visual
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=30;hS=0.5;vS=1.5;y=0.8;size=2.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ff6600;color2=#ff0000;radius=2;points=30;amount=3;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ff6600;color2=#ff0000;radius=4;points=40;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.2;speed=0;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#ff6600;color2=#ff0000;radius=6;points=50;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.0;speed=0;delay=4} @self
+  - particles{p=enchant;amount=15;hS=1.0;vS=0.5;y=0.5;speed=0.1} @self
+
+# === GRITO DE GUERRA MK2 (Milestone lvl 3 — war_shout) ===
+GritoDeGuerraMk2:
+  Skills:
+  - skill{s=GritoDeGuerraMk2_Cast} @self
+
+GritoDeGuerraMk2_Cast:
+  Skills:
+  - sound{s=entity.evoker.prepare_attack;v=1.8;p=0.5} @self
+  - sound{s=entity.ravager.roar;v=0.8;p=1.0} @self
+  # Buffs aprimorados
+  - potion{type=STRENGTH;duration=<skill.var.duration>;level=<skill.var.strength_buff>;hasParticles=true} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=STRENGTH;duration=<skill.var.duration>;level=<skill.var.strength_buff>;hasParticles=true} @PlayersNearOrigin{r=10}
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @PlayersNearOrigin{r=10}
+  # Onda de choque visual aprimorada
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=45;hS=0.6;vS=2.0;y=0.8;size=2.5;speed=0} @self
+  - particles{p=flame;amount=15;hS=0.5;vS=1.0;y=0.5;speed=0.05} @self
+  - particlering{p=dust_color_transition;color1=#ff6600;color2=#ff0000;radius=2;points=35;amount=4;hS=0.1;vS=0.2;y=0.3;size=2.0;speed=0} @self
+  - particlering{p=flame;radius=3;points=25;amount=3;hS=0.1;vS=0.1;y=0.3;speed=0.05;delay=1} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ff6600;radius=5;points=45;amount=3;hS=0.1;vS=0.2;y=0.3;size=1.8;speed=0;delay=2} @self
+  - particlering{p=flame;radius=7;points=50;amount=2;hS=0.1;vS=0.1;y=0.3;speed=0.03;delay=3} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#990000;radius=9;points=60;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0;delay=4} @self
+  - particles{p=enchant;amount=20;hS=1.5;vS=0.8;y=0.5;speed=0.15} @self
+
+# === GRITO DE GUERRA MK3 (Milestone lvl 5 — war_roar) ===
+GritoDeGuerraMk3:
+  Skills:
+  - skill{s=GritoDeGuerraMk3_Cast} @self
+
+GritoDeGuerraMk3_Cast:
+  Skills:
+  - sound{s=entity.ender_dragon.growl;v=1.5;p=0.8} @self
+  - sound{s=entity.ravager.roar;v=1.2;p=0.8} @self
+  - sound{s=entity.wither.spawn;v=0.6;p=1.5} @self
+  # Buffs máximos
+  - potion{type=STRENGTH;duration=<skill.var.duration>;level=<skill.var.strength_buff>;hasParticles=true} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=1;hasParticles=false} @self
+  - potion{type=SPEED;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=STRENGTH;duration=<skill.var.duration>;level=<skill.var.strength_buff>;hasParticles=true} @PlayersNearOrigin{r=12}
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=1;hasParticles=false} @PlayersNearOrigin{r=12}
+  - potion{type=SPEED;duration=<skill.var.duration>;level=0;hasParticles=false} @PlayersNearOrigin{r=12}
+  # Explosão visual épica
+  - particles{p=dust_color_transition;color1=#990000;color2=#ffcc00;amount=60;hS=0.8;vS=2.5;y=1.0;size=3.0;speed=0} @self
+  - particles{p=flame;amount=30;hS=0.6;vS=1.5;y=0.5;speed=0.08} @self
+  - particles{p=soul_fire_flame;amount=12;hS=0.4;vS=1.0;y=0.5;speed=0.05} @self
+  # Coluna de poder
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ff0000;amount=10;hS=0.3;vS=4.0;y=2.5;size=2.0;speed=0;repeat=10;repeati=2} @self
+  # Ondas de choque
+  - particlering{p=flame;radius=2;points=40;amount=5;hS=0.2;vS=0.2;y=0.3;speed=0.1} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;radius=4;points=50;amount=4;hS=0.1;vS=0.2;y=0.3;size=2.5;speed=0;delay=1} @self
+  - particlering{p=flame;radius=6;points=55;amount=3;hS=0.2;vS=0.1;y=0.3;speed=0.08;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ff6600;radius=8;points=60;amount=3;hS=0.1;vS=0.1;y=0.3;size=2.0;speed=0;delay=3} @self
+  - particlering{p=flame;radius=10;points=70;amount=2;hS=0.2;vS=0.1;y=0.3;speed=0.05;delay=4} @self
+  - particlering{p=dust_color_transition;color1=#990000;color2=#ff0000;radius=12;points=80;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0;delay=5} @self
+  - particles{p=enchant;amount=30;hS=2.0;vS=1.0;y=0.5;speed=0.2} @self
+
+
+# ─────────────────────────────────────────────
+#  6. CORTE GIRATÓRIO (COMUM) — Slash giratório AoE ao redor
+#     Variables: damage, radius
+#     Milestones: lvl3=spin_fire, lvl5=spin_inferno
+# ─────────────────────────────────────────────
+
+CorteGiratorio:
+  Skills:
+  - skill{s=CorteGiratorio_Cast} @self
+
+CorteGiratorio_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.2;p=1.0} @self
+  # Animação de giro
+  - skill{s=CorteGiratorio_Spin1} @self
+  - delay 3
+  - skill{s=CorteGiratorio_Spin2} @self
+
+CorteGiratorio_Spin1:
+  Skills:
+  - particles{p=sweep_attack;amount=6;hS=0.3;vS=0.2;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#990000;radius=<skill.var.radius>;points=40;amount=3;hS=0.1;vS=0.1;y=1.0;size=1.5;speed=0} @self
+  - particles{p=smoke;amount=8;hS=0.5;vS=0.1;y=0.8;speed=0.05} @self
+
+CorteGiratorio_Spin2:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.4;p=0.8} @self
+  # Dano AoE
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - throw{velocity=0.6;velocityY=0.3} @EntitiesNearOrigin{r=<skill.var.radius>}
+  # Ring de corte completo
+  - particlering{p=sweep_attack;radius=<skill.var.radius>;points=20;amount=2;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#ff6600;radius=<skill.var.radius>;points=50;amount=4;hS=0.1;vS=0.1;y=1.0;size=2.0;speed=0} @self
+  - particles{p=block_crack;m=REDSTONE_BLOCK;amount=15;hS=1.5;vS=0.2;y=0.1;speed=0.1} @self
+  - particles{p=smoke;amount=12;hS=1.0;vS=0.3;y=0.5;speed=0.08} @self
+
+# === CORTE GIRATÓRIO MK2 (Milestone lvl 3 — spin_fire) ===
+CorteGiratorioMk2:
+  Skills:
+  - skill{s=CorteGiratorioMk2_Cast} @self
+
+CorteGiratorioMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.4;p=0.9} @self
+  - sound{s=entity.blaze.shoot;v=0.5;p=1.2} @self
+  # Duplo giro
+  - skill{s=CorteGiratorioMk2_Spin1} @self
+  - delay 2
+  - skill{s=CorteGiratorioMk2_Spin2} @self
+  - delay 2
+  - skill{s=CorteGiratorioMk2_Spin3} @self
+
+CorteGiratorioMk2_Spin1:
+  Skills:
+  - particles{p=sweep_attack;amount=8;hS=0.4;vS=0.2;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#ff6600;radius=<skill.var.radius>;points=45;amount=4;hS=0.1;vS=0.1;y=1.0;size=1.8;speed=0} @self
+  - particlering{p=flame;radius=<skill.var.radius>;points=20;amount=2;hS=0.1;vS=0.1;y=1.0;speed=0.05} @self
+
+CorteGiratorioMk2_Spin2:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.5;p=0.8} @self
+  - damage{a=<skill.var.damage> * 0.5;pkb=true;hnp=true;hp=true} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - particlering{p=sweep_attack;radius=<skill.var.radius>;points=25;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=flame;radius=<skill.var.radius>;points=30;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0.08} @self
+
+CorteGiratorioMk2_Spin3:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.6;p=0.7} @self
+  # Dano principal + knockback
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - throw{velocity=1.0;velocityY=0.4} @EntitiesNearOrigin{r=<skill.var.radius>}
+  # Ring de fogo
+  - particlering{p=sweep_attack;radius=<skill.var.radius>;points=25;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=flame;radius=<skill.var.radius>;points=50;amount=5;hS=0.2;vS=0.2;y=1.0;speed=0.1} @self
+  - particlering{p=dust_color_transition;color1=#ff6600;color2=#ff0000;radius=<skill.var.radius>;points=40;amount=3;hS=0.1;vS=0.1;y=0.5;size=2.0;speed=0} @self
+  - particles{p=smoke;amount=18;hS=1.5;vS=0.4;y=0.5;speed=0.1} @self
+
+# === CORTE GIRATÓRIO MK3 (Milestone lvl 5 — spin_inferno) ===
+CorteGiratorioMk3:
+  Skills:
+  - skill{s=CorteGiratorioMk3_Cast} @self
+
+CorteGiratorioMk3_Cast:
+  Skills:
+  - sound{s=entity.blaze.shoot;v=1.0;p=0.7} @self
+  - sound{s=entity.player.attack.sweep;v=1.5;p=0.8} @self
+  - particles{p=flame;amount=25;hS=0.5;vS=1.0;y=0.5;speed=0.1} @self
+  # Triplo giro infernal
+  - skill{s=CorteGiratorioMk3_Spin1} @self
+  - delay 2
+  - skill{s=CorteGiratorioMk3_Spin2} @self
+  - delay 2
+  - skill{s=CorteGiratorioMk3_Spin3} @self
+  - delay 2
+  - skill{s=CorteGiratorioMk3_Finale} @self
+
+CorteGiratorioMk3_Spin1:
+  Skills:
+  - particlering{p=flame;radius=<skill.var.radius>;points=40;amount=5;hS=0.2;vS=0.2;y=0.5;speed=0.1} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;radius=<skill.var.radius>;points=40;amount=3;hS=0.1;vS=0.1;y=1.0;size=2.0;speed=0} @self
+  - particles{p=sweep_attack;amount=10;hS=0.5;vS=0.3;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - damage{a=<skill.var.damage> * 0.3;pkb=false;hnp=true} @EntitiesNearOrigin{r=<skill.var.radius>}
+
+CorteGiratorioMk3_Spin2:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.6;p=0.7} @self
+  - particlering{p=flame;radius=<skill.var.radius>;points=50;amount=6;hS=0.2;vS=0.2;y=1.0;speed=0.12} @self
+  - particlering{p=soul_fire_flame;radius=<skill.var.radius>;points=25;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0.05} @self
+  - particles{p=sweep_attack;amount=10;hS=0.5;vS=0.3;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - damage{a=<skill.var.damage> * 0.3;pkb=false;hnp=true} @EntitiesNearOrigin{r=<skill.var.radius>}
+
+CorteGiratorioMk3_Spin3:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.8;p=0.6} @self
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - ignite{ticks=60} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - throw{velocity=1.2;velocityY=0.5} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - particlering{p=flame;radius=<skill.var.radius>;points=60;amount=8;hS=0.3;vS=0.3;y=1.0;speed=0.15} @self
+  - particlering{p=soul_fire_flame;radius=<skill.var.radius>;points=30;amount=4;hS=0.2;vS=0.2;y=1.0;speed=0.08} @self
+
+CorteGiratorioMk3_Finale:
+  Skills:
+  - sound{s=entity.generic.explode;v=1.0;p=1.0} @self
+  # Explosão de fogo circular
+  - particlering{p=flame;radius=<skill.var.radius>;points=80;amount=8;hS=0.3;vS=0.5;y=0.5;speed=0.2} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;radius=<skill.var.radius>;points=60;amount=5;hS=0.2;vS=0.3;y=0.5;size=3.0;speed=0} @self
+  - particles{p=lava;amount=20;hS=2.0;vS=0.3;y=0.2;speed=0} @self
+  - particles{p=explosion;amount=3;hS=1.0;vS=0.3;y=0.5;speed=0} @self
+  - particles{p=smoke;amount=25;hS=2.0;vS=0.5;y=0.3;speed=0.1} @self
+
+
+# ─────────────────────────────────────────────
+#  7. PROVOCAR (COMUM) — Taunt, atrai inimigos com aggro
+#     Variables: duration, radius
+#     Milestones: lvl3=taunt_roar, lvl5=taunt_inferno
+# ─────────────────────────────────────────────
+
+Provocar:
+  Skills:
+  - skill{s=Provocar_Cast} @self
+
+Provocar_Cast:
+  Skills:
+  # Grito provocativo
+  - sound{s=entity.ravager.roar;v=1.2;p=0.8} @self
+  - sound{s=entity.vindicator.celebrate;v=1.0;p=0.7} @self
+  # Forçar aggro — aplica Glow e Slow nos alvos
+  - potion{type=GLOWING;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=0;hasParticles=false} @EntitiesNearOrigin{r=<skill.var.radius>}
+  # Visuais de provocação
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#990000;amount=30;hS=0.5;vS=1.5;y=0.8;size=2.0;speed=0} @self
+  - particles{p=angry_villager;amount=10;hS=0.5;vS=0.8;y=1.0;speed=0.05} @self
+  # Ondas de aggro
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#990000;radius=2;points=25;amount=3;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#990000;color2=#ff0000;radius=3.5;points=30;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.2;speed=0;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#990000;radius=<skill.var.radius>;points=40;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.0;speed=0;delay=4} @self
+  # Partículas vermelhas nos alvos
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#990000;amount=10;hS=0.3;vS=0.5;y=0.5;size=1.5;speed=0} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - particles{p=angry_villager;amount=3;hS=0.2;vS=0.3;y=1.0;speed=0} @EntitiesNearOrigin{r=<skill.var.radius>}
+
+# === PROVOCAR MK2 (Milestone lvl 3 — taunt_roar) ===
+ProvocarMk2:
+  Skills:
+  - skill{s=ProvocarMk2_Cast} @self
+
+ProvocarMk2_Cast:
+  Skills:
+  - sound{s=entity.ravager.roar;v=1.5;p=0.6} @self
+  - sound{s=entity.ender_dragon.growl;v=0.6;p=1.5} @self
+  # Aggro + debuffs aprimorados
+  - potion{type=GLOWING;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=1;hasParticles=false} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - potion{type=WEAKNESS;duration=<skill.var.duration>;level=0;hasParticles=false} @EntitiesNearOrigin{r=<skill.var.radius>}
+  # Visuais épicos
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#990000;amount=45;hS=0.6;vS=2.0;y=1.0;size=2.5;speed=0} @self
+  - particles{p=angry_villager;amount=15;hS=0.6;vS=1.0;y=1.0;speed=0.08} @self
+  - particles{p=flame;amount=15;hS=0.5;vS=1.0;y=0.5;speed=0.05} @self
+  # Ondas de choque
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#990000;radius=2;points=30;amount=4;hS=0.1;vS=0.2;y=0.3;size=2.0;speed=0} @self
+  - particlering{p=flame;radius=3.5;points=25;amount=3;hS=0.1;vS=0.1;y=0.3;speed=0.05;delay=1} @self
+  - particlering{p=dust_color_transition;color1=#990000;color2=#ff6600;radius=5;points=40;amount=3;hS=0.1;vS=0.2;y=0.3;size=1.8;speed=0;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#990000;radius=<skill.var.radius>;points=50;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0;delay=3} @self
+  # Marcas vermelhas nos alvos
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#990000;amount=15;hS=0.4;vS=0.6;y=0.5;size=2.0;speed=0} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - particles{p=angry_villager;amount=5;hS=0.3;vS=0.4;y=1.2;speed=0} @EntitiesNearOrigin{r=<skill.var.radius>}
+
+# === PROVOCAR MK3 (Milestone lvl 5 — taunt_inferno) ===
+ProvocarMk3:
+  Skills:
+  - skill{s=ProvocarMk3_Cast} @self
+
+ProvocarMk3_Cast:
+  Skills:
+  - sound{s=entity.ender_dragon.growl;v=1.2;p=0.8} @self
+  - sound{s=entity.ravager.roar;v=1.8;p=0.5} @self
+  - sound{s=entity.wither.spawn;v=0.5;p=1.5} @self
+  # Aggro máximo + debuffs fortes
+  - potion{type=GLOWING;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=1;hasParticles=false} @self
+  - midgardShield{a=10;d=<skill.var.duration>} @self
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=2;hasParticles=false} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - potion{type=WEAKNESS;duration=<skill.var.duration>;level=1;hasParticles=false} @EntitiesNearOrigin{r=<skill.var.radius>}
+  # Explosão infernal de taunt
+  - particles{p=dust_color_transition;color1=#990000;color2=#ffcc00;amount=60;hS=0.8;vS=2.5;y=1.0;size=3.0;speed=0} @self
+  - particles{p=flame;amount=30;hS=0.6;vS=1.5;y=0.5;speed=0.1} @self
+  - particles{p=soul_fire_flame;amount=15;hS=0.4;vS=1.0;y=0.5;speed=0.05} @self
+  - particles{p=angry_villager;amount=20;hS=0.8;vS=1.2;y=1.0;speed=0.1} @self
+  # Coluna vermelha de rage
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#990000;amount=10;hS=0.3;vS=4.0;y=2.5;size=2.5;speed=0;repeat=10;repeati=2} @self
+  # Ondas de choque infernais
+  - particlering{p=flame;radius=2;points=35;amount=5;hS=0.2;vS=0.2;y=0.3;speed=0.12} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#ff6600;radius=4;points=45;amount=4;hS=0.1;vS=0.2;y=0.3;size=2.5;speed=0;delay=1} @self
+  - particlering{p=soul_fire_flame;radius=6;points=40;amount=3;hS=0.2;vS=0.1;y=0.3;speed=0.08;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#990000;color2=#ffcc00;radius=<skill.var.radius>;points=60;amount=3;hS=0.1;vS=0.1;y=0.3;size=2.0;speed=0;delay=3} @self
+  # Marcas de fogo nos alvos
+  - particles{p=flame;amount=15;hS=0.4;vS=0.8;y=0.5;speed=0.05} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=20;hS=0.5;vS=0.8;y=0.5;size=2.0;speed=0} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - particles{p=angry_villager;amount=8;hS=0.4;vS=0.5;y=1.2;speed=0} @EntitiesNearOrigin{r=<skill.var.radius>}
+
+
+# ─────────────────────────────────────────────
+#  8. ESMAGAR (COMUM) — Golpe esmagador de dano pesado single-target
+#     Variables: damage
+#     Milestones: lvl3=smash_crack, lvl5=smash_quake
+# ─────────────────────────────────────────────
+
+Esmagar:
+  Skills:
+  - skill{s=Esmagar_Cast} @self
+
+Esmagar_Cast:
+  Skills:
+  # Levantar arma
+  - sound{s=entity.player.attack.strong;v=0.8;p=1.5} @self
+  - particles{p=dust_color_transition;color1=#ff6600;color2=#ff0000;amount=15;hS=0.3;vS=0.8;y=1.5;size=1.5;speed=0} @self
+  - delay 3
+  # Esmagar para baixo
+  - skill{s=Esmagar_Impact} @self
+
+Esmagar_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.4} @self
+  - sound{s=entity.zombie.attack_iron_door;v=1.5;p=0.5} @self
+  # Dano pesado no alvo frontal
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=40;range=3;rotation=0;length=3}
+  # Impacto visual pesado
+  - particles{p=block_crack;m=STONE;amount=40;hS=1.5;vS=0.3;y=0.1;speed=0.2} @forward{f=2;lockpitch=true}
+  - particles{p=block_crack;m=COBBLESTONE;amount=25;hS=1.0;vS=0.2;y=0.1;speed=0.15} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#990000;amount=20;hS=1.0;vS=0.3;y=0.3;size=2.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=explosion;amount=2;hS=0.3;vS=0.2;y=0.3;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=smoke;amount=15;hS=1.0;vS=0.3;y=0.1;speed=0.08} @forward{f=2;lockpitch=true}
+  # "Screen shake" via knockback leve + camera particles
+  - throw{velocity=0.3;velocityY=0.15} @EntitiesNearOrigin{r=3}
+
+# === ESMAGAR MK2 (Milestone lvl 3 — smash_crack) ===
+EsmagarMk2:
+  Skills:
+  - skill{s=EsmagarMk2_Cast} @self
+
+EsmagarMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.0;p=1.3} @self
+  - particles{p=dust_color_transition;color1=#ff6600;color2=#ff0000;amount=25;hS=0.4;vS=1.0;y=1.5;size=2.0;speed=0} @self
+  - particles{p=enchant;amount=10;hS=0.3;vS=0.8;y=1.5;speed=0.05} @self
+  - delay 3
+  - skill{s=EsmagarMk2_Impact} @self
+
+EsmagarMk2_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.3} @self
+  - sound{s=entity.zombie.attack_iron_door;v=1.8;p=0.4} @self
+  - sound{s=entity.generic.explode;v=0.6;p=1.3} @self
+  # Dano principal + AoE menor ao redor
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=45;range=3.5;rotation=0;length=3.5}
+  - damage{a=<skill.var.damage> * 0.3;pkb=true;hnp=true} @EntitiesNearOrigin{r=3}
+  # Rachadura no chão ampliada
+  - particles{p=block_crack;m=STONE;amount=60;hS=2.0;vS=0.4;y=0.1;speed=0.25} @forward{f=2;lockpitch=true}
+  - particles{p=block_crack;m=DEEPSLATE;amount=30;hS=1.5;vS=0.3;y=0.1;speed=0.2} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#990000;amount=30;hS=1.5;vS=0.5;y=0.3;size=2.5;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=explosion;amount=3;hS=0.5;vS=0.3;y=0.3;speed=0} @forward{f=2;lockpitch=true}
+  # Ondas de rachadura
+  - particlering{p=block_crack;m=STONE;radius=1.5;points=20;amount=3;hS=0.2;vS=0.1;y=0.1;speed=0.12} @forward{f=2;lockpitch=true}
+  - particlering{p=block_crack;m=COBBLESTONE;radius=2.5;points=25;amount=2;hS=0.2;vS=0.1;y=0.1;speed=0.1;delay=1} @forward{f=2;lockpitch=true}
+  - particlering{p=dust_color_transition;color1=#990000;color2=#ff0000;radius=3;points=30;amount=2;hS=0.1;vS=0.1;y=0.1;size=1.5;speed=0;delay=2} @forward{f=2;lockpitch=true}
+  - particles{p=large_smoke;amount=20;hS=1.5;vS=0.5;y=0.2;speed=0.1} @forward{f=2;lockpitch=true}
+  - throw{velocity=0.6;velocityY=0.3} @EntitiesNearOrigin{r=3.5}
+
+# === ESMAGAR MK3 (Milestone lvl 5 — smash_quake) ===
+EsmagarMk3:
+  Skills:
+  - skill{s=EsmagarMk3_Cast} @self
+
+EsmagarMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.2;p=1.2} @self
+  - sound{s=entity.wither.spawn;v=0.4;p=1.5} @self
+  - particles{p=dust_color_transition;color1=#990000;color2=#ffcc00;amount=35;hS=0.5;vS=1.2;y=1.5;size=2.5;speed=0} @self
+  - particles{p=flame;amount=15;hS=0.4;vS=0.8;y=1.5;speed=0.05} @self
+  - particles{p=enchant;amount=15;hS=0.4;vS=1.0;y=1.5;speed=0.08} @self
+  - delay 4
+  - skill{s=EsmagarMk3_Impact} @self
+
+EsmagarMk3_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.2} @self
+  - sound{s=entity.generic.explode;v=1.5;p=0.6} @self
+  - sound{s=entity.zombie.attack_iron_door;v=2.0;p=0.3} @self
+  # Dano massivo + terremoto AoE
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=50;range=4;rotation=0;length=4}
+  - damage{a=<skill.var.damage> * 0.5;pkb=true;hnp=true} @EntitiesNearOrigin{r=4}
+  - throw{velocity=1.0;velocityY=0.6} @EntitiesNearOrigin{r=4}
+  # Terremoto visual
+  - particles{p=block_crack;m=STONE;amount=80;hS=2.5;vS=0.5;y=0.1;speed=0.3} @forward{f=2;lockpitch=true}
+  - particles{p=block_crack;m=DEEPSLATE;amount=50;hS=2.0;vS=0.4;y=0.1;speed=0.25} @forward{f=2;lockpitch=true}
+  - particles{p=block_crack;m=MAGMA_BLOCK;amount=25;hS=1.5;vS=0.3;y=0.1;speed=0.2} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=40;hS=2.0;vS=0.6;y=0.3;size=3.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=flame;amount=30;hS=1.5;vS=0.3;y=0.2;speed=0.1} @forward{f=2;lockpitch=true}
+  - particles{p=explosion;amount=5;hS=1.0;vS=0.4;y=0.5;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=lava;amount=15;hS=2.0;vS=0.3;y=0.2;speed=0} @forward{f=2;lockpitch=true}
+  # Ondas de terremoto expandindo
+  - particlering{p=block_crack;m=STONE;radius=2;points=30;amount=5;hS=0.3;vS=0.1;y=0.1;speed=0.15} @self
+  - particlering{p=flame;radius=3;points=30;amount=3;hS=0.2;vS=0.1;y=0.1;speed=0.1;delay=1} @self
+  - particlering{p=block_crack;m=DEEPSLATE;radius=4;points=40;amount=3;hS=0.3;vS=0.1;y=0.1;speed=0.12;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#ff6600;color2=#990000;radius=5;points=50;amount=2;hS=0.1;vS=0.1;y=0.1;size=2.0;speed=0;delay=3} @self
+  - particles{p=large_smoke;amount=30;hS=2.5;vS=0.8;y=0.3;speed=0.12} @forward{f=2;lockpitch=true}
+
+
+# ─────────────────────────────────────────────
+#  9. FÚRIA BERSERKER (ULTIMATE — Canalizada) — Rage mode com buffs massivos
+#     Variables: damage_bonus, duration
+#     Milestones: lvl3=berserker_flame, lvl5=berserker_inferno
+# ─────────────────────────────────────────────
+
+FuriaBerserker:
+  Skills:
+  - skill{s=FuriaBerserker_Cast} @self
+
+FuriaBerserker_Cast:
+  Skills:
+  # Ativação do berserker — flash de poder
+  - sound{s=entity.wither.spawn;v=1.0;p=1.0} @self
+  - sound{s=entity.ravager.roar;v=1.5;p=0.5} @self
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#990000;amount=50;hS=0.8;vS=2.0;y=1.0;size=2.5;speed=0} @self
+  - particles{p=flame;amount=30;hS=0.5;vS=1.5;y=0.5;speed=0.1} @self
+  - particles{p=end_rod;amount=15;hS=0.5;vS=2.0;y=1.0;speed=0.08} @self
+  # Buffs de berserker
+  - potion{type=STRENGTH;duration=<skill.var.duration>;level=<skill.var.damage_bonus>;hasParticles=false} @self
+  - potion{type=SPEED;duration=<skill.var.duration>;level=1;hasParticles=false} @self
+  - potion{type=GLOWING;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  # Aura persistente
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ff6600;amount=8;hS=0.5;vS=0.8;y=0.5;size=1.5;speed=0;repeat=<skill.var.duration>;repeati=10} @self
+  - particles{p=flame;amount=5;hS=0.4;vS=0.6;y=0.5;speed=0.03;repeat=<skill.var.duration>;repeati=10} @self
+
+# === FÚRIA BERSERKER MK2 (Milestone lvl 3 — berserker_flame) ===
+FuriaBerserkerMk2:
+  Skills:
+  - skill{s=FuriaBerserkerMk2_Cast} @self
+
+FuriaBerserkerMk2_Cast:
+  Skills:
+  # Ativação épica
+  - sound{s=entity.wither.spawn;v=1.5;p=0.8} @self
+  - sound{s=entity.ravager.roar;v=1.8;p=0.4} @self
+  - sound{s=entity.blaze.shoot;v=1.0;p=0.6} @self
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=70;hS=1.0;vS=2.5;y=1.0;size=3.0;speed=0} @self
+  - particles{p=flame;amount=50;hS=0.8;vS=2.0;y=0.5;speed=0.15} @self
+  - particles{p=soul_fire_flame;amount=20;hS=0.5;vS=1.5;y=0.5;speed=0.08} @self
+  - particles{p=end_rod;amount=20;hS=0.6;vS=2.5;y=1.0;speed=0.1} @self
+  # Onda de choque na ativação
+  - particlering{p=flame;radius=3;points=40;amount=5;hS=0.2;vS=0.2;y=0.3;speed=0.15} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#990000;radius=5;points=50;amount=3;hS=0.1;vS=0.1;y=0.3;size=2.0;speed=0;delay=1} @self
+  # Buffs aprimorados
+  - potion{type=STRENGTH;duration=<skill.var.duration>;level=<skill.var.damage_bonus>;hasParticles=false} @self
+  - potion{type=SPEED;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=GLOWING;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  # Orbital de chamas
+  - orbital{auraName=berserker_flame;bulletType=ITEM;bulletItem=FIRE_CHARGE;radius=1.5;points=4;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+  # Aura persistente flamejante
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=12;hS=0.6;vS=1.0;y=0.5;size=2.0;speed=0;repeat=<skill.var.duration>;repeati=8} @self
+  - particles{p=flame;amount=10;hS=0.5;vS=0.8;y=0.5;speed=0.05;repeat=<skill.var.duration>;repeati=8} @self
+  - particles{p=soul_fire_flame;amount=4;hS=0.3;vS=0.5;y=0.5;speed=0.02;repeat=<skill.var.duration>;repeati=8} @self
+
+# === FÚRIA BERSERKER MK3 (Milestone lvl 5 — berserker_inferno) ===
+FuriaBerserkerMk3:
+  Skills:
+  - skill{s=FuriaBerserkerMk3_Cast} @self
+
+FuriaBerserkerMk3_Cast:
+  Skills:
+  # Ativação cataclísmica
+  - sound{s=entity.wither.spawn;v=2.0;p=0.5} @self
+  - sound{s=entity.ender_dragon.growl;v=1.5;p=0.6} @self
+  - sound{s=entity.ravager.roar;v=2.0;p=0.3} @self
+  # Explosão de poder avassaladora
+  - particles{p=dust_color_transition;color1=#990000;color2=#ffcc00;amount=100;hS=1.2;vS=3.0;y=1.0;size=4.0;speed=0} @self
+  - particles{p=flame;amount=80;hS=1.0;vS=2.5;y=0.5;speed=0.2} @self
+  - particles{p=soul_fire_flame;amount=40;hS=0.8;vS=2.0;y=0.5;speed=0.12} @self
+  - particles{p=lava;amount=20;hS=0.6;vS=1.5;y=0.5;speed=0} @self
+  - particles{p=end_rod;amount=25;hS=0.8;vS=3.0;y=1.5;speed=0.15} @self
+  # Coluna de fogo
+  - particles{p=flame;amount=15;hS=0.3;vS=5.0;y=3.0;speed=0.05;repeat=20;repeati=1} @self
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ff0000;amount=8;hS=0.3;vS=5.0;y=3.0;size=2.0;speed=0;repeat=20;repeati=1} @self
+  # Ondas de choque de ativação
+  - particlering{p=flame;radius=2;points=40;amount=6;hS=0.3;vS=0.3;y=0.3;speed=0.2} @self
+  - particlering{p=soul_fire_flame;radius=4;points=50;amount=4;hS=0.2;vS=0.2;y=0.3;speed=0.12;delay=1} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;radius=6;points=60;amount=3;hS=0.1;vS=0.1;y=0.3;size=3.0;speed=0;delay=2} @self
+  - particlering{p=flame;radius=8;points=70;amount=3;hS=0.2;vS=0.1;y=0.3;speed=0.08;delay=3} @self
+  # Buffs máximos
+  - potion{type=STRENGTH;duration=<skill.var.duration>;level=<skill.var.damage_bonus>;hasParticles=false} @self
+  - potion{type=SPEED;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=1;hasParticles=false} @self
+  - potion{type=GLOWING;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - midgardShield{a=20;d=<skill.var.duration>} @self
+  # Orbital infernal
+  - orbital{auraName=berserker_inferno_inner;bulletType=ITEM;bulletItem=FIRE_CHARGE;radius=1.2;points=4;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+  - orbital{auraName=berserker_inferno_outer;bulletType=ITEM;bulletItem=MAGMA_CREAM;radius=2.0;points=6;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+  # Aura persistente infernal
+  - particles{p=dust_color_transition;color1=#990000;color2=#ffcc00;amount=18;hS=0.8;vS=1.2;y=0.5;size=2.5;speed=0;repeat=<skill.var.duration>;repeati=6} @self
+  - particles{p=flame;amount=15;hS=0.6;vS=1.0;y=0.5;speed=0.08;repeat=<skill.var.duration>;repeati=6} @self
+  - particles{p=soul_fire_flame;amount=8;hS=0.4;vS=0.8;y=0.5;speed=0.04;repeat=<skill.var.duration>;repeati=6} @self
+  - particles{p=lava;amount=3;hS=0.5;vS=0.3;y=0.3;speed=0;repeat=<skill.var.duration>;repeati=10} @self
+  # Dano de aura passivo aos inimigos próximos
+  - damage{a=<skill.var.damage_bonus> * 0.1;pkb=false;hnp=true;preventimmunity=true;repeat=<skill.var.duration>;repeati=20} @EntitiesNearOrigin{r=3}
+  - ignite{ticks=20;repeat=<skill.var.duration>;repeati=20} @EntitiesNearOrigin{r=3}
+
+
+# ─────────────────────────────────────────────
+#  10. GOLPE DEVASTADOR (ULTIMATE — Canalizada) — Golpe único de dano apocalíptico
+#      Variables: damage
+#      Milestones: lvl3=devastate_crack, lvl5=devastate_cataclysm
+# ─────────────────────────────────────────────
+
+GolpeDevastador:
+  Skills:
+  - skill{s=GolpeDevastador_Cast} @self
+
+GolpeDevastador_Cast:
+  Skills:
+  # Carga de poder
+  - sound{s=entity.wither.spawn;v=0.8;p=1.2} @self
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=30;hS=0.5;vS=1.5;y=1.5;size=2.0;speed=0} @self
+  - particles{p=enchant;amount=20;hS=0.4;vS=1.0;y=1.5;speed=0.1} @self
+  - particles{p=end_rod;amount=10;hS=0.3;vS=1.5;y=1.5;speed=0.05} @self
+  # Concentração de energia (pulsos)
+  - skill{s=GolpeDevastador_Charge1} @self
+  - delay 5
+  - skill{s=GolpeDevastador_Charge2} @self
+  - delay 5
+  # Disparo
+  - skill{s=GolpeDevastador_Strike} @self
+
+GolpeDevastador_Charge1:
+  Skills:
+  - particles{p=dust_color_transition;color1=#ff6600;color2=#ff0000;amount=20;hS=1.5;vS=0.2;y=0.5;size=1.0;speed=0.2} @self
+  - particles{p=enchant;amount=15;hS=2.0;vS=0.5;y=0.5;speed=0.3} @self
+  - sound{s=block.beacon.activate;v=0.8;p=1.5} @self
+
+GolpeDevastador_Charge2:
+  Skills:
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=30;hS=1.0;vS=0.3;y=0.5;size=1.5;speed=0.15} @self
+  - particles{p=enchant;amount=20;hS=1.5;vS=0.5;y=0.5;speed=0.25} @self
+  - particles{p=flame;amount=10;hS=0.5;vS=0.5;y=1.0;speed=0.05} @self
+  - sound{s=block.beacon.activate;v=1.0;p=1.8} @self
+
+GolpeDevastador_Strike:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.3} @self
+  - sound{s=entity.generic.explode;v=1.5;p=0.5} @self
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.8} @self
+  # Dash curto para frente + golpe
+  - lunge{velocity=1.5;velocityY=0} @forward{f=3;lockpitch=true}
+  - delay 2
+  # Dano devastador
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=60;range=5;rotation=0;length=5}
+  - throw{velocity=2.0;velocityY=0.8} @EntitiesInCone{angle=60;range=5;rotation=0;length=5}
+  # Impacto visual
+  - skill{s=GolpeDevastador_Shockwave} @self
+
+GolpeDevastador_Shockwave:
+  Skills:
+  - particles{p=sweep_attack;amount=12;hS=1.0;vS=0.5;y=1.0;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=50;hS=2.5;vS=1.0;y=0.5;size=3.0;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=explosion;amount=5;hS=1.0;vS=0.5;y=0.5;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=block_crack;m=STONE;amount=50;hS=2.5;vS=0.3;y=0.1;speed=0.25} @forward{f=3;lockpitch=true}
+  - particles{p=block_crack;m=REDSTONE_BLOCK;amount=20;hS=2.0;vS=0.2;y=0.1;speed=0.2} @forward{f=3;lockpitch=true}
+  - particles{p=smoke;amount=25;hS=2.0;vS=0.5;y=0.3;speed=0.1} @forward{f=3;lockpitch=true}
+  # Ondas no chão
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#990000;radius=2;points=30;amount=4;hS=0.2;vS=0.1;y=0.1;size=2.0;speed=0} @forward{f=3;lockpitch=true}
+  - particlering{p=block_crack;m=STONE;radius=3;points=35;amount=3;hS=0.2;vS=0.1;y=0.1;speed=0.12;delay=1} @forward{f=3;lockpitch=true}
+  - particlering{p=dust_color_transition;color1=#ff6600;color2=#ff0000;radius=4;points=40;amount=2;hS=0.1;vS=0.1;y=0.1;size=1.5;speed=0;delay=2} @forward{f=3;lockpitch=true}
+
+# === GOLPE DEVASTADOR MK2 (Milestone lvl 3 — devastate_crack) ===
+GolpeDevastadorMk2:
+  Skills:
+  - skill{s=GolpeDevastadorMk2_Cast} @self
+
+GolpeDevastadorMk2_Cast:
+  Skills:
+  # Carga aprimorada
+  - sound{s=entity.wither.spawn;v=1.2;p=1.0} @self
+  - sound{s=block.beacon.activate;v=1.0;p=1.2} @self
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=45;hS=0.6;vS=2.0;y=1.5;size=2.5;speed=0} @self
+  - particles{p=flame;amount=20;hS=0.5;vS=1.2;y=1.0;speed=0.08} @self
+  - particles{p=enchant;amount=25;hS=0.5;vS=1.5;y=1.5;speed=0.12} @self
+  - particles{p=end_rod;amount=15;hS=0.4;vS=2.0;y=1.5;speed=0.08} @self
+  # Concentração (absorve energia)
+  - particles{p=dust_color_transition;color1=#ff6600;color2=#ff0000;amount=15;hS=2.0;vS=0.3;y=0.5;size=1.0;speed=0.3;repeat=8;repeati=3} @self
+  - delay 10
+  - skill{s=GolpeDevastadorMk2_Strike} @self
+
+GolpeDevastadorMk2_Strike:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.2} @self
+  - sound{s=entity.generic.explode;v=2.0;p=0.4} @self
+  - sound{s=entity.lightning_bolt.thunder;v=1.5;p=0.6} @self
+  # Dash e golpe
+  - lunge{velocity=2.0;velocityY=0} @forward{f=4;lockpitch=true}
+  - delay 2
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=70;range=6;rotation=0;length=6}
+  - damage{a=<skill.var.damage> * 0.4;pkb=true;hnp=true} @EntitiesNearOrigin{r=4}
+  - throw{velocity=2.5;velocityY=1.0} @EntitiesInCone{angle=70;range=6;rotation=0;length=6}
+  # Shockwave amplificada
+  - skill{s=GolpeDevastadorMk2_Shockwave} @self
+
+GolpeDevastadorMk2_Shockwave:
+  Skills:
+  - particles{p=sweep_attack;amount=15;hS=1.5;vS=0.6;y=1.0;speed=0} @forward{f=4;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=70;hS=3.0;vS=1.5;y=0.5;size=3.5;speed=0} @forward{f=4;lockpitch=true}
+  - particles{p=explosion;amount=6;hS=1.5;vS=0.6;y=0.5;speed=0} @forward{f=4;lockpitch=true}
+  - particles{p=block_crack;m=STONE;amount=80;hS=3.0;vS=0.5;y=0.1;speed=0.3} @forward{f=4;lockpitch=true}
+  - particles{p=block_crack;m=DEEPSLATE;amount=40;hS=2.5;vS=0.4;y=0.1;speed=0.25} @forward{f=4;lockpitch=true}
+  - particles{p=large_smoke;amount=30;hS=2.5;vS=0.8;y=0.3;speed=0.12} @forward{f=4;lockpitch=true}
+  # Rachadura expandindo
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#990000;radius=2;points=35;amount=5;hS=0.2;vS=0.1;y=0.1;size=2.5;speed=0} @forward{f=4;lockpitch=true}
+  - particlering{p=block_crack;m=STONE;radius=3;points=40;amount=4;hS=0.3;vS=0.1;y=0.1;speed=0.15;delay=1} @forward{f=4;lockpitch=true}
+  - particlering{p=dust_color_transition;color1=#ff6600;color2=#ff0000;radius=4.5;points=45;amount=3;hS=0.2;vS=0.1;y=0.1;size=2.0;speed=0;delay=2} @forward{f=4;lockpitch=true}
+  - particlering{p=block_crack;m=DEEPSLATE;radius=6;points=50;amount=2;hS=0.2;vS=0.1;y=0.1;speed=0.1;delay=3} @forward{f=4;lockpitch=true}
+
+# === GOLPE DEVASTADOR MK3 (Milestone lvl 5 — devastate_cataclysm) ===
+GolpeDevastadorMk3:
+  Skills:
+  - skill{s=GolpeDevastadorMk3_Cast} @self
+
+GolpeDevastadorMk3_Cast:
+  Skills:
+  # Carga cataclísmica
+  - sound{s=entity.wither.spawn;v=2.0;p=0.6} @self
+  - sound{s=entity.ender_dragon.growl;v=1.5;p=0.5} @self
+  - sound{s=block.beacon.activate;v=1.2;p=1.0} @self
+  # Coluna de poder ascendente
+  - particles{p=dust_color_transition;color1=#990000;color2=#ffcc00;amount=80;hS=0.8;vS=3.0;y=1.5;size=3.5;speed=0} @self
+  - particles{p=flame;amount=40;hS=0.6;vS=2.0;y=1.0;speed=0.12} @self
+  - particles{p=soul_fire_flame;amount=20;hS=0.5;vS=1.5;y=0.8;speed=0.08} @self
+  - particles{p=end_rod;amount=20;hS=0.5;vS=3.0;y=2.0;speed=0.1} @self
+  - particles{p=lava;amount=10;hS=0.4;vS=1.0;y=0.5;speed=0} @self
+  # Coluna de luz
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ff0000;amount=12;hS=0.2;vS=6.0;y=3.5;size=2.5;speed=0;repeat=15;repeati=1} @self
+  # Concentração massiva
+  - particles{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;amount=20;hS=3.0;vS=0.3;y=0.5;size=1.2;speed=0.4;repeat=12;repeati=2} @self
+  - particles{p=enchant;amount=25;hS=2.5;vS=0.5;y=0.5;speed=0.5;repeat=12;repeati=2} @self
+  - delay 12
+  - skill{s=GolpeDevastadorMk3_Strike} @self
+
+GolpeDevastadorMk3_Strike:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.15} @self
+  - sound{s=entity.generic.explode;v=2.0;p=0.3} @self
+  - sound{s=entity.lightning_bolt.thunder;v=2.0;p=0.4} @self
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=0.5} @self
+  # Dash de impacto
+  - lunge{velocity=2.5;velocityY=0} @forward{f=5;lockpitch=true}
+  - delay 2
+  # Dano cataclísmico
+  - damage{a=<skill.var.damage>;pkb=true;hnp=true;hp=true} @EntitiesInCone{angle=80;range=7;rotation=0;length=7}
+  - damage{a=<skill.var.damage> * 0.6;pkb=true;hnp=true} @EntitiesNearOrigin{r=5}
+  - throw{velocity=3.0;velocityY=1.2} @EntitiesInCone{angle=80;range=7;rotation=0;length=7}
+  - throw{velocity=2.0;velocityY=0.8} @EntitiesNearOrigin{r=5}
+  # Cataclismo visual
+  - skill{s=GolpeDevastadorMk3_Cataclysm} @self
+
+GolpeDevastadorMk3_Cataclysm:
+  Skills:
+  # Impacto central
+  - particles{p=sweep_attack;amount=20;hS=2.0;vS=0.8;y=1.0;speed=0} @forward{f=4;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#990000;color2=#ffcc00;amount=100;hS=3.5;vS=2.0;y=0.5;size=4.0;speed=0} @forward{f=4;lockpitch=true}
+  - particles{p=flame;amount=60;hS=3.0;vS=1.5;y=0.5;speed=0.25} @forward{f=4;lockpitch=true}
+  - particles{p=soul_fire_flame;amount=25;hS=2.0;vS=1.0;y=0.5;speed=0.15} @forward{f=4;lockpitch=true}
+  - particles{p=explosion_emitter;amount=3;hS=1.0;vS=0.5;y=0.5;speed=0} @forward{f=4;lockpitch=true}
+  - particles{p=explosion;amount=8;hS=2.0;vS=1.0;y=0.5;speed=0} @forward{f=4;lockpitch=true}
+  - particles{p=lava;amount=25;hS=2.5;vS=0.5;y=0.3;speed=0} @forward{f=4;lockpitch=true}
+  # Destruição do chão
+  - particles{p=block_crack;m=STONE;amount=100;hS=3.5;vS=0.6;y=0.1;speed=0.35} @forward{f=4;lockpitch=true}
+  - particles{p=block_crack;m=DEEPSLATE;amount=60;hS=3.0;vS=0.5;y=0.1;speed=0.3} @forward{f=4;lockpitch=true}
+  - particles{p=block_crack;m=MAGMA_BLOCK;amount=30;hS=2.0;vS=0.3;y=0.1;speed=0.25} @forward{f=4;lockpitch=true}
+  - particles{p=large_smoke;amount=40;hS=3.0;vS=1.0;y=0.3;speed=0.15} @forward{f=4;lockpitch=true}
+  # Ondas sísmicas épicas
+  - particlering{p=flame;radius=2;points=40;amount=6;hS=0.3;vS=0.2;y=0.2;speed=0.2} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#ffcc00;radius=3;points=45;amount=5;hS=0.2;vS=0.2;y=0.2;size=3.0;speed=0;delay=1} @self
+  - particlering{p=soul_fire_flame;radius=4.5;points=50;amount=4;hS=0.2;vS=0.1;y=0.2;speed=0.12;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#990000;color2=#ff6600;radius=6;points=60;amount=3;hS=0.1;vS=0.1;y=0.2;size=2.5;speed=0;delay=3} @self
+  - particlering{p=flame;radius=8;points=70;amount=3;hS=0.2;vS=0.1;y=0.2;speed=0.08;delay=4} @self
+  - particlering{p=dust_color_transition;color1=#ff0000;color2=#990000;radius=10;points=80;amount=2;hS=0.1;vS=0.1;y=0.2;size=2.0;speed=0;delay=5} @self
+  # Pilares de erupção residuais
+  - delay 3
+  - skill{s=GolpeDevastadorMk3_Eruptions} @self
+
+GolpeDevastadorMk3_Eruptions:
+  Skills:
+  - particles{p=flame;amount=50;hS=0.3;vS=3.0;y=1.5;speed=0.05;repeat=8;repeati=3} @forward{f=2;lockpitch=true}
+  - particles{p=flame;amount=40;hS=0.3;vS=2.5;y=1.2;speed=0.05;repeat=8;repeati=3} @forward{f=5;lockpitch=true}
+  - particles{p=soul_fire_flame;amount=20;hS=0.2;vS=2.0;y=1.0;speed=0.03;repeat=8;repeati=3} @forward{f=3.5;lockpitch=true}
+  - particles{p=lava;amount=8;hS=0.5;vS=1.5;y=0.8;speed=0;repeat=5;repeati=4} @forward{f=2;lockpitch=true}
+  - particles{p=lava;amount=6;hS=0.5;vS=1.5;y=0.8;speed=0;repeat=5;repeati=4} @forward{f=5;lockpitch=true}
+  - sound{s=entity.blaze.death;v=1.0;p=0.4} @self
+  - damage{a=<skill.var.damage> * 0.2;pkb=false;hnp=true;preventimmunity=true;repeat=4;repeati=5} @EntitiesNearOrigin{r=5}

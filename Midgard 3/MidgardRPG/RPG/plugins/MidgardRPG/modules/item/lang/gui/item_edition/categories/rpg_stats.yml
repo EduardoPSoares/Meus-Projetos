@@ -1,0 +1,262 @@
+stats:
+  strength:
+    name: '<gradient:#ff5555:#aa0000><b>⚔ ꜰᴏʀᴄᴀ</b></gradient>'
+    lore:
+      - '<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ꜰɪꜱɪᴄᴏ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  intelligence:
+    name: '<gradient:#5555ff:#0000aa><b>🧠 ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ</b></gradient>'
+    lore:
+      - '<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ ᴇ ᴍᴀɴᴀ ᴍᴀxɪᴍᴀ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  dexterity:
+    name: '<gradient:#55ff55:#00aa00><b>🏹 ᴅᴇꜱᴛʀᴇᴢᴀ</b></gradient>'
+    lore:
+      - '<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ᴄʜᴀɴᴄᴇ ᴅᴇ ᴄʀɪᴛɪᴄᴏ ᴇ ᴘʀᴇᴄɪꜱᴀᴏ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  accuracy:
+    name: '<gradient:#ffff55:#aa0000><b>🎯 ᴘʀᴇᴄɪꜱᴀᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴄʜᴀɴᴄᴇ ᴅᴇ ᴀᴄᴇʀᴛᴀʀ ᴀᴛᴀǫᴜᴇꜱ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  critical_resistance:
+    name: '<gradient:#555555:#aaaaaa><b>🛡 ʀᴇꜱɪꜱᴛᴇɴᴄɪᴀ ᴄʀɪᴛɪᴄᴀ</b></gradient>'
+    lore:
+      - '<gray>ʀᴇᴅᴜᴢ ᴀ ᴄʜᴀɴᴄᴇ ᴅᴇ ʀᴇᴄᴇʙᴇʀ ᴀᴄᴇʀᴛᴏꜱ ᴄʀɪᴛɪᴄᴏꜱ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  thorns:
+    name: '<gradient:#00aa00:#55ff55><b>🌵 ᴇꜱᴘɪɴʜᴏꜱ</b></gradient>'
+    lore:
+      - '<gray>ʀᴇᴛᴏʀɴᴀ ᴅᴀɴᴏ ᴀᴏ ᴀᴛᴀᴄᴀɴᴛᴇ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  magic_resistance:
+    name: '<gradient:#aa00aa:#ff55ff><b>🔮 ʀᴇꜱɪꜱᴛᴇɴᴄɪᴀ ᴍᴀɢɪᴄᴀ</b></gradient>'
+    lore:
+      - '<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ ʀᴇᴄᴇʙɪᴅᴏ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  armor_penetration:
+    name: '<gradient:#aa0000:#ff5555><b>🔨 ᴘᴇɴᴇᴛʀᴀᴄᴀᴏ ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀ (%)</b></gradient>'
+    lore:
+      - '<gray>ɪɢɴᴏʀᴀ ᴜᴍᴀ ᴘᴏʀᴄᴇɴᴛᴀɢᴇᴍ ᴅᴀ ᴀʀᴍᴀᴅᴜʀᴀ ᴅᴏ ᴀʟᴠᴏ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  armor_penetration_flat:
+    name: '<gradient:#aa0000:#ff5555><b>🔨 ᴘᴇɴᴇᴛʀᴀᴄᴀᴏ ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀ (ꜰʟᴀᴛ)</b></gradient>'
+    lore:
+      - '<gray>ɪɢɴᴏʀᴀ ᴜᴍᴀ ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ꜰɪxᴀ ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀ ᴅᴏ ᴀʟᴠᴏ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  magic_penetration:
+    name: '<gradient:#aa00aa:#ff55ff><b>🔮 ᴘᴇɴᴇᴛʀᴀᴄᴀᴏ ᴍᴀɢɪᴄᴀ (%)</b></gradient>'
+    lore:
+      - '<gray>ɪɢɴᴏʀᴀ ᴜᴍᴀ ᴘᴏʀᴄᴇɴᴛᴀɢᴇᴍ ᴅᴀ ʀᴇꜱɪꜱᴛᴇɴᴄɪᴀ ᴍᴀɢɪᴄᴀ ᴅᴏ ᴀʟᴠᴏ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  magic_penetration_flat:
+    name: '<gradient:#aa00aa:#ff55ff><b>🔮 ᴘᴇɴᴇᴛʀᴀᴄᴀᴏ ᴍᴀɢɪᴄᴀ (ꜰʟᴀᴛ)</b></gradient>'
+    lore:
+      - '<gray>ɪɢɴᴏʀᴀ ᴜᴍᴀ ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ꜰɪxᴀ ᴅᴇ ʀᴇꜱɪꜱᴛᴇɴᴄɪᴀ ᴍᴀɢɪᴄᴀ ᴅᴏ ᴀʟᴠᴏ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  ice_damage_reduction:
+    name: '<gradient:#55ffff:#aa00ff><b>❄ ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ ᴅᴇ ɢᴇʟᴏ</b></gradient>'
+    lore:
+      - '<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴅᴇ ꜰᴏɴᴛᴇꜱ ᴅᴇ ɢᴇʟᴏ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  light_damage_reduction:
+    name: '<gradient:#ffff55:#ffffff><b>☀ ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ ᴅᴇ ʟᴜᴢ</b></gradient>'
+    lore:
+      - '<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴅᴇ ꜰᴏɴᴛᴇꜱ ᴅᴇ ʟᴜᴢ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  darkness_damage_reduction:
+    name: '<gradient:#000000:#555555><b>🌑 ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ ᴅᴇ ᴇꜱᴄᴜʀɪᴅᴀᴏ</b></gradient>'
+    lore:
+      - '<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴅᴇ ꜰᴏɴᴛᴇꜱ ᴅᴇ ᴇꜱᴄᴜʀɪᴅᴀᴏ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  divine_damage_reduction:
+    name: '<gradient:#ffff55:#ffaa00><b>🔱 ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ ᴅɪᴠɪɴᴏ</b></gradient>'
+    lore:
+      - '<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴅᴇ ꜰᴏɴᴛᴇꜱ ᴅɪᴠɪɴᴀꜱ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  myluck:
+    name: '<gradient:#55ff55:#00aa00><b>🍀 ꜱᴏʀᴛᴇ</b></gradient>'
+    lore:
+      - '<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ꜱᴏʀᴛᴇ ᴅᴏ ᴊᴏɢᴀᴅᴏʀ (ʟᴏᴏᴛꜱ, ᴅʀᴏᴘꜱ).'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  additional_experience:
+    name: '<gradient:#55ff55:#ffff55><b>✨ ᴇxᴘᴇʀɪᴇɴᴄɪᴀ ᴀᴅɪᴄɪᴏɴᴀʟ</b></gradient>'
+    lore:
+      - '<gray>ᴇxᴘᴇʀɪᴇɴᴄɪᴀ ᴇxᴛʀᴀ ɢᴀɴʜᴀ ᴀᴏ ᴍᴀᴛᴀʀ ᴍᴏʙꜱ/ᴍɪɴᴇʀᴀʀ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  item_abilities:
+    name: '<gradient:#ff5555:#ffaa00><b>⚡ ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ ᴅᴏ ɪᴛᴇᴍ</b></gradient>'
+    lore:
+      - '<gray>ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ ᴇꜱᴘᴇᴄɪᴀɪꜱ ᴠɪɴᴄᴜʟᴀᴅᴀꜱ ᴀᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ǫᴛᴅ. ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ʟɪꜱᴛᴀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʟɪᴍᴘᴀʀ.'
+    hide_attributes: true
+
+  gem_sockets:
+    name: '<gradient:#55ff55:#00aaaa><b>💎 ꜱᴏᴄᴋᴇᴛꜱ ᴅᴇ ɢᴇᴍᴀ</b></gradient>'
+    lore:
+      - '<gray>ꜱʟᴏᴛꜱ ᴅɪꜱᴘᴏɴɪᴠᴇɪꜱ ᴘᴀʀᴀ ɢᴇᴍᴀꜱ.'
+      - ''
+      - '<gray>ǫᴛᴅ. ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ʟɪꜱᴛᴀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʟɪᴍᴘᴀʀ.'
+    hide_attributes: true
+
+  trim_material:
+    name: '<gradient:#aaaaaa:#ffffff><b>🛡 ᴍᴀᴛᴇʀɪᴀʟ ᴅᴇ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴍᴀᴛᴇʀɪᴀʟ ᴜꜱᴀᴅᴏ ɴᴏ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ ᴅᴀ ᴀʀᴍᴀᴅᴜʀᴀ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  trim_pattern:
+    name: '<gradient:#aaaaaa:#ffffff><b>🛡 ᴘᴀᴅʀᴀᴏ ᴅᴇ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴘᴀᴅʀᴀᴏ ᴠɪꜱᴜᴀʟ ᴅᴏ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ ᴅᴀ ᴀʀᴍᴀᴅᴜʀᴀ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  hide_armor_trim:
+    name: '<gradient:#555555:#000000><b>🙈 ᴇꜱᴄᴏɴᴅᴇʀ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ</b></gradient>'
+    lore:
+      - '<gray>ꜱᴇ ᴀᴛɪᴠᴀᴅᴏ, ᴇꜱᴄᴏɴᴅᴇ ᴏ ᴠɪꜱᴜᴀʟ ᴅᴏ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ.'
+      - ''
+      - '<gray>ᴇꜱᴛᴀᴅᴏ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ.'
+    hide_attributes: true
+
+  browser_index:
+    name: '<gradient:#55ffff:#00aaaa><b>🔍 ɪɴᴅɪᴄᴇ ɴᴏ ɴᴀᴠᴇɢᴀᴅᴏʀ</b></gradient>'
+    lore:
+      - '<gray>ᴘʀɪᴏʀɪᴅᴀᴅᴇ ᴅᴇ ᴇxɪʙɪᴄᴀᴏ ɴᴏ ᴍᴇɴᴜ ᴅᴇ ɪᴛᴇɴꜱ.'
+      - ''
+      - '<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  amphibian:
+    name: '<gradient:#55ffff:#0000aa><b>🐟 ᴀɴꜰɪʙɪᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴘᴇʀᴍɪᴛᴇ ʀᴇꜱᴘɪʀᴀʀ/ᴍɪɴᴇʀᴀʀ ᴍᴇʟʜᴏʀ ɴᴀ ᴀɢᴜᴀ.'
+      - ''
+      - '<gray>ᴇꜱᴛᴀᴅᴏ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ.'
+    hide_attributes: true

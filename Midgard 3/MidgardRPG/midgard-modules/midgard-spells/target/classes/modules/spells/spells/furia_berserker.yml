@@ -1,0 +1,84 @@
+name: "<dark_red>ꜰᴜʀɪᴀ ʙᴇʀsᴇʀᴋᴇʀ</dark_red>"
+mythic-skill: "FuriaBerserker"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 45.0
+  per-level: -0.5
+mana:
+  base: 60.0
+  per-level: -1.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guerreiro"
+  level: 15
+
+icon:
+  material: NETHER_STAR
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_red><bold>ᴍᴀɢɪᴀ sᴜᴘʀᴇᴍᴀ</bold></dark_red>"
+  - ""
+  - "<gray>ᴇɴᴛʀᴀ ᴇᴍ ᴇsᴛᴀᴅᴏ ᴅᴇ ꜰᴜʀɪᴀ</gray>"
+  - "<gray>ʙᴇʀsᴇʀᴋᴇʀ, ᴀᴜᴍᴇɴᴛᴀɴᴅᴏ ᴅᴀɴᴏ</gray>"
+  - "<gray>ᴇ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇ ᴀᴛᴀǫᴜᴇ</gray>"
+  - "<gray>ᴅʀᴀsᴛɪᴄᴀᴍᴇɴᴛᴇ.</gray>"
+  - ""
+  - "<red><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></red>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ᴅᴀɴᴏ:<red>{damage_bonus}</red>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<red>{duration}s</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>15</yellow>"
+
+variables:
+  damage_bonus:
+    base: 25.0
+    per-level: 5.0
+  duration:
+    base: 8.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "berserker_flame"
+    mechanic-override: "FuriaBerserkerMk2"
+    stat-bonus:
+      strength: 2.0
+  5:
+    visual: "berserker_inferno"
+    mechanic-override: "FuriaBerserkerMk3"
+    stat-bonus:
+      strength: 4.0
+
+mastery:
+  attribute-bonus:
+    strength: 10
+
+sounds:
+  cast-start:
+    sound: "entity.wither.spawn"
+    volume: 1.0
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.ender_dragon.growl"
+    volume: 1.0
+    pitch: 0.4
+  cast-fail:
+    sound: "entity.wither.hurt"
+    volume: 0.5
+    pitch: 0.8

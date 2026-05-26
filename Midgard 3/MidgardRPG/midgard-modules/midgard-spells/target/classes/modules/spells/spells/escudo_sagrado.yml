@@ -1,0 +1,83 @@
+name: "<blue>ᴇsᴄᴜᴅᴏ sᴀɢʀᴀᴅᴏ</blue>"
+mythic-skill: "EscudoSagrado"
+spell-type: COMMON
+
+cooldown:
+  base: 14.0
+  per-level: -0.4
+mana:
+  base: 25.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guardiao"
+  level: 8
+
+icon:
+  material: TOTEM_OF_UNDYING
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<blue><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></blue>"
+  - ""
+  - "<gray>ɪɴᴠᴏᴄᴀ ᴜᴍ ᴇsᴄᴜᴅᴏ sᴀɢʀᴀᴅᴏ ǫᴜᴇ</gray>"
+  - "<gray>ᴀʙsᴏʀᴠᴇ ᴅᴀɴᴏ ᴘᴏʀ ᴜᴍ ᴛᴇᴍᴘᴏ,</gray>"
+  - "<gray>ᴘʀᴏᴛᴇɢᴇɴᴅᴏ ᴏ ɢᴜᴀʀᴅɪᴀᴏ.</gray>"
+  - ""
+  - "<blue><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></blue>"
+  - ""
+  - "<gray>ᴇsᴄᴜᴅᴏ:<blue>{shield_amount}</blue>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<blue>{duration}s</blue>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<blue>ɢᴜᴀʀᴅɪᴀᴏ</blue>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>8</yellow>"
+
+variables:
+  shield_amount:
+    base: 15.0
+    per-level: 4.0
+  duration:
+    base: 6.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "sacred_glow"
+    mechanic-override: "EscudoSagradoMk2"
+    stat-bonus:
+      defense: 1.0
+  5:
+    visual: "sacred_barrier"
+    mechanic-override: "EscudoSagradoMk3"
+    stat-bonus:
+      defense: 2.0
+
+mastery:
+  attribute-bonus:
+    defense: 5
+
+sounds:
+  cast-start:
+    sound: "block.enchantment_table.use"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "item.totem.use"
+    volume: 0.8
+    pitch: 1.2
+  cast-fail:
+    sound: "item.shield.break"
+    volume: 0.5
+    pitch: 0.8

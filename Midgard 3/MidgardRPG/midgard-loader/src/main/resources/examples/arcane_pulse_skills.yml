@@ -1,0 +1,26 @@
+# Copie este conteúdo para plugins/MythicMobs/Skills/arcane_pulse.yml
+
+ArcanePulse:
+  Skills:
+  - effect:sound{s=entity.enderman.teleport;v=1;p=1.5} @Self
+  - effect:particles{p=portal;amount=40;speed=0.2;hS=0.8;vS=0.5} @Self
+  - damage{amount=8;element=MAGIC} @EntitiesInRadius{r=4}
+
+ArcanePulse_Explode:
+  Skills:
+  - effect:sound{s=entity.generic.explode;v=1;p=1} @Self
+  - effect:particles{p=explosion_large;amount=2;speed=0;hS=0.2;vS=0.2} @Self
+  - damage{amount=14;element=MAGIC} @EntitiesInRadius{r=5}
+
+ArcanePulse_Persist:
+  Skills:
+  - effect:particles{p=spell_witch;amount=60;speed=0.1;hS=1;vS=0.4} @Self
+  - damage{amount=5;element=MAGIC} @EntitiesInRadius{r=4}
+  - delay 20
+  - damage{amount=5;element=MAGIC} @EntitiesInRadius{r=4}
+
+ArcanePulse_Supreme:
+  Skills:
+  - effect:sound{s=entity.warden.sonic_boom;v=1;p=1} @Self
+  - effect:particles{p=sonic_boom;amount=6;speed=0;hS=0.4;vS=0.2} @Self
+  - damage{amount=20;element=MAGIC} @EntitiesInRadius{r=6}

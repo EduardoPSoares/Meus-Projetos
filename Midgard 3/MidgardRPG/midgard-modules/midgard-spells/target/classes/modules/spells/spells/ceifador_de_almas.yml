@@ -1,0 +1,90 @@
+name: "<dark_purple>ᴄᴇɪꜰᴀᴅᴏʀ ᴅᴇ ᴀʟᴍᴀs</dark_purple>"
+mythic-skill: "CeifadorDeAlmas"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 60.0
+  per-level: -1.0
+mana:
+  base: 85.0
+  per-level: -1.0
+stamina: 0.0
+
+cast-time: 3.0
+interruptible: true
+
+max-level: 10
+
+requirements:
+  class: "Necromante"
+  level: 20
+
+icon:
+  material: NETHERITE_HOE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴍᴀɢɪᴀ sᴜᴘʀᴇᴍᴀ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴏ ɴᴇᴄʀᴏᴍᴀɴᴛᴇ sᴇ ᴛʀᴀɴsꜰᴏʀᴍᴀ ɴᴏ</gray>"
+  - "<gray>ᴄᴇɪꜰᴀᴅᴏʀ ᴅᴇ ᴀʟᴍᴀs, ᴄᴇɪꜰᴀɴᴅᴏ ᴀ</gray>"
+  - "<gray>ᴠɪᴅᴀ ᴅᴇ ᴛᴏᴅᴏs ᴀᴏ sᴇᴜ ʀᴇᴅᴏʀ.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ʀᴀɪᴏ:<dark_purple>{radius}</dark_purple>"
+  - "<gray>ʀᴏᴜʙᴏ ᴅᴇ ᴠɪᴅᴀ:<green>{life_steal}%</green>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ᴄᴏɴᴊᴜʀᴀᴄᴀᴏ:<red>3.0s</red>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɴᴇᴄʀᴏᴍᴀɴᴛᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>20</yellow>"
+
+variables:
+  damage:
+    base: 45.0
+    per-level: 10.0
+  radius:
+    base: 6.0
+    per-level: 0.4
+  life_steal:
+    base: 15.0
+    per-level: 2.0
+
+milestones:
+  3:
+    visual: "soul_reaper_shadow"
+    mechanic-override: "CeifadorDeAlmasMk2"
+    stat-bonus:
+      intelligence: 3.0
+  5:
+    visual: "soul_reaper_death"
+    mechanic-override: "CeifadorDeAlmasMk3"
+    stat-bonus:
+      intelligence: 4.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 10
+
+sounds:
+  cast-start:
+    sound: "entity.wither.spawn"
+    volume: 1.0
+    pitch: 0.5
+  cast-finish:
+    sound: "entity.wither.death"
+    volume: 1.0
+    pitch: 0.6
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

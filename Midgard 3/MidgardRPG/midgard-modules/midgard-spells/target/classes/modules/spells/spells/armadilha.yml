@@ -1,0 +1,78 @@
+name: "<green>ᴀʀᴍᴀᴅɪʟʜᴀ</green>"
+mythic-skill: "Armadilha"
+spell-type: COMMON
+
+cooldown:
+  base: 15.0
+  per-level: -0.5
+mana:
+  base: 10.0
+  per-level: -0.3
+stamina: 25.0
+
+max-level: 10
+
+requirements:
+  class: "Arqueiro"
+  level: 10
+
+icon:
+  material: TRIPWIRE_HOOK
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<green><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></green>"
+  - ""
+  - "<gray>ᴄᴏʟᴏᴄᴀ ᴜᴍᴀ ᴀʀᴍᴀᴅɪʟʜᴀ ɴᴏ ᴄʜᴀᴏ</gray>"
+  - "<gray>ǫᴜᴇ ɪᴍᴏʙɪʟɪᴢᴀ ᴇ ᴄᴀᴜsᴀ ᴅᴀɴᴏ ᴀᴏ</gray>"
+  - "<gray>ɪɴɪᴍɪɢᴏ ǫᴜᴇ ᴘɪsᴀʀ ɴᴇʟᴀ.</gray>"
+  - ""
+  - "<green><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></green>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴀʀǫᴜᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>10</yellow>"
+
+variables:
+  damage:
+    base: 15.0
+    per-level: 4.0
+
+milestones:
+  3:
+    visual: "armadilha_snare"
+    mechanic-override: "ArmadilhaMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "armadilha_spike"
+    mechanic-override: "ArmadilhaMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "block.tripwire.click_on"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "block.tripwire.click_off"
+    volume: 0.8
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

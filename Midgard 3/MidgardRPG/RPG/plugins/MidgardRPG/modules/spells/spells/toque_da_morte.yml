@@ -1,0 +1,78 @@
+name: "<dark_purple>ᴛᴏǫᴜᴇ ᴅᴀ ᴍᴏʀᴛᴇ</dark_purple>"
+mythic-skill: "ToqueDaMorte"
+spell-type: COMMON
+
+cooldown:
+  base: 12.0
+  per-level: -0.3
+mana:
+  base: 30.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Necromante"
+  level: 8
+
+icon:
+  material: BONE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴏ ɴᴇᴄʀᴏᴍᴀɴᴛᴇ ᴄᴀɴᴀʟɪᴢᴀ ᴀ ᴇssᴇɴᴄɪᴀ</gray>"
+  - "<gray>ᴅᴀ ᴍᴏʀᴛᴇ ᴇᴍ sᴜᴀs ᴍᴀᴏs, ɪɴꜰʟɪɢɪɴᴅᴏ</gray>"
+  - "<gray>ᴅᴀɴᴏ sᴏᴍʙʀɪᴏ ᴍᴀssɪᴠᴏ ᴀᴏ ᴛᴏᴄᴀʀ.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɴᴇᴄʀᴏᴍᴀɴᴛᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>8</yellow>"
+
+variables:
+  damage:
+    base: 25.0
+    per-level: 6.0
+
+milestones:
+  3:
+    visual: "death_touch_shadow"
+    mechanic-override: "ToqueDaMorteMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "death_touch_reaper"
+    mechanic-override: "ToqueDaMorteMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.wither.shoot"
+    volume: 0.8
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.wither.hurt"
+    volume: 0.8
+    pitch: 0.8
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

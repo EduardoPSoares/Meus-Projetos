@@ -1,0 +1,82 @@
+name: "<aqua>ʀᴀɪᴏ ɢʟᴀᴄɪᴀʟ</aqua>"
+mythic-skill: "RaioGlacial"
+spell-type: COMMON
+
+cooldown:
+  base: 8.0
+  per-level: -0.3
+mana:
+  base: 25.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Mago"
+  level: 3
+
+icon:
+  material: BLUE_ICE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<aqua><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></aqua>"
+  - ""
+  - "<gray>ᴜᴍ ʀᴀɪᴏ ᴅᴇ ɢᴇʟᴏ ᴄᴏɴɢᴇʟᴀɴᴛᴇ ǫᴜᴇ</gray>"
+  - "<gray>ᴀᴛɪɴɢᴇ ᴏ ɪɴɪᴍɪɢᴏ, ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ</gray>"
+  - "<gray>ᴇ ʀᴇᴅᴜᴢɪɴᴅᴏ sᴜᴀ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ.</gray>"
+  - ""
+  - "<aqua><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></aqua>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ʟᴇɴᴛɪᴅᴀᴏ:<aqua>{slowness_duration}s</aqua>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴀɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>3</yellow>"
+
+variables:
+  damage:
+    base: 12.0
+    per-level: 3.5
+  slowness_duration:
+    base: 2.0
+    per-level: 0.3
+
+milestones:
+  3:
+    visual: "glacial_ray_frost"
+    mechanic-override: "RaioGlacialMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "glacial_ray_blizzard"
+    mechanic-override: "RaioGlacialMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.player.hurt_freeze"
+    volume: 1.0
+    pitch: 1.2
+  cast-finish:
+    sound: "block.glass.break"
+    volume: 0.8
+    pitch: 1.5
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

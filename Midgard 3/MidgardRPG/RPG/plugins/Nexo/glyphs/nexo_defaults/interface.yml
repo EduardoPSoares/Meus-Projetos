@@ -1,0 +1,16 @@
+menu_items:
+  texture: required/ui/menu_items
+  ascent: 37
+  height: 256
+  char: ꐐ
+menu_items_search:
+  texture: required/ui/menu_items_search
+  ascent: 37
+  height: 256
+  char: ꐑ
+brewing_stand_recipe_builder:
+  texture: required/ui/brewing_stand_recipe_builder
+  ascent: 13
+  height: 256
+  char: ꐒ
+# dad68177d78aab008dfef4b0c40b2cc1

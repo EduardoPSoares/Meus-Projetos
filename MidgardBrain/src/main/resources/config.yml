@@ -1,0 +1,37 @@
+# Configuração do MidgardDiscord
+
+# Nome do servidor para redirecionar jogadores durante a manutenção (BungeeCord)
+lobby-server: "lobby"
+
+# Configuração de Banco de Dados
+# Tipos suportados: mysql, sqlite, json (padrão se não configurado)
+db-type: "mysql"
+db-host: "localhost"
+db-port: "3306"
+db-name: "midgard"
+db-user: "root"
+db-pass: "senha"
+
+# Porta para comunicação via Socket com o Bot
+bot-socket-port: 25590
+bot-secret-key: "midgard_secret_key_change_me"
+
+# Lista de usuários que podem ignorar a manutenção (útil se permissões não estiverem funcionando)
+admin-users: []
+
+# Configurações do Discord (Não utilizadas atualmente pelo plugin, apenas pelo Bot)
+# discord:
+#   token: "ENV_VAR_DISCORD_TOKEN"
+#   channel_id: "000000000000000000"
+
+# Configuração de Auto-Update
+update:
+  enabled: true
+  check-interval: 60 # Minutos
+  github-token: "" # Token do GitHub (opcional)
+
+# Configuração do Sistema de Fila
+# Jogadores entram na fila ao usar /fila e são transferidos gradualmente
+queue-target-server: "rpg"
+queue-delay: 2 # Segundos entre cada transferência
+queue-max-size: 200 # Máximo de jogadores na fila

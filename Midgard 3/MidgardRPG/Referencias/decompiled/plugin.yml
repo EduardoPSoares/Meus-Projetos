@@ -1,0 +1,91 @@
+name: MythicalRaces
+version: 2.7.3-SE-V1
+description: A customizable races plugin
+author: Korbsti
+main: src.me.korbsti.mythicalraces.MythicalRaces
+softdepend: [PlaceholderAPI, WorldGuard]
+api-version: 1.18
+
+commands:
+  races:
+    description: Access the races command set
+    aliases: [race]
+    children:
+      kitgui:
+        description: "Display list of kits in a GUI"
+        usage: "/races kitgui"
+      choose:
+        description: "Choose a specific race or class"
+        usage: "/races choose [race/class]"
+      list:
+        description: "Display base races"
+        usage: "/races list"
+      info:
+        description: "Display info about a specific race or class"
+        usage: "/races info [race/class]"
+      gui:
+        description: "Display list of races in a GUI"
+        usage: "/races gui"
+      tree:
+        description: "Display race evolution tree"
+        usage: "/races tree"
+      classgui:
+        description: "Display list of classes in a GUI"
+        usage: "/races classgui"
+      classtree:
+        description: "Display class evolution tree"
+        usage: "/races classtree"
+      sub:
+        description: "Display sub-evolutions of the selected race or class"
+        usage: "/races sub [race/class]"
+      profile:
+        description: "Display your or someone else's race profile"
+        usage: "/races profile [player]"
+      lvlset:
+        description: "Set the level of a player's race"
+        usage: "/races lvlset [player] [integer]"
+      lvlsetclass:
+        description: "Set the level of a player's class"
+        usage: "/races lvlsetclass [player] [integer]"
+      set:
+        description: "Forcibly set a player's race"
+        usage: "/races set [race] [player]"
+      addxp:
+        description: "Add XP to a player's race"
+        usage: "/races addxp [player] [xp]"
+      addxpclass:
+        description: "Add XP to a player's class"
+        usage: "/races addxpclass [player] [xp]"
+      biome:
+        description: "Utility command for configuration purposes related to biomes"
+        usage: "/races biome"
+      rcooldown:
+        description: "Reset the cooldown of a player's class/race change"
+        usage: "/races rcooldown"
+      leaderboard:
+        description: "Display the races leaderboard"
+        usage: "/races leaderboard"
+      questslist:
+        description: "List all available quests"
+        usage: "/races questslist"
+      questprogress:
+        description: "View progress of a specific quest"
+        usage: "/races questprogress [quest name]"
+      questsview:
+        description: "View the lore/description of a specific quest"
+        usage: "/races questsview [quest name]"
+      reset:
+        description: "Reset race, class, force GUI, cooldown, XP, and level of a player"
+        usage: "/races reset [player]"
+      toggle:
+        description: "Toggle potion effects and abilities of the race"
+        usage: "/races toggle"
+      toggleplayer:
+        description: "Toggle potion effects and abilities of the target player"
+        usage: "/races toggleplayer [player]"
+      admin:
+        description: "Open the MythicalRaces admin GUI"
+        usage: "/races admin"
+      scoreboard:
+        description: "Toggle the player's sidebar scoreboard"
+        usage: "/races scoreboard"

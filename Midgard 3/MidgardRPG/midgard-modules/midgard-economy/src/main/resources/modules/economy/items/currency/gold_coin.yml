@@ -1,0 +1,19 @@
+gold_coin:
+  base:
+    material: GOLD_INGOT
+    name: '<gold>ᴍᴏᴇᴅᴀ ᴅᴇ ᴏᴜʀᴏ</gold>'
+    tier: RARE
+    type: MISCELLANEOUS
+    model-data: 1003
+  mechanics:
+    nbt-tags: "currency:10000"
+    lore:
+      - '<gray>ᴛɪᴘᴏ:<yellow><bold>ᴍᴏᴇᴅᴀ ʀᴀʀᴀ</bold></yellow>'
+      - ''
+      - '<gray>ᴀ ᴍᴏᴇᴅᴀ ᴅᴏs ɴᴏʙʀᴇs ᴇ ʀᴇɪs,</gray>'
+      - '<gray>ᴇǫᴜɪᴠᴀʟᴇɴᴛᴇ ᴀ 100 ᴍᴏᴇᴅᴀs ᴅᴇ ᴘʀᴀᴛᴀ.</gray>'
+      - '<gray>ᴜᴍ sɪɴᴀʟ ᴅᴇ ɢʀᴀɴᴅᴇ ʀɪǫᴜᴇᴢᴀ</gray>'
+      - '<gray>ᴇ ᴘᴏᴅᴇʀ ᴇᴍ ᴍɪᴅɢᴀʀᴅ.</gray>'
+      - ''
+      - '<gold><bold>✦ ᴠᴀʟᴏʀ: 10.000 ʙʀᴏɴᴢᴇ ✦</bold></gold>'
+      - ''

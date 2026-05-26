@@ -1,0 +1,79 @@
+name: "<gold>ᴘᴀssᴏ ᴅᴏ ᴠᴇɴᴛᴏ</gold>"
+mythic-skill: "PassoDoVento"
+spell-type: COMMON
+
+cooldown:
+  base: 8.0
+  per-level: -0.3
+mana:
+  base: 15.0
+  per-level: -0.4
+stamina: 20.0
+
+max-level: 10
+
+requirements:
+  class: "Monge"
+  level: 10
+
+icon:
+  material: FEATHER
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></gold>"
+  - ""
+  - "<gray>ᴏ ᴍᴏɴɢᴇ sᴇ ᴍᴏᴠᴇ ᴄᴏᴍ ᴀ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ</gray>"
+  - "<gray>ᴅᴏ ᴠᴇɴᴛᴏ, ᴀᴠᴀɴᴄᴀɴᴅᴏ ʀᴀᴘɪᴅᴀᴍᴇɴᴛᴇ</gray>"
+  - "<gray>ᴇ ᴇsǫᴜɪᴠᴀɴᴅᴏ ᴅᴇ ᴀᴛᴀǫᴜᴇs.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<gold>{duration}s</gold>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴏɴɢᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>10</yellow>"
+
+variables:
+  duration:
+    base: 3.0
+    per-level: 0.3
+
+milestones:
+  3:
+    visual: "passo_vento_dash"
+    mechanic-override: "PassoDoVentoMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "passo_vento_gale"
+    mechanic-override: "PassoDoVentoMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 3
+    dexterity: 2
+
+sounds:
+  cast-start:
+    sound: "entity.bat.takeoff"
+    volume: 1.0
+    pitch: 1.4
+  cast-finish:
+    sound: "entity.phantom.flap"
+    volume: 0.8
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

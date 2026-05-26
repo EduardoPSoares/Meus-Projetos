@@ -1,0 +1,94 @@
+name: "<dark_purple>ᴇxᴇʀᴄɪᴛᴏ ᴅᴏs ᴍᴏʀᴛᴏs</dark_purple>"
+mythic-skill: "ExercitoDosMortos"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 50.0
+  per-level: -0.5
+mana:
+  base: 75.0
+  per-level: -1.0
+stamina: 0.0
+
+cast-time: 2.5
+interruptible: true
+
+max-level: 10
+
+requirements:
+  class: "Necromante"
+  level: 15
+
+icon:
+  material: ZOMBIE_HEAD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴍᴀɢɪᴀ sᴜᴘʀᴇᴍᴀ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴏ ɴᴇᴄʀᴏᴍᴀɴᴛᴇ ɪɴᴠᴏᴄᴀ ᴜᴍ ᴇxᴇʀᴄɪᴛᴏ</gray>"
+  - "<gray>ᴅᴇ ᴍᴏʀᴛᴏs-ᴠɪᴠᴏs ǫᴜᴇ ᴀᴛᴀᴄᴀᴍ</gray>"
+  - "<gray>ᴛᴏᴅᴏs ᴏs ɪɴɪᴍɪɢᴏs ᴘʀᴏxɪᴍᴏs.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_purple>"
+  - ""
+  - "<gray>sᴇʀᴠᴏs:<dark_purple>{minion_count}</dark_purple>"
+  - "<gray>ᴠɪᴅᴀ ᴅᴏs sᴇʀᴠᴏs:<red>{minion_health}</red>"
+  - "<gray>ᴅᴀɴᴏ ᴅᴏs sᴇʀᴠᴏs:<red>{minion_damage}</red>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<dark_purple>{duration}s</dark_purple>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ᴄᴏɴᴊᴜʀᴀᴄᴀᴏ:<red>2.5s</red>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɴᴇᴄʀᴏᴍᴀɴᴛᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>15</yellow>"
+
+variables:
+  minion_count:
+    base: 3.0
+    per-level: 1.0
+  minion_health:
+    base: 15.0
+    per-level: 4.0
+  minion_damage:
+    base: 4.0
+    per-level: 1.5
+  duration:
+    base: 20.0
+    per-level: 1.0
+
+milestones:
+  3:
+    visual: "army_of_dead_horde"
+    mechanic-override: "ExercitoDosMortosMk2"
+    stat-bonus:
+      intelligence: 2.0
+  5:
+    visual: "army_of_dead_legion"
+    mechanic-override: "ExercitoDosMortosMk3"
+    stat-bonus:
+      intelligence: 3.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 8
+
+sounds:
+  cast-start:
+    sound: "entity.wither.spawn"
+    volume: 1.0
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.zombie.ambient"
+    volume: 1.0
+    pitch: 0.5
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

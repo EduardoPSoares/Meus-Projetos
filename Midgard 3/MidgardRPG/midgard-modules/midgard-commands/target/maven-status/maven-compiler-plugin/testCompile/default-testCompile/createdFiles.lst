@@ -1,0 +1,8 @@
+me\ray\midgard\modules\commands\admin\CommandsAdminCommandTest.class
+me\ray\midgard\modules\commands\validator\ValidationIssueTest.class
+me\ray\midgard\modules\commands\registry\CentralCommandRegistryTest$IntegrationScenarios.class
+me\ray\midgard\modules\commands\registry\CentralCommandRegistryTest.class
+me\ray\midgard\modules\commands\validator\CommandValidatorTest.class
+me\ray\midgard\modules\commands\registry\CommandDescriptorTest$CommandSourceTest.class
+me\ray\midgard\modules\commands\registry\CommandDescriptorTest.class
+me\ray\midgard\modules\commands\validator\ValidationIssueTest$SeverityEnumTest.class

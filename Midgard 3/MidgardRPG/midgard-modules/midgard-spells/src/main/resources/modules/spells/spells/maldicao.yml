@@ -1,0 +1,82 @@
+name: "<dark_purple>ᴍᴀʟᴅɪᴄᴀᴏ</dark_purple>"
+mythic-skill: "Maldicao"
+spell-type: COMMON
+
+cooldown:
+  base: 8.0
+  per-level: -0.2
+mana:
+  base: 20.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Necromante"
+  level: 5
+
+icon:
+  material: FERMENTED_SPIDER_EYE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴏ ɴᴇᴄʀᴏᴍᴀɴᴛᴇ ʟᴀɴᴄᴀ ᴜᴍᴀ ᴍᴀʟᴅɪᴄᴀᴏ</gray>"
+  - "<gray>sᴏʙʀᴇ ᴏ ɪɴɪᴍɪɢᴏ, ᴇɴꜰʀᴀǫᴜᴇᴄᴇɴᴅᴏ</gray>"
+  - "<gray>sᴇᴜs ᴀᴛʀɪʙᴜᴛᴏs ᴇ ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ꜰʀᴀǫᴜᴇᴢᴀ:<dark_purple>{weakness_duration}s</dark_purple>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɴᴇᴄʀᴏᴍᴀɴᴛᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  damage:
+    base: 8.0
+    per-level: 2.5
+  weakness_duration:
+    base: 3.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "curse_shadow"
+    mechanic-override: "MaldicaoMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "curse_damnation"
+    mechanic-override: "MaldicaoMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.evoker.prepare_attack"
+    volume: 0.8
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.evoker.cast_spell"
+    volume: 0.8
+    pitch: 0.8
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

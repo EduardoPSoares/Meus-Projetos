@@ -1,0 +1,53 @@
+# ==============================================================================
+# EXEMPLO DE MOB AVANÇADO (MIDGARD RPG)
+# ==============================================================================
+# Este arquivo demonstra o uso de mecânicas avançadas de integração:
+# 1. Equipamento Customizado (midgard-equip)
+# 2. Atributos Customizados (midgard-set-attribute)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Paladino Corrompido
+# Este mob usa uma espada customizada do Midgard e tem defesa extra.
+# ------------------------------------------------------------------------------
+CorruptedPaladin:
+  Type: ZOMBIE
+  Display: '<dark_red>Paladino Corrompido'
+  Health: 500
+  Damage: 10
+  Options:
+    MovementSpeed: 0.25
+  Skills:
+  # Equipa a espada 'EXCALIBUR' (deve existir não item/weapons/) na mão principal
+  - midgard-equip{item=EXCALIBUR;slot=HAND;dropchance=0.1} @self ~onSpawn
+  
+  # Define 150 de Defesa (reduz dano recebido)
+  - midgard-set-attribute{attr=DEFENSE;val=150} @self ~onSpawn
+  
+  # Define 50 de Penetração de Armadura (ignora defesa do jogador)
+  - midgard-set-attribute{attr=ARMOR_PENETRATION;val=50} @self ~onSpawn
+  
+  # Buff Temporário: Aumenta a força em 100 por 5 segundos quando atacado
+  - midgard-set-attribute{attr=STRENGTH;val=100;mode=ADD} @self ~onDamaged =10% 
+  - delay 100
+  - midgard-set-attribute{attr=STRENGTH;val=100;mode=SUBTRACT} @self ~onDamaged =10%
+
+# ------------------------------------------------------------------------------
+# 2. Assassino das Sombras
+# Foca em Crítico e Esquiva
+# ------------------------------------------------------------------------------
+ShadowAssassin:
+  Type: WITHER_SKELETON
+  Display: '<dark_gray>Assassino das Sombras'
+  Health: 200
+  Skills:
+  - midgard-equip{item=SHADOW_DAGGER;slot=HAND} @self ~onSpawn
+  
+  # 30% de chance de esquivar de ataques
+  - midgard-set-attribute{attr=DODGE_RATING;val=30} @self ~onSpawn
+  
+  # 50% de chance de crítico
+  - midgard-set-attribute{attr=CRITICAL_CHANCE;val=50} @self ~onSpawn
+  
+  # 200% de dano crítico
+  - midgard-set-attribute{attr=CRITICAL_DAMAGE;val=200} @self ~onSpawn

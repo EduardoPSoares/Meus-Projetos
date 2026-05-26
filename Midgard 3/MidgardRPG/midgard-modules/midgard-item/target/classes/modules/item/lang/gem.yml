@@ -1,0 +1,24 @@
+# ============================================
+# MIDGARD ITEM - GEMAS
+# ============================================
+# Padr�o V2.0 - Oficial
+# ============================================
+
+
+# ============================================
+# MENSAGENS DE GEMAS
+# ============================================
+gems:
+  # Sucesso
+  applied_success: "<green>✔ <white>ɢᴇᴍᴀ ᴀᴘʟɪᴄᴀᴅᴀ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ!"
+  removed_success: "<green>✔ <white>ɢᴇᴍᴀ ʀᴇᴍᴏᴠɪᴅᴀ ᴅᴏ ɪᴛᴇᴍ."
+  
+  # Erros
+  no_slots: "<gray>• <gray>ᴇꜱᴛᴇ ɪᴛᴇᴍ ɴᴀᴏ ᴘᴏꜱꜱᴜɪ ꜱʟᴏᴛꜱ ᴅᴇ ɢᴇᴍᴀ."
+  slots_full: "<gray>• <gray>ᴛᴏᴅᴏꜱ ᴏꜱ ꜱʟᴏᴛꜱ ᴅᴇ ɢᴇᴍᴀ ᴇꜱᴛ�ᴏ ᴏᴄᴜᴘᴀᴅᴏꜱ."
+  invalid_gem: "<red>✖ <gray>ᴇꜱᴛᴀ ɢᴇᴍᴀ ɴᴀᴏ ᴇ ᴄᴏᴍᴘᴀᴛ�ᴠᴇʟ ᴄᴏᴍ ᴏ ɪᴛᴇᴍ."
+  incompatible_type: "<yellow>✎ <gray>ᴛɪᴘᴏ ᴅᴇ ɢᴇᴍᴀ ɪɴᴄᴏᴍᴘᴀᴛ�ᴠᴇʟ ᴄᴏᴍ ᴇꜱᴛᴇ ꜱʟᴏᴛ."
+  
+  # Informa��o
+  slots_available: "<gray>ꜱʟᴏᴛꜱ ᴅɪꜱᴘᴏɴɪᴠᴇɪꜱ: <yellow>%available%<gray>/<white>%total%"
+  gem_info: "<aqua>♦ <white>%gem_name% <gray>- %description%"

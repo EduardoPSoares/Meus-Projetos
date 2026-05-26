@@ -1,0 +1,74 @@
+name: "<red>ꜰᴜʀɪᴀ ɢᴜᴇʀʀᴇɪʀᴀ</red>"
+mythic-skill: "FuriaGuerreira"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guerreiro"
+  level: 1
+
+icon:
+  material: BLAZE_POWDER
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<red><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></red>"
+  - ""
+  - "<gray>ᴀ ꜰᴜʀɪᴀ ɪɴᴛᴇʀɪᴏʀ ᴅᴏ ɢᴜᴇʀʀᴇɪʀᴏ</gray>"
+  - "<gray>ᴀᴜᴍᴇɴᴛᴀ sᴜᴀ ꜰᴏʀᴄᴀ ᴅᴇ ᴀᴛᴀǫᴜᴇ</gray>"
+  - "<gray>ᴘᴀssɪᴠᴀᴍᴇɴᴛᴇ.</gray>"
+  - ""
+  - "<red><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></red>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ꜰᴏʀᴄᴀ:<red>{strength_bonus}</red>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  strength_bonus:
+    base: 3.0
+    per-level: 1.5
+
+milestones:
+  3:
+    visual: "fury_aura"
+    mechanic-override: "FuriaGuerreiraMk2"
+    stat-bonus:
+      strength: 1.0
+  5:
+    visual: "fury_blaze"
+    mechanic-override: "FuriaGuerreiraMk3"
+    stat-bonus:
+      strength: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 5
+
+sounds:
+  cast-start:
+    sound: "entity.blaze.ambient"
+    volume: 0.6
+    pitch: 1.0
+  cast-finish:
+    sound: "entity.blaze.shoot"
+    volume: 0.5
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

@@ -1,0 +1,93 @@
+TestDummyMax:
+  Type: ZOMBIE
+  Display: '<gold>Test Dummy Max Stats'
+  Health: 200
+  Damage: 10
+  Options:
+    MovementSpeed: 0.1
+    PreventOtherDrops: true
+  Skills:
+  # Core Stats
+  - midgard-set-attribute{id=max_health;val=200} @self ~onSpawn
+  - midgard-set-attribute{id=health_regen;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=max_mana;val=150} @self ~onSpawn
+  - midgard-set-attribute{id=mana_regen;val=5} @self ~onSpawn
+  - midgard-set-attribute{id=max_stamina;val=120} @self ~onSpawn
+  - midgard-set-attribute{id=stamina_regen;val=8} @self ~onSpawn
+  
+  # Primary Stats
+  - midgard-set-attribute{id=strength;val=50} @self ~onSpawn
+  - midgard-set-attribute{id=intelligence;val=45} @self ~onSpawn
+  - midgard-set-attribute{id=dexterity;val=40} @self ~onSpawn
+  - midgard-set-attribute{id=defense;val=100} @self ~onSpawn
+  
+  # Offensive Stats
+  - midgard-set-attribute{id=physical_damage;val=25} @self ~onSpawn
+  - midgard-set-attribute{id=magic_damage;val=30} @self ~onSpawn
+  - midgard-set-attribute{id=critical_chance;val=15} @self ~onSpawn
+  - midgard-set-attribute{id=critical_damage;val=150} @self ~onSpawn
+  - midgard-set-attribute{id=armor_penetration;val=20} @self ~onSpawn
+  - midgard-set-attribute{id=armor_penetration_flat;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=magic_penetration;val=15} @self ~onSpawn
+  - midgard-set-attribute{id=magic_penetration_flat;val=5} @self ~onSpawn
+  - midgard-set-attribute{id=accuracy;val=95} @self ~onSpawn
+  - midgard-set-attribute{id=attack_speed;val=1.2} @self ~onSpawn
+  - midgard-set-attribute{id=weapon_damage;val=50} @self ~onSpawn
+  - midgard-set-attribute{id=skill_damage;val=40} @self ~onSpawn
+  - midgard-set-attribute{id=projectile_damage;val=35} @self ~onSpawn
+  - midgard-set-attribute{id=undead_damage;val=20} @self ~onSpawn
+  - midgard-set-attribute{id=skill_critical_chance;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=skill_critical_damage;val=140} @self ~onSpawn
+  
+  # Defensive Stats
+  - midgard-set-attribute{id=armor;val=80} @self ~onSpawn
+  - midgard-set-attribute{id=armor_toughness;val=4} @self ~onSpawn
+  - midgard-set-attribute{id=magic_resistance;val=30} @self ~onSpawn
+  - midgard-set-attribute{id=critical_resistance;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=block_power;val=25} @self ~onSpawn
+  - midgard-set-attribute{id=block_rating;val=15} @self ~onSpawn
+  - midgard-set-attribute{id=dodge_rating;val=12} @self ~onSpawn
+  - midgard-set-attribute{id=parry_rating;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=damage_reduction;val=5} @self ~onSpawn
+  - midgard-set-attribute{id=fall_damage_reduction;val=50} @self ~onSpawn
+  - midgard-set-attribute{id=projectile_damage_reduction;val=15} @self ~onSpawn
+  - midgard-set-attribute{id=physical_damage_reduction;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=magic_damage_reduction;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=pve_damage_reduction;val=5} @self ~onSpawn
+  - midgard-set-attribute{id=pvp_damage_reduction;val=5} @self ~onSpawn
+  - midgard-set-attribute{id=knockback_resistance;val=0.5} @self ~onSpawn
+  - midgard-set-attribute{id=thorns;val=15} @self ~onSpawn
+  
+  # Utility Stats
+  - midgard-set-attribute{id=speed;val=110} @self ~onSpawn
+  - midgard-set-attribute{id=luck;val=20} @self ~onSpawn
+  - midgard-set-attribute{id=cooldown_reduction;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=life_steal;val=5} @self ~onSpawn
+  - midgard-set-attribute{id=spell_vampirism;val=5} @self ~onSpawn
+  - midgard-set-attribute{id=block_cooldown_reduction;val=5} @self ~onSpawn
+  - midgard-set-attribute{id=dodge_cooldown_reduction;val=5} @self ~onSpawn
+  - midgard-set-attribute{id=parry_cooldown_reduction;val=5} @self ~onSpawn
+  
+  # Regen Amps & Max Limits
+  - midgard-set-attribute{id=health_regen_amp;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=mana_regen_amp;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=stamina_regen_amp;val=10} @self ~onSpawn
+  - midgard-set-attribute{id=max_health_regen;val=100} @self ~onSpawn
+  - midgard-set-attribute{id=max_mana_regen;val=50} @self ~onSpawn
+  - midgard-set-attribute{id=max_stamina_regen;val=50} @self ~onSpawn
+  - midgard-set-attribute{id=max_stellium;val=100} @self ~onSpawn
+  - midgard-set-attribute{id=max_absorption;val=50} @self ~onSpawn
+  
+  # Elemental Damage
+  - midgard-set-attribute{id=fire_damage;val=20} @self ~onSpawn
+  - midgard-set-attribute{id=ice_damage;val=20} @self ~onSpawn
+  - midgard-set-attribute{id=light_damage;val=20} @self ~onSpawn
+  - midgard-set-attribute{id=darkness_damage;val=20} @self ~onSpawn
+  - midgard-set-attribute{id=divine_damage;val=20} @self ~onSpawn
+  
+  # Elemental Defense
+  - midgard-set-attribute{id=fire_defense;val=15} @self ~onSpawn
+  - midgard-set-attribute{id=ice_defense;val=15} @self ~onSpawn
+  - midgard-set-attribute{id=light_defense;val=15} @self ~onSpawn
+  - midgard-set-attribute{id=darkness_defense;val=15} @self ~onSpawn
+  - midgard-set-attribute{id=divine_defense;val=15} @self ~onSpawn

@@ -1,0 +1,42 @@
+teleport:
+  success: "<green>✔</green> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀᴅᴏ ᴘᴀʀᴀ <aqua>%target%</aqua><gray>.</gray>"
+  warmup: "<yellow>⚠</yellow> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀɴᴅᴏ ᴇᴍ <gold>%time%s</gold><gray>...</gray>"
+home:
+  set: "<green>✔</green> <gray>ʜᴏᴍᴇ <gold>%home%</gold> <gray>ᴅᴇꜰɪɴɪᴅᴀ.</gray>"
+  deleted: "<yellow>⚠</yellow> <gray>ʜᴏᴍᴇ <gold>%home%</gold> <gray>ʀᴇᴍᴏᴠɪᴅᴀ.</gray>"
+  not-found: "<red>✖</red> <gray>ʜᴏᴍᴇ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ.</gray>"
+  teleport: "<aqua>ℹ</aqua> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀᴅᴏ ᴘᴀʀᴀ sᴜᴀ ʜᴏᴍᴇ <gold>%home%</gold><gray>.</gray>"
+  list: "<aqua>sᴜᴀs ᴍᴏʀᴀᴅɪᴀs:</aqua> <gray>%homes%</gray>"
+  limit: "<red>✖</red> <gray>ʟɪᴍɪᴛᴇ ᴅᴇ ʜᴏᴍᴇs ᴀᴛɪɴɢɪᴅᴏ: <gold>%limit%</gold><gray>.</gray>"
+warp:
+  set: "<green>✔</green> <gray>ᴡᴀʀᴘ <gold>%warp%</gold> <gray>ᴅᴇꜰɪɴɪᴅᴀ.</gray>"
+  deleted: "<yellow>⚠</yellow> <gray>ᴡᴀʀᴘ <gold>%warp%</gold> <gray>ʀᴇᴍᴏᴠɪᴅᴀ.</gray>"
+  not-found: "<red>✖</red> <gray>ᴡᴀʀᴘ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ.</gray>"
+  teleport: "<aqua>ℹ</aqua> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀᴅᴏ ᴘᴀʀᴀ ᴡᴀʀᴘ <gold>%warp%</gold><gray>.</gray>"
+  list: "<aqua>ʟᴏᴄᴀɪs ᴅᴇ ᴛᴇʟᴇᴘᴏʀᴛᴇ:</aqua> <gray>%warps%</gray>"
+gamemode:
+  changed: "<green>✔</green> <gray>ᴍᴏᴅᴏ ᴅᴇ ᴊᴏɢᴏ ᴀʟᴛᴇʀᴀᴅᴏ ᴘᴀʀᴀ <gold>%gamemode%</gold><gray>.</gray>"
+  changed-other: "<green>✔</green> <gray>ᴍᴏᴅᴏ ᴅᴇ <aqua>%player%</aqua> <gray>ᴀʟᴛᴇʀᴀᴅᴏ ᴘᴀʀᴀ <gold>%gamemode%</gold><gray>.</gray>"
+heal: "<green>✔</green> <gray>sᴜᴀ ᴠɪᴅᴀ ꜰᴏɪ ʀᴇsᴛᴀᴜʀᴀᴅᴀ.</gray>"
+heal-other: "<green>✔</green> <gray>ᴠᴏᴄᴇ ᴄᴜʀᴏᴜ <aqua>%player%</aqua><gray>.</gray>"
+feed: "<green>✔</green> <gray>sᴜᴀ ꜰᴏᴍᴇ ꜰᴏɪ sᴀᴄɪᴀᴅᴀ.</gray>"
+feed-other: "<green>✔</green> <gray>ᴠᴏᴄᴇ sᴀᴄɪᴏᴜ ᴀ ꜰᴏᴍᴇ ᴅᴇ <aqua>%player%</aqua><gray>.</gray>"
+fly:
+  enabled: "<green>✔</green> <gray>ᴠᴏᴏ ʜᴀʙɪʟɪᴛᴀᴅᴏ.</gray>"
+  disabled: "<yellow>⚠</yellow> <gray>ᴠᴏᴏ ᴅᴇsᴀʙɪʟɪᴛᴀᴅᴏ.</gray>"
+  enabled-other: "<green>✔</green> <gray>ᴠᴏᴏ ʜᴀʙɪʟɪᴛᴀᴅᴏ ᴘᴀʀᴀ <aqua>%player%</aqua><gray>.</gray>"
+  disabled-other: "<yellow>⚠</yellow> <gray>ᴠᴏᴏ ᴅᴇsᴀʙɪʟɪᴛᴀᴅᴏ ᴘᴀʀᴀ <aqua>%player%</aqua><gray>.</gray>"
+spawn:
+  set: "<green>✔</green> <gray>sᴘᴀᴡɴ ᴅᴇꜰɪɴɪᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ.</gray>"
+  teleport: "<aqua>ℹ</aqua> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀᴅᴏ ᴘᴀʀᴀ ᴏ sᴘᴀᴡɴ.</gray>"
+  not-set: "<red>✖</red> <gray>sᴘᴀᴡɴ ɴᴀᴏ ᴅᴇꜰɪɴɪᴅᴏ.</gray>"
+tpa:
+  sent: "<green>✔</green> <gray>sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ᴇɴᴠɪᴀᴅᴀ ᴘᴀʀᴀ <aqua>%player%</aqua><gray>.</gray>"
+  received: "<aqua>%player%</aqua> <gray>ᴅᴇsᴇᴊᴀ sᴇ ᴛᴇʟᴇᴘᴏʀᴛᴀʀ ᴀᴛᴇ ᴠᴏᴄᴇ.</gray>\n<dark_gray><i>ᴜsᴇ <green>/ᴛᴘᴀᴄᴄᴇᴘᴛ</green> ᴘᴀʀᴀ ʀᴇsᴘᴏɴᴅᴇʀ.</i></dark_gray>"
+  accepted: "<green>✔</green> <gray>sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ᴅᴇ ᴛᴇʟᴇᴘᴏʀᴛᴇ ᴀᴄᴇɪᴛᴀ.</gray>"
+  denied: "<red>✖</red> <gray>sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ᴅᴇ ᴛᴇʟᴇᴘᴏʀᴛᴇ ɴᴇɢᴀᴅᴀ.</gray>"
+  no-request: "<red>✖</red> <gray>sᴇᴍ sᴏʟɪᴄɪᴛᴀᴄᴏᴇs ᴘᴇɴᴅᴇɴᴛᴇs.</gray>"
+  expired: "<yellow>⚠</yellow> <gray>sᴜᴀ sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ᴅᴇ ᴛᴇʟᴇᴘᴏʀᴛᴇ ᴇxᴘɪʀᴏᴜ.</gray>"
+  teleporting: "<aqua>ℹ</aqua> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀɴᴅᴏ...</gray>"
+  self: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴇɴᴠɪᴀʀ ᴘᴀʀᴀ sɪ ᴍᴇsᴍᴏ.</gray>"
+  already-sent: "<red>✖</red> <gray>ᴠᴏᴄᴇ ᴊᴀ ᴇɴᴠɪᴏᴜ ᴜᴍᴀ sᴏʟɪᴄɪᴛᴀᴄᴀᴏ. ᴀɢᴜᴀʀᴅᴇ.</gray>"

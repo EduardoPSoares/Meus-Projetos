@@ -1,0 +1,50 @@
+# ==============================================================================
+# EXEMPLO DE MOB COM INTEGRAÇíO DE DANO ELEMENTAL (MIDGARD RPG)
+# ==============================================================================
+# Este arquivo demonstra como criar mobs que causam danos elementais específicos
+# que são reconhecidos pelo sistema de defesa do MidgardRPG.
+#
+# Mecânica:
+# 1. Tags: O plugin verifica as "Scoreboard Tags" do atacante.
+#    Formato da Tag: midgard.damage.<elemento>
+#    Exemplo: midgard.damage.fire, midgard.damage.ice, midgard.damage.poison
+#
+# 2. Skills: Use a skill 'midgarddamage' para controle total (Elemento + Tipo).
+#    Exemplo: - midgarddamage{amount=10;element=FIRE;type=MAGICAL} @target
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Mob de Fogo (Ataque Melee)
+# Todo ataque corpo-a-corpo deste mob será considerado dano de FOGO.
+# ------------------------------------------------------------------------------
+FireDemon:
+  Type: ZOMBIFIED_PIGLIN
+  Display: '<red>Demônio de Fogo'
+  Health: 200
+  Damage: 15
+  Equipment:
+  - GOLDEN_SWORD HAND
+  Tags:
+  - midgard.damage.fire  # <--- Esta tag define o elemento dos ataques básicos
+  Options:
+    MovementSpeed: 0.3
+  Skills:
+  - message{m="<red>[FireDemon] <white>Sinta o calor!"} @PlayersInRadius{r=10} ~onCombatEnter
+  # Exemplo de skill de dano mágico direto
+  - midgarddamage{amount=20;element=FIRE;type=MAGICAL} @target ~onTimer:100
+
+# ------------------------------------------------------------------------------
+# 2. Mago de Gelo (Ataque à Distância / Projétil)
+# Este mob usa uma skill que lança um projétil. O projétil recebe a tag de GELO.
+# ------------------------------------------------------------------------------
+IceMage:
+  Type: STRAY
+  Display: '<aqua>Mago de Gelo'
+  Health: 150
+  Damage: 5
+  Tags:
+  - midgard.damage.physical # Ataques básicos (se houver) serão físicos
+  Options:
+    MovementSpeed: 0.2
+  Skills:
+  - skill{s=IceBolt} @target ~onTimer:40

@@ -1,0 +1,74 @@
+name: "<aqua>ꜰʟᴜxᴏ ᴅᴇ ᴍᴀɴᴀ</aqua>"
+mythic-skill: "FluxoDeMana"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Mago"
+  level: 5
+
+icon:
+  material: LAPIS_LAZULI
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<aqua><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></aqua>"
+  - ""
+  - "<gray>ᴏ ᴍᴀɢᴏ ᴄᴀɴᴀʟɪᴢᴀ ᴏ ꜰʟᴜxᴏ ᴅᴇ ᴍᴀɴᴀ</gray>"
+  - "<gray>ᴇᴍ sᴇᴜ ᴄᴏʀᴘᴏ, ᴀᴜᴍᴇɴᴛᴀɴᴅᴏ ᴀ</gray>"
+  - "<gray>ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ ᴅᴇ ᴍᴀɴᴀ ᴘᴀssɪᴠᴀᴍᴇɴᴛᴇ.</gray>"
+  - ""
+  - "<aqua><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></aqua>"
+  - ""
+  - "<gray>ʀᴇɢᴇɴ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana_regen}</aqua>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴀɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  mana_regen:
+    base: 1.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "mana_flow_particles"
+    mechanic-override: "FluxoDeManaMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "mana_flow_surge"
+    mechanic-override: "FluxoDeManaMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "block.beacon.ambient"
+    volume: 0.6
+    pitch: 1.2
+  cast-finish:
+    sound: "block.beacon.activate"
+    volume: 0.5
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

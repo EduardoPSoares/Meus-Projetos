@@ -1,0 +1,79 @@
+name: "<blue>ʙʟᴏǫᴜᴇᴀʀ</blue>"
+mythic-skill: "Bloquear"
+spell-type: COMMON
+
+cooldown:
+  base: 5.0
+  per-level: -0.2
+mana:
+  base: 12.0
+  per-level: -0.3
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guardiao"
+  level: 1
+
+icon:
+  material: SHIELD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<blue><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></blue>"
+  - ""
+  - "<gray>ᴇʀɢᴜᴇ ᴏ ᴇsᴄᴜᴅᴏ ᴇ ʙʟᴏǫᴜᴇɪᴀ</gray>"
+  - "<gray>ᴏ ᴘʀᴏxɪᴍᴏ ᴀᴛᴀǫᴜᴇ ɪɴɪᴍɪɢᴏ,</gray>"
+  - "<gray>ᴀʙsᴏʀᴠᴇɴᴅᴏ ᴏ ᴅᴀɴᴏ.</gray>"
+  - ""
+  - "<blue><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></blue>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ ʙʟᴏǫᴜᴇᴀᴅᴏ:<blue>{damage_blocked}</blue>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<blue>ɢᴜᴀʀᴅɪᴀᴏ</blue>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  damage_blocked:
+    base: 10.0
+    per-level: 3.0
+
+milestones:
+  3:
+    visual: "shield_glow"
+    mechanic-override: "BloquearMk2"
+    stat-bonus:
+      defense: 1.0
+  5:
+    visual: "shield_radiance"
+    mechanic-override: "BloquearMk3"
+    stat-bonus:
+      defense: 2.0
+
+mastery:
+  attribute-bonus:
+    defense: 5
+
+sounds:
+  cast-start:
+    sound: "item.shield.block"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "item.shield.block"
+    volume: 1.0
+    pitch: 1.2
+  cast-fail:
+    sound: "item.shield.break"
+    volume: 0.5
+    pitch: 0.8

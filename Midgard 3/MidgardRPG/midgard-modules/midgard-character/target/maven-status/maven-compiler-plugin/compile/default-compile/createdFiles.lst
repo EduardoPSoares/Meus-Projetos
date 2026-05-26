@@ -1,0 +1,7 @@
+me\ray\midgard\modules\character\CharacterModule.class
+me\ray\midgard\modules\character\gui\CharacterMenuHelper.class
+me\ray\midgard\modules\character\command\CharacterCommand.class
+me\ray\midgard\modules\character\i18n\CharacterMessages.class
+me\ray\midgard\modules\character\listener\HotbarListener.class
+me\ray\midgard\modules\character\gui\CharacterMenu.class
+me\ray\midgard\modules\character\gui\AttributeMenu.class

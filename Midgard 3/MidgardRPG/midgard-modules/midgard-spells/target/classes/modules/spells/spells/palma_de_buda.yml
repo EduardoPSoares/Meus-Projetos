@@ -1,0 +1,79 @@
+name: "<gold>ᴘᴀʟᴍᴀ ᴅᴇ ʙᴜᴅᴀ</gold>"
+mythic-skill: "PalmaDeBuda"
+spell-type: COMMON
+
+cooldown:
+  base: 10.0
+  per-level: -0.3
+mana:
+  base: 15.0
+  per-level: -0.4
+stamina: 20.0
+
+max-level: 10
+
+requirements:
+  class: "Monge"
+  level: 5
+
+icon:
+  material: GOLD_INGOT
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></gold>"
+  - ""
+  - "<gray>ᴅᴇsꜰᴇʀᴇ ᴜᴍ ɢᴏʟᴘᴇ ᴅᴇ ᴘᴀʟᴍᴀ ᴀʙᴇʀᴛᴀ</gray>"
+  - "<gray>ᴄᴀʀʀᴇɢᴀᴅᴏ ᴄᴏᴍ ᴇɴᴇʀɢɪᴀ ᴅᴇ ᴄʜɪ, ǫᴜᴇ</gray>"
+  - "<gray>ᴀᴛᴏʀᴅᴏᴀ ᴇ ᴅᴀɴɪꜰɪᴄᴀ ᴏ ɪɴɪᴍɪɢᴏ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴏɴɢᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  damage:
+    base: 18.0
+    per-level: 4.5
+
+milestones:
+  3:
+    visual: "palma_buda_chi"
+    mechanic-override: "PalmaDeBudaMk2"
+    stat-bonus:
+      strength: 1.0
+  5:
+    visual: "palma_buda_shockwave"
+    mechanic-override: "PalmaDeBudaMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 3
+    dexterity: 2
+
+sounds:
+  cast-start:
+    sound: "entity.player.attack.knockback"
+    volume: 1.0
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.generic.explode"
+    volume: 0.6
+    pitch: 1.4
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

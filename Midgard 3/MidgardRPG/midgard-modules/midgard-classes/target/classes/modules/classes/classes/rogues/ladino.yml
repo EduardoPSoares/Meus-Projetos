@@ -1,0 +1,62 @@
+display-name: '<dark_gray>ʟᴀᴅɪɴᴏ</dark_gray>'
+icon: IRON_NUGGET
+lore:
+  - '<gray>ᴛɪᴘᴏ:<dark_gray><bold>ᴀssᴀssɪɴᴏ</bold></dark_gray>'
+  - ''
+  - '<gray>ʟᴀᴅɪɴᴏs sᴀᴏ ᴀssᴀssɪɴᴏs ꜰᴜʀᴛɪᴠᴏs,</gray>'
+  - '<gray>ᴀᴛᴀᴄᴀɴᴅᴏ ᴅᴀs sᴏᴍʙʀᴀs ᴄᴏᴍ ɢᴏʟᴘᴇs</gray>'
+  - '<gray>ʀᴀᴘɪᴅᴏs ᴇ ʟᴇᴛᴀɪs.</gray>'
+  - ''
+  - '<yellow><bold>✦ ᴇsᴛɪʟᴏ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ ✦</bold></yellow>'
+  - ''
+  - '<gray>• ᴅᴀɴᴏ:<dark_red>ᴍᴜɪᴛᴏ ᴀʟᴛᴏ</dark_red>'
+  - '<gray>• ᴅᴇꜰᴇsᴀ:<red>ʙᴀɪxᴀ</red>'
+  - '<gray>• ᴀʟᴄᴀɴᴄᴇ:<yellow>ʙᴀɪxᴏ</yellow>'
+attributes:
+  base:
+    strength: 5
+    defense: 3
+    vitality: 5
+    intelligence: 3
+    dexterity: 13
+  per-level:
+    dexterity: 2.5
+    strength: 0.5
+    vitality: 0.5
+health:
+  base: 17
+  per-level: 4
+mana:
+  base: 12
+  per-level: 3
+skills:
+  SOMBRAS_FURTIVAS:
+    level: 1
+    type: passive
+  GOLPE_CRITICO:
+    level: 5
+    type: passive
+  PUNHALADA:
+    level: 1
+    type: active
+  EVASAO:
+    level: 3
+    type: active
+  VENENO_MORTAL:
+    level: 5
+    type: active
+  EMBOSCADA:
+    level: 8
+    type: active
+  PASSO_SOMBRIO:
+    level: 10
+    type: active
+  CORTE_PROFUNDO:
+    level: 12
+    type: active
+  ASSASSINATO:
+    level: 15
+    type: ultimate
+  DANCA_DAS_LAMINAS:
+    level: 20
+    type: ultimate

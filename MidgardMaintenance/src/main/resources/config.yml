@@ -1,0 +1,13 @@
+# Configuração do MidgardMaintenance
+
+# Configuração de Auto-Update
+update:
+  enabled: true
+  check-interval: 60 # Minutos
+  github-token: "" # Token do GitHub (opcional)
+
+messages:
+  admin-bypass: "&aᴍᴏᴅᴏ ᴍᴀɴᴜᴛᴇɴçãᴏ ɪɴɪᴄɪᴀᴅᴏ. ᴠᴏᴄê ᴘᴇʀᴍᴀɴᴇᴄᴇᴜ ɴᴏ sᴇʀᴠɪᴅᴏʀ."
+  maintenance-title: "&c&lᴍᴀɴᴜᴛᴇɴçãᴏ"
+  maintenance-subtitle: "&eᴇɴᴠɪᴀɴᴅᴏ ᴘᴀʀᴀ ᴏ ʟᴏʙʙʏ..."
+  kick-message: "&7ᴏ sᴇʀᴠɪᴅᴏʀ ᴇsᴛá ᴇɴᴛʀᴀɴᴅᴏ ᴇᴍ ᴍᴀɴᴜᴛᴇɴçãᴏ.\n&8ᴀɢᴜᴀʀᴅᴇ ᴀʟɢᴜɴs ɪɴsᴛᴀɴᴛᴇs."

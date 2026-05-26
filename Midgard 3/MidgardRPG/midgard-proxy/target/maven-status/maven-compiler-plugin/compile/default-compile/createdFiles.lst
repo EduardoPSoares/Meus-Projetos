@@ -1,0 +1,13 @@
+me\ray\midgard\proxy\manager\GlobalChatManager.class
+velocity-plugin.json
+me\ray\midgard\proxy\command\ReloadCommand.class
+me\ray\midgard\proxy\config\ConfigManager.class
+me\ray\midgard\proxy\listener\SecurityListener.class
+me\ray\midgard\proxy\redis\RedisCredentials.class
+me\ray\midgard\proxy\redis\ProxyRedisManager.class
+me\ray\midgard\proxy\command\GlobalChatCommand.class
+me\ray\midgard\proxy\manager\SessionManager.class
+me\ray\midgard\proxy\manager\GlobalChatManager$1.class
+me\ray\midgard\proxy\command\LobbyCommand.class
+me\ray\midgard\proxy\manager\SessionManager$1.class
+me\ray\midgard\proxy\MidgardProxy.class

@@ -1,0 +1,83 @@
+name: "<blue>ᴘʀᴏᴛᴇɢᴇʀ ᴀʟɪᴀᴅᴏ</blue>"
+mythic-skill: "ProtegerAliado"
+spell-type: COMMON
+
+cooldown:
+  base: 12.0
+  per-level: -0.3
+mana:
+  base: 20.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guardiao"
+  level: 3
+
+icon:
+  material: GOLDEN_HELMET
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<blue><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></blue>"
+  - ""
+  - "<gray>ᴘʀᴏᴛᴇɢᴇ ᴜᴍ ᴀʟɪᴀᴅᴏ ᴘʀᴏxɪᴍᴏ,</gray>"
+  - "<gray>ᴀʙsᴏʀᴠᴇɴᴅᴏ ᴘᴀʀᴛᴇ ᴅᴏ ᴅᴀɴᴏ</gray>"
+  - "<gray>ǫᴜᴇ ᴇʟᴇ ʀᴇᴄᴇʙᴇʀɪᴀ.</gray>"
+  - ""
+  - "<blue><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></blue>"
+  - ""
+  - "<gray>ᴀʙsᴏʀᴄᴀᴏ:<blue>{absorption}</blue>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<blue>{duration}s</blue>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<blue>ɢᴜᴀʀᴅɪᴀᴏ</blue>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>3</yellow>"
+
+variables:
+  absorption:
+    base: 8.0
+    per-level: 2.5
+  duration:
+    base: 5.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "protect_glow"
+    mechanic-override: "ProtegerAliadoMk2"
+    stat-bonus:
+      defense: 1.0
+  5:
+    visual: "protect_barrier"
+    mechanic-override: "ProtegerAliadoMk3"
+    stat-bonus:
+      defense: 2.0
+
+mastery:
+  attribute-bonus:
+    defense: 5
+
+sounds:
+  cast-start:
+    sound: "block.enchantment_table.use"
+    volume: 1.0
+    pitch: 1.2
+  cast-finish:
+    sound: "item.totem.use"
+    volume: 0.6
+    pitch: 1.4
+  cast-fail:
+    sound: "item.shield.break"
+    volume: 0.5
+    pitch: 0.8

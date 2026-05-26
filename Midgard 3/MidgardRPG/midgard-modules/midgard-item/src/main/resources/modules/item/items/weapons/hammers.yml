@@ -1,0 +1,157 @@
+martelo_ferro:
+  base:
+    material: IRON_SHOVEL
+    name: "<white>ᴍᴀʀᴛᴇʟᴏ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: HAMMER
+    description:
+    - "<gray>ᴜᴍ ᴍᴀʀᴛᴇʟᴏ ᴅᴇ ꜰᴇʀʀᴏ sᴏʟɪᴅᴏ,</gray>"
+    - "<gray>sᴇᴜs ɢᴏʟᴘᴇs ᴇᴄᴏᴀᴍ ᴄᴏᴍᴏ ᴛʀᴏᴠᴏᴇs.</gray>"
+    revision-id: 1
+    attack-damage: 7
+    strength: 3
+    defense: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_martelo_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_ferro"
+            1: "midgard:lingote_ferro"
+            2: "midgard:lingote_ferro"
+            4: "STICK"
+            7: "STICK"
+
+martelo_guerra:
+  base:
+    material: IRON_SHOVEL
+    name: "<green>ᴍᴀʀᴛᴇʟᴏ ᴅᴇ ɢᴜᴇʀʀᴀ</green>"
+    tier: UNCOMMON
+    type: HAMMER
+    description:
+    - "<gray>ꜰᴏʀᴊᴀᴅᴏ ᴘᴀʀᴀ ᴏ ᴄᴀᴍᴘᴏ ᴅᴇ ʙᴀᴛᴀʟʜᴀ,</gray>"
+    - "<gray>ᴇsᴍᴀɢᴀ ᴏssᴏs ᴇ ᴇsᴄᴜᴅᴏs ᴄᴏᴍ ɪɢᴜᴀʟ ꜰᴀᴄɪʟɪᴅᴀᴅᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 12
+    strength: 5
+    defense: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_martelo_guerra:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_aco"
+            1: "midgard:lingote_aco"
+            2: "midgard:lingote_aco"
+            4: "STICK"
+            7: "STICK"
+
+martelo_trovao:
+  base:
+    material: DIAMOND_SHOVEL
+    name: "<blue>ᴍᴀʀᴛᴇʟᴏ ᴅᴏ ᴛʀᴏᴠᴀᴏ</blue>"
+    tier: RARE
+    type: HAMMER
+    description:
+    - "<gray>ᴄᴀʀʀᴇɢᴀᴅᴏ ᴄᴏᴍ ᴀ ꜰᴜʀɪᴀ ᴅᴀs ᴛᴇᴍᴘᴇsᴛᴀᴅᴇs,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ɪᴍᴘᴀᴄᴛᴏ ᴅᴇsᴇɴᴄᴀᴅᴇɪᴀ ᴜᴍ ᴛʀᴏᴠᴀᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 20
+    strength: 8
+    defense: 5
+    critical-strike-power: 12
+    crafting:
+      enabled: true
+      recipes:
+        craft_martelo_trovao:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_mithril"
+            1: "midgard:lingote_mithril"
+            2: "midgard:lingote_mithril"
+            4: "midgard:cristal_arcano"
+            7: "STICK"
+
+mjolnir:
+  base:
+    material: NETHERITE_SHOVEL
+    name: "<gold>ᴍᴊᴏʟɴɪʀ</gold>"
+    tier: LEGENDARY
+    type: HAMMER
+    description:
+    - "<gray>ᴏ ᴍᴀʀᴛᴇʟᴏ ᴅᴏ ᴅᴇᴜs ᴅᴏ ᴛʀᴏᴠᴀᴏ,</gray>"
+    - "<gray>ᴅɪɢɴᴏ ᴀᴘᴇɴᴀs ᴅᴏs ᴍᴀɪs ᴠᴀʟᴏʀᴏsᴏs ɢᴜᴇʀʀᴇɪʀᴏs.</gray>"
+    revision-id: 1
+    attack-damage: 45
+    strength: 18
+    defense: 10
+    critical-strike-power: 25
+    light-damage: 18
+    max-health: 40
+    required-level: 52
+
+martelo_grande_ferro:
+  base:
+    material: IRON_SHOVEL
+    name: "<white>ᴍᴀʀᴛᴇʟᴏ ɢʀᴀɴᴅᴇ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: GREATHAMMER
+    description:
+    - "<gray>ᴜᴍ ᴍᴀʀᴛᴇʟᴏ ᴇɴᴏʀᴍᴇ ᴅᴇ ꜰᴇʀʀᴏ,</gray>"
+    - "<gray>ᴇxɪɢᴇ ᴅᴜᴀs ᴍᴀᴏs ᴇ ꜰᴏʀᴄᴀ ʙʀᴜᴛᴀʟ.</gray>"
+    revision-id: 1
+    attack-damage: 8
+    strength: 4
+    two-handed: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_martelo_grande_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_ferro"
+            1: "midgard:lingote_ferro"
+            2: "midgard:lingote_ferro"
+            3: "midgard:lingote_ferro"
+            5: "midgard:lingote_ferro"
+            7: "STICK"
+
+martelo_grande_titanio:
+  base:
+    material: DIAMOND_SHOVEL
+    name: "<blue>ᴍᴀʀᴛᴇʟᴏ ɢʀᴀɴᴅᴇ ᴅᴇ ᴛɪᴛᴀɴɪᴏ</blue>"
+    tier: RARE
+    type: GREATHAMMER
+    description:
+    - "<gray>ꜰᴏʀᴊᴀᴅᴏ ᴇᴍ ᴛɪᴛᴀɴɪᴏ ᴘᴜʀᴏ,</gray>"
+    - "<gray>ᴅᴇsᴛʀᴏɪ ᴛᴜᴅᴏ ᴇᴍ sᴇᴜ ᴄᴀᴍɪɴʜᴏ ᴄᴏᴍ ꜰᴏʀᴄᴀ ᴛɪᴛᴀɴɪᴄᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 22
+    strength: 9
+    defense: 6
+    critical-strike-power: 14
+    two-handed: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_martelo_grande_titanio:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_titanio"
+            1: "midgard:lingote_titanio"
+            2: "midgard:lingote_titanio"
+            3: "midgard:lingote_titanio"
+            5: "midgard:lingote_titanio"
+            7: "STICK"

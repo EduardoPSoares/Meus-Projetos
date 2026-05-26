@@ -1,0 +1,309 @@
+manopla_ferro:
+  base:
+    material: LEATHER_HELMET
+    name: "<white>ᴍᴀɴᴏᴘʟᴀ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: GAUNTLET
+    description:
+    - "<gray>ᴍᴀɴᴏᴘʟᴀs ᴅᴇ ꜰᴇʀʀᴏ ʀᴇꜰᴏʀᴄᴀᴅᴀs,</gray>"
+    - "<gray>ᴛʀᴀɴsꜰᴏʀᴍᴀᴍ ᴘᴜɴʜᴏs ᴇᴍ ᴀʀᴍᴀs ᴍᴏʀᴛᴀɪs.</gray>"
+    revision-id: 1
+    attack-damage: 5
+    strength: 2
+    attack-speed: 0.3
+    crafting:
+      enabled: true
+      recipes:
+        craft_manopla_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_ferro"
+            2: "midgard:lingote_ferro"
+            3: "LEATHER"
+            5: "LEATHER"
+
+manopla_titanio:
+  base:
+    material: LEATHER_HELMET
+    name: "<green>ᴍᴀɴᴏᴘʟᴀ ᴅᴇ ᴛɪᴛᴀɴɪᴏ</green>"
+    tier: UNCOMMON
+    type: GAUNTLET
+    description:
+    - "<gray>ᴍᴀɴᴏᴘʟᴀs ᴅᴇ ᴛɪᴛᴀɴɪᴏ ʟᴇᴠᴇ,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ɢᴏʟᴘᴇ ᴅʀᴇɴᴀ ᴀ ᴠɪᴛᴀʟɪᴅᴀᴅᴇ ᴅᴏ ɪɴɪᴍɪɢᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 9
+    strength: 4
+    attack-speed: 0.35
+    lifesteal: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_manopla_titanio:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_aco"
+            2: "midgard:lingote_aco"
+            3: "midgard:couro_curtido"
+            5: "midgard:couro_curtido"
+
+manopla_dragao:
+  base:
+    material: LEATHER_HELMET
+    name: "<blue>ᴍᴀɴᴏᴘʟᴀ ᴅᴏ ᴅʀᴀɢᴀᴏ</blue>"
+    tier: RARE
+    type: GAUNTLET
+    description:
+    - "<gray>ꜰᴏʀᴊᴀᴅᴀs ᴄᴏᴍ ᴇsᴄᴀᴍᴀs ᴅᴇ ᴅʀᴀɢᴀᴏ,</gray>"
+    - "<gray>ᴀʀᴅᴇᴍ ᴄᴏᴍ ꜰᴏɢᴏ ᴀ ᴄᴀᴅᴀ ɪᴍᴘᴀᴄᴛᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 16
+    strength: 7
+    attack-speed: 0.4
+    lifesteal: 3
+    fire-damage: 4
+    crafting:
+      enabled: true
+      recipes:
+        craft_manopla_dragao:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_mithril"
+            2: "midgard:lingote_mithril"
+            3: "midgard:escama_dragao"
+            5: "midgard:escama_dragao"
+
+punhos_divinos:
+  base:
+    material: LEATHER_HELMET
+    name: "<purple>ᴘᴜɴʜᴏs ᴅɪᴠɪɴᴏs</purple>"
+    tier: EPIC
+    type: GAUNTLET
+    description:
+    - "<gray>ᴘᴜɴʜᴏs ʙᴇɴᴅɪᴛᴏs ᴘᴇʟᴏs ᴅᴇᴜsᴇs,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ɢᴏʟᴘᴇ ᴄᴀʀʀᴇɢᴀ ᴇɴᴇʀɢɪᴀ ᴅɪᴠɪɴᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 26
+    strength: 11
+    attack-speed: 0.5
+    lifesteal: 5
+    divine-damage: 8
+    max-health: 20
+    required-level: 38
+
+escudo_madeira:
+  base:
+    material: SHIELD
+    name: "<white>ᴇsᴄᴜᴅᴏ ᴅᴇ ᴍᴀᴅᴇɪʀᴀ</white>"
+    tier: COMMON
+    type: SHIELD
+    description:
+    - "<gray>ᴜᴍ ᴇsᴄᴜᴅᴏ ᴅᴇ ᴍᴀᴅᴇɪʀᴀ ʀᴜsᴛɪᴄᴏ,</gray>"
+    - "<gray>ᴏꜰᴇʀᴇᴄᴇ ᴘʀᴏᴛᴇᴄᴀᴏ ʙᴀsɪᴄᴀ ᴄᴏɴᴛʀᴀ ᴀᴛᴀǫᴜᴇs.</gray>"
+    revision-id: 1
+    block-rating: 5
+    defense: 3
+    armor: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_escudo_madeira:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "OAK_PLANKS"
+            1: "midgard:lingote_ferro"
+            2: "OAK_PLANKS"
+            3: "OAK_PLANKS"
+            4: "OAK_PLANKS"
+            5: "OAK_PLANKS"
+
+escudo_ferro:
+  base:
+    material: SHIELD
+    name: "<green>ᴇsᴄᴜᴅᴏ ᴅᴇ ꜰᴇʀʀᴏ</green>"
+    tier: UNCOMMON
+    type: SHIELD
+    description:
+    - "<gray>ᴜᴍ ᴇsᴄᴜᴅᴏ ᴅᴇ ꜰᴇʀʀᴏ ʀᴇsɪsᴛᴇɴᴛᴇ,</gray>"
+    - "<gray>ᴘʀᴏᴛᴇɢᴇ ᴄᴏɴᴛʀᴀ ɢᴏʟᴘᴇs ᴘᴏᴅᴇʀᴏsᴏs.</gray>"
+    revision-id: 1
+    block-rating: 8
+    defense: 5
+    armor: 5
+    max-health: 10
+    crafting:
+      enabled: true
+      recipes:
+        craft_escudo_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_ferro"
+            1: "midgard:lingote_ferro"
+            2: "midgard:lingote_ferro"
+            3: "midgard:lingote_ferro"
+            4: "midgard:lingote_aco"
+            5: "midgard:lingote_ferro"
+
+escudo_real:
+  base:
+    material: SHIELD
+    name: "<blue>ᴇsᴄᴜᴅᴏ ʀᴇᴀʟ</blue>"
+    tier: RARE
+    type: SHIELD
+    description:
+    - "<gray>ᴏ ᴇsᴄᴜᴅᴏ ᴅᴀ ɢᴜᴀʀᴅᴀ ʀᴇᴀʟ,</gray>"
+    - "<gray>ᴏʀɴᴀᴍᴇɴᴛᴀᴅᴏ ᴄᴏᴍ ᴏᴜʀᴏ ᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏs.</gray>"
+    revision-id: 1
+    block-rating: 12
+    defense: 8
+    armor: 8
+    max-health: 20
+    damage-reduction: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_escudo_real:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_mithril"
+            1: "midgard:lingote_mithril"
+            2: "midgard:lingote_mithril"
+            3: "midgard:lingote_mithril"
+            4: "midgard:cristal_arcano"
+            5: "midgard:lingote_mithril"
+
+egide:
+  base:
+    material: SHIELD
+    name: "<purple>ᴇɢɪᴅᴇ</purple>"
+    tier: EPIC
+    type: SHIELD
+    description:
+    - "<gray>ᴀ ʟᴇɴᴅᴀʀɪᴀ ᴇɢɪᴅᴇ, ᴘʀᴏᴛᴇᴄᴀᴏ ᴅᴏs ᴅᴇᴜsᴇs,</gray>"
+    - "<gray>ɪᴍᴘᴇɴᴇᴛʀᴀᴠᴇʟ ᴘᴏʀ ᴀʀᴍᴀs ᴍᴏʀᴛᴀɪs.</gray>"
+    revision-id: 1
+    block-rating: 18
+    defense: 12
+    armor: 12
+    max-health: 35
+    damage-reduction: 5
+    required-level: 40
+
+chicote_couro:
+  base:
+    material: LEAD
+    name: "<white>ᴄʜɪᴄᴏᴛᴇ ᴅᴇ ᴄᴏᴜʀᴏ</white>"
+    tier: COMMON
+    type: WHIP
+    description:
+    - "<gray>ᴜᴍ ᴄʜɪᴄᴏᴛᴇ ᴅᴇ ᴄᴏᴜʀᴏ ᴛʀᴀɴᴄᴀᴅᴏ,</gray>"
+    - "<gray>ᴀɢɪʟ ᴇ ᴅᴇ ʟᴏɴɢᴏ ᴀʟᴄᴀɴᴄᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 4
+    dexterity: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_chicote_couro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:couro_curtido"
+            4: "midgard:couro_curtido"
+            7: "STICK"
+
+chicote_sombrio:
+  base:
+    material: LEAD
+    name: "<blue>ᴄʜɪᴄᴏᴛᴇ sᴏᴍʙʀɪᴏ</blue>"
+    tier: RARE
+    type: WHIP
+    description:
+    - "<gray>ᴜᴍ ᴄʜɪᴄᴏᴛᴇ ᴛᴇᴄɪᴅᴏ ᴄᴏᴍ sᴏᴍʙʀᴀs,</gray>"
+    - "<gray>ᴅʀᴇɴᴀ ᴀ ᴇssᴇɴᴄɪᴀ ᴅᴏs ǫᴜᴇ ᴀᴛɪɴɢᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 15
+    dexterity: 7
+    critical-strike-chance: 5
+    darkness-damage: 4
+    crafting:
+      enabled: true
+      recipes:
+        craft_chicote_sombrio:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:escama_dragao"
+            4: "midgard:essencia_trevas"
+            7: "STICK"
+
+alaude_bardico:
+  base:
+    material: MUSIC_DISC_STRAD
+    name: "<green>ᴀʟᴀᴜᴅᴇ ʙᴀʀᴅɪᴄᴏ</green>"
+    tier: UNCOMMON
+    type: LUTE
+    description:
+    - "<gray>ᴏ ɪɴsᴛʀᴜᴍᴇɴᴛᴏ ᴅᴏ ʙᴀʀᴅᴏ ᴠɪᴀᴊᴀɴᴛᴇ,</gray>"
+    - "<gray>sᴜᴀs ᴍᴇʟᴏᴅɪᴀs ᴄᴀʀʀᴇɢᴀᴍ ᴘᴏᴅᴇʀ ᴍᴀɢɪᴄᴏ.</gray>"
+    revision-id: 1
+    magic-damage: 8
+    intelligence: 4
+    max-mana: 20
+    cooldown-reduction: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_alaude_bardico:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_aco"
+            3: "STRING"
+            4: "OAK_PLANKS"
+            5: "STRING"
+            7: "OAK_PLANKS"
+
+alaude_encantado:
+  base:
+    material: MUSIC_DISC_STRAD
+    name: "<blue>ᴀʟᴀᴜᴅᴇ ᴇɴᴄᴀɴᴛᴀᴅᴏ</blue>"
+    tier: RARE
+    type: LUTE
+    description:
+    - "<gray>ᴜᴍ ᴀʟᴀᴜᴅᴇ ᴇɴᴄᴀɴᴛᴀᴅᴏ ᴘᴏʀ ᴍᴀɢᴏs ᴀɴᴛɪɢᴏs,</gray>"
+    - "<gray>sᴜᴀs ɴᴏᴛᴀs ᴅᴇsᴘᴇʀᴛᴀᴍ ᴏ ᴘᴏᴅᴇʀ ᴀʀᴄᴀɴᴏ.</gray>"
+    revision-id: 1
+    magic-damage: 16
+    intelligence: 7
+    max-mana: 35
+    cooldown-reduction: 5
+    skill-damage: 4
+    crafting:
+      enabled: true
+      recipes:
+        craft_alaude_encantado:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:cristal_arcano"
+            3: "STRING"
+            4: "midgard:lingote_mithril"
+            5: "STRING"
+            7: "midgard:pedra_magica"

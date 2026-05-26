@@ -1,0 +1,120 @@
+essencia_fogo:
+  base:
+    material: BLAZE_POWDER
+    name: "<green>ᴇssᴇɴᴄɪᴀ ᴅᴇ ꜰᴏɢᴏ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴇʟᴇᴍᴇɴᴛᴀʟ ᴅᴇ ꜰᴏɢᴏ. ǫᴜᴇɪᴍᴀ ᴄᴏᴍ ᴜᴍᴀ ᴄʜᴀᴍᴀ ɪɴᴛᴇʀɪᴏʀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏs.</gray>"
+    revision-id: 1
+
+essencia_gelo:
+  base:
+    material: BLUE_ICE
+    name: "<green>ᴇssᴇɴᴄɪᴀ ᴅᴇ ɢᴇʟᴏ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴇʟᴇᴍᴇɴᴛᴀʟ ᴅᴇ ɢᴇʟᴏ. ɢᴇʟɪᴅᴀ ᴀᴏ ᴛᴏǫᴜᴇ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏs.</gray>"
+    revision-id: 1
+
+essencia_luz:
+  base:
+    material: GLOWSTONE_DUST
+    name: "<green>ᴇssᴇɴᴄɪᴀ ᴅᴇ ʟᴜᴢ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴇʟᴇᴍᴇɴᴛᴀʟ ᴅᴇ ʟᴜᴢ. ʙʀɪʟʜᴀ ᴄᴏᴍ ʀᴀᴅɪᴀɴᴄɪᴀ ᴘᴜʀᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏs.</gray>"
+    revision-id: 1
+
+essencia_trevas:
+  base:
+    material: COAL
+    name: "<green>ᴇssᴇɴᴄɪᴀ ᴅᴇ ᴛʀᴇᴠᴀs</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴇʟᴇᴍᴇɴᴛᴀʟ ᴅᴇ ᴛʀᴇᴠᴀs. ᴀʙsᴏʀᴠᴇ ᴀ ʟᴜᴢ ᴀᴏ ʀᴇᴅᴏʀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏs.</gray>"
+    revision-id: 1
+
+essencia_divina:
+  base:
+    material: GOLD_INGOT
+    name: "<blue>ᴇssᴇɴᴄɪᴀ ᴅɪᴠɪɴᴀ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴅɪᴠɪɴᴀ. ᴇɴᴇʀɢɪᴀ ᴀʙᴇɴᴄᴏᴀᴅᴀ ᴅᴏs ᴘʟᴀɴᴏs ᴄᴇʟᴇsᴛɪᴀɪs.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏs.</gray>"
+    revision-id: 1
+
+essencia_terra:
+  base:
+    material: CLAY_BALL
+    name: "<green>ᴇssᴇɴᴄɪᴀ ᴅᴇ ᴛᴇʀʀᴀ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴇʟᴇᴍᴇɴᴛᴀʟ ᴅᴇ ᴛᴇʀʀᴀ. sᴏʟɪᴅᴀ ᴇ ᴇsᴛᴀʙɪʟɪᴢᴀɴᴛᴇ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏs.</gray>"
+    revision-id: 1
+
+essencia_trovao:
+  base:
+    material: PRISMARINE_SHARD
+    name: "<green>ᴇssᴇɴᴄɪᴀ ᴅᴇ ᴛʀᴏᴠᴀᴏ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴇʟᴇᴍᴇɴᴛᴀʟ ᴅᴇ ᴛʀᴏᴠᴀᴏ. ᴄʀᴇᴘɪᴛᴀ ᴄᴏᴍ ᴇʟᴇᴛʀɪᴄɪᴅᴀᴅᴇ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏs.</gray>"
+    revision-id: 1
+
+essencia_agua:
+  base:
+    material: HEART_OF_THE_SEA
+    name: "<green>ᴇssᴇɴᴄɪᴀ ᴅᴇ ᴀɢᴜᴀ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴇʟᴇᴍᴇɴᴛᴀʟ ᴅᴇ ᴀɢᴜᴀ. ꜰʟᴜɪ ᴄᴏᴍ ᴠɪᴅᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏs.</gray>"
+    revision-id: 1
+
+essencia_ar:
+  base:
+    material: FEATHER
+    name: "<green>ᴇssᴇɴᴄɪᴀ ᴅᴇ ᴀʀ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴇʟᴇᴍᴇɴᴛᴀʟ ᴅᴇ ᴀʀ. ʟᴇᴠᴇ ᴇ ʟɪᴠʀᴇ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏs.</gray>"
+    revision-id: 1
+
+essencia_pura:
+  base:
+    material: NETHER_STAR
+    name: "<purple>ᴇssᴇɴᴄɪᴀ ᴘᴜʀᴀ</purple>"
+    tier: EPIC
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴘᴜʀᴀ. ᴇɴᴇʀɢɪᴀ ᴇʟᴇᴍᴇɴᴛᴀʟ ᴄᴏɴᴄᴇɴᴛʀᴀᴅᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇsᴘᴇᴄɪᴀɪs.</gray>"
+    revision-id: 1
+
+essencia_primordial:
+  base:
+    material: NETHER_STAR
+    name: "<gold>ᴇssᴇɴᴄɪᴀ ᴘʀɪᴍᴏʀᴅɪᴀʟ</gold>"
+    tier: LEGENDARY
+    type: MATERIAL
+    description:
+    - "<gray>ᴇssᴇɴᴄɪᴀ ᴘʀɪᴍᴏʀᴅɪᴀʟ. ᴏ ʙʟᴏᴄᴏ ʙʀᴜᴛᴏ ᴅᴀ ᴄʀɪᴀᴄᴀᴏ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ʟᴇɴᴅᴀʀɪᴏs.</gray>"
+    revision-id: 1

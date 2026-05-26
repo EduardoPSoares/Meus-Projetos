@@ -1,0 +1,95 @@
+talismã_protecao:
+  base:
+    material: TOTEM_OF_UNDYING
+    name: "<green>ᴛᴀʟɪsᴍᴀ ᴅᴇ ᴘʀᴏᴛᴇᴄᴀᴏ</green>"
+    tier: UNCOMMON
+    type: TALISMAN
+    description:
+    - "<gray>ᴜᴍ ᴛᴀʟɪsᴍᴀ ᴀɴᴛɪɢᴏ ǫᴜᴇ</gray>"
+    - "<gray>ᴘʀᴏᴛᴇɢᴇ ᴄᴏɴᴛʀᴀ ᴏ ᴍᴀʟ.</gray>"
+    revision-id: 1
+    defense: 5
+    damage-reduction: 2
+    max-health: 10
+
+talismã_sabedoria:
+  base:
+    material: TOTEM_OF_UNDYING
+    name: "<blue>ᴛᴀʟɪsᴍᴀ ᴅᴇ sᴀʙᴇᴅᴏʀɪᴀ</blue>"
+    tier: RARE
+    type: TALISMAN
+    description:
+    - "<gray>ᴇɴᴄᴀɴᴛᴀᴅᴏ ᴘᴏʀ ᴍᴀɢᴏs ᴀɴᴛɪɢᴏs,</gray>"
+    - "<gray>ᴀᴍᴘʟɪᴀ ᴀ ᴍᴇɴᴛᴇ ᴅᴏ ᴘᴏʀᴛᴀᴅᴏʀ.</gray>"
+    revision-id: 1
+    intelligence: 6
+    max-mana: 35
+    cooldown-reduction: 3
+    skill-damage: 3
+
+talismã_guerreiro:
+  base:
+    material: TOTEM_OF_UNDYING
+    name: "<blue>ᴛᴀʟɪsᴍᴀ ᴅᴏ ɢᴜᴇʀʀᴇɪʀᴏ</blue>"
+    tier: RARE
+    type: TALISMAN
+    description:
+    - "<gray>ᴄᴀʀʀᴇɢᴀ ᴀ ꜰᴜʀɪᴀ ᴅᴇ ɢᴜᴇʀʀᴇɪʀᴏs</gray>"
+    - "<gray>ǫᴜᴇ ᴄᴀɪʀᴀᴍ ᴇᴍ ʙᴀᴛᴀʟʜᴀ.</gray>"
+    revision-id: 1
+    strength: 6
+    attack-damage: 5
+    critical-strike-chance: 3
+    max-health: 15
+
+talismã_dragao:
+  base:
+    material: TOTEM_OF_UNDYING
+    name: "<purple>ᴛᴀʟɪsᴍᴀ ᴅᴏ ᴅʀᴀɢᴀᴏ</purple>"
+    tier: EPIC
+    type: TALISMAN
+    description:
+    - "<gray>ᴜᴍ ᴛᴀʟɪsᴍᴀ ɪᴍʙᴜɪᴅᴏ ᴄᴏᴍ</gray>"
+    - "<gray>ᴏ sᴏᴘʀᴏ ᴅᴇ ᴜᴍ ᴅʀᴀɢᴀᴏ ᴀɴᴛɪɢᴏ.</gray>"
+    revision-id: 1
+    strength: 8
+    fire-damage: 8
+    max-health: 30
+    damage-reduction: 3
+    required-level: 40
+
+talismã_ancestral:
+  base:
+    material: TOTEM_OF_UNDYING
+    name: "<gold>ᴛᴀʟɪsᴍᴀ ᴀɴᴄᴇsᴛʀᴀʟ</gold>"
+    tier: LEGENDARY
+    type: TALISMAN
+    description:
+    - "<gray>ʜᴇʀᴅᴀᴅᴏ ᴅᴇ ᴜᴍᴀ ᴇʀᴀ ᴇsǫᴜᴇᴄɪᴅᴀ,</gray>"
+    - "<gray>ᴘʀᴏᴛᴇɢᴇ ᴄᴏɴᴛʀᴀ ᴛᴏᴅᴀ ꜰᴏʀᴍᴀ ᴅᴇ ᴍᴀʟ.</gray>"
+    revision-id: 1
+    max-health: 40
+    defense: 10
+    damage-reduction: 5
+    magic-resistance: 8
+    critical-resistance: 5
+    required-level: 50
+
+talismã_divino:
+  base:
+    material: TOTEM_OF_UNDYING
+    name: "<light_purple>ᴛᴀʟɪsᴍᴀ ᴅɪᴠɪɴᴏ</light_purple>"
+    tier: MYTHIC
+    type: TALISMAN
+    description:
+    - "<gray>ᴀʙᴇɴᴄᴏᴀᴅᴏ ᴘᴇʟᴏs ᴅᴇᴜsᴇs,</gray>"
+    - "<gray>ɪʀʀᴀᴅɪᴀ ᴜᴍᴀ ʟᴜᴢ sᴀɢʀᴀᴅᴀ.</gray>"
+    revision-id: 1
+    max-health: 50
+    max-mana: 50
+    divine-damage: 10
+    health-regeneration: 5
+    mana-regeneration: 5
+    damage-reduction: 6
+    cooldown-reduction: 5
+    required-level: 60

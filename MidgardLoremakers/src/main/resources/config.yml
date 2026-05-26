@@ -1,0 +1,20 @@
+database:
+  file: loremakers.db
+
+web:
+  bind-host: 0.0.0.0
+  port: 8806
+  public-url: "" # Opcional. Se vazio, usa automaticamente o host que o jogador utilizou para entrar no servidor.
+  public-scheme: "http" # Usado no modo automatico.
+  public-port: 0 # 0 = reutiliza web.port. Defina outra porta se houver proxy/Nginx/Cloudflare na frente.
+
+security:
+  entry-token-validity-minutes: 15
+  web-session-idle-minutes: 720
+
+books:
+  max-books-per-player: 64
+  max-pages-per-book: 50
+  max-characters-per-page: 1200
+  max-title-length: 48
+  max-category-length: 32

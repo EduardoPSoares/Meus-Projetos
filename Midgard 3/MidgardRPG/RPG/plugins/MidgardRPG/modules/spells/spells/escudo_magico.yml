@@ -1,0 +1,82 @@
+name: "<aqua>ᴇsᴄᴜᴅᴏ ᴍᴀɢɪᴄᴏ</aqua>"
+mythic-skill: "EscudoMagico"
+spell-type: COMMON
+
+cooldown:
+  base: 15.0
+  per-level: -0.5
+mana:
+  base: 35.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Mago"
+  level: 8
+
+icon:
+  material: SHIELD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<aqua><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></aqua>"
+  - ""
+  - "<gray>ᴄʀɪᴀ ᴜᴍ ᴇsᴄᴜᴅᴏ ᴅᴇ ᴇɴᴇʀɢɪᴀ ᴀʀᴄᴀɴᴀ</gray>"
+  - "<gray>ǫᴜᴇ ᴀʙsᴏʀᴠᴇ ᴅᴀɴᴏ ᴘᴏʀ ᴜᴍ</gray>"
+  - "<gray>ᴄᴜʀᴛᴏ ᴘᴇʀɪᴏᴅᴏ ᴅᴇ ᴛᴇᴍᴘᴏ.</gray>"
+  - ""
+  - "<aqua><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></aqua>"
+  - ""
+  - "<gray>ᴇsᴄᴜᴅᴏ:<aqua>{shield_amount}</aqua>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<aqua>{duration}s</aqua>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴀɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>8</yellow>"
+
+variables:
+  shield_amount:
+    base: 20.0
+    per-level: 5.0
+  duration:
+    base: 5.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "magic_shield_reinforced"
+    mechanic-override: "EscudoMagicoMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "magic_shield_arcane"
+    mechanic-override: "EscudoMagicoMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "block.enchantment_table.use"
+    volume: 1.0
+    pitch: 1.2
+  cast-finish:
+    sound: "item.shield.block"
+    volume: 0.8
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

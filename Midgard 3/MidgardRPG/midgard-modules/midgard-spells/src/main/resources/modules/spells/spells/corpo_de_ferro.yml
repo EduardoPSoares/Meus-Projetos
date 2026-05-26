@@ -1,0 +1,75 @@
+name: "<gold>ᴄᴏʀᴘᴏ ᴅᴇ ꜰᴇʀʀᴏ</gold>"
+mythic-skill: "CorpoDeFerro"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Monge"
+  level: 5
+
+icon:
+  material: IRON_INGOT
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></gold>"
+  - ""
+  - "<gray>ᴏ ᴍᴏɴɢᴇ ᴇɴᴅᴜʀᴇᴄᴇ sᴇᴜ ᴄᴏʀᴘᴏ ᴀᴛʀᴀᴠᴇs</gray>"
+  - "<gray>ᴅᴏ ᴛʀᴇɪɴᴏ ᴍᴀʀᴄɪᴀʟ, ʀᴇᴅᴜᴢɪɴᴅᴏ ᴏ</gray>"
+  - "<gray>ᴅᴀɴᴏ ꜰɪsɪᴄᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴘᴀssɪᴠᴀᴍᴇɴᴛᴇ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></gold>"
+  - ""
+  - "<gray>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ:<gold>{damage_reduction}%</gold>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴏɴɢᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  damage_reduction:
+    base: 3.0
+    per-level: 1.5
+
+milestones:
+  3:
+    visual: "corpo_ferro_harden"
+    mechanic-override: "CorpoDeFerroMk2"
+    stat-bonus:
+      strength: 1.0
+  5:
+    visual: "corpo_ferro_steel"
+    mechanic-override: "CorpoDeFerroMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 3
+    dexterity: 2
+
+sounds:
+  cast-start:
+    sound: "block.anvil.place"
+    volume: 0.4
+    pitch: 1.0
+  cast-finish:
+    sound: "entity.experience_orb.pickup"
+    volume: 0.5
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

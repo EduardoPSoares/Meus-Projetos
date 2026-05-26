@@ -1,0 +1,15 @@
+me\ray\midgard\modules\classes\skilltree\SkillTreeNode.class
+me\ray\midgard\modules\classes\RPGClass.class
+me\ray\midgard\modules\classes\ClassData.class
+me\ray\midgard\modules\classes\skilltree\SkillTreeManager.class
+me\ray\midgard\modules\classes\importer\MMOCoreImporter$MythicLibMapping.class
+me\ray\midgard\modules\classes\skilltree\gui\SkillTreeGui.class
+me\ray\midgard\modules\classes\skilltree\SkillTree.class
+me\ray\midgard\modules\classes\importer\ImportCommand.class
+me\ray\midgard\modules\classes\importer\MMOCoreImporter$ImportResult.class
+me\ray\midgard\modules\classes\ClassesModule.class
+me\ray\midgard\modules\classes\gui\ClassSelectionGui.class
+me\ray\midgard\modules\classes\ClassCommand.class
+me\ray\midgard\modules\classes\ClassManager.class
+me\ray\midgard\modules\classes\importer\MMOCoreImporter.class
+me\ray\midgard\modules\classes\ClassSkillLink.class

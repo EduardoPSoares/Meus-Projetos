@@ -1,0 +1,78 @@
+name: "<dark_purple>ᴅᴀɴᴄᴀ ᴅᴀs ʟᴀᴍɪɴᴀs</dark_purple>"
+mythic-skill: "DancaDasLaminas"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 55.0
+  per-level: -1.5
+mana:
+  base: 40.0
+  per-level: -1.0
+stamina: 35.0
+
+max-level: 10
+
+requirements:
+  class: "Ladino"
+  level: 20
+
+icon:
+  material: DIAMOND_SWORD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴜʟᴛɪᴍᴀᴛᴇ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴏ ʟᴀᴅɪɴᴏ ᴇxᴇᴄᴜᴛᴀ ᴜᴍᴀ ᴅᴀɴᴄᴀ ᴍᴏʀᴛᴀʟ</gray>"
+  - "<gray>ᴄᴏᴍ sᴜᴀs ʟᴀᴍɪɴᴀs, ᴀᴛɪɴɢɪɴᴅᴏ ᴛᴏᴅᴏs</gray>"
+  - "<gray>ᴏs ɪɴɪᴍɪɢᴏs ᴀᴏ ʀᴇᴅᴏʀ ᴍᴜʟᴛɪᴘʟᴀs ᴠᴇᴢᴇs.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ʟᴀᴅɪɴᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>20</yellow>"
+
+variables:
+  damage:
+    base: 55.0
+    per-level: 12.0
+
+milestones:
+  3:
+    visual: "danca_laminas_whirl"
+    mechanic-override: "DancaDasLaminasMk2"
+    stat-bonus:
+      dexterity: 2.0
+  5:
+    visual: "danca_laminas_storm"
+    mechanic-override: "DancaDasLaminasMk3"
+    stat-bonus:
+      dexterity: 3.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.player.attack.sweep"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "entity.player.attack.crit"
+    volume: 1.0
+    pitch: 1.4
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

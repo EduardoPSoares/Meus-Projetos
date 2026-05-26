@@ -1,0 +1,74 @@
+name: "<red>ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴍᴀʀᴄɪᴀʟ</red>"
+mythic-skill: "ResistenciaMarcial"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guerreiro"
+  level: 5
+
+icon:
+  material: CHAINMAIL_CHESTPLATE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<red><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></red>"
+  - ""
+  - "<gray>ᴏ ᴛʀᴇɪɴᴏ ᴍᴀʀᴄɪᴀʟ ᴅᴏ ɢᴜᴇʀʀᴇɪʀᴏ</gray>"
+  - "<gray>ᴇɴᴅᴜʀᴇᴄᴇ sᴇᴜ ᴄᴏʀᴘᴏ, ʀᴇᴅᴜᴢɪɴᴅᴏ</gray>"
+  - "<gray>ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴘᴀssɪᴠᴀᴍᴇɴᴛᴇ.</gray>"
+  - ""
+  - "<red><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></red>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ᴅᴇꜰᴇsᴀ:<red>{defense_bonus}</red>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  defense_bonus:
+    base: 2.0
+    per-level: 1.0
+
+milestones:
+  3:
+    visual: "iron_skin"
+    mechanic-override: "ResistenciaMarcialMk2"
+    stat-bonus:
+      defense: 1.0
+  5:
+    visual: "steel_skin"
+    mechanic-override: "ResistenciaMarcialMk3"
+    stat-bonus:
+      defense: 2.0
+
+mastery:
+  attribute-bonus:
+    defense: 5
+
+sounds:
+  cast-start:
+    sound: "item.armor.equip_iron"
+    volume: 0.6
+    pitch: 1.0
+  cast-finish:
+    sound: "item.armor.equip_netherite"
+    volume: 0.5
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

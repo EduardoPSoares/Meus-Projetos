@@ -1,0 +1,82 @@
+name: "<dark_purple>ᴇxᴘʟᴏsᴀᴏ ɴᴇᴄʀᴏᴛɪᴄᴀ</dark_purple>"
+mythic-skill: "ExplosaoNecrotica"
+spell-type: COMMON
+
+cooldown:
+  base: 15.0
+  per-level: -0.4
+mana:
+  base: 38.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Necromante"
+  level: 12
+
+icon:
+  material: SCULK
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴏ ɴᴇᴄʀᴏᴍᴀɴᴛᴇ ᴅᴇᴛᴏɴᴀ ᴜᴍᴀ ᴇxᴘʟᴏsᴀᴏ</gray>"
+  - "<gray>ᴅᴇ ᴇɴᴇʀɢɪᴀ ɴᴇᴄʀᴏᴛɪᴄᴀ ǫᴜᴇ ᴄᴏʀʀᴏɪ</gray>"
+  - "<gray>ᴀ ᴠɪᴅᴀ ᴅᴇ ᴛᴏᴅᴏs ᴀᴏ ʀᴇᴅᴏʀ.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ʀᴀɪᴏ:<dark_purple>{radius}</dark_purple>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɴᴇᴄʀᴏᴍᴀɴᴛᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>12</yellow>"
+
+variables:
+  damage:
+    base: 22.0
+    per-level: 5.5
+  radius:
+    base: 4.0
+    per-level: 0.3
+
+milestones:
+  3:
+    visual: "necrotic_burst"
+    mechanic-override: "ExplosaoNecroticaMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "necrotic_devastation"
+    mechanic-override: "ExplosaoNecroticaMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.warden.sonic_charge"
+    volume: 0.8
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.warden.sonic_boom"
+    volume: 1.0
+    pitch: 0.8
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

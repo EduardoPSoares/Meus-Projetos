@@ -1,0 +1,79 @@
+name: "<gold>ʀᴇssᴜʀʀᴇɪᴄᴀᴏ</gold>"
+mythic-skill: "Ressurreicao"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 60.0
+  per-level: -1.5
+mana:
+  base: 50.0
+  per-level: -1.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Clerigo"
+  level: 15
+
+icon:
+  material: NETHER_STAR
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴜʟᴛɪᴍᴀᴛᴇ</bold></gold>"
+  - ""
+  - "<gray>ᴄᴀɴᴀʟɪᴢᴀ ᴏ ᴘᴏᴅᴇʀ ᴅɪᴠɪɴᴏ ᴍᴀxɪᴍᴏ</gray>"
+  - "<gray>ᴘᴀʀᴀ ʀᴇssᴜsᴄɪᴛᴀʀ ᴜᴍ ᴀʟɪᴀᴅᴏ ᴄᴀɪᴅᴏ,</gray>"
+  - "<gray>ʀᴇsᴛᴀᴜʀᴀɴᴅᴏ sᴜᴀ ᴠɪᴅᴀ ᴇ ᴍᴀɴᴀ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴠɪᴅᴀ ʀᴇsᴛᴀᴜʀᴀᴅᴀ:<green>{heal}%</green>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴄʟᴇʀɪɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>15</yellow>"
+
+variables:
+  heal:
+    base: 30.0
+    per-level: 5.0
+
+milestones:
+  3:
+    visual: "ressurreicao_glow"
+    mechanic-override: "RessurreicaoMk2"
+    stat-bonus:
+      intelligence: 2.0
+  5:
+    visual: "ressurreicao_divine"
+    mechanic-override: "RessurreicaoMk3"
+    stat-bonus:
+      vitality: 3.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 3
+    vitality: 2
+
+sounds:
+  cast-start:
+    sound: "block.beacon.activate"
+    volume: 1.0
+    pitch: 0.8
+  cast-finish:
+    sound: "item.totem.use"
+    volume: 1.0
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

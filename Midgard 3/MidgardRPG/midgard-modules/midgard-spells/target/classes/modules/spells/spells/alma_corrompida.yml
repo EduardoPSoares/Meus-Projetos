@@ -1,0 +1,74 @@
+name: "<dark_purple>ᴀʟᴍᴀ ᴄᴏʀʀᴏᴍᴘɪᴅᴀ</dark_purple>"
+mythic-skill: "AlmaCorrompida"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Necromante"
+  level: 5
+
+icon:
+  material: SOUL_LANTERN
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴀ ᴀʟᴍᴀ ᴅᴏ ɴᴇᴄʀᴏᴍᴀɴᴛᴇ ꜰᴏɪ</gray>"
+  - "<gray>ᴄᴏʀʀᴏᴍᴘɪᴅᴀ ᴘᴇʟᴀs ᴛʀᴇᴠᴀs, ᴘᴇʀᴍɪᴛɪɴᴅᴏ</gray>"
+  - "<gray>ʀᴏᴜʙᴀʀ ᴠɪᴅᴀ ᴅᴏs ɪɴɪᴍɪɢᴏs ᴀᴏ ᴀᴛᴀᴄᴀʀ.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ʀᴏᴜʙᴏ ᴅᴇ ᴠɪᴅᴀ:<dark_purple>{life_steal}%</dark_purple>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɴᴇᴄʀᴏᴍᴀɴᴛᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  life_steal:
+    base: 3.0
+    per-level: 1.0
+
+milestones:
+  3:
+    visual: "corrupted_soul_drain"
+    mechanic-override: "AlmaCorrompidaMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "corrupted_soul_devour"
+    mechanic-override: "AlmaCorrompidaMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.phantom.ambient"
+    volume: 0.6
+    pitch: 0.8
+  cast-finish:
+    sound: "entity.phantom.bite"
+    volume: 0.5
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

@@ -1,0 +1,380 @@
+name: MidgardRPG
+version: 1.0.0
+main: me.ray.midgard.loader.MidgardPlugin
+api-version: 1.21
+folia-supported: true
+authors: [Ray]
+description: A large-scale Modular RPG plugin.
+depend: []
+softdepend:
+  - PlaceholderAPI
+  - ProtocolLib
+  - FancyHolograms
+  - MythicMobs
+  - FancyNpcs
+  - TAB
+  - Nexo
+  - spark
+  - Vault
+  - WorldGuard
+  - WorldEdit
+  - Lands
+
+commands:
+  midgardrpg:
+    description: Comando principal do MidgardRPG
+    usage: /rpg <subcomando>
+    aliases: [rpg, mrpg]
+
+permissions:
+  # ============================================
+  # Wildcard - grants everything
+  # ============================================
+  midgard.*:
+    description: Grants all MidgardRPG permissions
+    default: op
+    children:
+      midgard.admin: true
+      midgard.essentials.*: true
+
+  # ============================================
+  # Admin permissions
+  # ============================================
+  midgard.admin:
+    description: All administrative permissions
+    default: op
+    children:
+      midgard.admin.reload: true
+      midgard.admin.reset: true
+      midgard.admin.scan: true
+      midgard.admin.performance: true
+      midgard.admin.xp: true
+      midgard.admin.class: true
+      midgard.admin.race: true
+      midgard.admin.item: true
+      midgard.admin.economy: true
+      midgard.admin.spell: true
+      midgard.admin.commands: true
+      midgard.admin.info: true
+      midgard.admin.dummy: true
+      midgard.admin.forge: true
+      midgard.admin.smeltery: true
+
+  midgard.admin.reload:
+    description: Reload plugin configuration
+    default: op
+  midgard.admin.reset:
+    description: Reset player data
+    default: op
+  midgard.admin.scan:
+    description: Scan messages for issues
+    default: op
+  midgard.admin.performance:
+    description: View performance metrics
+    default: op
+  midgard.admin.dummy:
+    description: Create and remove combat dummies
+    default: op
+  midgard.admin.forge:
+    description: Manage the forge system
+    default: op
+    children:
+      midgard.forge.use: true
+  midgard.forge.use:
+    description: Use forge structures
+    default: true
+  midgard.admin.smeltery:
+    description: Manage the smeltery system
+    default: op
+  midgard.admin.commands:
+    description: Command management tools
+    default: op
+
+  # Player info GUI sub-permissions
+  midgard.admin.info:
+    description: View player info GUI
+    default: op
+    children:
+      midgard.admin.info.teleport: true
+      midgard.admin.info.inventory: true
+      midgard.admin.info.enderchest: true
+      midgard.admin.info.kick: true
+      midgard.admin.seeip: true
+  midgard.admin.info.teleport:
+    description: Teleport to player from info GUI
+    default: op
+  midgard.admin.info.inventory:
+    description: View player inventory from info GUI
+    default: op
+  midgard.admin.info.enderchest:
+    description: View player ender chest from info GUI
+    default: op
+  midgard.admin.info.kick:
+    description: Kick player from info GUI
+    default: op
+  midgard.admin.seeip:
+    description: See player IP address in info GUI
+    default: op
+
+  # XP sub-permissions
+  midgard.admin.xp:
+    description: All XP management permissions
+    default: op
+    children:
+      midgard.admin.xp.add: true
+      midgard.admin.xp.set: true
+      midgard.admin.xp.take: true
+  midgard.admin.xp.add:
+    description: Add XP to players
+    default: op
+  midgard.admin.xp.set:
+    description: Set XP for players
+    default: op
+  midgard.admin.xp.take:
+    description: Remove XP from players
+    default: op
+
+  # Class sub-permissions
+  midgard.admin.class:
+    description: All class management permissions
+    default: op
+    children:
+      midgard.admin.class.set: true
+      midgard.admin.class.list: true
+  midgard.admin.class.set:
+    description: Set player classes
+    default: op
+  midgard.admin.class.list:
+    description: List available classes
+    default: op
+
+  # Race sub-permissions
+  midgard.admin.race:
+    description: All race management permissions
+    default: op
+    children:
+      midgard.admin.race.set: true
+      midgard.admin.race.reset: true
+      midgard.admin.race.exp: true
+      midgard.admin.race.reload: true
+      midgard.admin.race.info: true
+  midgard.admin.race.set:
+    description: Set player races
+    default: op
+  midgard.admin.race.reset:
+    description: Reset player races
+    default: op
+  midgard.admin.race.exp:
+    description: Manage race experience
+    default: op
+  midgard.admin.race.reload:
+    description: Reload race configuration
+    default: op
+  midgard.admin.race.info:
+    description: View other player race info
+    default: op
+
+  # Item sub-permissions
+  midgard.admin.item:
+    description: All item management permissions
+    default: op
+    children:
+      midgard.admin.item.give: true
+      midgard.admin.item.reload: true
+      midgard.admin.item.refine: true
+      midgard.admin.item.create: true
+      midgard.admin.item.edit: true
+      midgard.admin.item.delete: true
+  midgard.admin.item.give:
+    description: Give custom items to players
+    default: op
+  midgard.admin.item.reload:
+    description: Reload item configuration
+    default: op
+  midgard.admin.item.refine:
+    description: Access item refinement GUI
+    default: op
+  midgard.admin.item.create:
+    description: Create new custom items
+    default: op
+  midgard.admin.item.edit:
+    description: Edit existing custom items
+    default: op
+  midgard.admin.item.delete:
+    description: Delete custom items permanently
+    default: op
+
+  # Economy sub-permissions
+  midgard.admin.economy:
+    description: All economy management permissions
+    default: op
+    children:
+      midgard.admin.economy.give: true
+      midgard.admin.economy.take: true
+      midgard.admin.economy.set: true
+      midgard.admin.economy.balance: true
+  midgard.admin.economy.give:
+    description: Give currency to players
+    default: op
+  midgard.admin.economy.take:
+    description: Take currency from players
+    default: op
+  midgard.admin.economy.set:
+    description: Set player currency amount
+    default: op
+  midgard.admin.economy.balance:
+    description: View player balance
+    default: op
+
+  # Spell sub-permissions
+  midgard.admin.spell:
+    description: All spell management permissions
+    default: op
+    children:
+      midgard.admin.spell.learn: true
+      midgard.admin.spell.unlearn: true
+      midgard.admin.spell.setlevel: true
+      midgard.admin.spell.givescroll: true
+  midgard.admin.spell.learn:
+    description: Teach spells to players
+    default: op
+  midgard.admin.spell.unlearn:
+    description: Remove spells from players
+    default: op
+  midgard.admin.spell.setlevel:
+    description: Set spell levels for players
+    default: op
+  midgard.admin.spell.givescroll:
+    description: Give spell scrolls to players
+    default: op
+
+  # ============================================
+  # Essentials permissions
+  # ============================================
+  midgard.essentials.*:
+    description: All essentials permissions
+    default: op
+    children:
+      midgard.essentials.gamemode: true
+      midgard.essentials.fly: true
+      midgard.essentials.heal: true
+      midgard.essentials.feed: true
+      midgard.essentials.spawn: true
+      midgard.essentials.setspawn: true
+      midgard.essentials.warp: true
+      midgard.essentials.setwarp: true
+      midgard.essentials.delwarp: true
+      midgard.essentials.home: true
+      midgard.essentials.sethome: true
+      midgard.essentials.delhome: true
+      midgard.essentials.tpa: true
+      midgard.essentials.tpaccept: true
+      midgard.essentials.tpdeny: true
+      midgard.essentials.vanish: true
+      midgard.essentials.back: true
+      midgard.essentials.tp: true
+      midgard.essentials.tphere: true
+      midgard.essentials.top: true
+      midgard.essentials.speed: true
+      midgard.essentials.invsee: true
+
+  midgard.essentials.gamemode:
+    description: Change gamemode
+    default: op
+    children:
+      midgard.essentials.gamemode.others: true
+  midgard.essentials.gamemode.others:
+    description: Change other players gamemode
+    default: op
+  midgard.essentials.fly:
+    description: Toggle flight
+    default: op
+    children:
+      midgard.essentials.fly.others: true
+  midgard.essentials.fly.others:
+    description: Toggle flight for others
+    default: op
+  midgard.essentials.heal:
+    description: Heal yourself
+    default: op
+    children:
+      midgard.essentials.heal.others: true
+  midgard.essentials.heal.others:
+    description: Heal other players
+    default: op
+  midgard.essentials.feed:
+    description: Feed yourself
+    default: op
+    children:
+      midgard.essentials.feed.others: true
+  midgard.essentials.feed.others:
+    description: Feed other players
+    default: op
+  midgard.essentials.spawn:
+    description: Teleport to spawn
+    default: true
+  midgard.essentials.setspawn:
+    description: Set the server spawn
+    default: op
+  midgard.essentials.warp:
+    description: Teleport to warps
+    default: true
+    children:
+      midgard.essentials.warp.*: true
+  midgard.essentials.warp.*:
+    description: Access all warps
+    default: true
+  midgard.essentials.setwarp:
+    description: Create warps
+    default: op
+  midgard.essentials.delwarp:
+    description: Delete warps
+    default: op
+  midgard.essentials.home:
+    description: Teleport to home
+    default: true
+  midgard.essentials.sethome:
+    description: Set home location
+    default: true
+  midgard.essentials.delhome:
+    description: Delete home location
+    default: true
+  midgard.essentials.tpa:
+    description: Send teleport requests
+    default: true
+  midgard.essentials.tpaccept:
+    description: Accept teleport requests
+    default: true
+  midgard.essentials.tpdeny:
+    description: Deny teleport requests
+    default: true
+  midgard.essentials.vanish:
+    description: Toggle vanish mode
+    default: op
+  midgard.essentials.back:
+    description: Return to previous location
+    default: op
+  midgard.essentials.tp:
+    description: Teleport to players or coordinates
+    default: op
+  midgard.essentials.tphere:
+    description: Teleport a player to you
+    default: op
+  midgard.essentials.top:
+    description: Teleport to highest block
+    default: op
+  midgard.essentials.speed:
+    description: Change movement speed
+    default: op
+  midgard.essentials.invsee:
+    description: View other players inventory
+    default: op
+    children:
+      midgard.essentials.invsee.exempt: true
+      midgard.essentials.invsee.bypass: true
+  midgard.essentials.invsee.exempt:
+    description: Exempt from being inspected
+    default: false
+  midgard.essentials.invsee.bypass:
+    description: Bypass invsee exemptions
+    default: op

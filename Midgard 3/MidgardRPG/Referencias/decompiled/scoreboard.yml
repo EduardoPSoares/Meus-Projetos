@@ -1,0 +1,17 @@
+# Player scoreboard configuration
+# Use PlaceholderAPI placeholders in the lines below.
+# Hex colors use the format '#RRGGBB/' while normal colors use '&'.
+enabled: false
+update-interval: 40
+title: "#00ff00/Mythical &6Races"
+lines:
+  - "&7&m----------------"
+  - "&fRace: &b%mythicalraces_display_race_name%"
+  - "&fClass: &b%mythicalraces_display_class_name%"
+  - "&fLevel: &b%mythicalraces_get_level%"
+  - "&fXP: &b%mythicalraces_get_xp%/&b%mythicalraces_get_max_xp%"
+  - "&7&m----------------"
+messages:
+  toggle-on: "&aScoreboard enabled"
+  toggle-off: "&cScoreboard disabled"
+  disabled: "&cScoreboard is currently disabled globally."

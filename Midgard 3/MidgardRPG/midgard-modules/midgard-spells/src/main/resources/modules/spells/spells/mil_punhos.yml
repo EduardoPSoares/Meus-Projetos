@@ -1,0 +1,79 @@
+name: "<gold>ᴍɪʟ ᴘᴜɴʜᴏs</gold>"
+mythic-skill: "MilPunhos"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 40.0
+  per-level: -1.0
+mana:
+  base: 25.0
+  per-level: -0.6
+stamina: 40.0
+
+max-level: 10
+
+requirements:
+  class: "Monge"
+  level: 15
+
+icon:
+  material: DIAMOND
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴜʟᴛɪᴍᴀᴛᴇ</bold></gold>"
+  - ""
+  - "<gray>ᴅᴇsꜰᴇʀᴇ ᴜᴍᴀ ʀᴀᴊᴀᴅᴀ ɪᴍᴘᴀʀᴀᴠᴇʟ ᴅᴇ</gray>"
+  - "<gray>ᴍɪʟ ᴘᴜɴʜᴏs ᴄᴏɴᴛʀᴀ ᴏ ɪɴɪᴍɪɢᴏ,</gray>"
+  - "<gray>ᴅᴇᴠᴀsᴛᴀɴᴅᴏ-ᴏ ᴄᴏᴍ ɢᴏʟᴘᴇs ᴅᴇ ᴄʜɪ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴏɴɢᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>15</yellow>"
+
+variables:
+  damage:
+    base: 45.0
+    per-level: 10.0
+
+milestones:
+  3:
+    visual: "mil_punhos_flurry"
+    mechanic-override: "MilPunhosMk2"
+    stat-bonus:
+      strength: 2.0
+  5:
+    visual: "mil_punhos_barrage"
+    mechanic-override: "MilPunhosMk3"
+    stat-bonus:
+      dexterity: 3.0
+
+mastery:
+  attribute-bonus:
+    strength: 3
+    dexterity: 2
+
+sounds:
+  cast-start:
+    sound: "entity.player.attack.sweep"
+    volume: 1.0
+    pitch: 1.4
+  cast-finish:
+    sound: "entity.generic.explode"
+    volume: 1.0
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

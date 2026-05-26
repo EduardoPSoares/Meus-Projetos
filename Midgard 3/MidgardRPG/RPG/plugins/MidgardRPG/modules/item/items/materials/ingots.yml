@@ -1,0 +1,87 @@
+lingote_ferro:
+  base:
+    material: IRON_INGOT
+    name: "<white>ʟɪɴɢᴏᴛᴇ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: MATERIAL
+    description:
+    - "<gray>ʟɪɴɢᴏᴛᴇ ᴅᴇ ꜰᴇʀʀᴏ ᴄᴏᴍᴜᴍ. ᴜsᴀᴅᴏ ᴇᴍ ꜰᴀʙʀɪᴄᴀᴄᴏᴇs ʙᴀsɪᴄᴀs.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ᴀʀᴍᴀs ᴇ ᴀʀᴍᴀᴅᴜʀᴀs.</gray>"
+    revision-id: 1
+
+lingote_aco:
+  base:
+    material: IRON_INGOT
+    name: "<green>ʟɪɴɢᴏᴛᴇ ᴅᴇ ᴀᴄᴏ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ʟɪɴɢᴏᴛᴇ ᴅᴇ ᴀᴄᴏ ʀᴇꜰɪɴᴀᴅᴏ. ᴍᴀɪs ꜰᴏʀᴛᴇ ǫᴜᴇ ꜰᴇʀʀᴏ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ᴀʀᴍᴀs ᴇ ᴀʀᴍᴀᴅᴜʀᴀs.</gray>"
+    revision-id: 1
+
+lingote_mithril:
+  base:
+    material: DIAMOND
+    name: "<blue>ʟɪɴɢᴏᴛᴇ ᴅᴇ ᴍɪᴛʜʀɪʟ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ᴍᴇᴛᴀʟ ᴍᴀɢɪᴄᴏ ʀᴀʀᴏ. ʟᴇᴠᴇ ᴇ ʀᴇsɪsᴛᴇɴᴛᴇ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+lingote_draconiano:
+  base:
+    material: DIAMOND
+    name: "<purple>ʟɪɴɢᴏᴛᴇ ᴅʀᴀᴄᴏɴɪᴀɴᴏ</purple>"
+    tier: EPIC
+    type: MATERIAL
+    description:
+    - "<gray>ꜰᴏʀᴊᴀᴅᴏ ᴀ ᴘᴀʀᴛɪʀ ᴅᴇ ᴇsᴄᴀᴍᴀs ᴅᴇ ᴅʀᴀɢᴀᴏ. ᴇxᴛʀᴇᴍᴀᴍᴇɴᴛᴇ ᴅᴜʀᴀᴠᴇʟ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+lingote_celestial:
+  base:
+    material: NETHERITE_INGOT
+    name: "<gold>ʟɪɴɢᴏᴛᴇ ᴄᴇʟᴇsᴛɪᴀʟ</gold>"
+    tier: LEGENDARY
+    type: MATERIAL
+    description:
+    - "<gray>ᴍᴇᴛᴀʟ ᴀʙᴇɴᴄᴏᴀᴅᴏ ᴘᴇʟᴏs ᴅᴇᴜsᴇs. ɪʀʀᴀᴅɪᴀ ᴇɴᴇʀɢɪᴀ ᴅɪᴠɪɴᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ʟᴇɴᴅᴀʀɪᴏs.</gray>"
+    revision-id: 1
+
+lingote_titanio:
+  base:
+    material: IRON_INGOT
+    name: "<blue>ʟɪɴɢᴏᴛᴇ ᴅᴇ ᴛɪᴛᴀɴɪᴏ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ᴍᴇᴛᴀʟ ᴇxᴄᴇᴘᴄɪᴏɴᴀʟᴍᴇɴᴛᴇ ᴅᴜʀᴏ. ᴜsᴀᴅᴏ ᴇᴍ ᴇǫᴜɪᴘᴀᴍᴇɴᴛᴏs ᴘᴇsᴀᴅᴏs.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+lingote_sombrio:
+  base:
+    material: NETHERITE_INGOT
+    name: "<purple>ʟɪɴɢᴏᴛᴇ sᴏᴍʙʀɪᴏ</purple>"
+    tier: EPIC
+    type: MATERIAL
+    description:
+    - "<gray>ᴍᴇᴛᴀʟ ᴇsᴄᴜʀᴏ ɪɴꜰᴜɴᴅɪᴅᴏ ᴄᴏᴍ ᴇɴᴇʀɢɪᴀ sᴏᴍʙʀɪᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+lingote_primordial:
+  base:
+    material: NETHERITE_INGOT
+    name: "<light_purple>ʟɪɴɢᴏᴛᴇ ᴘʀɪᴍᴏʀᴅɪᴀʟ</light_purple>"
+    tier: MYTHIC
+    type: MATERIAL
+    description:
+    - "<gray>ᴍᴇᴛᴀʟ ᴀɴᴛɪɢᴏ ᴅᴇ ᴀɴᴛᴇs ᴅᴏ ᴛᴇᴍᴘᴏ. ᴄᴏɴᴛᴇᴍ ᴘᴏᴅᴇʀ ɪᴍᴇɴsᴏ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴍɪᴛɪᴄᴏs.</gray>"
+    revision-id: 1

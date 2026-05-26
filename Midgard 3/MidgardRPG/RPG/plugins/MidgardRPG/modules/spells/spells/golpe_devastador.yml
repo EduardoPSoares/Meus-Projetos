@@ -1,0 +1,80 @@
+name: "<dark_red>ɢᴏʟᴘᴇ ᴅᴇᴠᴀsᴛᴀᴅᴏʀ</dark_red>"
+mythic-skill: "GolpeDevastador"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 50.0
+  per-level: -0.5
+mana:
+  base: 70.0
+  per-level: -1.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guerreiro"
+  level: 20
+
+icon:
+  material: NETHERITE_AXE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_red><bold>ᴍᴀɢɪᴀ sᴜᴘʀᴇᴍᴀ</bold></dark_red>"
+  - ""
+  - "<gray>ᴅᴇsꜰᴇʀᴇ ᴜᴍ ɢᴏʟᴘᴇ ᴅᴇᴠᴀsᴛᴀᴅᴏʀ</gray>"
+  - "<gray>ᴄᴏᴍ ᴛᴏᴅᴀ ᴀ ꜰᴏʀᴄᴀ ʙʀᴜᴛᴀ ᴅᴏ</gray>"
+  - "<gray>ɢᴜᴇʀʀᴇɪʀᴏ, ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ</gray>"
+  - "<gray>ᴄᴀᴛᴀsᴛʀᴏꜰɪᴄᴏ.</gray>"
+  - ""
+  - "<red><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></red>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>20</yellow>"
+
+variables:
+  damage:
+    base: 40.0
+    per-level: 8.0
+
+milestones:
+  3:
+    visual: "devastate_crack"
+    mechanic-override: "GolpeDevastadorMk2"
+    stat-bonus:
+      strength: 2.0
+  5:
+    visual: "devastate_cataclysm"
+    mechanic-override: "GolpeDevastadorMk3"
+    stat-bonus:
+      strength: 4.0
+
+mastery:
+  attribute-bonus:
+    strength: 10
+
+sounds:
+  cast-start:
+    sound: "entity.wither.shoot"
+    volume: 1.0
+    pitch: 0.4
+  cast-finish:
+    sound: "entity.generic.explode"
+    volume: 1.0
+    pitch: 0.4
+  cast-fail:
+    sound: "entity.wither.hurt"
+    volume: 0.5
+    pitch: 0.8

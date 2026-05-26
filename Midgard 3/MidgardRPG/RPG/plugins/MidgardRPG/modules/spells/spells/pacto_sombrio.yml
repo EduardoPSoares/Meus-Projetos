@@ -1,0 +1,74 @@
+name: "<dark_purple>ᴘᴀᴄᴛᴏ sᴏᴍʙʀɪᴏ</dark_purple>"
+mythic-skill: "PactoSombrio"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Necromante"
+  level: 1
+
+icon:
+  material: WITHER_ROSE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴏ ɴᴇᴄʀᴏᴍᴀɴᴛᴇ ꜰɪʀᴍᴀ ᴜᴍ ᴘᴀᴄᴛᴏ</gray>"
+  - "<gray>ᴄᴏᴍ ᴀs ꜰᴏʀᴄᴀs sᴏᴍʙʀɪᴀs, ᴀᴜᴍᴇɴᴛᴀɴᴅᴏ</gray>"
+  - "<gray>sᴇᴜ ᴅᴀɴᴏ sᴏᴍʙʀɪᴏ ᴘᴀssɪᴠᴀᴍᴇɴᴛᴇ.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ᴅᴀɴᴏ sᴏᴍʙʀɪᴏ:<dark_purple>{dark_damage_bonus}</dark_purple>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɴᴇᴄʀᴏᴍᴀɴᴛᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  dark_damage_bonus:
+    base: 3.0
+    per-level: 1.5
+
+milestones:
+  3:
+    visual: "dark_pact_shadow"
+    mechanic-override: "PactoSombrioMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "dark_pact_abyss"
+    mechanic-override: "PactoSombrioMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.wither.ambient"
+    volume: 0.6
+    pitch: 0.8
+  cast-finish:
+    sound: "entity.wither.hurt"
+    volume: 0.5
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

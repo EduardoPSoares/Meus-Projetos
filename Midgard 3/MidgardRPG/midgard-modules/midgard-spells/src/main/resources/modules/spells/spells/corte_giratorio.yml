@@ -1,0 +1,83 @@
+name: "<red>ᴄᴏʀᴛᴇ ɢɪʀᴀᴛᴏʀɪᴏ</red>"
+mythic-skill: "CorteGiratorio"
+spell-type: COMMON
+
+cooldown:
+  base: 8.0
+  per-level: -0.2
+mana:
+  base: 20.0
+  per-level: -0.4
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guerreiro"
+  level: 8
+
+icon:
+  material: IRON_SWORD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<red><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></red>"
+  - ""
+  - "<gray>ɢɪʀᴀ ᴄᴏᴍ ᴀ ᴇsᴘᴀᴅᴀ ᴇᴍ ᴄʜᴀᴍᴀs,</gray>"
+  - "<gray>ᴀᴛɪɴɢɪɴᴅᴏ ᴛᴏᴅᴏs ᴏs ɪɴɪᴍɪɢᴏs</gray>"
+  - "<gray>ᴀᴏ ʀᴇᴅᴏʀ.</gray>"
+  - ""
+  - "<red><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></red>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ʀᴀɪᴏ:<red>{radius}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>8</yellow>"
+
+variables:
+  damage:
+    base: 14.0
+    per-level: 3.5
+  radius:
+    base: 3.0
+    per-level: 0.3
+
+milestones:
+  3:
+    visual: "spin_fire"
+    mechanic-override: "CorteGiratorioMk2"
+    stat-bonus:
+      strength: 1.0
+  5:
+    visual: "spin_inferno"
+    mechanic-override: "CorteGiratorioMk3"
+    stat-bonus:
+      strength: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 5
+
+sounds:
+  cast-start:
+    sound: "entity.player.attack.sweep"
+    volume: 1.0
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.player.attack.sweep"
+    volume: 1.0
+    pitch: 0.8
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

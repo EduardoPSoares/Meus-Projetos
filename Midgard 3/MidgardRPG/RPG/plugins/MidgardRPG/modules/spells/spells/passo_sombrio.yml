@@ -1,0 +1,78 @@
+name: "<dark_purple>ᴘᴀssᴏ sᴏᴍʙʀɪᴏ</dark_purple>"
+mythic-skill: "PassoSombrio"
+spell-type: COMMON
+
+cooldown:
+  base: 10.0
+  per-level: -0.3
+mana:
+  base: 22.0
+  per-level: -0.6
+stamina: 15.0
+
+max-level: 10
+
+requirements:
+  class: "Ladino"
+  level: 10
+
+icon:
+  material: ENDER_PEARL
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴏ ʟᴀᴅɪɴᴏ sᴇ ᴛᴇʟᴇᴘᴏʀᴛᴀ ᴘᴀʀᴀ ᴀs</gray>"
+  - "<gray>ᴄᴏsᴛᴀs ᴅᴏ ɪɴɪᴍɪɢᴏ ᴀᴛʀᴀᴠᴇs ᴅᴀs</gray>"
+  - "<gray>sᴏᴍʙʀᴀs, ᴘʀᴏɴᴛᴏ ᴘᴀʀᴀ ᴀᴛᴀᴄᴀʀ.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ʟᴀᴅɪɴᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>10</yellow>"
+
+variables:
+  damage:
+    base: 18.0
+    per-level: 4.5
+
+milestones:
+  3:
+    visual: "passo_sombrio_mist"
+    mechanic-override: "PassoSombrioMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "passo_sombrio_void"
+    mechanic-override: "PassoSombrioMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.enderman.teleport"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "entity.enderman.teleport"
+    volume: 0.8
+    pitch: 1.4
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

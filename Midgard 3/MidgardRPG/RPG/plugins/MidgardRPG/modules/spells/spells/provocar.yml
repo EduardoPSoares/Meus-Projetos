@@ -1,0 +1,83 @@
+name: "<red>ᴘʀᴏᴠᴏᴄᴀʀ</red>"
+mythic-skill: "Provocar"
+spell-type: COMMON
+
+cooldown:
+  base: 12.0
+  per-level: -0.3
+mana:
+  base: 18.0
+  per-level: -0.4
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guerreiro"
+  level: 10
+
+icon:
+  material: BELL
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<red><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></red>"
+  - ""
+  - "<gray>ᴘʀᴏᴠᴏᴄᴀ ᴏs ɪɴɪᴍɪɢᴏs ᴘʀᴏxɪᴍᴏs,</gray>"
+  - "<gray>ꜰᴏʀᴄᴀɴᴅᴏ-ᴏs ᴀ ᴀᴛᴀᴄᴀʀ ᴏ</gray>"
+  - "<gray>ɢᴜᴇʀʀᴇɪʀᴏ ᴘᴏʀ ᴜᴍ ᴛᴇᴍᴘᴏ.</gray>"
+  - ""
+  - "<red><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></red>"
+  - ""
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<red>{duration}s</red>"
+  - "<gray>ʀᴀɪᴏ:<red>{radius}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>10</yellow>"
+
+variables:
+  duration:
+    base: 3.0
+    per-level: 0.5
+  radius:
+    base: 5.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "taunt_roar"
+    mechanic-override: "ProvocarMk2"
+    stat-bonus:
+      defense: 1.0
+  5:
+    visual: "taunt_inferno"
+    mechanic-override: "ProvocarMk3"
+    stat-bonus:
+      defense: 2.0
+
+mastery:
+  attribute-bonus:
+    defense: 5
+
+sounds:
+  cast-start:
+    sound: "entity.ravager.roar"
+    volume: 1.0
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.ender_dragon.growl"
+    volume: 0.8
+    pitch: 0.8
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

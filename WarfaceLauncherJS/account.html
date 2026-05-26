@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warface Survivor - Conta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="account-styles.css" />
+</head>
+<body>
+  <div class="account-window">
+    <div class="titlebar">
+      <div class="logo-area">
+        <div class="logo-badge">WF</div>
+        <div>
+          <div class="logo-name" id="window-title">CRIAR CONTA</div>
+          <div class="logo-sub" id="window-sub"></div>
+        </div>
+      </div>
+      <div class="titlebar-controls">
+        <div class="tctl tctl-min" id="btn-minimize"></div>
+        <div class="tctl tctl-close" id="btn-close"></div>
+      </div>
+    </div>
+
+    <div class="account-content">
+      <div class="account-head">
+        <div>
+          <div class="head-title">Warface Survivor</div>
+        </div>
+      </div>
+
+      <form class="create-form" id="create-form">
+        <div class="field">
+          <label for="username">USUARIO</label>
+          <input id="username" type="text" maxlength="20" autocomplete="username" spellcheck="false" />
+        </div>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="password">SENHA</label>
+            <input id="password" type="password" maxlength="32" autocomplete="current-password" />
+          </div>
+          <div class="field" id="confirm-field">
+            <label for="confirm-password">CONFIRMAR</label>
+            <input id="confirm-password" type="password" maxlength="32" autocomplete="new-password" />
+          </div>
+        </div>
+
+        <div class="rules" id="rules-area">
+          <div class="rule" id="rule-user">Usuario com 3 a 20 caracteres</div>
+          <div class="rule" id="rule-pass">Senha com 3 a 32 caracteres</div>
+          <div class="rule" id="rule-match">Senhas iguais</div>
+        </div>
+
+        <button class="submit-btn" id="btn-create" type="submit">CRIAR CONTA</button>
+        <div class="form-msg" id="form-msg">Cadastro conectado ao servidor oficial.</div>
+      </form>
+
+      <div class="success-panel" id="success-panel">
+        <div class="success-tag">CONTA CRIADA</div>
+        <div class="success-user" id="success-user">--</div>
+        <div class="success-id" id="success-id">ID --</div>
+        <div class="success-msg" id="success-msg">A senha nao foi salva no launcher.</div>
+        <button class="done-btn" id="btn-done">CONCLUIR</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="account-renderer.js"></script>
+</body>
+</html>

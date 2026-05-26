@@ -1,0 +1,113 @@
+adaga_ferro:
+  base:
+    material: IRON_SWORD
+    name: "<white>ᴀᴅᴀɢᴀ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: DAGGER
+    description:
+    - "<gray>ᴜᴍᴀ ᴀᴅᴀɢᴀ ʀᴀᴘɪᴅᴀ ᴅᴇ ꜰᴇʀʀᴏ,</gray>"
+    - "<gray>ᴘᴇʀꜰᴇɪᴛᴀ ᴘᴀʀᴀ ɢᴏʟᴘᴇs ᴠᴇʟᴏᴢᴇs ᴇ ꜰᴜʀᴛɪᴠᴏs.</gray>"
+    revision-id: 1
+    attack-damage: 4
+    dexterity: 2
+    attack-speed: 0.3
+    crafting:
+      enabled: true
+      recipes:
+        craft_adaga_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_ferro"
+            7: "STICK"
+
+adaga_sombria:
+  base:
+    material: IRON_SWORD
+    name: "<green>ᴀᴅᴀɢᴀ sᴏᴍʙʀɪᴀ</green>"
+    tier: UNCOMMON
+    type: DAGGER
+    description:
+    - "<gray>ꜰᴏʀᴊᴀᴅᴀ ɴᴀs sᴏᴍʙʀᴀs ᴅᴀ ɴᴏɪᴛᴇ,</gray>"
+    - "<gray>ᴇsᴛᴀ ᴀᴅᴀɢᴀ ᴇɴᴄᴏɴᴛʀᴀ ᴏs ᴘᴏɴᴛᴏs ꜰʀᴀᴄᴏs ᴅᴏ ɪɴɪᴍɪɢᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 8
+    dexterity: 4
+    critical-strike-chance: 5
+    attack-speed: 0.3
+    crafting:
+      enabled: true
+      recipes:
+        craft_adaga_sombria:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_aco"
+            4: "midgard:essencia_trevas"
+            7: "STICK"
+
+adaga_venenosa:
+  base:
+    material: DIAMOND_SWORD
+    name: "<blue>ᴀᴅᴀɢᴀ ᴠᴇɴᴇɴᴏsᴀ</blue>"
+    tier: RARE
+    type: DAGGER
+    description:
+    - "<gray>sᴜᴀ ʟᴀᴍɪɴᴀ ɢᴏᴛᴇᴊᴀ ᴜᴍ ᴠᴇɴᴇɴᴏ ᴏʙsᴄᴜʀᴏ</gray>"
+    - "<gray>ǫᴜᴇ ᴄᴏʀʀᴏᴍᴘᴇ ᴀ ᴄᴀʀɴᴇ ᴀᴏ ᴛᴏǫᴜᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 14
+    dexterity: 6
+    critical-strike-chance: 7
+    darkness-damage: 5
+    attack-speed: 0.3
+    crafting:
+      enabled: true
+      recipes:
+        craft_adaga_venenosa:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_mithril"
+            4: "midgard:essencia_trevas"
+            7: "midgard:fragmento_alma"
+
+stiletto_noturno:
+  base:
+    material: DIAMOND_SWORD
+    name: "<purple>sᴛɪʟᴇᴛᴛᴏ ɴᴏᴛᴜʀɴᴏ</purple>"
+    tier: EPIC
+    type: DAGGER
+    description:
+    - "<gray>ᴀ ᴀʀᴍᴀ ᴘʀᴇꜰᴇʀɪᴅᴀ ᴅᴏs ᴀssᴀssɪɴᴏs ᴅᴀ ɴᴏɪᴛᴇ,</gray>"
+    - "<gray>sɪʟᴇɴᴄɪᴏsᴀ ᴇ ʟᴇᴛᴀʟ ɴᴀs sᴏᴍʙʀᴀs.</gray>"
+    revision-id: 1
+    attack-damage: 22
+    dexterity: 10
+    critical-strike-chance: 10
+    critical-strike-power: 20
+    armor-penetration: 6
+    attack-speed: 0.4
+    required-level: 35
+
+laminas_do_crepusculo:
+  base:
+    material: NETHERITE_SWORD
+    name: "<gold>ʟᴀᴍɪɴᴀs ᴅᴏ ᴄʀᴇᴘᴜsᴄᴜʟᴏ</gold>"
+    tier: LEGENDARY
+    type: DAGGER
+    description:
+    - "<gray>ʟᴀᴍɪɴᴀs ɢᴇᴍᴇᴀs ꜰᴏʀᴊᴀᴅᴀs ɴᴏ ᴄʀᴇᴘᴜsᴄᴜʟᴏ,</gray>"
+    - "<gray>ᴏɴᴅᴇ ᴀ ʟᴜᴢ ᴇ ᴀ sᴏᴍʙʀᴀ sᴇ ᴇɴᴄᴏɴᴛʀᴀᴍ.</gray>"
+    revision-id: 1
+    attack-damage: 36
+    dexterity: 15
+    critical-strike-chance: 14
+    critical-strike-power: 30
+    armor-penetration: 10
+    darkness-damage: 12
+    attack-speed: 0.5
+    required-level: 50

@@ -1,0 +1,82 @@
+name: "<green>ꜰʟᴇᴄʜᴀ ᴇɴᴠᴇɴᴇɴᴀᴅᴀ</green>"
+mythic-skill: "FlechaEnvenenada"
+spell-type: COMMON
+
+cooldown:
+  base: 8.0
+  per-level: -0.3
+mana:
+  base: 8.0
+  per-level: -0.3
+stamina: 18.0
+
+max-level: 10
+
+requirements:
+  class: "Arqueiro"
+  level: 5
+
+icon:
+  material: TIPPED_ARROW
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<green><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></green>"
+  - ""
+  - "<gray>ᴅɪsᴘᴀʀᴀ ᴜᴍᴀ ꜰʟᴇᴄʜᴀ ᴇɴᴠᴇɴᴇɴᴀᴅᴀ</gray>"
+  - "<gray>ǫᴜᴇ ᴄᴀᴜsᴀ ᴅᴀɴᴏ ᴄᴏɴᴛɪɴᴜᴏ ᴀᴏ ᴀʟᴠᴏ</gray>"
+  - "<gray>ᴘᴏʀ ᴀʟɢᴜɴs sᴇɢᴜɴᴅᴏs.</gray>"
+  - ""
+  - "<green><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></green>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ᴅᴀɴᴏ ᴅᴇ ᴠᴇɴᴇɴᴏ:<dark_green>{poison_damage}/s</dark_green>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴀʀǫᴜᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  damage:
+    base: 10.0
+    per-level: 3.0
+  poison_damage:
+    base: 3.0
+    per-level: 1.0
+
+milestones:
+  3:
+    visual: "flecha_veneno_drip"
+    mechanic-override: "FlechaEnvenenadaMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "flecha_veneno_toxic"
+    mechanic-override: "FlechaEnvenenadaMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.arrow.shoot"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "entity.spider.ambient"
+    volume: 0.8
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

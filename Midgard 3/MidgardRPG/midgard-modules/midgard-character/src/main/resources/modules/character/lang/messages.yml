@@ -1,0 +1,126 @@
+# ============================================
+# MIDGARD CHARACTER MODULE - MESSAGES
+# ============================================
+
+# ============================================
+# COMMAND
+# ============================================
+command:
+  description: "Abre o menu de atributos do personagem"
+  usage: "/rpg character"
+
+# ============================================
+# HOTBAR MESSAGES
+# ============================================
+hotbar:
+  compass_received: "<green>✔</green> <gray>ᴠᴏᴄᴇ ʀᴇᴄᴇʙᴇᴜ ᴀ ʙᴜssᴏʟᴀ ᴅᴇ ɴᴀᴠᴇɢᴀᴄᴀᴏ.</gray>"
+  compass:
+    name: "<white>ᴘᴇʀsᴏɴᴀɢᴇᴍ</white>"
+    lore:
+      - "<gray>ᴠᴇᴊᴀ ᴀs ɪɴꜰᴏʀᴍᴀᴄᴏᴇs ᴅᴏ sᴇᴜ ᴘᴇʀsᴏɴᴀɢᴇᴍ,</gray>"
+      - "<gray>ᴀᴛʀɪʙᴜᴀ ᴘᴏɴᴛᴏs ᴅᴇ ᴀᴛʀɪʙᴜᴛᴏ, ᴀᴄᴇssᴇ sᴜᴀ</gray>"
+      - "<gray>ᴀʀᴠᴏʀᴇ ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴇ ᴍᴀɪs.</gray>"
+      - ""
+      - "<gray>ᴘᴏɴᴛᴏs ᴅᴇ ᴀᴛʀɪʙᴜᴛᴏ: <white>%attribute_points%</white>"
+      - "<gray>ᴘᴏɴᴛᴏs ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ: <white>%skill_points%</white>"
+      - ""
+      - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʙʀɪʀ</gray>"
+
+# ============================================
+# MENSAGENS DE ATRIBUTOS
+# ============================================
+attributes:
+  # Level up de atributo individual
+  level_up: "<green>✔</green> <gray>ᴠᴏᴄᴇ ᴇᴠᴏʟᴜɪᴜ <aqua>%attribute%</aqua> <gray>ᴘᴀʀᴀ ᴏ ɴɪᴠᴇʟ <yellow>%level%</yellow><gray>.</gray>"
+  
+  # Recebimento de pontos
+  points_received: "<green>✔</green> <gray>ᴠᴏᴄᴇ ʀᴇᴄᴇʙᴇᴜ <yellow>%points%</yellow> <gray>ᴘᴏɴᴛᴏs ᴅᴇ ᴀᴛʀɪʙᴜᴛᴏ.</gray>"
+  points_spent: "<green>✔</green> <gray>ᴠᴏᴄᴇ ɢᴀsᴛᴏᴜ <yellow>%points%</yellow> <gray>ᴘᴏɴᴛᴏs ᴇᴍ <aqua>%attribute%</aqua><gray>.</gray>"
+  
+  # Reset
+  reset_success: "<green>✔</green> <gray>sᴇᴜs ᴀᴛʀɪʙᴜᴛᴏs ꜰᴏʀᴀᴍ ʀᴇɪɴɪᴄɪᴀᴅᴏs.</gray>"
+  reset_confirm: "<yellow>⚠</yellow> <gray>ᴛᴇᴍ ᴄᴇʀᴛᴇzᴀ? <gray>ᴅɪɢɪᴛᴇ <white>/character reset confirm</white> <gray>ᴘᴀʀᴀ ᴄᴏɴꜰɪʀᴍᴀʀ.</gray>"
+  reset_cancelled: "<yellow>⚠</yellow> <gray>ʀᴇɪɴɪᴄɪᴀʟɪzᴀᴄᴀᴏ ᴅᴇ ᴀᴛʀɪʙᴜᴛᴏs ᴄᴀɴᴄᴇʟᴀᴅᴀ.</gray>"
+
+# ============================================
+# MENSAGENS DE MENU
+# ============================================
+menu:
+  # Abertura
+  opening: "<aqua>ℹ</aqua> <gray>ᴀʙʀɪɴᴅᴏ ᴍᴇɴᴜ ᴅᴇ ᴘᴇʀsᴏɴᴀɢᴇᴍ...</gray>"
+  opened: "<green>✔</green> <gray>ᴍᴇɴᴜ ᴅᴇ ᴘᴇʀsᴏɴᴀɢᴇᴍ ᴀʙᴇʀᴛᴏ.</gray>"
+  
+  # Fechamento
+  closing: "<gray>ꜰᴇᴄʜᴀɴᴅᴏ ᴍᴇɴᴜ...</gray>"
+  
+  # Navegação
+  page_changed: "<gray>ᴘᴀɢɪɴᴀ:<yellow>%page%</yellow><gray>/</gray><yellow>%max%</yellow>"
+  
+  # Ações
+  attribute_increased: "<green>✔</green> <aqua>%attribute%</aqua> <gray>ᴀᴜᴍᴇɴᴛᴀᴅᴏ ᴘᴀʀᴀ <yellow>%value%</yellow><gray>.</gray>"
+  attribute_decreased: "<green>✔</green> <aqua>%attribute%</aqua> <gray>ᴅɪᴍɪɴᴜɪᴅᴏ ᴘᴀʀᴀ <yellow>%value%</yellow><gray>.</gray>"
+  
+  # Erros no menu
+  not_enough_points: "<red>✖</red> <gray>ᴘᴏɴᴛᴏs ɪɴsᴜꜰɪᴄɪᴇɴᴛᴇs ᴘᴀʀᴀ ᴇsᴛᴀ ᴀᴄᴀᴏ.</gray>"
+  menu_error: "<red>✖</red> <gray>ᴇʀʀᴏ ᴀᴏ ᴘʀᴏᴄᴇssᴀʀ ᴀᴄᴀᴏ ɴᴏ ᴍᴇɴᴜ.</gray>"
+  title: "Informações do Personagem"
+  no_class: "Nenhuma"
+  xp_max_level: "100%"
+  
+  # Confirmações
+  changes_saved: "<green>✔</green> <gray>ᴀʟᴛᴇʀᴀᴄᴏᴇs sᴀʟᴠᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ.</gray>"
+  changes_discarded: "<yellow>⚠</yellow> <gray>ᴀʟᴛᴇʀᴀᴄᴏᴇs ᴅᴇsᴄᴀʀᴛᴀᴅᴀs.</gray>"
+
+# ============================================
+# MENSAGENS DE PERFIL
+# ============================================
+profile:
+  # Visualização
+  viewing_own: "<gray>ᴠɪsᴜᴀʟɪzᴀɴᴅᴏ sᴇᴜ ᴘᴇʀꜰɪʟ...</gray>"
+  viewing_other: "<gray>ᴠɪsᴜᴀʟɪzᴀɴᴅᴏ ᴘᴇʀꜰɪʟ ᴅᴇ <yellow>%player%</yellow>...</gray>"
+  
+  # Carregamento
+  loading: "<gray>ᴄᴀʀʀᴇɢᴀɴᴅᴏ ᴅᴀᴅᴏs ᴅᴏ ᴘᴇʀsᴏɴᴀɢᴇᴍ...</gray>"
+  loaded: "<green>✔</green> <gray>ᴅᴀᴅᴏs ᴄᴀʀʀᴇɢᴀᴅᴏs.</gray>"
+  
+  # Salvamento
+  saving: "<gray>sᴀʟᴠᴀɴᴅᴏ ᴅᴀᴅᴏs ᴅᴏ ᴘᴇʀsᴏɴᴀɢᴇᴍ...</gray>"
+  saved: "<green>✔</green> <gray>ᴅᴀᴅᴏs sᴀʟᴠᴏs ᴄᴏᴍ sᴜᴄᴇssᴏ.</gray>"
+  save_failed: "<red>✖</red> <gray>ᴇʀʀᴏ ᴀᴏ sᴀʟᴠᴀʀ ᴅᴀᴅᴏs. ᴛᴇɴᴛᴇ ɴᴏᴠᴀᴍᴇɴᴛᴇ.</gray>"
+  
+  # Criação
+  creating: "<gray>ᴄʀɪᴀɴᴅᴏ ɴᴏᴠᴏ ᴘᴇʀꜰɪʟ...</gray>"
+  created: "<green>✔</green> <gray>ᴘᴇʀꜰɪʟ ᴄʀɪᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ.</gray>"
+  
+  # Reset
+  resetting: "<yellow>⚠</yellow> <gray>ʀᴇɪɴɪᴄɪᴀɴᴅᴏ ᴘᴇʀꜰɪʟ...</gray>"
+  reset: "<green>✔</green> <gray>ᴘᴇʀꜰɪʟ ʀᴇɪɴɪᴄɪᴀᴅᴏ.</gray>"
+
+# ============================================
+# MENSAGENS DE ESTATÍSTICAS
+# ============================================
+stats:
+  # Atributos principais
+  strength: "<red>⚔ ꜰᴏʀᴄᴀ</red>"
+  dexterity: "<yellow>★ ᴅᴇsᴛʀᴇzᴀ</yellow>"
+  intelligence: "<aqua>✦ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ</aqua>"
+  defense: "<green>🛡 ᴅᴇꜰᴇsᴀ</green>"
+  agility: "<gray>⚡ ᴀɢɪʟɪᴅᴀᴅᴇ</gray>"
+  
+  # Estatísticas derivadas
+  health: "<red>❤ ᴠɪᴅᴀ</red>"
+
+# ============================================
+# ERROS GERAIS
+# ============================================
+errors:
+  player_only: "<red>✖</red> <gray>ᴀᴘᴇɴᴀs ᴊᴏɢᴀᴅᴏʀᴇs ᴘᴏᴅᴇᴍ ᴜsᴀʀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ.</gray>"
+  menu_open_failed: "<red>✖</red> <gray>ᴏᴄᴏʀʀᴇᴜ ᴜᴍ ᴇʀʀᴏ ᴀᴏ ᴀʙʀɪʀ ᴏ ᴍᴇɴᴜ.</gray>"
+  module_unavailable: "<red>✖</red> <gray>ᴍᴏᴅᴜʟᴏ ᴅᴇ ᴘᴇʀsᴏɴᴀɢᴇᴍ ɴᴀᴏ ᴇsᴛᴀ ᴅɪsᴘᴏɴɪᴠᴇʟ.</gray>"
+  insufficient_points: "<red>✖</red> <gray>ᴘᴏɴᴛᴏs ɪɴsᴜꜰɪᴄɪᴇɴᴛᴇs. <gray>ᴠᴏᴄᴇ ᴛᴇᴍ <yellow>%available%</yellow><gray>, ᴘʀᴇᴄɪsᴀ ᴅᴇ <yellow>%required%</yellow><gray>.</gray>"
+  max_level_reached: "<gold>★</gold> <gray>ᴠᴏᴄᴇ ᴀᴛɪɴɢɪᴜ ᴏ ɴɪᴠᴇʟ ᴍᴀxɪᴍᴏ ᴇᴍ <aqua>%attribute%</aqua><gray>.</gray>"
+  invalid_attribute: "<red>✖</red> <gray>ᴀᴛʀɪʙᴜᴛᴏ ɪɴᴠᴀʟɪᴅᴏ: <yellow>%attribute%</yellow>"
+  
+  # Informação
+  current_value: "<gray>%attribute%: <yellow>%value%</yellow> (ʙᴀsᴇ: <white>%base%</white> + ʙᴏɴᴜs: <green>%bonus%</green>)</gray>"
+  available_points: "<gray>ᴘᴏɴᴛᴏs ᴅɪsᴘᴏɴɪᴠᴇɪs: <yellow>%points%</yellow></gray>"

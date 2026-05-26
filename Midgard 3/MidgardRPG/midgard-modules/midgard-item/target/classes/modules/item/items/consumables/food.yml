@@ -1,0 +1,100 @@
+pao_simples:
+  base:
+    material: BREAD
+    name: "<white>ᴘᴀᴏ sɪᴍᴘʟᴇs</white>"
+    tier: COMMON
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍ ᴘᴀᴏ sɪᴍᴘʟᴇs ᴇ ꜰʀᴇsᴄᴏ,</gray>"
+    - "<gray>ɪᴅᴇᴀʟ ᴘᴀʀᴀ ᴜᴍᴀ ʀᴇꜰᴇɪᴄᴀᴏ ʀᴀᴘɪᴅᴀ.</gray>"
+    revision-id: 1
+    health-regeneration: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_pao_simples:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "WHEAT"
+            1: "WHEAT"
+            2: "WHEAT"
+
+carne_assada:
+  base:
+    material: COOKED_BEEF
+    name: "<white>ᴄᴀʀɴᴇ ᴀssᴀᴅᴀ</white>"
+    tier: COMMON
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴄᴀʀɴᴇ ᴀssᴀᴅᴀ ɴᴏ ꜰᴏɢᴏ,</gray>"
+    - "<gray>sᴜᴄᴜʟᴇɴᴛᴀ ᴇ ɴᴜᴛʀɪᴛɪᴠᴀ.</gray>"
+    revision-id: 1
+    health-regeneration: 3
+    stamina-regeneration: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_carne_assada:
+          type: FURNACE
+          output: 1
+          experience: 1.0
+          duration: 200
+          ingredients:
+            0: "BEEF"
+
+ensopado_nutritivo:
+  base:
+    material: MUSHROOM_STEW
+    name: "<green>ᴇɴsᴏᴘᴀᴅᴏ ɴᴜᴛʀɪᴛɪᴠᴏ</green>"
+    tier: UNCOMMON
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍ ᴇɴsᴏᴘᴀᴅᴏ ʀɪᴄᴏ ᴇᴍ</gray>"
+    - "<gray>ᴇʀᴠᴀs ᴇ ᴄᴏɢᴜᴍᴇʟᴏs ᴅᴀ ꜰʟᴏʀᴇsᴛᴀ.</gray>"
+    revision-id: 1
+    health-regeneration: 5
+    max-health: 5
+    stamina-regeneration: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_ensopado_nutritivo:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "RED_MUSHROOM"
+            1: "BROWN_MUSHROOM"
+            2: "midgard:couro_curtido"
+            3: "CARROT"
+
+torta_elfica:
+  base:
+    material: PUMPKIN_PIE
+    name: "<blue>ᴛᴏʀᴛᴀ ᴇʟꜰɪᴄᴀ</blue>"
+    tier: RARE
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴛᴏʀᴛᴀ ᴘʀᴇᴘᴀʀᴀᴅᴀ ᴄᴏᴍ</gray>"
+    - "<gray>ʀᴇᴄᴇɪᴛᴀs ᴀɴᴛɪɢᴀs ᴅᴏs ᴇʟꜰᴏs.</gray>"
+    revision-id: 1
+    health-regeneration: 8
+    mana-regeneration: 5
+    max-health: 10
+
+maca_dourada:
+  base:
+    material: GOLDEN_APPLE
+    name: "<purple>ᴍᴀᴄᴀ ᴅᴏᴜʀᴀᴅᴀ</purple>"
+    tier: EPIC
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴍᴀᴄᴀ ʙᴀɴʜᴀᴅᴀ ᴇᴍ ᴏᴜʀᴏ,</gray>"
+    - "<gray>ᴄᴏɴᴄᴇᴅᴇ ᴠɪɢᴏʀ ᴇ ᴘʀᴏᴛᴇᴄᴀᴏ.</gray>"
+    revision-id: 1
+    health-regeneration: 15
+    max-health: 20
+    damage-reduction: 3
+    required-level: 25

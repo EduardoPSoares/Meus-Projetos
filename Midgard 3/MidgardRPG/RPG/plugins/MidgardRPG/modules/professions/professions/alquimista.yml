@@ -1,0 +1,103 @@
+# ============================================
+# ALQUIMISTA - Definição e Recompensas
+# ============================================
+
+definition:
+  menu-icon: BREWING_STAND
+  gradient: "<gradient:#8b5cf6:#6d28d9>"
+  description: "Crie poções, reagentes e compostos alquímicos para ganhar XP."
+  bonuses:
+    - "<green>▸ Duração de poções</green>"
+    - "<green>▸ Potência de efeitos</green>"
+    - "<green>▸ Eficiência de destilação</green>"
+    - "<green>▸ Chance de criação extra</green>"
+  xp-source-icon: POTION
+  extra-button-icon: DRAGON_BREATH
+  extra-button-name: "<dark_purple>Laboratório Alquímico"
+  extra-button-lore:
+    - "<gray>Acesse seus experimentos"
+    - "<gray>e fórmulas alquímicas."
+
+rewards:
+  1:
+    name: "Aprendiz Alquimista"
+    bonuses:
+      - "+2% duração de poções"
+  5:
+    bonuses:
+      - "+5% duração de poções"
+      - "+3% potência de efeitos"
+  10:
+    name: "Alquimista"
+    bonuses:
+      - "+10% duração de poções"
+    ability: "Destilação Precisa"
+    ability-desc: "Poções criadas têm efeito 15% mais forte."
+  25:
+    name: "Boticário"
+    bonuses:
+      - "+5% eficiência de destilação"
+    ability: "Mistura Dupla"
+    ability-desc: "Chance de 10% de criar duas poções por vez."
+  50:
+    name: "Mestre Alquimista"
+    bonuses:
+      - "+30% duração de poções"
+    ability: "Essência Refinada"
+    ability-desc: "Poções ganham efeito secundário bônus."
+  75:
+    name: "Grão-Mestre Alquimista"
+    bonuses:
+      - "+10% potência de efeitos"
+    perks:
+      - "Chance de não consumir reagentes"
+  100:
+    name: "Lenda da Alquimia"
+    bonuses:
+      - "+50% duração de poções"
+    ability: "Catalisador Instável"
+    ability-desc: "Poções aleatoriamente ganham potência triplicada."
+    perks:
+      - "Título: Lenda da Alquimia"
+
+# ============================================
+# FONTES DE XP
+# ============================================
+# brew: XP ao criar poções (base-xp por brew)
+# block-break: XP ao coletar ingredientes
+# craft: XP ao preparar reagentes
+xp-config:
+  brew:
+    base-xp: 12.0
+  block-break:
+    NETHER_WART: 4.0
+    BROWN_MUSHROOM: 3.0
+    RED_MUSHROOM: 3.0
+  craft:
+    BLAZE_POWDER: 5.0
+    FERMENTED_SPIDER_EYE: 6.0
+    MAGMA_CREAM: 5.0
+    GLISTERING_MELON_SLICE: 5.0
+    GOLDEN_CARROT: 5.0
+
+# ============================================
+# PENALIDADES PARA NÃO-ALQUIMISTAS
+# ============================================
+# Jogadores sem a profissão de Alquimista ativa sofrem estas penalidades
+# ao preparar poções e coletar ingredientes.
+penalties:
+  enabled: true
+  show-message: true
+  affected-materials: []
+
+  # Penalidade ao coletar ingredientes
+  block:
+    drop-chance: 0.50          # 50% de chance de dropar
+
+  # Penalidade ao preparar reagentes
+  craft:
+    fail-chance: 0.20          # 20% de chance de falhar craft
+
+  # Penalidade ao fazer poções
+  brew:
+    fail-chance: 0.35          # 35% de chance da poção falhar (vira garrafa vazia)

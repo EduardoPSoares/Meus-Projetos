@@ -1,0 +1,5 @@
+me\ray\midgard\modules\character\CharacterModuleTest.class
+me\ray\midgard\modules\character\command\CharacterCommandTest.class
+me\ray\midgard\modules\character\gui\CharacterMenuTest.class
+me\ray\midgard\modules\character\listener\HotbarListenerTest.class
+me\ray\midgard\modules\character\i18n\CharacterMessagesTest.class

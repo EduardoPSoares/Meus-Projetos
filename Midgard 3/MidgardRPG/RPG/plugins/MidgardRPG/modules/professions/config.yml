@@ -1,0 +1,361 @@
+# ============================================
+# MIDGARD PROFESSIONS MODULE - CONFIGURATION
+# ============================================
+
+# ============================================
+# PROFESSIONS - CONFIGURAÇÃO GERAL
+# ============================================
+professions:
+  # Nível máximo de todas as profissões
+  max-level: 100
+
+  # Multiplicador global de XP (1.0 = normal)
+  xp-multiplier: 1.0
+
+  # BossBar de XP (aparece ao ganhar XP)
+  xp-bar:
+    enabled: true
+    display-ticks: 60     # Tempo visível (60 = 3 segundos)
+
+  # Sistema de penalidades para não-profissionais
+  # Quando habilitado, jogadores sem a profissão ativa sofrem penalidades
+  # configuradas em cada YML de profissão (seção 'penalties')
+  penalties:
+    enabled: true         # Toggle global — desativa TODAS as penalidades
+    message-cooldown-ms: 3000  # Cooldown entre mensagens de penalidade (evita spam, em ms)
+
+  # Profissões habilitadas (desabilitar aqui não carrega a profissão)
+  enabled:
+    ferreiro: true
+    agricultor: true
+    arcanista: true
+    carpinteiro: true
+    minerador: true
+    alquimista: true
+    pescador: true
+    cozinheiro: true
+    medico: true
+    cartografo: true
+
+# ============================================
+# SMELTERY - SMELTING RECIPES
+# ============================================
+# Each recipe maps a solid item (Material) to molten metal output.
+# output_amount in millibuckets (mb). 1 ingot = 144mb.
+# smelt_time in ticks (20 ticks = 1 second).
+# min_temperature in °C.
+smeltery:
+  smelting_recipes:
+    # === Ingots → 144mb ===
+    iron_ingot:
+      input: IRON_INGOT
+      output: IRON
+      output_amount: 144
+      smelt_time: 100
+      min_temperature: 800
+    iron_ore:
+      input: RAW_IRON
+      output: IRON
+      output_amount: 144
+      smelt_time: 140
+      min_temperature: 800
+    iron_block:
+      input: IRON_BLOCK
+      output: IRON
+      output_amount: 1296
+      smelt_time: 300
+      min_temperature: 800
+
+    gold_ingot:
+      input: GOLD_INGOT
+      output: GOLD
+      output_amount: 144
+      smelt_time: 80
+      min_temperature: 600
+    gold_ore:
+      input: RAW_GOLD
+      output: GOLD
+      output_amount: 144
+      smelt_time: 120
+      min_temperature: 600
+    gold_block:
+      input: GOLD_BLOCK
+      output: GOLD
+      output_amount: 1296
+      smelt_time: 250
+      min_temperature: 600
+
+    copper_ingot:
+      input: COPPER_INGOT
+      output: COPPER
+      output_amount: 144
+      smelt_time: 90
+      min_temperature: 600
+    copper_ore:
+      input: RAW_COPPER
+      output: COPPER
+      output_amount: 144
+      smelt_time: 130
+      min_temperature: 600
+    copper_block:
+      input: COPPER_BLOCK
+      output: COPPER
+      output_amount: 1296
+      smelt_time: 280
+      min_temperature: 600
+
+    netherite_scrap:
+      input: NETHERITE_SCRAP
+      output: NETHERITE_SCRAP
+      output_amount: 144
+      smelt_time: 200
+      min_temperature: 1500
+
+    # === Gems ===
+    diamond:
+      input: DIAMOND
+      output: DIAMOND
+      output_amount: 666
+      smelt_time: 160
+      min_temperature: 1000
+    diamond_block:
+      input: DIAMOND_BLOCK
+      output: DIAMOND
+      output_amount: 5994
+      smelt_time: 500
+      min_temperature: 1000
+
+    emerald:
+      input: EMERALD
+      output: EMERALD
+      output_amount: 666
+      smelt_time: 120
+      min_temperature: 800
+    emerald_block:
+      input: EMERALD_BLOCK
+      output: EMERALD
+      output_amount: 5994
+      smelt_time: 400
+      min_temperature: 800
+
+    amethyst:
+      input: AMETHYST_SHARD
+      output: AMETHYST
+      output_amount: 250
+      smelt_time: 100
+      min_temperature: 700
+
+    quartz:
+      input: QUARTZ
+      output: QUARTZ
+      output_amount: 250
+      smelt_time: 80
+      min_temperature: 600
+    quartz_block:
+      input: QUARTZ_BLOCK
+      output: QUARTZ
+      output_amount: 1000
+      smelt_time: 250
+      min_temperature: 600
+
+    lapis:
+      input: LAPIS_LAZULI
+      output: LAPIS
+      output_amount: 100
+      smelt_time: 60
+      min_temperature: 500
+    lapis_block:
+      input: LAPIS_BLOCK
+      output: LAPIS
+      output_amount: 900
+      smelt_time: 200
+      min_temperature: 500
+
+    redstone:
+      input: REDSTONE
+      output: REDSTONE
+      output_amount: 100
+      smelt_time: 50
+      min_temperature: 400
+    redstone_block:
+      input: REDSTONE_BLOCK
+      output: REDSTONE
+      output_amount: 900
+      smelt_time: 180
+      min_temperature: 400
+
+    # === Tools/Armor melt into base metals ===
+    iron_sword:
+      input: IRON_SWORD
+      output: IRON
+      output_amount: 288
+      smelt_time: 120
+      min_temperature: 800
+    iron_pickaxe:
+      input: IRON_PICKAXE
+      output: IRON
+      output_amount: 432
+      smelt_time: 150
+      min_temperature: 800
+    iron_axe:
+      input: IRON_AXE
+      output: IRON
+      output_amount: 432
+      smelt_time: 150
+      min_temperature: 800
+    iron_shovel:
+      input: IRON_SHOVEL
+      output: IRON
+      output_amount: 144
+      smelt_time: 80
+      min_temperature: 800
+    iron_helmet:
+      input: IRON_HELMET
+      output: IRON
+      output_amount: 720
+      smelt_time: 180
+      min_temperature: 800
+    iron_chestplate:
+      input: IRON_CHESTPLATE
+      output: IRON
+      output_amount: 1152
+      smelt_time: 220
+      min_temperature: 800
+    iron_leggings:
+      input: IRON_LEGGINGS
+      output: IRON
+      output_amount: 1008
+      smelt_time: 200
+      min_temperature: 800
+    iron_boots:
+      input: IRON_BOOTS
+      output: IRON
+      output_amount: 576
+      smelt_time: 160
+      min_temperature: 800
+
+    gold_sword:
+      input: GOLDEN_SWORD
+      output: GOLD
+      output_amount: 288
+      smelt_time: 100
+      min_temperature: 600
+    gold_pickaxe:
+      input: GOLDEN_PICKAXE
+      output: GOLD
+      output_amount: 432
+      smelt_time: 130
+      min_temperature: 600
+    gold_helmet:
+      input: GOLDEN_HELMET
+      output: GOLD
+      output_amount: 720
+      smelt_time: 160
+      min_temperature: 600
+    gold_chestplate:
+      input: GOLDEN_CHESTPLATE
+      output: GOLD
+      output_amount: 1152
+      smelt_time: 200
+      min_temperature: 600
+    gold_leggings:
+      input: GOLDEN_LEGGINGS
+      output: GOLD
+      output_amount: 1008
+      smelt_time: 180
+      min_temperature: 600
+    gold_boots:
+      input: GOLDEN_BOOTS
+      output: GOLD
+      output_amount: 576
+      smelt_time: 140
+      min_temperature: 600
+
+    diamond_sword:
+      input: DIAMOND_SWORD
+      output: DIAMOND
+      output_amount: 1332
+      smelt_time: 200
+      min_temperature: 1000
+    diamond_pickaxe:
+      input: DIAMOND_PICKAXE
+      output: DIAMOND
+      output_amount: 1998
+      smelt_time: 250
+      min_temperature: 1000
+    diamond_helmet:
+      input: DIAMOND_HELMET
+      output: DIAMOND
+      output_amount: 3330
+      smelt_time: 300
+      min_temperature: 1000
+    diamond_chestplate:
+      input: DIAMOND_CHESTPLATE
+      output: DIAMOND
+      output_amount: 5328
+      smelt_time: 400
+      min_temperature: 1000
+
+  # ============================================
+  # SMELTERY - ALLOY RECIPES
+  # ============================================
+  # Alloys form automatically when the required metals
+  # are present in the tank at the correct temperature.
+  alloy_recipes:
+    bronze:
+      result: BRONZE
+      result_amount: 576
+      min_temperature: 700
+      ingredients:
+        COPPER: 432
+        GOLD: 144
+
+    steel:
+      result: STEEL
+      result_amount: 288
+      min_temperature: 1200
+      ingredients:
+        IRON: 288
+        QUARTZ: 250
+
+    manyullyn:
+      result: MANYULLYN
+      result_amount: 288
+      min_temperature: 2000
+      ingredients:
+        NETHERITE_SCRAP: 144
+        DIAMOND: 666
+
+    obsidian_alloy:
+      result: OBSIDIAN_ALLOY
+      result_amount: 288
+      min_temperature: 1500
+      ingredients:
+        IRON: 144
+        REDSTONE: 200
+        LAPIS: 200
+
+    rose_gold:
+      result: ROSE_GOLD
+      result_amount: 288
+      min_temperature: 700
+      ingredients:
+        GOLD: 216
+        COPPER: 72
+
+    electrum:
+      result: ELECTRUM
+      result_amount: 288
+      min_temperature: 800
+      ingredients:
+        GOLD: 144
+        IRON: 144
+
+    knightslime:
+      result: KNIGHTSLIME
+      result_amount: 432
+      min_temperature: 1200
+      ingredients:
+        IRON: 144
+        AMETHYST: 250
+        EMERALD: 666

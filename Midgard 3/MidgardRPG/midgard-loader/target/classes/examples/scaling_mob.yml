@@ -1,0 +1,52 @@
+# ==============================================================================
+# EXEMPLO DE MOB COM ESCALAMENTO DE NÍVEL (MIDGARD RPG)
+# ==============================================================================
+# Este arquivo demonstra como criar mobs que se adaptam ao nível dos jogadores.
+#
+# Mecânica: midgard-scale
+# - mode: AVERAGE (Média), HIGHEST (Maior), LOWEST (Menor), NEAREST (Mais próximo)
+# - radius: Raio de busca de jogadores (Padrão: 30)
+# - add: Valor fixo a adicionar ao nível calculado (Padrão: 0)
+# - multiplier: Multiplicador do nível calculado (Padrão: 1.0)
+#
+# IMPORTANTE: O mob deve ter configuração de LevelModifiers não MythicMobs para
+# que o nível realmente afete seus atributos (Vida, Dano, etc).
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Guardião da Masmorra (Escalável)
+# Este mob terá o nível igual à média dos jogadores próximos + 2.
+# Se os jogadores forem Nível 10, o mob será Nível 12.
+# ------------------------------------------------------------------------------
+DungeonGuardian:
+  Type: IRON_GOLEM
+  Display: '<dark_gray>Guardião da Masmorra <gray>[Lvl <mob.level>]'
+  Health: 100
+  Damage: 10
+  # Configuração padrão do MythicMobs para escalamento
+  LevelModifiers:
+    Health: 20  # +20 Vida por nível
+    Damage: 2   # +2 Dano por nível
+    Power: 0.1  # +0.1 Power por nível
+  Skills:
+  # Calcula e define o nível ao nascer
+  - midgard-scale{mode=AVERAGE;radius=50;add=2} @self ~onSpawn
+  
+  # Dá experiência de CLASSE ao morrer (além da exp normal)
+  - midgard-give-class-exp{amount=50} @Trigger ~onDeath
+
+# ------------------------------------------------------------------------------
+# 2. Assassino de Novatos
+# Este mob foca não jogador de nível mais BAIXO e escala com ele.
+# ------------------------------------------------------------------------------
+NoobSlayer:
+  Type: ZOMBIE
+  Display: '<red>Assassino Cruel <gray>[Lvl <mob.level>]'
+  Health: 50
+  Damage: 5
+  LevelModifiers:
+    Health: 10
+    Damage: 1
+  Skills:
+  - midgard-scale{mode=LOWEST;radius=30} @self ~onSpawn
+  - message{m="<red>Eu sinto o cheiro de sangue fraco..."} @PlayersInRadius{r=30} ~onSpawn

@@ -1,0 +1,78 @@
+name: "<green>ᴄʜᴜᴠᴀ ᴅᴇ ꜰʟᴇᴄʜᴀs</green>"
+mythic-skill: "ChuvaDeFlechas"
+spell-type: COMMON
+
+cooldown:
+  base: 10.0
+  per-level: -0.3
+mana:
+  base: 10.0
+  per-level: -0.3
+stamina: 20.0
+
+max-level: 10
+
+requirements:
+  class: "Arqueiro"
+  level: 3
+
+icon:
+  material: SPECTRAL_ARROW
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<green><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></green>"
+  - ""
+  - "<gray>ᴅɪsᴘᴀʀᴀ ᴜᴍᴀ ᴄʜᴜᴠᴀ ᴅᴇ ꜰʟᴇᴄʜᴀs</gray>"
+  - "<gray>sᴏʙʀᴇ ᴜᴍᴀ ᴀʀᴇᴀ, ᴀᴛɪɴɢɪɴᴅᴏ ᴛᴏᴅᴏs</gray>"
+  - "<gray>ᴏs ɪɴɪᴍɪɢᴏs ɴᴏ ʟᴏᴄᴀʟ.</gray>"
+  - ""
+  - "<green><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></green>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴀʀǫᴜᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>3</yellow>"
+
+variables:
+  damage:
+    base: 18.0
+    per-level: 4.0
+
+milestones:
+  3:
+    visual: "chuva_flechas_light"
+    mechanic-override: "ChuvaDeFlechasMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "chuva_flechas_storm"
+    mechanic-override: "ChuvaDeFlechasMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.arrow.shoot"
+    volume: 1.0
+    pitch: 0.8
+  cast-finish:
+    sound: "entity.arrow.hit_player"
+    volume: 1.0
+    pitch: 0.6
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

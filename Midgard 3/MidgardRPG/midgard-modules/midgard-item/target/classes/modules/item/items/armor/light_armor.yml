@@ -1,0 +1,305 @@
+# ============================================
+# Light Armor Sets - Rogues/Archers
+# ============================================
+
+# --- Couro Set (COMMON) ---
+
+couro_elmo:
+  base:
+    material: LEATHER_HELMET
+    name: "<white>ᴇʟᴍᴏ ᴅᴇ ᴄᴏᴜʀᴏ</white>"
+    tier: COMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴜᴍ ᴇʟᴍᴏ sɪᴍᴘʟᴇs ᴅᴇ ᴄᴏᴜʀᴏ ᴄᴜʀᴛɪᴅᴏ,</gray>"
+    - "<gray>ᴏꜰᴇʀᴇᴄᴇ ᴘʀᴏᴛᴇᴄᴀᴏ ʙᴀsɪᴄᴀ.</gray>"
+    revision-id: 1
+    armor: 2
+    defense: 1
+    dexterity: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_couro_elmo:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:couro_curtido"
+            1: "midgard:couro_curtido"
+            2: "midgard:couro_curtido"
+            3: "midgard:couro_curtido"
+            5: "midgard:couro_curtido"
+
+couro_peitoral:
+  base:
+    material: LEATHER_CHESTPLATE
+    name: "<white>ᴘᴇɪᴛᴏʀᴀʟ ᴅᴇ ᴄᴏᴜʀᴏ</white>"
+    tier: COMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴜᴍ ᴘᴇɪᴛᴏʀᴀʟ ʟᴇᴠᴇ ᴅᴇ ᴄᴏᴜʀᴏ,</gray>"
+    - "<gray>ᴘᴇʀᴍɪᴛᴇ ᴍᴏᴠɪᴍᴇɴᴛᴏs ᴀɢᴇɪs.</gray>"
+    revision-id: 1
+    armor: 3
+    defense: 2
+    dexterity: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_couro_peitoral:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:couro_curtido"
+            2: "midgard:couro_curtido"
+            3: "midgard:couro_curtido"
+            4: "midgard:couro_curtido"
+            5: "midgard:couro_curtido"
+            6: "midgard:couro_curtido"
+            7: "midgard:couro_curtido"
+            8: "midgard:couro_curtido"
+
+couro_calcas:
+  base:
+    material: LEATHER_LEGGINGS
+    name: "<white>ᴄᴀʟᴄᴀs ᴅᴇ ᴄᴏᴜʀᴏ</white>"
+    tier: COMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ᴅᴇ ᴄᴏᴜʀᴏ ꜰʟᴇxɪᴠᴇɪs,</gray>"
+    - "<gray>ɪᴅᴇᴀɪs ᴘᴀʀᴀ ᴍᴏᴠɪᴍᴇɴᴛᴏs ʀᴀᴘɪᴅᴏs.</gray>"
+    revision-id: 1
+    armor: 2
+    defense: 1
+    dexterity: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_couro_calcas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:couro_curtido"
+            1: "midgard:couro_curtido"
+            2: "midgard:couro_curtido"
+            3: "midgard:couro_curtido"
+            5: "midgard:couro_curtido"
+            6: "midgard:couro_curtido"
+            8: "midgard:couro_curtido"
+
+couro_botas:
+  base:
+    material: LEATHER_BOOTS
+    name: "<white>ʙᴏᴛᴀs ᴅᴇ ᴄᴏᴜʀᴏ</white>"
+    tier: COMMON
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ʟᴇᴠᴇs ᴅᴇ ᴄᴏᴜʀᴏ,</gray>"
+    - "<gray>ᴘᴇʀᴍɪᴛᴇᴍ ᴘᴀssᴏs sɪʟᴇɴᴄɪᴏsᴏs.</gray>"
+    revision-id: 1
+    armor: 2
+    defense: 1
+    movement-speed: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_couro_botas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            3: "midgard:couro_curtido"
+            5: "midgard:couro_curtido"
+            6: "midgard:couro_curtido"
+            8: "midgard:couro_curtido"
+
+# --- Caçador Set (UNCOMMON) ---
+
+cacador_capuz:
+  base:
+    material: CHAINMAIL_HELMET
+    name: "<green>ᴄᴀᴘᴜᴢ ᴅᴏ ᴄᴀᴄᴀᴅᴏʀ</green>"
+    tier: UNCOMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴄᴀᴘᴜᴢ ᴅᴏs ᴄᴀᴄᴀᴅᴏʀᴇs ᴅᴀ ꜰʟᴏʀᴇsᴛᴀ,</gray>"
+    - "<gray>ᴀɢᴜᴄᴀ ᴏs sᴇɴᴛɪᴅᴏs ᴅᴏ ᴘᴏʀᴛᴀᴅᴏʀ.</gray>"
+    revision-id: 1
+    armor: 4
+    defense: 3
+    dexterity: 3
+    dodge-rating: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_cacador_capuz:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:tecido_encantado"
+            1: "midgard:tecido_encantado"
+            2: "midgard:tecido_encantado"
+            3: "midgard:couro_curtido"
+            5: "midgard:couro_curtido"
+
+cacador_peitoral:
+  base:
+    material: CHAINMAIL_CHESTPLATE
+    name: "<green>ᴘᴇɪᴛᴏʀᴀʟ ᴅᴏ ᴄᴀᴄᴀᴅᴏʀ</green>"
+    tier: UNCOMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴘᴇɪᴛᴏʀᴀʟ ʀᴇꜰᴏʀᴄᴀᴅᴏ ᴄᴏᴍ ᴄᴏᴜʀᴏ ᴅᴇ ᴄᴀᴄᴀ,</gray>"
+    - "<gray>ᴘʀᴏᴛᴇɢᴇ sᴇᴍ ʟɪᴍɪᴛᴀʀ ᴏ ᴍᴏᴠɪᴍᴇɴᴛᴏ.</gray>"
+    revision-id: 1
+    armor: 6
+    defense: 5
+    dexterity: 4
+    dodge-rating: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_cacador_peitoral:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:tecido_encantado"
+            2: "midgard:tecido_encantado"
+            3: "midgard:couro_curtido"
+            4: "midgard:tecido_encantado"
+            5: "midgard:couro_curtido"
+            6: "midgard:couro_curtido"
+            7: "midgard:tecido_encantado"
+            8: "midgard:couro_curtido"
+
+cacador_calcas:
+  base:
+    material: CHAINMAIL_LEGGINGS
+    name: "<green>ᴄᴀʟᴄᴀs ᴅᴏ ᴄᴀᴄᴀᴅᴏʀ</green>"
+    tier: UNCOMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ʀᴇsɪsᴛᴇɴᴛᴇs ᴅᴇ ᴄᴀᴄᴀᴅᴏʀ,</gray>"
+    - "<gray>ꜰᴇɪᴛᴀs ᴘᴀʀᴀ ᴘᴇʀsᴇɢᴜɪʀ ᴘʀᴇsᴀs.</gray>"
+    revision-id: 1
+    armor: 5
+    defense: 4
+    dexterity: 3
+    dodge-rating: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_cacador_calcas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:tecido_encantado"
+            1: "midgard:tecido_encantado"
+            2: "midgard:tecido_encantado"
+            3: "midgard:couro_curtido"
+            5: "midgard:couro_curtido"
+            6: "midgard:couro_curtido"
+            8: "midgard:couro_curtido"
+
+cacador_botas:
+  base:
+    material: CHAINMAIL_BOOTS
+    name: "<green>ʙᴏᴛᴀs ᴅᴏ ᴄᴀᴄᴀᴅᴏʀ</green>"
+    tier: UNCOMMON
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ᴀɢᴇɪs ᴅᴏ ᴄᴀᴄᴀᴅᴏʀ,</gray>"
+    - "<gray>ᴘᴇʀᴍɪᴛᴇᴍ ᴄᴏʀʀᴇʀ ᴘᴇʟᴀ ꜰʟᴏʀᴇsᴛᴀ.</gray>"
+    revision-id: 1
+    armor: 4
+    defense: 3
+    dexterity: 2
+    movement-speed: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_cacador_botas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            3: "midgard:tecido_encantado"
+            5: "midgard:tecido_encantado"
+            6: "midgard:couro_curtido"
+            8: "midgard:couro_curtido"
+
+# --- Sombra Set (EPIC) ---
+
+sombra_capuz:
+  base:
+    material: DIAMOND_HELMET
+    name: "<purple>ᴄᴀᴘᴜᴢ ᴅᴀs sᴏᴍʙʀᴀs</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴄᴀᴘᴜᴢ ᴅᴏs ᴀssᴀssɪɴᴏs ᴅᴀs sᴏᴍʙʀᴀs,</gray>"
+    - "<gray>ᴏᴄᴜʟᴛᴀ ᴏ ᴘᴏʀᴛᴀᴅᴏʀ ɴᴀ ᴇsᴄᴜʀɪᴅᴀᴏ.</gray>"
+    revision-id: 1
+    armor: 14
+    defense: 10
+    dexterity: 8
+    dodge-rating: 5
+    critical-strike-chance: 3
+    required-level: 35
+
+sombra_peitoral:
+  base:
+    material: DIAMOND_CHESTPLATE
+    name: "<purple>ᴘᴇɪᴛᴏʀᴀʟ ᴅᴀs sᴏᴍʙʀᴀs</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ᴛᴇᴄɪᴅᴏ ɪᴍʙᴜɪᴅᴏ ᴄᴏᴍ ᴇssᴇɴᴄɪᴀ sᴏᴍʙʀɪᴀ,</gray>"
+    - "<gray>ᴘᴇʀᴍɪᴛᴇ ɢᴏʟᴘᴇs ꜰᴜʀᴛɪᴠᴏs ᴍᴏʀᴛᴀɪs.</gray>"
+    revision-id: 1
+    armor: 20
+    defense: 15
+    dexterity: 10
+    dodge-rating: 6
+    critical-strike-chance: 4
+    required-level: 35
+
+sombra_calcas:
+  base:
+    material: DIAMOND_LEGGINGS
+    name: "<purple>ᴄᴀʟᴄᴀs ᴅᴀs sᴏᴍʙʀᴀs</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ᴇɴᴄᴀɴᴛᴀᴅᴀs ᴄᴏᴍ ᴍᴀɢɪᴀ sᴏᴍʙʀɪᴀ,</gray>"
+    - "<gray>ᴘᴇʀᴍɪᴛᴇᴍ ᴇsǫᴜɪᴠᴀs ᴀɢᴇɪs.</gray>"
+    revision-id: 1
+    armor: 17
+    defense: 13
+    dexterity: 9
+    dodge-rating: 5
+    critical-strike-chance: 3
+    required-level: 35
+
+sombra_botas:
+  base:
+    material: DIAMOND_BOOTS
+    name: "<purple>ʙᴏᴛᴀs ᴅᴀs sᴏᴍʙʀᴀs</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs sɪʟᴇɴᴄɪᴏsᴀs ᴅᴀs sᴏᴍʙʀᴀs,</gray>"
+    - "<gray>ᴏ ᴘᴏʀᴛᴀᴅᴏʀ sᴇ ᴍᴏᴠᴇ ᴄᴏᴍᴏ ᴏ ᴠᴇɴᴛᴏ.</gray>"
+    revision-id: 1
+    armor: 13
+    defense: 9
+    dexterity: 7
+    movement-speed: 5
+    dodge-rating: 4
+    required-level: 35

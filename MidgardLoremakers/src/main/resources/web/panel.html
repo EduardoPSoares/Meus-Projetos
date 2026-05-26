@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midgard LoreMaker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/panel.css">
+</head>
+<body>
+<a href="#main-content" class="skip-to-content">Pular para conteudo</a>
+<div class="app">
+    <button id="mobile-menu-toggle" class="mobile-menu-toggle hidden" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">
+        <svg class="hamburger-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
+        <svg class="close-icon hidden" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    </button>
+    <div id="mobile-overlay" class="mobile-overlay hidden"></div>
+    <aside id="sidebar" class="sidebar" role="complementary" aria-label="Navegacao lateral">
+        <div class="sidebar-brand">
+            <svg class="brand-icon" viewBox="0 0 32 32" fill="none">
+                <rect width="32" height="32" rx="8" fill="#8b5cf6"/>
+                <path d="M8 10h16v2H8zm0 5h12v2H8zm0 5h14v2H8z" fill="#fff"/>
+            </svg>
+            <div>
+                <strong>LoreMaker</strong>
+                <span>Midgard Studio</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Menu principal">
+            <button id="nav-dashboard" class="nav-btn active" type="button" aria-current="page">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+                <span>Inicio</span>
+            </button>
+            <button id="nav-library" class="nav-btn" type="button">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V14a1 1 0 11-2 0V4.804z"/></svg>
+                <span>Biblioteca</span>
+            </button>
+            <button id="nav-editor" class="nav-btn" type="button">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/></svg>
+                <span>Editor</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-section-header">
+                <span>Categorias</span>
+                <div class="sidebar-section-actions">
+                    <button id="sidebar-create-category-button" class="sidebar-section-icon-btn" type="button" title="Nova categoria">+</button>
+                    <span id="sidebar-category-count" class="count-badge">0</span>
+                </div>
+            </div>
+            <div id="sidebar-category-list" class="sidebar-categories"></div>
+        </div>
+
+        <div class="sidebar-spacer"></div>
+
+        <button id="sidebar-new-book-button" class="new-book-btn" type="button">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+            Novo livro
+        </button>
+
+        <div class="sidebar-session">
+            <div class="session-avatar">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
+            </div>
+            <div class="session-info">
+                <strong id="session-player">Carregando...</strong>
+                <span id="session-expiry">Verificando sessao</span>
+            </div>
+        </div>
+    </aside>
+
+    <main id="main-content" class="main" role="main">
+        <header class="header">
+            <div class="header-left">
+                <div class="header-titles">
+                    <span id="topbar-kicker" class="header-kicker">PAINEL</span>
+                    <h1 id="topbar-title">Carregando studio</h1>
+                </div>
+                <p id="topbar-subtitle" class="header-subtitle">Preparando o workspace...</p>
+            </div>
+            <div class="header-right">
+                <button id="theme-toggle" class="theme-toggle" type="button" title="Alternar tema">
+                    <svg class="icon-moon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+                </button>
+                <div class="search-wrapper">
+                    <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/></svg>
+                    <input id="global-search-input" type="search" placeholder="Buscar livros, categorias...">
+                </div>
+            </div>
+        </header>
+
+        <section id="view-dashboard" class="view" aria-label="Painel principal">
+            <div class="dashboard">
+                <div class="stats-row">
+                    <div class="stat-card stat-books">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                        </div>
+                        <div class="stat-data">
+                            <span class="stat-value" id="metric-books">0</span>
+                            <span class="stat-label">Livros</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-pages">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        </div>
+                        <div class="stat-data">
+                            <span class="stat-value" id="metric-pages">0</span>
+                            <span class="stat-label">Paginas</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-categories">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+                        </div>
+                        <div class="stat-data">
+                            <span class="stat-value" id="metric-categories">0</span>
+                            <span class="stat-label">Categorias</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-favorites">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <div class="stat-data">
+                            <span class="stat-value" id="metric-favorites">0</span>
+                            <span class="stat-label">Favoritos</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-shared">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                        </div>
+                        <div class="stat-data">
+                            <span class="stat-value" id="metric-shared">0</span>
+                            <span class="stat-label">Compartilhados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hero-content">
+                        <h2>Bem-vindo ao seu studio</h2>
+                        <p>Organize suas historias em livros, separe por categorias e escreva pagina por pagina. Tudo salvo no servidor.</p>
+                        <div class="hero-actions">
+                            <button id="dashboard-new-book-button" class="btn btn-primary" type="button">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                                Criar novo livro
+                            </button>
+                            <button id="dashboard-open-library-button" class="btn btn-ghost" type="button">Ver biblioteca</button>
+                        </div>
+                    </div>
+                    <div class="hero-illustration">
+                        <svg viewBox="0 0 200 160" fill="none">
+                            <rect x="20" y="30" width="80" height="100" rx="4" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+                            <rect x="30" y="45" width="50" height="4" rx="2" fill="#8b5cf6" opacity="0.5"/>
+                            <rect x="30" y="55" width="60" height="3" rx="1.5" fill="#8b5cf6" opacity="0.3"/>
+                            <rect x="30" y="63" width="55" height="3" rx="1.5" fill="#8b5cf6" opacity="0.3"/>
+                            <rect x="30" y="71" width="45" height="3" rx="1.5" fill="#8b5cf6" opacity="0.3"/>
+                            <rect x="100" y="20" width="80" height="100" rx="4" fill="#fae8ff" stroke="#c084fc" stroke-width="2"/>
+                            <rect x="110" y="35" width="50" height="4" rx="2" fill="#c084fc" opacity="0.5"/>
+                            <rect x="110" y="45" width="60" height="3" rx="1.5" fill="#c084fc" opacity="0.3"/>
+                            <rect x="110" y="53" width="55" height="3" rx="1.5" fill="#c084fc" opacity="0.3"/>
+                            <rect x="110" y="61" width="45" height="3" rx="1.5" fill="#c084fc" opacity="0.3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="dashboard-columns">
+                    <div class="dashboard-col">
+                        <div class="section-card">
+                            <div class="section-header">
+                                <h3>Recentes</h3>
+                                <button id="dashboard-open-editor-button" class="btn btn-sm btn-ghost" type="button">Ir ao editor</button>
+                            </div>
+                            <div id="dashboard-recent-list" class="recent-list"></div>
+                        </div>
+                    </div>
+                    <div class="dashboard-col">
+                        <div class="section-card">
+                            <div class="section-header">
+                                <h3>Categorias</h3>
+                                <button id="dashboard-open-library-button-secondary" class="btn btn-sm btn-ghost" type="button">Ver todas</button>
+                            </div>
+                            <div id="dashboard-category-grid" class="category-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-library" class="view hidden" aria-label="Biblioteca de livros">
+            <div class="library">
+                <div class="library-main">
+                    <div class="library-toolbar">
+                        <div class="library-info">
+                            <h2 id="library-heading">Todos os livros</h2>
+                            <span id="library-subtitle" class="library-count">0 livros</span>
+                        </div>
+                        <div class="library-actions">
+                            <button id="library-create-category-button" class="btn btn-ghost" type="button">Nova categoria</button>
+                            <button id="library-new-book-button" class="btn btn-primary" type="button">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                                Novo
+                            </button>
+                            <button id="library-clear-filters-button" class="btn btn-ghost" type="button">Limpar filtros</button>
+                        </div>
+                    </div>
+                    <div id="library-category-chips" class="chips"></div>
+                    <div id="library-filter-pills" class="filter-pills hidden"></div>
+                    <section class="category-manager" aria-labelledby="category-manager-title">
+                        <div class="category-manager-header">
+                            <div>
+                                <h3 id="category-manager-title">Gestao de categorias</h3>
+                                <p id="category-manager-subtitle" class="category-manager-subtitle">Crie, renomeie e exclua categorias sem abrir livros.</p>
+                            </div>
+                            <button id="category-manager-create-button" class="btn btn-sm btn-ghost" type="button">Nova categoria</button>
+                        </div>
+                        <div id="category-manager-list" class="category-manager-list"></div>
+                    </section>
+                    <div id="library-book-grid" class="book-grid"></div>
+                </div>
+                <aside class="library-detail">
+                    <div id="library-detail-empty" class="detail-empty">
+                        <svg viewBox="0 0 80 80" fill="none">
+                            <rect x="10" y="15" width="60" height="50" rx="6" stroke="#d1d5db" stroke-width="2" stroke-dasharray="4 4"/>
+                            <path d="M30 35h20M30 42h14" stroke="#d1d5db" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <p>Selecione um livro para ver os detalhes</p>
+                    </div>
+                    <div id="library-detail-content" class="detail-body hidden">
+                        <span class="detail-kicker">DETALHES DO VOLUME</span>
+                        <h3 id="detail-title">Livro</h3>
+                        <span id="detail-role-badge" class="role-badge hidden"></span>
+                        <span id="detail-category" class="detail-badge">Sem categoria</span>
+                        <div class="detail-meta">
+                            <div class="detail-meta-item">
+                                <span>Paginas</span>
+                                <strong id="detail-pages">0</strong>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span>Atualizado</span>
+                                <strong id="detail-updated">-</strong>
+                            </div>
+                        </div>
+                        <p id="detail-summary" class="detail-desc"></p>
+                        <div class="detail-actions">
+                            <button id="detail-open-editor-button" class="btn btn-primary btn-block" type="button">Abrir no editor</button>
+                            <button id="detail-duplicate-book-button" class="btn btn-ghost btn-block" type="button">Duplicar livro</button>
+                            <button id="detail-filter-category-button" class="btn btn-ghost btn-block" type="button">Filtrar categoria</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="view-editor" class="view hidden" aria-label="Editor de livros">
+            <div class="editor">
+                <aside class="editor-pages">
+                    <div class="editor-pages-header">
+                        <div class="editor-heading-group">
+                            <h3 id="editor-book-heading">Novo livro</h3>
+                            <span id="editor-role-badge" class="role-badge hidden"></span>
+                        </div>
+                        <button id="editor-add-page-button" class="btn btn-sm btn-primary" type="button">
+                            <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M8 2a1 1 0 011 1v4h4a1 1 0 110 2H9v4a1 1 0 11-2 0V9H3a1 1 0 010-2h4V3a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                        </button>
+                    </div>
+                    <div id="page-thumbnail-list" class="page-list"></div>
+                </aside>
+
+                <div class="editor-document">
+                    <div class="doc-toolbar">
+                        <div class="doc-toolbar-left">
+                            <h2 id="document-title">Pagina atual</h2>
+                            <span id="sheet-page-label" class="doc-page-label">Pagina 1 de 1</span>
+                        </div>
+                        <div class="doc-toolbar-right">
+                            <span id="autosave-indicator" class="autosave-indicator hidden" aria-live="polite">
+                                <svg class="autosave-spinner" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6" stroke-dasharray="24 14" stroke-linecap="round"/></svg>
+                                <span id="autosave-label">Salvando...</span>
+                            </span>
+                            <span id="sheet-char-count" class="char-count">0/1200</span>
+                            <button id="editor-export-book-button" class="btn btn-ghost" type="button" title="Exportar livro para o jogo" disabled>
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                                Exportar
+                            </button>
+                            <button id="editor-save-book-button" class="btn btn-primary" type="button">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                Salvar
+                            </button>
+                            <button id="editor-delete-book-button" class="btn btn-danger-ghost" type="button">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                            </button>
+                            <button id="editor-favorite-button" class="btn btn-ghost favorite-btn" type="button" title="Favoritar livro" disabled>
+                                <svg class="star-empty" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2l2.39 4.84L17.3 7.8l-3.65 3.56.86 5.02L10 13.9l-4.51 2.48.86-5.02L2.7 7.8l4.91-.96L10 2z"/></svg>
+                                <svg class="star-filled" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2l2.39 4.84L17.3 7.8l-3.65 3.56.86 5.02L10 13.9l-4.51 2.48.86-5.02L2.7 7.8l4.91-.96L10 2z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="format-toolbar">
+                        <div class="format-group">
+                            <span class="format-label">Cor</span>
+                            <div class="color-swatches">
+                                <button type="button" class="color-swatch" data-code="0" title="Preto" style="background:#000000"></button>
+                                <button type="button" class="color-swatch" data-code="1" title="Azul Escuro" style="background:#0000AA"></button>
+                                <button type="button" class="color-swatch" data-code="2" title="Verde Escuro" style="background:#00AA00"></button>
+                                <button type="button" class="color-swatch" data-code="3" title="Ciano Escuro" style="background:#00AAAA"></button>
+                                <button type="button" class="color-swatch" data-code="4" title="Vermelho Escuro" style="background:#AA0000"></button>
+                                <button type="button" class="color-swatch" data-code="5" title="Roxo" style="background:#AA00AA"></button>
+                                <button type="button" class="color-swatch" data-code="6" title="Dourado" style="background:#FFAA00"></button>
+                                <button type="button" class="color-swatch" data-code="7" title="Cinza" style="background:#AAAAAA"></button>
+                                <button type="button" class="color-swatch" data-code="8" title="Cinza Escuro" style="background:#555555"></button>
+                                <button type="button" class="color-swatch" data-code="9" title="Azul" style="background:#5555FF"></button>
+                                <button type="button" class="color-swatch" data-code="a" title="Verde" style="background:#55FF55"></button>
+                                <button type="button" class="color-swatch" data-code="b" title="Ciano" style="background:#55FFFF"></button>
+                                <button type="button" class="color-swatch" data-code="c" title="Vermelho" style="background:#FF5555"></button>
+                                <button type="button" class="color-swatch" data-code="d" title="Rosa" style="background:#FF55FF"></button>
+                                <button type="button" class="color-swatch" data-code="e" title="Amarelo" style="background:#FFFF55"></button>
+                                <button type="button" class="color-swatch" data-code="f" title="Branco" style="background:#FFFFFF"></button>
+                            </div>
+                        </div>
+                        <div class="format-divider"></div>
+                        <div class="format-group">
+                            <span class="format-label">Estilo</span>
+                            <div class="format-buttons">
+                                <button type="button" class="format-btn" data-code="l" title="Negrito"><b>N</b></button>
+                                <button type="button" class="format-btn" data-code="o" title="Italico"><i>I</i></button>
+                                <button type="button" class="format-btn" data-code="n" title="Sublinhado"><u>S</u></button>
+                                <button type="button" class="format-btn" data-code="m" title="Tachado"><s>T</s></button>
+                                <button type="button" class="format-btn format-btn-reset" data-code="r" title="Resetar formatacao">R</button>
+                            </div>
+                        </div>
+                        <div class="format-group">
+                            <span class="format-label format-hint">Atalhos: **negrito**, *italico*, __sublinhado__, ~~tachado~~</span>
+                        </div>
+                    </div>
+                        <div class="doc-paper">
+                            <div class="paper-header">
+                                <span id="sheet-book-label" class="paper-label">LIVRO NOVO</span>
+                            </div>
+                            <textarea id="editor-page-textarea" class="paper-textarea" rows="22" placeholder="Comece a escrever o conteudo desta pagina..."></textarea>
+                        </div>
+                </div>
+
+                <aside class="editor-props">
+                    <div class="mc-preview-section">
+                        <h4>Preview Minecraft</h4>
+                        <div class="mc-book-frame">
+                            <div class="mc-book-cover"></div>
+                            <div class="mc-book-spine"></div>
+                            <div class="mc-book-page">
+                                <div id="mc-preview-title" class="mc-book-page-title"></div>
+                                <div id="mc-preview-text" class="mc-book-page-text"></div>
+                                <div id="mc-preview-page-number" class="mc-book-page-number">1 / 1</div>
+                            </div>
+                            <div class="mc-book-nav">
+                                <button id="mc-preview-prev" type="button" disabled>&larr;</button>
+                                <span id="mc-preview-nav-label">1 / 1</span>
+                                <button id="mc-preview-next" type="button" disabled>&rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="props-section">
+                        <h4>Propriedades</h4>
+                        <label class="form-field">
+                            <span>Titulo</span>
+                            <input id="editor-title-input" type="text" maxlength="48" placeholder="Nome do livro">
+                        </label>
+                        <label class="form-field">
+                            <span>Categoria</span>
+                            <input id="editor-category-input" type="text" maxlength="32" list="category-suggestions" placeholder="Ex: Reinos, Faccoes...">
+                        </label>
+                        <datalist id="category-suggestions"></datalist>
+                        <div class="form-field">
+                            <span>Tags</span>
+                            <div id="editor-tags-container" class="tags-container">
+                                <div id="editor-tags-list" class="tags-list"></div>
+                                <input id="editor-tag-input" type="text" maxlength="20" placeholder="Adicionar tag (Enter)">
+                            </div>
+                        </div>
+                        <label class="form-field">
+                            <span>Autor (exportacao)</span>
+                            <input id="editor-author-input" type="text" maxlength="48" placeholder="Deixe vazio para usar seu nick">
+                        </label>
+                        <label class="form-field">
+                            <span>Descricao do item (lore)</span>
+                            <input id="editor-lore-input" type="text" maxlength="120" placeholder="Texto no tooltip do item">
+                        </label>
+                        <label class="form-field">
+                            <span>Cor do nome</span>
+                            <select id="editor-display-color-select">
+                                <option value="">Padrao</option>
+                                <option value="dark_red">Vermelho escuro</option>
+                                <option value="red">Vermelho</option>
+                                <option value="gold">Dourado</option>
+                                <option value="yellow">Amarelo</option>
+                                <option value="dark_green">Verde escuro</option>
+                                <option value="green">Verde</option>
+                                <option value="aqua">Ciano</option>
+                                <option value="dark_aqua">Ciano escuro</option>
+                                <option value="dark_blue">Azul escuro</option>
+                                <option value="blue">Azul</option>
+                                <option value="light_purple">Rosa</option>
+                                <option value="dark_purple">Roxo</option>
+                                <option value="white">Branco</option>
+                                <option value="gray">Cinza</option>
+                                <option value="dark_gray">Cinza escuro</option>
+                                <option value="black">Preto</option>
+                            </select>
+                        </label>
+                        <label class="form-field form-field-inline">
+                            <input id="editor-glow-checkbox" type="checkbox">
+                            <span>Brilho encantado</span>
+                        </label>
+                    </div>
+                    <div class="props-section">
+                        <h4>Status</h4>
+                        <p id="editor-status" class="props-status">Novo livro</p>
+                        <div class="props-stats">
+                            <div class="props-stat">
+                                <span>Paginas</span>
+                                <strong id="editor-page-stat">1</strong>
+                            </div>
+                            <div class="props-stat">
+                                <span>Categoria</span>
+                                <strong id="editor-category-stat">Sem categoria</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="props-section">
+                        <h4>Pagina ativa</h4>
+                        <div class="page-actions">
+                            <button id="editor-page-up-button" class="btn btn-ghost btn-block btn-sm" type="button">
+                                <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 5.707 5.354 8.354a.5.5 0 11-.708-.708l3-3z"/></svg>
+                                Mover acima
+                            </button>
+                            <button id="editor-page-down-button" class="btn btn-ghost btn-block btn-sm" type="button">
+                                <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M7.646 11.354a.5.5 0 01-.708 0l-3-3a.5.5 0 01.708-.708L8 10.293l2.646-2.647a.5.5 0 01.708.708l-3 3z"/></svg>
+                                Mover abaixo
+                            </button>
+                            <button id="editor-page-remove-button" class="btn btn-danger-ghost btn-block btn-sm" type="button">
+                                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z"/><path fill-rule="evenodd" d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 010-2H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118z" clip-rule="evenodd"/></svg>
+                                Excluir pagina
+                            </button>
+                        </div>
+                    </div>
+                    <div class="props-section">
+                        <h4>Historico</h4>
+                        <div id="snapshot-list" class="snapshot-list">
+                            <p class="snapshot-empty">Salve o livro para gerar versoes.</p>
+                        </div>
+                    </div>
+                    <div class="props-section" id="collaborator-section">
+                        <h4>Colaboradores</h4>
+                        <div id="collaborator-add" class="collab-add hidden">
+                            <input id="collaborator-name-input" type="text" maxlength="48" placeholder="Nome do jogador (online)">
+                            <button id="collaborator-add-button" class="btn btn-sm btn-primary" type="button">Adicionar</button>
+                        </div>
+                        <div id="collaborator-list" class="collab-list">
+                            <p class="collab-empty">Salve o livro para gerenciar colaboradores.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+</div>
+
+<section id="auth-panel" class="auth-overlay hidden" role="alertdialog" aria-modal="true" aria-labelledby="auth-title">
+    <div class="auth-card">
+        <svg class="auth-icon" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="4 4"/>
+            <path d="M24 14v10M24 30v2" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <h2 id="auth-title">Acesso necessario</h2>
+        <p>Sessao expirada ou invalida. Volte ao Minecraft, use <strong>/loremaker</strong> e clique no link do livro para entrar novamente.</p>
+    </div>
+</section>
+
+<div id="toast-container" class="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+
+<div id="confirm-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title">
+    <div class="modal-card">
+        <h3 id="confirm-modal-title">Confirmar</h3>
+        <p id="confirm-modal-message">Tem certeza?</p>
+        <div class="modal-actions">
+            <button id="confirm-modal-cancel" class="btn btn-ghost" type="button">Cancelar</button>
+            <button id="confirm-modal-ok" class="btn btn-primary" type="button">Confirmar</button>
+        </div>
+    </div>
+</div>
+
+<div id="create-category-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="create-category-title">
+    <div class="modal-card">
+        <h3 id="create-category-title">Nova categoria</h3>
+        <p id="create-category-description">A categoria sera criada separadamente e podera ser usada em qualquer livro depois.</p>
+        <label class="modal-field" for="create-category-input">
+            <input id="create-category-input" class="modal-input" type="text" maxlength="32" placeholder="Digite o nome da categoria" autocomplete="off">
+        </label>
+        <p id="create-category-error" class="modal-error hidden"></p>
+        <div class="modal-actions">
+            <button id="create-category-cancel" class="btn btn-ghost" type="button">Cancelar</button>
+            <button id="create-category-ok" class="btn btn-primary" type="button">Criar e continuar</button>
+        </div>
+    </div>
+</div>
+
+<div id="delete-category-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="delete-category-title">
+    <div class="modal-card">
+        <h3 id="delete-category-title">Excluir categoria</h3>
+        <p id="delete-category-description">Escolha para onde os livros desta categoria devem ser movidos.</p>
+        <label class="modal-field" for="delete-category-target-select">
+            <select id="delete-category-target-select" class="modal-input"></select>
+        </label>
+        <p id="delete-category-error" class="modal-error hidden"></p>
+        <div class="modal-actions">
+            <button id="delete-category-cancel" class="btn btn-ghost" type="button">Cancelar</button>
+            <button id="delete-category-ok" class="btn btn-danger" type="button">Excluir categoria</button>
+        </div>
+    </div>
+</div>
+
+<div id="snapshot-preview-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="snapshot-preview-title">
+    <div class="modal-card modal-card-wide">
+        <div class="snapshot-preview-header">
+            <h3 id="snapshot-preview-title">Versao anterior</h3>
+            <div class="snapshot-preview-meta">
+                <span id="snapshot-preview-date"></span>
+                <span id="snapshot-preview-category"></span>
+                <span id="snapshot-preview-pages"></span>
+            </div>
+        </div>
+        <div id="snapshot-preview-content" class="snapshot-preview-content"></div>
+        <div class="modal-actions">
+            <button id="snapshot-preview-close" class="btn btn-ghost" type="button">Fechar</button>
+            <button id="snapshot-preview-restore" class="btn btn-primary" type="button">Restaurar esta versao</button>
+        </div>
+    </div>
+</div>
+
+<div id="context-menu" class="context-menu hidden" role="menu" aria-label="Menu de contexto">
+    <div id="context-menu-items" class="context-menu-items"></div>
+</div>
+
+<div id="shortcuts-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="shortcuts-modal-title">
+    <div class="modal-card modal-card-wide">
+        <h3 id="shortcuts-modal-title">Atalhos do teclado</h3>
+        <div class="shortcuts-grid">
+            <div class="shortcut-row"><kbd>Ctrl</kbd>+<kbd>S</kbd><span>Salvar livro</span></div>
+            <div class="shortcut-row"><kbd>Ctrl</kbd>+<kbd>?</kbd><span>Mostrar atalhos</span></div>
+            <div class="shortcut-row"><kbd>Ctrl</kbd>+<kbd>B</kbd><span>Negrito</span></div>
+            <div class="shortcut-row"><kbd>Ctrl</kbd>+<kbd>I</kbd><span>Italico</span></div>
+            <div class="shortcut-row"><kbd>Ctrl</kbd>+<kbd>U</kbd><span>Sublinhado</span></div>
+            <div class="shortcut-row"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd><span>Tachado</span></div>
+            <div class="shortcut-row"><kbd>Ctrl</kbd>+<kbd>&uarr;</kbd><span>Mover pagina acima</span></div>
+            <div class="shortcut-row"><kbd>Ctrl</kbd>+<kbd>&darr;</kbd><span>Mover pagina abaixo</span></div>
+            <div class="shortcut-row"><kbd>PgUp</kbd><span>Pagina anterior</span></div>
+            <div class="shortcut-row"><kbd>PgDn</kbd><span>Proxima pagina</span></div>
+            <div class="shortcut-row"><kbd>Esc</kbd><span>Fechar modal / menu</span></div>
+        </div>
+        <div class="modal-actions">
+            <button id="shortcuts-modal-close" class="btn btn-ghost" type="button">Fechar</button>
+        </div>
+    </div>
+</div>
+
+<script id="loremaker-bootstrap" type="application/json">__LOREMAKER_BOOTSTRAP_JSON__</script>
+<script src="/assets/panel.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+name: "<aqua>ʙᴏʟᴀ ᴅᴇ ꜰᴏɢᴏ</aqua>"
+mythic-skill: "BolaDeFogo"
+spell-type: COMMON
+
+cooldown:
+  base: 6.0
+  per-level: -0.2
+mana:
+  base: 20.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Mago"
+  level: 1
+
+icon:
+  material: FIRE_CHARGE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<aqua><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></aqua>"
+  - ""
+  - "<gray>ᴏ ᴍᴀɢᴏ ʟᴀɴᴄᴀ ᴜᴍᴀ ʙᴏʟᴀ ᴅᴇ ꜰᴏɢᴏ</gray>"
+  - "<gray>ɪɴᴄᴀɴᴅᴇsᴄᴇɴᴛᴇ ǫᴜᴇ ᴇxᴘʟᴏᴅᴇ ᴀᴏ</gray>"
+  - "<gray>ᴀᴛɪɴɢɪʀ ᴏ ɪɴɪᴍɪɢᴏ.</gray>"
+  - ""
+  - "<aqua><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></aqua>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴀɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  damage:
+    base: 15.0
+    per-level: 4.0
+
+milestones:
+  3:
+    visual: "fireball_enhanced"
+    mechanic-override: "BolaDeFogoMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "fireball_inferno"
+    mechanic-override: "BolaDeFogoMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.blaze.shoot"
+    volume: 1.0
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.generic.explode"
+    volume: 0.8
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

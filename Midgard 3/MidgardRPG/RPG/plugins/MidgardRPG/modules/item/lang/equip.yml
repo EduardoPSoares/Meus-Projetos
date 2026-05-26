@@ -1,0 +1,23 @@
+# ============================================
+# MIDGARD ITEM - EQUIPAMENTO
+# ============================================
+# Padr�o V2.0 - Oficial
+# ============================================
+
+
+# ============================================
+# MENSAGENS DE EQUIPAMENTO
+# ============================================
+equip:
+  # Sucesso
+  equipped: "<green>✔ <white>ɪᴛᴇᴍ ᴇǫᴜɪᴘᴀᴅᴏ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ!"
+  unequipped: "<gray>• <white>ɪᴛᴇᴍ ᴅᴇꜱᴇǫᴜɪᴘᴀᴅᴏ."
+  
+  # Erros
+  stack_occupied: "<gray>• <gray>ɴᴀᴏ ᴇ ᴘᴏꜱꜱ�ᴠᴇʟ ᴇǫᴜɪᴘᴀʀ ᴅᴇ ᴜᴍ ᴘᴀᴄᴋ ǫᴜᴀɴᴅᴏ ᴏ ꜱʟᴏᴛ ᴇꜱᴛᴀ ᴏᴄᴜᴘᴀᴅᴏ."
+  invalid_slot: "<red>✖ <gray>ꜱʟᴏᴛ ᴅᴇ ᴇǫᴜɪᴘᴀᴍᴇɴᴛᴏ ɪɴᴠᴀʟɪᴅᴏ ᴄᴏɴꜰɪɢᴜʀᴀᴅᴏ: <white>%s"
+  cannot_equip: "<gray>• <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴇǫᴜɪᴘᴀʀ ᴇꜱᴛᴇ ɪᴛᴇᴍ."
+  
+  # Requisitos
+  level_required: "<gray>• <gray>ɴᴏᴠᴇʟ ɴᴇᴄᴇꜱꜱᴀʀɪᴏ: <white>%level%"
+  class_required: "<gray>• <gray>ᴄʟᴀꜱꜱᴇ ɴᴇᴄᴇꜱꜱ�ʀɪᴀ: <white>%class%"

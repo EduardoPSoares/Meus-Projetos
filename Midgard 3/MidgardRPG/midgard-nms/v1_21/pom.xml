@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>me.ray.midgard</groupId>
+        <artifactId>midgard-nms</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>midgard-nms-v1_21</artifactId>
+    <name>midgard-nms-v1_21</name>
+
+    <!--
+        NOTA: Este módulo usava paperweight.userdev no Gradle, que não tem
+        equivalente direto no Maven. Para compilar código NMS (net.minecraft),
+        você precisa instalar o server jar remapeado no repositório Maven local.
+
+        Para instalar o server jar no repo local, execute:
+        1. Baixe o Paperclip (paper ou folia) JAR da versão 1.21.x
+        2. Execute: java -jar folia-1.21.x.jar (vai gerar o server jar)
+        3. Instale no Maven local:
+           mvn install:install-file -Dfile=cache/patched_1.21.x.jar \
+             -DgroupId=dev.folia -DartifactId=folia-server \
+             -Dversion=1.21.11-R0.1-SNAPSHOT -Dpackaging=jar -Dclassifier=mojmap
+
+        Enquanto isso, o módulo está configurado para ser ignorado no build (-pl !midgard-nms-v1_21).
+        Para compilar o projeto inteiro: mvnw compile -pl !midgard-nms-v1_21,!midgard-proxy
+    -->
+
+    <dependencies>
+        <dependency>
+            <groupId>dev.folia</groupId>
+            <artifactId>folia-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-nms-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.folia</groupId>
+            <artifactId>folia-server</artifactId>
+            <version>1.21.11-R0.1-SNAPSHOT</version>
+            <classifier>mojmap</classifier>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

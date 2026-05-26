@@ -1,0 +1,85 @@
+# ============================================
+# ARCANISTA - Definição e Recompensas
+# ============================================
+
+definition:
+  menu-icon: ENCHANTED_BOOK
+  gradient: "<gradient:#a855f7:#ec4899>"
+  description: "Use magia, encantamentos e runas para ganhar XP arcano."
+  bonuses:
+    - "<green>▸ Poder arcano</green>"
+    - "<green>▸ Eficiência mágica</green>"
+    - "<green>▸ Regeneração de mana</green>"
+    - "<green>▸ Chance de efeito especial</green>"
+  xp-source-icon: AMETHYST_SHARD
+  extra-button-icon: ENDER_EYE
+  extra-button-name: "<light_purple>Estudos Arcanos"
+  extra-button-lore:
+    - "<gray>Visualize seus talentos mágicos"
+    - "<gray>e afinidades com o arcano."
+
+rewards:
+  1:
+    name: "Iniciado Arcano"
+    bonuses:
+      - "+2% poder arcano"
+  5:
+    bonuses:
+      - "+5% poder arcano"
+      - "+3% eficiência mágica"
+  10:
+    name: "Adepto"
+    bonuses:
+      - "+10% poder arcano"
+    ability: "Fluxo Arcano"
+    ability-desc: "Reduz o custo de mana em 10%."
+  25:
+    name: "Mago"
+    bonuses:
+      - "+5% regen de mana"
+    ability: "Ressonância Mágica"
+    ability-desc: "Magias consecutivas ganham 15% de poder."
+  50:
+    name: "Arquimago"
+    bonuses:
+      - "+30% poder arcano"
+    ability: "Sobrecarga Mística"
+    ability-desc: "Chance de 10% de lançar magia sem custo."
+  75:
+    name: "Grão-Mago"
+    bonuses:
+      - "+10% regen de mana"
+    perks:
+      - "Encantamentos duram 15% mais"
+  100:
+    name: "Lenda Arcana"
+    bonuses:
+      - "+50% poder arcano"
+    ability: "Sintonia Rúnica"
+    ability-desc: "Runas aplicadas ganham efeito extra."
+    perks:
+      - "Título: Lenda Arcana"
+
+# ============================================
+# FONTES DE XP
+# ============================================
+# enchant: XP ao encantar itens (base-xp + xp-per-level por nível de encantamento)
+xp-config:
+  enchant:
+    base-xp: 15.0
+    xp-per-level: 8.0
+
+# ============================================
+# PENALIDADES PARA NÃO-ARCANISTAS
+# ============================================
+# Jogadores sem a profissão de Arcanista ativa sofrem estas penalidades
+# ao encantar itens.
+penalties:
+  enabled: true
+  show-message: true
+  affected-materials: []
+
+  # Penalidade ao encantar
+  enchant:
+    extra-cost: 3              # 3 níveis extras de XP consumidos
+    fail-chance: 0.20          # 20% de chance de perder XP sem ganhar encantamento

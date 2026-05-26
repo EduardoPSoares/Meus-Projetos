@@ -1,0 +1,80 @@
+# MidgardCommands - Mensagens i18n
+# Este arquivo contém todas as mensagens do módulo de gerenciamento de comandos
+# Keys são carregadas com prefixo "commands." pelo LanguageManager
+
+system_not_initialized: "<red>✖</red> <gray>O sistema de comandos não está inicializado.</gray>"
+
+admin:
+  help:
+    header: "<gradient:#a855f7:#ec4899><bold>⚔ MidgardRPG - Comandos do Sistema</bold></gradient>"
+    sep: "<dark_gray>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</dark_gray>"
+    subcommands_title: "<gray>Subcomandos disponíveis:</gray>"
+    list: "<gray>• <yellow>/rpg admin commands list [módulo]</yellow> - Lista comandos</gray>"
+    info: "<gray>• <yellow>/rpg admin commands info <comando></yellow> - Info detalhada</gray>"
+    validate: "<gray>• <yellow>/rpg admin commands validate</yellow> - Valida sistema</gray>"
+    modules: "<gray>• <yellow>/rpg admin commands modules</yellow> - Lista módulos</gray>"
+    search: "<gray>• <yellow>/rpg admin commands search <termo></yellow> - Busca comandos</gray>"
+  
+  list:
+    empty_module: "<red>✖</red> <gray>Nenhum comando encontrado para o módulo: <white>%module%</white></gray>"
+    total: "<gray>Total: <white>%count%</white> comandos</gray>"
+    category_player: "<yellow><bold>🎮 PLAYER</bold></yellow>"
+    category_moderator: "<yellow><bold>🛡️ MODERATOR</bold></yellow>"
+    category_admin: "<yellow><bold>⚙️ ADMIN</bold></yellow>"
+    command_enabled: "<green>✓</green>"
+    command_disabled: "<red>✗</red>"
+    format: "%status% <yellow>%name%</yellow> <dark_gray>[%module%]</dark_gray>"
+  
+  info:
+    usage: "<red>✖</red> <gray>Uso: <yellow>/rpg admin commands info <comando></yellow></gray>"
+    not_found: "<red>✖</red> <gray>Comando não encontrado: <white>%command%</white></gray>"
+    name: "<gray>Nome: <yellow>%name%</yellow></gray>"
+    description: "<gray>Descrição: <white>%description%</white></gray>"
+    usage_info: "<gray>Uso: <yellow>%usage%</yellow></gray>"
+    aliases: "<gray>Aliases: <yellow>%aliases%</yellow></gray>"
+    permission: "<gray>Permissão: <aqua>%permission%</aqua></gray>"
+    permission_none: "nenhuma"
+    category: "<gray>Categoria: <white>%category%</white></gray>"
+    module: "<gray>Módulo: <white>%module%</white></gray>"
+    source: "<gray>Fonte: <white>%source%</white></gray>"
+    player_only: "<gray>Apenas jogadores: <white>%value%</white></gray>"
+    enabled: "<gray>Habilitado: %value%</gray>"
+    yes: "<green>Sim</green>"
+    no: "<red>Não</red>"
+  
+  validate:
+    start: "<gray>Validando sistema de comandos...</gray>"
+    no_issues: "<green>✓</green> <gray>Nenhum problema encontrado!</gray>"
+    issues_title: "<gray>Problemas encontrados:</gray>"
+    errors: "<red>  Erros: %count%</red>"
+    warnings: "<yellow>  Avisos: %count%</yellow>"
+    info: "<aqua>  Info: %count%</aqua>"
+    icon_error: "<red>✖</red>"
+    icon_warning: "<yellow>⚠</yellow>"
+    icon_info: "<aqua>ℹ</aqua>"
+    issue_format: "%icon% <gray>%message%</gray>"
+  
+  modules:
+    title: "<gray>Módulos com comandos registrados:</gray>"
+    module_format: "<gray>• <yellow>%module%</yellow> <dark_gray>(%count% comandos)</dark_gray></gray>"
+    total: "<gray>Total: <white>%count%</white> módulos</gray>"
+  
+  search:
+    usage: "<red>✖</red> <gray>Uso: <yellow>/rpg admin commands search <termo></yellow></gray>"
+    no_results: "<red>✖</red> <gray>Nenhum comando encontrado para: <white>%term%</white></gray>"
+    results_title: "<gray>Resultados para '<white>%term%</white>':</gray>"
+    result_format: "<gray>• <yellow>%name%</yellow> <dark_gray>[%module%]</dark_gray> - %description%</gray>"
+
+# Validação de comandos
+validation:
+  not_in_help: "Comando '%command%' não está registrado no sistema de help"
+  not_in_commandmap: "Comando standalone '%command%' não encontrado no CommandMap do Bukkit"
+  admin_no_permission: "Comando admin '%command%' não tem permissão definida"
+  non_standard_permission: "Comando '%command%' usa permissão fora do padrão midgard.*: %permission%"
+  alias_conflict: "Alias/nome '%alias%' é usado por múltiplos comandos: %modules%"
+  orphan_command: "Comando Bukkit '%command%' não está no registro central"
+
+# Descrição do comando admin
+descriptions:
+  commands: "Gerencia e valida comandos do sistema"
+  commands_usage: "/rpg admin commands <list|info|validate|modules|search>"

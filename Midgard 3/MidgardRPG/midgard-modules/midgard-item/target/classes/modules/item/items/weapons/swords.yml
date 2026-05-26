@@ -1,0 +1,350 @@
+espada_ferro:
+  base:
+    material: IRON_SWORD
+    name: "<white>ᴇsᴘᴀᴅᴀ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: SWORD
+    description:
+    - "<gray>ᴜᴍᴀ ᴇsᴘᴀᴅᴀ sɪᴍᴘʟᴇs ꜰᴏʀᴊᴀᴅᴀ ᴇᴍ ꜰᴇʀʀᴏ.</gray>"
+    - "<gray>ᴄᴏɴꜰɪᴀᴠᴇʟ ᴘᴀʀᴀ ǫᴜᴀʟǫᴜᴇʀ ᴀᴠᴇɴᴛᴜʀᴇɪʀᴏ ɪɴɪᴄɪᴀɴᴛᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 6
+    strength: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_espada_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_ferro"
+            4: "midgard:lingote_ferro"
+            7: "STICK"
+
+espada_aco:
+  base:
+    material: IRON_SWORD
+    name: "<green>ᴇsᴘᴀᴅᴀ ᴅᴇ ᴀᴄᴏ</green>"
+    tier: UNCOMMON
+    type: SWORD
+    description:
+    - "<gray>ᴀᴄᴏ ʀᴇꜰɪɴᴀᴅᴏ ᴄᴏɴꜰᴇʀᴇ ᴜᴍ ꜰɪᴏ sᴜᴘᴇʀɪᴏʀ</gray>"
+    - "<gray>ᴀ ᴇsᴛᴀ ʟᴀᴍɪɴᴀ ʀᴇsɪsᴛᴇɴᴛᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 11
+    strength: 4
+    attack-speed: 0.1
+    crafting:
+      enabled: true
+      recipes:
+        craft_espada_aco:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_aco"
+            4: "midgard:lingote_aco"
+            7: "STICK"
+
+espada_mithril:
+  base:
+    material: DIAMOND_SWORD
+    name: "<blue>ᴇsᴘᴀᴅᴀ ᴅᴇ ᴍɪᴛʜʀɪʟ</blue>"
+    tier: RARE
+    type: SWORD
+    description:
+    - "<gray>ꜰᴏʀᴊᴀᴅᴀ ᴄᴏᴍ ᴏ ʟᴇɴᴅᴀʀɪᴏ ᴍɪᴛʜʀɪʟ,</gray>"
+    - "<gray>ʟᴇᴠᴇ ᴄᴏᴍᴏ ᴜᴍᴀ ᴘʟᴜᴍᴀ ᴇ ᴀꜰɪᴀᴅᴀ ᴄᴏᴍᴏ ᴏ ᴠᴇɴᴛᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 18
+    strength: 6
+    critical-strike-chance: 3
+    attack-speed: 0.15
+    crafting:
+      enabled: true
+      recipes:
+        craft_espada_mithril:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_mithril"
+            4: "midgard:lingote_mithril"
+            7: "STICK"
+
+espada_draconiana:
+  base:
+    material: DIAMOND_SWORD
+    name: "<purple>ᴇsᴘᴀᴅᴀ ᴅʀᴀᴄᴏɴɪᴀɴᴀ</purple>"
+    tier: EPIC
+    type: SWORD
+    description:
+    - "<gray>ꜰᴏʀᴊᴀᴅᴀ ɴᴀs ᴄʜᴀᴍᴀs ᴅᴇ ᴜᴍ ᴅʀᴀɢᴀᴏ ᴀɴᴛɪɢᴏ,</gray>"
+    - "<gray>sᴜᴀ ʟᴀᴍɪɴᴀ ᴘᴜʟsᴀ ᴄᴏᴍ ꜰᴏɢᴏ ᴅʀᴀᴄᴏɴɪᴄᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 28
+    strength: 10
+    critical-strike-chance: 5
+    fire-damage: 8
+    required-level: 35
+
+excalibur:
+  base:
+    material: NETHERITE_SWORD
+    name: "<gold>ᴇxᴄᴀʟɪʙᴜʀ</gold>"
+    tier: LEGENDARY
+    type: SWORD
+    description:
+    - "<gray>ᴀ ʟᴇɴᴅᴀʀɪᴀ ᴇsᴘᴀᴅᴀ ᴅᴏs ʀᴇɪs,</gray>"
+    - "<gray>ʙᴀɴʜᴀᴅᴀ ᴇᴍ ʟᴜᴢ ᴅɪᴠɪɴᴀ ᴇ ᴅɪɢɴᴀ ᴅᴏs ᴍᴀɪs ɴᴏʙʀᴇs.</gray>"
+    revision-id: 1
+    attack-damage: 42
+    strength: 15
+    critical-strike-chance: 8
+    critical-strike-power: 20
+    light-damage: 15
+    max-health: 50
+    required-level: 50
+
+montante_ferro:
+  base:
+    material: IRON_SWORD
+    name: "<white>ᴍᴏɴᴛᴀɴᴛᴇ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: GREATSWORD
+    description:
+    - "<gray>ᴜᴍ ᴍᴏɴᴛᴀɴᴛᴇ ᴘᴇsᴀᴅᴏ ᴅᴇ ꜰᴇʀʀᴏ,</gray>"
+    - "<gray>ᴇxɪɢᴇ ᴅᴜᴀs ᴍᴀᴏs ᴘᴀʀᴀ ᴇᴍᴘᴜɴʜᴀʀ.</gray>"
+    revision-id: 1
+    attack-damage: 8
+    strength: 3
+    two-handed: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_montante_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_ferro"
+            1: "midgard:lingote_ferro"
+            3: "midgard:lingote_ferro"
+            4: "midgard:lingote_ferro"
+            7: "STICK"
+
+montante_aco:
+  base:
+    material: IRON_SWORD
+    name: "<green>ᴍᴏɴᴛᴀɴᴛᴇ ᴅᴇ ᴀᴄᴏ</green>"
+    tier: UNCOMMON
+    type: GREATSWORD
+    description:
+    - "<gray>ᴜᴍ ᴍᴏɴᴛᴀɴᴛᴇ ᴅᴇ ᴀᴄᴏ ʀᴇꜰɪɴᴀᴅᴏ,</gray>"
+    - "<gray>ᴄᴀᴘᴀᴢ ᴅᴇ ᴅᴇsꜰᴇʀɪʀ ɢᴏʟᴘᴇs ᴅᴇᴠᴀsᴛᴀᴅᴏʀᴇs.</gray>"
+    revision-id: 1
+    attack-damage: 14
+    strength: 5
+    critical-strike-power: 10
+    two-handed: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_montante_aco:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_aco"
+            1: "midgard:lingote_aco"
+            3: "midgard:lingote_aco"
+            4: "midgard:lingote_aco"
+            7: "STICK"
+
+montante_cristal:
+  base:
+    material: DIAMOND_SWORD
+    name: "<blue>ᴍᴏɴᴛᴀɴᴛᴇ ᴅᴇ ᴄʀɪsᴛᴀʟ</blue>"
+    tier: RARE
+    type: GREATSWORD
+    description:
+    - "<gray>ᴄʀɪsᴛᴀʟɪᴢᴀᴅᴏ ᴄᴏᴍ ɢᴇʟᴏ ᴇᴛᴇʀɴᴏ,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ɢᴏʟᴘᴇ ᴇᴍɪᴛᴇ ᴜᴍ ꜰʀɪᴏ ᴄᴏʀᴛᴀɴᴛᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 22
+    strength: 8
+    critical-strike-power: 15
+    ice-damage: 5
+    two-handed: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_montante_cristal:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_mithril"
+            1: "midgard:cristal_arcano"
+            3: "midgard:lingote_mithril"
+            4: "midgard:cristal_arcano"
+            7: "STICK"
+
+espada_do_colosso:
+  base:
+    material: DIAMOND_SWORD
+    name: "<purple>ᴇsᴘᴀᴅᴀ ᴅᴏ ᴄᴏʟᴏssᴏ</purple>"
+    tier: EPIC
+    type: GREATSWORD
+    description:
+    - "<gray>ᴜᴍᴀ ʟᴀᴍɪɴᴀ ᴄᴏʟᴏssᴀʟ ǫᴜᴇ ᴏᴜᴛʀᴏʀᴀ</gray>"
+    - "<gray>ᴘᴇʀᴛᴇɴᴄᴇᴜ ᴀ ᴜᴍ ɢɪɢᴀɴᴛᴇ ᴅᴇ ᴘᴇᴅʀᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 35
+    strength: 14
+    critical-strike-power: 20
+    armor-penetration: 8
+    max-health: 30
+    two-handed: 1
+    required-level: 40
+
+lamento_dos_deuses:
+  base:
+    material: NETHERITE_SWORD
+    name: "<gold>ʟᴀᴍᴇɴᴛᴏ ᴅᴏs ᴅᴇᴜsᴇs</gold>"
+    tier: LEGENDARY
+    type: GREATSWORD
+    description:
+    - "<gray>ᴜᴍᴀ ʟᴀᴍɪɴᴀ ǫᴜᴇ ᴄʜᴏʀᴀ sᴏᴍʙʀᴀs ᴇᴛᴇʀɴᴀs,</gray>"
+    - "<gray>ꜰᴏʀᴊᴀᴅᴀ ɴᴀs ʟᴀɢʀɪᴍᴀs ᴅᴏs ᴅᴇᴜsᴇs ᴄᴀɪᴅᴏs.</gray>"
+    revision-id: 1
+    attack-damage: 48
+    strength: 18
+    critical-strike-chance: 6
+    critical-strike-power: 30
+    darkness-damage: 18
+    lifesteal: 5
+    two-handed: 1
+    required-level: 55
+
+espada_longa_aco:
+  base:
+    material: IRON_SWORD
+    name: "<green>ᴇsᴘᴀᴅᴀ ʟᴏɴɢᴀ ᴅᴇ ᴀᴄᴏ</green>"
+    tier: UNCOMMON
+    type: LONG_SWORD
+    description:
+    - "<gray>ᴜᴍᴀ ᴇsᴘᴀᴅᴀ ʟᴏɴɢᴀ ᴅᴇ ᴀᴄᴏ ᴛᴇᴍᴘᴇʀᴀᴅᴏ,</gray>"
+    - "<gray>sᴇᴜ ᴀʟᴄᴀɴᴄᴇ sᴜᴘᴇʀɪᴏʀ ᴅᴏᴍɪɴᴀ ᴏ ᴄᴀᴍᴘᴏ ᴅᴇ ʙᴀᴛᴀʟʜᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 12
+    strength: 4
+    dexterity: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_espada_longa_aco:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_aco"
+            4: "midgard:lingote_aco"
+            7: "midgard:lingote_aco"
+
+espada_longa_mithril:
+  base:
+    material: DIAMOND_SWORD
+    name: "<blue>ᴇsᴘᴀᴅᴀ ʟᴏɴɢᴀ ᴅᴇ ᴍɪᴛʜʀɪʟ</blue>"
+    tier: RARE
+    type: LONG_SWORD
+    description:
+    - "<gray>ᴍɪᴛʜʀɪʟ ᴘᴜʀᴏ ᴅᴀ ꜰᴏʀᴍᴀ ᴀ ᴇsᴛᴀ ʟᴀᴍɪɴᴀ,</gray>"
+    - "<gray>ᴇʟᴇɢᴀɴᴛᴇ ᴇ ᴍᴏʀᴛᴀʟ ᴇᴍ ᴄᴀᴅᴀ ᴇsᴛᴏᴄᴀᴅᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 19
+    strength: 7
+    dexterity: 5
+    critical-strike-chance: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_espada_longa_mithril:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_mithril"
+            4: "midgard:lingote_mithril"
+            7: "midgard:lingote_mithril"
+
+katana_aco:
+  base:
+    material: IRON_SWORD
+    name: "<green>ᴋᴀᴛᴀɴᴀ ᴅᴇ ᴀᴄᴏ</green>"
+    tier: UNCOMMON
+    type: KATANA
+    description:
+    - "<gray>ᴜᴍᴀ ʟᴀᴍɪɴᴀ ᴄᴜʀᴠᴀ ᴅᴇ ᴀᴄᴏ ꜰɪɴᴏ,</gray>"
+    - "<gray>ꜰᴏʀᴊᴀᴅᴀ ɴᴀ ᴛʀᴀᴅɪᴄᴀᴏ ᴅᴏs ᴍᴇsᴛʀᴇs ᴇsᴘᴀᴅᴀᴄʜɪɴs.</gray>"
+    revision-id: 1
+    attack-damage: 10
+    dexterity: 5
+    critical-strike-chance: 4
+    attack-speed: 0.2
+    crafting:
+      enabled: true
+      recipes:
+        craft_katana_aco:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_aco"
+            4: "midgard:lingote_aco"
+            8: "STICK"
+
+katana_sombria:
+  base:
+    material: DIAMOND_SWORD
+    name: "<blue>ᴋᴀᴛᴀɴᴀ sᴏᴍʙʀɪᴀ</blue>"
+    tier: RARE
+    type: KATANA
+    description:
+    - "<gray>ᴜᴍᴀ ʟᴀᴍɪɴᴀ ᴇɴᴠᴏʟᴛᴀ ᴇᴍ sᴏᴍʙʀᴀs,</gray>"
+    - "<gray>ᴄᴏʀᴛᴀ ᴛᴀɴᴛᴏ ᴀ ᴄᴀʀɴᴇ ǫᴜᴀɴᴛᴏ ᴀ ᴀʟᴍᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 17
+    dexterity: 7
+    critical-strike-chance: 6
+    attack-speed: 0.2
+    darkness-damage: 4
+    crafting:
+      enabled: true
+      recipes:
+        craft_katana_sombria:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_mithril"
+            4: "midgard:essencia_trevas"
+            8: "STICK"
+
+masamune:
+  base:
+    material: NETHERITE_SWORD
+    name: "<gold>ᴍᴀsᴀᴍᴜɴᴇ</gold>"
+    tier: LEGENDARY
+    type: KATANA
+    description:
+    - "<gray>ᴀ ᴋᴀᴛᴀɴᴀ ʟᴇɴᴅᴀʀɪᴀ ꜰᴏʀᴊᴀᴅᴀ ᴘᴇʟᴏ ᴍᴇsᴛʀᴇ ᴍᴀsᴀᴍᴜɴᴇ,</gray>"
+    - "<gray>sᴜᴀ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ sᴜᴘᴇʀᴀ ᴀ ᴘʀᴏᴘʀɪᴀ ᴠɪsᴀᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 38
+    dexterity: 16
+    critical-strike-chance: 12
+    critical-strike-power: 25
+    attack-speed: 0.3
+    required-level: 50

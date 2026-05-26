@@ -1,0 +1,71 @@
+title: "ᴛɪᴘᴏꜱ ᴅᴇ ᴅᴀɴᴏ"
+stats:
+  attack-damage:
+    name: "ᴅᴀɴᴏ ᴅᴇ ᴀᴛᴀǫᴜᴇ"
+    description:
+      - "<gray>ᴏ ᴅᴀɴᴏ ʙᴀꜱɪᴄᴏ ᴅᴇ ꜱᴇᴜꜱ ᴀᴛᴀǫᴜᴇꜱ."
+      - "<gray>ᴀꜰᴇᴛᴀ ɢᴏʟᴘᴇꜱ ꜰɪꜱɪᴄᴏꜱ ᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ."
+  weapon-damage:
+    name: "ᴅᴀɴᴏ ᴅᴀ ᴀʀᴍᴀ"
+    description:
+      - "<gray>ᴏ ᴅᴀɴᴏ ʙᴀꜱᴇ ᴅᴀ ᴀʀᴍᴀ ᴇǫᴜɪᴘᴀᴅᴀ."
+      - "<gray>ꜱᴏᴍᴀᴅᴏ ᴀᴏ ꜱᴇᴜ ᴅᴀɴᴏ ᴅᴇ ᴀᴛᴀǫᴜᴇ."
+  physical-damage:
+    name: "ᴅᴀɴᴏ ꜰɪꜱɪᴄᴏ"
+    description:
+      - "<gray>ᴅᴀɴᴏ ᴄᴀᴜꜱᴀᴅᴏ ᴘᴏʀ ɢᴏʟᴘᴇꜱ ᴄᴏʀᴘᴏ-ᴀ-ᴄᴏʀᴘᴏ"
+      - "<gray>ᴇ ᴘʀᴏᴊᴇᴛᴇɪꜱ ꜰɪꜱɪᴄᴏꜱ."
+  magic-damage:
+    name: "ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ"
+    description:
+      - "<gray>ᴀᴍᴘʟɪꜰɪᴄᴀ ᴏ ᴘᴏᴅᴇʀ ᴅᴇ ꜱᴇᴜꜱ ꜰᴇɪᴛɪᴄᴏꜱ"
+      - "<gray>ᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ ᴍᴀɢɪᴄᴀꜱ."
+  projectile-damage:
+    name: "ᴅᴀɴᴏ ᴅᴇ ᴘʀᴏᴊᴇᴛɪʟ"
+    description:
+      - "<gray>ᴅᴀɴᴏ ᴇxᴛʀᴀ ᴘᴀʀᴀ ᴀʀᴄᴏꜱ, ʙᴇꜱᴛᴀꜱ"
+      - "<gray>ᴇ ᴀʀᴍᴀꜱ ᴅᴇ ᴀʀʀᴇᴍᴇꜱꜱᴏ."
+  skill-damage:
+    name: "ᴅᴀɴᴏ ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ"
+    description:
+      - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ᴅᴇ ᴛᴏᴅᴀꜱ ᴀꜱ"
+      - "<gray>ꜱᴜᴀꜱ ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ ᴀᴛɪᴠᴀꜱ."
+  undead-damage:
+    name: "ᴅᴀɴᴏ ᴄᴏɴᴛʀᴀ ᴍᴏʀᴛᴏꜱ-ᴠɪᴠᴏꜱ"
+    description:
+      - "<gray>ᴅᴀɴᴏ ʙᴏɴᴜꜱ ᴄᴏɴᴛʀᴀ ᴢᴜᴍʙɪꜱ,"
+      - "<gray>ᴇꜱǫᴜᴇʟᴇᴛᴏꜱ ᴇ ᴏᴜᴛʀᴀꜱ ᴀʙᴏᴍɪɴᴀᴄᴏᴇꜱ."
+  fire-damage:
+    name: "ᴅᴀɴᴏ ᴅᴇ ꜰᴏɢᴏ"
+    description:
+      - "<gray>ǫᴜᴇɪᴍᴀ ꜱᴇᴜꜱ ɪɴɪᴍɪɢᴏꜱ ᴄᴏᴍ ᴏ"
+      - "<gray>ᴘᴏᴅᴇʀ ᴅᴀꜱ ᴄʜᴀᴍᴀꜱ."
+  ice-damage:
+    name: "ᴅᴀɴᴏ ᴅᴇ ɢᴇʟᴏ"
+    description:
+      - "<gray>ᴄᴏɴɢᴇʟᴀ ꜱᴇᴜꜱ ɪɴɪᴍɪɢᴏꜱ ᴄᴏᴍ ᴏ"
+      - "<gray>ꜰʀɪᴏ ᴅᴏ ɪɴᴠᴇʀɴᴏ."
+  light-damage:
+    name: "ᴅᴀɴᴏ ᴅᴇ ʟᴜᴢ"
+    description:
+      - "<gray>ᴀ ʟᴜᴢ ꜱᴀɢʀᴀᴅᴀ ǫᴜᴇ ᴘᴜʀɪꜰɪᴄᴀ"
+      - "<gray>ᴀꜱ ᴛʀᴇᴠᴀꜱ."
+  darkness-damage:
+    name: "ᴅᴀɴᴏ ᴅᴇ ᴇꜱᴄᴜʀɪᴅᴀᴏ"
+    description:
+      - "<gray>ᴏ ᴘᴏᴅᴇʀ ꜱᴏᴍʙʀɪᴏ ǫᴜᴇ ᴄᴏʀʀᴏɪ"
+      - "<gray>ᴀ ᴀʟᴍᴀ ᴅᴏꜱ ɪɴɪᴍɪɢᴏꜱ."
+  divine-damage:
+    name: "ᴅᴀɴᴏ ᴅɪᴠɪɴᴏ"
+    description:
+      - "<gray>ᴅᴀɴᴏ ᴘᴜʀᴏ ǫᴜᴇ ɪɢɴᴏʀᴀ"
+      - "<gray>ᴘᴀʀᴛᴇ ᴅᴀ ᴅᴇꜰᴇꜱᴀ ɪɴɪᴍɪɢᴀ."
+
+lore:
+  current_value: "<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <green>%value%"
+  click_edit: "<yellow>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ <gold>ᴇᴅɪᴛᴀʀ"
+  right_click_reset: "<yellow>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ <red>ʀᴇꜱᴇᴛᴀʀ"
+
+messages:
+  reset: "<green>%stat% <gray>ʀᴇꜱᴇᴛᴀᴅᴏ ᴘᴀʀᴀ <green>0<gray>!"
+  updated: "<green>%stat% <gray>ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ ᴘᴀʀᴀ <green>%value%<gray>!"

@@ -1,0 +1,473 @@
+# ============================================
+# Magical Armor Sets - Mage/Support
+# ============================================
+
+# --- Aprendiz Set (COMMON) ---
+
+aprendiz_capuz:
+  base:
+    material: LEATHER_HELMET
+    name: "<white>ᴄᴀᴘᴜᴢ ᴅᴏ ᴀᴘʀᴇɴᴅɪᴢ</white>"
+    tier: COMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴄᴀᴘᴜᴢ ᴅᴏs ᴀᴘʀᴇɴᴅɪᴢᴇs ᴅᴇ ᴍᴀɢɪᴀ,</gray>"
+    - "<gray>ᴄᴀɴᴀʟɪᴢᴀ ᴀ ᴇɴᴇʀɢɪᴀ ᴀʀᴄᴀɴᴀ.</gray>"
+    revision-id: 1
+    armor: 1
+    intelligence: 2
+    max-mana: 10
+    crafting:
+      enabled: true
+      recipes:
+        craft_aprendiz_capuz:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:couro_curtido"
+            1: "midgard:couro_curtido"
+            2: "midgard:couro_curtido"
+            3: "STRING"
+            5: "STRING"
+
+aprendiz_tunica:
+  base:
+    material: LEATHER_CHESTPLATE
+    name: "<white>ᴛᴜɴɪᴄᴀ ᴅᴏ ᴀᴘʀᴇɴᴅɪᴢ</white>"
+    tier: COMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴛᴜɴɪᴄᴀ sɪᴍᴘʟᴇs ᴅᴏ ᴀᴘʀᴇɴᴅɪᴢ,</gray>"
+    - "<gray>ɪᴍʙᴜɪᴅᴀ ᴄᴏᴍ ᴍᴀɢɪᴀ ʙᴀsɪᴄᴀ.</gray>"
+    revision-id: 1
+    armor: 2
+    intelligence: 3
+    max-mana: 15
+    crafting:
+      enabled: true
+      recipes:
+        craft_aprendiz_tunica:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:couro_curtido"
+            2: "midgard:couro_curtido"
+            3: "STRING"
+            4: "midgard:couro_curtido"
+            5: "STRING"
+            6: "STRING"
+            7: "midgard:couro_curtido"
+            8: "STRING"
+
+aprendiz_calcas:
+  base:
+    material: LEATHER_LEGGINGS
+    name: "<white>ᴄᴀʟᴄᴀs ᴅᴏ ᴀᴘʀᴇɴᴅɪᴢ</white>"
+    tier: COMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ʟᴇᴠᴇs ᴅᴏ ᴀᴘʀᴇɴᴅɪᴢ,</gray>"
+    - "<gray>ᴘᴇʀᴍɪᴛᴇᴍ ᴍᴏᴠɪᴍᴇɴᴛᴏ ᴅᴜʀᴀɴᴛᴇ ʀɪᴛᴜᴀɪs.</gray>"
+    revision-id: 1
+    armor: 1
+    intelligence: 2
+    max-mana: 12
+    crafting:
+      enabled: true
+      recipes:
+        craft_aprendiz_calcas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:couro_curtido"
+            1: "midgard:couro_curtido"
+            2: "midgard:couro_curtido"
+            3: "STRING"
+            5: "STRING"
+            6: "STRING"
+            8: "STRING"
+
+aprendiz_botas:
+  base:
+    material: LEATHER_BOOTS
+    name: "<white>ʙᴏᴛᴀs ᴅᴏ ᴀᴘʀᴇɴᴅɪᴢ</white>"
+    tier: COMMON
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs sɪᴍᴘʟᴇs ᴅᴏ ᴀᴘʀᴇɴᴅɪᴢ,</gray>"
+    - "<gray>ᴘʀɪᴍᴇɪʀᴏs ᴘᴀssᴏs ɴᴀ ᴍᴀɢɪᴀ.</gray>"
+    revision-id: 1
+    armor: 1
+    intelligence: 1
+    max-mana: 8
+    crafting:
+      enabled: true
+      recipes:
+        craft_aprendiz_botas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            3: "midgard:couro_curtido"
+            5: "midgard:couro_curtido"
+            6: "STRING"
+            8: "STRING"
+
+# --- Arcano Set (RARE) ---
+
+arcano_capuz:
+  base:
+    material: IRON_HELMET
+    name: "<blue>ᴄᴀᴘᴜᴢ ᴀʀᴄᴀɴᴏ</blue>"
+    tier: RARE
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴄᴀᴘᴜᴢ ᴅᴏs ᴍᴀɢᴏs ᴀʀᴄᴀɴᴏs,</gray>"
+    - "<gray>ᴀᴍᴘʟɪꜰɪᴄᴀ ᴏ ᴘᴏᴅᴇʀ ᴍᴀɢɪᴄᴏ.</gray>"
+    revision-id: 1
+    armor: 6
+    intelligence: 7
+    max-mana: 30
+    mana-regeneration: 2
+    cooldown-reduction: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_arcano_capuz:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:tecido_encantado"
+            1: "midgard:cristal_arcano"
+            2: "midgard:tecido_encantado"
+            3: "midgard:tecido_encantado"
+            5: "midgard:tecido_encantado"
+
+arcano_tunica:
+  base:
+    material: IRON_CHESTPLATE
+    name: "<blue>ᴛᴜɴɪᴄᴀ ᴀʀᴄᴀɴᴀ</blue>"
+    tier: RARE
+    type: ARMOR
+    description:
+    - "<gray>ᴛᴜɴɪᴄᴀ ᴛᴇᴄɪᴅᴀ ᴄᴏᴍ ꜰɪᴏs ᴀʀᴄᴀɴᴏs,</gray>"
+    - "<gray>ᴘᴜʟsᴀ ᴄᴏᴍ ᴇɴᴇʀɢɪᴀ ᴍᴀɢɪᴄᴀ.</gray>"
+    revision-id: 1
+    armor: 8
+    intelligence: 10
+    max-mana: 45
+    mana-regeneration: 3
+    cooldown-reduction: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_arcano_tunica:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:tecido_encantado"
+            2: "midgard:tecido_encantado"
+            3: "midgard:cristal_arcano"
+            4: "midgard:tecido_encantado"
+            5: "midgard:cristal_arcano"
+            6: "midgard:tecido_encantado"
+            7: "midgard:tecido_encantado"
+            8: "midgard:tecido_encantado"
+
+arcano_calcas:
+  base:
+    material: IRON_LEGGINGS
+    name: "<blue>ᴄᴀʟᴄᴀs ᴀʀᴄᴀɴᴀs</blue>"
+    tier: RARE
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ᴇɴᴄᴀɴᴛᴀᴅᴀs ᴄᴏᴍ ʀᴜɴᴀs,</gray>"
+    - "<gray>ᴄᴀɴᴀʟɪᴢᴀᴍ ᴏ ꜰʟᴜxᴏ ᴅᴇ ᴍᴀɴᴀ.</gray>"
+    revision-id: 1
+    armor: 7
+    intelligence: 8
+    max-mana: 35
+    mana-regeneration: 2
+    cooldown-reduction: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_arcano_calcas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:tecido_encantado"
+            1: "midgard:cristal_arcano"
+            2: "midgard:tecido_encantado"
+            3: "midgard:tecido_encantado"
+            5: "midgard:tecido_encantado"
+            6: "midgard:tecido_encantado"
+            8: "midgard:tecido_encantado"
+
+arcano_botas:
+  base:
+    material: IRON_BOOTS
+    name: "<blue>ʙᴏᴛᴀs ᴀʀᴄᴀɴᴀs</blue>"
+    tier: RARE
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ɪᴍʙᴜɪᴅᴀs ᴄᴏᴍ ᴍᴀɢɪᴀ ᴀʀᴄᴀɴᴀ,</gray>"
+    - "<gray>ᴅᴇsʟɪᴢᴀᴍ sᴏʙʀᴇ ᴏ ᴄʜᴀᴏ ᴄᴏᴍ ɢʀᴀᴄᴀ.</gray>"
+    revision-id: 1
+    armor: 5
+    intelligence: 6
+    max-mana: 25
+    mana-regeneration: 2
+    movement-speed: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_arcano_botas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            3: "midgard:tecido_encantado"
+            5: "midgard:tecido_encantado"
+            6: "midgard:cristal_arcano"
+            8: "midgard:cristal_arcano"
+
+# --- Arcanista Set (EPIC) ---
+
+arcanista_capuz:
+  base:
+    material: DIAMOND_HELMET
+    name: "<purple>ᴄᴀᴘᴜᴢ ᴅᴏ ᴀʀᴄᴀɴɪsᴛᴀ</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴄᴀᴘᴜᴢ ᴅᴏs ᴍᴇsᴛʀᴇs ᴀʀᴄᴀɴɪsᴛᴀs,</gray>"
+    - "<gray>ᴀᴍᴘʟɪꜰɪᴄᴀ ᴏ ᴘᴏᴅᴇʀ ᴅᴏs ꜰᴇɪᴛɪᴄᴏs.</gray>"
+    revision-id: 1
+    armor: 10
+    intelligence: 10
+    max-mana: 50
+    mana-regeneration: 4
+    skill-damage: 4
+    cooldown-reduction: 4
+    required-level: 38
+
+arcanista_tunica:
+  base:
+    material: DIAMOND_CHESTPLATE
+    name: "<purple>ᴛᴜɴɪᴄᴀ ᴅᴏ ᴀʀᴄᴀɴɪsᴛᴀ</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ᴛᴜɴɪᴄᴀ ᴛᴇᴄɪᴅᴀ ᴄᴏᴍ ᴇssᴇɴᴄɪᴀ ᴀʀᴄᴀɴᴀ,</gray>"
+    - "<gray>ᴛʀᴀɴsʙᴏʀᴅᴀ ᴘᴏᴅᴇʀ ᴍᴀɢɪᴄᴏ.</gray>"
+    revision-id: 1
+    armor: 14
+    intelligence: 14
+    max-mana: 70
+    mana-regeneration: 5
+    skill-damage: 6
+    cooldown-reduction: 5
+    required-level: 38
+
+arcanista_calcas:
+  base:
+    material: DIAMOND_LEGGINGS
+    name: "<purple>ᴄᴀʟᴄᴀs ᴅᴏ ᴀʀᴄᴀɴɪsᴛᴀ</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ʀᴜɴɪᴄᴀs ᴅᴏ ᴀʀᴄᴀɴɪsᴛᴀ,</gray>"
+    - "<gray>ɢʀᴀᴠᴀᴅᴀs ᴄᴏᴍ sɪɢɪʟᴏs ᴅᴇ ᴘᴏᴅᴇʀ.</gray>"
+    revision-id: 1
+    armor: 12
+    intelligence: 12
+    max-mana: 60
+    mana-regeneration: 4
+    skill-damage: 5
+    cooldown-reduction: 4
+    required-level: 38
+
+arcanista_botas:
+  base:
+    material: DIAMOND_BOOTS
+    name: "<purple>ʙᴏᴛᴀs ᴅᴏ ᴀʀᴄᴀɴɪsᴛᴀ</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ᴅᴏ ᴀʀᴄᴀɴɪsᴛᴀ ᴍᴇsᴛʀᴇ,</gray>"
+    - "<gray>ᴅᴇsʟɪᴢᴀᴍ ᴇɴᴛʀᴇ ᴀs ᴅɪᴍᴇɴsᴏᴇs.</gray>"
+    revision-id: 1
+    armor: 8
+    intelligence: 9
+    max-mana: 40
+    mana-regeneration: 3
+    skill-damage: 3
+    movement-speed: 3
+    required-level: 38
+
+# --- Celestial Set (MYTHIC) ---
+
+celestial_capuz:
+  base:
+    material: NETHERITE_HELMET
+    name: "<light_purple>ᴄᴀᴘᴜᴢ ᴄᴇʟᴇsᴛɪᴀʟ</light_purple>"
+    tier: MYTHIC
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴄᴀᴘᴜᴢ ᴅᴏs sᴇʀᴇs ᴄᴇʟᴇsᴛɪᴀɪs,</gray>"
+    - "<gray>ɪʀʀᴀᴅɪᴀ ʟᴜᴢ ᴅɪᴠɪɴᴀ.</gray>"
+    revision-id: 1
+    armor: 16
+    intelligence: 18
+    max-mana: 80
+    mana-regeneration: 7
+    skill-damage: 8
+    cooldown-reduction: 6
+    divine-damage: 8
+    max-health: 30
+    required-level: 60
+
+celestial_tunica:
+  base:
+    material: NETHERITE_CHESTPLATE
+    name: "<light_purple>ᴛᴜɴɪᴄᴀ ᴄᴇʟᴇsᴛɪᴀʟ</light_purple>"
+    tier: MYTHIC
+    type: ARMOR
+    description:
+    - "<gray>ᴛᴜɴɪᴄᴀ ᴛᴇᴄɪᴅᴀ ᴄᴏᴍ ʟᴜᴢ ᴅᴀs ᴇsᴛʀᴇʟᴀs,</gray>"
+    - "<gray>ᴘᴏᴅᴇʀ ᴄᴇʟᴇsᴛɪᴀʟ ꜰʟᴜɪ ᴘᴏʀ sᴜᴀs ꜰɪʙʀᴀs.</gray>"
+    revision-id: 1
+    armor: 22
+    intelligence: 22
+    max-mana: 100
+    mana-regeneration: 9
+    skill-damage: 10
+    cooldown-reduction: 8
+    divine-damage: 10
+    max-health: 40
+    required-level: 60
+
+celestial_calcas:
+  base:
+    material: NETHERITE_LEGGINGS
+    name: "<light_purple>ᴄᴀʟᴄᴀs ᴄᴇʟᴇsᴛɪᴀɪs</light_purple>"
+    tier: MYTHIC
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ɪᴍʙᴜɪᴅᴀs ᴄᴏᴍ ᴘᴏᴅᴇʀ ᴅɪᴠɪɴᴏ,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ᴘᴀssᴏ ᴅᴇɪxᴀ ᴜᴍ ʀᴀsᴛʀᴏ ᴅᴇ ʟᴜᴢ.</gray>"
+    revision-id: 1
+    armor: 20
+    intelligence: 20
+    max-mana: 90
+    mana-regeneration: 8
+    skill-damage: 9
+    cooldown-reduction: 7
+    divine-damage: 9
+    max-health: 35
+    required-level: 60
+
+celestial_botas:
+  base:
+    material: NETHERITE_BOOTS
+    name: "<light_purple>ʙᴏᴛᴀs ᴄᴇʟᴇsᴛɪᴀɪs</light_purple>"
+    tier: MYTHIC
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ǫᴜᴇ ᴘɪsᴀᴍ ᴇɴᴛʀᴇ ᴏs ᴍᴜɴᴅᴏs,</gray>"
+    - "<gray>ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅɪᴠɪɴᴀ ᴇᴍ ᴄᴀᴅᴀ ᴘᴀssᴏ.</gray>"
+    revision-id: 1
+    armor: 14
+    intelligence: 15
+    max-mana: 70
+    mana-regeneration: 6
+    skill-damage: 7
+    cooldown-reduction: 5
+    divine-damage: 7
+    movement-speed: 4
+    required-level: 60
+
+# --- Sacerdote Set (LEGENDARY) ---
+
+sacerdote_capuz:
+  base:
+    material: NETHERITE_HELMET
+    name: "<gold>ᴄᴀᴘᴜᴢ ᴅᴏ sᴀᴄᴇʀᴅᴏᴛᴇ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴄᴀᴘᴜᴢ ᴅᴏs sᴀᴄᴇʀᴅᴏᴛᴇs sᴀɢʀᴀᴅᴏs,</gray>"
+    - "<gray>ᴄᴜʀᴀ ᴇ ᴘʀᴏᴛᴇɢᴇ ᴏs ᴀʟɪᴀᴅᴏs.</gray>"
+    revision-id: 1
+    armor: 14
+    intelligence: 14
+    max-mana: 60
+    max-health: 40
+    health-regeneration: 4
+    mana-regeneration: 5
+    cooldown-reduction: 5
+    required-level: 50
+
+sacerdote_tunica:
+  base:
+    material: NETHERITE_CHESTPLATE
+    name: "<gold>ᴛᴜɴɪᴄᴀ ᴅᴏ sᴀᴄᴇʀᴅᴏᴛᴇ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ᴛᴜɴɪᴄᴀ sᴀɢʀᴀᴅᴀ ᴅᴏ sᴀᴄᴇʀᴅᴏᴛᴇ,</gray>"
+    - "<gray>ɪʀʀᴀᴅɪᴀ ᴜᴍᴀ ᴀᴜʀᴀ ᴅᴇ ᴄᴜʀᴀ.</gray>"
+    revision-id: 1
+    armor: 18
+    intelligence: 18
+    max-mana: 80
+    max-health: 50
+    health-regeneration: 5
+    mana-regeneration: 7
+    cooldown-reduction: 6
+    required-level: 50
+
+sacerdote_calcas:
+  base:
+    material: NETHERITE_LEGGINGS
+    name: "<gold>ᴄᴀʟᴄᴀs ᴅᴏ sᴀᴄᴇʀᴅᴏᴛᴇ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ʙᴇɴᴢɪᴅᴀs ᴅᴏ sᴀᴄᴇʀᴅᴏᴛᴇ,</gray>"
+    - "<gray>ᴘʀᴏᴛᴇɢᴇᴍ ᴄᴏᴍ ɢʀᴀᴄᴀ ᴅɪᴠɪɴᴀ.</gray>"
+    revision-id: 1
+    armor: 16
+    intelligence: 16
+    max-mana: 70
+    max-health: 45
+    health-regeneration: 4
+    mana-regeneration: 6
+    cooldown-reduction: 5
+    required-level: 50
+
+sacerdote_botas:
+  base:
+    material: NETHERITE_BOOTS
+    name: "<gold>ʙᴏᴛᴀs ᴅᴏ sᴀᴄᴇʀᴅᴏᴛᴇ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs sᴀɢʀᴀᴅᴀs ᴅᴏ sᴀᴄᴇʀᴅᴏᴛᴇ,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ᴘᴀssᴏ ᴛʀᴀᴢ ʙᴇɴᴄᴀᴏ.</gray>"
+    revision-id: 1
+    armor: 12
+    intelligence: 12
+    max-mana: 55
+    max-health: 35
+    health-regeneration: 3
+    mana-regeneration: 5
+    movement-speed: 3
+    required-level: 50

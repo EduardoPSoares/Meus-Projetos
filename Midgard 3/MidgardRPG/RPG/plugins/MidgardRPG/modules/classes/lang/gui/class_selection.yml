@@ -1,0 +1,37 @@
+title: "<white>ᴇsᴄᴏʟʜᴀ sᴜᴀ ᴄʟᴀssᴇ</white>"
+warrior:
+  name: "<red>⚔ ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━</dark_gray>"
+    - "<gray>ᴍᴇsᴛʀᴇ ᴅᴏ ᴄᴏᴍʙᴀᴛᴇ ᴄᴏʀᴘᴏ ᴀ ᴄᴏʀᴘᴏ.</gray>"
+    - ""
+    - "<gray>ᴀᴛʀɪʙᴜᴛᴏs:</gray>"
+    - "<gray>• ❤ ꜰᴏʀᴄᴀ:<white>ᴀʟᴛᴀ</white>"
+    - "<gray>• 🛡 ᴅᴇꜰᴇsᴀ:<white>ᴍᴇᴅɪᴀ</white>"
+    - ""
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━</dark_gray>"
+    - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇsᴄᴏʟʜᴇʀ</gray>"
+mage:
+  name: "<aqua>✨ ᴍᴀɢᴏ</aqua>"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━</dark_gray>"
+    - "<gray>ᴅᴏᴍɪɴᴀ ᴏ ᴘᴏᴅᴇʀ ᴅᴀ ᴍᴀɢɪᴀ ᴀʀᴄᴀɴᴀ.</gray>"
+    - ""
+    - "<gray>ᴀᴛʀɪʙᴜᴛᴏs:</gray>"
+    - "<gray>• ✨ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ:<white>ᴀʟᴛᴀ</white>"
+    - "<gray>• 🛡 ᴅᴇꜰᴇsᴀ:<white>ʙᴀɪxᴀ</white>"
+    - ""
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━</dark_gray>"
+    - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇsᴄᴏʟʜᴇʀ</gray>"
+archer:
+  name: "<green>🏹 ᴀʀǫᴜᴇɪʀᴏ</green>"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━</dark_gray>"
+    - "<gray>ʀᴀᴘɪᴅᴏ ᴇ ᴍᴏʀᴛᴀʟ ᴄᴏᴍ ᴀʀᴍᴀs ᴅᴇ ʟᴏɴɢᴏ ᴀʟᴄᴀɴᴄᴇ.</gray>"
+    - ""
+    - "<gray>ᴀᴛʀɪʙᴜᴛᴏs:</gray>"
+    - "<gray>• ⚡ ᴅᴇsᴛʀᴇzᴀ:<white>ᴀʟᴛᴀ</white>"
+    - "<gray>• ➤ ᴀʟᴄᴀɴᴄᴇ:<white>ʟᴏɴɢᴏ</white>"
+    - ""
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━</dark_gray>"
+    - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇsᴄᴏʟʜᴇʀ</gray>"

@@ -1,0 +1,90 @@
+name: "<aqua>ᴀᴘᴏᴄᴀʟɪᴘsᴇ ᴀʀᴄᴀɴᴏ</aqua>"
+mythic-skill: "ApocalipseArcano"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 60.0
+  per-level: -1.0
+mana:
+  base: 90.0
+  per-level: -1.0
+stamina: 0.0
+
+cast-time: 3.0
+interruptible: true
+
+max-level: 10
+
+requirements:
+  class: "Mago"
+  level: 20
+
+icon:
+  material: BEACON
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<aqua><bold>ᴍᴀɢɪᴀ sᴜᴘʀᴇᴍᴀ</bold></aqua>"
+  - ""
+  - "<gray>ᴏ ᴍᴀɢᴏ ᴅᴇsᴇɴᴄᴀᴅᴇɪᴀ ᴏ ᴘᴏᴅᴇʀ</gray>"
+  - "<gray>ᴀʀᴄᴀɴᴏ sᴜᴘʀᴇᴍᴏ, ᴅᴇᴠᴀsᴛᴀɴᴅᴏ ᴛᴜᴅᴏ</gray>"
+  - "<gray>ᴀᴏ sᴇᴜ ʀᴇᴅᴏʀ ᴄᴏᴍ ꜰᴏɢᴏ, ɢᴇʟᴏ ᴇ ʀᴀɪᴏs.</gray>"
+  - ""
+  - "<aqua><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></aqua>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ʀᴀɪᴏ:<aqua>{radius}</aqua>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<aqua>{duration}s</aqua>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ᴄᴏɴᴊᴜʀᴀᴄᴀᴏ:<red>3.0s</red>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴀɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>20</yellow>"
+
+variables:
+  damage:
+    base: 50.0
+    per-level: 10.0
+  radius:
+    base: 6.0
+    per-level: 0.4
+  duration:
+    base: 8.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "arcane_apocalypse_storm"
+    mechanic-override: "ApocalipseArcanoMk2"
+    stat-bonus:
+      intelligence: 3.0
+  5:
+    visual: "arcane_apocalypse_annihilation"
+    mechanic-override: "ApocalipseArcanoMk3"
+    stat-bonus:
+      intelligence: 4.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 10
+
+sounds:
+  cast-start:
+    sound: "entity.wither.spawn"
+    volume: 1.0
+    pitch: 0.8
+  cast-finish:
+    sound: "entity.generic.explode"
+    volume: 1.0
+    pitch: 0.4
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

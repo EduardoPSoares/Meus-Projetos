@@ -1,0 +1,45 @@
+# Configuração do Sistema de Upgrade de Itens
+# Aqui você define como os itens podem ser melhorados (ex: +1, +2, +3...)
+
+# Configurações Gerais
+settings:
+  # O nível máximo de upgrade permitido
+  max-level: 10
+  # Se deve mostrar o nível no nome do item (ex: Espada de Ferro [+1])
+  show-level-in-name: true
+  # Formato do sufixo de nível
+  level-suffix: " <gradient:#ffcc00:#ffff00>[+%level%]</gradient>"
+
+# Custos e Chances por Nível
+# level: O nível alvo (para ir de 0 para 1, configure '1')
+levels:
+  1:
+    chance: 100.0
+    cost: 100.0
+    # Se falhar, o item quebra?
+    break-on-fail: false
+    # Se falhar, o nível desce?
+    downgrade-on-fail: false
+    # Materiais necessários (opcional)
+    # materials:
+    #   - "IRON_INGOT:5"
+  2:
+    chance: 90.0
+    cost: 200.0
+    break-on-fail: false
+    downgrade-on-fail: false
+  3:
+    chance: 80.0
+    cost: 400.0
+    break-on-fail: false
+    downgrade-on-fail: true
+  4:
+    chance: 70.0
+    cost: 800.0
+    break-on-fail: false
+    downgrade-on-fail: true
+  5:
+    chance: 60.0
+    cost: 1500.0
+    break-on-fail: true
+    downgrade-on-fail: true

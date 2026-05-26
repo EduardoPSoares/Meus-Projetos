@@ -1,0 +1,78 @@
+name: "<dark_gray>ᴇᴠᴀsᴀᴏ</dark_gray>"
+mythic-skill: "Evasao"
+spell-type: COMMON
+
+cooldown:
+  base: 8.0
+  per-level: -0.3
+mana:
+  base: 15.0
+  per-level: -0.5
+stamina: 10.0
+
+max-level: 10
+
+requirements:
+  class: "Ladino"
+  level: 3
+
+icon:
+  material: FEATHER
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></dark_gray>"
+  - ""
+  - "<gray>ᴏ ʟᴀᴅɪɴᴏ ᴇxᴇᴄᴜᴛᴀ ᴜᴍ ᴍᴏᴠɪᴍᴇɴᴛᴏ</gray>"
+  - "<gray>ᴇᴠᴀsɪᴠᴏ ʀᴀᴘɪᴅᴏ, ᴇsǫᴜɪᴠᴀɴᴅᴏ ᴅᴏ</gray>"
+  - "<gray>ᴘʀᴏxɪᴍᴏ ᴀᴛᴀǫᴜᴇ ɪɴɪᴍɪɢᴏ.</gray>"
+  - ""
+  - "<dark_gray><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_gray>"
+  - ""
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<dark_purple>{duration}s</dark_purple>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ʟᴀᴅɪɴᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>3</yellow>"
+
+variables:
+  duration:
+    base: 2.0
+    per-level: 0.3
+
+milestones:
+  3:
+    visual: "evasao_dash"
+    mechanic-override: "EvasaoMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "evasao_phantom"
+    mechanic-override: "EvasaoMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.enderman.teleport"
+    volume: 0.8
+    pitch: 1.4
+  cast-finish:
+    sound: "entity.bat.takeoff"
+    volume: 0.6
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

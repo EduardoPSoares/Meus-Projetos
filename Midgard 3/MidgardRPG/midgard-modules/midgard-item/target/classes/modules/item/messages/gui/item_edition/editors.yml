@@ -1,0 +1,20 @@
+# ============================================
+# MIDGARD ITEM - Mensagens dos Editores
+# Feedback de edição de stats
+# ============================================
+
+editors:
+  boolean:
+    reset: '<green>✔ ᴠᴀʟᴏʀ ʀᴇᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ ꜰᴀʟꜱᴏ'
+    toggled: '<green>✔ ᴠᴀʟᴏʀ ᴀʟᴛᴇʀɴᴀᴅᴏ ᴘᴀʀᴀ %value%'
+
+  stat:
+    reset: '<green>✔ %stat% ʀᴇᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ 0!'
+    enter_value: '<yellow>✎ ᴅɪɢɪᴛᴇ ᴏ ᴠᴀʟᴏʀ ᴅᴇ %stat% ɴᴀᴏ ᴄʜᴀᴛ:</yellow> <gray>(ᴏᴜ "ᴄᴀɴᴄᴇʟ")</gray>'
+    updated: '<green>✔ %stat% ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!'
+    invalid_format: '<red>✖ ꜰᴏʀᴍᴀᴛᴏ ᴅᴇ ɴᴜᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ.'
+
+  string:
+    cleared: '<green>✔ %prompt% ʟɪᴍᴘᴏ!'
+    enter_value: '<yellow>✎ ᴅɪɢɪᴛᴇ %prompt% ɴᴀᴏ ᴄʜᴀᴛ:</yellow> <gray>(ᴏᴜ "ᴄᴀɴᴄᴇʟ")</gray>'
+    updated: '<green>✔ %prompt% ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!'

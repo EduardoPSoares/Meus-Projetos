@@ -1,0 +1,93 @@
+title: "<white>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴇ %player% ✦</white>"
+size: 54
+items:
+  background:
+    material: BLACK_STAINED_GLASS_PANE
+    name: " "
+    slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 27, 35, 36, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53]
+  
+  info:
+    material: PLAYER_HEAD
+    slot: 4
+    name: "<yellow>⚔ ɪɴꜰᴏʀᴍᴀᴄᴏᴇs ᴅᴏ ʜᴇʀᴏɪ</yellow>"
+    lore:
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+      - "<gray>ɴᴏᴍᴇ:<white>%player%</white>"
+      - "<gray>ɴɪᴠᴇʟ:<white>%level%</white>"
+      - "<gray>ᴄʟᴀssᴇ:<white>%class%</white>"
+      - ""
+      - "<gray>✦ sᴇᴜs ᴀᴛʀɪʙᴜᴛᴏs ᴅᴇꜰɪɴᴇᴍ sᴇᴜ ᴠᴇʀᴅᴀᴅᴇɪʀᴏ ᴘᴏᴅᴇʀ.</gray>"
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+  vitals:
+    material: RED_DYE
+    slot: 20
+    name: "<red>❤ ᴠɪᴛᴀɪs</red>"
+    lore:
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+      - ""
+      - "<gray>❤ ᴠɪᴅᴀ ᴍᴀxɪᴍᴀ:<white>%stat_max_health%</white>"
+      - "<gray>♥ ʀᴇɢᴇɴ. ᴠɪᴅᴀ:<white>%stat_health_regen%/s</white>"
+      - ""
+      - "<gray>💧 ᴍᴀɴᴀ ᴍᴀxɪᴍᴀ:<white>%stat_max_mana%</white>"
+      - "<gray>✧ ʀᴇɢᴇɴ. ᴍᴀɴᴀ:<white>%stat_mana_regen%/s</white>"
+      - ""
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+  offense:
+    material: IRON_SWORD
+    slot: 22
+    name: "<yellow>⚔ ᴏꜰᴇɴsɪᴠᴀ</yellow>"
+    lore:
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+      - ""
+      - "<gray>⚔ ᴅᴀɴᴏ ꜰɪsɪᴄᴏ:<white>%stat_physical_damage%</white>"
+      - "<gray>✨ ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ:<white>%stat_magic_damage%</white>"
+      - "<gray>⚡ ᴠᴇʟ. ᴀᴛᴀǫᴜᴇ:<white>%stat_attack_speed%</white>"
+      - ""
+      - "<gray>★ ᴄʜᴀɴᴄᴇ ᴄʀɪᴛɪᴄᴏ:<white>%stat_critical_chance%</white>"
+      - "<gray>✦ ᴅᴀɴᴏ ᴄʀɪᴛɪᴄᴏ:<white>%stat_critical_damage%</white>"
+      - ""
+      - "<gray>◈ ᴘᴇɴ. ᴀʀᴍᴀᴅᴜʀᴀ:<white>%stat_armor_penetration%</white>"
+      - "<gray>◆ ᴘᴇɴ. ᴍᴀɢɪᴄᴀ:<white>%stat_magic_penetration%</white>"
+      - ""
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    flags: [HIDE_ATTRIBUTES]
+
+  defense:
+    material: IRON_CHESTPLATE
+    slot: 24
+    name: "<aqua>🛡 ᴅᴇꜰᴇɴsɪᴠᴀ</aqua>"
+    lore:
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+      - ""
+      - "<gray>🛡 ᴀʀᴍᴀᴅᴜʀᴀ:<white>%stat_armor%</white>"
+      - "<gray>✦ ʀᴇs. ᴍᴀɢɪᴄᴀ:<white>%stat_magic_resistance%</white>"
+      - ""
+      - "<gray>▣ ʙʟᴏǫᴜᴇɪᴏ:<white>%stat_block_chance%</white>"
+      - "<gray>⚡ ᴇsǫᴜɪᴠᴀ:<white>%stat_dodge_chance%</white>"
+      - "<gray>◉ ᴛᴇɴᴀᴄɪᴅᴀᴅᴇ:<white>%stat_tenacity%</white>"
+      - ""
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    flags: [HIDE_ATTRIBUTES]
+
+  utility:
+    material: FEATHER
+    slot: 31
+    name: "<green>⚡ ᴜᴛɪʟɪᴅᴀᴅᴇ</green>"
+    lore:
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+      - ""
+      - "<gray>➤ ᴠᴇʟ. ᴍᴏᴠɪᴍᴇɴᴛᴏ:<white>%stat_movement_speed%</white>"
+      - "<gray>⟳ ʀᴇᴅ. ʀᴇᴄᴀʀɢᴀ:<white>%stat_cooldown_reduction%</white>"
+      - "<gray>☘ sᴏʀᴛᴇ:<white>%stat_luck%</white>"
+      - ""
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+  close:
+    material: BARRIER
+    slot: 49
+    name: "<red>✖ ꜰᴇᴄʜᴀʀ</red>"
+    lore:
+      - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ꜰᴇᴄʜᴀʀ</gray>"
+    action: "close"

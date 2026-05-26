@@ -1,0 +1,87 @@
+# ============================================
+# MIDGARD ITEM - GUI: EDITOR
+# ============================================
+# Padrão V2.0 - Oficial
+# ============================================
+
+
+# ============================================
+# PROMPTS DE ENTRADA (formato direto)
+# ============================================
+enter-prompt: "<yellow>✎ <gray>ᴅɪɢɪᴛᴇ <white>%s <gray>ɴᴏ ᴄʜᴀᴛ:"
+enter-prompt-cancel: "<red>✖ <gray>ᴅɪɢɪᴛᴇ <white>%s <gray>ɴᴏ ᴄʜᴀᴛ: <dark_gray>(ᴏᴜ \"ᴄᴀɴᴄᴇʟ\")"
+updated: "<gray>• <white>%s ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!"
+reset: "<gray>• <white>%s ʀᴇᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ 0!"
+reset-stone: "<gray>• <white>%s ʀᴇᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ ꜱᴛᴏɴᴇ!"
+invalid-number: "<red>✖ <gray>ꜰᴏʀᴍᴀᴛᴏ ᴅᴇ ɴᴜᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ."
+invalid-material: "<red>✖ <gray>ᴍᴀᴛᴇʀɪᴀʟ ɪɴᴠᴀʟɪᴅᴏ."
+
+# ============================================
+# PROMPTS DE ENTRADA (formato aninhado - legado)
+# ============================================
+prompts:
+  enter_prompt: "<yellow>✎ <gray>ᴅɪɢɪᴛᴇ <white>%s <gray>ɴᴏ ᴄʜᴀᴛ:"
+  enter_prompt_cancel: "<red>✖ <gray>ᴅɪɢɪᴛᴇ <white>%s <gray>ɴᴏ ᴄʜᴀᴛ: <dark_gray>(ᴏᴜ \"ᴄᴀɴᴄᴇʟ\")"
+
+# ============================================
+# MENSAGENS DE VALIDAÇÃO
+# ============================================
+validation:
+  invalid_number: "<red>✖ <gray>ꜰᴏʀᴍᴀᴛᴏ ᴅᴇ ɴᴜᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ."
+  invalid_material: "<red>✖ <gray>ᴍᴀᴛᴇʀɪᴀʟ ɪɴᴠᴀʟɪᴅᴏ."
+
+# ============================================
+# MENSAGENS DE ATUALIZAÇÃO
+# ============================================
+update:
+  updated: "<gray>• <white>%s ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!"
+  reset: "<gray>• <white>%s ʀᴇᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ 0!"
+  reset_stone: "<gray>• <white>%s ʀᴇᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ ꜱᴛᴏɴᴇ!"
+
+# ============================================
+# NOMES DOS CAMPOS (PROMPTS)
+# ============================================
+prompt:
+  revision_id: "ɪᴅ ᴅᴇ ʀᴇᴠɪꜱᴀᴏ"
+  material: "ᴍᴀᴛᴇʀɪᴀʟ"
+  base_item_damage: "ᴅᴀɴᴏ ʙᴀꜱᴇ ᴅᴏ ɪᴛᴇᴍ"
+  custom_model_data: "ᴄᴜꜱᴛᴏᴍ ᴍᴏᴅᴇʟ ᴅᴀᴛᴀ"
+  custom_model_data_strings: "ᴄᴜꜱᴛᴏᴍ ᴍᴏᴅᴇʟ ᴅᴀᴛᴀ ꜱᴛʀɪɴɢꜱ"
+  custom_model_data_floats: "ᴄᴜꜱᴛᴏᴍ ᴍᴏᴅᴇʟ ᴅᴀᴛᴀ ꜰʟᴏᴀᴛꜱ"
+  item_model: "ᴍᴏᴅᴇʟᴏ ᴅᴏ ɪᴛᴇᴍ"
+  equippable_slot: "ꜱʟᴏᴛ ᴇǫᴜɪᴘᴀᴠᴇʟ"
+  equippable_model: "ᴍᴏᴅᴇʟᴏ ᴇǫᴜɪᴘᴀᴠᴇʟ"
+  max_custom_durability: "ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴀ ᴍᴀxɪᴍᴀ"
+  max_vanilla_durability: "ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ ᴠᴀɴɪʟʟᴀ ᴍᴀxɪᴍᴀ"
+  display_name: "ɴᴏᴍᴇ ᴅᴇ ᴇxɪʙɪᴄᴀᴏ"
+  lore: "ʟᴏʀᴇ"
+  nbt_tags: "ᴛᴀɢꜱ ɴʙᴛ"
+  max_stack_size: "ᴛᴀᴍᴀɴʜᴏ ᴍᴀxɪᴍᴏ ᴅᴏ ᴘᴀᴄᴋ"
+  lore_format: "ꜰᴏʀᴍᴀᴛᴏ ᴅᴀ ʟᴏʀᴇ"
+  custom_tooltip: "ᴛᴏᴏʟᴛɪᴘ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴀ"
+  vanilla_tooltip_style: "ᴇꜱᴛɪʟᴏ ᴅᴇ ᴛᴏᴏʟᴛɪᴘ ᴠᴀɴɪʟʟᴀ"
+  displayed_type: "ᴛɪᴘᴏ ᴇxɪʙɪᴅᴏ"
+  enchantments: "ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏꜱ"
+  permission: "ᴘᴇʀᴍɪꜱꜱᴀᴏ"
+  item_particles: "ᴘᴀʀᴛɪᴄᴜʟᴀꜱ ᴅᴏ ɪᴛᴇᴍ"
+  required_class: "ᴄʟᴀꜱꜱᴇ ɴᴇᴄᴇꜱꜱᴀʀɪᴀ"
+  item_tier: "ᴛɪᴇʀ ᴅᴏ ɪᴛᴇᴍ"
+  item_set: "ꜱᴇᴛ ᴅᴏ ɪᴛᴇᴍ"
+  required_biomes: "ʙɪᴏᴍᴀꜱ ɴᴇᴄᴇꜱꜱᴀʀɪᴏꜱ"
+  camera_overlay: "ᴏᴠᴇʀʟᴀʏ ᴅᴇ ᴄᴀᴍᴇʀᴀ"
+  permanent_effects: "ᴇꜰᴇɪᴛᴏꜱ ᴘᴇʀᴍᴀɴᴇɴᴛᴇꜱ"
+  granted_permissions: "ᴘᴇʀᴍɪꜱꜱᴏᴇꜱ ᴄᴏɴᴄᴇᴅɪᴅᴀꜱ"
+  cooldown_reference: "ʀᴇꜰᴇʀᴇɴᴄɪᴀ ᴅᴇ ᴄᴏᴏʟᴅᴏᴡɴ"
+  crafting_recipe_permission: "ᴘᴇʀᴍɪꜱꜱᴀᴏ ᴅᴇ ʀᴇᴄᴇɪᴛᴀ ᴅᴇ ᴄʀᴀꜰᴛɪɴɢ"
+  custom_sounds: "ꜱᴏɴꜱ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴏꜱ"
+  commands: "ᴄᴏᴍᴀɴᴅᴏꜱ"
+  compatible_types: "ᴛɪᴘᴏꜱ ᴄᴏᴍᴘᴀᴛɪᴠᴇɪꜱ"
+  compatible_ids: "ɪᴅꜱ ᴄᴏᴍᴘᴀᴛɪᴠᴇɪꜱ"
+  compatible_materials: "ᴍᴀᴛᴇʀɪᴀɪꜱ ᴄᴏᴍᴘᴀᴛɪᴠᴇɪꜱ"
+  repair_reference: "ʀᴇꜰᴇʀᴇɴᴄɪᴀ ᴅᴇ ʀᴇᴘᴀʀᴏ"
+  item_abilities: "ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ ᴅᴏ ɪᴛᴇᴍ"
+  gem_sockets: "ꜱᴏᴄᴋᴇᴛꜱ ᴅᴇ ɢᴇᴍᴀꜱ"
+  trim_material: "ᴍᴀᴛᴇʀɪᴀʟ ᴅᴇ ᴛʀɪᴍ"
+  trim_pattern: "ᴘᴀᴅʀᴀᴏ ᴅᴇ ᴛʀɪᴍ"
+  browser_index: "ɪɴᴅɪᴄᴇ ᴅᴏ ɴᴀᴠᴇɢᴀᴅᴏʀ"
+  required_level: "ɴɪᴠᴇʟ ɴᴇᴄᴇꜱꜱᴀʀɪᴏ"

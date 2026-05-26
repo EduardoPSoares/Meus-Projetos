@@ -1,0 +1,205 @@
+package me.ray.midgard.modules.item.model;
+
+import me.ray.midgard.modules.item.ability.AbilityTrigger;
+import me.ray.midgard.modules.item.ability.SpellBinding;
+import me.ray.midgard.modules.item.utils.StatRange;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import java.io.File;
+import java.util.List;
+import java.util.Map;
+
+public interface MidgardItem {
+    String getId();
+    /**
+     * @deprecated Itens agora são armazenados no banco de dados. Retorna null para itens carregados do DB.
+     */
+    @Deprecated
+    File getFile();
+    String getCategoryId();
+    void setCategoryId(String categoryId);
+    Map<ItemStat, StatRange> getStats();
+    String getDisplayName();
+    void setDisplayName(String name);
+    int getRevisionId();
+    void setRevisionId(int revisionId);
+    Material getMaterial();
+    void setMaterial(Material material);
+    int getBaseItemDamage();
+    void setBaseItemDamage(int baseItemDamage);
+    String getDisplayedType();
+    void setDisplayedType(String displayedType);
+    String getItemModel();
+    void setItemModel(String itemModel);
+    String getEquippableSlot();
+    void setEquippableSlot(String equippableSlot);
+    String getEquippableModel();
+    void setEquippableModel(String equippableModel);
+    String getNexoId();
+    void setNexoId(String nexoId);
+    int getMaxCustomDurability();
+    void setMaxCustomDurability(int val);
+    int getMaxVanillaDurability();
+    void setMaxVanillaDurability(int val);
+    boolean isLostWhenBroken();
+    void setLostWhenBroken(boolean val);
+    boolean isUnbreakable();
+    void setUnbreakable(boolean val);
+    String getNbtTags();
+    void setNbtTags(String val);
+    String getCustomModelDataStrings();
+    void setCustomModelDataStrings(String val);
+    String getCustomModelDataFloats();
+    void setCustomModelDataFloats(String val);
+    String getLoreFormat();
+    void setLoreFormat(String val);
+    int getMaxStackSize();
+    void setMaxStackSize(int val);
+    String getCustomTooltip();
+    void setCustomTooltip(String val);
+    String getVanillaTooltipStyle();
+    void setVanillaTooltipStyle(String val);
+    String getEnchantments();
+    void setEnchantments(String val);
+    boolean isHideEnchantments();
+    void setHideEnchantments(boolean val);
+    boolean isHideTooltip();
+    void setHideTooltip(boolean val);
+    String getPermission();
+    void setPermission(String val);
+    String getItemParticles();
+    void setItemParticles(String val);
+    boolean isDisableInteraction();
+    void setDisableInteraction(boolean val);
+    boolean isDisableCrafting();
+    void setDisableCrafting(boolean val);
+    boolean isDisableSmelting();
+    void setDisableSmelting(boolean val);
+    boolean isDisableRepairing();
+    void setDisableRepairing(boolean val);
+    boolean isDisableEnchanting();
+    void setDisableEnchanting(boolean val);
+    boolean isDisableSmithing();
+    void setDisableSmithing(boolean val);
+    boolean isDisableItemDropping();
+    void setDisableItemDropping(boolean val);
+    List<String> getRequiredClasses();
+    void setRequiredClasses(List<String> list);
+    int getRequiredLevel();
+    void setRequiredLevel(int val);
+    int getCustomModelData();
+    void setCustomModelData(int val);
+    List<String> getLore();
+    void setLore(List<String> lore);
+    List<String> getPermanentEffects();
+    void setPermanentEffects(List<String> list);
+    List<String> getGrantedPermissions();
+    void setGrantedPermissions(List<String> list);
+    List<String> getRequiredBiomes();
+    void setRequiredBiomes(List<String> list);
+    List<String> getCompatibleTypes();
+    void setCompatibleTypes(List<String> list);
+    List<String> getCompatibleIds();
+    void setCompatibleIds(List<String> list);
+    List<String> getCompatibleMaterials();
+    void setCompatibleMaterials(List<String> list);
+    List<String> getCustomSounds();
+    void setCustomSounds(List<String> list);
+    List<String> getCommands();
+    void setCommands(List<String> list);
+    List<String> getItemAbilities();
+    void setItemAbilities(List<String> list);
+    List<String> getGemSockets();
+    void setGemSockets(List<String> list);
+    
+    // Spell Bindings (Item Abilities)
+    List<SpellBinding> getSpellBindings();
+    List<SpellBinding> getSpellBindingsForTrigger(AbilityTrigger trigger);
+    boolean hasSpellBindings();
+    
+    String getItemSet();
+    void setItemSet(String val);
+    boolean isDisableDropOnDeath();
+    void setDisableDropOnDeath(boolean val);
+    String getCameraOverlay();
+    void setCameraOverlay(String val);
+    boolean isHideDurabilityBar();
+    void setHideDurabilityBar(boolean val);
+    boolean isUnstackable();
+    void setUnstackable(boolean val);
+    String getCooldownReference();
+    void setCooldownReference(String val);
+    String getCraftingRecipePermission();
+    void setCraftingRecipePermission(String val);
+    String getRepairReference();
+    void setRepairReference(String val);
+    boolean isAmphibian();
+    void setAmphibian(boolean val);
+    String getTrimMaterial();
+    void setTrimMaterial(String val);
+    String getTrimPattern();
+    void setTrimPattern(String val);
+    boolean isHideArmorTrim();
+    void setHideArmorTrim(boolean val);
+    boolean isDisableAdvancedEnchants();
+    void setDisableAdvancedEnchants(boolean val);
+    int getBrowserIndex();
+    void setBrowserIndex(int val);
+    String getTier();
+    void setTier(String val);
+    
+    // Crafting
+    java.util.List<MidgardRecipe> getRecipes();
+    void addRecipe(MidgardRecipe recipe);
+    void updateRecipe(MidgardRecipe recipe);
+    void removeRecipe(String recipeId);
+    MidgardRecipe getRecipe(String recipeId);
+    
+    // Deprecated methods kept for compatibility during migration
+    @Deprecated boolean isCraftingEnabled();
+    @Deprecated void setCraftingEnabled(boolean val);
+    @Deprecated boolean isCraftingEnabled(String type);
+    @Deprecated void setCraftingEnabled(String type, boolean val);
+    @Deprecated boolean isCraftingShaped();
+    @Deprecated void setCraftingShaped(boolean val);
+    @Deprecated boolean isCraftingShaped(String type);
+    @Deprecated void setCraftingShaped(String type, boolean val);
+    @Deprecated int getCraftingOutputAmount();
+    @Deprecated void setCraftingOutputAmount(int val);
+    @Deprecated int getCraftingOutputAmount(String type);
+    @Deprecated void setCraftingOutputAmount(String type, int val);
+    @Deprecated Map<Integer, String> getCraftingIngredients();
+    @Deprecated Map<Integer, String> getCraftingIngredients(String type);
+    @Deprecated void setCraftingIngredient(int slot, String ingredient);
+    @Deprecated void setCraftingIngredient(String type, int slot, String ingredient);
+    @Deprecated double getCraftingExperience(String type);
+    @Deprecated void setCraftingExperience(String type, double val);
+    @Deprecated int getCraftingDuration(String type);
+    @Deprecated void setCraftingDuration(String type, int val);
+    @Deprecated boolean isCraftingHiddenFromBook(String type);
+    @Deprecated void setCraftingHiddenFromBook(String type, boolean val);
+
+    void setStat(ItemStat stat, double value);
+    void setStat(ItemStat stat, String value);
+    double getStat(ItemStat stat);
+    StatRange getStatRange(ItemStat stat);
+
+    // Updater Options
+    boolean isKeepLore();
+    void setKeepLore(boolean val);
+    boolean isKeepName();
+    void setKeepName(boolean val);
+    boolean isKeepEnchantments();
+    void setKeepEnchantments(boolean val);
+    boolean isKeepExternalSH();
+    void setKeepExternalSH(boolean val);
+    boolean isKeepUpgrades();
+    void setKeepUpgrades(boolean val);
+    boolean isKeepGemStones();
+    void setKeepGemStones(boolean val);
+    boolean isKeepSoulbind();
+    void setKeepSoulbind(boolean val);
+
+    void save();
+    ItemStack build();
+}

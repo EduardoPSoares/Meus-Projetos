@@ -1,0 +1,101 @@
+# ============================================
+# MIDGARD ITEM - GUI: CRAFTING
+# ============================================
+# Padrão V2.0 - Oficial
+# ============================================
+
+type_selection:
+  title: "<gradient:#55ffff:#00aaaa><bold>✦ ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴛɪᴘᴏ ᴅᴇ ʀᴇᴄᴇɪᴛᴀ ✦</bold></gradient>"
+  click_to_manage:
+    - "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ɢᴇʀᴇɴᴄɪᴀʀ ʀᴇᴄᴇɪᴛᴀꜱ"
+    - "<gray>ᴅᴇꜱᴛᴇ ᴛɪᴘᴏ."
+  types:
+    smithing: "<yellow>⚒ ᴍᴇꜱᴀ ᴅᴇ ꜰᴇʀʀᴀʀɪᴀ"
+    super_shaped: "<yellow>⭐ ꜱᴜᴘᴇʀ ꜱʜᴀᴘᴇᴅ"
+    smoker: "<yellow>🔥 ᴅᴇꜰᴜᴍᴀᴅᴏʀ"
+    furnace: "<yellow>🔥 ꜰᴏʀɴᴀʟʜᴀ"
+    shaped: "<yellow>📦 ᴄᴏᴍ ꜰᴏʀᴍᴀ"
+    mega_shaped: "<yellow>📦 ᴍᴇɢᴀ ꜱʜᴀᴘᴇᴅ"
+    campfire: "<yellow>🔥 ꜰᴏɢᴜᴇɪʀᴀ"
+    shapeless: "<yellow>✨ ꜱᴇᴍ ꜰᴏʀᴍᴀ"
+    blast_furnace: "<yellow>🔥 ᴀʟᴛᴏ-ꜰᴏʀɴᴏ"
+
+error:
+  recipe_not_found: "<red>✖ <gray>ᴇʀʀᴏ: ʀᴇᴄᴇɪᴛᴀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ!"
+
+editor:
+  common:
+    back: "<red>← ᴠᴏʟᴛᴀʀ"
+    get_item:
+      name: "<gradient:#55ff55:#00aa00><bold>✦ ᴏʙᴛᴇʀ ɪᴛᴇᴍ</bold></gradient>"
+      lore:
+        - "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴘᴇɢᴀʀ ᴇꜱᴛᴇ ɪᴛᴇᴍ."
+    output_mode:
+      name: "<gradient:#ffff55:#ffaa00><bold>⚙ ᴍᴏᴅᴏ ᴅᴇ ꜱᴀɪᴅᴀ</bold></gradient>"
+      lore:
+        - "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ ᴏ ᴍᴏᴅᴏ."
+        - "<gray>ᴀᴛᴜᴀʟ: %s"
+      shaped: "<green>ᴄᴏᴍ ꜰᴏʀᴍᴀ"
+      shapeless: "<yellow>ꜱᴇᴍ ꜰᴏʀᴍᴀ"
+    output_amount:
+      name: "<gradient:#ffff55:#ffaa00><bold>📦 ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ ꜱᴀɪᴅᴀ</bold></gradient>"
+      lore:
+        - "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀᴀʀ ᴀ ǫᴜᴀɴᴛɪᴅᴀᴅᴇ."
+        - "<gray>ᴀᴛᴜᴀʟ: <white>%s"
+    duration:
+      name: "<gradient:#ffff55:#ffaa00><bold>⏱ ᴅᴜʀᴀᴄᴀᴏ</bold></gradient>"
+      lore:
+        - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ᴄᴏᴢɪᴍᴇɴᴛᴏ ᴇᴍ ᴛɪᴄᴋꜱ."
+        - "<gray>ᴀᴛᴜᴀʟ: <white>%s"
+    experience:
+      name: "<gradient:#ffff55:#ffaa00><bold>✨ ᴇxᴘᴇʀɪᴇɴᴄɪᴀ</bold></gradient>"
+      lore:
+        - "<gray>xᴘ ɢᴇʀᴀᴅᴏ ᴀᴏ ᴄᴏᴢɪɴʜᴀʀ."
+        - "<gray>ᴀᴛᴜᴀʟ: <white>%s"
+    hide_book:
+      name: "<gradient:#ffff55:#ffaa00><bold>📖 ʟɪᴠʀᴏ ᴅᴇ ʀᴇᴄᴇɪᴛᴀꜱ</bold></gradient>"
+      lore:
+        - "<gray>ᴠɪꜱɪʙɪʟɪᴅᴀᴅᴇ ɴᴀᴏ ʟɪᴠʀᴏ ᴅᴇ ʀᴇᴄᴇɪᴛᴀꜱ."
+        - "<gray>ᴀᴛᴜᴀʟ: %s"
+      hidden: "<green>ᴏᴄᴜʟᴛᴏ"
+      shown: "<red>ᴠɪꜱɪᴠᴇʟ"
+    invalid_ingredient: "<red>✖ <gray>ɪɴᴠᴀʟɪᴅᴏ: %s"
+    item_added: "<green>✔ <white>ɪᴛᴇᴍ ᴀᴅɪᴄɪᴏɴᴀᴅᴏ ᴀ ʀᴇᴄᴇɪᴛᴀ."
+    no_item: "<red>✖ <gray>ɴᴇɴʜᴜᴍ ɪᴛᴇᴍ ꜱᴇʟᴇᴄɪᴏɴᴀᴅᴏ."
+    separator: "<dark_gray>────────────────"
+    template_optional: "<gray>ᴍᴏʟᴅᴇ (ᴏᴘᴄɪᴏɴᴀʟ)"
+    prompts:
+      output_amount: "ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ ꜱᴀɪᴅᴀ"
+      experience: "ᴇxᴘᴇʀɪᴇɴᴄɪᴀ (xᴘ)"
+      duration: "ᴅᴜʀᴀᴄᴀᴏ (ᴛɪᴄᴋꜱ)"
+
+  titles:
+    shaped: "<gradient:#55ffff:#00aaaa><bold>✦ ᴇᴅɪᴛᴏʀ: ᴄᴏᴍ ꜰᴏʀᴍᴀ ✦</bold></gradient>"
+    shapeless: "<gradient:#55ffff:#00aaaa><bold>✦ ᴇᴅɪᴛᴏʀ: ꜱᴇᴍ ꜰᴏʀᴍᴀ ✦</bold></gradient>"
+    furnace: "<gradient:#ffaa00:#ff5500><bold>✦ ᴇᴅɪᴛᴏʀ: ꜰᴏʀɴᴀʟʜᴀ ✦</bold></gradient>"
+    blast_furnace: "<gradient:#ffaa00:#ff5500><bold>✦ ᴇᴅɪᴛᴏʀ: ᴀʟᴛᴏ-ꜰᴏʀɴᴏ ✦</bold></gradient>"
+    smoker: "<gradient:#ffaa00:#ff5500><bold>✦ ᴇᴅɪᴛᴏʀ: ᴅᴇꜰᴜᴍᴀᴅᴏʀ ✦</bold></gradient>"
+    campfire: "<gradient:#ffaa00:#ff5500><bold>✦ ᴇᴅɪᴛᴏʀ: ꜰᴏɢᴜᴇɪʀᴀ ✦</bold></gradient>"
+    smithing: "<gradient:#555555:#aaaaaa><bold>✦ ᴇᴅɪᴛᴏʀ: ꜰᴇʀʀᴀʀɪᴀ ✦</bold></gradient>"
+    stonecutter: "<gradient:#555555:#aaaaaa><bold>✦ ᴇᴅɪᴛᴏʀ: ᴄᴏʀᴛᴀᴅᴏʀ ᴅᴇ ᴘᴇᴅʀᴀ ✦</bold></gradient>"
+    super_shaped: "<gradient:#55ffff:#00aaaa><bold>✦ ᴇᴅɪᴛᴏʀ: ꜱᴜᴘᴇʀ ꜱʜᴀᴘᴇᴅ ✦</bold></gradient>"
+    mega_shaped: "<gradient:#55ffff:#00aaaa><bold>✦ ᴇᴅɪᴛᴏʀ: ᴍᴇɢᴀ ꜱʜᴀᴘᴇᴅ ✦</bold></gradient>"
+
+configuration:
+  title: "<gradient:#55ffff:#00aaaa><bold>✦ ᴄᴏɴꜰɪɢᴜʀᴀᴄᴀᴏ ᴅᴇ ʀᴇᴄᴇɪᴛᴀ ✦</bold></gradient>"
+  recipe_item:
+    name: "<yellow>📜 ʀᴇᴄᴇɪᴛᴀ: <white>%type%</white></yellow>"
+    lore:
+      - "<gray>ɪᴅ: <white>%id%</white>"
+      - "<gray>ᴏᴜᴛᴘᴜᴛ: <white>x%amount%</white>"
+      - ""
+      - "<yellow>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ <gray>ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ"
+      - "<red>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ <gray>ᴘᴀʀᴀ ᴅᴇʟᴇᴛᴀʀ"
+  new_recipe:
+    name: "<gradient:#55ff55:#00aa00><bold>✦ ᴄʀɪᴀʀ ɴᴏᴠᴀ ʀᴇᴄᴇɪᴛᴀ</bold></gradient>"
+    lore:
+      - "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴄʀɪᴀʀ ᴜᴍᴀ ɴᴏᴠᴀ ʀᴇᴄᴇɪᴛᴀ"
+      - "<gray>ᴅᴇꜱᴛᴇ ɪᴛᴇᴍ."
+  editing_wip: "<red>⚠ <gray>ᴇᴅɪᴛᴏʀ ᴇᴍ ᴄᴏɴꜱᴛʀᴜᴄᴀᴏ."
+  created: "<green>✔ <white>ɴᴏᴠᴀ ʀᴇᴄᴇɪᴛᴀ ᴄʀɪᴀᴅᴀ!"
+  removed: "<green>✔ <white>ʀᴇᴄᴇɪᴛᴀ ʀᴇᴍᴏᴠɪᴅᴀ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ!"

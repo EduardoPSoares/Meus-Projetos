@@ -1,0 +1,74 @@
+name: "<aqua>sᴀʙᴇᴅᴏʀɪᴀ ᴀʀᴄᴀɴᴀ</aqua>"
+mythic-skill: "SabedoriaArcana"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Mago"
+  level: 1
+
+icon:
+  material: BOOK
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<aqua><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></aqua>"
+  - ""
+  - "<gray>ᴏ ᴄᴏɴʜᴇᴄɪᴍᴇɴᴛᴏ ᴀʀᴄᴀɴᴏ ᴅᴏ ᴍᴀɢᴏ</gray>"
+  - "<gray>ᴀᴜᴍᴇɴᴛᴀ sᴜᴀ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ ᴇ ᴘᴏᴅᴇʀ</gray>"
+  - "<gray>ᴍᴀɢɪᴄᴏ ᴘᴀssɪᴠᴀᴍᴇɴᴛᴇ.</gray>"
+  - ""
+  - "<aqua><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></aqua>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ:<aqua>{intelligence_bonus}</aqua>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴀɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  intelligence_bonus:
+    base: 2.0
+    per-level: 1.0
+
+milestones:
+  3:
+    visual: "arcane_wisdom_aura"
+    mechanic-override: "SabedoriaArcanaMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "arcane_wisdom_glow"
+    mechanic-override: "SabedoriaArcanaMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.experience_orb.pickup"
+    volume: 0.6
+    pitch: 1.2
+  cast-finish:
+    sound: "block.enchantment_table.use"
+    volume: 0.5
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

@@ -1,0 +1,1274 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Warface - Server Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" media="print" onload="this.media='all'" onerror="this.media='all'" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="panel" id="app">
+  <div class="titlebar">
+    <div class="logo-area">
+      <div class="logo-badge">CTRL</div>
+      <div><div class="logo-name">WARFACE</div><div class="logo-sub">// SERVER CONTROL</div></div>
+    </div>
+    <div class="titlebar-controls"><span class="tctl tctl-min"></span><span class="tctl tctl-max"></span><span class="tctl tctl-close" onclick="window.close()"></span></div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-grid"></div><div class="hero-scan"></div><div class="hero-vignette"></div>
+    <div class="hero-content">
+      <div class="hero-tag">PAINEL DE CONTROLE</div>
+      <div class="hero-title">SERVER <span>CONTROL</span></div>
+      <div class="hero-desc">// OPERACAO - JOGADORES - LOJA - SISTEMA</div>
+    </div>
+  </div>
+
+  <div id="dashboard">
+
+    <div class="tabs grouped-tabs">
+      <div class="nav-tools">
+        <div class="nav-search-wrap">
+          <input type="text" class="nav-search-input" id="nav-search" placeholder="Buscar tela..." autocomplete="off" />
+          <span class="nav-search-key">CTRL K</span>
+        </div>
+        <div class="nav-status-stack">
+          <div class="nav-status-pill" id="nav-health">Sistema: ---</div>
+          <div class="nav-status-pill" id="nav-online-mini">Online: 0</div>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Operacao</div>
+        <div class="nav-group-items">
+          <div class="tab active" data-tab="overview">Visao Geral</div>
+          <div class="tab" data-tab="services">Servicos</div>
+          <div class="tab" data-tab="logs">Logs</div>
+          <div class="tab" data-tab="gamerooms">Salas</div>
+          <div class="tab" data-tab="performance">Desempenho</div>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Jogadores</div>
+        <div class="nav-group-items">
+          <div class="tab" data-tab="search">Buscar</div>
+          <div class="tab" data-tab="inspect">Inspecionar</div>
+          <div class="tab" data-tab="commands">Comandos</div>
+          <div class="tab" data-tab="items">Itens</div>
+          <div class="tab" data-tab="achievements">Conquistas</div>
+          <div class="tab" data-tab="bans">Banimentos</div>
+          <div class="tab" data-tab="clans">Clans</div>
+          <div class="tab" data-tab="chatlogs">Chat Logs</div>
+        </div>
+      </div>
+      <div class="nav-group nav-group-shop">
+        <div class="nav-group-label">Loja</div>
+        <div class="nav-group-items">
+          <div class="tab" data-tab="shop">Loja</div>
+          <div class="tab" data-tab="survival-rewards">Recompensas</div>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Comunicacao</div>
+        <div class="nav-group-items">
+          <div class="tab" data-tab="broadcast">Transmissao</div>
+          <div class="tab" data-tab="autobroadcast">Auto-Msg</div>
+          <div class="tab" data-tab="launcher-news">Launcher Noticias</div>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Sistema</div>
+        <div class="nav-group-items">
+          <div class="tab" data-tab="anticheat">Anti-Cheat</div>
+          <div class="tab" data-tab="maintenance">Manutencao</div>
+          <div class="tab" data-tab="backup">Backup</div>
+          <div class="tab" data-tab="config">Config</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content active" id="tab-overview">
+      <div class="overview-command-center">
+        <div>
+          <div class="section-label">Centro de Operacao</div>
+          <div class="overview-lead">Estado do servidor, servicos e acoes principais em uma tela.</div>
+        </div>
+        <div class="quick-actions overview-actions">
+          <button class="action-btn secondary" data-global-action="start-all" onclick="startAll()">INICIAR TUDO</button>
+          <button class="action-btn secondary" data-global-action="stop-all" onclick="stopAll()">PARAR TUDO</button>
+          <button class="action-btn" onclick="switchTab('services')">GERENCIAR</button>
+          <button class="action-btn secondary" onclick="switchTab('logs')">LOGS</button>
+        </div>
+      </div>
+      <div id="global-action-feedback" class="global-action-feedback hidden" aria-live="polite"></div>
+      <div class="panel-alerts" id="panel-alerts">
+        <div class="panel-alert ok">Aguardando dados do painel...</div>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-card" id="ov-status">
+          <div class="ov-label">Servidor</div>
+          <div class="ov-value" id="ov-srv-status">---</div>
+          <div class="ov-sub" id="ov-srv-uptime">---</div>
+        </div>
+        <div class="overview-card" id="ov-players">
+          <div class="ov-label">Online</div>
+          <div class="ov-value" id="ov-online">0</div>
+          <div class="ov-sub" id="ov-total">0 contas</div>
+        </div>
+        <div class="overview-card" id="ov-db">
+          <div class="ov-label">Database</div>
+          <div class="ov-value" id="ov-db-status">---</div>
+          <div class="ov-sub" id="ov-db-sub">MongoDB</div>
+        </div>
+        <div class="overview-card" id="ov-services">
+          <div class="ov-label">Servicos</div>
+          <div class="ov-value" id="ov-services-status">---</div>
+          <div class="ov-sub" id="ov-services-sub">Aguardando /api/services</div>
+        </div>
+        <div class="overview-card" id="ov-dedicated">
+          <div class="ov-label">Dedicados</div>
+          <div class="ov-value" id="ov-dedicated-status">---</div>
+          <div class="ov-sub" id="ov-dedicated-sub">PvE / PvP</div>
+        </div>
+      </div>
+      <div class="quick-actions legacy-overview-actions">
+        <button class="action-btn secondary" data-global-action="start-all" onclick="startAll()">INICIAR TUDO</button>
+        <button class="action-btn secondary" data-global-action="stop-all" onclick="stopAll()">PARAR TUDO</button>
+        <button class="action-btn" onclick="switchTab('services')">GERENCIAR</button>
+      </div>
+      <div class="section-label" style="margin-top:16px">Multiplicador de XP (PvE)</div>
+      <div class="ins-hero" style="margin-bottom:12px;gap:10px;flex-wrap:wrap">
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:120px">
+          <label class="form-label">Multiplicador</label>
+          <input type="number" class="form-input" id="xp-multiplier" placeholder="Ex: 2" min="1" step="1" style="height:28px;font-size:10px" />
+        </div>
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:240px">
+          <label class="form-label">Mensagem no fim da missao</label>
+          <input type="text" class="form-input" id="xp-message" placeholder="Ex: Evento XP 5x ativo!" style="height:28px;font-size:10px" />
+        </div>
+        <div class="form-group" style="margin-bottom:0;min-width:190px">
+          <label class="form-label">Temporario (minutos)</label>
+          <input type="number" class="form-input" id="xp-duration-minutes" placeholder="0 = permanente" min="0" max="10080" step="1" style="height:28px;font-size:10px" />
+        </div>
+        <div style="display:flex;gap:4px;flex-wrap:wrap">
+          <button class="action-btn secondary" style="width:auto;padding:0 10px;height:28px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="applyQuickXP(1)">1x</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 10px;height:28px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="applyQuickXP(2)">2x</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 10px;height:28px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="applyQuickXP(5)">5x</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 10px;height:28px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="applyQuickXP(10)">10x</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 10px;height:28px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="applyQuickXP(50)">50x</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 10px;height:28px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="applyQuickXP(100)">100x</button>
+        </div>
+        <div style="align-self:flex-end">
+          <button class="action-btn secondary" style="width:auto;padding:0 16px;height:32px;font-size:10px;clip-path:none;border-radius:2px;margin-top:0" onclick="setXP()">APLICAR XP</button>
+        </div>
+      </div>
+      <div class="quick-actions" style="margin-top:8px;justify-content:space-between;align-items:center;gap:10px">
+        <div id="xp-event-status" class="nav-status-pill">XP Event: inativo</div>
+        <button class="action-btn secondary" id="xp-disable-btn" style="width:auto;padding:0 16px;height:30px;font-size:10px;clip-path:none;border-radius:2px;margin-top:0" onclick="disableXPEvent()" disabled>DESATIVAR EVENTO</button>
+      </div>
+      <div id="xp-result" class="cmd-result hidden" style="margin-bottom:12px"></div>
+      <div class="section-label" style="margin-top:16px">Jogadores Online</div>
+      <div class="players-list" id="ov-players-list"><div class="empty-state">Nenhum jogador online</div></div>
+    </div>
+
+    <div class="tab-content" id="tab-services">
+      <div class="services-grid" id="services-grid"></div>
+    </div>
+
+    <div class="tab-content" id="tab-logs">
+      <div class="logs-toolbar">
+        <select class="form-input log-filter" id="log-filter">
+          <option value="all">Todos os servicos</option>
+          <option value="mongodb">MongoDB</option>
+          <option value="xmpp">XmppServerTcp</option>
+          <option value="conference">ComponentConference</option>
+          <option value="wfc">ComponentWFC</option>
+          <option value="pve">Masterserver PvE</option>
+          <option value="pvp">Masterserver PvP</option>
+          <option value="cache">Cache</option>
+          <option value="dedicated_pve">Dedicated PvE</option>
+          <option value="dedicated_pvp">Dedicated PvP</option>
+          <option value="admin">Admin Panel</option>
+          <option value="session_debug">Sessao (Debug)</option>
+        </select>
+        <button class="action-btn secondary" style="width:auto;padding:0 16px;height:32px;font-size:11px;clip-path:none;border-radius:2px;flex-shrink:0" onclick="copyLogs()">COPIAR LOGS</button>
+        <button class="action-btn secondary" style="width:auto;padding:0 16px;height:32px;font-size:11px;clip-path:none;border-radius:2px;flex-shrink:0" onclick="clearLogs()">LIMPAR</button>
+      </div>
+      <div class="log-viewer" id="log-viewer"><div class="empty-state">Aguardando logs...</div></div>
+    </div>
+
+    <div class="tab-content" id="tab-anticheat">
+      <div class="section-label">Configuracoes de Seguranca</div>
+      <div class="ac-grid" id="ac-grid"></div>
+      <div class="section-label" style="margin-top:16px">online.cfg (editavel)</div>
+      <textarea class="form-input ac-editor" id="ac-editor" rows="10"></textarea>
+      <button class="action-btn secondary" style="margin-top:8px" onclick="saveAcRaw()">SALVAR online.cfg</button>
+    </div>
+
+    <div class="tab-content" id="tab-commands">
+      <div class="cmd-exec-section">
+        <div class="cmd-input-row">
+          <div class="form-group" style="flex:1">
+            <label class="form-label">Nickname</label>
+            <input type="text" class="form-input" id="cmd-nick" placeholder="Nick do jogador..." />
+            <div id="profile-info" class="profile-info hidden"></div>
+          </div>
+          <div class="form-group" id="amount-group" style="flex:0 0 160px">
+            <label class="form-label">Quantidade</label>
+            <input type="number" class="form-input" id="cmd-amount" placeholder="Ex: 5000" min="1" step="1" />
+          </div>
+          <div style="flex:0 0 140px;align-self:flex-end;padding-bottom:2px">
+            <button class="action-btn" id="btn-exec">EXECUTAR</button>
+          </div>
+        </div>
+        <div id="cmd-result" class="cmd-result hidden" style="margin-bottom:12px"></div>
+        <label class="form-label" style="margin-bottom:8px;display:block">Comandos</label>
+        <div class="cmd-grid" id="cmd-grid">
+          <div class="cmd-opt" data-cmd="addcry">
+            <img class="cmd-icon" src="img/game_money.png" alt="Ouro" width="48" height="48" />
+            <div class="cmd-opt-label">Ouro</div>
+            <div class="cmd-opt-sub">game_money</div>
+          </div>
+          <div class="cmd-opt" data-cmd="addcrown">
+            <img class="cmd-icon" src="img/crown_money.png" alt="Coroas" width="48" height="48" />
+            <div class="cmd-opt-label">Coroas</div>
+            <div class="cmd-opt-sub">crown_money</div>
+          </div>
+          <div class="cmd-opt" data-cmd="addvp">
+            <img class="cmd-icon" src="img/cry_money.png" alt="VP" width="48" height="48" />
+            <div class="cmd-opt-label">VP</div>
+            <div class="cmd-opt-sub">cry_money</div>
+          </div>
+          <div class="cmd-opt" data-cmd="addxp">
+            <img class="cmd-icon" src="img/rank.png" alt="XP" width="48" height="48" />
+            <div class="cmd-opt-label">XP</div>
+            <div class="cmd-opt-sub">experience</div>
+          </div>
+          <div class="cmd-opt" data-cmd="addgm">
+            <img class="cmd-icon" src="img/rank90.png" alt="GM" width="48" height="48" style="object-fit:contain" />
+            <div class="cmd-opt-label">Rank</div>
+            <div class="cmd-opt-sub">promover</div>
+          </div>
+          <div class="cmd-opt" data-cmd="addcm">
+            <svg class="cmd-icon" viewBox="0 0 48 48"><path d="M24 6C16 6 8 12 8 22c0 8 6 14 16 20 10-6 16-12 16-20 0-10-8-16-16-16z" fill="#8a6aba"/><path d="M24 10c-6 0-12 5-12 12 0 6 4 11 12 16 8-5 12-10 12-16 0-7-6-12-12-12z" fill="#b89ae8"/><circle cx="24" cy="20" r="5" fill="#fff"/></svg>
+            <div class="cmd-opt-label">Clan</div>
+            <div class="cmd-opt-sub">criar</div>
+          </div>
+          <div class="cmd-opt" data-cmd="kick">
+            <svg class="cmd-icon" viewBox="0 0 48 48"><path d="M8 16c0-2 1-3 3-3h14c2 0 3 1 3 3v24l-10-8-10 8z" fill="#c8371a"/><path d="M8 16c0-2 1-3 3-3h14c2 0 3 1 3 3v24l-10-8-10 8z" stroke="#8a2510" stroke-width="1.5" fill="none"/><line x1="30" y1="16" x2="42" y2="28" stroke="#c8371a" stroke-width="3" stroke-linecap="round"/><line x1="42" y1="16" x2="30" y2="28" stroke="#c8371a" stroke-width="3" stroke-linecap="round"/></svg>
+            <div class="cmd-opt-label">Kick</div>
+            <div class="cmd-opt-sub">desconectar</div>
+          </div>
+        </div>
+      </div>
+      <div class="cmd-card cmd-card-token">
+        <div class="cmd-card-header">Gerar Token de Conexao</div>
+        <div class="cmd-card-body">
+          <div class="token-grid">
+            <div class="token-field">
+              <label class="form-label">ID</label>
+              <input type="text" class="form-input" id="token-id" placeholder="Ex: 1" />
+            </div>
+            <div class="token-field">
+              <label class="form-label">Token</label>
+              <input type="text" class="form-input" id="token-val" placeholder="Ex: minha_senha" />
+            </div>
+            <button class="action-btn secondary" id="btn-gen-token">Gerar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-inspect">
+      <div class="section-label">Inspecionar Jogador</div>
+      <div class="form-group" style="max-width:400px">
+        <label class="form-label">Nickname</label>
+        <input type="text" class="form-input" id="ins-nick" placeholder="Nick do jogador..." />
+      </div>
+      <button class="action-btn secondary" style="width:auto;padding:0 24px;height:32px;font-size:11px;clip-path:none;border-radius:2px;margin-top:0" id="btn-ins-load">CARREGAR</button>
+      <div class="ins-section" style="margin-top:8px;border-color:#2a2a1a">
+        <div class="ins-section-title" style="color:#c8a01a">Notas Internas</div>
+        <div style="padding:8px">
+          <textarea class="form-input" id="ins-notes" rows="4" placeholder="Adicione notas internas sobre este jogador..." style="font-size:11px;resize:vertical"></textarea>
+          <button class="action-btn secondary" style="width:auto;padding:0 16px;height:28px;font-size:10px;clip-path:none;border-radius:2px;margin-top:4px" onclick="saveNotes()">SALVAR NOTAS</button>
+          <span id="notes-result" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#4aaa4a;margin-left:8px"></span>
+        </div>
+      </div>
+      <div id="ins-result" style="margin-top:8px"></div>
+    </div>
+
+    <div class="tab-content" id="tab-broadcast">
+      <div class="ins-section" style="border-color:#2a4a2a">
+        <div class="ins-section-title" style="color:#4aaa4a">Mensagem no Chat</div>
+        <div style="padding:10px">
+          <div class="form-group">
+            <label class="form-label">Mensagem para todos os jogadores (chat)</label>
+            <textarea class="form-input" id="bcast-msg" rows="3" placeholder="Digite a mensagem..."></textarea>
+          </div>
+          <button class="action-btn secondary" style="width:auto;padding:0 24px;height:32px;font-size:11px;clip-path:none;border-radius:2px;margin-top:0" onclick="sendBroadcast()">ENVIAR MENSAGEM</button>
+        </div>
+      </div>
+      <div class="ins-section" style="border-color:#2a4a2a;margin-top:12px">
+        <div class="ins-section-title" style="color:#c8a01a">Notificacao Popup</div>
+        <div style="padding:10px">
+          <div class="form-group">
+            <label class="form-label">Texto da notificacao (aparece como popup no jogo)</label>
+            <textarea class="form-input" id="notif-msg" rows="3" placeholder="Digite a notificacao..."></textarea>
+          </div>
+          <button class="action-btn secondary" style="width:auto;padding:0 24px;height:32px;font-size:11px;clip-path:none;border-radius:2px;margin-top:0" onclick="sendNotification()">ENVIAR NOTIFICACAO</button>
+        </div>
+      </div>
+      <div id="bcast-result" class="cmd-result hidden" style="margin-top:8px"></div>
+    </div>
+
+    <div class="tab-content" id="tab-bans">
+      <div class="section-label">Gerenciar Banimentos</div>
+      <div class="ins-hero" style="margin-bottom:12px;gap:10px;flex-wrap:wrap">
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:180px">
+          <label class="form-label">Nickname</label>
+          <input type="text" class="form-input" id="ban-nick" placeholder="Nick do jogador..." />
+        </div>
+        <div class="form-group" style="flex:0 0 140px;margin-bottom:0">
+          <label class="form-label">Duracao</label>
+          <select class="form-input" id="ban-duration">
+            <option value="86400">1 dia</option>
+            <option value="604800">7 dias</option>
+            <option value="2592000">30 dias</option>
+            <option value="315360000" selected>Permanente</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:160px">
+          <label class="form-label">Razao</label>
+          <input type="text" class="form-input" id="ban-reason" placeholder="Motivo do ban..." />
+        </div>
+        <div style="display:flex;gap:6px;align-self:flex-end">
+          <button class="action-btn secondary" style="width:auto;padding:0 16px;height:32px;font-size:10px;clip-path:none;border-radius:2px;margin-top:0" onclick="banPlayer()">BANIR</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 16px;height:32px;font-size:10px;clip-path:none;border-radius:2px;margin-top:0" onclick="unbanPlayer()">DESBANIR</button>
+        </div>
+      </div>
+      <div id="ban-result" class="cmd-result hidden" style="margin-bottom:12px"></div>
+      <div class="section-label">Banimentos Ativos</div>
+      <div id="bans-list"><div class="empty-state">Carregando...</div></div>
+      <div style="margin-top:16px;text-align:right">
+        <button class="action-btn secondary" style="width:auto;padding:0 16px;height:28px;font-size:10px;clip-path:none;border-radius:2px" onclick="loadBanHistory()">HISTORICO</button>
+      </div>
+      <div class="section-label" style="margin-top:16px">Banimento por IP</div>
+      <div class="ins-hero" style="margin-bottom:12px;gap:10px;flex-wrap:wrap">
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:140px">
+          <label class="form-label">Endereco IP</label>
+          <input type="text" class="form-input" id="banip-ip" placeholder="Ex: 127.0.0.1" />
+        </div>
+        <div class="form-group" style="flex:0 0 120px;margin-bottom:0">
+          <label class="form-label">Duracao</label>
+          <select class="form-input" id="banip-duration">
+            <option value="86400">1 dia</option>
+            <option value="604800">7 dias</option>
+            <option value="2592000">30 dias</option>
+            <option value="315360000" selected>Permanente</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:140px">
+          <label class="form-label">Razao</label>
+          <input type="text" class="form-input" id="banip-reason" placeholder="Motivo..." />
+        </div>
+        <div style="display:flex;gap:6px;align-self:flex-end">
+          <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="banIp()">BANIR IP</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="kickByIp()">KICK IP</button>
+        </div>
+      </div>
+      <div id="ipban-result" class="cmd-result hidden" style="margin-bottom:8px"></div>
+      <div class="section-label">IPs Banidos</div>
+      <div id="ipbans-list"><div class="empty-state">Carregando...</div></div>
+      <div style="margin-top:16px;text-align:right">
+        <button class="action-btn secondary" style="width:auto;padding:0 16px;height:28px;font-size:10px;clip-path:none;border-radius:2px" onclick="loadIpBans()">ATUALIZAR</button>
+      </div>
+      <div id="ban-history-container" class="hidden" style="margin-top:8px">
+        <div class="section-label">Historico de Banimentos</div>
+        <div class="ins-hero" style="margin-bottom:8px;gap:8px;flex-wrap:wrap;padding:8px">
+          <div class="form-group" style="flex:1;margin-bottom:0;min-width:120px">
+            <input type="text" class="form-input" id="banhist-nick" placeholder="Filtrar nick..." style="height:28px;font-size:10px" />
+          </div>
+          <div class="form-group" style="flex:0 0 100px;margin-bottom:0">
+            <select class="form-input" id="banhist-type" style="height:28px;font-size:10px">
+              <option value="all">Todos</option>
+              <option value="ban">Ban</option>
+              <option value="unban">Unban</option>
+            </select>
+          </div>
+          <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px" onclick="loadBanHistory()">FILTRAR</button>
+        </div>
+        <div id="ban-history-list"><div class="empty-state">Carregando...</div></div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-items">
+      <div class="section-label">Entregar Item</div>
+      <div class="ins-hero" style="margin-bottom:12px;gap:10px;flex-wrap:wrap">
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:140px">
+          <label class="form-label">Nickname</label>
+          <input type="text" class="form-input" id="item-nick" placeholder="Nick do jogador..." />
+        </div>
+        <div class="form-group" style="flex:2;margin-bottom:0;min-width:200px">
+          <label class="form-label">Nome do Item</label>
+          <div class="item-picker-wrap">
+            <input type="text" class="form-input" id="item-name" placeholder="Ex: ar23_shop" list="item-suggest" autocomplete="off" />
+            <div id="item-name-suggestions" class="item-name-suggestions hidden"></div>
+          </div>
+          <datalist id="item-suggest"></datalist>
+        </div>
+        <div class="form-group" style="flex:0 0 80px;margin-bottom:0">
+          <label class="form-label">Qtd</label>
+          <input type="number" class="form-input" id="item-qty" value="1" min="1" max="999" />
+        </div>
+        <div class="form-group" style="flex:0 0 120px;margin-bottom:0">
+          <label class="form-label">Duracao (horas)</label>
+          <input type="number" class="form-input" id="item-exp" placeholder="0 = permanente" min="0" max="8760" step="1" />
+        </div>
+        <div style="align-self:flex-end;display:flex;gap:6px">
+          <button class="action-btn secondary" style="width:auto;padding:0 16px;height:32px;font-size:10px;clip-path:none;border-radius:2px;margin-top:0" onclick="giveItem()">ENTREGAR</button>
+        </div>
+      </div>
+      <div id="item-picked-preview" class="item-picked-preview hidden"></div>
+      <div id="item-result" class="cmd-result hidden" style="margin-bottom:12px"></div>
+      <div class="section-label" style="margin-top:16px">Remover Item do Inventario</div>
+      <div class="ins-hero" style="margin-bottom:12px;gap:10px;flex-wrap:wrap">
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:120px">
+          <label class="form-label">Nickname</label>
+          <input type="text" class="form-input" id="removeitem-nick" placeholder="Nick do jogador..." style="height:28px;font-size:10px" />
+        </div>
+        <div class="form-group" style="flex:2;margin-bottom:0;min-width:160px">
+          <label class="form-label">Nome do Item (ou ID)</label>
+          <input type="text" class="form-input" id="removeitem-name" placeholder="Ex: ar23_shop ou ID numerico" style="height:28px;font-size:10px" />
+        </div>
+        <div style="align-self:flex-end">
+          <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="removeItem()">REMOVER</button>
+        </div>
+      </div>
+      <div id="removeitem-result" class="cmd-result hidden" style="margin-bottom:12px"></div>
+      <div class="section-label">Buscar Item</div>
+      <div class="form-group">
+        <input type="text" class="form-input" id="item-search" placeholder="Digite para buscar itens..." />
+      </div>
+      <div id="item-search-results" style="max-height:300px;overflow-y:auto;margin-top:6px"></div>
+    </div>
+
+    <div class="tab-content" id="tab-shop">
+      <div class="shop-shell">
+        <div class="shop-topbar">
+          <div>
+            <div class="section-label">Editor de Loja</div>
+            <div id="shop-stats" class="shop-topline">Aguardando cache da loja</div>
+          </div>
+          <div class="shop-subtabs" role="tablist">
+            <button class="shop-subtab active" type="button" data-shop-subtab="offers" onclick="switchShopSubtab('offers')">Ofertas</button>
+            <button class="shop-subtab" type="button" data-shop-subtab="packages" onclick="switchShopSubtab('packages')">Pacotes</button>
+            <button class="shop-subtab" type="button" data-shop-subtab="rotation" onclick="switchShopSubtab('rotation')">Rotacao</button>
+            <button class="shop-subtab" type="button" data-shop-subtab="catalog" onclick="switchShopSubtab('catalog')">Catalogo</button>
+          </div>
+        </div>
+        <div id="shop-package-result" class="cmd-result hidden"></div>
+        <div class="shop-subpanel active" id="shop-subpanel-offers">
+          <div class="shop-toolbar">
+            <div class="shop-searchbox">
+              <label class="form-label">Buscar item ou ID</label>
+              <input type="text" class="form-input" id="shop-search" placeholder="Ex: ar23 ou 1001" />
+            </div>
+            <div class="shop-status-filter">
+              <label class="form-label">Status</label>
+              <div class="segmented-control" id="shop-status-filter">
+                <button class="seg-btn active" type="button" data-status="all">Todas</button>
+                <button class="seg-btn" type="button" data-status="active">Ativas</button>
+                <button class="seg-btn" type="button" data-status="inactive">Inativas</button>
+              </div>
+            </div>
+            <div class="shop-sort-filter">
+              <label class="form-label">Ordem</label>
+              <select class="form-input" id="shop-sort-mode">
+                <option value="position" selected>Posicao</option>
+                <option value="id">ID</option>
+                <option value="name">Nome</option>
+                <option value="status">Status</option>
+              </select>
+            </div>
+            <div class="shop-toolbar-actions">
+              <button class="sc-btn shop-btn shop-btn-save" id="shop-search-btn" type="button" onclick="loadShopOffers(true)">BUSCAR</button>
+              <button class="sc-btn shop-btn shop-btn-package" id="shop-add-page-btn" type="button" onclick="addCurrentShopPageToPackage()">ADD PAGINA</button>
+              <button class="sc-btn shop-btn shop-btn-deactivate" id="shop-regenerate-btn" type="button" onclick="regenerateShopCache()">CACHE</button>
+              <button class="sc-btn shop-btn shop-btn-danger" id="shop-clear-btn" type="button" onclick="clearActiveShop()">EXCLUIR TUDO</button>
+            </div>
+          </div>
+          <div class="shop-offers-layout">
+            <div class="shop-list-panel">
+              <div class="shop-list-head">
+                <span id="shop-offers-count">0 ofertas</span>
+                <span id="shop-page-label">Pagina 1</span>
+              </div>
+              <div id="shop-list" class="shop-offer-list">
+                <div class="empty-state">Use a busca para encontrar ofertas</div>
+              </div>
+              <div class="shop-pagination">
+                <button class="sc-btn shop-btn shop-page-btn" id="shop-prev-page" type="button" onclick="shopPage(-1)">ANTERIOR</button>
+                <button class="sc-btn shop-btn shop-page-btn" id="shop-next-page" type="button" onclick="shopPage(1)">PROXIMO</button>
+              </div>
+            </div>
+            <div class="shop-editor-panel" id="shop-offer-editor">
+              <div class="empty-state">Selecione uma oferta para editar</div>
+            </div>
+          </div>
+        </div>
+        <div class="shop-subpanel" id="shop-subpanel-packages">
+          <div class="shop-packages-layout">
+            <div class="shop-packages-card">
+              <div class="section-label">Pacotes Salvos</div>
+              <select id="shop-packages-select" class="form-input shop-packages-select" size="10"></select>
+              <div id="shop-package-selected-meta" class="shop-subtle-note">Nenhum pacote selecionado</div>
+              <div class="shop-builder-toolbar">
+                <button class="sc-btn shop-btn shop-btn-save" type="button" onclick="loadSelectedShopPackage()">CARREGAR</button>
+                <button class="sc-btn shop-btn shop-btn-activate" type="button" onclick="applySelectedShopPackage('replace')">APLICAR SUBST.</button>
+                <button class="sc-btn shop-btn shop-btn-package" type="button" onclick="applySelectedShopPackage('merge')">MESCLAR</button>
+                <button class="sc-btn shop-btn shop-btn-deactivate" type="button" onclick="deleteSelectedShopPackage()">EXCLUIR</button>
+              </div>
+            </div>
+            <div class="shop-packages-card shop-package-editor-card">
+              <div class="section-label">Montar Pacote</div>
+              <div class="shop-package-form">
+                <div class="form-group">
+                  <label class="form-label">Nome do Pacote</label>
+                  <input type="text" class="form-input" id="shop-package-name" placeholder="Ex: Rotacao Semanal A" maxlength="64" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Descricao</label>
+                  <input type="text" class="form-input" id="shop-package-desc" placeholder="Observacao do pacote" maxlength="280" />
+                </div>
+              </div>
+              <div class="shop-builder-toolbar">
+                <button class="sc-btn shop-btn shop-btn-save" type="button" onclick="saveShopPackage(false)">SALVAR NOVO</button>
+                <button class="sc-btn shop-btn shop-btn-activate" type="button" onclick="saveShopPackage(true)">ATUALIZAR</button>
+                <button class="sc-btn shop-btn shop-btn-deactivate" type="button" onclick="clearShopPackageBuilder()">LIMPAR</button>
+              </div>
+              <div id="shop-builder-stats" class="shop-builder-counter">0 itens no pacote em montagem</div>
+              <div id="shop-builder-list" class="shop-builder-list">
+                <div class="empty-state">Adicione ofertas pela subaba Ofertas</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shop-subpanel" id="shop-subpanel-rotation">
+          <div class="shop-rotation-layout">
+            <div class="shop-packages-card">
+              <div class="section-label">Rotacao Automatica</div>
+              <label class="shop-toggle-row"><input type="checkbox" id="shop-rotation-enabled" /> Ativar troca automatica de pacotes</label>
+              <div class="form-group">
+                <label class="form-label">Intervalo (minutos)</label>
+                <input type="number" class="form-input" id="shop-rotation-interval" value="60" min="5" max="10080" />
+              </div>
+              <div id="shop-rotation-meta" class="shop-rotation-status">Rotacao desativada</div>
+              <div class="shop-builder-toolbar">
+                <button class="sc-btn shop-btn shop-btn-save" type="button" onclick="saveShopRotation(false)">SALVAR ROTACAO</button>
+                <button class="sc-btn shop-btn shop-btn-activate" type="button" onclick="saveShopRotation(true)">SALVAR E RODAR</button>
+                <button class="sc-btn shop-btn shop-btn-package" type="button" onclick="runShopRotationNow()">RODAR AGORA</button>
+              </div>
+            </div>
+            <div class="shop-packages-card">
+              <div class="section-label">Fila de Pacotes</div>
+              <select id="shop-rotation-packages" class="form-input shop-packages-select" size="12" multiple></select>
+              <div class="shop-subtle-note">Ctrl+Clique para selecionar varios pacotes da fila.</div>
+            </div>
+          </div>
+        </div>
+        <div class="shop-subpanel" id="shop-subpanel-catalog">
+          <div class="shop-toolbar">
+            <div class="shop-searchbox">
+              <label class="form-label">Buscar no catalogo</label>
+              <input type="text" class="form-input" id="shop-catalog-search" placeholder="Nome, chave ou wiki" />
+            </div>
+            <div class="shop-status-filter">
+              <label class="form-label">Tipo</label>
+              <select id="shop-catalog-type" class="form-input">
+                <option value="all">Todos</option>
+                <option value="weapon">Armas</option>
+                <option value="equipment">Equipamentos</option>
+                <option value="other">Outros</option>
+              </select>
+            </div>
+            <div class="shop-status-filter">
+              <label class="form-label">Loja</label>
+              <select id="shop-catalog-shop" class="form-input">
+                <option value="both">Todos</option>
+                <option value="in">Na loja</option>
+                <option value="out">Fora da loja</option>
+              </select>
+            </div>
+            <div class="shop-toolbar-actions">
+              <button class="sc-btn shop-btn shop-btn-save" id="shop-catalog-search-btn" type="button" onclick="loadShopCatalog(true)">BUSCAR</button>
+            </div>
+          </div>
+          <div class="shop-list-head">
+            <span id="shop-catalog-count">0 itens</span>
+            <span id="shop-catalog-page-label">Pagina 1</span>
+          </div>
+          <div id="shop-catalog-list" class="shop-catalog-list">
+            <div class="empty-state">Use o catalogo para localizar itens e conferir se estao na loja.</div>
+          </div>
+          <div class="shop-pagination">
+            <button class="sc-btn shop-btn shop-page-btn" id="shop-catalog-prev" type="button" onclick="shopCatalogPage(-1)">ANTERIOR</button>
+            <button class="sc-btn shop-btn shop-page-btn" id="shop-catalog-next" type="button" onclick="shopCatalogPage(1)">PROXIMO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-survival-rewards">
+      <div class="survival-shell survival-simple-shell">
+        <datalist id="survival-reward-items"></datalist>
+        <div class="survival-topbar">
+          <div>
+            <div class="section-label">Recompensas de Sobrevivencia</div>
+            <div id="survival-rewards-status" class="shop-topline">Escolha o mapa, clique nas caixas/itens e salve a recompensa final.</div>
+          </div>
+          <div class="survival-actions">
+            <button class="sc-btn shop-btn shop-btn-save" id="survival-refresh-btn" type="button" onclick="loadSurvivalRewards(true)">CARREGAR</button>
+            <button class="sc-btn shop-btn shop-btn-activate" id="survival-apply-selected-btn" type="button" onclick="saveSelectedSurvivalType()">SALVAR SOBREVIVENCIA</button>
+          </div>
+        </div>
+        <div id="survival-rewards-result" class="cmd-result hidden"></div>
+
+        <div class="survival-global-card">
+          <div class="survival-global-header" onclick="toggleGlobalRewardPanel()">
+            <span class="survival-global-title">Recompensa para todos os mapas</span>
+            <span class="survival-global-toggle" id="global-toggle-icon">â–¼</span>
+          </div>
+          <div class="survival-global-body" id="survival-global-body">
+            <div class="survival-global-section-label">Recompensa principal</div>
+            <div class="survival-global-grid">
+              <div class="form-group survival-field-wide">
+                <label class="form-label">Caixa / Item da recompensa</label>
+                <select class="form-input" id="global-reward-item-select">
+                  <option value="">Nenhum (pular item)</option>
+                </select>
+                <input type="hidden" id="global-reward-item" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Quantidade</label>
+                <input type="number" class="form-input" id="global-reward-item-amount" min="0" placeholder="1" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Duracao do item</label>
+                <input type="text" class="form-input" id="global-reward-item-expiration" placeholder="30d (ou vazio = permanente)" />
+              </div>
+            </div>
+            <div class="survival-global-section-label">Dinheiro na conclusao</div>
+            <div class="survival-global-grid survival-money-grid">
+              <div class="form-group"><label class="form-label">Ouro (GP)</label><input type="number" class="form-input" id="global-reward-gp" min="0" placeholder="0" /></div>
+              <div class="form-group"><label class="form-label">VP (Cash)</label><input type="number" class="form-input" id="global-reward-cash" min="0" placeholder="0" /></div>
+              <div class="form-group"><label class="form-label">Coroas</label><input type="number" class="form-input" id="global-reward-crown" min="0" placeholder="0" /></div>
+            </div>
+            <div class="survival-global-section-label">Multiplicadores de ganho</div>
+            <div class="survival-global-grid survival-multiplier-grid">
+              <div class="form-group"><label class="form-label">Mult. Ouro</label><input type="text" class="form-input" id="global-money-multiplier" placeholder="0.6" /></div>
+              <div class="form-group"><label class="form-label">Mult. XP</label><input type="text" class="form-input" id="global-xp-multiplier" placeholder="1.3" /></div>
+              <div class="form-group"><label class="form-label">Mult. VP</label><input type="text" class="form-input" id="global-cash-multiplier" placeholder="1" /></div>
+            </div>
+            <div class="survival-global-section-label">Coroas por desempenho</div>
+            <div class="survival-global-grid survival-crown-grid">
+              <div class="form-group"><label class="form-label">Bronze</label><input type="number" class="form-input" id="global-crown-bronze" min="0" placeholder="0" /></div>
+              <div class="form-group"><label class="form-label">Prata</label><input type="number" class="form-input" id="global-crown-silver" min="0" placeholder="0" /></div>
+              <div class="form-group"><label class="form-label">Ouro</label><input type="number" class="form-input" id="global-crown-gold" min="0" placeholder="0" /></div>
+            </div>
+            <details class="survival-advanced-details">
+              <summary class="survival-advanced-toggle">Configuracoes avancadas (pools, pontuacao, tempo)</summary>
+              <div class="survival-advanced-body">
+                <div class="survival-global-section-label">Pontos por resultado</div>
+                <div class="survival-global-grid survival-pool-grid">
+                  <div class="form-group"><label class="form-label">Vitoria</label><input type="number" class="form-input" id="global-win-pool" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Derrota</label><input type="number" class="form-input" id="global-lose-pool" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Empate</label><input type="number" class="form-input" id="global-draw-pool" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Por pontuacao</label><input type="number" class="form-input" id="global-score-pool" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Por checkpoint</label><input type="number" class="form-input" id="global-reward-pool" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Bonus extra</label><input type="number" class="form-input" id="global-bonus-pool" min="0" placeholder="0" /></div>
+                </div>
+                <div class="survival-global-section-label">Pontuacao para medalha</div>
+                <div class="survival-global-grid survival-threshold-grid">
+                  <div class="form-group"><label class="form-label">Pts Bronze</label><input type="number" class="form-input" id="global-score-bronze" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Pts Prata</label><input type="number" class="form-input" id="global-score-silver" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Pts Ouro</label><input type="number" class="form-input" id="global-score-gold" min="0" placeholder="0" /></div>
+                </div>
+                <div class="survival-global-section-label">Tempo para medalha (minutos)</div>
+                <div class="survival-global-grid survival-threshold-grid">
+                  <div class="form-group"><label class="form-label">Tempo Bronze</label><input type="number" class="form-input" id="global-time-bronze" min="0" step="0.1" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Tempo Prata</label><input type="number" class="form-input" id="global-time-silver" min="0" step="0.1" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Tempo Ouro</label><input type="number" class="form-input" id="global-time-gold" min="0" step="0.1" placeholder="0" /></div>
+                </div>
+              </div>
+            </details>
+            <div class="survival-global-actions">
+              <div class="global-presets">
+                <span class="preset-label">Rapido:</span>
+                <button class="sc-btn shop-btn shop-btn-save global-preset-btn" type="button" onclick="applyGlobalPreset('low')">BAIXO</button>
+                <button class="sc-btn shop-btn shop-btn-package global-preset-btn" type="button" onclick="applyGlobalPreset('medium')">MEDIO</button>
+                <button class="sc-btn shop-btn shop-btn-activate global-preset-btn" type="button" onclick="applyGlobalPreset('high')">ALTO</button>
+                <button class="sc-btn shop-btn shop-btn-danger global-preset-btn" type="button" onclick="applyGlobalPreset('extreme')">EXTREMO</button>
+              </div>
+              <button class="sc-btn shop-btn shop-btn-danger global-apply-btn" id="global-apply-btn" type="button" onclick="applyGlobalReward()">APLICAR EM TODOS</button>
+            </div>
+            <div id="global-rewards-result" class="cmd-result hidden"></div>
+          </div>
+        </div>
+
+        <div class="survival-layout">
+          <div class="survival-editor">
+            <div class="survival-editor-header">
+              <div class="survival-section-title" style="margin:0;border:none;padding:0">Mapa selecionado</div>
+              <div class="survival-editor-controls">
+                <select class="form-input" id="survival-type-select" style="height:28px;font-size:10px;min-width:180px">
+                  <option value="">Selecione...</option>
+                </select>
+                <button class="sc-btn shop-btn shop-btn-save" type="button" onclick="loadSelectedSurvivalType()" style="width:auto;padding:0 10px;height:28px;font-size:9px">CARREGAR</button>
+                <button class="sc-btn shop-btn shop-btn-activate" type="button" onclick="saveSelectedSurvivalType()" style="width:auto;padding:0 10px;height:28px;font-size:9px">SALVAR</button>
+              </div>
+            </div>
+            <div class="survival-current-row">
+              <span class="survival-step">2</span>
+              <span id="survival-current-badge" class="survival-current-badge">Selecione uma sobrevivencia</span>
+            </div>
+            <div id="survival-mission-preview" class="survival-mission-preview">
+              <img class="survival-mission-preview-img" src="/img/weapons/wiki_all/mission.png" alt="" onerror="this.src='/img/weapons/_default.png'" />
+              <div class="survival-mission-preview-main">
+                <div class="survival-mission-preview-title">Nenhum mapa aberto</div>
+                <div class="survival-mission-preview-sub">Selecione um mapa na lista para ver a recompensa atual.</div>
+                <div class="survival-mission-preview-rewards">
+                  <span class="survival-chip blue">Aguardando selecao</span>
+                </div>
+              </div>
+            </div>
+            <details class="survival-advanced-details survival-medal-details">
+              <summary class="survival-advanced-toggle">Ajustes de medalha e tempo</summary>
+              <div class="survival-advanced-body">
+                <div class="survival-global-section-label">Pontuacao para medalha</div>
+                <div class="survival-field-grid survival-field-grid-3 survival-threshold-grid survival-main-thresholds">
+                  <div class="form-group medal bronze"><label class="form-label">Bronze</label><input type="number" class="form-input" id="survival-score-bronze" min="0" placeholder="0" /></div>
+                  <div class="form-group medal silver"><label class="form-label">Prata</label><input type="number" class="form-input" id="survival-score-silver" min="0" placeholder="0" /></div>
+                  <div class="form-group medal gold"><label class="form-label">Ouro</label><input type="number" class="form-input" id="survival-score-gold" min="0" placeholder="0" /></div>
+                </div>
+                <div class="survival-global-section-label">Tempo para medalha (minutos)</div>
+                <div class="survival-field-grid survival-field-grid-3 survival-threshold-grid survival-main-thresholds">
+                  <div class="form-group medal bronze"><label class="form-label">Bronze</label><input type="number" class="form-input" id="survival-time-bronze" min="0" step="0.1" placeholder="0" /></div>
+                  <div class="form-group medal silver"><label class="form-label">Prata</label><input type="number" class="form-input" id="survival-time-silver" min="0" step="0.1" placeholder="0" /></div>
+                  <div class="form-group medal gold"><label class="form-label">Ouro</label><input type="number" class="form-input" id="survival-time-gold" min="0" step="0.1" placeholder="0" /></div>
+                </div>
+              </div>
+            </details>
+            <div class="survival-legacy-fields" aria-hidden="true">
+              <select id="survival-reward-item-select"></select>
+              <input type="hidden" id="survival-reward-item" />
+              <input type="hidden" id="survival-reward-item-amount" />
+              <input type="hidden" id="survival-reward-item-expiration" />
+              <input type="hidden" id="survival-reward-item-durability" />
+            </div>
+            <details class="survival-advanced-details survival-optional-details">
+              <summary class="survival-advanced-toggle">Valores opcionais</summary>
+              <div class="survival-advanced-body">
+            <div class="survival-global-section-label">Dinheiro na conclusao</div>
+            <div class="survival-field-grid survival-money-grid">
+              <div class="form-group"><label class="form-label">Ouro (GP)</label><input type="number" class="form-input" id="survival-reward-gp" min="0" placeholder="0" /></div>
+              <div class="form-group"><label class="form-label">VP (Cash)</label><input type="number" class="form-input" id="survival-reward-cash" min="0" placeholder="0" /></div>
+              <div class="form-group"><label class="form-label">Coroas</label><input type="number" class="form-input" id="survival-reward-crown" min="0" placeholder="0" /></div>
+            </div>
+            <div class="survival-global-section-label">Multiplicadores</div>
+            <div class="survival-field-grid survival-field-grid-3 survival-multiplier-grid">
+              <div class="form-group"><label class="form-label">Mult. Ouro</label><input type="text" class="form-input" id="survival-money-multiplier" placeholder="0.6" /></div>
+              <div class="form-group"><label class="form-label">Mult. XP</label><input type="text" class="form-input" id="survival-xp-multiplier" placeholder="1.3" /></div>
+              <div class="form-group"><label class="form-label">Mult. VP</label><input type="text" class="form-input" id="survival-cash-multiplier" placeholder="1" /></div>
+            </div>
+            <div class="survival-global-section-label">Coroas por desempenho</div>
+            <div class="survival-field-grid survival-field-grid-3 survival-crown-grid">
+              <div class="form-group"><label class="form-label">Bronze</label><input type="number" class="form-input" id="survival-crown-bronze" min="0" placeholder="0" /></div>
+              <div class="form-group"><label class="form-label">Prata</label><input type="number" class="form-input" id="survival-crown-silver" min="0" placeholder="0" /></div>
+              <div class="form-group"><label class="form-label">Ouro</label><input type="number" class="form-input" id="survival-crown-gold" min="0" placeholder="0" /></div>
+            </div>
+              </div>
+            </details>
+            <details class="survival-advanced-details">
+              <summary class="survival-advanced-toggle">Pools da missao</summary>
+              <div class="survival-advanced-body">
+                <div class="survival-global-section-label">Pontos por resultado</div>
+                <div class="survival-field-grid survival-pool-grid">
+                  <div class="form-group"><label class="form-label">Vitoria</label><input type="number" class="form-input" id="survival-win-pool" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Derrota</label><input type="number" class="form-input" id="survival-lose-pool" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Empate</label><input type="number" class="form-input" id="survival-draw-pool" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Por pontuacao</label><input type="number" class="form-input" id="survival-score-pool" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Por checkpoint</label><input type="number" class="form-input" id="survival-reward-pool" min="0" placeholder="0" /></div>
+                  <div class="form-group"><label class="form-label">Bonus extra</label><input type="number" class="form-input" id="survival-bonus-pool" min="0" placeholder="0" /></div>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div class="survival-list-card">
+            <div class="survival-list-toolbar">
+              <div class="form-group">
+                <label class="form-label">Procurar mapa</label>
+                <input type="text" class="form-input" id="survival-reward-filter" placeholder="Nome do mapa ou dificuldade..." />
+              </div>
+            </div>
+            <div class="shop-list-head">
+              <span id="survival-rewards-count">0 tipos</span>
+              <span id="survival-selected-count">Nada selecionado</span>
+            </div>
+            <div id="survival-rewards-list" class="survival-rewards-list">
+              <div class="empty-state">Carregue as recompensas</div>
+            </div>
+          </div>
+          <div class="survival-list-card survival-simple-rewards">
+            <div class="survival-simple-card-head">
+              <div class="survival-current-row">
+                <span class="survival-step">3</span>
+                <span class="survival-section-title compact">Warboxes e itens do final</span>
+              </div>
+              <span id="survival-selected-items-count" class="survival-current-badge">0 itens</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Buscar caixa ou item</label>
+              <input type="text" class="form-input" id="survival-item-search" placeholder="Nome da caixa, arma ou item..." />
+            </div>
+            <div class="survival-filter-tabs" id="survival-item-filter-tabs">
+              <button class="survival-filter-chip active" type="button" data-survival-item-filter="box" onclick="setSurvivalItemFilter('box')">Warboxes</button>
+              <button class="survival-filter-chip" type="button" data-survival-item-filter="item" onclick="setSurvivalItemFilter('item')">Itens</button>
+              <button class="survival-filter-chip" type="button" data-survival-item-filter="all" onclick="setSurvivalItemFilter('all')">Tudo</button>
+            </div>
+            <div id="survival-item-results" class="survival-item-results">
+              <div class="empty-state">Carregue as recompensas para listar itens</div>
+            </div>
+            <div class="survival-selected-wrap">
+              <div class="survival-global-section-label">Recompensas escolhidas para o final</div>
+              <div id="survival-selected-items" class="survival-selected-items">
+                <div class="empty-state">Clique em um item acima para adicionar</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-clans">
+      <div class="section-label">Gerenciamento de Clans</div>
+      <div class="ins-hero" style="margin-bottom:8px;gap:8px;flex-wrap:wrap;padding:8px">
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:120px">
+          <label class="form-label">Buscar Clan</label>
+          <input type="text" class="form-input" id="clan-search" placeholder="Nome do clan..." style="height:28px;font-size:10px" />
+        </div>
+        <div style="display:flex;gap:6px;align-self:flex-end">
+          <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px" onclick="loadClans()">BUSCAR</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px" onclick="showCreateClan()">CRIAR</button>
+        </div>
+      </div>
+      <div id="create-clan-form" class="hidden ins-hero" style="margin-bottom:8px;gap:8px;padding:8px">
+        <div class="form-group" style="flex:1;margin-bottom:0">
+          <input type="text" class="form-input" id="clan-new-name" placeholder="Nome do clan" style="height:28px;font-size:10px" />
+        </div>
+        <div class="form-group" style="flex:1;margin-bottom:0">
+          <input type="text" class="form-input" id="clan-new-leader" placeholder="Nick do lider" style="height:28px;font-size:10px" />
+        </div>
+        <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px;align-self:flex-end" onclick="createClan()">SALVAR</button>
+      </div>
+      <div id="clan-result" class="cmd-result hidden" style="margin-bottom:8px"></div>
+      <div id="clans-list" style="max-height:500px;overflow-y:auto;background:#060808;border:1px solid #141e14;border-radius:2px">
+        <div class="empty-state">Use a busca para encontrar clans</div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-gamerooms">
+      <div class="section-label">Salas Ativas</div>
+      <div style="margin-bottom:6px">
+        <button class="action-btn secondary" style="width:auto;padding:0 16px;height:28px;font-size:10px;clip-path:none;border-radius:2px" onclick="loadGameRooms()">ATUALIZAR</button>
+        <button class="action-btn secondary" style="width:auto;padding:0 16px;height:28px;font-size:10px;clip-path:none;border-radius:2px" onclick="autoRefreshGameRooms()">AUTO</button>
+      </div>
+      <div id="gameroom-stats" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#4a7a4a;margin-bottom:6px"></div>
+      <div id="gamerooms-list" style="max-height:500px;overflow-y:auto;background:#060808;border:1px solid #141e14;border-radius:2px">
+        <div class="empty-state">Nenhuma sala ativa</div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-achievements">
+      <div class="section-label">Gerenciar Conquistas</div>
+      <div class="ins-hero" style="margin-bottom:8px;gap:8px;flex-wrap:wrap;padding:8px">
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:120px">
+          <label class="form-label">Nickname</label>
+          <input type="text" class="form-input" id="ach-nick" placeholder="Nick do jogador..." style="height:28px;font-size:10px" />
+        </div>
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:100px">
+          <label class="form-label">Achievement ID</label>
+          <input type="text" class="form-input" id="ach-id" placeholder="Ex: 10001" style="height:28px;font-size:10px" />
+        </div>
+        <div class="form-group" style="flex:0 0 80px;margin-bottom:0">
+          <label class="form-label">Progresso</label>
+          <input type="number" class="form-input" id="ach-progress" value="1" min="0" max="1000000" style="height:28px;font-size:10px" />
+        </div>
+        <div style="display:flex;gap:6px;align-self:flex-end">
+          <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px" onclick="giveAchievement()">CONCEDER</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px" onclick="removeAchievement()">REMOVER</button>
+        </div>
+      </div>
+      <div class="section-label">Conquistas do Jogador</div>
+      <div id="ach-player-list" style="max-height:220px;overflow-y:auto;background:#060808;border:1px solid #141e14;border-radius:2px;margin-bottom:10px">
+        <div class="empty-state">Digite um nickname para carregar</div>
+      </div>
+      <div class="section-label">Catalogo de Conquistas</div>
+      <div class="quick-actions" style="margin-bottom:6px;justify-content:space-between;align-items:center">
+        <div id="ach-catalog-page" class="nav-status-pill">Pagina 1</div>
+        <div style="display:flex;gap:6px">
+          <button class="action-btn secondary" style="width:auto;padding:0 10px;height:26px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="achCatalogPrev()">ANTERIOR</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 10px;height:26px;font-size:9px;clip-path:none;border-radius:2px;margin-top:0" onclick="achCatalogNext()">PROXIMA</button>
+        </div>
+      </div>
+      <div id="ach-catalog-list" style="max-height:calc(100vh - 250px);min-height:420px;overflow-y:auto;background:#060808;border:1px solid #141e14;border-radius:2px">
+        <div class="empty-state">Carregando catalogo...</div>
+      </div>
+      <div id="ach-result" class="cmd-result hidden" style="margin-bottom:8px"></div>
+    </div>
+
+    <div class="tab-content" id="tab-search">
+      <div class="section-label">Buscar Jogador</div>
+      <div class="ins-hero" style="margin-bottom:12px;gap:10px;flex-wrap:wrap">
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:200px">
+          <label class="form-label">Termo</label>
+          <input type="text" class="form-input" id="search-term" placeholder="Nick ou ID numerico..." />
+        </div>
+        <div class="form-group" style="flex:0 0 100px;margin-bottom:0">
+          <label class="form-label">Tipo</label>
+          <select class="form-input" id="search-type">
+            <option value="nick">Nick</option>
+            <option value="id">ID</option>
+          </select>
+        </div>
+        <div style="align-self:flex-end">
+          <button class="action-btn secondary" style="width:auto;padding:0 24px;height:32px;font-size:11px;clip-path:none;border-radius:2px;margin-top:0" onclick="searchPlayers()">BUSCAR</button>
+        </div>
+      </div>
+      <div id="search-results"><div class="empty-state">Digite um termo para buscar</div></div>
+    </div>
+
+    <div class="tab-content" id="tab-chatlogs">
+      <div class="section-label">Logs de Chat</div>
+      <div class="ins-hero" style="margin-bottom:12px;gap:10px;flex-wrap:wrap">
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:140px">
+          <label class="form-label">Filtro</label>
+          <select class="form-input" id="chatlog-type">
+            <option value="all">Todos</option>
+            <option value="groupchat">Grupo (Canais)</option>
+            <option value="private">Privado (Whisper)</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex:1;margin-bottom:0;min-width:140px">
+          <label class="form-label">Nick / Username</label>
+          <input type="text" class="form-input" id="chatlog-nick" placeholder="Filtrar por jogador..." />
+        </div>
+        <div style="align-self:flex-end">
+          <button class="action-btn secondary" style="width:auto;padding:0 24px;height:32px;font-size:11px;clip-path:none;border-radius:2px;margin-top:0" onclick="loadChatLogs()">BUSCAR</button>
+          <button class="action-btn secondary" style="width:auto;padding:0 24px;height:32px;font-size:11px;clip-path:none;border-radius:2px;margin-top:0" onclick="autoRefreshChatLogs()">AUTO</button>
+        </div>
+      </div>
+      <div id="chatlog-stats" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#4a7a4a;margin-bottom:6px"></div>
+      <div id="chatlog-list" style="max-height:500px;overflow-y:auto;background:#060808;border:1px solid #141e14;border-radius:2px">
+        <div class="empty-state">Nenhum log de chat encontrado</div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-maintenance">
+      <div class="section-label">Modo Manutencao</div>
+      <div class="ins-hero" style="gap:10px;flex-wrap:wrap;padding:12px">
+        <div class="toggle" id="maint-toggle" onclick="toggleMaintenance()"></div>
+        <span id="maint-status" style="font-family:'Share Tech Mono',monospace;font-size:12px;color:#c8371a">Desativado</span>
+        <div class="form-group" style="flex:1;min-width:200px;margin-bottom:0">
+          <label class="form-label">Mensagem de manutencao</label>
+          <textarea class="form-input" id="maint-message" rows="2" placeholder="Servidor em manutencao..."></textarea>
+        </div>
+        <button class="action-btn secondary" style="width:auto;padding:0 16px;height:32px;font-size:10px;clip-path:none;border-radius:2px;align-self:flex-end" onclick="saveMaintenance()">SALVAR</button>
+      </div>
+      <div id="maint-result" class="cmd-result hidden" style="margin-top:8px"></div>
+    </div>
+
+    <div class="tab-content" id="tab-autobroadcast">
+      <div class="section-label">Mensagens Automaticas</div>
+      <div class="ins-hero" style="gap:10px;flex-wrap:wrap;padding:12px">
+        <div class="toggle" id="ab-toggle" onclick="toggleAutoBroadcast()"></div>
+        <span id="ab-status" style="font-family:'Share Tech Mono',monospace;font-size:12px;color:#c8371a">Desativado</span>
+        <div class="form-group" style="flex:0 0 100px;margin-bottom:0">
+          <label class="form-label">Intervalo (seg)</label>
+          <input type="number" class="form-input" id="ab-interval" value="300" min="30" />
+        </div>
+        <div class="form-group" style="flex:2;min-width:200px;margin-bottom:0">
+          <label class="form-label">Mensagem</label>
+          <textarea class="form-input" id="ab-message" rows="2" placeholder="Digite a mensagem..."></textarea>
+        </div>
+        <button class="action-btn secondary" style="width:auto;padding:0 16px;height:32px;font-size:10px;clip-path:none;border-radius:2px;align-self:flex-end" onclick="saveAutoBroadcast()">SALVAR</button>
+      </div>
+      <div id="ab-result" class="cmd-result hidden" style="margin-top:8px"></div>
+    </div>
+
+    <div class="tab-content" id="tab-backup">
+      <div class="section-label">Backup do Banco de Dados</div>
+      <button class="action-btn secondary" style="width:auto;padding:0 24px;height:32px;font-size:11px;clip-path:none;border-radius:2px;margin:8px 0" onclick="createBackup()">CRIAR BACKUP</button>
+      <div id="backup-result" class="cmd-result hidden" style="margin-bottom:8px"></div>
+      <div class="section-label">Backups Recentes</div>
+      <div id="backup-list"><div class="empty-state">Nenhum backup encontrado</div></div>
+    </div>
+
+    <div class="tab-content" id="tab-config">
+      <div class="section-label">Launcher Runtime (WebSocket)</div>
+      <div class="ins-hero" style="gap:10px;flex-wrap:wrap;padding:12px;margin-bottom:10px">
+        <div class="form-group" style="flex:1;min-width:140px;margin-bottom:0">
+          <label class="form-label">Config Version</label>
+          <input type="text" class="form-input" id="rt-config-version" placeholder="Ex: 2" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:1;min-width:180px;margin-bottom:0">
+          <label class="form-label">Servidor Host</label>
+          <input type="text" class="form-input" id="rt-server-host" placeholder="warface" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:1;min-width:200px;margin-bottom:0">
+          <label class="form-label">Servidor IP / Hostname</label>
+          <input type="text" class="form-input" id="rt-server-ip" placeholder="127.0.0.1" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:0 0 120px;margin-bottom:0">
+          <label class="form-label">Porta</label>
+          <input type="number" class="form-input" id="rt-server-port" min="1" max="65535" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:2;min-width:260px;margin-bottom:0">
+          <label class="form-label">Discord Invite URL</label>
+          <input type="text" class="form-input" id="rt-discord-url" placeholder="https://discord.gg/..." style="height:30px;font-size:11px" />
+        </div>
+      </div>
+
+      <div class="ins-hero" style="gap:10px;flex-wrap:wrap;padding:12px;margin-bottom:10px">
+        <div class="form-group" style="flex:1;min-width:220px;margin-bottom:0">
+          <label class="form-label">URL Game Version</label>
+          <input type="text" class="form-input" id="rt-url-game-version" placeholder="https://.../game-version.json" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:1;min-width:220px;margin-bottom:0">
+          <label class="form-label">URL Game Manifest</label>
+          <input type="text" class="form-input" id="rt-url-game-manifest" placeholder="https://.../game-manifest.json" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:1;min-width:220px;margin-bottom:0">
+          <label class="form-label">URL Launcher Config</label>
+          <input type="text" class="form-input" id="rt-url-launcher-config" placeholder="https://.../launcher-config.json" style="height:30px;font-size:11px" />
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+        <button class="action-btn secondary" style="width:auto;padding:0 14px;height:32px;font-size:10px;clip-path:none;border-radius:2px" onclick="loadRuntimeConfigEditor()">RECARREGAR RUNTIME</button>
+        <button class="action-btn" style="width:auto;padding:0 14px;height:32px;font-size:10px;clip-path:none;border-radius:2px" onclick="publishRuntimeConfig('snapshot')">PUBLICAR SNAPSHOT</button>
+        <button class="action-btn secondary" style="width:auto;padding:0 14px;height:32px;font-size:10px;clip-path:none;border-radius:2px" onclick="publishRuntimeConfig('patch')">PUBLICAR PATCH</button>
+      </div>
+      <div id="runtime-config-result" class="cmd-result hidden" style="margin-top:8px;margin-bottom:12px"></div>
+
+      <div class="section-label">Config (config.json)</div>
+      <div class="ins-hero" style="gap:10px;flex-wrap:wrap;padding:12px;margin-bottom:10px">
+        <div class="form-group" style="flex:1;min-width:220px;margin-bottom:0">
+          <label class="form-label">MongoDB URL</label>
+          <input type="text" class="form-input" id="cfg-mongodb" placeholder="mongodb://127.0.0.1:27017/" style="height:30px;font-size:11px" />
+        </div>
+      </div>
+
+      <div class="ins-hero" style="gap:10px;flex-wrap:wrap;padding:12px;margin-bottom:10px">
+        <div class="form-group" style="flex:1;min-width:180px;margin-bottom:0">
+          <label class="form-label">Master Host</label>
+          <input type="text" class="form-input" id="cfg-master-host" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:0 0 120px;margin-bottom:0">
+          <label class="form-label">Master Port</label>
+          <input type="text" class="form-input" id="cfg-master-port" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:1;min-width:180px;margin-bottom:0">
+          <label class="form-label">Master Domain</label>
+          <input type="text" class="form-input" id="cfg-master-domain" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:1;min-width:180px;margin-bottom:0">
+          <label class="form-label">Master Username</label>
+          <input type="text" class="form-input" id="cfg-master-username" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:1;min-width:180px;margin-bottom:0">
+          <label class="form-label">Master Password</label>
+          <input type="text" class="form-input" id="cfg-master-password" style="height:30px;font-size:11px" />
+        </div>
+      </div>
+
+      <div class="ins-hero" style="gap:10px;flex-wrap:wrap;padding:12px;margin-bottom:10px">
+        <div class="form-group" style="flex:1;min-width:260px;margin-bottom:0">
+          <label class="form-label">Dedicated Hosts (servidor=host)</label>
+          <textarea class="form-input" id="cfg-dedicated-hosts" rows="4" style="font-family:'Share Tech Mono',monospace;font-size:10px"></textarea>
+        </div>
+        <div class="form-group" style="flex:1;min-width:260px;margin-bottom:0">
+          <label class="form-label">Dedicated Public Hosts (porta=host)</label>
+          <textarea class="form-input" id="cfg-dedicated-public-hosts" rows="4" style="font-family:'Share Tech Mono',monospace;font-size:10px"></textarea>
+        </div>
+        <div class="form-group" style="flex:1;min-width:260px;margin-bottom:0">
+          <label class="form-label">Dedicated Public Ports (porta=portaPublica)</label>
+          <textarea class="form-input" id="cfg-dedicated-public-ports" rows="4" style="font-family:'Share Tech Mono',monospace;font-size:10px"></textarea>
+        </div>
+        <div class="form-group" style="flex:1;min-width:260px;margin-bottom:0">
+          <label class="form-label">Dedicated Port Map (sala=base,count)</label>
+          <textarea class="form-input" id="cfg-dedicated-port-map" rows="4" style="font-family:'Share Tech Mono',monospace;font-size:10px" placeholder="pvp_pro_001=65000,1"></textarea>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+        <button class="action-btn secondary" style="width:auto;padding:0 14px;height:32px;font-size:10px;clip-path:none;border-radius:2px" onclick="syncConfigBlocksToEditor()">VALIDAR BLOCOS</button>
+      </div>
+
+      <div class="section-label" style="margin-top:14px">Paths do Painel (paths.local.json)</div>
+      <div class="ins-hero" style="gap:10px;flex-wrap:wrap;padding:12px;margin-bottom:10px">
+        <div class="form-group" style="flex:1;min-width:280px;margin-bottom:0">
+          <label class="form-label">Servidor Root</label>
+          <input type="text" class="form-input" id="cfg-path-server-root" placeholder="C:\\...\\Servidor" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:1;min-width:280px;margin-bottom:0">
+          <label class="form-label">Game Dir</label>
+          <input type="text" class="form-input" id="cfg-path-game-dir" placeholder="C:\\...\\WarfaceSurvivor" style="height:30px;font-size:11px" />
+        </div>
+        <div class="form-group" style="flex:1;min-width:280px;margin-bottom:0">
+          <label class="form-label">Public Dir</label>
+          <input type="text" class="form-input" id="cfg-path-public-dir" placeholder="C:\\...\\AdminPanel\\public" style="height:30px;font-size:11px" />
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+        <button class="action-btn secondary" style="width:auto;padding:0 14px;height:32px;font-size:10px;clip-path:none;border-radius:2px" onclick="loadPanelPaths()">RECARREGAR PATHS</button>
+        <button class="action-btn" style="width:auto;padding:0 14px;height:32px;font-size:10px;clip-path:none;border-radius:2px" onclick="savePanelPaths()">SALVAR PATHS</button>
+      </div>
+      <div id="paths-result" class="cmd-result hidden" style="margin-top:8px;margin-bottom:8px"></div>
+
+      <textarea class="form-input" id="config-editor" rows="20" style="font-family:'Share Tech Mono',monospace;font-size:10px;display:none"></textarea>
+      <button class="action-btn secondary" style="width:auto;padding:0 24px;height:32px;font-size:11px;clip-path:none;border-radius:2px;margin-top:8px" onclick="saveConfig()">SALVAR</button>
+      <div id="config-result" class="cmd-result hidden" style="margin-top:8px"></div>
+    </div>
+
+    <div class="tab-content" id="tab-performance">
+      <div class="overview-grid">
+        <div class="overview-card" id="perf-cpu">
+          <div class="ov-label">CPU</div>
+          <div class="ov-value" id="perf-cpu-val">---</div>
+          <div class="ov-sub" id="perf-cpu-sub">---</div>
+        </div>
+        <div class="overview-card" id="perf-ram">
+          <div class="ov-label">RAM</div>
+          <div class="ov-value" id="perf-ram-val">---</div>
+          <div class="ov-sub" id="perf-ram-sub">---</div>
+        </div>
+        <div class="overview-card" id="perf-uptime">
+          <div class="ov-label">Uptime</div>
+          <div class="ov-value" id="perf-uptime-val">---</div>
+        </div>
+        <div class="overview-card" id="perf-online">
+          <div class="ov-label">Online</div>
+          <div class="ov-value" id="perf-online-val">0</div>
+          <div class="ov-sub" id="perf-online-sub">---</div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content" id="tab-launcher-news">
+      <div class="section-label">Launcher (Comunicacao - Noticias)</div>
+      <div class="shop-toolbar launcher-toolbar" style="grid-template-columns:1fr auto auto auto">
+        <div class="form-group" style="margin-bottom:0">
+          <label class="form-label">Status do Launcher</label>
+          <div id="lpr-counter-news" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#6f9b6f">---</div>
+        </div>
+        <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px" onclick="loadLauncherConfig()">RECARREGAR</button>
+        <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px" onclick="addSlide()">NOVO SLIDE</button>
+        <button class="action-btn secondary" style="width:auto;padding:0 12px;height:28px;font-size:9px;clip-path:none;border-radius:2px" onclick="saveLauncherConfig()">SALVAR</button>
+      </div>
+      <div id="launcher-result-news" class="cmd-result hidden" style="margin-top:8px"></div>
+      <div class="launcher-layout">
+        <div class="launcher-preview-panel">
+          <div class="launcher-preview-hero">
+            <div class="hero-grid"></div>
+            <div class="hero-scan"></div>
+            <div class="hero-vignette"></div>
+            <div id="lpr-hero-bg" class="lpr-hero-bg"></div>
+            <div class="launcher-preview-content">
+              <div class="hero-tag" id="lpr-hero-tag">---</div>
+              <div class="hero-title" id="lpr-hero-title">SEM<br><span>SLIDES</span></div>
+              <div class="hero-desc" id="lpr-hero-desc">Adicione ou carregue slides do launcher</div>
+            </div>
+            <div class="lpr-hero-controls">
+              <button class="sc-btn shop-btn" type="button" onclick="prevSlide()">ANT</button>
+              <div id="lpr-hero-dots" class="lpr-hero-dots"></div>
+              <button class="sc-btn shop-btn" type="button" onclick="nextSlide()">PROX</button>
+            </div>
+          </div>
+          <div id="slide-editor" class="launcher-editor-card" style="display:none">
+            <div class="ins-section-title">Editar Slide</div>
+            <div class="launcher-editor-body">
+              <div class="form-group">
+                <label class="form-label">Tag</label>
+                <input type="text" class="form-input" id="slide-edit-tag" oninput="syncSlideEditor()" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Titulo HTML</label>
+                <input type="text" class="form-input" id="slide-edit-title" oninput="syncSlideEditor()" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Descricao</label>
+                <input type="text" class="form-input" id="slide-edit-desc" oninput="syncSlideEditor()" />
+              </div>
+              <div class="launcher-image-row">
+                <img id="slide-edit-img-preview" class="launcher-image-preview" alt="" style="display:none" />
+                <div class="launcher-file-actions">
+                  <label class="sc-btn shop-btn shop-btn-save launcher-file-btn">
+                    IMAGEM
+                    <input type="file" accept="image/*" onchange="uploadSlideImage(this)" />
+                  </label>
+                  <button class="sc-btn shop-btn shop-btn-deactivate" type="button" onclick="deleteCurrentSlide()">EXCLUIR</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="launcher-news-panel">
+          <div class="launcher-news-head">
+            <div class="section-label" style="margin:0">Noticias</div>
+            <button class="sc-btn shop-btn shop-btn-save" type="button" onclick="addNews()">NOVA</button>
+          </div>
+          <div id="news-preview" class="launcher-news-list">
+            <div class="empty-state">Nenhuma noticia carregada</div>
+          </div>
+          <div id="news-editor" class="launcher-editor-card" style="display:none">
+            <div class="ins-section-title">Editar Noticia</div>
+            <div class="launcher-editor-body">
+              <div class="launcher-form-grid">
+                <div class="form-group">
+                  <label class="form-label">Data</label>
+                  <input type="text" class="form-input" id="news-edit-date" oninput="syncNewsEditor()" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Badge</label>
+                  <select class="form-input" id="news-edit-badge" onchange="syncNewsEditor()">
+                    <option value="">Nenhum</option>
+                    <option value="new">new</option>
+                    <option value="event">event</option>
+                    <option value="fix">fix</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Titulo</label>
+                <input type="text" class="form-input" id="news-edit-title" oninput="syncNewsEditor()" />
+              </div>
+              <label class="shop-toggle-row launcher-check-row">
+                <input type="checkbox" id="news-edit-featured" onchange="syncNewsEditor()" />
+                Destaque principal
+              </label>
+              <button class="sc-btn shop-btn shop-btn-deactivate" type="button" onclick="deleteCurrentNews()">EXCLUIR NOTICIA</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="toast-stack" class="toast-stack"></div>
+<script src="app.js"></script>
+</body>
+</html>
+
+

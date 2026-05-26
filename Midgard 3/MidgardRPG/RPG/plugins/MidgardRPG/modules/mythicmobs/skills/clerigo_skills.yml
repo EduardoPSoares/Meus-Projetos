@@ -1,0 +1,630 @@
+﻿# ================================================================
+#  CLÉRIGO (Cleric/Healer) — MythicMobs Skill Configuration
+# ================================================================
+#  Class Fantasy: Holy light, divine healing, sacred protection
+#  Minecraft 1.21.1 + Folia | All values use <skill.var.X> syntax
+#
+#  Color Palette:
+#    Gold (#ffcc00) | White (#ffffff) | Warm Yellow (#ffee88)
+#    Holy Light (#ffffcc) | Soft Green (#88ff88)
+#
+#  Particles: end_rod, dust_color_transition, heart, enchant,
+#             enchanted_hit, villager_happy, composter
+#
+#  Custom Mechanics: midgardDamage, midgardShield
+# ================================================================
+
+
+# ================================================================
+#  1. BÊNÇÃO DIVINA (PASSIVE) — Divine Blessing
+#     Passive periodic self-heal bonus with golden holy glow
+#     Variables: heal_bonus (Base: 5.0 | +2.0/rank)
+#     Milestones: lvl3=bencao_divina_glow, lvl5=bencao_divina_holy
+# ================================================================
+
+BencaoDivina:
+  Skills:
+  - setvariable{var=skill.heal_bonus;val=5.0;type=FLOAT}
+  - skill{s=BencaoDivina_Cast} @self
+
+BencaoDivinaMk2:
+  Skills:
+  - setvariable{var=skill.heal_bonus;val=7.0;type=FLOAT}
+  - skill{s=BencaoDivina_Cast} @self
+  - skill{s=BencaoDivinaMk2_Effects} @self
+
+BencaoDivinaMk3:
+  Skills:
+  - setvariable{var=skill.heal_bonus;val=9.0;type=FLOAT}
+  - skill{s=BencaoDivina_Cast} @self
+  - skill{s=BencaoDivinaMk2_Effects} @self
+  - skill{s=BencaoDivinaMk3_Effects} @self
+
+BencaoDivina_Cast:
+  Skills:
+  - sound{s=block.beacon.ambient;v=0.6;p=1.2} @self
+  - heal{a=<skill.var.heal_bonus>} @self
+  - effect:particles{p=end_rod;a=6;hS=0.3;vS=0.8;s=0.02;y=0.5} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffee88;size=1.0;a=10;hS=0.4;vS=0.6;y=0.3} @self
+
+# Milestone: bencao_divina_glow — Golden glow intensifies
+BencaoDivinaMk2_Effects:
+  Skills:
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffcc;size=1.5;a=16;hS=0.5;vS=0.8;y=0.4} @self
+  - effect:particles{p=enchant;a=8;hS=0.4;vS=0.6;s=0.05;y=0.2} @self
+
+# Milestone: bencao_divina_holy — Full holy radiance descending
+BencaoDivinaMk3_Effects:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=0.5;p=1.4} @self
+  - effect:particles{p=end_rod;a=18;hS=0.6;vS=1.2;s=0.01;y=2.0} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffcc00;size=2.0;a=22;hS=0.7;vS=1.5;y=1.0} @self
+
+
+# ================================================================
+#  2. AURA SAGRADA (PASSIVE) — Sacred Aura
+#     Passive AoE heal to nearby allies, gentle golden ring
+#     Variables: heal_per_sec (Base: 1.0 | +0.5/rank)
+#     Milestones: lvl3=aura_sagrada_light, lvl5=aura_sagrada_radiance
+# ================================================================
+
+AuraSagrada:
+  Skills:
+  - setvariable{var=skill.heal_per_sec;val=1.0;type=FLOAT}
+  - skill{s=AuraSagrada_Cast} @self
+
+AuraSagradaMk2:
+  Skills:
+  - setvariable{var=skill.heal_per_sec;val=1.5;type=FLOAT}
+  - skill{s=AuraSagrada_Cast} @self
+  - skill{s=AuraSagradaMk2_Effects} @self
+
+AuraSagradaMk3:
+  Skills:
+  - setvariable{var=skill.heal_per_sec;val=2.0;type=FLOAT}
+  - skill{s=AuraSagrada_Cast} @self
+  - skill{s=AuraSagradaMk2_Effects} @self
+  - skill{s=AuraSagradaMk3_Effects} @self
+
+AuraSagrada_Cast:
+  Skills:
+  - sound{s=block.beacon.ambient;v=0.4;p=1.4} @self
+  # Gentle golden ring at feet level
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffee88;size=0.8;a=20;hS=3.0;vS=0.1;s=0.01;y=0.1} @self
+  - effect:particles{p=end_rod;a=6;hS=2.5;vS=0.1;s=0.01;y=0.1} @self
+  # AoE heal to nearby allies
+  - heal{a=<skill.var.heal_per_sec>} @PlayersNearOrigin{r=8}
+  # Heal particles radiating outward on healed targets
+  - effect:particles{p=heart;a=2;hS=0.3;vS=0.3;y=1.0} @PlayersNearOrigin{r=8}
+
+# Milestone: aura_sagrada_light — Light ring brightens
+AuraSagradaMk2_Effects:
+  Skills:
+  - effect:particles{p=dust_color_transition;fromColor=#ffee88;toColor=#ffffcc;size=1.2;a=28;hS=4.0;vS=0.15;s=0.01;y=0.1} @self
+  - effect:particles{p=villager_happy;a=6;hS=3.0;vS=0.2;y=0.3} @self
+
+# Milestone: aura_sagrada_radiance — Full radiance, warm shimmer
+AuraSagradaMk3_Effects:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=0.3;p=1.6} @self
+  - effect:particles{p=end_rod;a=16;hS=5.0;vS=0.2;s=0.02;y=0.1} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffcc00;size=1.8;a=30;hS=5.0;vS=0.3;s=0.01;y=0.2} @self
+  - effect:particles{p=enchant;a=12;hS=4.0;vS=0.3;s=0.08;y=0.1} @self
+
+
+# ================================================================
+#  3. CURAR (COMMON) — Heal
+#     Heal self or nearby ally with warm golden light
+#     Variables: heal (Base: 15.0 | +5.0/rank)
+#     Milestones: lvl3=curar_glow, lvl5=curar_radiance
+# ================================================================
+
+Curar:
+  Skills:
+  - setvariable{var=skill.heal;val=15.0;type=FLOAT}
+  - skill{s=Curar_Cast} @self
+
+CurarMk2:
+  Skills:
+  - setvariable{var=skill.heal;val=20.0;type=FLOAT}
+  - skill{s=Curar_Cast} @self
+  - skill{s=CurarMk2_Effects} @self
+
+CurarMk3:
+  Skills:
+  - setvariable{var=skill.heal;val=25.0;type=FLOAT}
+  - skill{s=Curar_Cast} @self
+  - skill{s=CurarMk2_Effects} @self
+  - skill{s=CurarMk3_Effects} @self
+
+Curar_Cast:
+  Skills:
+  - sound{s=entity.experience_orb.pickup;v=1.0;p=0.8} @self
+  - heal{a=<skill.var.heal>} @self
+  # Warm golden light rising from the body
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffee88;size=1.2;a=20;hS=0.4;vS=0.8;s=0.03;y=0.5} @self
+  - effect:particles{p=end_rod;a=10;hS=0.3;vS=1.0;s=0.02;y=0.2} @self
+  - effect:particles{p=heart;a=5;hS=0.5;vS=0.4;y=1.5} @self
+
+# Milestone: curar_glow — Brighter ascending glow
+CurarMk2_Effects:
+  Skills:
+  - effect:particles{p=dust_color_transition;fromColor=#ffee88;toColor=#ffffcc;size=1.6;a=28;hS=0.5;vS=1.2;s=0.04;y=0.3} @self
+  - effect:particles{p=villager_happy;a=8;hS=0.6;vS=0.5;y=1.0} @self
+  - effect:particles{p=enchant;a=10;hS=0.5;vS=0.8;s=0.06;y=0.2} @self
+
+# Milestone: curar_radiance — Radiant burst of golden light
+CurarMk3_Effects:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=0.7;p=1.2} @self
+  - effect:particles{p=end_rod;a=25;hS=0.8;vS=1.5;s=0.05;y=0.5} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffcc00;size=2.2;a=35;hS=1.0;vS=1.8;s=0.04;y=0.5} @self
+  - effect:particles{p=heart;a=8;hS=0.8;vS=0.6;y=2.0} @self
+
+
+# ================================================================
+#  4. ESCUDO DE FÉ (COMMON) — Shield of Faith
+#     Absorption shield on target with golden dome effect
+#     Variables: shield (Base: 20.0 | +5.0/rank)
+#                duration (Base: 5.0 | +0.5/rank) — seconds
+#     Milestones: lvl3=escudo_fe_barrier, lvl5=escudo_fe_divine
+# ================================================================
+
+EscudoDeFe:
+  Skills:
+  - setvariable{var=skill.shield;val=20.0;type=FLOAT}
+  - setvariable{var=skill.duration;val=5.0;type=FLOAT}
+  - skill{s=EscudoDeFe_Cast} @self
+
+EscudoDeFeMk2:
+  Skills:
+  - setvariable{var=skill.shield;val=25.0;type=FLOAT}
+  - setvariable{var=skill.duration;val=5.5;type=FLOAT}
+  - skill{s=EscudoDeFe_Cast} @self
+  - skill{s=EscudoDeFeMk2_Effects} @self
+
+EscudoDeFeMk3:
+  Skills:
+  - setvariable{var=skill.shield;val=30.0;type=FLOAT}
+  - setvariable{var=skill.duration;val=6.0;type=FLOAT}
+  - skill{s=EscudoDeFe_Cast} @self
+  - skill{s=EscudoDeFeMk2_Effects} @self
+  - skill{s=EscudoDeFeMk3_Effects} @self
+
+EscudoDeFe_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.0;p=1.0} @self
+  - midgardShield{a=<skill.var.shield>;d=<skill.var.duration>} @self
+  # Golden dome forming around target
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffee88;size=1.5;a=30;hS=1.5;vS=1.5;s=0.02;y=1.0} @self
+  - effect:particles{p=end_rod;a=15;hS=1.2;vS=1.2;s=0.03;y=1.0} @self
+  # Holy absorption shimmer
+  - effect:particles{p=enchanted_hit;a=12;hS=1.0;vS=1.0;s=0.05;y=0.8} @self
+
+# Milestone: escudo_fe_barrier — Visible barrier shell
+EscudoDeFeMk2_Effects:
+  Skills:
+  - effect:particles{p=dust_color_transition;fromColor=#ffee88;toColor=#ffffcc;size=2.0;a=40;hS=2.0;vS=2.0;s=0.01;y=1.0} @self
+  - effect:particles{p=enchant;a=15;hS=1.5;vS=1.5;s=0.04;y=0.5} @self
+  - sound{s=block.amethyst_block.chime;v=0.5;p=1.0} @self
+
+# Milestone: escudo_fe_divine — Divine golden dome fully formed
+EscudoDeFeMk3_Effects:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=0.8;p=0.8} @self
+  - effect:particles{p=end_rod;a=30;hS=2.5;vS=2.5;s=0.02;y=1.0} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffcc00;size=2.5;a=50;hS=2.5;vS=2.5;s=0.01;y=1.0} @self
+  - effect:particles{p=enchanted_hit;a=20;hS=2.0;vS=2.0;s=0.06;y=1.0} @self
+
+
+# ================================================================
+#  5. PURIFICAR (COMMON) — Purify
+#     Remove debuffs from target and heal, white/gold cleanse burst
+#     Variables: heal (Base: 10.0 | +3.0/rank)
+#     Milestones: lvl3=purificar_cleanse, lvl5=purificar_holy
+# ================================================================
+
+Purificar:
+  Skills:
+  - setvariable{var=skill.heal;val=10.0;type=FLOAT}
+  - skill{s=Purificar_Cast} @self
+
+PurificarMk2:
+  Skills:
+  - setvariable{var=skill.heal;val=13.0;type=FLOAT}
+  - skill{s=Purificar_Cast} @self
+  - skill{s=PurificarMk2_Effects} @self
+
+PurificarMk3:
+  Skills:
+  - setvariable{var=skill.heal;val=16.0;type=FLOAT}
+  - skill{s=Purificar_Cast} @self
+  - skill{s=PurificarMk2_Effects} @self
+  - skill{s=PurificarMk3_Effects} @self
+
+Purificar_Cast:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=1.0;p=1.2} @self
+  # Remove common negative potion effects
+  - skill{s=Purificar_Cleanse} @self
+  # Heal after cleansing
+  - heal{a=<skill.var.heal>} @self
+  # White/gold cleanse burst
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffcc00;size=1.3;a=25;hS=0.8;vS=1.0;s=0.06;y=0.8} @self
+  - effect:particles{p=end_rod;a=12;hS=0.6;vS=1.2;s=0.04;y=0.5} @self
+  - effect:particles{p=enchanted_hit;a=15;hS=0.7;vS=0.8;s=0.08;y=0.6} @self
+
+Purificar_Cleanse:
+  Skills:
+  - potion{type=POISON;duration=1;level=0;override=true;hasParticles=false} @self
+  - potion{type=WITHER;duration=1;level=0;override=true;hasParticles=false} @self
+  - potion{type=WEAKNESS;duration=1;level=0;override=true;hasParticles=false} @self
+  - potion{type=SLOWNESS;duration=1;level=0;override=true;hasParticles=false} @self
+  - potion{type=MINING_FATIGUE;duration=1;level=0;override=true;hasParticles=false} @self
+  - potion{type=BLINDNESS;duration=1;level=0;override=true;hasParticles=false} @self
+  - potion{type=HUNGER;duration=1;level=0;override=true;hasParticles=false} @self
+  - potion{type=NAUSEA;duration=1;level=0;override=true;hasParticles=false} @self
+  - potion{type=DARKNESS;duration=1;level=0;override=true;hasParticles=false} @self
+
+# Milestone: purificar_cleanse — Expanding cleanse ring
+PurificarMk2_Effects:
+  Skills:
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffffcc;size=1.8;a=35;hS=1.2;vS=1.2;s=0.08;y=0.8} @self
+  - effect:particles{p=villager_happy;a=10;hS=0.8;vS=0.5;y=1.0} @self
+  - effect:particles{p=composter;a=8;hS=0.6;vS=0.8;y=0.5} @self
+
+# Milestone: purificar_holy — Holy purification radiance
+PurificarMk3_Effects:
+  Skills:
+  - sound{s=entity.experience_orb.pickup;v=0.8;p=1.4} @self
+  - effect:particles{p=end_rod;a=25;hS=1.5;vS=1.5;s=0.05;y=0.8} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffffff;size=2.5;a=40;hS=1.5;vS=1.5;s=0.04;y=1.0} @self
+  - effect:particles{p=enchant;a=18;hS=1.0;vS=1.0;s=0.1;y=0.5} @self
+
+
+# ================================================================
+#  6. LUZ SAGRADA (COMMON) — Sacred Light
+#     Beam of holy light: damages enemies, heals allies in area
+#     Variables: damage (Base: 18.0 | +4.0/rank)
+#                heal   (Base: 12.0 | +3.0/rank)
+#     Milestones: lvl3=luz_sagrada_beam, lvl5=luz_sagrada_nova
+# ================================================================
+
+LuzSagrada:
+  Skills:
+  - setvariable{var=skill.damage;val=18.0;type=FLOAT}
+  - setvariable{var=skill.heal;val=12.0;type=FLOAT}
+  - skill{s=LuzSagrada_Cast} @self
+
+LuzSagradaMk2:
+  Skills:
+  - setvariable{var=skill.damage;val=22.0;type=FLOAT}
+  - setvariable{var=skill.heal;val=15.0;type=FLOAT}
+  - skill{s=LuzSagrada_Cast} @self
+  - skill{s=LuzSagradaMk2_Effects} @self
+
+LuzSagradaMk3:
+  Skills:
+  - setvariable{var=skill.damage;val=26.0;type=FLOAT}
+  - setvariable{var=skill.heal;val=18.0;type=FLOAT}
+  - skill{s=LuzSagrada_Cast} @self
+  - skill{s=LuzSagradaMk2_Effects} @self
+  - skill{s=LuzSagradaMk3_Effects} @self
+
+LuzSagrada_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.0;p=1.2} @self
+  # Holy beam descending from above
+  - effect:particles{p=end_rod;a=30;hS=0.2;vS=4.0;s=0.01;y=4.0} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffff;size=1.5;a=25;hS=0.3;vS=3.0;s=0.02;y=3.0} @self
+  # Damage enemies in area
+  - midgardDamage{a=<skill.var.damage>} @EntitiesNearOrigin{r=6}
+  # Heal allies in area
+  - heal{a=<skill.var.heal>} @PlayersNearOrigin{r=6}
+  # Impact glow at ground level
+  - effect:particles{p=enchanted_hit;a=18;hS=2.0;vS=0.3;s=0.1;y=0.2} @self
+  - effect:particles{p=heart;a=3;hS=1.0;vS=0.3;y=1.2} @PlayersNearOrigin{r=6}
+
+# Milestone: luz_sagrada_beam — Intensified holy beam
+LuzSagradaMk2_Effects:
+  Skills:
+  - effect:particles{p=dust_color_transition;fromColor=#ffee88;toColor=#ffffcc;size=2.0;a=35;hS=0.4;vS=5.0;s=0.02;y=5.0} @self
+  - effect:particles{p=end_rod;a=20;hS=1.5;vS=0.5;s=0.03;y=0.2} @self
+  - effect:particles{p=enchant;a=15;hS=1.0;vS=2.0;s=0.08;y=1.0} @self
+
+# Milestone: luz_sagrada_nova — Holy nova explosion outward
+LuzSagradaMk3_Effects:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=0.9;p=0.8} @self
+  - effect:particles{p=end_rod;a=40;hS=3.0;vS=1.0;s=0.06;y=0.5} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffcc00;size=2.5;a=50;hS=3.5;vS=1.5;s=0.04;y=0.8} @self
+  - effect:particles{p=enchanted_hit;a=30;hS=3.0;vS=0.5;s=0.12;y=0.3} @self
+
+
+# ================================================================
+#  7. RENOVAR (COMMON) — Renew
+#     Heal over time with green/gold nature particles
+#     Variables: heal_per_sec (Base: 5.0 | +2.0/rank)
+#                duration    (Base: 5.0 | +0.5/rank) — seconds
+#     Milestones: lvl3=renovar_pulse, lvl5=renovar_bloom
+# ================================================================
+
+Renovar:
+  Skills:
+  - setvariable{var=skill.heal_per_sec;val=5.0;type=FLOAT}
+  - setvariable{var=skill.ticks;val=5;type=INTEGER}
+  - skill{s=Renovar_Cast} @self
+
+RenovarMk2:
+  Skills:
+  - setvariable{var=skill.heal_per_sec;val=7.0;type=FLOAT}
+  - setvariable{var=skill.ticks;val=5;type=INTEGER}
+  - skill{s=Renovar_Cast} @self
+  - skill{s=RenovarMk2_Effects} @self
+
+RenovarMk3:
+  Skills:
+  - setvariable{var=skill.heal_per_sec;val=9.0;type=FLOAT}
+  - setvariable{var=skill.ticks;val=6;type=INTEGER}
+  - skill{s=Renovar_Cast} @self
+  - skill{s=RenovarMk2_Effects} @self
+  - skill{s=RenovarMk3_Effects} @self
+
+Renovar_Cast:
+  Skills:
+  - sound{s=entity.experience_orb.pickup;v=0.8;p=1.0} @self
+  # Initial bloom of green/gold particles
+  - effect:particles{p=dust_color_transition;fromColor=#88ff88;toColor=#ffcc00;size=1.0;a=18;hS=0.5;vS=0.8;s=0.03;y=0.5} @self
+  - effect:particles{p=composter;a=10;hS=0.4;vS=0.6;y=0.3} @self
+  # Repeating heal ticks — 1 tick per second (20 game ticks)
+  - skill{s=Renovar_Tick;repeat=<skill.var.ticks>;repeati=20} @self
+
+Renovar_Tick:
+  Skills:
+  - heal{a=<skill.var.heal_per_sec>} @self
+  - sound{s=entity.experience_orb.pickup;v=0.3;p=1.4} @self
+  # Green/gold HoT pulse each tick
+  - effect:particles{p=dust_color_transition;fromColor=#88ff88;toColor=#ffee88;size=0.8;a=8;hS=0.3;vS=0.5;s=0.02;y=0.4} @self
+  - effect:particles{p=composter;a=4;hS=0.3;vS=0.3;y=0.2} @self
+  - effect:particles{p=heart;a=1;hS=0.3;vS=0.2;y=1.5} @self
+
+# Milestone: renovar_pulse — Visible pulse waves
+RenovarMk2_Effects:
+  Skills:
+  - effect:particles{p=dust_color_transition;fromColor=#88ff88;toColor=#ffffcc;size=1.4;a=25;hS=0.8;vS=1.0;s=0.04;y=0.5} @self
+  - effect:particles{p=villager_happy;a=8;hS=0.6;vS=0.5;y=0.8} @self
+  - effect:particles{p=composter;a=12;hS=0.6;vS=0.8;y=0.3} @self
+
+# Milestone: renovar_bloom — Nature bloom, plant growth burst
+RenovarMk3_Effects:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=0.5;p=1.5} @self
+  - effect:particles{p=dust_color_transition;fromColor=#88ff88;toColor=#ffcc00;size=2.0;a=35;hS=1.2;vS=1.5;s=0.03;y=0.5} @self
+  - effect:particles{p=end_rod;a=15;hS=0.8;vS=1.2;s=0.02;y=0.5} @self
+  - effect:particles{p=composter;a=18;hS=1.0;vS=1.0;y=0.4} @self
+  - effect:particles{p=villager_happy;a=12;hS=1.0;vS=0.6;y=1.0} @self
+
+
+# ================================================================
+#  8. PRECE PROTETORA (COMMON) — Protective Prayer
+#     AoE damage reduction buff to nearby allies, prayer circle
+#     Variables: damage_reduction (Base: 10.0 | +3.0/rank) — %
+#                duration         (Base: 5.0 | +0.5/rank) — seconds
+#     Milestones: lvl3=prece_protetora_ward, lvl5=prece_protetora_divine
+# ================================================================
+
+PreceProtetora:
+  Skills:
+  - setvariable{var=skill.damage_reduction;val=10.0;type=FLOAT}
+  - setvariable{var=skill.duration;val=5.0;type=FLOAT}
+  - setvariable{var=skill.duration_ticks;val=100;type=INTEGER}
+  - skill{s=PreceProtetora_Cast} @self
+
+PreceProtetoraMk2:
+  Skills:
+  - setvariable{var=skill.damage_reduction;val=13.0;type=FLOAT}
+  - setvariable{var=skill.duration;val=5.5;type=FLOAT}
+  - setvariable{var=skill.duration_ticks;val=110;type=INTEGER}
+  - skill{s=PreceProtetora_Cast} @self
+  - skill{s=PreceProtetoraMk2_Effects} @self
+
+PreceProtetoraMk3:
+  Skills:
+  - setvariable{var=skill.damage_reduction;val=16.0;type=FLOAT}
+  - setvariable{var=skill.duration;val=6.0;type=FLOAT}
+  - setvariable{var=skill.duration_ticks;val=120;type=INTEGER}
+  - skill{s=PreceProtetora_Cast} @self
+  - skill{s=PreceProtetoraMk2_Effects} @self
+  - skill{s=PreceProtetoraMk3_Effects} @self
+
+PreceProtetora_Cast:
+  Skills:
+  - sound{s=block.enchantment_table.use;v=1.0;p=0.8} @self
+  # Prayer circle on ground — golden ring expanding outward
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffee88;size=1.0;a=30;hS=4.0;vS=0.1;s=0.01;y=0.1} @self
+  - effect:particles{p=enchant;a=20;hS=3.0;vS=0.2;s=0.05;y=0.1} @self
+  # Apply RESISTANCE to all nearby allies
+  - potion{t=RESISTANCE;d=<skill.var.duration_ticks>;l=0} @PlayersNearOrigin{r=8}
+  # Golden dome rising over the prayer area
+  - effect:particles{p=end_rod;a=12;hS=3.5;vS=2.0;s=0.02;y=1.0} @self
+  - effect:particles{p=enchanted_hit;a=10;hS=3.0;vS=0.5;s=0.04;y=0.3} @PlayersNearOrigin{r=8}
+
+# Milestone: prece_protetora_ward — Glowing ward runes appear
+PreceProtetoraMk2_Effects:
+  Skills:
+  - effect:particles{p=dust_color_transition;fromColor=#ffee88;toColor=#ffffcc;size=1.5;a=40;hS=5.0;vS=0.15;s=0.01;y=0.1} @self
+  - effect:particles{p=enchant;a=25;hS=4.0;vS=0.3;s=0.06;y=0.2} @self
+  - effect:particles{p=villager_happy;a=8;hS=3.0;vS=0.3;y=0.5} @PlayersNearOrigin{r=8}
+
+# Milestone: prece_protetora_divine — Full divine sanctuary dome
+PreceProtetoraMk3_Effects:
+  Skills:
+  - sound{s=block.beacon.ambient;v=0.8;p=0.9} @self
+  - effect:particles{p=end_rod;a=30;hS=6.0;vS=3.0;s=0.02;y=1.5} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffcc00;size=2.2;a=50;hS=6.0;vS=3.0;s=0.01;y=1.5} @self
+  - effect:particles{p=enchanted_hit;a=20;hS=5.0;vS=1.0;s=0.08;y=0.5} @self
+
+
+# ================================================================
+#  9. RESSURREIÇÃO (ULTIMATE) — Resurrection
+#     Channeled revive: massive golden pillar, full heal on target
+#     Variables: heal (Base: 30.0 | +5.0/rank)
+#     Milestones: lvl3=ressurreicao_glow, lvl5=ressurreicao_divine
+#     Channel: ~4 seconds (80 ticks)
+# ================================================================
+
+Ressurreicao:
+  Skills:
+  - setvariable{var=skill.heal;val=30.0;type=FLOAT}
+  - skill{s=Ressurreicao_Cast} @self
+
+RessurreicaoMk2:
+  Skills:
+  - setvariable{var=skill.heal;val=35.0;type=FLOAT}
+  - skill{s=Ressurreicao_Cast} @self
+  - skill{s=RessurreicaoMk2_Effects} @self
+
+RessurreicaoMk3:
+  Skills:
+  - setvariable{var=skill.heal;val=40.0;type=FLOAT}
+  - skill{s=Ressurreicao_Cast} @self
+  - skill{s=RessurreicaoMk2_Effects} @self
+  - skill{s=RessurreicaoMk3_Effects} @self
+
+Ressurreicao_Cast:
+  Skills:
+  # Begin channeling — low beacon hum
+  - sound{s=block.beacon.activate;v=1.0;p=0.6} @self
+  # Channeling phase: building golden pillar over 4 seconds
+  - skill{s=Ressurreicao_Channel;repeat=4;repeati=20} @self
+  # Finale after channel completes (80 ticks delay)
+  - skill{s=Ressurreicao_Finale;delay=80} @self
+
+Ressurreicao_Channel:
+  Skills:
+  # Building golden pillar — intensifies each tick
+  - sound{s=block.beacon.ambient;v=0.5;p=0.8} @self
+  - effect:particles{p=end_rod;a=20;hS=0.5;vS=3.0;s=0.02;y=2.0} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffff;size=1.5;a=18;hS=0.6;vS=2.5;s=0.03;y=1.5} @self
+  - effect:particles{p=enchant;a=12;hS=0.8;vS=1.5;s=0.06;y=0.5} @self
+
+Ressurreicao_Finale:
+  Skills:
+  # Resurrection fanfare
+  - sound{s=entity.player.levelup;v=1.0;p=0.8} @self
+  - sound{s=block.beacon.activate;v=1.0;p=1.4} @self
+  # Full heal on target
+  - heal{a=<skill.var.heal>} @self
+  # Massive golden pillar from heaven
+  - effect:particles{p=end_rod;a=60;hS=1.0;vS=6.0;s=0.03;y=6.0} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffff;size=2.5;a=50;hS=1.2;vS=5.0;s=0.04;y=5.0} @self
+  # Angel wings — wide horizontal burst at shoulder height
+  - effect:particles{p=end_rod;a=30;hS=2.5;vS=0.3;s=0.04;y=1.5} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffffcc;size=2.0;a=40;hS=3.0;vS=0.4;s=0.02;y=1.5} @self
+  # Ground-level holy explosion
+  - effect:particles{p=enchanted_hit;a=35;hS=2.0;vS=0.5;s=0.1;y=0.2} @self
+  - effect:particles{p=heart;a=10;hS=1.5;vS=1.0;y=2.0} @self
+
+# Milestone: ressurreicao_glow — Brighter channel glow
+RessurreicaoMk2_Effects:
+  Skills:
+  - effect:particles{p=dust_color_transition;fromColor=#ffee88;toColor=#ffffcc;size=2.0;a=30;hS=1.5;vS=4.0;s=0.03;y=3.0} @self
+  - effect:particles{p=villager_happy;a=12;hS=1.0;vS=1.0;y=1.0} @self
+  - effect:particles{p=enchant;a=20;hS=1.2;vS=2.0;s=0.08;y=1.0} @self
+
+# Milestone: ressurreicao_divine — Full divine resurrection aura
+RessurreicaoMk3_Effects:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=1.0;p=0.6} @self
+  - effect:particles{p=end_rod;a=50;hS=2.0;vS=8.0;s=0.02;y=8.0} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffcc00;size=3.0;a=60;hS=2.5;vS=6.0;s=0.02;y=6.0} @self
+  # Radiant halo above head
+  - effect:particles{p=end_rod;a=20;hS=0.8;vS=0.1;s=0.01;y=2.5} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffffff;size=1.5;a=25;hS=1.0;vS=0.1;s=0.01;y=2.5} @self
+
+
+# ================================================================
+#  10. JULGAMENTO DIVINO (ULTIMATE) — Divine Judgment
+#      Channeled holy devastation: massive damage + AoE heal
+#      Variables: damage (Base: 45.0 | +10.0/rank)
+#                 heal   (Base: 30.0 | +6.0/rank)
+#      Milestones: lvl3=julgamento_divino_light, lvl5=julgamento_divino_wrath
+#      Channel: ~4 seconds (80 ticks)
+# ================================================================
+
+JulgamentoDivino:
+  Skills:
+  - setvariable{var=skill.damage;val=45.0;type=FLOAT}
+  - setvariable{var=skill.heal;val=30.0;type=FLOAT}
+  - skill{s=JulgamentoDivino_Cast} @self
+
+JulgamentoDivinoMk2:
+  Skills:
+  - setvariable{var=skill.damage;val=55.0;type=FLOAT}
+  - setvariable{var=skill.heal;val=36.0;type=FLOAT}
+  - skill{s=JulgamentoDivino_Cast} @self
+  - skill{s=JulgamentoDivinoMk2_Effects} @self
+
+JulgamentoDivinoMk3:
+  Skills:
+  - setvariable{var=skill.damage;val=65.0;type=FLOAT}
+  - setvariable{var=skill.heal;val=42.0;type=FLOAT}
+  - skill{s=JulgamentoDivino_Cast} @self
+  - skill{s=JulgamentoDivinoMk2_Effects} @self
+  - skill{s=JulgamentoDivinoMk3_Effects} @self
+
+JulgamentoDivino_Cast:
+  Skills:
+  # Begin channeling — deep resonant activation
+  - sound{s=block.beacon.activate;v=1.0;p=0.5} @self
+  # Channeling phase: holy energy gathering from the sky
+  - skill{s=JulgamentoDivino_Channel;repeat=4;repeati=20} @self
+  # Finale after channel completes (80 ticks delay)
+  - skill{s=JulgamentoDivino_Finale;delay=80} @self
+
+JulgamentoDivino_Channel:
+  Skills:
+  # Swirling holy energy converging on caster
+  - sound{s=block.beacon.ambient;v=0.6;p=0.6} @self
+  - effect:particles{p=end_rod;a=15;hS=3.0;vS=4.0;s=0.04;y=3.0} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffff;size=1.8;a=20;hS=2.5;vS=3.0;s=0.05;y=2.0} @self
+  - effect:particles{p=enchant;a=18;hS=2.0;vS=2.0;s=0.1;y=1.0} @self
+
+JulgamentoDivino_Finale:
+  Skills:
+  # Cataclysmic holy sound
+  - sound{s=entity.player.levelup;v=1.0;p=0.6} @self
+  - sound{s=block.beacon.activate;v=1.0;p=1.6} @self
+  # Massive holy beam from sky — divine judgment descends
+  - effect:particles{p=end_rod;a=80;hS=1.5;vS=8.0;s=0.03;y=8.0} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffff;size=3.0;a=70;hS=2.0;vS=7.0;s=0.04;y=7.0} @self
+  # Golden explosion on impact
+  - effect:particles{p=enchanted_hit;a=50;hS=5.0;vS=2.0;s=0.15;y=0.5} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffcc00;size=2.5;a=60;hS=5.0;vS=1.5;s=0.08;y=0.5} @self
+  # Damage all enemies in area
+  - midgardDamage{a=<skill.var.damage>} @EntitiesNearOrigin{r=10}
+  # Heal all allies in area
+  - heal{a=<skill.var.heal>} @PlayersNearOrigin{r=10}
+  # Healing particles on allies
+  - effect:particles{p=heart;a=6;hS=0.5;vS=0.5;y=1.5} @PlayersNearOrigin{r=10}
+  - effect:particles{p=villager_happy;a=10;hS=0.5;vS=0.5;y=1.0} @PlayersNearOrigin{r=10}
+
+# Milestone: julgamento_divino_light — Holy light pillars during channel
+JulgamentoDivinoMk2_Effects:
+  Skills:
+  - effect:particles{p=end_rod;a=30;hS=4.0;vS=5.0;s=0.03;y=5.0} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffee88;toColor=#ffffcc;size=2.2;a=40;hS=3.5;vS=4.0;s=0.03;y=4.0} @self
+  - effect:particles{p=enchant;a=25;hS=3.0;vS=2.0;s=0.1;y=1.0} @self
+
+# Milestone: julgamento_divino_wrath — Full divine wrath, heaven opens
+JulgamentoDivinoMk3_Effects:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=1.0;p=0.4} @self
+  # Heaven rips open — massive vertical particle column
+  - effect:particles{p=end_rod;a=70;hS=3.0;vS=10.0;s=0.02;y=10.0} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffffff;toColor=#ffcc00;size=3.5;a=80;hS=4.0;vS=8.0;s=0.02;y=8.0} @self
+  # Shockwave ring at ground level
+  - effect:particles{p=enchanted_hit;a=40;hS=6.0;vS=0.3;s=0.2;y=0.2} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffee88;size=2.0;a=50;hS=7.0;vS=0.3;s=0.1;y=0.2} @self
+  # Radiant golden dust falling from the sky
+  - effect:particles{p=end_rod;a=40;hS=5.0;vS=0.5;s=0.01;y=6.0} @self

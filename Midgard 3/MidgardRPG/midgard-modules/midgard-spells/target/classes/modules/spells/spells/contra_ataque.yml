@@ -1,0 +1,79 @@
+name: "<blue>ᴄᴏɴᴛʀᴀ ᴀᴛᴀǫᴜᴇ</blue>"
+mythic-skill: "ContraAtaque"
+spell-type: COMMON
+
+cooldown:
+  base: 8.0
+  per-level: -0.2
+mana:
+  base: 18.0
+  per-level: -0.4
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guardiao"
+  level: 5
+
+icon:
+  material: IRON_SWORD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<blue><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></blue>"
+  - ""
+  - "<gray>ᴀᴏ ʙʟᴏǫᴜᴇᴀʀ ᴜᴍ ᴀᴛᴀǫᴜᴇ,</gray>"
+  - "<gray>ʀᴇᴠɪᴅᴀ ɪᴍᴇᴅɪᴀᴛᴀᴍᴇɴᴛᴇ ᴄᴏᴍ</gray>"
+  - "<gray>ᴜᴍ ɢᴏʟᴘᴇ ᴅᴇ ᴇsᴄᴜᴅᴏ.</gray>"
+  - ""
+  - "<blue><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></blue>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ ʀᴇꜰʟᴇᴛɪᴅᴏ:<blue>{damage_reflected}</blue>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<blue>ɢᴜᴀʀᴅɪᴀᴏ</blue>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  damage_reflected:
+    base: 8.0
+    per-level: 2.5
+
+milestones:
+  3:
+    visual: "counter_flash"
+    mechanic-override: "ContraAtaqueMk2"
+    stat-bonus:
+      defense: 1.0
+  5:
+    visual: "counter_shield"
+    mechanic-override: "ContraAtaqueMk3"
+    stat-bonus:
+      strength: 2.0
+
+mastery:
+  attribute-bonus:
+    defense: 5
+
+sounds:
+  cast-start:
+    sound: "item.shield.block"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "entity.player.attack.strong"
+    volume: 1.0
+    pitch: 1.2
+  cast-fail:
+    sound: "item.shield.break"
+    volume: 0.5
+    pitch: 0.8

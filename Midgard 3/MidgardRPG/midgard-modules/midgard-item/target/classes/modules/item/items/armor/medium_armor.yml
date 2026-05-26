@@ -1,0 +1,313 @@
+# ============================================
+# Medium Armor Sets - Balanced/Warrior
+# ============================================
+
+# --- Malha Set (UNCOMMON) ---
+
+malha_elmo:
+  base:
+    material: CHAINMAIL_HELMET
+    name: "<green>ᴇʟᴍᴏ ᴅᴇ ᴍᴀʟʜᴀ</green>"
+    tier: UNCOMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴇʟᴍᴏ ᴅᴇ ᴍᴀʟʜᴀ ᴅᴇ ᴀᴄᴏ ᴛʀᴀɴᴄᴀᴅᴀ,</gray>"
+    - "<gray>ᴘʀᴏᴛᴇɢᴇ ᴄᴏɴᴛʀᴀ ɢᴏʟᴘᴇs ᴅɪʀᴇᴛᴏs.</gray>"
+    revision-id: 1
+    armor: 5
+    defense: 4
+    strength: 2
+    max-health: 5
+    crafting:
+      enabled: true
+      recipes:
+        craft_malha_elmo:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_aco"
+            1: "midgard:lingote_aco"
+            2: "midgard:lingote_aco"
+            3: "midgard:lingote_ferro"
+            5: "midgard:lingote_ferro"
+
+malha_peitoral:
+  base:
+    material: CHAINMAIL_CHESTPLATE
+    name: "<green>ᴘᴇɪᴛᴏʀᴀʟ ᴅᴇ ᴍᴀʟʜᴀ</green>"
+    tier: UNCOMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴘᴇɪᴛᴏʀᴀʟ ᴅᴇ ᴍᴀʟʜᴀ ʀᴇsɪsᴛᴇɴᴛᴇ,</gray>"
+    - "<gray>ᴇǫᴜɪʟɪʙʀᴀ ᴘʀᴏᴛᴇᴄᴀᴏ ᴇ ᴍᴏᴠɪᴍᴇɴᴛᴏ.</gray>"
+    revision-id: 1
+    armor: 8
+    defense: 6
+    strength: 3
+    max-health: 8
+    crafting:
+      enabled: true
+      recipes:
+        craft_malha_peitoral:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_aco"
+            2: "midgard:lingote_aco"
+            3: "midgard:lingote_ferro"
+            4: "midgard:lingote_aco"
+            5: "midgard:lingote_ferro"
+            6: "midgard:lingote_ferro"
+            7: "midgard:lingote_aco"
+            8: "midgard:lingote_ferro"
+
+malha_calcas:
+  base:
+    material: CHAINMAIL_LEGGINGS
+    name: "<green>ᴄᴀʟᴄᴀs ᴅᴇ ᴍᴀʟʜᴀ</green>"
+    tier: UNCOMMON
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ᴅᴇ ᴍᴀʟʜᴀ ʀᴇꜰᴏʀᴄᴀᴅᴀ,</gray>"
+    - "<gray>ᴘʀᴏᴛᴇɢᴇᴍ ᴀs ᴘᴇʀɴᴀs ᴇᴍ ᴄᴏᴍʙᴀᴛᴇ.</gray>"
+    revision-id: 1
+    armor: 6
+    defense: 5
+    strength: 2
+    max-health: 6
+    crafting:
+      enabled: true
+      recipes:
+        craft_malha_calcas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_aco"
+            1: "midgard:lingote_aco"
+            2: "midgard:lingote_aco"
+            3: "midgard:lingote_ferro"
+            5: "midgard:lingote_ferro"
+            6: "midgard:lingote_ferro"
+            8: "midgard:lingote_ferro"
+
+malha_botas:
+  base:
+    material: CHAINMAIL_BOOTS
+    name: "<green>ʙᴏᴛᴀs ᴅᴇ ᴍᴀʟʜᴀ</green>"
+    tier: UNCOMMON
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ᴅᴇ ᴍᴀʟʜᴀ ʟᴇᴠᴇs,</gray>"
+    - "<gray>ꜰɪʀᴍᴇs ɴᴏ ᴛᴇʀʀᴇɴᴏ ᴅᴇ ʙᴀᴛᴀʟʜᴀ.</gray>"
+    revision-id: 1
+    armor: 5
+    defense: 4
+    strength: 2
+    max-health: 5
+    crafting:
+      enabled: true
+      recipes:
+        craft_malha_botas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            3: "midgard:lingote_aco"
+            5: "midgard:lingote_aco"
+            6: "midgard:lingote_ferro"
+            8: "midgard:lingote_ferro"
+
+# --- Ferro Set (RARE) ---
+
+ferro_elmo:
+  base:
+    material: IRON_HELMET
+    name: "<blue>ᴇʟᴍᴏ ᴅᴇ ꜰᴇʀʀᴏ</blue>"
+    tier: RARE
+    type: ARMOR
+    description:
+    - "<gray>ᴇʟᴍᴏ ꜰᴏʀᴊᴀᴅᴏ ᴇᴍ ꜰᴇʀʀᴏ ᴛᴇᴍᴘᴇʀᴀᴅᴏ,</gray>"
+    - "<gray>ᴘʀᴏᴛᴇᴄᴀᴏ sᴏʟɪᴅᴀ ᴘᴀʀᴀ ɢᴜᴇʀʀᴇɪʀᴏs.</gray>"
+    revision-id: 1
+    armor: 10
+    defense: 8
+    strength: 4
+    max-health: 15
+    damage-reduction: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_ferro_elmo:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_mithril"
+            1: "midgard:lingote_titanio"
+            2: "midgard:lingote_mithril"
+            3: "midgard:lingote_titanio"
+            5: "midgard:lingote_titanio"
+
+ferro_peitoral:
+  base:
+    material: IRON_CHESTPLATE
+    name: "<blue>ᴘᴇɪᴛᴏʀᴀʟ ᴅᴇ ꜰᴇʀʀᴏ</blue>"
+    tier: RARE
+    type: ARMOR
+    description:
+    - "<gray>ᴘᴇɪᴛᴏʀᴀʟ ꜰᴏʀᴊᴀᴅᴏ ᴇᴍ ꜰᴇʀʀᴏ ᴍᴀᴄɪᴄᴏ,</gray>"
+    - "<gray>ʀᴇsɪsᴛᴇ ᴀ ɢᴏʟᴘᴇs ᴘᴏᴅᴇʀᴏsᴏs.</gray>"
+    revision-id: 1
+    armor: 14
+    defense: 11
+    strength: 6
+    max-health: 20
+    damage-reduction: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_ferro_peitoral:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_mithril"
+            2: "midgard:lingote_mithril"
+            3: "midgard:lingote_titanio"
+            4: "midgard:lingote_mithril"
+            5: "midgard:lingote_titanio"
+            6: "midgard:lingote_titanio"
+            7: "midgard:lingote_mithril"
+            8: "midgard:lingote_titanio"
+
+ferro_calcas:
+  base:
+    material: IRON_LEGGINGS
+    name: "<blue>ᴄᴀʟᴄᴀs ᴅᴇ ꜰᴇʀʀᴏ</blue>"
+    tier: RARE
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ᴅᴇ ꜰᴇʀʀᴏ ʀᴇꜰᴏʀᴄᴀᴅᴏ,</gray>"
+    - "<gray>ᴘʀᴏᴛᴇɢᴇᴍ ᴄᴏɴᴛʀᴀ ᴀᴛᴀǫᴜᴇs ʙʀᴜᴛᴀɪs.</gray>"
+    revision-id: 1
+    armor: 12
+    defense: 9
+    strength: 5
+    max-health: 18
+    damage-reduction: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_ferro_calcas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_mithril"
+            1: "midgard:lingote_titanio"
+            2: "midgard:lingote_mithril"
+            3: "midgard:lingote_titanio"
+            5: "midgard:lingote_titanio"
+            6: "midgard:lingote_titanio"
+            8: "midgard:lingote_titanio"
+
+ferro_botas:
+  base:
+    material: IRON_BOOTS
+    name: "<blue>ʙᴏᴛᴀs ᴅᴇ ꜰᴇʀʀᴏ</blue>"
+    tier: RARE
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ᴅᴇ ꜰᴇʀʀᴏ ᴘᴇsᴀᴅᴀs,</gray>"
+    - "<gray>ꜰɪʀᴍᴇs ᴄᴏᴍᴏ ᴀ ᴛᴇʀʀᴀ.</gray>"
+    revision-id: 1
+    armor: 9
+    defense: 7
+    strength: 3
+    max-health: 12
+    damage-reduction: 2
+    crafting:
+      enabled: true
+      recipes:
+        craft_ferro_botas:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            3: "midgard:lingote_mithril"
+            5: "midgard:lingote_mithril"
+            6: "midgard:lingote_titanio"
+            8: "midgard:lingote_titanio"
+
+# --- Cavaleiro Set (EPIC) ---
+
+cavaleiro_elmo:
+  base:
+    material: DIAMOND_HELMET
+    name: "<purple>ᴇʟᴍᴏ ᴅᴏ ᴄᴀᴠᴀʟᴇɪʀᴏ</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴇʟᴍᴏ ᴅᴏs ᴄᴀᴠᴀʟᴇɪʀᴏs ᴅᴇ ᴍɪᴅɢᴀʀᴅ,</gray>"
+    - "<gray>sɪᴍʙᴏʟᴏ ᴅᴇ ʜᴏɴʀᴀ ᴇ ᴅᴇᴠᴏᴄᴀᴏ.</gray>"
+    revision-id: 1
+    armor: 18
+    defense: 14
+    strength: 7
+    max-health: 25
+    damage-reduction: 4
+    required-level: 38
+
+cavaleiro_peitoral:
+  base:
+    material: DIAMOND_CHESTPLATE
+    name: "<purple>ᴘᴇɪᴛᴏʀᴀʟ ᴅᴏ ᴄᴀᴠᴀʟᴇɪʀᴏ</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ᴘᴇɪᴛᴏʀᴀʟ ꜰᴏʀᴊᴀᴅᴏ ᴘᴀʀᴀ ᴏs ᴍᴀɪs ʙʀᴀᴠᴏs,</gray>"
+    - "<gray>ʀᴇsɪsᴛᴇ ᴀᴏs ɢᴏʟᴘᴇs ᴍᴀɪs ꜰᴇʀᴏᴢᴇs.</gray>"
+    revision-id: 1
+    armor: 24
+    defense: 18
+    strength: 10
+    max-health: 35
+    damage-reduction: 5
+    required-level: 38
+
+cavaleiro_calcas:
+  base:
+    material: DIAMOND_LEGGINGS
+    name: "<purple>ᴄᴀʟᴄᴀs ᴅᴏ ᴄᴀᴠᴀʟᴇɪʀᴏ</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ʀᴇꜰᴏʀᴄᴀᴅᴀs ᴅᴏ ᴄᴀᴠᴀʟᴇɪʀᴏ,</gray>"
+    - "<gray>ᴘʀᴏᴛᴇɢᴇᴍ ᴇᴍ ᴄᴏᴍʙᴀᴛᴇ ᴍᴏɴᴛᴀᴅᴏ.</gray>"
+    revision-id: 1
+    armor: 21
+    defense: 16
+    strength: 8
+    max-health: 30
+    damage-reduction: 4
+    required-level: 38
+
+cavaleiro_botas:
+  base:
+    material: DIAMOND_BOOTS
+    name: "<purple>ʙᴏᴛᴀs ᴅᴏ ᴄᴀᴠᴀʟᴇɪʀᴏ</purple>"
+    tier: EPIC
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ᴅᴏ ᴄᴀᴠᴀʟᴇɪʀᴏ ᴅᴇ ᴍɪᴅɢᴀʀᴅ,</gray>"
+    - "<gray>ꜰɪʀᴍᴇs ᴇᴍ ǫᴜᴀʟǫᴜᴇʀ ᴄᴀᴍᴘᴏ ᴅᴇ ʙᴀᴛᴀʟʜᴀ.</gray>"
+    revision-id: 1
+    armor: 16
+    defense: 12
+    strength: 6
+    max-health: 20
+    damage-reduction: 3
+    required-level: 38

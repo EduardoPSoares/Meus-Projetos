@@ -1,0 +1,437 @@
+# MythicalRaces Kits Configuration
+# --------------------------------
+# This configuration file defines the kits available in the MythicalRaces plugin.
+# Kits are predefined sets of commands that can be minecraft:given to players based on various criteria.
+#
+# Permissions:
+# - Each kit requires a specific permission to be used by a player.
+#   Format: mythicalraces.kit.<KitName>
+#   Example: mythicalraces.kit.Basic
+#
+# Configuration Options:
+# - enabled: (true/false) Determines if the kit is active.
+# - minimumRequiredType: The type of level requirement for using the kit.
+#   Options: 'RACE', 'CLASS', 'RACE/CLASS', 'NONE'
+# - minimumLevelRequired: The minimum level required to use the kit.
+# - maximumRequiredType: The type of level limit for using the kit.
+#   Options: 'RACE', 'CLASS', 'RACE/CLASS', 'NONE'
+# - maximumLevelRequired: The maximum level allowed to use the kit.
+# - cooldown: The cooldown time (in seconds) before the kit can be used again.
+# - commands: A list of console commands executed when the kit is used.
+#   Placeholders:
+#     {name} - Player's name
+#     {world} - Player's current world
+#     {x}, {y}, {z} - Player's coordinates
+#   PAPI placeholders can also be used.
+
+other:
+
+  # Gui display name
+  guiName: 'Select A Kit'
+
+  # Amount of slots the GUI has, max is 54
+  guiSlots: 36
+
+  # Disable the display names in the GUI for the classes, in both the gui and tree
+  # This will disable the display names for the classes in the GUI
+  disableGuiDisplayNames: false
+
+  # Item for forwardClick
+  forwardClickItem: 'PAPER'
+
+  # When this slot is clicked, open up next GUI list
+  forwardClick: 35
+
+  # Next page
+  forwardClickDisplay: 'Next page'
+
+  # Paper item
+  backwardClickItem: 'PAPER'
+
+  # Previous page
+  backwardClick: 28
+
+  backwardClickDisplay: 'Previous page'
+
+  treeNonSlots: 'BLACK_STAINED_GLASS_PANE'
+
+
+kits:
+  # Basic Starter Kit
+  Basic:
+    displayName: '&7Basic Starter Kit'
+    material: 'BOOK'
+    guiPage: 1
+    slot: 11
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 0
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 600
+    commands:
+      - 'minecraft:give {name} stone_sword 1'
+      - 'minecraft:give {name} bread 16'
+    lore:
+      - '&7A basic starter kit for new players.'
+      - '&7Useful for getting started.'
+      - '&7Cooldown: 10 minutes'
+      - '&7Level Required: &f0'
+      - '&7Includes: &fStone Sword x1, Bread x16'
+
+  # Warrior's Kit
+  Warrior:
+    displayName: '&cWarrior Kit'
+    material: 'IRON_SWORD'
+    guiPage: 1
+    slot: 12
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 5
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 3600
+    commands:
+      - 'minecraft:give {name} iron_sword 1'
+      - 'minecraft:give {name} shield 1'
+      - 'minecraft:give {name} steak 8'
+    lore:
+      - '&cFor those who prefer to fight up close.'
+      - '&7Cooldown: 1 hour'
+      - '&7Level Required: &f5'
+      - '&7Includes: &fIron Sword x1, Shield x1, Steak x8'
+
+  # Archer's Kit
+  Archer:
+    displayName: '&aArcher Kit'
+    material: 'BOW'
+    guiPage: 1
+    slot: 13
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 5
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 3600
+    commands:
+      - 'minecraft:give {name} bow 1'
+      - 'minecraft:give {name} arrow 64'
+      - 'minecraft:give {name} leather_boots 1'
+    lore:
+      - '&aA kit for ranged combat enthusiasts.'
+      - '&7Cooldown: 1 hour'
+      - '&7Level Required: &f5'
+      - '&7Includes: &fBow x1, Arrows x64, Leather Boots x1'
+
+  # Mage's Kit
+  Mage:
+    displayName: '&dMage Kit'
+    material: 'BLAZE_ROD'
+    guiPage: 1
+    slot: 14
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 10
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 7200
+    commands:
+      - 'minecraft:give {name} blaze_rod 1'
+      - 'minecraft:give {name} potion 3'
+    lore:
+      - '&dHarness the power of magic with this kit.'
+      - '&7Cooldown: 2 hours'
+      - '&7Level Required: &f10'
+      - '&7Includes: &fBlaze Rod x1, Potions x3'
+
+  # Elite Warrior's Kit
+  EliteWarrior:
+    displayName: '&6Elite Warrior Kit'
+    material: 'DIAMOND_SWORD'
+    guiPage: 1
+    slot: 15
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 20
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 14400
+    commands:
+      - 'minecraft:give {name} diamond_sword 1'
+      - 'minecraft:give {name} diamond_chestplate 1'
+      - 'minecraft:give {name} golden_apple 5'
+    lore:
+      - '&6The ultimate kit for seasoned warriors.'
+      - '&7Cooldown: 4 hours'
+      - '&7Level Required: &f20'
+      - '&7Includes: &fDiamond Sword x1, Diamond Chestplate x1, Golden Apples x5'
+
+  # Miner Kit
+  Miner:
+    displayName: '&8Miner Kit'
+    material: 'IRON_PICKAXE'
+    guiPage: 1
+    slot: 16
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 5
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 3600
+    commands:
+      - 'minecraft:give {name} iron_pickaxe 1'
+      - 'minecraft:give {name} torch 32'
+      - 'minecraft:give {name} bread 8'
+    lore:
+      - '&8A kit for aspiring miners.'
+      - '&7Cooldown: 1 hour'
+      - '&7Level Required: &f5'
+      - '&7Includes: &fIron Pickaxe x1, Torches x32, Bread x8'
+
+  # Explorer Kit
+  Explorer:
+    displayName: '&eExplorer Kit'
+    material: 'COMPASS'
+    guiPage: 2
+    slot: 11
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 10
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 7200
+    commands:
+      - 'minecraft:give {name} compass 1'
+      - 'minecraft:give {name} map 1'
+      - 'minecraft:give {name} cooked_beef 16'
+    lore:
+      - '&eFor adventurers seeking new horizons.'
+      - '&7Cooldown: 2 hours'
+      - '&7Level Required: &f10'
+      - '&7Includes: &fCompass x1, Map x1, Cooked Beef x16'
+
+  # Healer Kit
+  Healer:
+    displayName: '&aHealer Kit'
+    material: 'GOLDEN_CARROT'
+    guiPage: 2
+    slot: 10
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 15
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 10800
+    commands:
+      - 'minecraft:give {name} potion 5'
+      - 'minecraft:give {name} golden_carrot 10'
+    lore:
+      - '&aSupport your allies or yourself in battle.'
+      - '&7Cooldown: 3 hours'
+      - '&7Level Required: &f15'
+      - '&7Includes: &fPotions x5, Golden Carrots x10'
+  # Tank Kit
+  Tank:
+    displayName: '&9Tank Kit'
+    material: 'DIAMOND_CHESTPLATE'
+    guiPage: 1
+    slot: 21
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 15
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 10800
+    commands:
+      - 'minecraft:give {name} diamond_chestplate 1'
+      - 'minecraft:give {name} diamond_leggings 1'
+      - 'minecraft:give {name} steak 10'
+    lore:
+      - '&9Heavy protection for the strongest players.'
+      - '&7Cooldown: 3 hours'
+      - '&7Level Required: &f15'
+      - '&7Includes: &fDiamond Chestplate x1, Diamond Leggings x1, Steak x10'
+
+  # Hunter Kit
+  Hunter:
+    displayName: '&aHunter Kit'
+    material: 'CROSSBOW'
+    guiPage: 1
+    slot: 22
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 10
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 7200
+    commands:
+      - 'minecraft:give {name} crossbow 1'
+      - 'minecraft:give {name} arrow 64'
+      - 'minecraft:give {name} cooked_chicken 8'
+    lore:
+      - '&aPerfect for skilled marksmen.'
+      - '&7Cooldown: 2 hours'
+      - '&7Level Required: &f10'
+      - '&7Includes: &fCrossbow x1, Arrows x64, Cooked Chicken x8'
+
+  # Builder Kit
+  Builder:
+    displayName: '&6Builder Kit'
+    material: 'OAK_PLANKS'
+    guiPage: 1
+    slot: 23
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 0
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 1800
+    commands:
+      - 'minecraft:give {name} oak_planks 64'
+      - 'minecraft:give {name} cobblestone 64'
+      - 'minecraft:give {name} glass 32'
+    lore:
+      - '&6A kit for creative builders.'
+      - '&7Cooldown: 30 minutes'
+      - '&7Level Required: &f0'
+      - '&7Includes: &fOak Planks x64, Cobblestone x64, Glass x32'
+
+  # Spy Kit
+  Spy:
+    displayName: '&8Spy Kit'
+    material: 'POTION'
+    guiPage: 1
+    slot: 24
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 20
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 14400
+    commands:
+      - 'minecraft:give {name} potion_of_invisibility 2'
+      - 'minecraft:give {name} spyglass 1'
+      - 'minecraft:give {name} cooked_mutton 5'
+    lore:
+      - '&8For sneaky operations and reconnaissance.'
+      - '&7Cooldown: 4 hours'
+      - '&7Level Required: &f20'
+      - '&7Includes: &fInvisibility Potions x2, Spyglass x1, Cooked Mutton x5'
+
+  # Pyromancer Kit
+  Pyromancer:
+    displayName: '&cPyromancer Kit'
+    material: 'FLINT_AND_STEEL'
+    guiPage: 1
+    slot: 25
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 15
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 10800
+    commands:
+      - 'minecraft:give {name} flint_and_steel 1'
+      - 'minecraft:give {name} fire_charge 5'
+      - 'minecraft:give {name} cooked_porkchop 6'
+    lore:
+      - '&cUnleash the power of fire.'
+      - '&7Cooldown: 3 hours'
+      - '&7Level Required: &f15'
+      - '&7Includes: &fFlint and Steel x1, Fire Charges x5, Cooked Porkchop x6'
+
+  # Alchemist Kit
+  Alchemist:
+    displayName: '&dAlchemist Kit'
+    material: 'BREWING_STAND'
+    guiPage: 1
+    slot: 13
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 25
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 21600
+    commands:
+      - 'minecraft:give {name} potion_of_strength 2'
+      - 'minecraft:give {name} potion_of_regeneration 2'
+      - 'minecraft:give {name} golden_carrot 6'
+    lore:
+      - '&dMaster the art of potion brewing.'
+      - '&7Cooldown: 6 hours'
+      - '&7Level Required: &f25'
+      - '&7Includes: &fStrength Potions x2, Regeneration Potions x2, Golden Carrots x6'
+
+  # Farmer Kit
+  Farmer:
+    displayName: '&aFarmer Kit'
+    material: 'WHEAT'
+    guiPage: 1
+    slot: 10
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 0
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 1800
+    commands:
+      - 'minecraft:give {name} iron_hoe 1'
+      - 'minecraft:give {name} wheat_seeds 32'
+      - 'minecraft:give {name} carrot 16'
+    lore:
+      - '&aPerfect for cultivating your crops.'
+      - '&7Cooldown: 30 minutes'
+      - '&7Level Required: &f0'
+      - '&7Includes: &fIron Hoe x1, Wheat Seeds x32, Carrots x16'
+  # Assassin's Kit
+  Assassin:
+    displayName: '&7Assassin Kit'
+    material: 'IRON_SWORD'
+    guiPage: 1
+    slot: 19
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 25
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 21600
+    commands:
+      - 'minecraft:give {name} iron_sword 1'
+      - 'minecraft:give {name} potion_of_invisibility 2'
+      - 'minecraft:give {name} cooked_rabbit 8'
+    lore:
+      - '&7Silent and deadly. Strike from the shadows.'
+      - '&7Cooldown: 6 hours'
+      - '&7Level Required: &f25'
+      - '&7Includes: &fIron Sword x1, Invisibility Potions x2, Cooked Rabbit x8'
+
+  # Treasure Hunter Kit
+  TreasureHunter:
+    displayName: '&6Treasure Hunter Kit'
+    material: 'MAP'
+    guiPage: 1
+    slot: 20
+    enabled: true
+    minimumRequiredType: 'NONE'
+    minimumLevelRequired: 15
+    maximumRequiredType: 'NONE'
+    maximumLevelRequired: 0
+    cooldown: 10800
+    commands:
+      - 'minecraft:give {name} map 1'
+      - 'minecraft:give {name} boat 1'
+      - 'minecraft:give {name} cooked_salmon 8'
+    lore:
+      - '&6Explore the seas for hidden treasures.'
+      - '&7Cooldown: 3 hours'
+      - '&7Level Required: &f15'
+      - '&7Includes: &fTreasure Map x1, Boat x1, Cooked Salmon x8'
+
+# Messages
+doesNotExist: "&cThis kit does not exist!"
+kitGiven: "&aYou have been minecraft:given the &6{kit}&a kit!"
+kitCooldown: "&cYou must wait &e{time}&c before using this kit again."
+kitNoPermission: "&cYou do not have permission to use this kit. Permission needed is &fmythicalraces.kit.{kit}"
+kitNoLevel: "&cYou do not meet the required level to use this kit."
+invalidPlayer: "&cInvalid player name!"
+playerCommand: "&cInvalid command"

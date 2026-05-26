@@ -1,0 +1,195 @@
+machado_ferro:
+  base:
+    material: IRON_AXE
+    name: "<white>ᴍᴀᴄʜᴀᴅᴏ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: AXE
+    description:
+    - "<gray>ᴜᴍ ᴍᴀᴄʜᴀᴅᴏ ᴅᴇ ꜰᴇʀʀᴏ ʀᴏʙᴜsᴛᴏ,</gray>"
+    - "<gray>sɪᴍᴘʟᴇs ᴍᴀs ᴇꜰɪᴄᴀᴢ ᴇᴍ ᴄᴏᴍʙᴀᴛᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 7
+    strength: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_machado_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_ferro"
+            1: "midgard:lingote_ferro"
+            4: "STICK"
+            7: "STICK"
+
+machado_guerra:
+  base:
+    material: IRON_AXE
+    name: "<green>ᴍᴀᴄʜᴀᴅᴏ ᴅᴇ ɢᴜᴇʀʀᴀ</green>"
+    tier: UNCOMMON
+    type: AXE
+    description:
+    - "<gray>ᴜᴍ ᴍᴀᴄʜᴀᴅᴏ ꜰᴏʀᴊᴀᴅᴏ ᴘᴀʀᴀ ᴀ ɢᴜᴇʀʀᴀ,</gray>"
+    - "<gray>sᴜᴀ ʟᴀᴍɪɴᴀ ᴄᴏʀᴛᴀ ᴀᴛʀᴀᴠᴇs ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀs.</gray>"
+    revision-id: 1
+    attack-damage: 13
+    strength: 5
+    armor-penetration: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_machado_guerra:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_aco"
+            1: "midgard:lingote_aco"
+            3: "midgard:lingote_aco"
+            4: "STICK"
+            7: "STICK"
+
+machado_runico:
+  base:
+    material: DIAMOND_AXE
+    name: "<blue>ᴍᴀᴄʜᴀᴅᴏ ʀᴜɴɪᴄᴏ</blue>"
+    tier: RARE
+    type: AXE
+    description:
+    - "<gray>ɢʀᴀᴠᴀᴅᴏ ᴄᴏᴍ ʀᴜɴᴀs ᴅᴇ ꜰᴏɢᴏ ᴀɴᴛɪɢᴀs,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ɢᴏʟᴘᴇ ɪɴᴄᴇɴᴅᴇɪᴀ ᴏ ɪɴɪᴍɪɢᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 21
+    strength: 8
+    armor-penetration: 5
+    fire-damage: 4
+    crafting:
+      enabled: true
+      recipes:
+        craft_machado_runico:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_mithril"
+            1: "midgard:lingote_mithril"
+            3: "midgard:essencia_fogo"
+            4: "STICK"
+            7: "STICK"
+
+machado_berserker:
+  base:
+    material: DIAMOND_AXE
+    name: "<purple>ᴍᴀᴄʜᴀᴅᴏ ʙᴇʀsᴇʀᴋᴇʀ</purple>"
+    tier: EPIC
+    type: AXE
+    description:
+    - "<gray>ᴏ ᴍᴀᴄʜᴀᴅᴏ ᴅᴏs ɢᴜᴇʀʀᴇɪʀᴏs ᴇɴʟᴏᴜǫᴜᴇᴄɪᴅᴏs,</gray>"
+    - "<gray>ᴀʟɪᴍᴇɴᴛᴀ-sᴇ ᴅᴏ sᴀɴɢᴜᴇ ᴅᴏs ɪɴɪᴍɪɢᴏs.</gray>"
+    revision-id: 1
+    attack-damage: 32
+    strength: 13
+    armor-penetration: 8
+    critical-strike-chance: 5
+    lifesteal: 3
+    required-level: 38
+
+alabarda_ferro:
+  base:
+    material: IRON_AXE
+    name: "<white>ᴀʟᴀʙᴀʀᴅᴀ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: HALBERD
+    description:
+    - "<gray>ᴜᴍᴀ ᴀʟᴀʙᴀʀᴅᴀ ᴅᴇ ꜰᴇʀʀᴏ ᴠᴇʀsᴀᴛɪʟ,</gray>"
+    - "<gray>ᴄᴏᴍʙɪɴᴀ ᴀʟᴄᴀɴᴄᴇ ᴇ ᴘᴏᴅᴇʀ ᴅᴇ ᴄᴏʀᴛᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 7
+    strength: 2
+    dexterity: 2
+    two-handed: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_alabarda_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_ferro"
+            3: "midgard:lingote_ferro"
+            4: "STICK"
+            7: "STICK"
+
+alabarda_real:
+  base:
+    material: DIAMOND_AXE
+    name: "<blue>ᴀʟᴀʙᴀʀᴅᴀ ʀᴇᴀʟ</blue>"
+    tier: RARE
+    type: HALBERD
+    description:
+    - "<gray>ᴀ ᴀʟᴀʙᴀʀᴅᴀ ᴅᴀ ɢᴜᴀʀᴅᴀ ʀᴇᴀʟ,</gray>"
+    - "<gray>sɪᴍʙᴏʟᴏ ᴅᴇ ʜᴏɴʀᴀ ᴇ ᴅᴇsᴛʀᴇᴢᴀ ᴇᴍ ʙᴀᴛᴀʟʜᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 20
+    strength: 7
+    dexterity: 5
+    armor-penetration: 4
+    two-handed: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_alabarda_real:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_mithril"
+            3: "midgard:lingote_mithril"
+            4: "midgard:lingote_titanio"
+            7: "STICK"
+
+machado_grande_ferro:
+  base:
+    material: IRON_AXE
+    name: "<white>ᴍᴀᴄʜᴀᴅᴏ ɢʀᴀɴᴅᴇ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: GREATAXE
+    description:
+    - "<gray>ᴜᴍ ᴍᴀᴄʜᴀᴅᴏ ᴇɴᴏʀᴍᴇ ᴅᴇ ꜰᴇʀʀᴏ,</gray>"
+    - "<gray>ᴇxɪɢᴇ ꜰᴏʀᴄᴀ ʙʀᴜᴛᴀ ᴘᴀʀᴀ ᴇᴍᴘᴜɴʜᴀʀ.</gray>"
+    revision-id: 1
+    attack-damage: 8
+    strength: 3
+    two-handed: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_machado_grande_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_ferro"
+            1: "midgard:lingote_ferro"
+            3: "midgard:lingote_ferro"
+            4: "midgard:lingote_ferro"
+            7: "STICK"
+
+machado_grande_brutal:
+  base:
+    material: DIAMOND_AXE
+    name: "<purple>ᴍᴀᴄʜᴀᴅᴏ ɢʀᴀɴᴅᴇ ʙʀᴜᴛᴀʟ</purple>"
+    tier: EPIC
+    type: GREATAXE
+    description:
+    - "<gray>ᴜᴍᴀ ᴀʀᴍᴀ ᴅᴇ ᴅᴇsᴛʀᴜɪᴄᴀᴏ ᴘᴜʀᴀ,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ɢᴏʟᴘᴇ ᴇsᴍᴀɢᴀ ᴀʀᴍᴀᴅᴜʀᴀs ᴄᴏᴍᴏ ᴘᴀᴘᴇʟ.</gray>"
+    revision-id: 1
+    attack-damage: 34
+    strength: 14
+    critical-strike-power: 18
+    armor-penetration: 10
+    two-handed: 1
+    required-level: 40

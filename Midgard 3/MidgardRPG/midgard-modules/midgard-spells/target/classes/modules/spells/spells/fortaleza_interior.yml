@@ -1,0 +1,74 @@
+name: "<blue>ꜰᴏʀᴛᴀʟᴇᴢᴀ ɪɴᴛᴇʀɪᴏʀ</blue>"
+mythic-skill: "FortalezaInterior"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guardiao"
+  level: 5
+
+icon:
+  material: DIAMOND_CHESTPLATE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<blue><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></blue>"
+  - ""
+  - "<gray>ᴀ ꜰᴏʀᴛᴀʟᴇᴢᴀ ɪɴᴛᴇʀɪᴏʀ ᴅᴏ ɢᴜᴀʀᴅɪᴀᴏ</gray>"
+  - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ</gray>"
+  - "<gray>ᴘᴀssɪᴠᴀᴍᴇɴᴛᴇ.</gray>"
+  - ""
+  - "<blue><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></blue>"
+  - ""
+  - "<gray>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ:<blue>{damage_reduction}%</blue>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<blue>ɢᴜᴀʀᴅɪᴀᴏ</blue>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  damage_reduction:
+    base: 3.0
+    per-level: 1.5
+
+milestones:
+  3:
+    visual: "fortress_glow"
+    mechanic-override: "FortalezaInteriorMk2"
+    stat-bonus:
+      defense: 1.0
+  5:
+    visual: "fortress_aura"
+    mechanic-override: "FortalezaInteriorMk3"
+    stat-bonus:
+      defense: 2.0
+
+mastery:
+  attribute-bonus:
+    defense: 5
+
+sounds:
+  cast-start:
+    sound: "item.armor.equip_diamond"
+    volume: 0.6
+    pitch: 1.0
+  cast-finish:
+    sound: "block.anvil.land"
+    volume: 0.5
+    pitch: 1.2
+  cast-fail:
+    sound: "item.shield.break"
+    volume: 0.5
+    pitch: 0.8

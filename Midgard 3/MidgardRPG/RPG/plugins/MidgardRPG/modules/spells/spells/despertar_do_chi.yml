@@ -1,0 +1,83 @@
+name: "<gold>ᴅᴇsᴘᴇʀᴛᴀʀ ᴅᴏ ᴄʜɪ</gold>"
+mythic-skill: "DespertarDoChi"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 55.0
+  per-level: -1.5
+mana:
+  base: 30.0
+  per-level: -0.8
+stamina: 50.0
+
+max-level: 10
+
+requirements:
+  class: "Monge"
+  level: 20
+
+icon:
+  material: NETHER_STAR
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴜʟᴛɪᴍᴀᴛᴇ</bold></gold>"
+  - ""
+  - "<gray>ᴏ ᴍᴏɴɢᴇ ᴅᴇsᴘᴇʀᴛᴀ ᴛᴏᴅᴏ ᴏ ᴘᴏᴅᴇʀ</gray>"
+  - "<gray>ᴅᴇ sᴇᴜ ᴄʜɪ ɪɴᴛᴇʀɪᴏʀ, ᴇɴᴛʀᴀɴᴅᴏ ᴇᴍ</gray>"
+  - "<gray>ᴜᴍ ᴇsᴛᴀᴅᴏ ᴛʀᴀɴsᴄᴇɴᴅᴇɴᴛᴀʟ ᴅᴇ ᴘᴏᴅᴇʀ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ᴀᴛʀɪʙᴜᴛᴏs:<gold>{attribute_bonus}%</gold>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴏɴɢᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>20</yellow>"
+
+variables:
+  damage:
+    base: 55.0
+    per-level: 12.0
+  attribute_bonus:
+    base: 15.0
+    per-level: 3.0
+
+milestones:
+  3:
+    visual: "despertar_chi_aura"
+    mechanic-override: "DespertarDoChiMk2"
+    stat-bonus:
+      strength: 2.0
+  5:
+    visual: "despertar_chi_transcend"
+    mechanic-override: "DespertarDoChiMk3"
+    stat-bonus:
+      dexterity: 3.0
+
+mastery:
+  attribute-bonus:
+    strength: 3
+    dexterity: 2
+
+sounds:
+  cast-start:
+    sound: "entity.ender_dragon.growl"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "entity.lightning_bolt.thunder"
+    volume: 1.0
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

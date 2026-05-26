@@ -1,0 +1,21 @@
+# ============================================
+# MIDGARD CLASSES - GUI: SELEÇÃO DE SPELL
+# ============================================
+# Padrão V2.0 - Oficial
+# ============================================
+
+title: "<white>sᴇʟᴇᴄᴀᴏ ᴅᴇ ᴍᴀɢɪᴀs</white>"
+
+items:
+  click_to_equip: "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇǫᴜɪᴘᴀʀ</gray>"
+
+buttons:
+  back:
+    name: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+    lore:
+      - ""
+      - "<gray>ᴠᴏʟᴛᴀʀ ᴀᴏ ᴍᴇɴᴜ ᴀɴᴛᴇʀɪᴏʀ.</gray>"
+
+messages:
+  equipped_combo: "<green>✔</green> <gray>ᴍᴀɢɪᴀ ᴇǫᴜɪᴘᴀᴅᴀ ɴᴏ ᴄᴏᴍʙᴏ<yellow>%combo%</yellow><gray>.</gray>"
+  equipped_skillbar: "<green>✔</green> <gray>ᴍᴀɢɪᴀ ᴇǫᴜɪᴘᴀᴅᴀ ɴᴏ sʟᴏᴛ<yellow>%slot%</yellow><gray>.</gray>"

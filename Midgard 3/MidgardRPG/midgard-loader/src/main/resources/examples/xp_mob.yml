@@ -1,0 +1,43 @@
+# ==============================================================================
+# EXEMPLO: SISTEMA DE XP PERSONALIZADO (MidgardRPG)
+# ==============================================================================
+# Este arquivo mostra como configurar Mobs para darem quantidades
+# específicas de XP do sistema de níveis do MidgardRPG.
+#
+# REQUISITOS:
+# - MidgardCore
+# - MidgardCombat
+# - MidgardMythicMobs
+# ==============================================================================
+
+ExpGoblin:
+  Type: ZOMBIE
+  Display: '<green>Goblin Saqueador <gray>[Lv. 5]'
+  Health: 50
+  Damage: 5
+  Options:
+    # Desativa o XP vanilla para não confundir
+    ExperienceDrops: false
+  Drops:
+    # Drop personalizado do MidgardRPG
+    # Sintaxe: midgard-xp{amount=VALOR}
+    # ou simplesmente: midgard-xp{a=VALOR}
+    
+    # Este mob dará exatamente 55.5 de XP
+    - midgard-xp{amount=55.5} 1 1
+    
+    # Você também pode adicionar variação usando o sistema de drops do MythicMobs
+    # Ex: 50% de chance de dar XP extra
+    - midgard-xp{a=20} 0.5 
+
+BossTroll:
+  Type: IRON_GOLEM
+  Display: '<red>Troll da Caverna <dark_red>[BOSS]'
+  Health: 500
+  Damage: 25
+  Drops:
+    # Bosses podem dar muito XP
+    - midgard-xp{a=5000} 1 1
+    
+    # E também itens, claro
+    - diamond 5 1

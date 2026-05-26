@@ -1,0 +1,48 @@
+{
+  "slides": [
+    {
+      "tag": "OPERACAO ATIVA",
+      "title": "BLACKOUT<br><span>PROTOCOL</span>",
+      "desc": "// NOVO MAPA - MODO RESGATE - PATCH 2.1.4",
+      "image": ""
+    },
+    {
+      "tag": "TORNEIO SEMANAL",
+      "title": "ARENA<br><span>CHAMPIONSHIP</span>",
+      "desc": "// INSCRICOES ABERTAS - PREMIOS EXCLUSIVOS",
+      "image": ""
+    },
+    {
+      "tag": "ATUALIZACAO",
+      "title": "BUNKER<br><span>DELTA-7</span>",
+      "desc": "// NOVO MAPA COOPERATIVO - MISSOES INEDITAS",
+      "image": ""
+    },
+    {
+      "tag": "NOVO",
+      "title": "Novo Slide<br><span>DESTAQUE</span>",
+      "desc": "// Descricao do slide",
+      "image": ""
+    }
+  ],
+  "news": [
+    {
+      "date": "30 ABR 2026",
+      "title": "Torneio semanal - inscricoes abertas",
+      "badge": "event",
+      "featured": false
+    },
+    {
+      "date": "25 ABR 2026",
+      "title": "Correcao de bugs - estabilidade de servidor",
+      "badge": "fix",
+      "featured": false
+    },
+    {
+      "date": "01 JAN 2026",
+      "title": "Nova noticia",
+      "badge": "new",
+      "featured": false
+    }
+  ]
+}

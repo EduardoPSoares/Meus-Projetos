@@ -1,0 +1,1342 @@
+# ============================================
+# MIDGARD PROFESSIONS MODULE - MESSAGES
+# ============================================
+
+# ============================================
+# PROFESSIONS - SISTEMA BASE
+# ============================================
+professions:
+  # Nomes das profissões (usados em GUIs e mensagens)
+  names:
+    ferreiro: "Ferreiro"
+    agricultor: "Agricultor"
+    arcanista: "Arcanista"
+    carpinteiro: "Carpinteiro"
+    minerador: "Minerador"
+    alquimista: "Alquimista"
+    pescador: "Pescador"
+    cozinheiro: "Cozinheiro"
+    medico: "Médico"
+    cartografo: "Cartógrafo"
+
+  # Descrições curtas
+  descriptions:
+    ferreiro: "<gray>Forja armas, armaduras e ferramentas.</gray>"
+    agricultor: "<gray>Cultiva e colhe plantas raras.</gray>"
+    arcanista: "<gray>Manipula essências mágicas e encantamentos.</gray>"
+    carpinteiro: "<gray>Constrói estruturas e móveis.</gray>"
+    minerador: "<gray>Extrai minérios e gemas preciosas.</gray>"
+    alquimista: "<gray>Prepara poções e elixires.</gray>"
+    pescador: "<gray>Pesca criaturas e tesouros aquáticos.</gray>"
+    cozinheiro: "<gray>Prepara refeições com buffs especiais.</gray>"
+    medico: "<gray>Cura ferimentos e remove debuffs.</gray>"
+    cartografo: "<gray>Mapeia territórios e descobre locais secretos.</gray>"
+
+  # Mensagens gerais
+  level_up: "<gold><bold>🎉 Nível Up!</bold> <white>%profession% Nível %level%</white></gold>"
+  xp_gained: "<gray>+<green>%xp%</green> XP em <white>%profession%</white></gray>"
+  xp_bar: "%symbol% <white>%profession%</white> <gray>Nv.%level%</gray> <green>+%xp% XP</green> <gray>%current%/%max%</gray>"
+  no_profession: "<red>Você não possui essa profissão.</red>"
+  profession_disabled: "<red>Essa profissão está desabilitada.</red>"
+  info:
+    header: "<gold><bold>═══ %profession% ═══</bold></gold>"
+    level: "<gray>Nível: <white>%level%</white></gray>"
+    xp: "<gray>XP: <white>%current% / %max%</white> <gray>(%percent%%)</gray></gray>"
+    bar: "<gray>[%bar%<gray>] <white>%percent%%</white></gray>"
+  list:
+    header: "<gold><bold>═══ Suas Profissões ═══</bold></gold>"
+    entry: "  %symbol% <white>%name%</white> <gray>— Nível <white>%level%</white></gray>"
+    none: "<gray>Você ainda não possui profissões.</gray>"
+
+  # Mensagens do menu de progressão
+  menu:
+    title: "%symbol% %profession% — Página %page%"
+    # Header
+    icon:
+      name: "%gradient%<bold>%symbol% %profession%</bold></gradient>"
+      description_label: "<gray>%description%</gray>"
+      progress_label: "<white>Seu Progresso:</white>"
+      progress_level: "<gray>  Nível: <white>%level%</white><gray>/%max%</gray>"
+      progress_bar: "<gray>  %bar% <white>%percent%%</white>"
+      progress_xp: "<gray>  XP: <white>%current%</white><gray>/<white>%max%</white>"
+      bonuses_label: "<white>Bônus:</white>"
+      abilities_label: "<white>Habilidades:</white>"
+    ranking:
+      title: "<gradient:#facc15:#f59e0b><bold>📊 Ranking da Profissão</bold></gradient>"
+      subtitle: "<gray>Seu Ranking em %profession%:</gray>"
+      position: "<white>  Posição: <yellow>#%position%</yellow></white>"
+      top_percent: "<white>  Top: <yellow>%percent%%</yellow></white>"
+      coming_soon: "<dark_gray>Ranking será implementado em breve.</dark_gray>"
+    xp_sources:
+      title: "<gradient:#06b6d4:#3b82f6><bold>⚡ Fontes de XP</bold></gradient>"
+      header: "<white>Como ganhar XP em %profession%:</white>"
+      entry: "  <green>▸</green> %source%"
+      unavailable: "<gray>  Informações não disponíveis.</gray>"
+      click: "<yellow>Clique para ver detalhes das fontes de XP</yellow>"
+    extra_button:
+      default_name: "<gold><bold>ℹ Informações</bold></gold>"
+      default_lore: "<gray>Informações complementares.</gray>"
+    # Níveis
+    level:
+      name_completed: "%gradient_green%<bold>Nível %level%</bold></gradient>"
+      name_in_progress: "%gradient_gold%<bold>⚡ Nível %level%</bold></gradient>"
+      name_locked: "%gradient_red%<bold>🔒 Nível %level%</bold></gradient>"
+      rewards_label: "<white>Recompensas:</white>"
+      rewards_entry: "  <green>▸ %bonus%</green>"
+      ability_label: "<yellow><bold>Ability Unlock:</bold></yellow>"
+      ability_entry: "  <yellow>%ability%</yellow>"
+      ability_desc: "  <gray>%description%</gray>"
+      perks_label: "<light_purple>Perks:</light_purple>"
+      perks_entry: "  <light_purple>✦ %perk%</light_purple>"
+      progress_label: "<white>Progresso:</white>"
+      progress_bar: "  %bar% <white>%percent%%</white>"
+      progress_xp: "  <gray>XP: <white>%current%</white>/<white>%max%</white></gray>"
+      status_completed: "<gradient:#22c55e:#16a34a><bold>✔ COMPLETO</bold></gradient>"
+      status_in_progress: "<gradient:#facc15:#f59e0b><bold>⚡ EM PROGRESSO</bold></gradient>"
+      status_locked: "<gradient:#ef4444:#dc2626><bold>🔒 BLOQUEADO</bold></gradient>"
+    # Navegação
+    navigation:
+      close_name: "<red><bold>✖ Fechar</bold></red>"
+      close_lore: "<gray>Fechar o menu de profissão</gray>"
+      prev_page_name: "<yellow><bold>← Página Anterior</bold></yellow>"
+      prev_page_lore: "<gray>Ir para página %page%</gray>"
+      next_page_name: "<green><bold>Próxima Página →</bold></green>"
+      next_page_lore: "<gray>Ir para página %page%</gray>"
+
+  # Mensagens do comando
+  command:
+    set_success: "<green>Profissão <white>%profession%</white> de <white>%player%</white> definida para nível <yellow>%level%</yellow>.</green>"
+    addxp_success: "<green>Adicionado <yellow>%xp%</yellow> XP em <white>%profession%</white> para <white>%player%</white>.%levels%</green>"
+    addxp_levels: " <gold>(+%count% nível(is)!)</gold>"
+    player_not_found: "<red>Jogador não encontrado: %name%</red>"
+    invalid_profession: "<red>Profissão inválida: %name%</red>"
+    invalid_number: "<red>Valor numérico inválido: %value%</red>"
+    system_disabled: "<red>Sistema de profissões não inicializado.</red>"
+    players_only: "<red>Apenas jogadores podem abrir menus.</red>"
+    menu_opened: "<green>Menu de <white>%profession%</white> aberto para <white>%player%</white>.</green>"
+    choose_success: "<green>Profissão de <white>%player%</white> definida para %symbol% <white>%profession%</white>.</green>"
+    # Usage
+    usage_set: "<red>Uso: /rpg admin profession set <player> <profissão> <nível></red>"
+    usage_addxp: "<red>Uso: /rpg admin profession addxp <player> <profissão> <xp></red>"
+    usage_info: "<red>Uso: /rpg admin profession info <player> <profissão></red>"
+    usage_menu: "<red>Uso: /rpg admin profession menu <profissão></red>"
+    usage_openmenu: "<red>Uso: /rpg admin profession openmenu <player> <profissão></red>"
+    usage_choose: "<red>Uso: /rpg admin profession choose <player> <profissão></red>"
+    # Info display
+    info_header: "<gold><bold>═══ %symbol% %profession% ═══</bold></gold>"
+    info_player: "<gray>Jogador: <white>%player%</white></gray>"
+    info_level: "<gray>Nível: <white>%level%</white></gray>"
+    info_xp: "<gray>XP: <white>%current%</white>/<white>%max%</white></gray>"
+    # Help
+    help_header: "<gold><bold>═══ Profissões Admin ═══</bold></gold>"
+    help_set: "<yellow>/rpg admin profession set <player> <profissão> <nível></yellow>"
+    help_addxp: "<yellow>/rpg admin profession addxp <player> <profissão> <xp></yellow>"
+    help_info: "<yellow>/rpg admin profession info <player> <profissão></yellow>"
+    help_menu: "<yellow>/rpg admin profession menu <profissão></yellow>"
+    help_openmenu: "<yellow>/rpg admin profession openmenu <player> <profissão></yellow>"
+    help_choose: "<yellow>/rpg admin profession choose <player> <profissão></yellow>"
+    help_professions: "<gray>Profissões: %list%</gray>"
+
+  # ============================================
+  # PENALIDADES PARA NÃO-PROFISSIONAIS
+  # ============================================
+  penalties:
+    # Bloco — drop perdido
+    block_no_drop: "<red>⚠</red> <gray>Sem habilidade de %symbol% <white>%profession%</white> — você perdeu o drop!</gray>"
+    # Bloco — efeito de lentidão
+    block_slow: "<red>⚠</red> <gray>Sem habilidade de %symbol% <white>%profession%</white> — trabalho pesado!</gray>"
+    # Craft — falhou
+    craft_failed: "<red>⚠</red> <gray>Sem habilidade de %symbol% <white>%profession%</white> — craft falhou! Materiais perdidos.</gray>"
+    # Smelt — comida/lingote queimado
+    smelt_failed: "<red>⚠</red> <gray>Sem habilidade de %symbol% <white>%profession%</white> — resultado queimado!</gray>"
+    # Pesca — lixo
+    fish_junk: "<red>⚠</red> <gray>Sem habilidade de %symbol% <white>%profession%</white> — você pescou lixo.</gray>"
+    # Brew — poção falhou
+    brew_failed: "<red>⚠</red> <gray>Sem habilidade de %symbol% <white>%profession%</white> — poção explodiu!</gray>"
+    # Enchant — falhou (perdeu XP)
+    enchant_failed: "<red>⚠</red> <gray>Sem habilidade de %symbol% <white>%profession%</white> — encantamento falhou! XP perdido.</gray>"
+    # Enchant — custo extra
+    enchant_extra_cost: "<red>⚠</red> <gray>Sem habilidade de %symbol% <white>%profession%</white> — custo extra de XP.</gray>"
+
+# ============================================
+# FORGE - COMANDOS DO JOGADOR
+# ============================================
+forge:
+  # Geral
+  no_permission_build: "<red>✖</red> <gray>Sem permissão para construir forjas.</gray>"
+  usage_get: "<red>✖</red> <gray>Use: /rpg forge get <nome_da_forja></gray>"
+  not_found: "<red>✖</red> <gray>Forja não encontrada: <white>%name%</white></gray>"
+  level_insufficient: "<red>✖</red> <gray>Nível insuficiente! Necessário: <white>%level%</white></gray>"
+  blueprint_received: "<green>✔</green> <gray>Projeto de <white>%name%</white> recebido!</gray>"
+  place_instructions: "<gray>Coloque o item no chão para iniciar a construção.</gray>"
+  no_templates: "<gray>Nenhuma forja disponível no momento.</gray>"
+  templates_header: "<gold>Forjas disponíveis:</gold>"
+  template_entry: "  <gray>• <white>%name% <gray>| %tier% <gray>| Nível: <white>%level%</white></gray>"
+  no_build_session: "<red>✖</red> <gray>Você não tem uma sessão de construção ativa.</gray>"
+  rotated: "<green>✔</green> <gray>Projeto rotacionado!</gray>"
+  no_forge_nearby: "<red>✖</red> <gray>Nenhuma forja encontrada por perto! Vá até uma forja para ver receitas.</gray>"
+  session_cancelled: "<yellow>⚠</yellow> <gray>Sessão cancelada.</gray>"
+  no_session: "<gray>Nenhuma sessão ativa.</gray>"
+
+  # Info do jogador
+  info:
+    header: "<gold><bold>═══ Profissão de Ferreiro ═══</bold></gold>"
+    level: "<gray>Nível: <white>%level%</white></gray>"
+    xp: "<gray>XP: <white>%current% / %max%</white></gray>"
+    specialization: "<gray>Especialização: <white>%spec%</white></gray>"
+    items_forged: "<gray>Itens forjados: <white>%count%</white></gray>"
+    forges_count: "<gray>Forjas: <white>%count%</white></gray>"
+
+  # Nível / Progresso
+  level_display:
+    header: "<gold>⚒ Ferreiro Nível <white>%level%</white></gold>"
+    bar: "<gray>[%bar%<gray>] <white>%percent%</white></gray>"
+
+  # Ajuda
+  help:
+    header: "<gold><bold>═══ Comandos da Forja ═══</bold></gold>"
+    get: "<yellow>/rpg forge get <forja> <gray>— Recebe um projeto de forja</gray>"
+    rotate: "<yellow>/rpg forge rotate <gray>— Gira o projeto de construção</gray>"
+    info: "<yellow>/rpg forge info <gray>— Mostra info da profissão</gray>"
+    level: "<yellow>/rpg forge level <gray>— Mostra progresso de nível</gray>"
+    recipes: "<yellow>/rpg forge recipes <gray>— Abre o livro de receitas</gray>"
+    cancel: "<yellow>/rpg forge cancel <gray>— Cancela a sessão atual</gray>"
+
+  # Sessão de forja
+  session:
+    already_active: "<red>Você já está em uma sessão de forja!</red>"
+    in_use: "<red>Esta forja já está em uso por outro jogador!</red>"
+    no_fuel: "<red>A forja precisa de combustível! Clique na forja segurando combustível ou jogue itens na zona de combustível.</red>"
+    missing_materials: "<red>Faltam materiais! Você precisa de <white>%amount%x %material%</white></red>"
+    start_failed: "<red>Não foi possível iniciar a sessão!</red>"
+    started_title: "<gold><bold>⚒ Forja Iniciada!</bold></gold>"
+    started_recipe: "<gray>Receita: <white>%name%</white></gray>"
+    started_fuel: "<gray>Combustível: <white>%fuel%</white></gray>"
+
+  # Aquecimento
+  heating:
+    instruction: "<gray>Clique direito na <white>fornalha</white> <gray>quando a temperatura estiver na <green>zona ideal</green><gray>!</gray>"
+    bossbar_initial: "<red>🔥 Temperatura: <bold>0°C</bold></red>"
+    bossbar_ideal: "<green>🔥 <bold>ZONA IDEAL!</bold> <white>%temp%°C</white> <gray>— Clique na fornalha!</gray></green>"
+    bossbar_warming: "<yellow>🔥 Aquecendo... <white>%temp%°C</white></yellow>"
+    bossbar_overheating: "<red>🔥 <bold>SUPERAQUECENDO!</bold> <white>%temp%°C</white> <gray>— Retire agora!</gray></red>"
+    metal_removed: "<gold>Metal retirado a %temp%°C! Pontuação de aquecimento: <white>%score%</white></gold>"
+
+  # Martelamento
+  hammering:
+    instruction: "<gold>⚒ <bold>Martelamento!</bold> <gray>Clique direito na bigorna quando a barra estiver na <green>zona verde</green><gray>!</gray></gold>"
+    required_strikes: "<gray>Marteladas necessárias: <white>%count%</white></gray>"
+    perfect_actionbar: "<green><bold>PERFEITO!</bold> <white>⚒ %done%/%total%</white></green>"
+    good_actionbar: "<yellow>Bom! <white>⚒ %done%/%total%</white></yellow>"
+    miss_actionbar: "<red>Errou! <white>⚒ %done%/%total%</white></red>"
+    completed: "<gold>⚒ Martelamento concluído! <white>Pontuação: %score%</white></gold>"
+    summary: "<green>Perfeitas: %perfect%</green> <yellow>Boas: %good%</yellow> <red>Erradas: %miss%</red>"
+
+  # Têmpera
+  quenching:
+    instruction: "<aqua>💧 <bold>Têmpera!</bold> <gray>Mergulhe o metal na temperatura ideal.</gray></aqua>"
+
+  # Afiação
+  sharpening:
+    instruction: "<yellow>🔪 <bold>Afiação!</bold> <gray>Clique direito na rebolo repetidamente para manter a pressão na <yellow>zona alvo</yellow><gray>!</gray></yellow>"
+    required_passes: "<gray>Passes necessários: <white>%count%</white></gray>"
+    pass_actionbar: "🔪 Passe %current%/%total% — Pressão: %pressure%"
+    pass_excellent: "<green>Passe %n% excelente! Pontuação: %score%</green>"
+    pass_good: "<yellow>Passe %n% bom! Pontuação: %score%</yellow>"
+    pass_weak: "<red>Passe %n% fraco. Pontuação: %score%</red>"
+    completed: "<yellow>🔪 Afiação concluída! <white>Pontuação: %score%</white></yellow>"
+
+  # Resultado
+  result:
+    title: "<gold><bold>═══ Resultado da Forja ═══</bold></gold>"
+    item: "<gray>Item: <white>%name%</white></gray>"
+    quality: "<gray>Qualidade: %tier%</gray>"
+    score: "<gray>Pontuação: <white>%score%</white></gray>"
+    xp: "<gray>XP ganho: <green>+%xp%</green></gray>"
+    level_up: "<gold><bold>🎉 Nível Up!</bold> <white>Ferreiro Nível %level%</white></gold>"
+    item_received: "<green>Você recebeu: <white>%name% %stars%</white></green>"
+    item_not_found: "<red>Item '%id%' não encontrado no sistema!</red>"
+
+  # Etapas
+  stage:
+    heating_hint: "<gold>🔥 Aqueça o metal na fornalha! Retire no momento certo.</gold>"
+    hammering_hint: "<gold>⚒ Hora de martelar! Acerte nas zonas verdes.</gold>"
+    quenching_hint: "<aqua>💧 Têmpera! Mergulhe o metal na temperatura ideal.</aqua>"
+    sharpening_hint: "<yellow>🔪 Afiação! Mantenha a pressão na zona alvo.</yellow>"
+    finishing_hint: "<light_purple>✨ Finalizando... Calculando qualidade.</light_purple>"
+    completed: "<green>✔ Forja concluída!</green>"
+    failed: "<red>✘ A forja falhou! O metal foi perdido.</red>"
+
+  # Estatísticas
+  stats:
+    title: "<gold><bold>═══ Profissão de Ferreiro ═══</bold></gold>"
+    level: "<gray>Nível: <white>%level%</white></gray>"
+    xp: "<gray>XP: <white>%current% / %max%</white> <gray>(%percent%)</gray></gray>"
+    specialization: "<gray>Especialização: <white>%spec%</white></gray>"
+    items_forged: "<gray>Itens forjados: <white>%count%</white></gray>"
+    legendary_items: "<gray>Itens lendários: <gold>%count%</gold></gray>"
+    best_quality: "<gray>Maior qualidade: <white>%value%</white></gray>"
+    forges_built: "<gray>Forjas construídas: <white>%count%</white></gray>"
+
+  # Construção
+  build:
+    level_insufficient: "<red>✖</red> <gray>Nível insuficiente! Necessário: <white>%level%</white></gray>"
+    max_forges: "<red>Você já tem o máximo de forjas (%max%)!</red>"
+    activated: "<green><bold>✔ Forja ativada!</bold> <gray>Interaja com a mesa de ferreiro para começar.</gray></green>"
+    confirm_hint: "<yellow>Shift + Clique Direito</yellow> <gray>para confirmar a posição e iniciar a construção.</gray>"
+    already_building: "<red>Você já está construindo uma forja!</red>"
+    cannot_destroy_other: "<red>Você não pode destruir a forja de outro jogador!</red>"
+
+  # Combustível
+  fuel:
+    collected: "<gold>🔥 Combustível coletado!</gold> <gray>Estoque: <white>%time%</white></gray>"
+    level_insufficient: "<red>Nível de ferreiro insuficiente para usar <white>%name%</white><red>! Necessário: <white>%level%</white></red>"
+    stock_full: "<red>Estoque de combustível cheio!</red> <gray>(<white>%time%</white>)</gray>"
+    deposited: "<gold>🔥 <white>%amount%x %name%</white> <gold>depositado!</gold> <gray>Estoque: <white>%current%</white> <dark_gray>/ %max%</dark_gray></gray>"
+
+  # Reparo
+  repair:
+    insufficient_materials: "<red>✖</red> <gray>Materiais insuficientes para o reparo!</gray>"
+    success: "<green>✔</green> <gray>Item reparado com sucesso!</gray>"
+
+  # Pesquisa de receitas
+  recipe_search:
+    prompt: "<yellow>🔍 Digite o nome da receita no chat para pesquisar:</yellow>"
+
+  # Ghost blocks (construção com blocos fantasma)
+  ghost:
+    session_expired: "<red>Sessão de construção expirada!</red>"
+    no_space: "<red>Espaço insuficiente para construir a forja aqui!</red>"
+    preview_title: "<gold><bold>⚒ Projeto de %tier%</bold></gold>"
+    preview_hint1: "<gray>Blocos fantasma mostram onde construir.</gray>"
+    preview_hint2: "<yellow>Shift + Clique Direito</yellow> <gray>no chão para confirmar posição.</gray>"
+    preview_hint3: "<yellow>/forge rotacionar</yellow> <gray>para girar o projeto.</gray>"
+    preview_hint4: "<yellow>/forge cancelar</yellow> <gray>para cancelar.</gray>"
+    build_started: "<green><bold>✔ Construção iniciada!</bold></green>"
+    build_hint: "<gray>Coloque os blocos nas posições indicadas.</gray>"
+    next_block: "<gray>Próximo bloco: <white>%name%</white></gray>"
+    layer_complete: "<green>✔ Camada <white>%done%/%total%</white> <green>concluída!</green>"
+    wrong_block: "<red>✘ Bloco incorreto!</red> <gray>Esperado: <white>%name%</white></gray>"
+    rotate_preview_only: "<red>Você só pode rotacionar durante a pré-visualização!</red>"
+    rotate_no_space: "<red>Espaço insuficiente nessa orientação!</red>"
+    rotated: "<green>Projeto rotacionado!</green>"
+    build_complete_title: "<green><bold>⚒ Forja Construída!</bold></green>"
+    build_complete_time: "<gray>Tempo: <white>%min%m %sec%s</white></gray>"
+    build_complete_blocks: "<gray>Blocos colocados: <white>%count%</white></gray>"
+    build_complete_errors: "<gray>Erros: <white>%count%</white></gray>"
+    build_complete_order: "<gray>Em ordem: <white>%perfect%/%total%</white></gray>"
+    hint_actionbar: "<green>✔</green> <gray>Restam <white>%remaining%</white> <gray>blocos | Próximo: <white>%next%</white></gray>"
+
+  # Admin
+  admin:
+    enter_template_name: "<yellow>Digite o nome do template no chat:</yellow>"
+    pos1_set: "<green>Posição 1 definida: <white>%loc%</white></green>"
+    different_worlds: "<red>As duas posições devem estar no mesmo mundo!</red>"
+    pos2_set: "<green>Posição 2 definida: <white>%loc%</white></green>"
+    area_scanned: "<green>Área escaneada! <white>%count% blocos</white> <green>detectados.</green>"
+    missing_blocks_given: "<green>Blocos faltantes entregues!</green> <gray>(%count% tipos)</gray>"
+    enter_new_name: "<yellow>Digite o novo nome do template no chat:</yellow>"
+    template_toggled_on: "<green>Template ativado!</green>"
+    template_toggled_off: "<red>Template desativado!</red>"
+    confirm_delete: "<red>Use Shift + Clique para confirmar a exclusão!</red>"
+    template_deleted: "<red>Template <white>%name%</white> <red>excluído permanentemente!</red>"
+    creation_cancelled: "<red>Criação de template cancelada.</red>"
+    no_active_session: "<red>Você não tem uma sessão de criação ativa.</red>"
+    missing_required_blocks: "<red>O template não tem todos os blocos obrigatórios!</red>"
+    template_created: "<green><bold>✔ Template criado com sucesso!</bold></green>"
+    template_name: "<gray>Nome: <white>%name%</white></gray>"
+    template_id: "<gray>ID: <white>%id%</white></gray>"
+    template_tier: "<gray>Tipo: %tier%</gray>"
+    template_level: "<gray>Nível necessário: <white>%level%</white></gray>"
+    template_dimensions: "<gray>Dimensões: <white>%w%x%h%x%d%</white></gray>"
+    block_entry: "<gray>  • %type%: <white>%count%</white></gray>"
+    name_too_long: "<red>Nome muito longo! Máximo 64 caracteres.</red>"
+    name_set: "<green>Nome definido: <white>%name%</white></green>"
+    template_renamed: "<green>Template renomeado para: <white>%name%</white></green>"
+
+# ============================================
+# FORGE ADMIN - COMANDOS ADMINISTRATIVOS
+# ============================================
+forgeadmin:
+  system_unavailable: "<red>✖</red> <gray>Sistema de forjas não está disponível.</gray>"
+  player_not_found: "<red>✖</red> <gray>Jogador não encontrado.</gray>"
+  creation_unavailable: "<red>✖</red> <gray>Sistema de criação não está disponível.</gray>"
+
+  # List
+  list:
+    header_player: "<gold>Forjas de %player%:</gold>"
+    header_all: "<gold>Todas as forjas (%count%):</gold>"
+    entry: "  <gray>• <white>%id% <gray>| %tier% <gray>| %world% %x%,%y%,%z% <gray>| Dono: <white>%owner%</white></gray>"
+
+  # Remove
+  remove:
+    usage: "<red>✖</red> <gray>Use: /rpg admin forgeadmin remove <forgeId></gray>"
+    not_found: "<red>✖</red> <gray>Forja não encontrada com ID: <white>%id%</white></gray>"
+    success: "<green>✔</green> <gray>Forja removida e blocos limpos: <white>%id%</white></gray>"
+
+  # Set Level
+  setlevel:
+    usage: "<red>✖</red> <gray>Use: /rpg admin forgeadmin setlevel <jogador> <nivel></gray>"
+    invalid_level: "<red>✖</red> <gray>Nível inválido (0-100).</gray>"
+    success: "<green>✔</green> <gray>Nível de <white>%player%</white> definido para <white>%level%</white>.</gray>"
+    notify_player: "<gold>⚒</gold> <gray>Seu nível de ferreiro foi definido para <white>%level%</white> por um admin.</gray>"
+
+  # Reload
+  reload:
+    success: "<green>✔</green> <gray>Receitas de forja recarregadas! <white>%count%</white> receitas.</gray>"
+
+  # Info
+  info:
+    usage: "<red>✖</red> <gray>Use: /rpg admin forgeadmin info <jogador></gray>"
+    header: "<gold><bold>═ Dados de Forja: %player% ═</bold></gold>"
+    level: "<gray>Nível: <white>%level%</white></gray>"
+    xp: "<gray>XP: <white>%current%/%max%</white></gray>"
+    specialization: "<gray>Especialização: <white>%spec%</white></gray>"
+    items_forged: "<gray>Itens forjados: <white>%count%</white></gray>"
+    legendary: "<gray>Lendários: <white>%count%</white></gray>"
+    perfect_strikes: "<gray>Perfeitas: <white>%count%</white></gray>"
+    forges: "<gray>Forjas: <white>%count%</white></gray>"
+    recipes: "<gray>Receitas: <white>%count%</white></gray>"
+
+  # Stats
+  stats:
+    header: "<gold><bold>═ Estatísticas do Sistema ═</bold></gold>"
+    registered: "<gray>Forjas registradas: <white>%count%</white></gray>"
+    active_sessions: "<gray>Sessões ativas: <white>%count%</white></gray>"
+    recipes: "<gray>Receitas: <white>%count%</white></gray>"
+    build_sessions: "<gray>Sessões de construção: <white>%count%</white></gray>"
+
+  # Teleport
+  tp:
+    usage: "<red>✖</red> <gray>Use: /rpg admin forgeadmin tp <forgeId></gray>"
+    not_found: "<red>✖</red> <gray>Forja não encontrada com ID: <white>%id%</white></gray>"
+    world_not_loaded: "<red>✖</red> <gray>Mundo da forja não está carregado: <white>%world%</white></gray>"
+    success: "<green>✔</green> <gray>Teleportado para a forja de <white>%owner%</white> (<white>%id%</white>)</gray>"
+
+  # Forjas (detalhe por jogador)
+  forges:
+    usage: "<red>✖</red> <gray>Use: /rpg admin forgeadmin forges <jogador></gray>"
+    header: "<gold><bold>═ Forjas de %player% (%count%) ═</bold></gold>"
+    none: "  <gray>Nenhuma forja encontrada.</gray>"
+    entry_name: "  <gold>▸ %name% <gray>(%id%)</gray></gold>"
+    entry_tier: "    <gray>Tier: <white>%tier%</white> <gray>| Status: %status%</gray>"
+    entry_location: "    <gray>Local: <white>%world% %x%, %y%, %z%</white></gray>"
+    entry_stats: "    <gray>Itens forjados: <white>%items%</white> <gray>| Rotação: <white>%rotation%</white></gray>"
+    entry_commands: "    <gray>Comandos: <yellow>/forgeadmin tp %id%</yellow> <gray>| <yellow>/forgeadmin toggle %id%</yellow> <gray>| <yellow>/forgeadmin remove %id%</yellow></gray>"
+    status_active: "<green>Ativa</green>"
+    status_inactive: "<red>Inativa</red>"
+
+  # Toggle
+  toggle:
+    usage: "<red>✖</red> <gray>Use: /rpg admin forgeadmin toggle <forgeId></gray>"
+    not_found: "<red>✖</red> <gray>Forja não encontrada com ID: <white>%id%</white></gray>"
+    success: "<green>✔</green> <gray>Forja de <white>%owner%</white> (<white>%id%</white>) foi %status%<gray>.</gray>"
+    activated: "<green>ativada</green>"
+    deactivated: "<red>desativada</red>"
+
+  # Rename
+  rename:
+    usage: "<red>✖</red> <gray>Use: /rpg admin forgeadmin rename <forgeId> <novo nome></gray>"
+    not_found: "<red>✖</red> <gray>Forja não encontrada com ID: <white>%id%</white></gray>"
+    success: "<green>✔</green> <gray>Forja renomeada de <white>%old%</white> para <white>%new%</white>.</gray>"
+
+  # Give
+  give:
+    usage: "<red>✖</red> <gray>Use: /rpg admin forgeadmin give [jogador] <nome_da_forja></gray>"
+    not_found: "<red>✖</red> <gray>Forja não encontrada: <white>%name%</white></gray>"
+    success: "<green>✔</green> <gray>Projeto de <white>%name%</white> entregue a <white>%player%</white>!</gray>"
+    notify_player: "<gold>⚒</gold> <gray>Você recebeu um projeto de forja: <white>%name%</white></gray>"
+    no_templates: "  <gray>Nenhum template criado ainda.</gray>"
+    templates_header: "<gold>Forjas disponíveis:</gold>"
+
+  # Ajuda Admin
+  help:
+    header: "<gold><bold>═══ Forge Admin ═══</bold></gold>"
+    list: "<yellow>/forgeadmin list [jogador] <gray>— Lista forjas</gray>"
+    forges: "<yellow>/forgeadmin forges <jogador> <gray>— Detalhes das forjas de um jogador</gray>"
+    remove: "<yellow>/forgeadmin remove <id> <gray>— Remove uma forja (limpa blocos)</gray>"
+    tp: "<yellow>/forgeadmin tp <id> <gray>— Teleporta para uma forja</gray>"
+    toggle: "<yellow>/forgeadmin toggle <id> <gray>— Ativa/desativa uma forja</gray>"
+    rename: "<yellow>/forgeadmin rename <id> <nome> <gray>— Renomeia uma forja</gray>"
+    setlevel: "<yellow>/forgeadmin setlevel <jogador> <nivel> <gray>— Define nível</gray>"
+    info: "<yellow>/forgeadmin info <jogador> <gray>— Info de um jogador</gray>"
+    stats: "<yellow>/forgeadmin stats <gray>— Estatísticas do sistema</gray>"
+    reload: "<yellow>/forgeadmin reload <gray>— Recarrega receitas</gray>"
+    create: "<yellow>/forgeadmin create <gray>— Abrir painel de criação de forja</gray>"
+    cancelcreate: "<yellow>/forgeadmin cancelcreate <gray>— Cancelar criação</gray>"
+    give: "<yellow>/forgeadmin give [jogador] <forja> <gray>— Dar projeto de forja</gray>"
+    panel: "<yellow>/forgeadmin panel <gray>— Painel de gerenciamento de forjas</gray>"
+
+# ============================================
+# SMELTERY - COMANDOS ADMINISTRATIVOS
+# ============================================
+smeltery:
+  system_unavailable: "<red>✖</red> <gray>Sistema de fundição não disponível.</gray>"
+  no_smeltery_nearby: "<red>✖</red> <gray>Nenhuma smeltery por perto.</gray>"
+  specify_id_or_nearby: "<red>✖</red> <gray>Especifique o ID ou fique perto de uma smeltery.</gray>"
+  not_found: "<red>✖</red> <gray>Smeltery não encontrada com ID: <white>%id%</white></gray>"
+  player_not_found: "<red>✖</red> <gray>Jogador não encontrado: <white>%name%</white></gray>"
+  no_build_session: "<red>✖</red> <gray>Você não tem uma sessão de construção ativa.</gray>"
+  build_cancelled: "<red>✔</red> <gray>Sessão de construção de fundição cancelada.</gray>"
+
+  # List
+  list:
+    header: "<gold><bold>═ Smelteries Registradas (%count%) ═</bold></gold>"
+    none: "<gray>  Nenhuma smeltery registrada.</gray>"
+    entry: "  <gray>• <white>%id% <gray>| %tier% <gray>| %world% %x%,%y%,%z% <gray>| <white>%volume%/%capacity%mb <gray>| Dono: <white>%owner%</white></gray>"
+
+  # Info
+  info:
+    header: "<gold><bold>═ Smeltery Info ═</bold></gold>"
+    id: "<gray>ID: <white>%id%</white></gray>"
+    tier: "<gray>Tier: <white>%tier%</white></gray>"
+    position: "<gray>Posição: <white>%world% %x%,%y%,%z%</white></gray>"
+    active_yes: "<gray>Ativa: <green>Sim</green></gray>"
+    active_no: "<gray>Ativa: <red>Não</red></gray>"
+    heated_yes: "<gray>Aquecida: <red>🔥 Sim</red></gray>"
+    heated_no: "<gray>Aquecida: <blue>❄ Não</blue></gray>"
+    temperature: "<gray>Temperatura: <white>%temp%°C</white></gray>"
+    fuel: "<gray>Fuel restante: <white>%fuel% ticks</white></gray>"
+    tank: "<gray>Tanque: <white>%volume%/%capacity%mb</white></gray>"
+    metals_header: "<gray>Metais fundidos:</gray>"
+    metal_entry: "  %metal% <gray>%amount%mb</gray>"
+    queue_header: "<gray>Fila de fundição (%count%):</gray>"
+    queue_entry: "  <gray>• %metal% <gray>%remaining%x %progress%</gray>"
+    items_smelted: "<gray>Itens fundidos (total): <white>%count%</white></gray>"
+
+  # Remove
+  remove:
+    success: "<green>✔</green> <gray>Smeltery removida: <white>%id%</white></gray>"
+
+  # Detect
+  detect:
+    success: "<green>✔</green> <gray>Smeltery detectada e registrada!</gray>"
+    tier: "<gray>Tier: <white>%tier%</white></gray>"
+    id: "<gray>ID: <white>%id%</white></gray>"
+    not_found: "<red>✖</red> <gray>Nenhuma smeltery válida encontrada no bloco alvo.</gray>"
+
+  # Give Ingot
+  giveingot:
+    usage: "<red>✖</red> <gray>Use: /rpg admin smeltery giveingot [jogador] <metal> [quantidade]</gray>"
+    metals_header: "<gold>Metais disponíveis:</gold>"
+    metal_entry: "  <gray>• <white>%name% <gray>— %formatted% %alloy%</gray>"
+    alloy_tag: "<gold>⚗ Liga</gold>"
+    invalid_metal: "<red>✖</red> <gray>Metal inválido: <white>%name%</white></gray>"
+    success: "<green>✔</green> <gray>%amount%x Lingote de %metal% entregue a <white>%player%</white></gray>"
+
+  # Stats
+  stats:
+    header: "<gold><bold>═ Estatísticas da Fundição ═</bold></gold>"
+    registered: "<gray>Smelteries registradas: <white>%count%</white></gray>"
+    active: "<gray>Ativas: <white>%count%</white></gray>"
+    heated: "<gray>Aquecidas: <white>%count%</white></gray>"
+    total_metal: "<gray>Metal total fundido: <white>%amount%mb</white></gray>"
+    total_fuel: "<gray>Fuel total restante: <white>%amount% ticks</white></gray>"
+    metals_available: "<gray>Metais disponíveis: <white>%count%</white></gray>"
+    alloy_recipes: "<gray>Receitas de liga: <white>%count%</white></gray>"
+
+  # Add Fuel
+  addfuel:
+    success: "<green>✔</green> <gray>Fuel adicionado: <white>%ticks%</white> ticks (<white>%seconds%s</white>) à smeltery mais próxima.</gray>"
+
+  # Add Metal
+  addmetal:
+    usage: "<red>✖</red> <gray>Use: /rpg admin smeltery addmetal <metal> [quantidade_mb]</gray>"
+    invalid_metal: "<red>✖</red> <gray>Metal inválido: <white>%name%</white></gray>"
+    success: "<green>✔</green> <gray>Adicionado <white>%amount%mb</white> de %metal% ao tanque.</gray>"
+
+  # Templates
+  templates:
+    unavailable: "<red>✖</red> <gray>Sistema de templates de fundição não disponível.</gray>"
+
+  # Give Blueprint
+  giveblueprint:
+    usage_tier: "<red>✖</red> <gray>Use: /rpg admin smeltery giveblueprint [jogador] <tier></gray>"
+    usage_template: "<red>✖</red> <gray>Use: /rpg admin smeltery giveblueprint [jogador] <nome_ou_indice></gray>"
+    tiers: "<gold>Tiers: %tiers%</gold>"
+    invalid_tier: "<red>✖</red> <gray>Tier inválido: <white>%name%</white></gray>"
+    templates_header: "<gold>Templates disponíveis:</gold>"
+    template_entry: "  <gray>%index%. <white>%name% %tier%</gray>"
+    not_found: "<red>✖</red> <gray>Template ou tier não encontrado: <white>%name%</white></gray>"
+    success_tier: "<green>✔</green> <gray>Blueprint de fundição %tier% entregue a <white>%player%</white></gray>"
+    success_template: "<green>✔</green> <gray>Blueprint <white>%name%</white> entregue a <white>%player%</white></gray>"
+
+  # Ajuda
+  help:
+    header: "<gold><bold>═══ Fundição Admin ═══</bold></gold>"
+    list: "<yellow>/smeltery list <gray>— Lista smelteries</gray>"
+    info: "<yellow>/smeltery info <id> <gray>— Detalhes de uma smeltery</gray>"
+    remove: "<yellow>/smeltery remove <id> <gray>— Remove smeltery</gray>"
+    detect: "<yellow>/smeltery detect <gray>— Detecta smeltery no bloco alvo</gray>"
+    giveingot: "<yellow>/smeltery giveingot [jogador] <metal> [qtd] <gray>— Dá lingote</gray>"
+    stats: "<yellow>/smeltery stats <gray>— Estatísticas gerais</gray>"
+    addfuel: "<yellow>/smeltery addfuel [ticks] <gray>— Adiciona fuel à smeltery próxima</gray>"
+    addmetal: "<yellow>/smeltery addmetal <metal> [mb] <gray>— Adiciona metal ao tanque</gray>"
+    templates: "<yellow>/smeltery templates <gray>— Painel de templates de fundição</gray>"
+    create: "<yellow>/smeltery create <gray>— Iniciar criação de template</gray>"
+    cancelcreate: "<yellow>/smeltery cancelcreate <gray>— Cancelar criação de template</gray>"
+    giveblueprint: "<yellow>/smeltery giveblueprint [jogador] <tier|nome> <gray>— Dá blueprint</gray>"
+    rotate: "<yellow>/smeltery rotate <gray>— Rotaciona projeto de construção</gray>"
+    cancelbuild: "<yellow>/smeltery cancelbuild <gray>— Cancela construção</gray>"
+
+  # Gameplay
+  input:
+    invalid_item: "<red>Este item não pode ser fundido!</red>"
+    temp_too_low: "<red>A fundição precisa estar a pelo menos <white>%temp%°C</white> <red>para fundir este material!</red> <gray>(Atual: %current%°C)</gray>"
+    tank_full: "<red>O tanque não tem espaço suficiente!</red> <gray>(Necessário: %needed%mb, Livre: %free%mb)</gray>"
+    smelting_started: "<gold>🔥 Fundindo: <white>%amount%x %name%</white></gold>"
+    smelting_time: "<gray>Tempo estimado: <white>%time%s</white></gray>"
+  fuel:
+    invalid: "<red>Este item não é combustível válido para a fundição!</red>"
+    added: "<gold>🔥 Combustível adicionado!</gold> <gray>+%seconds%s de calor</gray>"
+    temperature: "<gray>Temperatura: <white>%temp%°C</white></gray>"
+  drain:
+    tank_empty: "<red>O tanque está vazio!</red>"
+    gui_title: "<gold><bold>⬇ Selecionar Metal</bold></gold>"
+    insufficient_metal: "<red>Metal insuficiente! Necessário: %needed%mb, Disponível: %available%mb</red>"
+    no_casting_block: "<red>Nenhum(a) %block% encontrado(a) ao lado do dreno!</red>"
+    poured: "<gold>⬇ %metal%</gold> <gray>→ %output%</gray> <gray>(%amount%mb)</gray>"
+    tank_emptied: "<gray>O tanque esvaziou.</gray>"
+  autopour:
+    disabled: "<gray>⏹ Despejo automático desativado.</gray>"
+    enabled: "<gold>▶ Despejo automático ativado!</gold> <gray>Metal dominante será despejado continuamente.</gray>"
+  smelting:
+    produced_actionbar: "<gold>⚗ %metal%</gold> <gray>+%amount%mb</gray>"
+  output:
+    ingot_name: "%color%Lingote de %name%"
+    hardness: "<gray>Dureza: <white>%value%</white></gray>"
+    alloy_lore: "<dark_gray>Liga da Fundição</dark_gray>"
+    use_in_forge: "<dark_gray>Use na Forja para criar itens</dark_gray>"
+    block_name: "%color%Bloco de %name%"
+    alloy_block_lore: "<dark_gray>Bloco de Liga</dark_gray>"
+  alloy:
+    gui_title: "<gold><bold>📖 Livro de Ligas</bold></gold>"
+    temp_insufficient: "<red>Temperatura insuficiente! Necessário: <white>%temp%°C</white> <red>| Atual: <white>%current%°C</white></red>"
+    invalid_metal: "<red>Metal inválido na receita: <white>%name%</white></red>"
+    insufficient_metal: "<red>Metal insuficiente! %metal% <red>— Necessário: <white>%needed%mb</white> <red>| Disponível: <white>%available%mb</white></red>"
+    crafted: "<gold>⚗ Fabricado: <white>%amount%x %item%</white> <gray>via fundição!</gray></gold>"
+  gui:
+    title: "<dark_red><bold>⚗ %name%</bold></dark_red>"
+    input_hint: "<yellow>Pegue um item do seu inventário e clique aqui para inseri-lo na fundição.</yellow>"
+    no_drain: "<red>Nenhum dreno encontrado na smeltery!</red>"
+
+  # Construção
+  build:
+    confirm_hint: "<yellow>Shift + Clique Direito</yellow> <gray>para confirmar a posição e iniciar a construção.</gray>"
+    already_building: "<red>Você já está construindo uma fundição!</red>"
+    cannot_destroy_other: "<red>Você não pode destruir a fundição de outro jogador!</red>"
+
+  # Ghost blocks
+  ghost:
+    session_expired: "<red>Sessão de construção de fundição expirada!</red>"
+    no_space: "<red>Espaço insuficiente para construir a fundição aqui!</red>"
+    preview_title: "<gold><bold>⚗ Projeto de %tier%</bold></gold>"
+    preview_hint1: "<gray>Blocos fantasma mostram onde construir.</gray>"
+    preview_hint2: "<yellow>Shift + Clique Direito</yellow> <gray>no chão para confirmar posição.</gray>"
+    preview_hint3: "<yellow>/rpg admin smeltery rotacionar</yellow> <gray>para girar o projeto.</gray>"
+    preview_hint4: "<yellow>/rpg admin smeltery cancelarconstrucao</yellow> <gray>para cancelar.</gray>"
+    build_started: "<green><bold>✔ Construção da fundição iniciada!</bold></green>"
+    build_hint: "<gray>Coloque os blocos nas posições indicadas.</gray>"
+    next_block: "<gray>Próximo bloco: <white>%name%</white></gray>"
+    layer_complete: "<green>✔ Camada <white>%done%/%total%</white> <green>concluída!</green>"
+    wrong_block: "<red>✘ Bloco incorreto!</red> <gray>Esperado: <white>%name%</white></gray>"
+    rotate_preview_only: "<red>Você só pode rotacionar durante a pré-visualização!</red>"
+    rotate_no_space: "<red>Espaço insuficiente nessa orientação!</red>"
+    rotated: "<green>Projeto rotacionado!</green>"
+    build_complete_title: "<green><bold>⚗ Fundição Construída!</bold></green>"
+    build_complete_time: "<gray>Tempo: <white>%min%m %sec%s</white></gray>"
+    build_complete_blocks: "<gray>Blocos colocados: <white>%count%</white></gray>"
+    build_complete_errors: "<gray>Erros: <white>%count%</white></gray>"
+    build_complete_order: "<gray>Em ordem: <white>%perfect%/%total%</white></gray>"
+    hint_actionbar: "<green>✔</green> <gray>Restam <white>%remaining%</white> <gray>blocos | Próximo: <white>%next%</white></gray>"
+
+  # Admin
+  admin:
+    enter_template_name: "<yellow>Digite o nome do template no chat:</yellow>"
+    pos1_set: "<green>Posição 1 definida: <white>%loc%</white></green>"
+    different_worlds: "<red>As duas posições devem estar no mesmo mundo!</red>"
+    pos2_set: "<green>Posição 2 definida: <white>%loc%</white></green>"
+    area_scanned: "<green>Área escaneada! <white>%count% blocos</white> <green>detectados.</green>"
+    missing_blocks_given: "<green>Blocos faltantes entregues!</green> <gray>(%count% tipos)</gray>"
+    enter_new_name: "<yellow>Digite o novo nome do template no chat:</yellow>"
+    template_toggled_on: "<green>Template ativado!</green>"
+    template_toggled_off: "<red>Template desativado!</red>"
+    confirm_delete: "<red>Use Shift + Clique para confirmar a exclusão!</red>"
+    template_deleted: "<red>Template <white>%name%</white> <red>excluído permanentemente!</red>"
+    creation_cancelled: "<red>Criação de template de fundição cancelada.</red>"
+    no_active_session: "<red>Você não tem uma sessão de criação ativa.</red>"
+    missing_required_blocks: "<red>O template não tem todos os blocos obrigatórios!</red>"
+    template_created: "<green><bold>✔ Template de fundição criado com sucesso!</bold></green>"
+    template_name: "<gray>Nome: <white>%name%</white></gray>"
+    template_id: "<gray>ID: <white>%id%</white></gray>"
+    template_tier: "<gray>Tipo: %tier%</gray>"
+    template_level: "<gray>Nível necessário: <white>%level%</white></gray>"
+    template_dimensions: "<gray>Dimensões: <white>%w%x%h%x%d%</white></gray>"
+    block_entry: "<gray>  • %type%: <white>%count%</white></gray>"
+    name_too_long: "<red>Nome muito longo! Máximo 64 caracteres.</red>"
+    name_set: "<green>Nome definido: <white>%name%</white></green>"
+    template_renamed: "<green>Template renomeado para: <white>%name%</white></green>"
+
+# ============================================
+# COMMAND DESCRIPTIONS
+# ============================================
+command:
+  forge_description: "Comandos do sistema de forja"
+  forgeadmin_description: "Comandos administrativos do sistema de forja"
+  smeltery_description: "Comandos administrativos do sistema de fundição"
+
+# ============================================
+# ENUMS — DISPLAY NAMES
+# ============================================
+forge_stage:
+  selecting: "Selecionando Receita"
+  preparing: "Preparando Materiais"
+  heating: "Aquecendo Metal"
+  hammering: "Martelando"
+  quenching: "Temperando"
+  sharpening: "Afiando"
+  finalizing: "Finalizando"
+  completed: "Concluído"
+  failed: "Falhou"
+  expired: "Expirado"
+
+quality_tier:
+  defective: "Defeituoso"
+  inferior: "Inferior"
+  common: "Comum"
+  superior: "Superior"
+  exceptional: "Excepcional"
+  masterpiece: "Obra-Prima"
+  legendary: "Lendário"
+
+molten_metal:
+  iron: "Ferro Fundido"
+  gold: "Ouro Fundido"
+  copper: "Cobre Fundido"
+  netherite_scrap: "Netherite Fundido"
+  emerald: "Esmeralda Fundida"
+  diamond: "Diamante Fundido"
+  amethyst: "Ametista Fundida"
+  quartz: "Quartzo Fundido"
+  lapis: "Lápis Fundido"
+  redstone: "Redstone Fundida"
+  bronze: "Bronze Fundido"
+  steel: "Aço Fundido"
+  manyullyn: "Manyullyn Fundido"
+  obsidian_alloy: "Obsidiana Forjada"
+  rose_gold: "Ouro Rosa Fundido"
+  electrum: "Electrum Fundido"
+  knightslime: "Knightslime Fundido"
+
+smeltery_tier:
+  small: "Fundição Pequena"
+  medium: "Fundição Média"
+  large: "Fundição Grande"
+  master: "Fundição de Mestre"
+  legendary: "Fundição Lendária"
+
+# ============================================
+# DISPLAY — SCOREBOARD / HOLOGRAM
+# ============================================
+display:
+  scoreboard:
+    title: "⚒ Forja"
+    recipe: "Receita:"
+    stage: "Etapa:"
+    scores_header: "📊 Pontuações"
+    heating: "🔥 Aquecimento:"
+    hammering: "⚒ Martelamento:"
+    quenching: "💧 Têmpera:"
+    sharpening: "🔪 Afiação:"
+    quality_header: "✨ Qualidade"
+    estimate: "Estimativa:"
+  hologram:
+    heating: "Aqueça o metal"
+    hammering: "Martele na zona verde"
+    quenching: "Mergulhe no momento certo"
+    sharpening: "Mantenha a pressão"
+    finalizing: "Finalizando..."
+
+# ============================================
+# MINIGAMES — BOSSBAR / ACTIONBAR
+# ============================================
+minigame:
+  quenching:
+    start_bossbar: "<red>🔥 Temperatura: <bold>MÁXIMA</bold> <gray>— Clique direito no caldeirão no momento certo!"
+    result_perfect: "<green><bold>PERFEITO!</bold> Temperatura ideal! Pontuação: %score%"
+    result_good: "<yellow>Bom mergulho! Pontuação: %score%"
+    result_too_hot: "<red>Temperatura muito alta! Pontuação: %score%"
+    result_too_cold: "<red>Temperatura muito baixa! Pontuação: %score%"
+    reheated: "<gold>Metal reaquecido! Mergulhos restantes: %remaining%"
+    completed: "<aqua>Têmpera concluída! Pontuação final: %score%"
+    zone_perfect: "<green>🔥 <bold>ZONA PERFEITA!</bold> <white>Mergulhe agora!"
+    zone_ideal: "<yellow>🔥 Zona Ideal <gray>— Bom momento para mergulhar"
+    zone_too_hot: "<red>🔥 Muito quente! <gray>Espere esfriar..."
+    zone_cold: "<blue>❄ Esfriando... <gray>Temperatura baixa"
+  sharpening:
+    in_zone: "<green>EM ZONA!"
+    out_zone: "<red>Fora da zona"
+    bar_in_zone: "<green><bold>✓ EM ZONA</bold>"
+    bar_out_zone: "<red>✗ Fora"
+    bar_title: "<yellow>🔪 Afiação"
+    bar_pass: "Passe"
+    bar_average: "Média:"
+  hammering:
+    bar_perfect: "<green><bold>★ PERFEITO ★</bold>"
+    bar_good: "<yellow>◆ BOM ◆"
+    bar_miss: "<gray>— Martelar! —"
+    bar_title: "<gold>⚒ Martelamento"
+
+# ============================================
+# BLUEPRINTS / OUTPUT ITEMS
+# ============================================
+forge.blueprint:
+  description: "Projeto de construção de forja."
+  place_line1: "Coloque no chão para iniciar a"
+  place_line2: "sessão de construção."
+  required_level: "Nível necessário:"
+  size: "Tamanho:"
+  click_to_build: "▶ Clique direito no chão para construir"
+
+smeltery.output:
+  ingot_prefix: "Lingote de "
+  hardness: "Dureza:"
+  alloy_label: "Liga da Fundição"
+  use_in_forge: "Use na Forja para criar itens"
+  block_prefix: "Bloco de "
+  alloy_block_label: "Bloco de Liga"
+
+smeltery.blueprint:
+  description: "Projeto de construção de fundição."
+  place_line1: "Coloque no chão para iniciar a"
+  place_line2: "sessão de construção."
+  required_level: "Nível necessário:"
+  size: "Tamanho:"
+  click_to_build: "▶ Clique direito no chão para construir"
+
+smeltery.bossbar:
+  smelting_count: "Fundindo: %count% itens"
+
+smeltery.alloy:
+  formed: "<gold>⚗ Liga formada: %metal% <gray>(%amount%mb)"
+
+# ============================================
+# GHOST BLOCK SESSIONS
+# ============================================
+forge.ghost:
+  confirm_position: "Confirme a posição (Shift+Clique direito)"
+  building: "Construindo"
+  blocks: "blocos"
+  layer: "Camada"
+
+smeltery.ghost_session:
+  confirm_position: "Confirme a posição (Shift+Clique direito)"
+  building: "Construindo"
+  blocks: "blocos"
+  layer: "Camada"
+
+# ============================================
+# GUI — PLAYER-FACING
+# ============================================
+gui:
+  forge_main:
+    title: "<dark_gray>⚒ Forja — "
+    fuel_none: "Nenhum"
+    forge_level: "<gray>Nível da forja: <white>"
+    items_forged: "<gray>Itens forjados: <white>"
+    owner: "<gray>Dono: <white>"
+    dimension: "<gray>Dimensão: <white>"
+    fuel_name: "<gold>✨ Combustível"
+    fuel_type: "<gray>Tipo: <white>"
+    fuel_stock: "<gray>Estoque: "
+    fuel_deposit_1: "<gray>Clique na forja segurando"
+    fuel_deposit_2: "<gray>combustível para depositar."
+    recipe_book: "<green>📖 Livro de Receitas"
+    recipe_book_lore1: "<gray>Veja todas as receitas"
+    recipe_book_lore2: "<gray>disponíveis para seu nível."
+    recipe_book_click: "<yellow>Clique para abrir!"
+    start_forging: "<gold>⚒ Começar a Forjar"
+    start_forging_unavailable: "<red>⚒ Forja Indisponível"
+    start_forging_lore: "<gray>Selecione uma receita e\n<gray>comece a forjar um item!"
+    start_forging_unavailable_lore: "<gray>Você precisa de nível 1\n<gray>na profissão de ferreiro."
+    start_forging_click: "<yellow>Clique para iniciar!"
+    start_forging_unavailable_click: "<red>Nível insuficiente."
+    repair: "<yellow>🔧 Reparar Item"
+    repair_lore1: "<gray>Repare itens danificados"
+    repair_lore2: "<gray>usando materiais."
+    repair_click: "<yellow>Clique para abrir!"
+    profession: "<aqua>📊 Profissão de Ferreiro"
+    profession_level: "<gray>Nível: <white>"
+    profession_lore1: "<gray>Veja seu progresso e"
+    profession_lore2: "<gray>especializações."
+    profession_click: "<yellow>Clique para detalhes!"
+    upgrades: "<light_purple>⬆ Melhorias da Forja"
+    upgrades_lore1: "<gray>Veja a progressão de tiers"
+    upgrades_lore2: "<gray>e requisitos de melhoria."
+    upgrades_click: "<yellow>Clique para ver!"
+    settings: "<white>⚙ Configurações"
+    settings_lore1: "<gray>Ajuste as configurações"
+    settings_lore2: "<gray>da sua forja."
+    settings_click: "<yellow>Clique para abrir!"
+    close: "<red>Fechar"
+
+  forge_settings:
+    title: "<dark_gray>⚙ Configurações da Forja"
+    toggle_active: "<green>✔ Forja Ativa"
+    toggle_inactive: "<red>✘ Forja Desativada"
+    toggle_lore1: "<gray>Quando desativada, a forja"
+    toggle_lore2: "<gray>não pode ser utilizada."
+    toggle_activate: "<yellow>Clique para ativar"
+    toggle_deactivate: "<yellow>Clique para desativar"
+    rename: "<gold>Renomear Forja"
+    rename_current: "<gray>Nome atual: <white>"
+    rename_command: "<gray>Use o comando:"
+    rename_usage: "<yellow>/rpg forge rename <nome>"
+    info: "<aqua>Informações"
+    info_tier: "<gray>Tier: <white>"
+    info_items_forged: "<gray>Itens Forjados: <white>"
+    info_owner: "<gray>Dono: <white>"
+    info_world: "<gray>Mundo: <white>"
+    back: "<yellow>← Voltar"
+
+  repair:
+    title: "<dark_gray>🔧 Reparar Item"
+    cost_title: "<gray>Custo de Reparo"
+    place_item_line1: "<gray>Coloque um item danificado"
+    place_item_line2: "<gray>no slot à esquerda."
+    no_item: "<red>Sem item para reparar"
+    back: "<yellow>← Voltar"
+    not_damaged: "<yellow>Item não está danificado"
+    full_durability: "<gray>Este item está com durabilidade total."
+    no_repair_needed: "<red>Item não precisa de reparo"
+    not_repairable: "<red>Item não reparável"
+    not_repairable_lore1: "<gray>Este item não pode ser"
+    not_repairable_lore2: "<gray>reparado na forja."
+    cost_title_active: "<gold>Custo de Reparo"
+    material_label: "<gray>Material: <white>"
+    required_label: "<gray>Necessário: <white>"
+    available_label: "<gray>Disponível: "
+    durability_label: "<gray>Durabilidade: <red>"
+    confirm: "<green>✔ Confirmar Reparo"
+    cost_label: "<gray>Custo: <white>"
+    click_to_repair: "<yellow>Clique para reparar!"
+    insufficient: "<red>✘ Materiais Insuficientes"
+    missing_prefix: "<gray>Faltam <red>"
+
+  recipe_book:
+    title: "<dark_gray>📖 Livro de Receitas"
+    all: "Todas"
+    spec_label: "<gold>⚒ Especialização: <white>"
+    click_change_filter: "<gray>Clique para trocar filtro."
+    search_title: "<gold>🔍 Pesquisar"
+    filter_active: "<gray>Filtro ativo: <yellow>"
+    shift_click_clear: "<gray>Shift+Clique para limpar."
+    click_to_search: "<gray>Clique para buscar por nome."
+    craftable_on: "<green>✔ Apenas Fabricáveis"
+    craftable_off: "<gray>✘ Mostrando Todas"
+    toggle_show_all: "<gray>Clique para mostrar todas."
+    toggle_filter_craftable: "<gray>Clique para filtrar fabricáveis."
+    level_label: "<gray>Nível: "
+    forge_label: "<gray>Forja: "
+    materials_label: "<gold>Materiais:"
+    difficulty_label: "<gray>Dificuldade: <white>"
+    xp_base_label: "<gray>XP Base: <white>"
+    specialization_label: "<gray>Especialização: <white>"
+    click_to_select: "<yellow>Clique para selecionar!"
+    requirements_not_met: "<red>Requisitos não atendidos."
+
+  upgrade:
+    title: "<dark_gray>⬆ Melhorias da Forja"
+    current_tier_label: "<gray>Tier Atual"
+    level: "<gray>Nível: <white>"
+    size: "<gray>Tamanho: <white>"
+    items_forged: "<gray>Itens Forjados: <white>"
+    next_tier_label: "<gray>Próximo Tier"
+    required_level: "<gray>Nível Requerido: "
+    improve_line1: "<gray>Para melhorar, construa uma"
+    improve_line2: "<gray>forja maior com os blocos"
+    improve_line3: "<gray>corretos e re-registre."
+    max_tier_title: "<light_purple><bold>Tier Máximo!"
+    max_tier_line1: "<gray>Sua forja já está no"
+    max_tier_line2: "<gray>nível máximo!"
+    current_marker: "<yellow>← Tier Atual"
+    unlocked: "<green>Desbloqueado"
+    locked_level: "<red>Lvl "
+    back: "<yellow>← Voltar"
+
+  material_prep:
+    title: "<dark_gray>⚒ Preparação — "
+    deposit_instruction: "<gray>Deposite os materiais nos slots abaixo."
+    primary_metal: "<white>Metal Primário"
+    item_label: "<gray>Item: <white>"
+    quantity_label: "<gray>Quantidade: <white>"
+    deposited: "<green>✔ Depositado"
+    pending: "<red>✘ Pendente"
+    secondary_material: "<white>Material Secundário"
+    deposit_here: "<gray>Deposite o material aqui"
+    confirm: "<green><bold>✔ Confirmar e Forjar"
+    deposit_all: "<gray>Deposite todos os materiais"
+    cancel: "<red>Cancelar"
+
+  smeltery:
+    tank_empty: "<dark_gray>Tanque Vazio"
+    volume: "Volume:"
+    hardness: "Dureza:"
+    alloy: "<gold>⚗ Liga"
+    base_metal: "<gray>Metal Base"
+    temperature: "<red>🌡 Temperatura"
+    heated: "<green>● Aquecida"
+    cold: "<red>● Fria"
+    fuel_remaining: "<dark_gray>Fuel: %seconds%s restante"
+    fuel: "<gold>🔥 Combustível"
+    fuel_active: "<green>Ativo <gray>— %seconds%s restante"
+    no_fuel: "<red>Sem combustível!"
+    accepted_fuels: "<yellow>Combustíveis aceitos:"
+    fuel_list_1: "<gray>• Carvão, Blaze Rod, Lava Bucket"
+    fuel_list_2: "<gray>• Blaze Powder, Fire Charge"
+    fuel_hint: "<dark_gray>Coloque no Fuel Input (barril)"
+    smelting: "<yellow>Fundindo: <white>%count%x"
+    progress: "Progresso:"
+    time_remaining: "Tempo restante:"
+    empty_slot: "<dark_gray>Slot vazio"
+    input_items: "<gray>Jogue itens no Input"
+    tank: "Tanque:"
+    different_metals: "Metais diferentes:"
+    items_smelted: "Itens fundidos:"
+    owner: "Dono:"
+    insert_material: "<green>⬇ Inserir Material"
+    insert_hint_1: "<gray>Clique aqui segurando um item"
+    insert_hint_2: "<gray>para inseri-lo na fundição."
+    smeltable_materials: "<yellow>Materiais fundíveis:"
+    material_ores: "<gray>• Minérios e Ingots"
+    material_gems: "<gray>• Gemas (Diamante, Esmeralda...)"
+    material_tools: "<gray>• Ferramentas e Armaduras"
+    or_slot_below: "<dark_gray>Ou coloque no slot abaixo"
+    pour_metal: "<gold>⬇ Despejar Metal"
+    pour_hint_1: "<gray>Clique para produzir lingotes ou"
+    pour_hint_2: "<gray>blocos do metal fundido."
+    pour_table_rate: "<gray>Mesa (laje): <white>144mb → 1 Lingote"
+    pour_basin_rate: "<gray>Bacia (caldeirão): <white>1296mb → 1 Bloco"
+    tank_empty_warning: "<red>Tanque vazio!"
+    metal_available: "<green>Metal disponível:"
+    alloy_book: "<gold>📖 Livro de Ligas"
+    alloy_book_desc_1: "<gray>Veja todas as receitas de ligas"
+    alloy_book_desc_2: "<gray>disponíveis na fundição."
+    click_to_open: "<yellow>Clique para abrir"
+    info: "<dark_red>ℹ Informações"
+    max_temperature: "Max Temperatura:"
+    drains: "Drenos:"
+    close: "<red>Fechar"
+
+  drain:
+    title: "<gold><bold>⬇ Selecionar Metal"
+    back: "<yellow>← Voltar"
+    back_desc: "<gray>Retorna à GUI da Smeltery"
+    volume: "Volume:"
+    hardness: "Dureza:"
+    alloy: "<gold>⚗ Liga"
+    base_metal: "<gray>Metal Base"
+    no_table: "<red>✘ Nenhuma mesa (laje) ao lado do dreno!"
+    click_ingot: "<green>▸ Clique Esquerdo: <white>Lingote <gray>(144mb)"
+    insufficient_ingot: "<red>✘ Insuficiente para lingote <gray>(144mb)"
+    no_basin: "<red>✘ Nenhuma bacia (caldeirão) ao lado do dreno!"
+    click_block: "<green>▸ Clique Direito: <white>Bloco <gray>(1296mb)"
+    insufficient_block: "<red>✘ Insuficiente para bloco <gray>(1296mb)"
+
+  alloy_book:
+    title: "<gold><bold>📖 Livro de Ligas"
+    filter_on: "<green>✔ Apenas Fabricáveis"
+    filter_off: "<gray>✘ Mostrando Todas"
+    filter_tooltip_show_all: "<gray>Clique para mostrar todas."
+    filter_tooltip_filter: "<gray>Clique para filtrar fabricáveis."
+    ingredients: "<gray>Ingredientes:"
+    missing: "Falta:"
+    result: "<gray>Resultado:"
+    min_temp: "<gray>Temp. mínima:"
+    hardness: "<gray>Dureza:"
+    can_form: "<green>✔ Pode ser formada agora!"
+    insufficient_ingredients: "<red>✘ Ingredientes insuficientes"
+    auto_form: "<dark_gray>Ligas se formam automaticamente"
+    alloy_suffix: "<dark_gray>(Liga)"
+    smelting_recipe: "<gold>⚗ Receita de Fundição"
+    metals_required: "<gray>Metais necessários:"
+    produces: "<gray>Produz:"
+    insufficient_temp: "<red>✘ Temperatura insuficiente!"
+    can_craft: "<green>✔ Pode ser fabricado agora!"
+    insufficient_metals: "<red>✘ Metais insuficientes"
+    click_to_craft: "<yellow>▸ Clique para fabricar!"
+    click_to_craft_unavailable: "<dark_gray>Clique para fabricar quando disponível"
+    back: "<yellow>← Voltar"
+    back_lore: "<gray>Retorna à GUI da Smeltery"
+
+  # ADMIN GUIS
+  forge_admin:
+    title: "<dark_gray>⚒ Templates de Forja"
+    status_active: "<green>Ativo"
+    status_inactive: "<red>Inativo"
+    lore_type: "<gray>Tipo: "
+    lore_required_level: "<gray>Nível necessário: <white>"
+    lore_created_at: "<gray>Criado em: <white>"
+    lore_status: "<gray>Status: "
+    lore_dimensions: "<gray>Dimensões: <white>"
+    lore_blocks: "<gray>Blocos: <white>"
+    click_to_edit: "<yellow>Clique para editar"
+    stats_title: "<gold><bold>⚒ Templates de Forja</bold>"
+    lore_total: "<gray>Total: <white>"
+    lore_active: "<gray>Ativos: <green>"
+    lore_inactive: "<gray>Inativos: <red>"
+    desc_line1: "<gray>Templates são os modelos de forja"
+    desc_line2: "<gray>que os jogadores podem construir."
+    create_new: "<green>+ Criar Novo Template"
+    create_desc_1: "<gray>Abre o painel de criação"
+    create_desc_2: "<gray>de um novo modelo de forja."
+    click_to_create: "<yellow>Clique para criar!"
+    refresh: "<yellow>↻ Atualizar Lista"
+    refresh_desc: "<gray>Recarrega a lista de templates."
+
+  forge_setup:
+    title: "<dark_gray>⚒ Criar Template de Forja"
+    lore_type: "<gray>Tipo: "
+    lore_required_level: "<gray>Nível necessário: <white>"
+    lore_dimensions: "<gray>Dimensões: <white>"
+    lore_blocks: "<gray>Blocos: <white>"
+    lore_interactive_blocks: "<gray>Blocos interativos: <white>"
+    how_to_create: "<yellow>⚒ Como Criar um Template</yellow>"
+    step_1: "<gray>1. Defina o nome, tipo e nível"
+    step_2: "<gray>2. Construa a forja no mundo"
+    step_3: "<gray>3. Selecione a área (posições)"
+    step_4: "<gray>4. Escaneie e valide os blocos"
+    step_5: "<gray>5. Confirme a criação!"
+    name_title: "<gold>✏ Nome da Forja"
+    lore_current: "<gray>Atual: <white>"
+    click_to_change: "<yellow>Clique para alterar"
+    type_name_in_chat: "<gray>Digite o nome no chat"
+    tier_title: "<gold>⭐ Tipo de Forja"
+    lore_current_tier: "<gray>Atual: "
+    click_left_next: "<yellow>Clique esquerdo → Próximo"
+    click_right_prev: "<yellow>Clique direito → Anterior"
+    level_title: "<gold>📊 Nível da Profissão"
+    click_left_plus: "<yellow>Clique esquerdo → +1"
+    click_right_minus: "<yellow>Clique direito → -1"
+    shift_click_ten: "<yellow>Shift + Clique → ±10"
+    pos1_set_title: "<green>✔ Posição 1 Definida"
+    click_to_redefine: "<yellow>Clique para redefinir"
+    pos1_unset_title: "<red>① Definir Posição 1"
+    pos1_desc_1: "<gray>Vá até um canto da forja"
+    pos1_desc_2: "<gray>e clique aqui para definir."
+    click_to_capture: "<yellow>Clique para capturar"
+    pos2_set_title: "<green>✔ Posição 2 Definida"
+    pos2_unset_title: "<red>② Definir Posição 2"
+    pos2_desc_1: "<gray>Vá até o canto oposto da forja"
+    pos2_desc_2: "<gray>e clique aqui para definir."
+    scan_done_title: "<green>✔ Área Escaneada"
+    lore_blocks_detected: "<gray>Blocos detectados: <white>"
+    click_to_rescan: "<yellow>Clique para re-escanear"
+    scan_ready_title: "<gold>③ Escanear Área"
+    scan_desc_1: "<gray>Clique para escanear os"
+    scan_desc_2: "<gray>blocos entre as posições."
+    click_to_scan: "<yellow>Clique para escanear!"
+    scan_disabled_title: "<gray>③ Escanear Área"
+    scan_disabled_desc: "<dark_gray>Defina as duas posições primeiro."
+    blocks_summary_title: "<gold>📋 Blocos Detectados"
+    assign_blocks_title: "<aqua>🔧 Configurar Blocos"
+    assign_blocks_desc_1: "<gray>Veja e configure os papéis"
+    assign_blocks_desc_2: "<gray>de cada bloco da forja."
+    click_to_open: "<yellow>Clique para abrir!"
+    validation_ok_title: "<green>✔ Validação OK"
+    validation_ok_desc: "<gray>Blocos obrigatórios presentes."
+    ready_to_create: "<green>Pronto para criar!"
+    validation_fail_title: "<red>✘ Validação Incompleta"
+    validation_missing: "<gray>Faltando:"
+    click_receive_blocks: "<yellow>Clique para receber os blocos"
+    confirm_title: "<green>✔ Confirmar Criação"
+    confirm_incomplete_title: "<gray>✔ Confirmar (Incompleto)"
+    confirm_desc: "<gray>Clique para criar o template!"
+    confirm_incomplete_desc: "<red>Complete todos os passos."
+    cancel_title: "<red>✘ Cancelar"
+    cancel_desc: "<gray>Cancela a criação do template."
+    close: "<red>Fechar"
+    not_defined: "não definida"
+    block_furnace: "Fornalha"
+    block_anvil: "Bigorna"
+    block_cauldron: "Caldeirão"
+    block_grindstone: "Rebolo"
+    block_smithing_table: "Mesa de Ferreiro"
+    block_campfire: "Fogueira"
+    block_blast_furnace: "Alto-Forno"
+    block_enchanting_table: "Mesa de Encantamento"
+    block_fuel_zone: "Zona de Combustível"
+    block_structure: "Estrutural"
+    block_air: "Ar"
+
+  forge_edit:
+    title: "<dark_gray>⚒ Editar: %name%"
+    lore_type: "<gray>Tipo: "
+    lore_required_level: "<gray>Nível necessário: <white>"
+    lore_created_at: "<gray>Criado em: <white>"
+    lore_status: "<gray>Status: "
+    status_active: "<green>Ativo"
+    status_inactive: "<red>Inativo"
+    lore_dimensions: "<gray>Dimensões: <white>"
+    lore_blocks: "<gray>Blocos: <white>"
+    rename_title: "<gold>✏ Renomear Template"
+    lore_current_name: "<gray>Nome atual: <white>"
+    click_to_rename: "<yellow>Clique para renomear"
+    type_new_name_in_chat: "<gray>Digite o novo nome no chat"
+    change_tier_title: "<gold>⭐ Alterar Tipo"
+    lore_current_tier: "<gray>Atual: "
+    click_left_next: "<yellow>Clique esquerdo → Próximo"
+    click_right_prev: "<yellow>Clique direito → Anterior"
+    change_level_title: "<gold>📊 Alterar Nível"
+    click_left_plus: "<yellow>Clique esquerdo → +1"
+    click_right_minus: "<yellow>Clique direito → -1"
+    shift_click_ten: "<yellow>Shift + Clique → ±10"
+    toggle_active_title: "<green>✔ Template Ativo"
+    toggle_active_desc: "<gray>Jogadores podem construir esta forja."
+    click_to_deactivate: "<yellow>Clique para desativar"
+    toggle_inactive_title: "<red>✘ Template Inativo"
+    toggle_inactive_desc: "<gray>Esta forja não está disponível."
+    click_to_activate: "<yellow>Clique para ativar"
+    delete_title: "<red><bold>🗑 Excluir Template</bold>"
+    delete_desc: "<gray>Remove permanentemente este template."
+    delete_warning: "<red>⚠ Esta ação é irreversível!"
+    shift_click_delete: "<yellow>Shift + Clique para excluir"
+    back: "<yellow>← Voltar"
+    back_desc: "<gray>Voltar ao painel de templates"
+    close: "<red>Fechar"
+
+  smeltery_admin:
+    title: "<dark_gray>⚗ Templates de Fundição"
+    status_active: "<green>Ativo"
+    status_inactive: "<red>Inativo"
+    lore_type: "<gray>Tipo: "
+    lore_required_level: "<gray>Nível necessário: <white>"
+    lore_created_at: "<gray>Criado em: <white>"
+    lore_status: "<gray>Status: "
+    lore_dimensions: "<gray>Dimensões: <white>"
+    lore_blocks: "<gray>Blocos: <white>"
+    click_to_edit: "<yellow>Clique para editar"
+    stats_title: "<gold><bold>⚗ Templates de Fundição</bold>"
+    lore_total: "<gray>Total: <white>"
+    lore_active: "<gray>Ativos: <green>"
+    lore_inactive: "<gray>Inativos: <red>"
+    desc_line1: "<gray>Templates são os modelos de fundição"
+    desc_line2: "<gray>que os jogadores podem construir."
+    create_new: "<green>+ Criar Novo Template"
+    create_desc_1: "<gray>Abre o painel de criação"
+    create_desc_2: "<gray>de um novo modelo de fundição."
+    click_to_create: "<yellow>Clique para criar!"
+    refresh: "<yellow>↻ Atualizar Lista"
+    refresh_desc: "<gray>Recarrega a lista de templates."
+
+  smeltery_setup:
+    title: "<dark_gray>⚗ Criar Template de Fundição"
+    lore_type: "<gray>Tipo: "
+    lore_required_level: "<gray>Nível necessário: <white>"
+    lore_dimensions: "<gray>Dimensões: <white>"
+    lore_blocks: "<gray>Blocos: <white>"
+    lore_interactive_blocks: "<gray>Blocos interativos: <white>"
+    how_to_create: "<yellow>⚗ Como Criar um Template</yellow>"
+    step_1: "<gray>1. Defina o nome, tipo e nível"
+    step_2: "<gray>2. Construa a fundição no mundo"
+    step_3: "<gray>3. Selecione a área (posições)"
+    step_4: "<gray>4. Escaneie e valide os blocos"
+    step_5: "<gray>5. Confirme a criação!"
+    name_title: "<gold>✏ Nome da Fundição"
+    lore_current: "<gray>Atual: <white>"
+    click_to_change: "<yellow>Clique para alterar"
+    type_name_in_chat: "<gray>Digite o nome no chat"
+    tier_title: "<gold>⭐ Tipo de Fundição"
+    lore_current_tier: "<gray>Atual: "
+    click_next: "<yellow>Clique esquerdo → Próximo"
+    click_prev: "<yellow>Clique direito → Anterior"
+    level_title: "<gold>📊 Nível da Profissão"
+    level_required: "<gray>Nível necessário: <white>"
+    click_add: "<yellow>Clique esquerdo → +1"
+    click_sub: "<yellow>Clique direito → -1"
+    click_shift: "<yellow>Shift + Clique → ±10"
+    pos1_defined: "<green>✔ Posição 1 Definida"
+    pos1_click_redefine: "<yellow>Clique para redefinir"
+    pos1_undefined: "<red>① Definir Posição 1"
+    pos1_desc_1: "<gray>Vá até um canto da fundição"
+    pos1_desc_2: "<gray>e clique aqui para definir."
+    click_capture: "<yellow>Clique para capturar"
+    pos2_defined: "<green>✔ Posição 2 Definida"
+    pos2_click_redefine: "<yellow>Clique para redefinir"
+    pos2_undefined: "<red>② Definir Posição 2"
+    pos2_desc_1: "<gray>Vá até o canto oposto da fundição"
+    pos2_desc_2: "<gray>e clique aqui para definir."
+    scan_done_title: "<green>✔ Área Escaneada"
+    scan_blocks_detected: "<gray>Blocos detectados: <white>"
+    scan_click_rescan: "<yellow>Clique para re-escanear"
+    scan_ready_title: "<gold>③ Escanear Área"
+    scan_desc_1: "<gray>Clique para escanear os"
+    scan_desc_2: "<gray>blocos entre as posições."
+    scan_click: "<yellow>Clique para escanear!"
+    scan_disabled_title: "<gray>③ Escanear Área"
+    scan_disabled_desc: "<dark_gray>Defina as duas posições primeiro."
+    blocks_summary_title: "<gold>📋 Blocos Detectados"
+    assign_blocks_title: "<aqua>🔧 Configurar Blocos"
+    assign_blocks_desc_1: "<gray>Veja e configure os papéis"
+    assign_blocks_desc_2: "<gray>de cada bloco da fundição."
+    assign_blocks_click: "<yellow>Clique para abrir!"
+    validation_ok_title: "<green>✔ Validação OK"
+    validation_ok_desc_1: "<gray>Blocos obrigatórios presentes."
+    validation_ok_desc_2: "<green>Pronto para criar!"
+    validation_fail_title: "<red>✘ Validação Incompleta"
+    validation_fail_missing: "<gray>Faltando:"
+    validation_click_receive: "<yellow>Clique para receber os blocos"
+    confirm_ready: "<green>✔ Confirmar Criação"
+    confirm_not_ready: "<gray>✔ Confirmar (Incompleto)"
+    confirm_ready_desc: "<gray>Clique para criar o template!"
+    confirm_not_ready_desc: "<red>Complete todos os passos."
+    cancel_title: "<red>✘ Cancelar"
+    cancel_desc: "<gray>Cancela a criação do template."
+    close: "<red>Fechar"
+    location_undefined: "não definida"
+    type_wall: "Parede"
+    type_controller: "Controlador"
+    type_drain: "Dreno"
+    type_tank_window: "Janela do Tanque"
+    type_item_input: "Entrada de Itens"
+    type_fuel_input: "Entrada de Combustível"
+    type_air: "Ar"
+    type_casting_table: "Casting Table"
+    type_casting_basin: "Casting Basin"
+
+  smeltery_edit:
+    title: "<dark_gray>⚗ Editar: "
+    lore_type: "<gray>Tipo: "
+    lore_required_level: "<gray>Nível necessário: <white>"
+    lore_created_at: "<gray>Criado em: <white>"
+    lore_status: "<gray>Status: "
+    status_active: "<green>Ativo"
+    status_inactive: "<red>Inativo"
+    lore_dimensions: "<gray>Dimensões: <white>"
+    lore_blocks: "<gray>Blocos: <white>"
+    rename_title: "<gold>✏ Renomear Template"
+    lore_current_name: "<gray>Nome atual: <white>"
+    click_to_rename: "<yellow>Clique para renomear"
+    type_new_name_in_chat: "<gray>Digite o novo nome no chat"
+    change_tier_title: "<gold>⭐ Alterar Tipo"
+    lore_current_tier: "<gray>Atual: "
+    click_next: "<yellow>Clique esquerdo → Próximo"
+    click_prev: "<yellow>Clique direito → Anterior"
+    change_level_title: "<gold>📊 Alterar Nível"
+    level_required: "<gray>Nível necessário: <white>"
+    click_add: "<yellow>Clique esquerdo → +1"
+    click_sub: "<yellow>Clique direito → -1"
+    click_shift: "<yellow>Shift + Clique → ±10"
+    toggle_active_title: "<green>✔ Template Ativo"
+    toggle_active_desc: "<gray>Jogadores podem construir esta fundição."
+    click_to_deactivate: "<yellow>Clique para desativar"
+    toggle_inactive_title: "<red>✘ Template Inativo"
+    toggle_inactive_desc: "<gray>Esta fundição não está disponível."
+    click_to_activate: "<yellow>Clique para ativar"
+    delete_title: "<red><bold>🗑 Excluir Template</bold>"
+    delete_desc: "<gray>Remove permanentemente este template."
+    delete_warning: "<red>⚠ Esta ação é irreversível!"
+    shift_click_delete: "<yellow>Shift + Clique para excluir"
+    back: "<yellow>← Voltar"
+    back_desc: "<gray>Voltar ao painel de templates"
+    close: "<red>Fechar"

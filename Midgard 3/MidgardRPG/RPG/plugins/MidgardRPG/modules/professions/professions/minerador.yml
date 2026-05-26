@@ -1,0 +1,143 @@
+# ============================================
+# MINERADOR - Definição e Recompensas
+# ============================================
+
+definition:
+  menu-icon: DIAMOND_PICKAXE
+  gradient: "<gradient:#06b6d4:#3b82f6>"
+  description: "Quebre minérios, pedras raras e blocos subterrâneos para ganhar XP."
+  bonuses:
+    - "<green>▸ Velocidade de mineração</green>"
+    - "<green>▸ Rendimento de minério</green>"
+    - "<green>▸ Chance de minério raro</green>"
+    - "<green>▸ Resistência subterrânea</green>"
+  xp-source-icon: DIAMOND_ORE
+  extra-button-icon: SPYGLASS
+  extra-button-name: "<aqua>Detector de Minérios"
+  extra-button-lore:
+    - "<gray>Visualize suas habilidades de"
+    - "<gray>mineração e detecção de veios."
+
+rewards:
+  1:
+    name: "Aprendiz Minerador"
+    bonuses:
+      - "+2% velocidade de mineração"
+  5:
+    bonuses:
+      - "+5% velocidade de mineração"
+      - "+3% rendimento de minério"
+  10:
+    name: "Minerador"
+    bonuses:
+      - "+10% velocidade de mineração"
+    ability: "Vein Miner"
+    ability-desc: "Mineração em cadeia — quebra veios conectados."
+  25:
+    name: "Minerador Experiente"
+    bonuses:
+      - "+5% chance de minério raro"
+    ability: "Ore Sense"
+    ability-desc: "Detecta minérios próximos por partículas."
+  50:
+    name: "Mestre Minerador"
+    bonuses:
+      - "+30% velocidade de mineração"
+    ability: "Impacto Pesado"
+    ability-desc: "Chance de quebrar blocos adjacentes."
+  75:
+    name: "Grão-Mestre Minerador"
+    bonuses:
+      - "+10% rendimento de minério"
+    perks:
+      - "Resistência subterrânea +10%"
+  100:
+    name: "Lenda da Mineração"
+    bonuses:
+      - "+50% velocidade de mineração"
+    ability: "Extração Eficiente"
+    ability-desc: "Toda mineração rende o dobro."
+    perks:
+      - "Título: Lenda da Mineração"
+
+# ============================================
+# FONTES DE XP
+# ============================================
+# block-break: XP ao minerar blocos e minérios
+xp-config:
+  block-break:
+    COAL_ORE: 5.0
+    DEEPSLATE_COAL_ORE: 6.0
+    IRON_ORE: 8.0
+    DEEPSLATE_IRON_ORE: 9.0
+    COPPER_ORE: 6.0
+    DEEPSLATE_COPPER_ORE: 7.0
+    GOLD_ORE: 10.0
+    DEEPSLATE_GOLD_ORE: 11.0
+    LAPIS_ORE: 10.0
+    DEEPSLATE_LAPIS_ORE: 11.0
+    REDSTONE_ORE: 8.0
+    DEEPSLATE_REDSTONE_ORE: 9.0
+    DIAMOND_ORE: 25.0
+    DEEPSLATE_DIAMOND_ORE: 28.0
+    EMERALD_ORE: 30.0
+    DEEPSLATE_EMERALD_ORE: 33.0
+    NETHER_GOLD_ORE: 8.0
+    NETHER_QUARTZ_ORE: 7.0
+    ANCIENT_DEBRIS: 50.0
+    STONE: 1.0
+    DEEPSLATE: 2.0
+    GRANITE: 1.5
+    DIORITE: 1.5
+    ANDESITE: 1.5
+    TUFF: 1.5
+    CALCITE: 2.0
+    AMETHYST_BLOCK: 5.0
+    AMETHYST_CLUSTER: 8.0
+    OBSIDIAN: 10.0
+    GLOWSTONE: 4.0
+    NETHERRACK: 1.0
+    BLACKSTONE: 2.0
+
+# ============================================
+# PENALIDADES PARA NÃO-MINERADORES
+# ============================================
+# Jogadores sem a profissão de Minerador ativa sofrem estas penalidades
+# ao interagir com materiais desta profissão.
+penalties:
+  enabled: true
+  show-message: true
+
+  # Materiais afetados (vazio = todos os materiais da xp-config)
+  # Se preenchido, apenas esses materiais geram penalidade
+  affected-materials:
+    - COAL_ORE
+    - DEEPSLATE_COAL_ORE
+    - IRON_ORE
+    - DEEPSLATE_IRON_ORE
+    - COPPER_ORE
+    - DEEPSLATE_COPPER_ORE
+    - GOLD_ORE
+    - DEEPSLATE_GOLD_ORE
+    - LAPIS_ORE
+    - DEEPSLATE_LAPIS_ORE
+    - REDSTONE_ORE
+    - DEEPSLATE_REDSTONE_ORE
+    - DIAMOND_ORE
+    - DEEPSLATE_DIAMOND_ORE
+    - EMERALD_ORE
+    - DEEPSLATE_EMERALD_ORE
+    - NETHER_GOLD_ORE
+    - NETHER_QUARTZ_ORE
+    - ANCIENT_DEBRIS
+    - AMETHYST_BLOCK
+    - AMETHYST_CLUSTER
+
+  # Penalidade ao quebrar blocos
+  block:
+    drop-chance: 0.5          # 50% de chance de dropar (50% de perder)
+    durability-multiplier: 2.0 # Picareta gasta o dobro de durabilidade
+    effect:
+      type: MINING_FATIGUE      # Aplica Mining Fatigue
+      duration: 100             # 5 segundos (em ticks)
+      amplifier: 1              # Nível II (lentidão moderada)

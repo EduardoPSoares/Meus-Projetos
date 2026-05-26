@@ -1,0 +1,74 @@
+name: "<dark_gray>sᴏᴍʙʀᴀs ꜰᴜʀᴛɪᴠᴀs</dark_gray>"
+mythic-skill: "SombrasFurtivas"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Ladino"
+  level: 1
+
+icon:
+  material: BLACK_DYE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></dark_gray>"
+  - ""
+  - "<gray>ᴏ ʟᴀᴅɪɴᴏ sᴇ ᴍᴏᴠᴇ ᴇɴᴛʀᴇ ᴀs sᴏᴍʙʀᴀs,</gray>"
+  - "<gray>ᴀᴜᴍᴇɴᴛᴀɴᴅᴏ sᴇᴜ ᴅᴀɴᴏ ᴀᴏ ᴀᴛᴀᴄᴀʀ</gray>"
+  - "<gray>ᴘᴏʀ ᴛʀᴀs ᴅᴏ ɪɴɪᴍɪɢᴏ.</gray>"
+  - ""
+  - "<dark_gray><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></dark_gray>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ᴅᴀɴᴏ ꜰᴜʀᴛɪᴠᴏ:<dark_gray>{stealth_damage}%</dark_gray>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ʟᴀᴅɪɴᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  stealth_damage:
+    base: 5.0
+    per-level: 2.5
+
+milestones:
+  3:
+    visual: "sombras_furtivas_mist"
+    mechanic-override: "SombrasFurtivasMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "sombras_furtivas_shadow"
+    mechanic-override: "SombrasFurtivasMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.phantom.flap"
+    volume: 0.4
+    pitch: 1.4
+  cast-finish:
+    sound: "entity.experience_orb.pickup"
+    volume: 0.3
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

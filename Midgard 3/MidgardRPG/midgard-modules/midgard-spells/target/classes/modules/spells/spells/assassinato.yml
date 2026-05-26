@@ -1,0 +1,78 @@
+name: "<dark_purple>ᴀssᴀssɪɴᴀᴛᴏ</dark_purple>"
+mythic-skill: "Assassinato"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 40.0
+  per-level: -1.0
+mana:
+  base: 35.0
+  per-level: -1.0
+stamina: 30.0
+
+max-level: 10
+
+requirements:
+  class: "Ladino"
+  level: 15
+
+icon:
+  material: NETHERITE_SWORD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴜʟᴛɪᴍᴀᴛᴇ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴏ ʟᴀᴅɪɴᴏ ᴇxᴇᴄᴜᴛᴀ ᴜᴍ ᴀᴛᴀǫᴜᴇ ʟᴇᴛᴀʟ</gray>"
+  - "<gray>ɴᴀs sᴏᴍʙʀᴀs, ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ ᴍᴀssɪᴠᴏ</gray>"
+  - "<gray>ᴄᴏᴍ ᴄʜᴀɴᴄᴇ ᴅᴇ ᴇʟɪᴍɪɴᴀᴄᴀᴏ ɪɴsᴛᴀɴᴛᴀɴᴇᴀ.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ʟᴀᴅɪɴᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>15</yellow>"
+
+variables:
+  damage:
+    base: 50.0
+    per-level: 10.0
+
+milestones:
+  3:
+    visual: "assassinato_shadow"
+    mechanic-override: "AssassinatoMk2"
+    stat-bonus:
+      dexterity: 2.0
+  5:
+    visual: "assassinato_execute"
+    mechanic-override: "AssassinatoMk3"
+    stat-bonus:
+      dexterity: 3.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.phantom.bite"
+    volume: 1.0
+    pitch: 0.8
+  cast-finish:
+    sound: "entity.player.attack.crit"
+    volume: 1.0
+    pitch: 0.6
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

@@ -1,0 +1,79 @@
+name: "<gold>sᴏᴄᴏ ᴛʀᴏᴠᴀᴏ</gold>"
+mythic-skill: "SocoTrovao"
+spell-type: COMMON
+
+cooldown:
+  base: 5.0
+  per-level: -0.2
+mana:
+  base: 10.0
+  per-level: -0.3
+stamina: 15.0
+
+max-level: 10
+
+requirements:
+  class: "Monge"
+  level: 1
+
+icon:
+  material: RABBIT_FOOT
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></gold>"
+  - ""
+  - "<gray>ᴅᴇsꜰᴇʀᴇ ᴜᴍ sᴏᴄᴏ ᴄᴀʀʀᴇɢᴀᴅᴏ ᴄᴏᴍ</gray>"
+  - "<gray>ᴇɴᴇʀɢɪᴀ ᴅᴇ ᴛʀᴏᴠᴀᴏ, ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ</gray>"
+  - "<gray>ᴇ ᴇᴍᴘᴜʀʀᴀɴᴅᴏ ᴏ ɪɴɪᴍɪɢᴏ ᴘᴀʀᴀ ᴛʀᴀs.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴏɴɢᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  damage:
+    base: 14.0
+    per-level: 3.5
+
+milestones:
+  3:
+    visual: "soco_trovao_spark"
+    mechanic-override: "SocoTrovaoMk2"
+    stat-bonus:
+      strength: 1.0
+  5:
+    visual: "soco_trovao_thunder"
+    mechanic-override: "SocoTrovaoMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 3
+    dexterity: 2
+
+sounds:
+  cast-start:
+    sound: "entity.player.attack.knockback"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "entity.lightning_bolt.impact"
+    volume: 0.8
+    pitch: 1.4
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

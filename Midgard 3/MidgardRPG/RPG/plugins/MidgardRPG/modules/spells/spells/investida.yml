@@ -1,0 +1,83 @@
+name: "<red>ɪɴᴠᴇsᴛɪᴅᴀ</red>"
+mythic-skill: "Investida"
+spell-type: COMMON
+
+cooldown:
+  base: 10.0
+  per-level: -0.3
+mana:
+  base: 20.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guerreiro"
+  level: 3
+
+icon:
+  material: IRON_BOOTS
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<red><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></red>"
+  - ""
+  - "<gray>ᴀᴠᴀɴᴄᴀ ᴄᴏᴍ ꜰᴜʀɪᴀ ᴄᴏɴᴛʀᴀ ᴏ</gray>"
+  - "<gray>ɪɴɪᴍɪɢᴏ, ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ ᴇ</gray>"
+  - "<gray>ᴇᴍᴘᴜʀʀᴀɴᴅᴏ-ᴏ ᴘᴀʀᴀ ᴛʀᴀs.</gray>"
+  - ""
+  - "<red><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></red>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ᴅɪsᴛᴀɴᴄɪᴀ:<red>{distance}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>3</yellow>"
+
+variables:
+  damage:
+    base: 10.0
+    per-level: 3.0
+  distance:
+    base: 6.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "charge_trail"
+    mechanic-override: "InvestidaMk2"
+    stat-bonus:
+      strength: 1.0
+  5:
+    visual: "charge_flame"
+    mechanic-override: "InvestidaMk3"
+    stat-bonus:
+      strength: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 5
+
+sounds:
+  cast-start:
+    sound: "entity.ravager.roar"
+    volume: 0.8
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.player.attack.knockback"
+    volume: 1.0
+    pitch: 0.8
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

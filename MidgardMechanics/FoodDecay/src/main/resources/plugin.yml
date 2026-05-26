@@ -1,0 +1,33 @@
+name: MidgardCooking
+version: '${project.version}'
+main: com.midgard.fooddecay.FoodDecayPlugin
+api-version: '1.21'
+depend:
+  - MidgardCore
+softdepend:
+  - RealisticSeasons
+  - MMOItems
+  - ItemsAdder
+  - MMOCore
+description: Sistema de culinaria, conservacao, nutricao, liquidos, fermentacao e receitas multibloco
+authors:
+  - MidgardMechanics
+permissions:
+  midgard.fooddecay:
+    description: Acesso ao comando principal do MidgardCooking
+    default: op
+  midgard.fooddecay.check:
+    description: Verificar validade de comidas
+    default: true
+  midgard.fooddecay.preserve:
+    description: Preservar comidas com tracos de conservacao
+    default: true
+  midgard.fooddecay.reload:
+    description: Recarregar configuracao do MidgardCooking
+    default: op
+  midgard.fooddecay.fermentbarrel:
+    description: Dar barril de fermentacao
+    default: op
+  midgard.fooddecay.admin:
+    description: Acesso a comandos administrativos do MidgardCooking
+    default: op

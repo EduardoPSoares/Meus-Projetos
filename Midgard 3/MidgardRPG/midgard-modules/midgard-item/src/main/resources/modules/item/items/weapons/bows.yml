@@ -1,0 +1,194 @@
+arco_curto:
+  base:
+    material: BOW
+    name: "<white>ᴀʀᴄᴏ ᴄᴜʀᴛᴏ</white>"
+    tier: COMMON
+    type: BOW
+    description:
+    - "<gray>ᴜᴍ ᴀʀᴄᴏ ᴄᴜʀᴛᴏ ᴅᴇ ᴍᴀᴅᴇɪʀᴀ,</gray>"
+    - "<gray>ʟᴇᴠᴇ ᴇ ᴘʀᴀᴛɪᴄᴏ ᴘᴀʀᴀ ᴄᴀᴄᴀᴅᴏʀᴇs ɪɴɪᴄɪᴀɴᴛᴇs.</gray>"
+    revision-id: 1
+    attack-damage: 5
+    dexterity: 2
+    projectile-damage: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_arco_curto:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_ferro"
+            3: "STRING"
+            5: "midgard:lingote_ferro"
+            7: "STRING"
+
+arco_composto:
+  base:
+    material: BOW
+    name: "<green>ᴀʀᴄᴏ ᴄᴏᴍᴘᴏsᴛᴏ</green>"
+    tier: UNCOMMON
+    type: BOW
+    description:
+    - "<gray>ᴜᴍ ᴀʀᴄᴏ ᴄᴏᴍᴘᴏsᴛᴏ ᴅᴇ ᴍᴀᴅᴇɪʀᴀ ᴇ ᴄʜɪꜰʀᴇ,</gray>"
+    - "<gray>ᴍᴀɪᴏʀ ᴘᴏᴛᴇɴᴄɪᴀ ᴇ ᴀʟᴄᴀɴᴄᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 10
+    dexterity: 5
+    projectile-damage: 6
+    crafting:
+      enabled: true
+      recipes:
+        craft_arco_composto:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_aco"
+            3: "STRING"
+            5: "midgard:lingote_aco"
+            7: "STRING"
+
+arco_elfico:
+  base:
+    material: BOW
+    name: "<blue>ᴀʀᴄᴏ ᴇʟꜰɪᴄᴏ</blue>"
+    tier: RARE
+    type: BOW
+    description:
+    - "<gray>ᴄᴏɴꜰᴇᴄᴄɪᴏɴᴀᴅᴏ ᴘᴇʟᴏs ᴇʟꜰᴏs ᴅᴀ ꜰʟᴏʀᴇsᴛᴀ,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ꜰʟᴇᴄʜᴀ ᴇɴᴄᴏɴᴛʀᴀ sᴇᴜ ᴀʟᴠᴏ ᴄᴏᴍ ᴘʀᴇᴄɪsᴀᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 17
+    dexterity: 7
+    projectile-damage: 10
+    critical-strike-chance: 4
+    crafting:
+      enabled: true
+      recipes:
+        craft_arco_elfico:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_mithril"
+            3: "STRING"
+            5: "midgard:lingote_mithril"
+            7: "midgard:cristal_arcano"
+
+arco_do_vento:
+  base:
+    material: BOW
+    name: "<purple>ᴀʀᴄᴏ ᴅᴏ ᴠᴇɴᴛᴏ</purple>"
+    tier: EPIC
+    type: BOW
+    description:
+    - "<gray>ɪᴍʙᴜɪᴅᴏ ᴄᴏᴍ ᴏ ᴘᴏᴅᴇʀ ᴅᴏ ᴠᴇɴᴛᴏ,</gray>"
+    - "<gray>sᴜᴀs ꜰʟᴇᴄʜᴀs ᴠᴏᴀᴍ ʀᴀᴘɪᴅᴀs ᴄᴏᴍᴏ ᴀ ᴛᴇᴍᴘᴇsᴛᴀᴅᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 27
+    dexterity: 11
+    projectile-damage: 15
+    critical-strike-chance: 6
+    movement-speed: 5
+    required-level: 37
+
+arco_do_destino:
+  base:
+    material: BOW
+    name: "<gold>ᴀʀᴄᴏ ᴅᴏ ᴅᴇsᴛɪɴᴏ</gold>"
+    tier: LEGENDARY
+    type: BOW
+    description:
+    - "<gray>ᴜᴍ ᴀʀᴄᴏ ʟᴇɴᴅᴀʀɪᴏ ǫᴜᴇ ɴᴜɴᴄᴀ ᴇʀʀᴀ,</gray>"
+    - "<gray>sᴜᴀs ꜰʟᴇᴄʜᴀs ᴅᴇ ʟᴜᴢ sᴇʟᴀᴍ ᴏ ᴅᴇsᴛɪɴᴏ ᴅᴏ ᴀʟᴠᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 40
+    dexterity: 16
+    projectile-damage: 22
+    critical-strike-chance: 10
+    critical-strike-power: 20
+    light-damage: 10
+    required-level: 50
+
+besta_ferro:
+  base:
+    material: CROSSBOW
+    name: "<white>ʙᴇsᴛᴀ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: CROSSBOW
+    description:
+    - "<gray>ᴜᴍᴀ ʙᴇsᴛᴀ sɪᴍᴘʟᴇs ᴅᴇ ꜰᴇʀʀᴏ,</gray>"
+    - "<gray>ʟᴇɴᴛᴀ ᴍᴀs ᴘᴏᴅᴇʀᴏsᴀ ᴇᴍ ᴄᴀᴅᴀ ᴅɪsᴘᴀʀᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 7
+    dexterity: 1
+    projectile-damage: 5
+    crafting:
+      enabled: true
+      recipes:
+        craft_besta_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_ferro"
+            3: "midgard:lingote_ferro"
+            4: "midgard:lingote_ferro"
+            7: "STICK"
+
+besta_pesada:
+  base:
+    material: CROSSBOW
+    name: "<green>ʙᴇsᴛᴀ ᴘᴇsᴀᴅᴀ</green>"
+    tier: UNCOMMON
+    type: CROSSBOW
+    description:
+    - "<gray>ᴜᴍᴀ ʙᴇsᴛᴀ ᴘᴇsᴀᴅᴀ ᴅᴇ ᴀᴄᴏ ʀᴇꜰᴏʀᴄᴀᴅᴏ,</gray>"
+    - "<gray>sᴇᴜs ᴅᴀʀᴅᴏs ᴘᴇʀꜰᴜʀᴀᴍ ᴀᴛᴇ ᴀʀᴍᴀᴅᴜʀᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 13
+    dexterity: 3
+    projectile-damage: 8
+    armor-penetration: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_besta_pesada:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_aco"
+            3: "midgard:lingote_aco"
+            4: "midgard:lingote_aco"
+            7: "STICK"
+
+besta_mecanica:
+  base:
+    material: CROSSBOW
+    name: "<blue>ʙᴇsᴛᴀ ᴍᴇᴄᴀɴɪᴄᴀ</blue>"
+    tier: RARE
+    type: CROSSBOW
+    description:
+    - "<gray>ᴜᴍᴀ ᴏʙʀᴀ-ᴘʀɪᴍᴀ ᴅᴀ ᴇɴɢᴇɴʜᴀʀɪᴀ,</gray>"
+    - "<gray>ᴍᴇᴄᴀɴɪsᴍᴏs ᴅᴇ ᴘʀᴇᴄɪsᴀᴏ ɢᴀʀᴀɴᴛᴇᴍ ᴅɪsᴘᴀʀᴏs ꜰᴀᴛᴀɪs.</gray>"
+    revision-id: 1
+    attack-damage: 20
+    dexterity: 5
+    projectile-damage: 13
+    armor-penetration: 5
+    critical-strike-chance: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_besta_mecanica:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_mithril"
+            3: "midgard:lingote_mithril"
+            4: "midgard:lingote_titanio"
+            7: "STICK"

@@ -1,0 +1,910 @@
+# ============================================================
+#  FoodDecay v5.0.0 — Sistema Multibloco TFC
+#  Configuração completa do módulo de deterioração de comidas
+# ============================================================
+
+# ── Configurações Gerais ────────────────────────────────────
+# Tempo padrão de expiração (minutos) para comidas sem config específica
+default-expiration-minutes: 60
+
+# Intervalo do task de verificação de decay (em ticks, 20 ticks = 1s)
+decay-check-interval-ticks: 1200
+
+# Mostrar timer de validade na lore dos itens
+show-lore-timer: true
+
+# Limiar de aviso (0.25 = avisa quando restar 25% do tempo)
+warning-threshold: 0.25
+
+# Rastrear toda comida (true = comidas sem config usam o default)
+track-all-food: true
+
+# ── Cores ───────────────────────────────────────────────────
+colors:
+  fresh: "&a"
+  warning: "&e"
+  expired: "&c"
+
+# ── Formato da Lore ─────────────────────────────────────────
+# Placeholders: {color}, {status}
+lore:
+  format: "{color}⏳ &7Tempo: {color}{status}"
+  expired-status: "EXPIRADO"
+  trait-format: "  {lore_line}"
+
+# ── Formato de Tempo ────────────────────────────────────────
+# Placeholders: {d}, {h}, {m}, {s}
+time-format:
+  days: "{d}d {h}h"
+  hours: "{h}h {m}m"
+  minutes: "{m}m {s}s"
+  seconds: "{s}s"
+  expired: "Expirado"
+
+# ── Comportamento ───────────────────────────────────────────
+# Ativar/desativar cada gatilho de stamp e bloqueio
+behavior:
+  block-expired-consume: true
+  stamp-on-pickup: true
+  stamp-on-craft: true
+  stamp-on-furnace: true
+  stamp-on-inventory-click: true
+  stamp-on-inventory-open: true
+  stamp-on-join: true
+  # Marca comida quando ela surge no chão (drops, spawns naturais)
+  stamp-on-item-spawn: true
+
+# ── Sistema de Temperatura ──────────────────────────────────
+# Multiplica velocidade de decay baseado na temperatura ambiente.
+# Requer RealisticSeasons ou usa temperatura de bioma como fallback.
+temperature:
+  enabled: true
+  zones:
+    freezing:
+      max-temp: 0
+      multiplier: 0.1
+    cold:
+      max-temp: 10
+      multiplier: 0.5
+    cool:
+      max-temp: 20
+      multiplier: 0.75
+    normal:
+      max-temp: 30
+      multiplier: 1.0
+    warm:
+      max-temp: 40
+      multiplier: 1.5
+    hot:
+      max-temp: 999
+      multiplier: 2.0
+
+# ── Sistema de Profundidade (Y-Level) ──────────────────────
+# Modifica a temperatura baseado na profundidade/Y-level do jogador.
+# Quanto mais fundo, mais frio — caves funcionam como refrigeração natural.
+# O offset é somado à temperatura ambiente antes de calcular o multiplicador.
+# Ex: temperatura 25°C + offset -25 = 0°C efetivo (zona gelada = 0.1x decay)
+depth-temperature:
+  enabled: true
+  zones:
+    deep-underground:
+      max-y: 0
+      temperature-offset: -25
+    underground:
+      max-y: 30
+      temperature-offset: -15
+    cave:
+      max-y: 50
+      temperature-offset: -8
+    surface:
+      max-y: 256
+      temperature-offset: 0
+
+# ── Sistema de Estações ─────────────────────────────────────
+# Multiplica velocidade de decay baseado na estação (RealisticSeasons).
+season:
+  enabled: true
+  multipliers:
+    SPRING: 1.0
+    SUMMER: 1.3
+    FALL: 0.9
+    WINTER: 0.6
+
+# ── Traços de Conservação ───────────────────────────────────
+# Cada traço reduz a velocidade de decay pelo multiplicador.
+# ingredient: material necessário na offhand (NONE = automático)
+# max-per-item: máximo de traços que uma comida pode ter
+traits:
+  enabled: true
+  auto-smoke-from-smoker: true
+  max-per-item: 3
+
+  SALTED:
+    multiplier: 0.5
+    ingredient: "SUGAR"
+    display-name: "&e⬡ Salgado"
+    lore: "&7Conservado com sal marinho"
+
+  SMOKED:
+    multiplier: 0.4
+    ingredient: "NONE"
+    display-name: "&6⬡ Defumado"
+    lore: "&7Curado lentamente em fumeiro"
+
+  DRIED:
+    multiplier: 0.3
+    ingredient: "STRING"
+    display-name: "&c⬡ Desidratado"
+    lore: "&7Seco ao ar e ao sol"
+
+  PICKLED:
+    multiplier: 0.35
+    ingredient: "GLASS_BOTTLE"
+    display-name: "&2⬡ Em Conserva"
+    lore: "&7Preservado em vinagre artesanal"
+
+  BRINED:
+    multiplier: 0.45
+    ingredient: "WATER_BUCKET"
+    display-name: "&b⬡ Em Salmoura"
+    lore: "&7Mergulhado em água salgada"
+
+  PRESERVED:
+    multiplier: 0.25
+    ingredient: "HONEYCOMB"
+    display-name: "&d⬡ Selado"
+    lore: "&7Selado com cera de abelha"
+
+# ── Modificadores de Container ──────────────────────────────
+# Multiplica velocidade de decay quando comida está dentro de containers.
+# Valores < 1.0 = decai mais devagar
+containers:
+  enabled: true
+  multipliers:
+    BARREL: 0.7
+    CHEST: 0.9
+    TRAPPED_CHEST: 0.9
+    SHULKER_BOX: 0.5
+    SMOKER: 0.6
+
+# ── Conservação por Gelo ────────────────────────────────────
+# Quando um baú/barril tem blocos de gelo adjacentes (ao redor),
+# a comida dentro conserva melhor — como um refrigerador primitivo.
+# O efeito escala: 1 bloco de gelo = efeito parcial, 6 blocos = efeito máximo.
+# multiplier: multiplicador de decay quando todos os 6 lados têm gelo (0.3 = -70%).
+ice-conservation:
+  enabled: true
+  multiplier: 0.3
+  # Tempo em minutos para a comida congelar completamente ao lado do gelo.
+  # A conservação aumenta gradualmente até atingir o multiplicador máximo.
+  freezing-duration: 5
+  # Tempo em minutos para o efeito de refrigeração desaparecer após retirar do gelo.
+  # Simula o "descongelamento" — a comida vai perdendo a conservação gradualmente.
+  warming-duration: 10
+  # Quais blocos contam como "gelo" para refrigeração
+  ice-blocks:
+    - ICE
+    - PACKED_ICE
+    - BLUE_ICE
+    - SNOW_BLOCK
+
+# ── Fumaça Ambiente Contínua ───────────────────────────────
+# Quando ativo, máquinas com fogo (Defumeiro, Tina de Conserva) emitem
+# colunas de fumaça altas visíveis à distância enquanto processam.
+# Estilo TFC — fornalhas e defumeiros geram fumaça imponente.
+ambient-smoke:
+  enabled: true
+  # Intervalo em ticks entre emissões (1 = todo tick, 3 = a cada 3 ticks)
+  interval-ticks: 3
+  # Quantidade de partículas de signal smoke por emissão
+  particle-count: 2
+  # Altura base da coluna de fumaça (blocos acima da máquina)
+  height: 6.0
+
+# ── Compostagem ─────────────────────────────────────────────
+# Comida estragada pode ser colocada em composters para virar adubo.
+# Clique direito na composteira com comida estragada para preencher.
+# Quando cheia, clique direito para coletar o resultado.
+composting:
+  enabled: true
+  # Permitir comida parcialmente estragada (não só totalmente)
+  allow-partial-decay: false
+  # Se partial-decay ativo, frescor máximo para aceitar (0.0-1.0, 0.5 = 50% estragada)
+  partial-decay-threshold: 0.5
+  # Material do resultado
+  result-material: BONE_MEAL
+  # Quantidade do resultado
+  result-amount: 1
+
+# ── Porções de Comida ───────────────────────────────────────
+# Estilo TFC: comidas têm múltiplas porções.
+# Cada mordida consome 1 porção ao invés de remover o item inteiro.
+# Apenas quando todas as porções são consumidas o item desaparece.
+portions:
+  enabled: true
+  # Porções padrão para comidas não listadas
+  default-portions: 4
+  # Porções por tipo de comida (sobrescreve o padrão)
+  per-food:
+    COOKED_BEEF: 4
+    COOKED_PORKCHOP: 4
+    COOKED_CHICKEN: 3
+    COOKED_MUTTON: 3
+    COOKED_COD: 2
+    COOKED_SALMON: 2
+    COOKED_RABBIT: 2
+    BREAD: 3
+    BAKED_POTATO: 2
+    COOKIE: 1
+    CAKE: 6
+    PUMPKIN_PIE: 3
+    APPLE: 2
+    MELON_SLICE: 1
+    GOLDEN_APPLE: 2
+    GOLDEN_CARROT: 2
+    CARROT: 1
+    POTATO: 1
+    BEETROOT: 1
+
+# ── Cooking com Temperatura (TFC-style) ────────────────────
+# Sistema de cozinhar comida em fogueiras. Clique direito em uma
+# fogueira/soul campfire com comida crua para começar a cozinhar.
+# Se deixar cozinhando demais, queima (vira carvão).
+cooking:
+  enabled: false
+  # Tempo padrão de cozimento em minutos (se não especificado por receita)
+  default-cook-minutes: 3
+  # Overcooking: comida queima se ficar na fogueira depois de pronta
+  burn-enabled: true
+  burn-after-minutes: 5
+  # Multiplicadores de calor por tipo de fogueira
+  heat-multipliers:
+    campfire: 1.0
+    soul-campfire: 1.5
+  # Receitas: material_cru -> resultado cozido + tempo em minutos
+  recipes:
+    BEEF:
+      result: COOKED_BEEF
+      minutes: 4
+    PORKCHOP:
+      result: COOKED_PORKCHOP
+      minutes: 4
+    CHICKEN:
+      result: COOKED_CHICKEN
+      minutes: 3
+    MUTTON:
+      result: COOKED_MUTTON
+      minutes: 4
+    COD:
+      result: COOKED_COD
+      minutes: 2
+    SALMON:
+      result: COOKED_SALMON
+      minutes: 2
+    RABBIT:
+      result: COOKED_RABBIT
+      minutes: 3
+    POTATO:
+      result: BAKED_POTATO
+      minutes: 2
+    KELP:
+      result: DRIED_KELP
+      minutes: 1
+
+# ── Containers de Líquido (mB) ──────────────────────────────
+# Sistema TFC-style de líquidos em millibuckets.
+# Itens-container armazenam líquidos (água, leite, vinagre, etc.).
+# Clique direito em fonte de água/caldeirão para encher.
+# Shift+clique direito para despejar.
+liquid-containers:
+  enabled: true
+  # mB despejados por interação (shift+clique direito no ar)
+  pour-amount-mb: 250
+  # mB por nível de caldeirão (3 níveis = ~1000 mB = 1 balde)
+  mb-per-cauldron-level: 333
+  # Capacidade máxima em mB por tipo de item
+  containers:
+    BOWL: 500
+    BUCKET: 1000
+    GLASS_BOTTLE: 250
+    FLOWER_POT: 750
+  # Tipos de líquido com nome e cor para exibição
+  liquid-types:
+    WATER:
+      name: "&bÁgua"
+      color: "&b"
+    MILK:
+      name: "&fLeite"
+      color: "&f"
+    VINEGAR:
+      name: "&eVinagre"
+      color: "&e"
+    HONEY:
+      name: "&6Mel"
+      color: "&6"
+    BROTH:
+      name: "&dCaldo"
+      color: "&d"
+    OIL:
+      name: "&aÓleo"
+      color: "&a"
+
+# ── Fermentação ─────────────────────────────────────────────
+# Sistema TFC-style de fermentação de bebidas.
+# Clique direito em um BARREL com um container de líquido para iniciar.
+# Após o tempo, o líquido se transforma em uma bebida com efeitos.
+fermentation:
+  enabled: true
+  recipes:
+    cerveja:
+      input-liquid: WATER
+      required-mb: 250
+      time-minutes: 30
+      result-material: POTION
+      display-name: "&6🍺 Cerveja Artesanal"
+      effects:
+        - type: strength
+          duration: 1200
+          amplifier: 0
+        - type: nausea
+          duration: 200
+          amplifier: 0
+    vinho:
+      input-liquid: WATER
+      required-mb: 500
+      time-minutes: 45
+      result-material: POTION
+      display-name: "&5🍷 Vinho Tinto"
+      effects:
+        - type: regeneration
+          duration: 600
+          amplifier: 1
+        - type: nausea
+          duration: 400
+          amplifier: 0
+    hidromel:
+      input-liquid: HONEY
+      required-mb: 250
+      time-minutes: 40
+      result-material: HONEY_BOTTLE
+      display-name: "&e🍯 Hidromel"
+      effects:
+        - type: absorption
+          duration: 1800
+          amplifier: 1
+        - type: luck
+          duration: 1200
+          amplifier: 0
+    vinagre-fermentado:
+      input-liquid: VINEGAR
+      required-mb: 250
+      time-minutes: 20
+      result-material: POTION
+      display-name: "&a🧪 Vinagre Fermentado"
+      effects:
+        - type: speed
+          duration: 900
+          amplifier: 0
+
+# ── Peso e Tamanho (TFC) ────────────────────────────────────
+# Cada comida tem peso (kg) e categoria de tamanho.
+# Peso limita stacks (pesados = menos por stack).
+# Tamanho restringe containers (ex: shulker box não aceita HUGE).
+# max-kg-per-stack: total de kg permitido por stack (1.8144kg = 64 itens de 0.02835kg)
+weight-size:
+  enabled: true
+  max-kg-per-stack: 1.8144
+  default-kg: 0.1134
+  default-size: MEDIUM
+  container-restrictions: true
+  # Categorias de tamanho (display)
+  size-categories:
+    TINY:
+      name: "Minúsculo"
+      color: "&7"
+    SMALL:
+      name: "Pequeno"
+      color: "&a"
+    MEDIUM:
+      name: "Médio"
+      color: "&e"
+    LARGE:
+      name: "Grande"
+      color: "&6"
+    HUGE:
+      name: "Enorme"
+      color: "&c"
+  # Restrições de container — tamanhos bloqueados por tipo de bloco
+  container-restrictions-map:
+    SHULKER_BOX:
+      - HUGE
+    BUNDLE:
+      - HUGE
+      - LARGE
+  # Peso e tamanho por comida (Material: weight-kg em kg, size)
+  foods:
+    APPLE:
+      weight-kg: 0.0567
+      size: SMALL
+    BREAD:
+      weight-kg: 0.1134
+      size: MEDIUM
+    COOKED_BEEF:
+      weight-kg: 0.2268
+      size: MEDIUM
+    COOKED_PORKCHOP:
+      weight-kg: 0.2268
+      size: MEDIUM
+    COOKED_CHICKEN:
+      weight-kg: 0.1701
+      size: MEDIUM
+    COOKED_MUTTON:
+      weight-kg: 0.2268
+      size: MEDIUM
+    COOKED_COD:
+      weight-kg: 0.1134
+      size: SMALL
+    COOKED_SALMON:
+      weight-kg: 0.1134
+      size: SMALL
+    COOKED_RABBIT:
+      weight-kg: 0.0850
+      size: SMALL
+    BAKED_POTATO:
+      weight-kg: 0.0850
+      size: SMALL
+    GOLDEN_APPLE:
+      weight-kg: 0.1701
+      size: MEDIUM
+    ENCHANTED_GOLDEN_APPLE:
+      weight-kg: 0.2268
+      size: LARGE
+    CAKE:
+      weight-kg: 0.4536
+      size: LARGE
+    PUMPKIN_PIE:
+      weight-kg: 0.3402
+      size: LARGE
+    COOKIE:
+      weight-kg: 0.0142
+      size: TINY
+    MELON_SLICE:
+      weight-kg: 0.0567
+      size: SMALL
+    SWEET_BERRIES:
+      weight-kg: 0.0142
+      size: TINY
+    GLOW_BERRIES:
+      weight-kg: 0.0142
+      size: TINY
+    CARROT:
+      weight-kg: 0.0567
+      size: SMALL
+    POTATO:
+      weight-kg: 0.0850
+      size: SMALL
+    BEETROOT:
+      weight-kg: 0.0567
+      size: SMALL
+    DRIED_KELP:
+      weight-kg: 0.0283
+      size: TINY
+    BEEF:
+      weight-kg: 0.2835
+      size: LARGE
+    PORKCHOP:
+      weight-kg: 0.2835
+      size: LARGE
+    CHICKEN:
+      weight-kg: 0.1701
+      size: MEDIUM
+    MUTTON:
+      weight-kg: 0.2268
+      size: MEDIUM
+    COD:
+      weight-kg: 0.1134
+      size: SMALL
+    SALMON:
+      weight-kg: 0.1134
+      size: SMALL
+    RABBIT:
+      weight-kg: 0.0850
+      size: SMALL
+    MUSHROOM_STEW:
+      weight-kg: 0.2268
+      size: MEDIUM
+    RABBIT_STEW:
+      weight-kg: 0.3402
+      size: LARGE
+    BEETROOT_SOUP:
+      weight-kg: 0.2268
+      size: MEDIUM
+    SUSPICIOUS_STEW:
+      weight-kg: 0.2268
+      size: MEDIUM
+
+# ── Decay por Peso ──────────────────────────────────────────
+# Quando ativo, stacks de comida perdem itens conforme decaem.
+# loss-interval: a cada X% de decay, perde 1 item (0.25 = a cada 25%)
+decay-by-weight:
+  enabled: false
+  loss-interval: 0.25
+
+# ── Sistema de Nutrição ─────────────────────────────────────
+# 5 grupos alimentares (Grãos, Frutas, Vegetais, Proteína, Laticínios).
+# Comer variado aumenta vida máxima. Nutrição decai com o tempo.
+nutrition:
+  enabled: true
+  # Teto de ganho para uma refeicao forte.
+  # Alimentos leves sobem menos e itens em porcoes dividem esse valor.
+  gain-per-food: 20.0
+  decay-per-minute: 0.5
+  # Bônus de vida padrão por grupo ativo (se não configurar bonuses por grupo)
+  health-bonus-per-group: 2.0
+  reset-on-death: true
+  # Nível mínimo de nutrição para ativar bônus do grupo (0-100)
+  activation-threshold: 25.0
+  # Grupos alimentares configuráveis
+  # Cada grupo pode ter bônus individuais:
+  #   health-bonus: vida extra quando grupo está ativo
+  #   effects: lista de efeitos de poção "TIPO:nível:duração_ticks"
+  #   mmocore-stats: mapa de stats MMOCore stat -> valor
+    # Bonus extras opcionais por grupo:
+    #   activation-threshold: override do threshold global
+    #   attributes: bonus flat de atributos vanilla, ex. MAX_HEALTH, ATTACK_DAMAGE
+    #   mmocore-stats: stats de MMOCore/MythicLib aplicados enquanto o grupo estiver ativo
+    groups:
+    GRAIN:
+      display-name: "Grãos"
+      color: "&e"
+      icon: WHEAT
+        health-bonus: 2.0
+        # activation-threshold: 30.0
+        effects:
+          - "SATURATION:0:100"
+        # attributes:
+        #   MAX_HEALTH: 2.0
+        # mmocore-stats:
+        #   MAX_MANA: 25.0
+        foods:
+        - BREAD
+        - COOKIE
+        - CAKE
+        - PUMPKIN_PIE
+        - BAKED_POTATO
+    FRUIT:
+      display-name: "Frutas"
+      color: "&a"
+      icon: APPLE
+      health-bonus: 1.0
+      effects:
+        - "SPEED:0:200"
+      foods:
+        - APPLE
+        - MELON_SLICE
+        - SWEET_BERRIES
+        - GLOW_BERRIES
+        - CHORUS_FRUIT
+    VEGETABLE:
+      display-name: "Vegetais"
+      color: "&2"
+      icon: CARROT
+      health-bonus: 2.0
+      effects:
+        - "REGENERATION:0:100"
+      foods:
+        - CARROT
+        - POTATO
+        - BEETROOT
+        - DRIED_KELP
+        - GOLDEN_CARROT
+    PROTEIN:
+      display-name: "Proteína"
+      color: "&c"
+      icon: COOKED_BEEF
+      health-bonus: 3.0
+      effects:
+        - "DAMAGE_RESISTANCE:0:200"
+      foods:
+        - COOKED_BEEF
+        - COOKED_PORKCHOP
+        - COOKED_CHICKEN
+        - COOKED_MUTTON
+        - COOKED_COD
+        - COOKED_SALMON
+        - COOKED_RABBIT
+        - BEEF
+        - PORKCHOP
+        - CHICKEN
+        - MUTTON
+        - COD
+        - SALMON
+        - RABBIT
+    DAIRY:
+      display-name: "Laticínios"
+      color: "&f"
+      icon: MILK_BUCKET
+      health-bonus: 2.0
+      effects:
+        - "ABSORPTION:0:200"
+      foods:
+        - MUSHROOM_STEW
+        - RABBIT_STEW
+        - BEETROOT_SOUP
+        - SUSPICIOUS_STEW
+        - MILK_BUCKET
+
+# ── Receitas ────────────────────────────────────────────────
+recipes:
+  vinegar:
+    enabled: true
+
+# ── Sistema de Qualidade ────────────────────────────────────
+# Thresholds e labels para qualidade de processamento multibloco.
+quality:
+  # Tier 1 (Bom) — bonus mínimo necessário
+  tier1-threshold: 5.0
+  tier1-prefix: "&a✔ Bom "
+  tier1-lore: "&a✔ Boa Qualidade"
+  # Tier 2 (Excelente) — bonus mínimo necessário
+  tier2-threshold: 20.0
+  tier2-prefix: "&6⭐ Excelente "
+  tier2-lore: "&e⭐ Qualidade Excelente"
+  # Tier 0 (Comum) — abaixo de tier1
+  tier0-prefix: "&7Comum "
+  tier0-lore: "&7Qualidade Comum"
+
+# ── Estruturas Multibloco ───────────────────────────────────
+# Sistema de construções TFC-style para preservação de comida.
+# O jogador constrói a estrutura no mundo e usa clique direito
+# no bloco âncora com comida para processar.
+# Use /fd blueprint <tipo> para ver o holograma da estrutura.
+#
+# Receitas são configuradas em recipes.yml
+multiblock:
+  enabled: true
+  # Raio em blocos para notificar jogadores quando uma maquina termina
+  notification-radius: 32
+  # Minutos apos conclusao para o alimento estragar na maquina (0 = desativado)
+  abandonment-minutes: 30
+  # Timeout de sessão de construção em minutos (0 = sem timeout)
+  session-timeout-minutes: 10
+  # Raio em blocos para bonus de proximidade (0 = desativado)
+  proximity-radius: 8
+  # Bonus de qualidade por tick (1 tick = 1 segundo) quando jogador esta proximo
+  proximity-bonus-per-tick: 0.3
+  # Penalidade de qualidade por evento QTE perdido
+  qte-miss-penalty: 5.0
+  # ── Sistema de QTE (Eventos Interativos) ──────────────────
+  # Eventos opcionais que dão bônus de qualidade.
+  # Perder um evento NÃO causa penalidade — apenas perde o bônus.
+  qte:
+    # Intervalo mínimo entre eventos (segundos). 180 = a cada 3 minutos.
+    interval-seconds: 180
+    # Tempo que o jogador tem para resolver o evento (segundos). 120 = 2 minutos.
+    duration-seconds: 120
+    # Chance (0.0 a 1.0) de um evento aparecer quando o intervalo é atingido.
+    chance: 0.5
+    # Máximo de eventos por ciclo de processamento.
+    max-per-cycle: 3
+    # Bônus de qualidade ganho por evento resolvido.
+    bonus-per-event: 10.0
+  # ── Multi-Slot (itens simultâneos por máquina) ────────────
+  # Permite colocar múltiplos itens na mesma máquina baseado no nível MMOCore.
+  multi-slot:
+    # Slots base para todos os jogadores (sem MMOCore ou sem nível suficiente).
+    base-slots: 1
+    # Profissão MMOCore usada para desbloquear mais slots.
+    profession: "cooking"
+    # Tiers de slots desbloqueados por nível da profissão.
+    tiers:
+      tier1:
+        level: 5
+        slots: 2
+      tier2:
+        level: 15
+        slots: 3
+      tier3:
+        level: 30
+        slots: 4
+
+  # Tiers de complexidade das máquinas (nível MMOCore da profissão acima).
+  # Tier 1 = estrutura básica (todos), Tier 2 = intermediária, Tier 3 = avançada.
+  machine-tiers:
+    tier2-level: 10
+    tier3-level: 25
+
+  structures:
+    secador:
+      enabled: true
+      processing-minutes: 30
+      display-name: "Secador"
+      description:
+        - "&7Dois postes de cerca e três"
+        - "&7lajes de madeira no topo."
+        - ""
+        - "&fBlocos:"
+        - "&8▸ &f3x Oak Slab"
+        - "&8▸ &f2x Oak Fence"
+    defumeiro:
+      enabled: true
+      processing-minutes: 20
+      display-name: "Defumeiro"
+      description:
+        - "&7Camera de defumacao com"
+        - "&7fogueira central e paredes."
+        - ""
+        - "&fBlocos:"
+        - "&8▸ &f1x Campfire &8(centro)"
+        - "&8▸ &f4x Bricks &8(base)"
+        - "&8▸ &f4x Brick Wall &8(paredes)"
+        - "&8▸ &f1x Brick Slab &8(topo)"
+      # Materiais aceitos como combustível
+      fuel-materials:
+        - COAL
+        - CHARCOAL
+    barril-de-sal:
+      enabled: true
+      processing-minutes: 15
+      display-name: "Barril de Sal"
+      description:
+        - "&7Barril cercado de areia das almas"
+        - "&7com tampa de alcapao de pinheiro."
+        - ""
+        - "&fBlocos:"
+        - "&8▸ &f1x Barrel &8(centro)"
+        - "&8▸ &f4x Soul Sand &8(redor)"
+        - "&8▸ &f1x Spruce Trapdoor &8(tampa)"
+      # Material usado como sal
+      salt-material: SUGAR
+      # Quantidade de sal necessária
+      salt-required: 2
+    tina-de-conserva:
+      enabled: true
+      processing-minutes: 10
+      display-name: "Tina de Conserva"
+      description:
+        - "&7Caldeirao sobre fogueira"
+        - "&7com moldura de toras de carvalho."
+        - ""
+        - "&fBlocos:"
+        - "&8▸ &f1x Cauldron &8(centro)"
+        - "&8▸ &f1x Campfire &8(embaixo)"
+        - "&8▸ &f4x Stripped Oak Log &8(redor)"
+      # Material para água
+      water-material: WATER_BUCKET
+      # Material de retorno ao usar balde
+      water-return: BUCKET
+      # Material para vinagre
+      vinegar-material: GLASS_BOTTLE
+      # Materiais aceitos como combustível
+      fuel-materials:
+        - COAL
+        - CHARCOAL
+    prensa-de-selagem:
+      enabled: true
+      processing-minutes: 15
+      display-name: "Prensa de Selagem"
+      description:
+        - "&7Base de pedra polida com"
+        - "&7pistao de prensagem no topo."
+        - ""
+        - "&fBlocos:"
+        - "&8▸ &f5x Smooth Stone &8(base cruz)"
+        - "&8▸ &f1x Piston &8(2 acima)"
+      # Material de cera
+      wax-material: HONEYCOMB
+
+# ── Receitas de Caldeirão ───────────────────────────────────
+# Clique direito em caldeirão com água + comida para criar ensopados.
+cauldron-recipes:
+  enabled: true
+  max-ingredients: 3
+  # Material resultante do ensopado
+  result-material: RABBIT_STEW
+  # Nome do resultado
+  result-name: "&6Ensopado Artesanal"
+  # Lore do resultado
+  result-lore:
+    - "&7Cozido com {count} ingredientes"
+
+# ── Receita de Vinagre ──────────────────────────────────────
+# Receita shapeless para criar vinagre (usado na conservação).
+vinegar:
+  enabled: true
+  # Material do resultado
+  result-material: HONEY_BOTTLE
+  result-name: "&eVinagre"
+  result-lore:
+    - "&7Usado para conservar alimentos"
+  # Ingredientes (lista de materials)
+  ingredients:
+    - GLASS_BOTTLE
+    - SUGAR
+
+# ── GUI Interativo ─────────────────────────────────────────
+# Sistema de menus visuais para interação com o plugin.
+gui:
+  enabled: true
+  # Shift + clique direito com comida na mão abre a inspeção GUI
+  inspect-on-shift-click: true
+  # Títulos das GUIs
+  titles:
+    inspection: "&f🔍 Inspecao de Alimento"
+    nutrition: "&6&l🍎 Nutricao"
+    cookbook: "&8&lLivro de Receitas"
+    multiblock-inspection: "&f⚒ {machine}"
+    admin: "&8⚙ Admin - FoodDecay"
+
+# ── Mensagens ───────────────────────────────────────────────
+# Mensagens são configuradas em messages.yml
+
+# ── Model Stages (Estágios Visuais) ─────────────────────────
+# Define CustomModelData para cada estágio de apodrecimento e congelamento.
+# Cada lista tem N valores — o progresso é dividido igualmente.
+# Com 4 valores: estágio 0 = 0-24%, 1 = 25-49%, 2 = 50-74%, 3 = 75-100%.
+# Use 0 para manter o modelo original nesse estágio.
+# Freeze: o level é normalizado pelo efeito máximo de gelo (6 blocos = 100%).
+# Prioridade: spoiled (receita) > freeze > decay.
+model-stages:
+  # Exemplo — descomente e configure com seus CustomModelData:
+  # COOKED_BEEF:
+  #   decay: [0, 100102, 100103, 100104]
+  #   freeze: [0, 100106, 100107, 100108]
+  # BREAD:
+  #   decay: [0, 200102, 200103, 200104]
+  #   freeze: [0, 200106, 200107, 200108]
+
+# ── Tempos de Expiração ─────────────────────────────────────
+# Tempo base em minutos na temperatura normal.
+# -1 = nunca expira
+# Comidas não listadas usam 'default-expiration-minutes' se track-all-food: true
+expiration-minutes:
+  # Carnes cozidas
+  COOKED_BEEF: 90
+  COOKED_PORKCHOP: 90
+  COOKED_CHICKEN: 60
+  COOKED_MUTTON: 80
+  COOKED_COD: 45
+  COOKED_SALMON: 45
+  COOKED_RABBIT: 70
+
+  # Assados e pães
+  BREAD: 120
+  BAKED_POTATO: 90
+  COOKIE: 180
+  PUMPKIN_PIE: 150
+  CAKE: 60
+
+  # Carnes cruas
+  BEEF: 30
+  PORKCHOP: 30
+  CHICKEN: 20
+  MUTTON: 30
+  COD: 20
+  SALMON: 20
+  RABBIT: 25
+
+  # Frutas e vegetais
+  APPLE: 240
+  MELON_SLICE: 120
+  SWEET_BERRIES: 100
+  CARROT: 180
+  POTATO: 180
+  BEETROOT: 150
+
+  # Sopas e ensopados
+  MUSHROOM_STEW: 40
+  RABBIT_STEW: 40
+  BEETROOT_SOUP: 40
+  SUSPICIOUS_STEW: 30
+
+  # Nunca expiram
+  ROTTEN_FLESH: -1
+  SPIDER_EYE: -1
+  GOLDEN_APPLE: -1
+  ENCHANTED_GOLDEN_APPLE: -1
+  GOLDEN_CARROT: -1
+
+  # Outros
+  DRIED_KELP: 360

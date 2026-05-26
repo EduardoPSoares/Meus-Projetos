@@ -1,0 +1,59 @@
+title: "<light_purple>ᴅᴇʙᴜɢ</light_purple> <dark_gray>• <white><name>"
+
+basic-info:
+  name: "<gold>📋 ɪɴꜰᴏʀᴍᴀᴄᴏᴇs ʙᴀsɪᴄᴀs</gold>"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - ""
+    - "<gray>» ɴᴏᴍᴇ: <white><name>"
+    - "<gray>» ᴛɪᴘᴏ: <white><type>"
+    - "<gray>» ᴠɪᴅᴀ: <red><health><dark_gray>/<gray><max_health> <red>❤"
+    - ""
+    - "<dark_gray>ᴜᴜɪᴅ: <dark_gray><uuid>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+mythic-info:
+  name: "<light_purple>☠ ɪɴꜰᴏ ᴅᴏ ᴍʏᴛʚɪᴄᴍᴏʙs</light_purple>"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - ""
+    - "<gray>» ɪɴᴛᴇʀɴᴏ: <light_purple><internal_name>"
+    - "<gray>» ᴇxɪʙɪᴄᴀᴏ: <white><display_name>"
+    - "<gray>» ɴɪᴠᴇʟ: <yellow>⭐ <level>"
+    - "<gray>» ꜰᴀᴄᴄᴀᴏ: <aqua><faction>"
+    - "<gray>» ᴘᴏsᴛᴜʀᴀ: <gold><stance>"
+    - ""
+    - "<gray>» ᴠɪᴅᴀ: <red><health><dark_gray>/<gray><max_health> <red>❤"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+vanilla-info:
+  name: "<gray><bold>🎲 ᴇɴᴛɪᴅᴀᴅᴇ ᴠᴀɴɪʟʟᴀ</bold>"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - ""
+    - "<gray>ᴇsᴛᴀ ᴇɴᴛɪᴅᴀᴅᴇ <yellow>ɴᴀᴏ<gray> ᴇ ᴜᴍ ᴍʏᴛʚɪᴄᴍᴏʙ."
+    - "<gray>ᴀᴘᴇɴᴀs ᴅᴀᴅᴏs ᴘᴀᴅʀᴏᴇs ᴅᴏ ʙᴜᴋᴋɪᴛ."
+    - ""
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+attribute:
+  name: "<light_purple>✦ <attribute></light_purple>"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <white><value>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+equipment:
+  helmet: "<gold>🧢 ᴄᴀᴘᴀᴄᴇᴛᴇ</gold>"
+  chestplate: "<gold>👕 ᴘᴇɪᴛᴏʀᴀʟ</gold>"
+  leggings: "<gold>👖 ᴄᴀʟᴄᴀ</gold>"
+  boots: "<gold>👢 ʙᴏᴛᴀs</gold>"
+  main-hand: "<red>⚔ ᴍᴀᴏ ᴘʀɪɴᴄɪᴘᴀʟ</red>"
+  off-hand: "<blue>🛡 ᴍᴀᴏ sᴇᴄᴜɴᴅᴀʀɪᴀ</blue>"
+  empty: "<dark_gray>❌ ᴠᴀᴢɪᴏ"
+
+navigation:
+  previous: "<light_purple>◀ ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</light_purple>"
+  next: "<light_purple>ᴘʀᴏxɪᴍᴀ ᴘᴀɢɪɴᴀ ▶</light_purple>"
+  close: "<red><bold>✘ ꜰᴇᴄʚᴀʀ</bold>"
+  page-info: "<dark_gray>ᴘᴀɢɪɴᴀ <white><current><dark_gray>/<white><total>"

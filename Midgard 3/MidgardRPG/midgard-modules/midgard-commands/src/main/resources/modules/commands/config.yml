@@ -1,0 +1,26 @@
+# MidgardCommands Configuration
+# Configurações do módulo de gerenciamento de comandos
+
+# Habilitar validação automática na inicialização
+auto-validate: true
+
+# Habilitar logging detalhado de registro de comandos
+verbose-logging: false
+
+# Habilitar detecção de comandos duplicados
+detect-duplicates: true
+
+# Habilitar sincronização automática com o sistema de help
+sync-help-system: true
+
+# Categorias de comandos a serem escaneadas
+scan-categories:
+  - PLAYER
+  - MODERATOR
+  - ADMIN
+
+# Módulos a serem ignorados no escaneamento
+ignored-modules: []
+
+# Comandos desabilitados (nome do comando)
+disabled-commands: []

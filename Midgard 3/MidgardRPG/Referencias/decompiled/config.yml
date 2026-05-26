@@ -1,0 +1,5498 @@
+# *********************************************************** #
+#                                                            #
+# Mythical Races Configuration File - Version 2.7.4-SE-V1     #
+#                                                            #
+# *********************************************************** #
+
+# &l-----&l-----&l----- Basic Attributes &l-----&l-----&l-----
+# List: MAX_HEALTH, KNOCKBACK_RESISTANCE, MOVEMENT_SPEED,
+#       ATTACK_DAMAGE, ATTACK_SPEED, ARMOR,
+#       ARMOR_TOUGHNESS, LUCK
+# (if you are using 1.21 or higher there are more default player attributes, you can find them in the spigot javadocs)
+
+# Potion effects: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+
+# &l-----&l-----&l----- Race Configuration &l-----&l-----&l-----
+# To add a new race, use the following structure.
+# Replace 'raceName' and other placeholders with your desired values.
+
+# raceName:
+#   displayName: 'DisplayNameOfRace'
+#   material: 'MaterialForGUI'
+#   guiPage: 1 # GUI page to display race
+#   isSubRace: false # Is this a subrace?
+#   subRaceType: '' # Parent race (only if 'isSubRace' is true)
+#   treeSlot: 4 # Slot in /races tree
+#   levelRequire: 0 # Required level to choose race
+#   slot: 11 # Slot for material in GUI
+#   lvlType: 'RUNNING' # Leveling method for race
+#   maxLevel: 100 # Maximum attainable level for race
+#   gainXP: 2 # XP gained per event occurrence for 'lvlType'
+#   xpPerLevel: 24 # XP required for next level (multiplier for current level)
+#   # Add lore (flavor text) for the race here.
+#   lore:
+#     - '&4&l----- &c&lRace Name Race &4&l-----'
+#     - '&cDescription and stuff'
+#     - ' '
+#     - '&5&l----- Day Time Passive Effects &l-----'
+#     - 'Day time effects and stuff'
+#     - '&5&l----- Night Time Passive Effects &l-----'
+#     - 'Night time effects and stuff'
+#    # Specify potion effects, attributes and conditions for day and night below.
+#    # Add 'null' if an area isn't used.
+#    # Add 'MOVEMENT_SPEED' to 'dayPassiveGenericAttributes' or 'nightPassiveGenericAttributes'.
+#    # Adjust base attribute values as needed. Use 'ALL Y > -1000 -1 ALL ALL ALL ALL' for a standard setting.
+#    dayPassivePotionEffects:
+#      - null
+#    dayPassivePotionEffectsBase:
+#      - null
+#    dayRaceDataPotion:
+#      - null
+#    dayPassiveGenericAttributes:
+#      - 'MOVEMENT_SPEED'
+#    dayPassiveGenericAttributesBase:
+#      - 0.1
+#    dayRacePassiveAttributesLevel:
+#      - 0.0
+#    dayRaceDataAttribute:
+#      - 'ALL Y > -1000 -1 ALL ALL ALL ALL'
+#    nightPassivePotionEffects:
+#      - null
+#    nightPassivePotionEffectsBase:
+#      - null
+#    nightRaceDataPotion:
+#      - null
+#    nightPassiveGenericAttributes:
+#      - 'MOVEMENT_SPEED'
+#    nightPassiveGenericAttributesBase:
+#      - 0.1
+#    nightRacePassiveAttributesLevel:
+#      - 0.0
+#    nightRaceDataAttribute:
+#      - 'ALL Y > -1000 -1 ALL ALL ALL ALL'
+
+#   # Execute a console command when switching races, using {player} for player's name.
+#   # Add '====' at the end to execute the command when leaving the race.
+#   executeCommandUponSwitching:
+#     - null
+
+# &l-----&l-----&l----- Data Structure &l-----&l-----&l-----
+# First arg: BIOMES ('ALL' for all biomes, or specify biome names)
+# Second arg: 'Y' (Player's Y coordinate)
+# Third arg: Comparison operator for Y
+# Fourth arg: Y value for comparison
+# Fifth arg: Amplifier adjustment for out-of-area effect (-1 to remove potion effects)
+# Sixth arg: Position of blocks for effect application ('ALL', 'ABOVE', 'MID', 'BELOW', 'AROUND')
+# Seventh arg: Type of blocks required for effect application
+# Eighth arg: Weather condition for effect application ('TRUE', 'FALSE', 'ALL')
+# Ninth arg: World name for effect application ('ALL', or specify world names)
+
+# Example: 'SAVANNA,ANOTHERBIOME Y > -100 -1 ALL STONE,ANOTHERBLOCK ALL world,ANOTHERWORLD'
+
+# &l-----&l-----&l----- Leveling Types &l-----&l-----&l-----
+# HUNTING, RUNNING, HARVESTING, BUILDER, FISHING, EXCAVATION, MINER, WOODCUTTER, TANKER,
+# SWIMMING, FLYING, DIGGER, ARCHER
+
+# &l-----&l-----&l----- Material Setup &l-----&l-----&l-----
+# Material can be a regular Minecraft material, a material with custom ID, or a URL from https://textures.minecraft.net/
+# Examples: 'MATERIAL', 'MATERIAL:ID', 'https://textures.minecraft.net/texture/5193c89d1df679854f33c2215247b676a159d5395392d0c61b8476f813d9# For example '&7This is a message with hex colour codes and normal colour codes #00FF00/ This is some green text &6This is some gold text'
+# You can see in the example that the hex colour code is '#00FF00/' and the normal colour code is '&6'
+# You also see that the single quotation marks are around the whole message
+# Now if you don't want the single quotation marks around the whole message, then you need to put double quotation marks around the hex colour code
+# For example '&7This is a message with hex colour codes and normal colour codes "#00FF00/" This is some green text &6This is some gold text'
+# You can see in the example that the hex colour code is '"#00FF00/"' and the normal colour code is '&6'
+# You also see that the double quotation marks are around the hex colour code
+
+# Remember to save and reload the server or restart the server after making changes to the config to make the changes take effect
+# Also, always make a backup of your config before making changes in case something goes wrong
+
+# If you need help with the plugin, don't hesitate to join the support discord server and ask for help
+# We have a friendly community who are always willing to help each other out
+# Just remember to be polite and respectful when asking for help
+
+
+# Special Data Types:
+# These examples explain how to specify conditions for effects. The syntax is 'ALL Y > -1000 -1 CONDITION_PARAMETER CONDITION_TYPE ALL ALL'
+#   1. 'VAMPIRE VAMPIRE' - Effect is applied if all blocks above the player to the sky limit isn't a solid block.
+#   2. 'CUSTOM[num] [INSERT BLOCKS HERE]' - Effect is applied if certain blocks are within radius '[num]' of the player. Replace '[num]' with the radius. Be cautious about high numbers as it may impact server performance.
+#   3. 'LIGHTA[num] LIGHT' - Effect is applied if the light level is greater than '[num]'. Light levels range from 0 to 14.
+#   4. 'LIGHTB[num] LIGHT' - Effect is applied if the light level is lower than '[num]'. Light levels range from 0 to 14.
+#   5. 'TEMPA[num] TEMP' - Effect is applied if the temperature level is higher than '[num]'.
+#   6. 'TEMPB[num] TEMP' - Effect is applied if the temperature level is lower than '[num]'.
+
+# Default Race:
+# To assign a default race for new players, use the 'defaultRace' parameter. Use '{randomRace}' for a random race and ensure it is within single quotes.
+
+# WorldGuard Support:
+# This plugin supports two new flags in WorldGuard: 'mrbase-potionandattributes' and 'allow-mrabilities'.
+# 'mrbase-potionandattributes' - Disables the potion and attribute effects from the plugin.
+# 'allow-mrabilities' - Disables the abilities from MRPremiumAddons.
+
+# HEX Colour Codes:
+# HEX color codes should be used with a '#' before the color code and '/' after the hex code. For example, '#FF0000/'.
+# There should not be any spaces between the '#' and the hex code, and between the hex code and the '/'.
+# HEX color codes should not be surrounded by single quotes. The entire message should be surrounded by single quotes instead.
+# The '&' symbol can be used for normal colour codes.
+
+# Wiki site: www.korbsti.com
+# There are two pages for you to check out, Mythical Races and MRPremiumAddons
+
+# And finally, remember to have fun with the plugin! It's a great way to add some extra depth and complexity to your Minecraft server
+# We hope you enjoy using it as much as we enjoyed creating it!
+# Thank you for choosing Mythical Races for your server!
+
+other:
+
+   # Store data by UUID, if false store data by player names
+   dataByUUID: true
+
+
+   # Cool down timer, is in MINUTES, NEVER PUT THIS NUMBER INTO NEGATIVES
+   cooldown: 1440
+   
+   # default race upon joining
+   # If you want a random default race replace this with '{randomRace}'
+   # Do not forget the single quotation marks aka these things -> '
+   # or else the random thing wont work
+   defaultRace: 'Human'
+   
+   # Force the player to choose a race inside the GUI when the first join the server
+   forceRace: false
+
+   # Define what world the forceRace will apply
+   # If you want it to apply to all worlds, then just put 'ALL'
+   # If you want it to apply to a specific world, then put the world name
+   forceRaceWorld: 'ALL'
+   
+   # When night cycle starts in ticks
+   nightStart: 12610
+   
+   # When night cycle ends
+   nightEnd: 23041
+   
+   # If you are looking for "day" its just the numbers thats not inbetween night and nightTwo
+   
+   # Every X amount of ticks, loop through the server and see if the player has any potion effects that they should have
+   # if they do not have it then add potion effects of race to the player
+   timerCheckingPotionEffects: 100
+   
+   # Gui display name
+   guiName: 'Choosing Race'
+   
+   # Gui head player display name
+   guiPlayerDisplay: 'You'
+   
+   # Gui slot number for player head
+   guiPlayerDisplayNumber: 4
+   
+   # Amount of slots the GUI has, max is 54
+   guiSlots: 54
+
+   # Amount of slots a tree GUI has (for tree races - when typing in /races tree)
+   treeGuiSlots: 54
+
+   # Disable the display names in the GUI for both /races gui and /races tree
+   # This will not put the display name of the race on the item in the GUIs
+   disableGuiDisplayNames: false
+
+   # Item for forwardClick
+   forwardClickItem: 'PAPER'
+   
+   # When this slot is clicked, open up next GUI list
+   forwardClick: 53
+   
+   # Next page 
+   forwardClickDisplay: 'Next page'
+   
+   # Paper item
+   backwardClickItem: 'PAPER'
+
+   # Previous page
+   backwardClick: 45
+   
+   backwardClickDisplay: 'Previous page'
+
+   # Disable the forward and backward items/click inside the race GUI
+   enableForwardAndBackwardClick: true
+
+  # Lore hovering over the player head, yes this supports PAPI
+   guiPlayerLore:
+      - '&7&l» &e&lRace: &f%mythicalraces_display_race_name% &7&l«'
+      - '&7&l» &e&lLevel: &f%mythicalraces_get_xp/max_xp_class% &7&l«'
+
+   treeNonSlots: 'BLACK_STAINED_GLASS_PANE'
+   
+   treeName: 'Your race tree'
+   
+   # Show X amount of leaderboard players 
+   leaderboardNum: 20
+   
+   # Check if there is an update for the plugin
+   checkUpdates: true
+
+   # Worlds where MRPremiumAddons Abilities and Races/Classes Mythical Races do not apply their abilities in that world
+   blacklisted-worlds:
+     - 'null'
+
+   # Generalize custom biome names to vanilla biome names
+   # This affects /races biome, and the "data" for all races/abilities
+   enableGeneralization: true
+
+   # Reset attributes when player leaves and when server reloads
+   # This is to prevent long-term effects if the plugin is ever uninstalled
+   rAttributesLeaveReset: true
+
+   # Reset attributes when switching races
+   # This is so attributes don't carry over into another race
+   rAttributesRacesReset: true
+
+   # Reset attributes when switching classes
+   # This is so attributes don't carry over into another class
+   rAttributesClassesReset: true
+
+   # Blacklisted worlds reset attributes
+   # When a player is switching over to a blacklisted world, reset the attributes
+   rAttributesBlacklistedWorldsReset: true
+
+   # Reset attributes when crossing regions (for worldguard flag)
+   rAttributesWhenCrossingRegionsReset: true
+
+   adminGui:
+      enabled: true
+      size: 45
+      mainTitle: '&4MythicalRaces Admin (BETA)'
+      playerSelectorTitle: '&4Admin | Select Player'
+      playerToolsTitle: '&4Admin | Managing {player}'
+      raceSelectorTitle: '&4Admin | Race -> {player}'
+      classSelectorTitle: '&4Admin | Class -> {player}'
+      kitSelectorTitle: '&4Admin | Kits -> {player}'
+      pluginToolsTitle: '&4Admin | Plugin Tools'
+      guiShortcutsTitle: '&4Admin | Shortcuts'
+      infoToolsTitle: '&4Admin | Info Tools'
+      kitToolsTitle: '&4Admin | Kit Tools'
+      editorTitlePrefixes:
+        - 'Race Editor |'
+        - 'Race Editor'
+        - 'List | '
+        - 'Ability Builder'
+        - 'Ability Reference'
+      filler: 'GRAY_STAINED_GLASS_PANE'
+      questManagerTitle: '&4Admin | Quest Manager'
+      questEditorTitle: '&4Admin | Edit Quest -> {quest}'
+      labels:
+        back: '&cBack'
+        close: '&4Close'
+        next: '&aNext Page'
+        previous: '&cPrevious Page'
+        page: '&7Page {page}/{pages}'
+      messages:
+        disabled: '&cThe admin GUI is disabled in the configuration.'
+        needPlayer: '&cThis command can only be used by players.'
+        promptNumeric: '&eEnter the value to {action} for {player}. Type &ccancel &eto abort.'
+        invalidNumber: '&cPlease enter a valid number or type cancel.'
+        actionCancelled: '&cAction cancelled.'
+        raceLevelSet: '&aSet {player}&a''s race level to {value}.'
+        classLevelSet: '&aSet {player}&a''s class level to {value}.'
+        raceXpAdded: '&aAdded {value} race XP to {player}.'
+        classXpAdded: '&aAdded {value} class XP to {player}.'
+        noKits: '&cNo kits are configured.'
+        noPlayers: '&cThere are no players online.'
+        targetOffline: '&c{player} is no longer online.'
+        noTarget: '&cSelect a player first.'
+        cooldownReset: '&aReset cooldown for {player}.'
+        playerReset: '&aReset race and class data for {player}.'
+        attributesReset: '&aRemoved attribute modifiers from {player}.'
+        togglePlayer: '&aToggled abilities for {player}.'
+        kitGiven: '&aAttempted to give {kit} to {player}.'
+        recipeExists: '&cA recipe named {kit} already exists.'
+        questExists: '&cA quest named {kit} already exists.'
+        reload: '&aCommand executed.'
+        help: '&aHelp command executed.'
+        leaderboard: '&aLeaderboard command executed.'
+        raceSet: '&aSet {player}&a''s race to {race}.'
+        classSet: '&aSet {player}&a''s class to {class}.'
+
+   playerInfoGui:
+      enabled: true
+      command: 'profilegui'
+      aliases:
+        - 'playergui'
+      permission: ''
+      title: '&dMythical Profile'
+      size: 27
+      filler:
+         enabled: true
+         material: 'BLACK_STAINED_GLASS_PANE'
+         name: ' '
+      messages:
+         disabled: '&cThe player info GUI is disabled.'
+         needplayer: '&cThis command can only be used by players.'
+         nopermission: '&cYou do not have permission to open this GUI.'
+      items:
+         overview:
+            slot: 13
+            material: 'PLAYER_HEAD'
+            playerHead: true
+            name: '&d{player}'
+            lore:
+              - '&7Race: &f{race_display}'
+              - '&7Level: &f{race_level}'
+              - '&7XP: &f{race_xp}&7/&f{race_xp_required}'
+              - '&7Level Type: &f{race_level_type}'
+              - '&7Class: &f{class_display}'
+              - '&7Class Level: &f{class_level}'
+              - '&7Class XP: &f{class_xp}&7/&f{class_xp_required}'
+              - '&7Class Level Type: &f{class_level_type}'
+         race-details:
+            slot: 11
+            material: 'ENCHANTED_BOOK'
+            name: '&bRace Information'
+            lore:
+              - '{race_lore}'
+         class-details:
+            slot: 15
+            material: 'BOOK'
+            name: '&6Class Information'
+            lore:
+              - '{class_lore}'
+         class-traits:
+            slot: 22
+            material: 'PAPER'
+            name: '&aClass Traits'
+            lore:
+              - '&aSkills'
+              - '{class_skills}'
+              - ' '
+              - '&aAttributes'
+              - '{class_attributes}'
+
+
+   # When switching to a race and a command is executed, filter out the command in console (it will still be executed just not shown in console)
+   enableLogFilter: true
+
+   # This feature is still experimental and, bugs may occur using MySQL
+   # It has been tested as much as it can be however be warned that bug may occur
+   # Please report them if bugs to occur
+   # Do note that all jar files must have the same configuration inside all the servers for the SQL to work properly
+   useMySQL: false
+
+   # Your connection string goes here, remove username and password from your connection string
+   database: ''
+   
+   username: ''
+   
+   password: ''
+
+
+races:
+  Elf:
+    displayName: '&2Elf'
+    material: ENCHANTED_BOOK
+    guiPage: 1
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 10
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&2&l----- &a&l&lElf Race &2&l-----'
+      - '&aElves have the reputation of divine beauty.'
+      - '&aAs well as having magical powers.'
+      - '&aThey generally like to travel in small groups.'
+      - '&aElfs are quick on their feet but fragile'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump III'
+      - '&5 ◆ Max health is reduced by two hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump III'
+      - '&5 ◆ Max health is reduced by two hearts'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  SuperiorElf:
+    displayName: '&2Superior Elf'
+    material: ENCHANTED_BOOK
+    guiPage: 1
+    isSubRace: true
+    subRaceType: Elf
+    treeSlot: 22
+    levelRequire: 40
+    slot: 10
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&2&l----- &a&l&Superior Elf Race &2&l-----'
+      - '&aSuperior Elves are similar to regular elves'
+      - '&aHowever they are deemed higher in status'
+      - '&aAs well as higher stats than the peasant elf...'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump IV'
+      - '&5 ◆ 🍀 Luck I'
+      - '&5 ◆ ❤+ Max health is increased by two hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump III'
+      - '&5 ◆ 🍀 Luck I'
+      - '&5 ◆ ❤+ Max health is increased by two hearts'
+      - '&4Requires level 40'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  GrandmasterElf:
+    displayName: '&2Grandmaster Elf'
+    material: ENCHANTED_BOOK
+    guiPage: 1
+    isSubRace: true
+    subRaceType: Elf
+    treeSlot: 40
+    levelRequire: 80
+    slot: 10
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&2&l----- &a&lGrandmaster Elf Race &2&l-----'
+      - '&aThe wise and old elven race'
+      - '&aDeemed to forever watch over the elfs'
+      - '&aThis elf holds the highest status out of all elves'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump III'
+      - '&5 ◆ 🍀 Luck I'
+      - '&5 ◆ ❤+ Max health is increased by two hearts'
+      - '&5 🛡️Increased toughness per level'
+      - ' '
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump III'
+      - '&5 ◆ 🍀 Luck I'
+      - '&5 ◆ ❤ + Max health is increased by two hearts'
+      - '&5 🛡️Increased toughness per level'
+      - '&4Requires level 80'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+      - ARMOR
+    dayPassiveGenericAttributesBase:
+      - 20.0
+      - 5.0
+    dayRacePassiveAttributesLevel:
+      - 0
+      - 0.1
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+      - ARMOR
+    nightPassiveGenericAttributesBase:
+      - 20.0
+      - 5.0
+    nightRacePassiveAttributesLevel:
+      - 0
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Human:
+    displayName: '&cHuman'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lHuman Race &4&l-----'
+      - '&cPerhaps a mirror may help you see the truth...'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5None '
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5None '
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'races attribute-reset {name}'
+  HighHuman:
+    displayName: '&cHigh Human'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Human
+    treeSlot: 22
+    levelRequire: 15
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lHuman Race &4&l-----'
+      - '&cNow humans are getting some buffs...'
+      - '&cThis is a unique evolution from the rest of the races'
+      - '&cYou will gradually get stronger as you level up...'
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ &kbaconbaconbacon'
+      - '&5 ◆ &kbaconbaconbacon'
+      - '&5 ◆ &kbaconbaconbacon'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ &kbaconbaconbacon'
+      - '&5 ◆ &kbaconbaconbacon'
+      - '&5 ◆ &kbaconbaconbacon'
+      - '&4Requires level 15'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+      - LUCK
+      - ATTACK_DAMAGE
+    dayPassiveGenericAttributesBase:
+      - 0.0
+      - 2.0
+      - -1.0
+    dayRacePassiveAttributesLevel:
+      - 0.2
+      - 0.1
+      - 0.1
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+      - LUCK
+      - ATTACK_DAMAGE
+    nightPassiveGenericAttributesBase:
+      - 0.0
+      - 2.0
+      - -1.0
+    nightRacePassiveAttributesLevel:
+      - 0.2
+      - 0.1
+      - 0.1
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Dwarf:
+    displayName: '&7Dwarf'
+    material: ENCHANTED_BOOK
+    guiPage: 1
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 12
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lDwarf Race &8&l-----'
+      - '&7The toughest underground miners around,'
+      - '&7Dwarfs are known to be small but they can build like no other.'
+      - '&7They can also eat quite a bit... and empty a barrel of beer!'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ ⚡ haste III'
+      - '&5 ◆ ❤+ Gain four extra hearts'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ ⚡ haste III'
+      - '&5 ◆ ❤+ Gain four extra hearts'
+      - '&5 ◆ 🐌 Slowness I'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 8.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 8.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  MasterDwarf:
+    displayName: '&7Master Dwarf'
+    material: ENCHANTED_BOOK
+    guiPage: 1
+    isSubRace: true
+    subRaceType: Dwarf
+    treeSlot: 10
+    levelRequire: 35
+    slot: 12
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lMaster Dwarf Race &8&l-----'
+      - '&7After years of mining'
+      - '&7The dwarfs bodies have evolved'
+      - '&7Digging deeper and faster than ever before...'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ ⚡ haste IV'
+      - '&5 ◆ ❤+ Gain four extra hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ ⚡ haste IV'
+      - '&5 ◆ ❤+ Gain four extra hearts'
+      - '&4Requires level 35'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 8.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 8.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Whelp:
+    displayName: '&7Whelp'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 13
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lWhelp &8&l-----'
+      - '&7A young and lively pup in a pack'
+      - '&7Known for being quick and agile'
+      - '&7However easy to prey on by others...'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength I'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 🌕 Night Vision'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 2.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Werewolf:
+    displayName: '&cWerewolf'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Whelp
+    treeSlot: 22
+    levelRequire: 30
+    guiPage: 1
+    slot: 13
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lOmega Werewolf &8&l-----'
+      - '&5 The hunters of the werewolf pack'
+      - '&5 They take orders from the higher ups'
+      - '&5 And by no means are they push overs'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength I'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🌕 Night Vision'
+      - '&cRequires level 30'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  AlphaWerewolf:
+    displayName: '&cAlpha Werewolf'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Whelp
+    treeSlot: 40
+    levelRequire: 80
+    guiPage: 1
+    slot: 13
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lAlpha Werewolf &8&l-----'
+      - '&5 The leader of the werewolves'
+      - '&5 Known for their wisdom and strength'
+      - '&5 During the day, they roam, lurking for prey'
+      - '&5 At night they strike'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength III'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ 🦘 Jump II'
+      - '&5 ◆ 🌕 Night Vision'
+      - '&cRequires level 80'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 8.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Dhampir:
+    displayName: '&cDhampir'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 14
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lDhampir Race &4&l-----'
+      - '&c The Dhampir, currently just a baby, but bloodthirsty'
+      - '&c They are known to come out at night'
+      - '&c But vulernable during the day'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🐌 Slowness I '
+      - '&5 ◆ 💔 Weakness I '
+      - '&5 ◆ ❤- Reduced Two Hearts '
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 🦘 Jump Boost I'
+      - '&5 ◆ 💪 Strength I'
+      - '&5 ◆ 🌕 Night Vision'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  VampireFledgling:
+    displayName: '&cVampire Fledgling'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Dhampir
+    treeSlot: 22
+    levelRequire: 35
+    guiPage: 1
+    slot: 14
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lVampire Fledgling&4&l-----'
+      - '&5 ◆ Evolving from the Dhampir'
+      - '&5 ◆ This vampire has had a taste for blood'
+      - '&5 ◆ Growing stronger as days pass... '
+      - '&5 ◆ They are feared so they are often hunted'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength I '
+      - '&5 ◆ 💨 Speed I '
+      - '&5 ◆ ❤- Reduced 1 Hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump Boost I'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 🌕 Night Vision'
+      - '&cRequires level 35'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -2.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Dracula:
+    displayName: '&cVampire King'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Dhampir
+    treeSlot: 40
+    levelRequire: 85
+    guiPage: 1
+    slot: 14
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&l&lDracula&4&l-----'
+      - '&c ◆ The very first vampire Dracula'
+      - '&c ◆ The most powerful and wise vampire'
+      - '&c ◆ Of all existence, those who dare to stop Dracula'
+      - '&c ◆ Meet their demise...'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength II '
+      - '&5 ◆ 💨 Speed II '
+      - '&5 ◆ ❤+ Extra Hearts 4 '
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ 🦘 Jump Boost II'
+      - '&5 ◆ 💪 Strength III'
+      - '&5 ◆ 🌕 Night Vision'
+      - '&cRequires level 85'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -2.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Demon:
+    displayName: '&4Demon'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 24
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&l&lDemon Race &4&l-----'
+      - '&cDemons... born in the depths of hell'
+      - '&cFearless, violent and widely hated'
+      - '&cThey are resistant to fire and resistant'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5 ◆ 🍂 Weakness I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🔥 Fire resistance I'
+      - '&5 ◆ 🏔 Knockback resistance II'
+      - '&5 ◆ 🦺 Armor II'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - ARMOR
+    dayPassiveGenericAttributesBase:
+      - 2.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Angel:
+    displayName: '&6Angel'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 25
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&e&l----- &6&l&lAngel Race &e&l-----'
+      - '&6A heavenly divine race'
+      - '&6They are usually known as guides and'
+      - '&6Protectors of the human race'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🏅Hero of the village I'
+      - '&5 ◆ 🍖 Saturation I'
+      - '&5 ◆ 💨 Speed II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5 ◆ 💨 Speed I'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Slime:
+    displayName: '&2Slime'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 16
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&2&l----- &a&l&lSlime Race &2&l-----'
+      - '&aA bouncy and cute cube that stays in swamp areas'
+      - '&aThey are known for their regeneration ability'
+      - '&aPlus bonus... they are SQUISHY'
+      - ' '
+      - '&5&l----- Day and Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration II'
+      - '&5 ◆ 🦘 Jump boost II'
+      - '&5 ◆ ❤- Hearts reduced by 5'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -10.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -10.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  MagmaCube:
+    displayName: '&2MagmaCube'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Slime
+    treeSlot: 40
+    levelRequire: 65
+    guiPage: 1
+    slot: 16
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&2&l----- &a&l&lMagmaCube Race &2&l-----'
+      - '&aBouncy and Hot Cube that Burns anything in its path'
+      - '&aThey are known for their regeneration ability'
+      - '&aPlus bonus... they are SQUISHY but recommended not to touch'
+      - ' '
+      - '&5&l----- Day and Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration III'
+      - '&5 ◆ 🦘 Jump boost III'
+      - '&5 ◆ 🔥 Fire resistance 1'
+      - '&5 ◆ ❤- Hearts reduced by 2'
+      - '&cRequires level 65'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -10.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Merfolk:
+    displayName: '&bMerfolk'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 23
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&3&l----- &b&lMerfolk Race &3&l-----'
+      - '&bMerfolk love the ocean, its where they live'
+      - '&bThey also have unpredictable behaviour'
+      - '&bYou may spot one if you go fishing...'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🐬 Dolphins grace I'
+      - '&5 ◆ 🔱 Conduit power I'
+      - '&5 ◆ 🌊 Water breathing III'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🐬 Dolphins grace I'
+      - '&5 ◆ 🔱 Conduit power I'
+      - '&5 ◆ 🌊 Water breating III'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Naga:
+    displayName: '&4Naga'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Merfolk
+    treeSlot: 22
+    levelRequire: 30
+    guiPage: 1
+    slot: 15
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&3&l----- &b&lNaga Race &3&l-----'
+      - '&bA naga, a mysterious beast in the depths of the ocean'
+      - '&bBetter start praying for your life if you see one'
+      - '&bYou may spot one if your boat sinks...'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🐬 Dolphins grace III'
+      - '&5 ◆ 🔱 Conduit power III'
+      - '&5 ◆ 🌊 Water breathing III'
+      - '&5 ◆ 💪 Strength II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🐬 Dolphins grace III'
+      - '&5 ◆ 🔱 Conduit power III'
+      - '&5 ◆ 🌊 Water breating III'
+      - '&5 ◆ 💪 Strength II'
+      - '&cRequires level 30'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Waspling:
+    displayName: '&eWaspling'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 15
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&6&l----- &6&lWaspling Race &6&l-----'
+      - '&6Bzz... Bzzz BZZZZZZ'
+      - '&6Now a species that is immune to falling fast'
+      - '&6These wasplings are mutated and a lot bigger than your'
+      - '&6Average wasp... might hurt to get stung..?'
+      - '&6They certainly do not like going outside at night'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🪂 Slow falling I'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ ❤- Two less hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🪂 Slow falling I'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5 ◆ ❤- Two less hearts'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Dragonborn:
+    displayName: '&8Dragonborn'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 19
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lDragonborn&8&l-----'
+      - '&7Dovahkiin, Dovahkiin naal ok zin los vahriin'
+      - '&7Wahdein vokul mahfaeraak ast vaal'
+      - '&7Ahrk fin norok paal graan'
+      - '&7Fodnust vok zin dro zaan'
+      - '&7Dovahkiin fah hin kogaan mu draal!'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🔥 Fire resistance I'
+      - '&5 ◆ 💪 Strength I'
+      - '&5 ◆ ⚔ Attack speed I'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ ❤+ Gain 1 extra heart'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🍂 Weakness I'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5 ◆ ❤+ Gain 1 extra heart'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 2.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 2.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Gremlin:
+    displayName: '&7Gremlin'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 20
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&7&l----- &f&lGremlin&7 &l-----'
+      - '&fA mishievous creature that loves to'
+      - '&fcause malfunctions in aircraft and machinery...'
+      - '&fVery annoying creature'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 🍀 Luck II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🍀 Luck IV'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Goblin:
+    displayName: '&3Goblin'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Gremlin
+    treeSlot: 22
+    levelRequire: 45
+    guiPage: 1
+    slot: 20
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&2&l----- &a&lGoblin&2&l-----'
+      - '&aA goblin already has terrible reputation...'
+      - '&aMainly due to anime... but rightfully so '
+      - '&aThey are extremely mischievous'
+      - '&aEven more so than the Gremlin'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ ❤- Reduced II hearts'
+      - '&5 ◆ ⚔ Attack speed IV'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ ❤- Reduced II hearts'
+      - '&5 ◆ ⚔ Attack speed IV'
+      - '&cRequires level 45'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+      - ATTACK_SPEED
+    dayPassiveGenericAttributesBase:
+      - -4.0
+      - 0.5
+    dayRacePassiveAttributesLevel:
+      - 0
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+      - ATTACK_SPEED
+    nightPassiveGenericAttributesBase:
+      - -4.0
+      - 0.5
+    nightRacePassiveAttributesLevel:
+      - 0
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Golem:
+    displayName: '&8Golem'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 21
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lGolem Race&8 &l-----'
+      - '&7For centuries golems have remained dormant'
+      - '&7However, something has woken them up...'
+      - '&7They are known to be bulky and slow'
+      - '&7But incredibly heavy hitting...'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength I'
+      - '&5 ◆ 🐌 Slowness III'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5 ❤+ Extra hearts 2'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 🐌 Slowness III'
+      - '&5 ◆ 🎲 Unluck II'
+      - '&5 ❤+ Extra hearts 2'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Sentinel:
+    displayName: '&3Sentinel'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Golem
+    treeSlot: 22
+    levelRequire: 50
+    guiPage: 1
+    slot: 21
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lSentinel Race &8&l-----'
+      - '&7A true guardian, no one dares to mess with'
+      - '&7They are protectors of what they choose to protect'
+      - '&7Anyone facing them are... unfortunate'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength III'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5 ◆ ❤+ Extra 10 hearts'
+      - '&5 ◆ ☠️ Bad omen I'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5 ◆ 🏔 Knockback resistance II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength III'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5 ◆ ☠️ Bad omen I'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5 ◆ ❤+ Extra 10 hearts'
+      - '&5 ◆ 🏔 Knockback resistance II'
+      - '&4Requires level 50'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+      - KNOCKBACK_RESISTANCE
+    dayPassiveGenericAttributesBase:
+      - 20.0
+      - 2.0
+    dayRacePassiveAttributesLevel:
+      - 0
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+      - KNOCKBACK_RESISTANCE
+    nightPassiveGenericAttributesBase:
+      - 20.0
+      - 2.0
+    nightRacePassiveAttributesLevel:
+      - 0
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Kobold:
+    displayName: '&cKobold'
+    material: ENCHANTED_BOOK
+    guiPage: 1
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 22
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lKobold &4&l-----'
+      - '&cA reptilian humanoid, with scales'
+      - '&cBeing slightly weaker during the day'
+      - '&cWith scales and being slightly weaker during the day'
+      - '&cThey are quite fast at finding escape routes'
+      - ''
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ 🍂 Weakness I'
+      - '&5 ◆ ❤- Hearts reduced by IV'
+      - '&5 ◆ 🌕 Night Vision'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ 🍀 Luck I'
+      - '&5 ◆ ❤- Hearts reduced by IV'
+      - '&5 ◆ 🌕 Night Vision'
+      - '&5 ◆ 🔥 Fire Resistance'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -8.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -8.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Kitten:
+    displayName: '&8Kitten'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 28
+    lvlType: RUNNING,HUNTING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lKitten Race &8&l-----'
+      - '&7Well a kitten, who does not love a kitten'
+      - '&7They are small and adorable and need to be protected'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5 ◆ ❤- Max health reduced by 2'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5 ◆ ❤- Max health reduced by 2'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Cat:
+    displayName: '&8Cat'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Kitten
+    treeSlot: 22
+    levelRequire: 30
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING,HUNTING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lCat Race &8&l-----'
+      - '&7Cats are well, mischievous creatures'
+      - '&7They are cunning and'
+      - '&7*love* to crave attention and annoy people'
+      - '&7Cats are fast and deal a lot of damage'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5 ◆ ⚔ Extra 1.5 damage dealt'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5 ◆ ⚔ Extra 1.5 damage dealt'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Cheat death once every 10 minutes'
+      - '&4Requires level 30'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - ATTACK_DAMAGE
+    dayPassiveGenericAttributesBase:
+      - 0.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - ATTACK_DAMAGE
+    nightPassiveGenericAttributesBase:
+      - 0.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Sphinx:
+    displayName: '&8Sphinx'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Kitten
+    treeSlot: 40
+    levelRequire: 70
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING,HUNTING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lSphinx Race &8&l-----'
+      - '&7A mythical legendary creature from Egypt'
+      - '&7Truly a force to be reckoned with'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5 ◆ ⚔ Extra 4 damage dealt - Near Sand'
+      - '&5 ◆ ❤+ Extra II Hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5 ◆ ⚔ Extra 4 damage dealt - Near Sand'
+      - '&5 ◆ ❤+ Extra II Hearts'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Cheat death once every 3 minutes'
+      - '&5 ◆ Right clicking sand gives you'
+      - '&5   10 sand with a 10 minute cooldown'
+      - '&5 ◆ Right clicking salmon gives you'
+      - '&5   10 cooked salmon, 10 minute cooldown'
+      - '&4Requires level 70'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - ATTACK_DAMAGE
+    dayPassiveGenericAttributesBase:
+      - 3.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 2.0 CUSTOM4 SAND ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - ATTACK_DAMAGE
+    nightPassiveGenericAttributesBase:
+      - 3.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 2.0 CUSTOM4 SAND ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Caterpillar:
+    displayName: '&2Caterpillar'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 29
+    lvlType: RUNNING,BUILDER
+    maxLevel: 100
+    gainXP: 1
+    xpPerLevel: 60
+    lore:
+      - '&a&l----- &2&lCaterpillar Race &a&l-----'
+      - '&cA caterpillar... an insect that can'
+      - '&cEither be really cute or frightening'
+      - '&cThough they are a bit weak at first'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ ❤- Reduced health by 3'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ ❤- Reduced health by 3'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking oak leaves'
+      - '&5  will give 2 oak saplings, cooldown 30 min'
+      - '&5 ◆ Right clicking dirt will give'
+      - '&5   1 golden shovel, cooldown 30 min'
+      - '&5 ◆ Right clicking oak logs will give'
+      - '&5   1 golden axe, cooldown 30 min '
+      - '&5 ◆ Destroying grass will give'
+      - '&5  saturation 2 seconds, cooldown 2 min'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -5.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -5.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Chrysalis:
+    displayName: '&2Chrysalis'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Caterpillar
+    treeSlot: 22
+    levelRequire: 30
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING,BUILDER
+    maxLevel: 100
+    gainXP: 1
+    xpPerLevel: 60
+    lore:
+      - '&a&l----- &2&lChrysalis Race &a&l-----'
+      - '&2A chrysalis.... a shell, halfway through'
+      - '&2Its evolution, who knows what will happen'
+      - '&2When it evolves...'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💛 Absorption 2'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ 🍂 Weakness I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💛 Absorption 2'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ 🍂 Weakness I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Same as caterpillar'
+      - '&4Requires level 30'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  GreaterButterfly:
+    displayName: '&2GreaterButterfly'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Caterpillar
+    treeSlot: 40
+    levelRequire: 70
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING,BUILDER
+    maxLevel: 100
+    gainXP: 1
+    xpPerLevel: 60
+    lore:
+      - '&a&l----- &2&lGreaterButterfly Race &a&l-----'
+      - '&2A GreaterButterfly.... a true divine beauty'
+      - '&2People say the heavens blessed this creature..'
+      - '&2When it evolves...'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💛 Absorption II'
+      - '&5 ◆ 💖 Regeneration II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💛 Absorption II'
+      - '&5 ◆ 💖 Regeneration II'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Same as caterpillar'
+      - '&5 ◆ Right clicking string will give'
+      - '&5   3 seconds of levitation, no cooldown'
+      - '&4Requires level 70'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Cub:
+    displayName: '&6Cub'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 30
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&e&l----- &6&lCub Race &e&l-----'
+      - '&6The very baby of a bear, literally'
+      - '&6Make sure not to tick off the mother'
+      - '&6Then you are in for a bad time'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength I'
+      - '&5 ◆ 🦺 Armor II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength I'
+      - '&5 ◆ 🦺 Armor II'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - ARMOR
+    dayPassiveGenericAttributesBase:
+      - 2.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - ARMOR
+    nightPassiveGenericAttributesBase:
+      - 2.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Scout:
+    displayName: '&6Scout'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Cub
+    treeSlot: 22
+    levelRequire: 20
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&e&l----- &6&lScout Race &e&l-----'
+      - '&6It seems the little cub has grown a bit'
+      - '&6Still a ferocious beast though'
+      - '&6They are agile and dangerous'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength I'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 🦺 Armor III'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength I'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 🦺 Armor III'
+      - '&4Requires level 20'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - ARMOR
+    dayPassiveGenericAttributesBase:
+      - 3.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - ARMOR
+    nightPassiveGenericAttributesBase:
+      - 3.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Bear:
+    displayName: '&6Bear'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Cub
+    treeSlot: 40
+    levelRequire: 50
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&e&l----- &6&lBear Race &e&l-----'
+      - '&6A dangerous beast which claws their way to victory'
+      - '&6One unfortunate enough may stumble across one...'
+      - '&6They are agile and dangerous'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🦺 Armor IV - increase 0.2 per level'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 🦺 Armor IV - increase 0.2 per level'
+      - '&4Requires level 50'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - ARMOR
+    dayPassiveGenericAttributesBase:
+      - 4.0
+    dayRacePassiveAttributesLevel:
+      - 0.2
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - ARMOR
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0.2
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  LesserApotamkin:
+    displayName: '&bLesser Apotamkin'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 31
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&3&l----- &b&lLesser Apotamkin Race &3&l-----'
+      - '&bA Lesser Apotamkin is a creature that lives in the water'
+      - '&bA They are not too dangerous'
+      - '&bA However do not underestimate their abilities in water'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🌊 Water Breathing I'
+      - '&5 ◆ 🐬 Dolphins Grace I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🌊 Water Breathing I'
+      - '&5 ◆ 🐬 Dolphins Grace I'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Apotamkin:
+    displayName: '&bApotamkin'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserApotamkin
+    treeSlot: 22
+    levelRequire: 15
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 29
+    lore:
+      - '&3&l----- &b&lLesser Apotamkin Race &3&l-----'
+      - '&bA Lesser Apotamkin is a creature that lives in the water'
+      - '&bA They are not too dangerous'
+      - '&bA However do not underestimate their abilities in water'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🌊 Water Breathing II'
+      - '&5 ◆ 🐬 Dolphins Grace II'
+      - '&5 ◆ 💪 Strength I - Near water'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🌊 Water Breathing II'
+      - '&5 ◆ 🐬 Dolphins Grace II'
+      - '&5 ◆ 💪 Strength I - Near water'
+      - '&4Requires level 15'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  GreaterApotamkin:
+    displayName: '&bGreaterApotamkin'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserApotamkin
+    treeSlot: 40
+    levelRequire: 50
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 29
+    lore:
+      - '&3&l----- &b&lGreater Apotamkin Race &3&l-----'
+      - '&bA Greater Apotamkin is well, a better Apotamkin'
+      - '&bA They are very dangerous compared to the lesser'
+      - '&bUnder any circumstances, do not fight in the water'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🌊 Water Breathing II'
+      - '&5 ◆ 🐬 Dolphins Grace II'
+      - '&5 ◆ 🔱 Conduit Power II'
+      - '&5 ◆ 💪 Strength IV - Near water'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🌊 Water Breathing II'
+      - '&5 ◆ 🐬 Dolphins Grace II'
+      - '&5 ◆ 🔱 Conduit Power II'
+      - '&5 ◆ 💪 Strength IV - Near water'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking a water bucket will give'
+      - '&5    a trident, cooldown 30 minutes'
+      - '&4Requires level 50'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  DyingHuman:
+    displayName: '&cDyingHuman'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 32
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lDyingHuman Race &4&l-----'
+      - '&cA dying human... sick and old.. dying'
+      - '&cMaybe the heavens.. or hell has a plan for this race'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💔 Weakness I'
+      - '&5 ◆ 🍴 Hunger I'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💔 Weakness I'
+      - '&5 ◆ 🍴 Hunger I'
+      - '&5 ◆ 🐌 Slowness I'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Skeleton:
+    displayName: '&cSkeleton'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: DyingHuman
+    treeSlot: 22
+    levelRequire: 15
+    guiPage: 1
+    slot: 31
+    lvlType: RUNNING,HUNTING,FISHING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lSkeleton Race &4&l-----'
+      - '&cSeems like the human died... prepare for-'
+      - '&cReincarination.. oh wait there isnt any here'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💔 Weakness I'
+      - '&5 ◆ ☠️Poison if you are standing under the sun'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💔 Weakness I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking dirt will give'
+      - '&5    2 bones, cooldown 10 minutes'
+      - '&5 ◆ Right clicking bones will give'
+      - '&5    32 arrows, cooldown 2 minutes'
+      - '&5 ◆ Arrow shots have a 10% chance'
+      - '&5    of dealing poison damage'
+      - '&5 ◆ Skeletons & Zombies are friendly'
+      - '&4Requires level 15'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Lich:
+    displayName: '&cLich'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: DyingHuman
+    treeSlot: 40
+    levelRequire: 50
+    guiPage: 1
+    slot: 31
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lLich Race &4&l-----'
+      - '&cThe true evolution to the skeleton'
+      - '&cA scary race to face off against, may the odds be in your favour'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ ❤+ Extra 10 hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ ❤+ Extra 10 hearts'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Same as skeleton'
+      - '&5 ◆ Right clicking string'
+      - '&5    will summon 4 skeletons, cooldown 1 minute'
+      - '&4Requires level 50'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 20.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 20.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  InfectedHuman:
+    displayName: '&7InfectedHuman'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 33
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lInfectedHuman Race &4&l-----'
+      - '&cA very hungry human, trying to find a cure'
+      - '&cFor themselves, however nothing seems to work'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🍴 Hunger II'
+      - '&5 ◆ 💪 Strength I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🍴 Hunger II'
+      - '&5 ◆ 💪 Strength I'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Zombie:
+    displayName: '&4Zombie'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: InfectedHuman
+    treeSlot: 22
+    levelRequire: 20
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING,HUNTING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lZombie Race &4&l-----'
+      - '&cA zombie that wants to feast on its enemies flesh'
+      - '&cIt is said that this zombie can run and think'
+      - '&cDo not forget to bring a gun to kill this beast'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🍴 Hunger II'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 💪 Strength III'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🍴 Hunger II'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 💪 Strength III'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Attacking an enemy will '
+      - '&5    temporarily satisfy your hunger '
+      - '&4Requires level 20'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  UndeadLord:
+    displayName: '&cUndead Lord'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: InfectedHuman
+    treeSlot: 40
+    levelRequire: 70
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING,HUNTING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lUndead Lord Race &4&l-----'
+      - '&cSimiliar to the Lich race, however holds a lot more'
+      - '&cInfluence and power over mobs'
+      - '&cThis race is the definition of One Man Army'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🍖 Saturation I'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ 💪 Strength III'
+      - '&5 ◆ 💨 Speed I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ 🍖 Saturation I'
+      - '&5 ◆ 💪 Strength III'
+      - '&5 ◆ 💨 Speed I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Friendly with Zombie,Husks,Skeleton,Witch'
+      - '&5 ◆ Right clicking string will summon'
+      - '&5    4 zombies, 2 husks, 2 skeletons, 1 witch'
+      - '&5    cooldown is 3 minutes'
+      - '&4Requires level 70'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  LesserFairy:
+    displayName: '&6Lesser Fairy'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 34
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&e&l----- &6&lLesser Fairy Race &e&l-----'
+      - '&6A *small* ball of dust that floats wherever it goes'
+      - '&6A lesser fairy is magical and is said to have '
+      - '&6Some powers of the heavens'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🪂 Slow falling I'
+      - '&5 ◆ 💨 Speed II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🪂 Slow falling I'
+      - '&5 ◆ 💨 Speed II'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give '
+      - '&5   levitation for 3 seconds, cooldown none'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Fairy:
+    displayName: '&6Fairy'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserFairy
+    treeSlot: 22
+    levelRequire: 20
+    guiPage: 1
+    slot: 34
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&e&l----- &6&lFairy Race &e&l-----'
+      - '&6A *medium* ball of dust that floats wherever it goes'
+      - '&6A fairy is magical and is said to have '
+      - '&6Some powers of the heavens, aka luck'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🪂 Slow falling I'
+      - '&5 ◆ 🍀 Luck I'
+      - '&5 ◆ 💨 Speed III'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🪂 Slow falling I'
+      - '&5 ◆ 🍀 Luck I'
+      - '&5 ◆ 💨 Speed III'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give '
+      - '&5   levitation for 3 seconds, cooldown none'
+      - '&4Requires level 20'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Pixie:
+    displayName: '&6Pixie'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserFairy
+    treeSlot: 40
+    levelRequire: 40
+    guiPage: 1
+    slot: 34
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&e&l----- &6&lPixie Fairy Race &e&l-----'
+      - '&6A *glittery* ball of dust that floats wherever it goes'
+      - '&6A Pixie holds more authority and power than a fairy'
+      - '&6Some rumours say Pixies are gods themselves'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🪂 Slow falling I'
+      - '&5 ◆ 🍀 Luck V'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ ❤+ Increase health by 4.0'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🪂 Slow falling I'
+      - '&5 ◆ 🍀 Luck V'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ ❤+ Increase health by 4.0'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give '
+      - '&5   levitation for 3 seconds, cooldown none'
+      - '&4Requires level 40'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Horse:
+    displayName: '&7Horse'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 37
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lHorse Race &8&l-----'
+      - '&7This four legged beast can run for miles'
+      - '&7Is an absolute powerhouse especially when kicking'
+      - '&7However make sure to give random carrots as tribute'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ ❤+ Extra 2 hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ ❤+ Extra 2 hearts'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Unicorn:
+    displayName: '&7Unicorn'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Horse
+    treeSlot: 22
+    levelRequire: 30
+    guiPage: 1
+    slot: 37
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lUnicorn Race &8&l-----'
+      - '&7This four legged beast can run for miles'
+      - '&7Is an absolute powerhouse especially when kicking'
+      - '&7However make sure to give random carrots as tribute'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ ❤+ Extra 4 hearts'
+      - '&5 ◆ ⚔ Extra base damage'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ ❤+ Extra 4 hearts'
+      - '&5 ◆ ⚔ Extra base damage'
+      - '&4Requires level 30'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+      - ATTACK_DAMAGE
+    dayPassiveGenericAttributesBase:
+      - 8.0
+      - 1.5
+    dayRacePassiveAttributesLevel:
+      - 0
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 8.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Pegasus:
+    displayName: '&7Pegasus'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Horse
+    treeSlot: 40
+    levelRequire: 60
+    guiPage: 1
+    slot: 37
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l----- &7&lPegasus Race &8&l-----'
+      - '&7This is truly an elegant sacred creature'
+      - '&7With its beautiful white wings and body, it takes flight'
+      - '&7Surely you must of heard of its name and its legends'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ 🦘 Jump II'
+      - '&5 ◆ ❤+ Extra 4 hearts'
+      - '&5 ◆ ⚔Extra base damage'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed III'
+      - '&5 ◆ 🦘 Jump II'
+      - '&5 ◆ ❤+ Extra 4 hearts'
+      - '&5 ◆ ⚔Extra base damage'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give '
+      - '&5    levitation for 3 seconds, cooldown none'
+      - '&4Requires level 60'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+      - ATTACK_DAMAGE
+    dayPassiveGenericAttributesBase:
+      - 8.0
+      - 1.5
+    dayRacePassiveAttributesLevel:
+      - 0
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 8.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  LesserCyclopse:
+    displayName: '&cLesser Cyclopse'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 38
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lLesser Cyclopse Race &4&l-----'
+      - '&cThis one eyed beast is a one of a kind'
+      - '&cSlow and durable but evolves to a scary race'
+      - '&cThey can easily bring destruction to peaceful lands'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ ❤+ 2 Extra hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5 ◆ ❤+ 2 Extra hearts'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Cyclopse:
+    displayName: '&cCyclopse'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserCyclopse
+    treeSlot: 22
+    levelRequire: 25
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lCyclopse Race &4&l-----'
+      - '&cNow the lesser has grown into a beast that '
+      - '&cDevours the land, scary and frightening'
+      - '&cStill slow, but more durable and stronger'
+      - '&cThey can easily bring destruction to peaceful lands'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5 ◆ 💪 Strength III'
+      - '&5 ◆ ❤+ 5 Extra hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🐌 Slowness I'
+      - '&5 ◆ 💪 Strength III'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5 ◆ ❤+ 5 Extra hearts'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will summon '
+      - '&5    a fireball'
+      - '&5    (Hint) left click the fireball'
+      - '&5    fireball, cooldown 5 min'
+      - '&5    2 seconds until fireball disappears'
+      - '&4Requires level 25'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 10.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 10.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  OneEyedLord:
+    displayName: '&cOneEyedLord'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserCyclopse
+    treeSlot: 40
+    levelRequire: 60
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lOne Eyed Lord Race &4&l-----'
+      - '&cA being that all lesser and cyclops worship'
+      - '&cReaching the very top of ranks'
+      - '&cThis race has evolved to the peak'
+      - '&cThey are said to bring order to the destructive'
+      - '&cUntamable cyclops'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck IV'
+      - '&5 ◆ 💪 Strength IV'
+      - '&5 ◆ ❤+ 1- Extra hearts'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck IV'
+      - '&5 ◆ 💪 Strength IV'
+      - '&5 ◆ ❤+ 1- Extra hearts'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will summon '
+      - '&5    a fireball'
+      - '&5    (Hint) left click the fireball'
+      - '&5    fireball, cooldown 30 seconds'
+      - '&5    2 seconds until fireball disappears'
+      - '&4Requires level 60'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - 20.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - 20.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  GreenGoo:
+    displayName: '&2Green Goo'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 39
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&a&l----- &2&lGreen Goo Race &a&l-----'
+      - '&2Well this is just green goo...'
+      - '&2Its not exactly a slime...'
+      - '&2Then what is it..?'
+      - '&2Some people kidnap these for a legend'
+      - '&2A legend of feeling *lucky*'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck I'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5 ◆ ❤- Reduced health by 1 heart'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck I'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5 ◆ ❤- Reduced health by 1 heart'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -2.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -2.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  LuckyGoo:
+    displayName: '&2Lucky Goo'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: GreenGoo
+    treeSlot: 22
+    levelRequire: 20
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&a&l----- &2&lLucky Goo Race &a&l-----'
+      - '&2Wait a second, the legend is true!!'
+      - '&2GreenGoo does get lucky!'
+      - '&2But wait, lucky for what..?'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck III'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck III'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give'
+      - '&5    15 diamonds, 1 netherite ingot'
+      - '&5    cooldown, 10 minutes'
+      - '&4Requires level 20'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Lepricon:
+    displayName: '&2Lepricon'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: GreenGoo
+    treeSlot: 40
+    levelRequire: 45
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&a&l----- &2&lLepricon Race &a&l-----'
+      - '&2A truly lucky and rich race'
+      - '&2Though may not be strong or fast'
+      - '&2They have the super power called *Im rich*'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck IX'
+      - '&5 ◆ 🏅Hero of the village II'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck IX'
+      - '&5 ◆ 🏅Hero of the village II'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give'
+      - '&5    60 diamonds, 10 netherite ingot'
+      - '&5    and one gold block'
+      - '&5    cooldown, 10 minutes'
+      - '&4Requires level 45'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  LesserYeti:
+    displayName: '&bLesser Yeti'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 40
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&3&l----- &b&lLesser Yeti Race &3&l-----'
+      - '&bA yeti, a race that purely lives'
+      - '&bInside cold biomes, they have a rather fierce'
+      - '&bPersonality, make sure to bring them hot choco'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration II (Inside cold regions)'
+      - '&5 ◆ 💪 Strength IV (Inside cold regions)'
+      - '&5 ◆ 💨 Speed II (Inside cold regions)'
+      - '&5 ◆ 🍀 Luck II (Inside cold regions)'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration II (Inside cold regions)'
+      - '&5 ◆ 💪 Strength IV (Inside cold regions)'
+      - '&5 ◆ 💨 Speed II (Inside cold regions)'
+      - '&5 ◆ 🍀 Luck II (Inside cold regions)'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Yeti:
+    displayName: '&bYeti'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserYeti
+    treeSlot: 22
+    levelRequire: 20
+    guiPage: 1
+    slot: 40
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&3&l----- &b&lYeti Race &3&l-----'
+      - '&bA yeti, that has lived in a cold climate'
+      - '&bFor a very long time and has grown up'
+      - '&bThey still seem to like hot chocolate at least'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration III (Inside cold regions)'
+      - '&5 ◆ 💪 Strength IV (Inside cold regions)'
+      - '&5 ◆ 💨 Speed II (Inside cold regions)'
+      - '&5 ◆ 🍀 Luck III (Inside cold regions)'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration III (Inside cold regions)'
+      - '&5 ◆ 💪 Strength IV (Inside cold regions)'
+      - '&5 ◆ 💨 Speed II (Inside cold regions)'
+      - '&5 ◆ 🍀 Luck III (Inside cold regions)'
+      - '&4Requires level 20'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  GrandmasterYeti:
+    displayName: '&bGrandmaster Yeti'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserYeti
+    treeSlot: 40
+    levelRequire: 40
+    guiPage: 1
+    slot: 40
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&3&l----- &b&lGrandmaster Yeti Race &3&l-----'
+      - '&bA yeti that has risen through the snow..'
+      - '&bHas achieved the magical capabilities'
+      - '&bOf summoning some snowmen!!'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration III'
+      - '&5 ◆ 💪 Strength IV'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 🍀 Luck III'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration III'
+      - '&5 ◆ 💪 Strength IV'
+      - '&5 ◆ 💨 Speed II '
+      - '&5 ◆ 🍀 Luck III'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will summon'
+      - '&5    3 snowgolems and 1 iron golem'
+      - '&5    cooldown, 10 minutes'
+      - '&4Requires level 40'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  LesserSnake:
+    displayName: '&9Lesser Snake'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 41
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&1&l----- &9&lLesser Snake Race &1&l-----'
+      - '&9Well, a snake, probably something you'
+      - '&9Should know about.. well *snake*'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Have a 10% chance'
+      - '&5    to deal poison to an enemy'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  KingCobra:
+    displayName: '&9King Cobra'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserSnake
+    treeSlot: 22
+    levelRequire: 40
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&1&l----- &9&lKing Cobra Race &1&l-----'
+      - '&9An incredibly dangerous race '
+      - '&9Though they are generally passive'
+      - '&9Known for their poison and instant kill'
+      - '&9Even some gods refuse to fight them'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Has a 20% chance'
+      - '&5    to deal poison to an enemy'
+      - '&5 ◆ Has a 50%'
+      - '&5    to deal slowness or/and blindness'
+      - '&5 ◆ Has a 1% chance'
+      - '&5    to kill any entity is hit'
+      - '&4Requires level 40'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  DivineSlither:
+    displayName: '&9DivineSlither'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserSnake
+    treeSlot: 40
+    levelRequire: 65
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&1&l----- &9&lDivine Slither Race &1&l-----'
+      - '&9A race that many refuse to fight'
+      - '&9Just a bite from this race may'
+      - '&9stop you from moving ever again'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 💖 Regeneration II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 💖 Regeneration II'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Has a 30% chance'
+      - '&5    to deal poison to an enemy'
+      - '&5 ◆ Has a 90%'
+      - '&5    to deal slowness or/and blindness'
+      - '&5 ◆ Has a 10% chance'
+      - '&5    to kill any entity is hit'
+      - '&4Requires level 65'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Wraith:
+    displayName: '&fWraith'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 42
+    lvlType: RUNNING,HUNTING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&f&l----- &f&lWraith Race &f&l-----'
+      - '&fA soul that has just died'
+      - '&fInstead of becoming a skeleton...'
+      - '&fThey are reborn as lost souls'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ Attack speed II'
+      - '&5 ◆ Decreased health by II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ Attack speed II'
+      - '&5 ◆ Decreased health by II'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give'
+      - '&5    40 seconds of invsibility'
+      - '&5    cooldown 3 minutes'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+      - ATTACK_SPEED
+    dayPassiveGenericAttributesBase:
+      - -4.0
+      - -1.0
+    dayRacePassiveAttributesLevel:
+      - 0
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+      - ATTACK_SPEED
+    nightPassiveGenericAttributesBase:
+      - -4.0
+      - -1.0
+    nightRacePassiveAttributesLevel:
+      - 0
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Ghoul:
+    displayName: '&fGhoul'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Wraith
+    treeSlot: 22
+    levelRequire: 20
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING,HUNTING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&f&l----- &f&lGhoul Race &f&l-----'
+      - '&fAfter staying as a lost soul for long'
+      - '&fThis race has managed to learn'
+      - '&fAdapt to their surroundings'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ Attack speed IV'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ Attack speed IV'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give'
+      - '&5    60 seconds of invsibility'
+      - '&5    cooldown 3 minutes'
+      - '&4Requires level 20'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - ATTACK_SPEED
+    dayPassiveGenericAttributesBase:
+      - 1.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - ATTACK_SPEED
+    nightPassiveGenericAttributesBase:
+      - 1.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Reaper:
+    displayName: '&fReaper'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Wraith
+    treeSlot: 40
+    levelRequire: 40
+    guiPage: 1
+    slot: 11
+    lvlType: RUNNING,HUNTING
+    maxLevel: 1000
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&f&l----- &f&lReaper Race &f&l-----'
+      - '&fAfter being accustomed to death'
+      - '&fOne arises anew to claim souls'
+      - '&fTo guide them to the next life'
+      - '&fTo prevent a fate that was once held'
+      - '&fOf itself'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ Attack speed XX (Rises per level)'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ Attack speed XX (Rises per level)'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give'
+      - '&5    60 seconds of invsibility'
+      - '&5 ◆ Right clicking a wooden sword will give'
+      - '&5    1 netherite axe'
+      - '&5    cooldown 10 minutes'
+      - '&4Requires level 40'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - ATTACK_SPEED
+    dayPassiveGenericAttributesBase:
+      - 16.0
+    dayRacePassiveAttributesLevel:
+      - 0.1
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - ATTACK_SPEED
+    nightPassiveGenericAttributesBase:
+      - 16.0
+    nightRacePassiveAttributesLevel:
+      - 0.1
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  LesserScaled:
+    displayName: '&cLesser Scaled'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 1
+    slot: 43
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lLesser Scaled Race &4&l-----'
+      - '&cA scaly race similar to the lizard race'
+      - '&cThis race crawls on all fours'
+      - '&cAnd is incredibly used to heat'
+      - '&cThis race is also slightly stronger than most'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🔥 Fire Resistance I'
+      - '&5 ◆ 💪 Strength I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🔥 Fire Resistance I'
+      - '&5 ◆ 💪 Strength I'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Wyvern:
+    displayName: '&cWyvern'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserScaled
+    treeSlot: 22
+    levelRequire: 35
+    guiPage: 1
+    slot: 43
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lWyvern Race &4&l-----'
+      - '&cThe race that crawled no longer crawls'
+      - '&cThese creatures usually fly in groups'
+      - '&cFeasting on any prey that come along'
+      - '&cDo not forget to bring a bow!!'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🔥 Fire Resistance I'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ ⚔ DMG Increase by 0.1 per level'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🔥 Fire Resistance I'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ ⚔ DMG Increase by 0.1 per level'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give'
+      - '&5    3 seconds of levitation'
+      - '&4Requires level 35'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - ATTACK_DAMAGE
+    dayPassiveGenericAttributesBase:
+      - -1.5
+    dayRacePassiveAttributesLevel:
+      - 0.1
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - ATTACK_DAMAGE
+    nightPassiveGenericAttributesBase:
+      - -1.5
+    nightRacePassiveAttributesLevel:
+      - 0.1
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Dragon:
+    displayName: '&cDragon'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: LesserScaled
+    treeSlot: 40
+    levelRequire: 60
+    guiPage: 1
+    slot: 43
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l----- &c&lDragon Race &4&l-----'
+      - '&cA mighty mythical beast'
+      - '&cIt is known in all of Skyrim'
+      - '&cThis mighty beast can breath fire and'
+      - '&cWreck havoc across the lands'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🔥 Fire Resistance I'
+      - '&5 ◆ 💛 Absorption I'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ ❤+ 10 Extra hearts'
+      - '&5 ◆ ⚔ DMG Increase by 0.2 per level'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🔥 Fire Resistance I'
+      - '&5 ◆ 💛 Absorption I'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ ❤+ 10 Extra hearts'
+      - '&5 ◆ ⚔ DMG Increase by 0.2 per level'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking feather will give'
+      - '&5    3 seconds of levitation'
+      - '&5 ◆ Right clicking string will summon '
+      - '&5    a fireball'
+      - '&5    (Hint) left click the fireball,'
+      - '&5    fireball, cooldown 30 seconds'
+      - '&5    2 seconds until fireball disappears'
+      - '&4Requires level 60'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - ATTACK_DAMAGE
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -1.5
+      - 20.0
+    dayRacePassiveAttributesLevel:
+      - 0.2
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - ATTACK_DAMAGE
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -1.5
+      - 20.0
+    nightRacePassiveAttributesLevel:
+      - 0.2
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  BabyGriffin:
+    displayName: '&9Baby Griffin'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 2
+    slot: 10
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&1&l----- &9&lBaby Griffin Race &1&l-----'
+      - '&9Its a bird! Its a plane! No wait its'
+      - '&9A small newborn griffen, small and fragile'
+      - '&9You should probably take care of this baby'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ ❤- Reduced health by 2'
+      - '&5 ◆ 🍀 Luck I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ ❤- Reduced health by 2'
+      - '&5 ◆ 🍀 Luck I'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  YoungGriffin:
+    displayName: '&9Young Griffin'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: BabyGriffin
+    treeSlot: 22
+    levelRequire: 30
+    guiPage: 2
+    slot: 10
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&1&l----- &9&lYoung Griffin Race &1&l-----'
+      - '&9Its a.... YOUNG GRIFFIN'
+      - '&9With an eagle as its head and wings'
+      - '&9This beast swoops down and claws at its enemies'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck II'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 💨 Speed I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck II'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 💨 Speed I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give'
+      - '&5    3 seconds of levitation'
+      - '&4Requires level 30'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Griffin:
+    displayName: '&9Griffin'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: BabyGriffin
+    treeSlot: 40
+    levelRequire: 45
+    guiPage: 2
+    slot: 10
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&1&l----- &9&lGriffin Race &1&l-----'
+      - '&9The griffen, the eldest of the griffin'
+      - '&9With wings that span afar'
+      - '&9Many gaze upon this majestic beast as it flys'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck II'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 💛 Absorption II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🍀 Luck II'
+      - '&5 ◆ 💪 Strength II'
+      - '&5 ◆ 💨 Speed II'
+      - '&5 ◆ 💛 Absorption II'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give'
+      - '&5    3 seconds of levitation'
+      - '&4Requires level 45'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - MAX_HEALTH
+    dayPassiveGenericAttributesBase:
+      - -4.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - MAX_HEALTH
+    nightPassiveGenericAttributesBase:
+      - -4.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Seed:
+    displayName: '&2Seed'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 2
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&a&l----- &2&lSeed Race &a&l-----'
+      - '&2A seed is a race..? What?'
+      - '&2This peculiar race not many knows about'
+      - '&2It is said that this race can build wonders'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - ' '
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - ' '
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking string will give'
+      - '&5    10 seeds, cooldown 10 minutes'
+      - '&5 ◆ Right clicking seeds will give'
+      - '&5    32 oak saplings, cooldown 30 minutes'
+      - '&5 ◆ Destroying grass has a 6% chance to give'
+      - '&5    1 sticks'
+      - '&5 ◆ Planting wheat seeds will give you XP'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Sprout:
+    displayName: '&2Sprout'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Seed
+    treeSlot: 22
+    levelRequire: 15
+    guiPage: 2
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&a&l----- &2&lSprout Race &a&l-----'
+      - '&2Now the seed is *sprouting*'
+      - '&2Who knows what will happen when fully grown'
+      - '&2Some may say mother nature, others say nothing'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I (Near water)'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I (Near water)'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Same as seed'
+      - '&5 ◆ Taking fall damage gives regen'
+      - '&4Requires level 15'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Dryad:
+    displayName: '&2Dryad'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Seed
+    treeSlot: 40
+    levelRequire: 25
+    guiPage: 2
+    slot: 11
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&a&l----- &2&lDryad Race &a&l-----'
+      - '&2The healers of the forest'
+      - '&2These creatures are gentle and welcoming'
+      - '&2So make sure to give them an apple a day'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration III'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration III'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Same as sprout/seed'
+      - '&5 ◆ Right clicking bamboo will give'
+      - '&5    instant healing on any'
+      - '&5    entity within 5 blocks'
+      - '&5    cooldown 3 minutes'
+      - '&4Requires level 25'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  MutatedOrganism:
+    displayName: '&6Mutated Organism'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 2
+    slot: 12
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&6&l----- &6&lMutated Organism Race &6&l-----'
+      - '&6All races look at this race with disgust'
+      - '&6It is said to be made by humans long ago'
+      - '&6To eliminate a threat that is no more'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🎲 Unluck IV'
+      - '&5 ◆ 🏔 Knockback resistance I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🎲 Unluck IV'
+      - '&5 ◆ 🏔 Knockback resistance I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Every hit will inflict wither damage'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - KNOCKBACK_RESISTANCE
+    dayPassiveGenericAttributesBase:
+      - 1.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - KNOCKBACK_RESISTANCE
+    nightPassiveGenericAttributesBase:
+      - 1.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  LesserChimera:
+    displayName: '&6Lesser Chimera'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: MutatedOrganism
+    treeSlot: 22
+    levelRequire: 25
+    guiPage: 2
+    slot: 13
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&6&l----- &6&lLesser Chimera Race &6&l-----'
+      - '&6For the Mutated Organisms to survive'
+      - '&6They had to change, evolve on the battlefield'
+      - '&6Thus Lesser Chimeras were created'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🏔 Knockback resistance I'
+      - '&5 ◆ 💨 Speed I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🏔 Knockback resistance I'
+      - '&5 ◆ 💨 Speed I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Every hit will inflict wither damage'
+      - '&5 ◆ Right clicking string will give IV strength'
+      - '&5    for 10 seconds, cooldown, 2 minutes'
+      - '&4Requires level 25'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - KNOCKBACK_RESISTANCE
+    dayPassiveGenericAttributesBase:
+      - 1.0
+    dayRacePassiveAttributesLevel:
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - KNOCKBACK_RESISTANCE
+    nightPassiveGenericAttributesBase:
+      - 1.0
+    nightRacePassiveAttributesLevel:
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Chimera:
+    displayName: '&6Chimera'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: MutatedOrganism
+    treeSlot: 40
+    levelRequire: 50
+    guiPage: 2
+    slot: 13
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&6&l----- &6&lChimera Race &6&l-----'
+      - '&6The final evolution of the Mutated Organism'
+      - '&6This race left terror upon the battlefield'
+      - '&6They left nothing but dead bodies across the land'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 🏔 Knockback resistance III'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 🛡️ Armor X'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🏔 Knockback resistance I'
+      - '&5 ◆ 💨 Speed I'
+      - '&5 ◆ 🛡️ Armor X'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Every hit will inflict wither damage'
+      - '&5 ◆ Right clicking string will give V strength'
+      - '&5    for 30 seconds, cooldown, 2 minutes'
+      - '&4Requires level 50'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - KNOCKBACK_RESISTANCE
+      - ARMOR
+    dayPassiveGenericAttributesBase:
+      - 3.0
+      - 20.0
+    dayRacePassiveAttributesLevel:
+      - 0
+      - 0
+    dayRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - KNOCKBACK_RESISTANCE
+      - ARMOR
+    nightPassiveGenericAttributesBase:
+      - 3.0
+      - 20.0
+    nightRacePassiveAttributesLevel:
+      - 0
+      - 0
+    nightRaceDataAttribute:
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+      - ALL Y > -1000 -1 ALL ALL ALL ALL
+    executeCommandUponSwitching:
+      - 'null'
+  Snowball:
+    displayName: '&fSnowball'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 2
+    slot: 13
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&f&l----- &f&lSnowball Race &f&l-----'
+      - '&fAs the snowfalls got heavier and heavier'
+      - '&fWith every season, a fairy was cold and lonely'
+      - '&fThe fairy then conjured up a friend, a new race'
+      - '&fThis race was called snowball'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I (When snowing and in cold regions)'
+      - '&5 ◆ 🦘 Jump II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I (When snowing and in cold regions)'
+      - '&5 ◆ 🦘 Jump II'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking a snowblock will give 30 snowballs'
+      - '&5    cooldown, 1 minutes'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  SnowGolem:
+    displayName: '&fSnow Golem'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Snowball
+    treeSlot: 22
+    levelRequire: 15
+    guiPage: 2
+    slot: 13
+    lvlType: RUNNING,HUNTING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&f&l----- &f&lSnow Golem Race &f&l-----'
+      - '&fAh the snow golem race, the race where endermen'
+      - '&fCannot do a single thing against this race'
+      - '&fThis race is known to be very deadly'
+      - '&fEspecially due to their snowballs..'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I (When snowing and in cold regions)'
+      - '&5 ◆ 🦘 Jump II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I (When snowing and in cold regions)'
+      - '&5 ◆ 🦘 Jump II'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking a snowblock will give 30 snowballs'
+      - '&5    cooldown, 1 minutes'
+      - '&5 ◆ Throwing a snowball at an entity will'
+      - '&5    effect the entity with blindness and slow'
+      - '&5 ◆ A snowball has a 5% chance to deal instant damage'
+      - '&5 ◆ Enderman is friendly'
+      - '&4Requires level 15'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  ElderSnowGolem:
+    displayName: '&fElder Snow Golem'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Snowball
+    treeSlot: 40
+    levelRequire: 30
+    guiPage: 2
+    slot: 13
+    lvlType: RUNNING,HUNTING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&f&l----- &f&lElder Snow Golem Race &f&l-----'
+      - '&fOnce was a fairies friend, is now a guardian'
+      - '&fThis race can throw deadly projectiles'
+      - '&fWhich will be fatal to many'
+      - '&fThough they are still friendly... sometimes'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ 🦘 Jump II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ 🦘 Jump II'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Right clicking a snowblock will give 128 snowballs'
+      - '&5    cooldown, 1 minute'
+      - '&5 ◆ Throwing a snowball at an entity will'
+      - '&5    effect the entity with blindness and slow'
+      - '&5 ◆ A snowball has a 30% chance to deal instant damage'
+      - '&5 ◆ Enderman is friendly'
+      - '&4Requires level 30'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Solarians:
+    displayName: '&6Solarians'
+    material: ENCHANTED_BOOK
+    isSubRace: false
+    subRaceType: ''
+    treeSlot: 4
+    levelRequire: 0
+    guiPage: 2
+    slot: 14
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&f&l----- &6&l The Solarians Race &f&l-----'
+      - '&6Born from the heart of the sun.'
+      - '&6Solarians are beings of light and heat.'
+      - '&6They take in energy from the sun.'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration I'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5 ◆ 🍴 Hunger I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Standing in direct sunlight grants you strength'
+      - '&5 ◆ Shift + right click a sunflower in the air'
+      - '&5    will consume the flower and grant you luck'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Sunblades:
+    displayName: '&6Sunblades'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Solarians
+    treeSlot: 22
+    levelRequire: 30
+    guiPage: 2
+    slot: 4
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&f&l----- &6&l The Sunblades Race &f&l-----'
+      - '&6After being exposed to the sun for long periods of time.'
+      - '&6They evolve into a greater race.'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration II'
+      - '&5 ◆ 🦘 Jump II'
+      - '&5 ◆ 🍖 Saturation II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🎲 Unluck I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Standing in direct sunlight grants you strength'
+      - '&5 ◆ Shift + right click a sunflower in the air'
+      - '&5    will consume the flower and grant you luck'
+      - '&5 ◆ Standing in direct sunlight grants you '
+      - '&5    hero of the village'
+      - '&4Requires level 30'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Luminarians:
+    displayName: '&6Luminarians'
+    material: ENCHANTED_BOOK
+    isSubRace: true
+    subRaceType: Solarians
+    treeSlot: 40
+    levelRequire: 60
+    guiPage: 2
+    slot: 4
+    lvlType: RUNNING
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&f&l----- &6&lThe Luminarians Race &f&l-----'
+      - '&6Who can defy such a race when they have such powers?'
+      - '&6They are tough, wise and can shoot a laser at you.'
+      - ' '
+      - '&5&l----- Day Time Passive Effects &l-----'
+      - '&5 ◆ 💖 Regeneration III'
+      - '&5 ◆ 🦘 Jump I'
+      - '&5 ◆ 🍖 Saturation II'
+      - '&5&l----- Night Time Passive Effects &l-----'
+      - '&5 ◆ 🍖 Saturation I'
+      - '&5&l----- Abilities &l-----'
+      - '&5 ◆ Standing in direct sunlight grants you strength'
+      - '&5 ◆ Shift + right click a sunflower in the air'
+      - '&5    will consume the flower and grant you luck'
+      - '&5 ◆ Standing in direct sunlight grants you '
+      - '&5    hero of the village'
+      - '&5 ◆ Right clicking an orange dye in the air'
+      - '&5    will shoot an energy beam damaging all entities'
+      - '&5    cooldown 2 minutes'
+      - '&4Requires level 60'
+    dayPassivePotionEffects:
+      - 'null'
+    dayPassivePotionEffectsBase:
+      - 'null'
+    dayRaceDataPotion:
+      - 'null'
+    dayPassiveGenericAttributes:
+      - 'null'
+    dayPassiveGenericAttributesBase:
+      - 'null'
+    dayRacePassiveAttributesLevel:
+      - 'null'
+    dayRaceDataAttribute:
+      - 'null'
+    nightPassivePotionEffects:
+      - 'null'
+    nightPassivePotionEffectsBase:
+      - 'null'
+    nightRaceDataPotion:
+      - 'null'
+    nightPassiveGenericAttributes:
+      - 'null'
+    nightPassiveGenericAttributesBase:
+      - 'null'
+    nightRacePassiveAttributesLevel:
+      - 'null'
+    nightRaceDataAttribute:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+
+
+
+leveling: # this is only for the type 'RUNNING'
+   
+   # this is the distance number
+   distance: 10
+   
+   # every X amount of ticks, 20 ticks = 1 second, calculate distance
+   time: 600
+
+# Messages
+# To change the cooldown time manually for a player, the time is in the data.yml file
+cooldownMessage: '&4You still have a cooldown! {time} minutes remaining until you may choose another race!'
+currentBiome: '&aStanding in biome &2{biome}'
+noPerm: '&4No Permission | Missing permission: &c{perm}'
+invalidRace: '&4Invalid Race/Class'
+listRaces: '&aKnown races are &2{races}'
+chosenRace: '&aYou have chosen the race &2{race}'
+reload: '&aReloaded mythical races | It is not recommended to use this command, restarting or /reload confirm is preffered'
+switchUserRace: '&aSpecified players race is now {race}'
+invalidPlayer: '&aInvalid player'
+invalidArgs: '&4Invalid arguments, type /races help'
+levelup: '&aYou leveled up! Your new race level is {level}'
+notRequiredLevel: '&4Your level is not high enough to select this race!'
+setPlayersLevel: '&aSet players race level to {lvl}'
+notInt: '&aMust be an integer'
+update: '&aThere is an update for the Mythical Races Package! Remember to read the changelog before updating!'
+addXP: '&aAdded {xp} to specified players XP' # note that when doing this command, you can use negative values for "decreasing" the amount
+displaySubs: '&aThe sub-evolutions of the race or class is: {races/classes}'
+disabledWorld: '&4Cannot use race commands in this world'
+resetPlayersCooldown: '&aReset players race and class cooldown'
+profile:
+  - "&a&l - - - &2&l{name}&r&a&l's User Profile &a&l- - -"
+  - '&aRace: &2{race}'
+  - '&aLevel: &2{level}'
+  - '&aXP: &2{xp}&a/&2{xp-max}'
+  - '&aClass: &2{class}'
+  - '&aClass Level: &2{class-level}'
+  - '&aClass XP: &2{xp-class}&a/&2{xp-max-class}'
+help:
+   - '&a - - - &2Mythical Races Help Menu&a - - -'
+   - '&a/races choose [race/class] - choose specific race or class'
+   - '&a/races list - display base races'
+   - '&a/races info [race/class] - display info about race'
+   - '&a/races gui - display list of races'
+   - '&a/races tree - display race evolution tree'
+   - '&a/races classgui - display list of classes'
+   - '&a/races classtree - display list of races'
+   - '&a/races sub [race/class] - display sub-evolutions of the race/class'
+   - '&a/races profile - display your race profile'
+   - '&a/races profile [player] view someone elses races profile'
+   - '&a/races profilegui - open the player profile GUI'
+   - '&a/races lvlset [player] [integer]'
+   - '&a/races lvlsetclass [player] [integer]'
+   - '&a/races set [race] [player] - forcibly set a players race'
+   - '&a/races addxp [player] [xp] - add xp to players race, (positive/negative) values work'
+   - '&a/races addxpclass [player] [xp] - add xp to players class, (positive/negative) values work'
+   - '&a/races biome - for config purposes'
+   - '&a/races rcooldown - reset cooldown of a players class/race'
+   - '&a/races leaderboard'
+   - '&a/races questslist'
+   - '&a/races questprogress [quest name] - view quest progress'
+   - '&a/races questsview [quest name] - view quest lore/description'
+   - '&a/races reset [player] - reset race, class, force gui, cooldown, xp and level of a player'
+   - '&a/races toggle - toggle potion effects and abilities'
+   - '&a/races toggleplayer [player] - toggle potion effects and abilities for a player'
+   - '&a/races attribute-reset [player] - forcefully remove attribute modifiers from a player'
+
+
+   
+leaderboard:
+   - '&a - - - - &2Top 20 Highest level players - - - - - '
+
+leaderboardMid: '&a {position}. {username} > {lvl} > {race}'
+
+resetPlayer: "&aReset {player}'s race, quests, class, force race modifier, level and xp, and cooldown"
+
+toggleAbility: "&2Potion effects and abilities have been toggled to &4&l{toggle}&2!"
+
+toggleAbilityOther: "&2Potion effects and abilities have been toggled to &4&l{toggle}&2! for {player}"

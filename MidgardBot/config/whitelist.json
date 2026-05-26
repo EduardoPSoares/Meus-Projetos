@@ -1,0 +1,241 @@
+{
+  "embed": {
+    "title": "Registro de Cidadania • Midgard",
+    "description": "Seja bem-vindo ao **Reino de Midgard**!\n\nPara adentrar nossas terras, é necessário realizar seu **registro de cidadania**.\n\n📜 O processo consiste em:\n• Aceitar os termos do reino\n• Responder algumas perguntas\n\nClique no botão abaixo para iniciar.",
+    "color": "2B2D31",
+    "thumbnail": "",
+    "image": "",
+    "footer": "Midgard RPG • Sistema de Whitelist"
+  },
+  "buttons": {
+    "start": "📜 Iniciar Inscrição",
+    "accept": "✅ Li e Aceito os Termos",
+    "continue": "▶ Continuar"
+  },
+  "terms": {
+    "title": "Termos do Reino de Midgard",
+    "text": "Ao se registrar como cidadão de Midgard, você concorda com:\n\n**1.** Respeitar todos os jogadores e a equipe.\n**2.** Não utilizar hacks, exploits ou qualquer meio ilícito.\n**3.** Manter o roleplay de qualidade.\n**4.** Seguir as regras do servidor.\n**5.** Não compartilhar informações do metagame.\n\nO descumprimento resultará em punições."
+  },
+  "roles": {
+    "approved": "",
+    "pending": ""
+  },
+  "channels": {
+    "log": "",
+    "approved": ""
+  },
+  "questions": [
+    {
+      "title": "Player",
+      "questions": [
+        {
+          "id": "nick",
+          "label": "Seu nick do Minecraft?",
+          "placeholder": "Ex: Steve",
+          "required": true,
+          "style": "SHORT"
+        },
+        {
+          "id": "idade",
+          "label": "Qual a tua idade?",
+          "placeholder": "Ex: 18",
+          "required": true,
+          "style": "SHORT"
+        },
+        {
+          "id": "exp_rp",
+          "label": "Já participaste de outros servidores de RP?",
+          "placeholder": "Se sim, quais e por quanto tempo?",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "bom_rp",
+          "label": "Para ti, o que é bom roleplay?",
+          "placeholder": "Responde com tuas próprias palavras",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "metagaming",
+          "label": "O que é metagaming?",
+          "placeholder": "Explica com tuas palavras",
+          "required": true,
+          "style": "PARAGRAPH"
+        }
+      ]
+    },
+    {
+      "title": "Player (cont.)",
+      "questions": [
+        {
+          "id": "powergaming",
+          "label": "O que é powergaming?",
+          "placeholder": "Explica com tuas palavras",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "amor_vida",
+          "label": "O que significa amor à vida dentro do RP?",
+          "placeholder": "Explica o conceito",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "perigo_morte",
+          "label": "Perigo real de morte: como influencia o RP?",
+          "placeholder": "Se teu personagem está em perigo real de morte, como isso deve influenciar tuas ações em RP?",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "perder_luta",
+          "label": "Personagem perde uma luta. Como lidas?",
+          "placeholder": "Se teu personagem perder uma luta importante, como tu lidas com isso como player?",
+          "required": true,
+          "style": "PARAGRAPH"
+        }
+      ]
+    },
+    {
+      "title": "Personagem",
+      "questions": [
+        {
+          "id": "nome_personagem",
+          "label": "Qual é o nome do teu personagem?",
+          "placeholder": "Nome completo do personagem",
+          "required": true,
+          "style": "SHORT"
+        },
+        {
+          "id": "idade_personagem",
+          "label": "Idade aparente e idade real?",
+          "placeholder": "Ex: Aparenta 25, tem 30",
+          "required": true,
+          "style": "SHORT"
+        },
+        {
+          "id": "medo",
+          "label": "Qual é o maior medo do teu personagem?",
+          "placeholder": "Descreve o medo principal",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "desejo",
+          "label": "Qual é o desejo principal dele(a)?",
+          "placeholder": "O que move teu personagem",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "viver",
+          "label": "O que queres viver com teu personagem?",
+          "placeholder": "Tragédia, crescimento, poder, relações? Explica",
+          "required": true,
+          "style": "PARAGRAPH"
+        }
+      ]
+    },
+    {
+      "title": "Personagem (cont.)",
+      "questions": [
+        {
+          "id": "defeito",
+          "label": "Teu personagem tem algum defeito claro?",
+          "placeholder": "Qual defeito? Descreve",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "historia",
+          "label": "Conta a história do teu personagem!",
+          "placeholder": "Background, origens, eventos marcantes...",
+          "required": true,
+          "style": "PARAGRAPH"
+        }
+      ]
+    },
+    {
+      "title": "Situações de RP",
+      "questions": [
+        {
+          "id": "rp_nao_gosta",
+          "label": "Que tipo de RP tu não gostas de fazer?",
+          "placeholder": "Descreve os tipos que evitas",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "crime",
+          "label": "Personagem presencia um crime. O que faz?",
+          "placeholder": "Teu personagem presencia um crime grave. O que ele faz?",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "ameaca",
+          "label": "Personagem poderoso te ameaça. Como reages?",
+          "placeholder": "Como tu reagirias sem quebrar RP?",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "info_proibida",
+          "label": "Descobre informação proibida. E agora?",
+          "placeholder": "O que pesa mais: curiosidade ou sobrevivência?",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "ordem_injusta",
+          "label": "NPC dá uma ordem injusta. Como reage?",
+          "placeholder": "Se um NPC importante te dá uma ordem injusta, como teu personagem reage?",
+          "required": true,
+          "style": "PARAGRAPH"
+        }
+      ]
+    },
+    {
+      "title": "Situações de RP (cont.)",
+      "questions": [
+        {
+          "id": "dialogo_confronto",
+          "label": "Diálogo, manipulação ou confronto? Por quê?",
+          "placeholder": "O que teu personagem prefere e por quê?",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "conflito_lore",
+          "label": "Tua história conflita com a lore. O que faz?",
+          "placeholder": "Explica como tu reagirias e o que priorizas nesse tipo de situação",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "misterio",
+          "label": "Mistério sem progresso. O que faz em RP?",
+          "placeholder": "Dá exemplos de atitudes ou cenas que criarias enquanto nada acontece",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "consequencia",
+          "label": "Staff aplica consequência pesada. E agora?",
+          "placeholder": "Como tu continuarias jogando sem tentar contornar a consequência?",
+          "required": true,
+          "style": "PARAGRAPH"
+        },
+        {
+          "id": "prioridade_rp",
+          "label": "De 0 a 10, quanto priorizas o RP?",
+          "placeholder": "Quanto priorizas RP acima de ganhar vantagens no jogo? Nota e explicação",
+          "required": true,
+          "style": "PARAGRAPH"
+        }
+      ]
+    }
+  ]
+}

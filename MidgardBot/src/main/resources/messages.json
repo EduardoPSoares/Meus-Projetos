@@ -1,0 +1,12 @@
+{
+  "maintenance": {
+    "access-denied-title": "⛔ Acesso Negado",
+    "access-denied-desc": "Você não tem permissão para isso.",
+    "invalid-format-title": "❌ Formato Inválido",
+    "invalid-format-desc": "Use formatos como: 30m, 1h, 2h30m.",
+    "enabled-title": "🚧 Manutenção: {target}",
+    "enabled-desc": "O modo de manutenção foi **ATIVADO**.{duration}\n\nO acesso foi restrito.",
+    "disabled-title": "✅ Manutenção Encerrada",
+    "disabled-desc": "O modo de manutenção para **{target}** foi desativado.\nSistemas restabelecidos."
+  }
+}

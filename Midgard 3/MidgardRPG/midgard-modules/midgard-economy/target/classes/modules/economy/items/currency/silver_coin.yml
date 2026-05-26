@@ -1,0 +1,19 @@
+silver_coin:
+  base:
+    material: IRON_INGOT
+    name: '<white>ᴍᴏᴇᴅᴀ ᴅᴇ ᴘʀᴀᴛᴀ</white>'
+    tier: UNCOMMON
+    type: MISCELLANEOUS
+    model-data: 1002
+  mechanics:
+    nbt-tags: "currency:100"
+    lore:
+      - '<gray>ᴛɪᴘᴏ:<white><bold>ᴍᴏᴇᴅᴀ</bold></white>'
+      - ''
+      - '<gray>ᴜᴍᴀ ᴍᴏᴇᴅᴀ ʀᴇʟᴜᴢᴇɴᴛᴇ ᴅᴇ ᴘʀᴀᴛᴀ,</gray>'
+      - '<gray>ᴇǫᴜɪᴠᴀʟᴇɴᴛᴇ ᴀ 100 ᴍᴏᴇᴅᴀs ᴅᴇ ʙʀᴏɴᴢᴇ.</gray>'
+      - '<gray>ᴜsᴀᴅᴀ ᴘᴏʀ ᴍᴇʀᴄᴀᴅᴏʀᴇs ᴇ ɴᴏʙʀᴇs</gray>'
+      - '<gray>ᴇᴍ ᴛʀᴀɴsᴀᴄᴏᴇs ᴅᴇ ᴍᴇᴅɪᴏ ᴘᴏʀᴛᴇ.</gray>'
+      - ''
+      - '<white><bold>✦ ᴠᴀʟᴏʀ: 100 ʙʀᴏɴᴢᴇ ✦</bold></white>'
+      - ''

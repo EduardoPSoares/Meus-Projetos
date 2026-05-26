@@ -1,0 +1,244 @@
+# ============================================
+# MIDGARD ESSENTIALS MODULE - MESSAGES
+# Formato: Small Caps Unicode para estilo visual
+# ============================================
+
+# ============================================
+# PREFIX E BRANDING
+# ============================================
+prefix: ""
+
+# ============================================
+# SISTEMA DE BACK
+# ============================================
+back:
+  success: "<green>✔</green> <gray>ᴠᴏʟᴛᴀɴᴅᴏ ᴘᴀʀᴀ ᴏ ʟᴏᴄᴀʟ ᴀɴᴛᴇʀɪᴏʀ.</gray>"
+  teleporting: "<aqua>ℹ</aqua> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀɴᴅᴏ ᴘᴀʀᴀ ᴏ ʟᴏᴄᴀʟ ᴀɴᴛᴇʀɪᴏʀ...</gray>"
+  no_location: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ɴᴇɴʜᴜᴍ ʟᴏᴄᴀʟ ᴘᴀʀᴀ ᴠᴏʟᴛᴀʀ.</gray>"
+  unsafe_location: "<red>✖</red> <gray>ᴏ ʟᴏᴄᴀʟ ᴀɴᴛᴇʀɪᴏʀ ɴᴀᴏ ᴇ sᴇɢᴜʀᴏ ᴘᴀʀᴀ ʀᴇᴛᴏʀɴᴏ.</gray>"
+
+# ============================================
+# SISTEMA DE VANISH
+# ============================================
+vanish:
+  enabled: "<green>✔</green> <gray>ᴠᴏᴄᴇ ᴇɴᴛʀᴏᴜ ɴᴏ ᴍᴏᴅᴏ ɪɴᴠɪsɪᴠᴇʟ.</gray>"
+  disabled: "<yellow>⚠</yellow> <gray>ᴠᴏᴄᴇ sᴀɪᴜ ᴅᴏ ᴍᴏᴅᴏ ɪɴᴠɪsɪᴠᴇʟ.</gray>"
+  enabled_other: "<green>✔</green> <aqua>%player%</aqua> <gray>ᴇɴᴛʀᴏᴜ ɴᴏ ᴍᴏᴅᴏ ɪɴᴠɪsɪᴠᴇʟ.</gray>"
+  disabled_other: "<yellow>⚠</yellow> <aqua>%player%</aqua> <gray>sᴀɪᴜ ᴅᴏ ᴍᴏᴅᴏ ɪɴᴠɪsɪᴠᴇʟ.</gray>"
+  no_attack: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴀᴛᴀᴄᴀʀ ᴇɴԡᴜᴀɴᴛᴏ ᴇsᴛɪᴠᴇʀ ɪɴᴠɪsɪᴠᴇʟ.</gray>"
+  silent_chest: "<aqua>ℹ</aqua> <gray>ᴀʙʀɪɴᴅᴏ ʙᴀᴜ sɪʟᴇɴᴄɪᴏsᴀᴍᴇɴᴛᴇ...</gray>"
+  silent_view_title: "Silent View"
+
+# ============================================
+# SISTEMA DE INVSEE
+# ============================================
+invsee:
+  usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <gray>/rpg admin invsee <ᴊᴏɢᴀᴅᴏʀ></gray>"
+  opening: "<aqua>ℹ</aqua> <gray>ᴀʙʀɪɴᴅᴏ ɪɴᴠᴇɴᴛᴀʀɪᴏ ᴅᴇ <aqua>%player%</aqua><gray>.</gray>"
+  viewing: "<aqua>ℹ</aqua> <gray>ᴠɪsᴜᴀʟɪzᴀɴᴅᴏ ɪɴᴠᴇɴᴛᴀʀɪᴏ ᴅᴇ <aqua>%player%</aqua><gray>.</gray>"
+  cannot_view_target: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴠᴇʀ ᴏ ɪɴᴠᴇɴᴛᴀʀɪᴏ ᴅᴇsᴛᴇ ᴊᴏɢᴀᴅᴏʀ.</gray>"
+  gui:
+    title: "<white>ɪɴᴠᴇɴᴛᴀʀɪᴏ ᴅᴇ <aqua>%player%</aqua></white>"
+    empty_helmet: "<red>sᴇᴍ ᴄᴀᴘᴀᴄᴇᴛᴇ</red>"
+    empty_chestplate: "<red>sᴇᴍ ᴘᴇɪᴛᴏʀᴀʟ</red>"
+    empty_leggings: "<red>sᴇᴍ ᴄᴀʟᴄᴀ</red>"
+    empty_boots: "<red>sᴇᴍ ʙᴏᴛᴀs</red>"
+    empty_offhand: "<red>sᴇᴍ ᴏꜰꜰʜᴀɴᴅ</red>"
+    info_name: "<yellow>ɪɴꜰᴏʀᴍᴀᴄᴏᴇs</yellow>"
+    info_health: "<gray>❤ ᴠɪᴅᴀ: <red>%current%</red><gray>/</gray><red>%max%</red>"
+    info_food: "<gray>ꜰᴏᴍᴇ: <gold>%food%</gold>"
+    info_xp: "<gray>xᴘ: <green>%xp%</green>"
+    readonly: "<red>ᴍᴏᴅᴏ sᴏᴍᴇɴᴛᴇ ʟᴇɪᴛᴜʀᴀ</red>"
+
+# ============================================
+# SISTEMA DE TELEPORTE
+# ============================================
+teleport:
+  success: "<green>✔</green> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀᴅᴏ ᴘᴀʀᴀ <aqua>%target%</aqua><gray>.</gray>"
+  success_coords: "<green>✔</green> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀᴅᴏ ᴘᴀʀᴀ <gold>x:%x% ʏ:%y% z:%z%</gold><gray>.</gray>"
+  warmup: "<yellow>⚠</yellow> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀɴᴅᴏ ᴇᴍ <gold>%time%s</gold><gray>...</gray>"
+  warmup_cancelled: "<red>✖</red> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴇ ᴄᴀɴᴄᴇʟᴀᴅᴏ. ᴠᴏᴄᴇ sᴇ ᴍᴏᴠᴇᴜ.</gray>"
+  cooldown: "<yellow>⚠</yellow> <gray>ᴀɢᴜᴀʀᴅᴇ <gold>%time%s</gold> <gray>ᴘᴀʀᴀ ᴛᴇʟᴇᴘᴏʀᴛᴀʀ ɴᴏᴠᴀᴍᴇɴᴛᴇ.</gray>"
+
+# ============================================
+# TPA (TELEPORT REQUEST)
+# ============================================
+tpa:
+  already_sent: "<red>✖</red> <gray>ᴠᴏᴄᴇ ᴊᴀ ᴇɴᴠɪᴏᴜ ᴜᴍᴀ sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ᴘᴀʀᴀ ᴇsᴛᴇ ᴊᴏɢᴀᴅᴏʀ.</gray>"
+  expired: "<yellow>⚠</yellow> <gray>sᴜᴀ sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ᴅᴇ ᴛᴇʟᴇᴘᴏʀᴛᴇ ᴇxᴘɪʀᴏᴜ.</gray>"
+  sent: "<green>✔</green> <gray>sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ᴇɴᴠɪᴀᴅᴀ ᴘᴀʀᴀ <aqua>%player%</aqua><gray>.</gray>"
+  received: "<aqua>%player%</aqua> <gray>ᴅᴇsᴇᴊᴀ sᴇ ᴛᴇʟᴇᴘᴏʀᴛᴀʀ ᴀᴛᴇ ᴠᴏᴄᴇ.</gray>\n<dark_gray><i>ᴜsᴇ <green>/rpg tpaccept</green> ᴏᴜ <red>/rpg tpdeny</red> ᴘᴀʀᴀ ʀᴇsᴘᴏɴᴅᴇʀ.</i></dark_gray>"
+  no_request: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ sᴏʟɪᴄɪᴛᴀᴄᴏᴇs ᴘᴇɴᴅᴇɴᴛᴇs.</gray>"
+  teleporting: "<aqua>ℹ</aqua> <gray>sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ᴀᴄᴇɪᴛᴀ. ᴛᴇʟᴇᴘᴏʀᴛᴀɴᴅᴏ...</gray>"
+  accepted: "<green>✔</green> <gray>ᴠᴏᴄᴇ ᴀᴄᴇɪᴛᴏᴜ ᴀ sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ᴅᴇ <aqua>%player%</aqua><gray>.</gray>"
+  denied: "<red>✖</red> <gray>sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ʀᴇᴄᴜsᴀᴅᴀ.</gray>"
+  sender_offline: "<red>✖</red> <gray>ᴏ ᴊᴏɢᴀᴅᴏʀ ɴᴀᴏ ᴇsᴛᴀ ᴍᴀɪs ᴏɴʟɪɴᴇ.</gray>"
+  self: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴇɴᴠɪᴀʀ sᴏʟɪᴄɪᴛᴀᴄᴀᴏ ᴘᴀʀᴀ sɪ ᴍᴇsᴍᴏ.</gray>"
+  unsafe_location_target: "<red>✖</red> <gray>ʟᴏᴄᴀʟ ɪɴsᴇɢᴜʀᴏ ᴘᴀʀᴀ ᴛᴇʟᴇᴘᴏʀᴛᴇ. ᴘᴇᴅɪᴅᴏ ᴄᴀɴᴄᴇʟᴀᴅᴏ.</gray>"
+  unsafe_location_sender: "<red>✖</red> <gray>ᴏ ᴛᴇʟᴇᴘᴏʀᴛᴇ ꜰᴏɪ ᴄᴀɴᴄᴇʟᴀᴅᴏ ᴘᴏʀǫᴜᴇ ᴏ ᴅᴇsᴛɪɴᴏ ɴᴀᴏ ᴇ sᴇɢᴜʀᴏ.</gray>"
+
+# ============================================
+# PLAYER COMMANDS
+# ============================================
+player:
+  heal: "<green>✔</green> <gray>sᴜᴀ ᴠɪᴅᴀ ꜰᴏɪ ʀᴇsᴛᴀᴜʀᴀᴅᴀ.</gray>"
+  heal_other: "<green>✔</green> <gray>ᴠᴏᴄᴇ ᴄᴜʀᴏᴜ <aqua>%player%</aqua><gray>.</gray>"
+  healed_by: "<green>✔</green> <gray>ᴠᴏᴄᴇ ꜰᴏɪ ᴄᴜʀᴀᴅᴏ ᴘᴏʀ <aqua>%player%</aqua><gray>.</gray>"
+  gamemode_changed: "<green>✔</green> <gray>ᴍᴏᴅᴏ ᴅᴇ ᴊᴏɢᴏ ᴀʟᴛᴇʀᴀᴅᴏ ᴘᴀʀᴀ <gold>%gamemode%</gold><gray>.</gray>"
+  gamemode_changed_other: "<green>✔</green> <gray>ᴍᴏᴅᴏ ᴅᴇ <aqua>%player%</aqua> <gray>ᴀʟᴛᴇʀᴀᴅᴏ ᴘᴀʀᴀ <gold>%gamemode%</gold><gray>.</gray>"
+  feed: "<green>✔</green> <gray>sᴜᴀ ꜰᴏᴍᴇ ꜰᴏɪ sᴀᴄɪᴀᴅᴀ.</gray>"
+  feed_other: "<green>✔</green> <gray>ᴠᴏᴄᴇ ᴀʟɪᴍᴇɴᴛᴏᴜ <aqua>%player%</aqua><gray>.</gray>"
+  fed_by: "<green>✔</green> <gray>ᴠᴏᴄᴇ ꜰᴏɪ ᴀʟɪᴍᴇɴᴛᴀᴅᴏ ᴘᴏʀ <aqua>%player%</aqua><gray>.</gray>"
+  fly_enabled: "<green>✔</green> <gray>ᴠᴏᴏ ʜᴀʙɪʟɪᴛᴀᴅᴏ.</gray>"
+  fly_disabled: "<yellow>⚠</yellow> <gray>ᴠᴏᴏ ᴅᴇsᴀʙɪʟɪᴛᴀᴅᴏ.</gray>"
+  fly_enabled_other: "<green>✔</green> <gray>ᴠᴏᴏ ʜᴀʙɪʟɪᴛᴀᴅᴏ ᴘᴀʀᴀ <aqua>%player%</aqua><gray>.</gray>"
+  fly_disabled_other: "<yellow>⚠</yellow> <gray>ᴠᴏᴏ ᴅᴇsᴀʙɪʟɪᴛᴀᴅᴏ ᴘᴀʀᴀ <aqua>%player%</aqua><gray>.</gray>"
+
+# ============================================
+# SPAWN COMMANDS
+# ============================================
+spawn:
+  set: "<green>✔</green> <gray>sᴘᴀᴡɴ ᴅᴇꜰɪɴɪᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ.</gray>"
+  not_set: "<red>✖</red> <gray>sᴘᴀᴡɴ ɴᴀᴏ ᴅᴇꜰɪɴɪᴅᴏ.</gray>"
+  teleport: "<aqua>ℹ</aqua> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀᴅᴏ ᴘᴀʀᴀ ᴏ sᴘᴀᴡɴ.</gray>"
+  unsafe_location: "<red>✖</red> <gray>ᴏ ʟᴏᴄᴀʟ ᴅᴇ sᴘᴀᴡɴ ᴇsᴛᴀ ᴏʙsᴛʀᴜɪᴅᴏ ᴏᴜ ᴘᴇʀɪɢᴏsᴏ.</gray>"
+
+# ============================================
+# HOME COMMANDS
+# ============================================
+home:
+  set: "<green>✔</green> <gray>ʜᴏᴍᴇ <gold>%home%</gold> <gray>ᴅᴇꜰɪɴɪᴅᴀ.</gray>"
+  set_first: "<green>✔</green> <gray>ᴘʀɪᴍᴇɪʀᴀ ʜᴏᴍᴇ ᴅᴇꜰɪɴɪᴅᴀ. ᴜsᴇ <gray>/rpg home</gray><gray>.</gray>"
+  list_header: "<aqua>sᴜᴀs ᴍᴏʀᴀᴅɪᴀs:</aqua>"
+  list_line: "<gray>%homes%</gray>"
+  not_found: "<red>✖</red> <gray>ʜᴏᴍᴇ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ.</gray>"
+  teleport: "<aqua>ℹ</aqua> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀᴅᴏ ᴘᴀʀᴀ <gold>%home%</gold><gray>.</gray>"
+  deleted: "<yellow>⚠</yellow> <gray>ʜᴏᴍᴇ <gold>%home%</gold> <gray>ʀᴇᴍᴏᴠɪᴅᴀ.</gray>"
+  limit_reached: "<red>✖</red> <gray>ʟɪᴍɪᴛᴇ ᴅᴇ ʜᴏᴍᴇs ᴀᴛɪɴɢɪᴅᴏ: <gold>%limit%</gold><gray>.</gray>"
+
+# ============================================
+# WARP COMMANDS
+# ============================================
+warp:
+  list_header: "<aqua>ʟᴏᴄᴀɪs ᴅᴇ ᴛᴇʟᴇᴘᴏʀᴛᴇ:</aqua>"
+  list_line: "<gray>%warps%</gray>"
+  not_found: "<red>✖</red> <gray>ᴡᴀʀᴘ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ.</gray>"
+  teleport: "<aqua>ℹ</aqua> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀᴅᴏ ᴘᴀʀᴀ <gold>%warp%</gold><gray>.</gray>"
+  deleted: "<yellow>⚠</yellow> <gray>ᴡᴀʀᴘ <gold>%warp%</gold> <gray>ʀᴇᴍᴏᴠɪᴅᴀ.</gray>"
+  set: "<green>✔</green> <gray>ᴡᴀʀᴘ <gold>%warp%</gold> <gray>ᴅᴇꜰɪɴɪᴅᴀ ᴄᴏᴍ sᴜᴄᴇssᴏ.</gray>"
+  no_permission: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ᴜsᴀʀ ᴇsᴛᴀ ᴡᴀʀᴘ.</gray>"
+  unsafe_location: "<red>✖</red> <gray>ʟᴏᴄᴀʟ ᴅᴇ ᴡᴀʀᴘ ᴏʙsᴛʀᴜɪᴅᴏ ᴏᴜ ᴘᴇʀɪɢᴏsᴏ.</gray>"
+
+# ============================================
+# ERROR MESSAGES
+# ============================================
+errors:
+  player_not_found: "<red>✖</red> <gray>ᴊᴏɢᴀᴅᴏʀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ: <aqua>%player%</aqua><gray>.</gray>"
+  invalid_number: "<red>✖</red> <gray>ɴᴜᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ.</gray>"
+
+# ============================================
+# COMMAND DESCRIPTIONS & USAGES
+# ============================================
+command:
+  desc:
+    default: "Comando do MidgardEssentials"
+    gamemode: "Altera o modo de jogo"
+    fly: "Ativa/desativa modo de voo"
+    heal: "Recupera vida do jogador"
+    feed: "Recupera fome do jogador"
+    spawn: "Teleporta para o spawn"
+    setspawn: "Define o spawn do servidor"
+    warp: "Teleporta para uma warp"
+    setwarp: "Cria uma warp"
+    delwarp: "Remove uma warp"
+    home: "Teleporta para uma home"
+    sethome: "Define uma home"
+    delhome: "Remove uma home"
+    tpa: "Envia solicitação de teleporte"
+    tpaccept: "Aceita solicitação de teleporte"
+    tpdeny: "Recusa solicitação de teleporte"
+    back: "Volta para a última localização antes do teleporte"
+    vanish: "Ativa/desativa modo invisível"
+    top: "Teleporta para o bloco mais alto na posição atual"
+    tp: "Teleporta para um jogador ou posição"
+    tphere: "Teleporta um jogador para você"
+    speed: "Ajusta a velocidade de andar/voar do jogador"
+    invsee: "Visualiza o inventário de outro jogador"
+  usage:
+    gamemode: "/rpg admin gamemode <modo> [jogador]"
+    fly: "/rpg admin fly [jogador]"
+    heal: "/rpg admin heal [jogador]"
+    feed: "/rpg admin feed [jogador]"
+    spawn: "/rpg spawn"
+    setspawn: "/rpg admin setspawn"
+    warp: "/rpg warp <nome>"
+    setwarp: "/rpg admin setwarp <nome>"
+    delwarp: "/rpg admin delwarp <nome>"
+    home: "/rpg home [nome]"
+    sethome: "/rpg sethome [nome]"
+    delhome: "/rpg delhome <nome>"
+    tpa: "/rpg tpa <jogador>"
+    tpaccept: "/rpg tpaccept"
+    tpdeny: "/rpg tpdeny"
+    back: "/rpg back"
+    vanish: "/rpg admin vanish"
+    top: "/rpg admin top"
+    tp: "/rpg admin tp <jogador> | /rpg admin tp <x> <y> <z>"
+    tphere: "/rpg admin tphere <jogador>"
+    speed: "/rpg admin speed <1-10>"
+    invsee: "/rpg admin invsee <jogador>"
+
+# ============================================
+# GENERAL COMMANDS & SUBCOMMANDS
+# ============================================
+commands:
+  command_blocked: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ᴜsᴀʀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ.</gray>"
+  common:
+    player_not_found: "<red>✖</red> <gray>ᴊᴏɢᴀᴅᴏʀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ.</gray>"
+    console_must_specify_player: "<red>✖</red> <gray>ᴏ ᴄᴏɴsᴏʟᴇ ᴅᴇᴠᴇ ᴇsᴘᴇᴄɪꜰɪᴄᴀʀ ᴜᴍ ᴊᴏɢᴀᴅᴏʀ.</gray>"
+  
+  speed:
+    usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <gray>/rpg admin speed <0-10></gray>"
+    invalid_range: "<red>✖</red> <gray>ᴀ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇᴠᴇ sᴇʀ ᴇɴᴛʀᴇ <white>0</white> <gray>ᴇ <white>10</white><gray>.</gray>"
+    fly_set: "<green>✔</green> <gray>ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇ ᴠᴏᴏ: <gold>%speed%</gold><gray>.</gray>"
+    walk_set: "<green>✔</green> <gray>ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇ ᴄᴀᴍɪɴʜᴀᴅᴀ: <gold>%speed%</gold><gray>.</gray>"
+  
+  gamemode:
+    usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <gray>/rpg admin gamemode <ᴍᴏᴅᴏ> [ᴊᴏɢᴀᴅᴏʀ]</gray>"
+    invalid_mode: "<red>✖</red> <gray>ᴍᴏᴅᴏ ᴅᴇ ᴊᴏɢᴏ ɪɴᴠᴀʟɪᴅᴏ.</gray>"
+    no_permission_others: "<red>✖</red> <gray>sᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ᴀʟᴛᴇʀᴀʀ ᴏᴜᴛʀᴏs.</gray>"
+  
+  heal:
+    no_permission_others: "<red>✖</red> <gray>sᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ᴄᴜʀᴀʀ ᴏᴜᴛʀᴏs.</gray>"
+  
+  feed:
+    no_permission_others: "<red>✖</red> <gray>sᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ᴀʟɪᴍᴇɴᴛᴀʀ ᴏᴜᴛʀᴏs.</gray>"
+  
+  fly:
+    no_permission_others: "<red>✖</red> <gray>sᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ᴀʟᴛᴇʀᴀʀ ᴏ ᴠᴏᴏ ᴅᴇ ᴏᴜᴛʀᴏs.</gray>"
+  
+  tpa:
+    usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <gray>/rpg tpa <ᴊᴏɢᴀᴅᴏʀ></gray>"
+  
+  warp:
+    set:
+      usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <gray>/rpg admin setwarp <ɴᴏᴍᴇ></gray>"
+    delete:
+      usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <gray>/rpg admin delwarp <ɴᴏᴍᴇ></gray>"
+  
+  player_only: "<red>✖</red> <gray>ᴀᴘᴇɴᴀs ᴊᴏɢᴀᴅᴏʀᴇs ᴘᴏᴅᴇᴍ ᴜsᴀʀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ.</gray>"
+  usage_tp: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <gray>/rpg admin tp <ᴊᴏɢᴀᴅᴏʀ> | /rpg admin tp <x> <ʏ> <z></gray>"
+  
+  tphere:
+    usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <gray>/rpg admin tphere <ᴊᴏɢᴀᴅᴏʀ></gray>"
+    success: "<green>✔</green> <gray>ᴠᴏᴄᴇ ᴘᴜxᴏᴜ <aqua>%player%</aqua> <gray>ᴀᴛᴇ ᴠᴏᴄᴇ.</gray>"
+    target_notified: "<yellow>⚠</yellow> <gray>ᴠᴏᴄᴇ ꜰᴏɪ ᴘᴜxᴀᴅᴏ ᴘᴏʀ <aqua>%player%</aqua><gray>.</gray>"
+  
+  top:
+    success: "<green>✔</green> <gray>ᴛᴇʟᴇᴘᴏʀᴛᴀᴅᴏ ᴘᴀʀᴀ ᴏ ᴛᴏᴘᴏ.</gray>"
+  
+  unsafe_location: "<red>✖</red> <gray>ʟᴏᴄᴀʟɪzᴀᴄᴀᴏ ᴅᴇ ᴅᴇsᴛɪɴᴏ ɴᴀᴏ ᴇ sᴇɢᴜʀᴀ.</gray>"
+  world_not_found: "<red>✖</red> <gray>ᴍᴜɴᴅᴏ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ: <aqua>%world%</aqua>"
+  teleport_failed: "<red>✖</red> <gray>ꜰᴀʟʜᴀ ᴀᴏ ᴛᴇʟᴇᴘᴏʀᴛᴀʀ. ᴛᴇɴᴛᴇ ɴᴏᴠᴀᴍᴇɴᴛᴇ.</gray>"
+  cannot_teleport_combat: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴛᴇʟᴇᴘᴏʀᴛᴀʀ ᴇᴍ ᴄᴏᴍʙᴀᴛᴇ.</gray>"
+  cannot_teleport_here: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴛᴇʟᴇᴘᴏʀᴛᴀʀ ɴᴇsᴛᴀ ᴀʀᴇᴀ.</gray>"

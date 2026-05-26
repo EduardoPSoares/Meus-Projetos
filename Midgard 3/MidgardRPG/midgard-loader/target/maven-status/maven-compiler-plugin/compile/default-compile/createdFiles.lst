@@ -1,0 +1,13 @@
+me\ray\midgard\loader\command\AdminCommand.class
+me\ray\midgard\loader\listener\ItemMechanicsListener.class
+me\ray\midgard\loader\command\ResetCommand.class
+me\ray\midgard\loader\command\ReloadCommand.class
+me\ray\midgard\loader\MidgardBootstrap.class
+me\ray\midgard\loader\listener\StatUpdateListener.class
+me\ray\midgard\loader\gui\MobDebugGui.class
+me\ray\midgard\loader\command\InfoCommand.class
+me\ray\midgard\loader\MidgardPlugin.class
+me\ray\midgard\loader\command\ScanMessagesCommand.class
+me\ray\midgard\loader\listener\MobDebugListener.class
+me\ray\midgard\loader\ResourceInstaller.class
+me\ray\midgard\loader\gui\PlayerInfoGui.class

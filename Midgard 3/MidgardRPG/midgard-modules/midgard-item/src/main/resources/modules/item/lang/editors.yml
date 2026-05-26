@@ -1,0 +1,26 @@
+# ============================================
+# MIDGARD ITEM - EDITORES (LEGADO)
+# ============================================
+# Padr�o V2.0 - Oficial
+# Use os arquivos em gui/item_edition/editors.yml
+# ============================================
+
+
+boolean:
+  reset: "<green>✔ <white>ᴠᴀʟᴏʀ ʀᴇᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ ꜰᴀʟꜱᴏ."
+  toggled: "<green>✔ <white>ᴠᴀʟᴏʀ ᴀʟᴛᴇʀɴᴀᴅᴏ ᴘᴀʀᴀ <yellow>%value%</yellow>."
+
+string:
+  cleared: "<green>✔ <white>%prompt% ʟɪᴍᴘᴏ!"
+  enter_value: "<yellow>✎ <gray>ᴅɪɢɪᴛᴇ <white>%prompt% <gray>ɴᴏ ᴄʜᴀᴛ: <dark_gray>(ᴏᴜ \"ᴄᴀɴᴄᴇʟ\")"
+  updated: "<green>✔ <white>%prompt% ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!"
+
+list:
+  cleared: "<green>✔ <white>%title% ʟɪᴍᴘᴏ!"
+  updated: "<green>✔ <white>%title% ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!"
+
+stat:
+  reset: "<gray>• <white>%stat% ʀᴇᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ 0!"
+  enter_value: "<yellow>✎ <gray>ᴅɪɢɪᴛᴇ ᴏ ᴠᴀʟᴏʀ ᴅᴇ <white>%stat% <gray>ɴᴏ ᴄʜᴀᴛ: <dark_gray>(ᴏᴜ \"ᴄᴀɴᴄᴇʟ\")"
+  updated: "<gray>• <white>%stat% ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!"
+  invalid_format: "<red>✖ <gray>ꜰᴏʀᴍᴀᴛᴏ ᴅᴇ ɴ�ᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ."

@@ -1,0 +1,57 @@
+# Item Tiers Configuration
+# Define rarity tiers for items here.
+COMMON:
+  name: "<white>ᴄᴏᴍᴜᴍ</white>"
+  tag: "<white>●</white>"
+  unidentification:
+    name: "<white>ɪᴛᴇᴍ ᴄᴏᴍᴜᴍ ɴᴀᴏ ɪᴅᴇɴᴛɪꜰɪᴄᴀᴅᴏ</white>"
+    lore:
+    - "<gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɪᴅᴇɴᴛɪꜰɪᴄᴀʀ!</gray>"
+
+UNCOMMON:
+  name: "<green>ɪɴᴄᴏᴍᴜᴍ</green>"
+  tag: "<green>●</green>"
+  unidentification:
+    name: "<green>ɪᴛᴇᴍ ɪɴᴄᴏᴍᴜᴍ ɴᴀᴏ ɪᴅᴇɴᴛɪꜰɪᴄᴀᴅᴏ</green>"
+    lore:
+    - "<gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɪᴅᴇɴᴛɪꜰɪᴄᴀʀ!</gray>"
+
+RARE:
+  name: "<blue>ʀᴀʀᴏ</blue>"
+  tag: "<blue>●</blue>"
+  unidentification:
+    name: "<blue>ɪᴛᴇᴍ ʀᴀʀᴏ ɴᴀᴏ ɪᴅᴇɴᴛɪꜰɪᴄᴀᴅᴏ</blue>"
+    lore:
+    - "<gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɪᴅᴇɴᴛɪꜰɪᴄᴀʀ!</gray>"
+
+EPIC:
+  name: "<purple>ᴇᴘɪᴄᴏ</purple>"
+  tag: "<purple>✦</purple>"
+  unidentification:
+    name: "<purple>ɪᴛᴇᴍ ᴇᴘɪᴄᴏ ɴᴀᴏ ɪᴅᴇɴᴛɪꜰɪᴄᴀᴅᴏ</purple>"
+    lore:
+    - "<gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɪᴅᴇɴᴛɪꜰɪᴄᴀʀ!</gray>"
+
+LEGENDARY:
+  name: "<gold>ʟᴇɴᴅᴀʀɪᴏ</gold>"
+  tag: "<gold>★</gold>"
+  unidentification:
+    name: "<gold>ɪᴛᴇᴍ ʟᴇɴᴅᴀʀɪᴏ ɴᴀᴏ ɪᴅᴇɴᴛɪꜰɪᴄᴀᴅᴏ</gold>"
+    lore:
+    - "<gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɪᴅᴇɴᴛɪꜰɪᴄᴀʀ!</gray>"
+
+MYTHIC:
+  name: "<light_purple>ᴍɪᴛɪᴄᴏ</light_purple>"
+  tag: "<light_purple>✶</light_purple>"
+  unidentification:
+    name: "<light_purple>ɪᴛᴇᴍ ᴍɪᴛɪᴄᴏ ɴᴀᴏ ɪᴅᴇɴᴛɪꜰɪᴄᴀᴅᴏ</light_purple>"
+    lore:
+    - "<gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɪᴅᴇɴᴛɪꜰɪᴄᴀʀ!</gray>"
+
+ARTIFACT:
+  name: "<red>ᴀʀᴛᴇꜰᴀᴛᴏ</red>"
+  tag: "<red>❂</red>"
+  unidentification:
+    name: "<red>ᴀʀᴛᴇꜰᴀᴛᴏ ɴᴀᴏ ɪᴅᴇɴᴛɪꜰɪᴄᴀᴅᴏ</red>"
+    lore:
+    - "<gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɪᴅᴇɴᴛɪꜰɪᴄᴀʀ!</gray>"

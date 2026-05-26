@@ -1,0 +1,10 @@
+lore:
+  edit: '<gray>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ'
+  delete: '<gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ᴅᴇʟᴇᴛᴀʀ'
+buttons:
+  back: '<red>ᴠᴏʟᴛᴀʀ'
+  add: '<green>ᴀᴅɪᴄɪᴏɴᴀʀ ʟɪɴʜᴀ'
+prompts:
+  new-line: ɴᴏᴠᴀ ʟɪɴʜᴀ
+  edit-line: ᴇᴅɪᴛᴀʀ ʟɪɴʜᴀ
+title: ᴇᴅɪᴛᴀɴᴅᴏ ʟɪꜱᴛᴀ

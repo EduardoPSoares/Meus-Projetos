@@ -1,0 +1,757 @@
+# ═══════════════════════════════════════════════════════════════════
+# MIDGARD RACES - MENSAGENS E UI
+# Formato: Small Caps Unicode para estilo visual
+# ═══════════════════════════════════════════════════════════════════
+
+# ─────────────────────────────────────────
+# PLACEHOLDERS
+# ─────────────────────────────────────────
+placeholder:
+  no_race: "<gray>ɴᴇɴʜᴜᴍᴀ</gray>"
+  race_name: "<aqua>%race%</aqua>"
+  race_level: "<light_purple>%level%</light_purple>"
+
+# ─────────────────────────────────────────
+# COMANDOS E SISTEMA
+# ─────────────────────────────────────────
+command:
+  only_players: "<red>✖</red> <gray>ᴀᴘᴇɴᴀs ᴊᴏɢᴀᴅᴏʀᴇs ᴘᴏᴅᴇᴍ ᴜsᴀʀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ.</gray>"
+  no_permission: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ɪssᴏ.</gray>"
+  cant_change_command: "<red>✖</red> <gray>ᴀ ᴛʀᴏᴄᴀ ᴅᴇ ʟɪɴʜᴀɢᴇᴍ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴀ.</gray>"
+  player_not_found: "<red>✖</red> <gray>ᴊᴏɢᴀᴅᴏʀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ: <white>%player%</white>"
+  profile_error: "<red>✖</red> <gray>ꜰᴀʟʜᴀ ᴀᴏ ᴄᴀʀʀᴇɢᴀʀ ᴅᴀᴅᴏs ᴅᴏ ᴘᴇʀsᴏɴᴀɢᴇᴍ.</gray>"
+  cooldown_active: "<red>⏱</red> <gray>ᴀɢᴜᴀʀᴅᴇ <white>%time%</white> <gray>ᴘᴀʀᴀ ᴛʀᴏᴄᴀʀ ᴅᴇ ʟɪɴʜᴀɢᴇᴍ.</gray>"
+  race_info: "<green>✔</green> <gray>ʟɪɴʜᴀɢᴇᴍ: <aqua>%race%</aqua>"
+  no_race: "<yellow>⚠</yellow> <gray>ʟɪɴʜᴀɢᴇᴍ: <white>ɴᴇɴʜᴜᴍᴀ</white>"
+  level_info: "<green>↑</green> <gray>ɴɪᴠᴇʟ: <light_purple>%level%</light_purple>"
+  xp_info: "<aqua>ℹ</aqua> <gray>xᴘ: <light_purple>%current%</light_purple><gray>/</gray><light_purple>%required%</light_purple>"
+  usage_set: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/rpg race set <player> <race_id></white>"
+  race_not_found: "<red>✖</red> <gray>ʟɪɴʜᴀɢᴇᴍ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ: <white>%race%</white>"
+  set_success: "<green>✔</green> <gray>ʟɪɴʜᴀɢᴇᴍ ᴅᴇ <white>%player%</white> <gray>ᴀʟᴛᴇʀᴀᴅᴀ ᴘᴀʀᴀ <aqua>%race%</aqua><gray>.</gray>"
+  reload_success: "<green>✔</green> <gray>ᴄᴏɴꜰɪɢᴜʀᴀᴄᴏᴇs ʀᴇᴄᴀʀʀᴇɢᴀᴅᴀs!</gray>"
+  already_has_race: "<red>✖</red> <gray>ᴠᴏᴄᴇ ᴊᴀ ᴘᴏssᴜɪ ᴜᴍᴀ ʟɪɴʜᴀɢᴇᴍ!</gray>"
+  missing_parent_race: "<red>✖</red> <gray>ᴠᴏᴄᴇ ᴘʀᴇᴄɪsᴀ ᴛᴇʀ ᴀ ʟɪɴʜᴀɢᴇᴍ ᴘᴀɪ ᴘᴀʀᴀ ᴇᴠᴏʟᴜɪʀ ᴘᴀʀᴀ <white>%race%</white><gray>.</gray>"
+  race_description: "Gerencia raças dos jogadores"
+  race_usage: "/rpg race [select|info|set|exp|reload]"
+  admin_hint_set: "<gray>Use: <white>/race set <jogador> <raça>"
+  admin_hint_reset: "<gray>Use: <white>/race reset <jogador>"
+  usage_exp: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/rpg race exp <player> <amount></white>"
+  exp_success: "<green>✔</green> <gray>ᴀᴅɪᴄɪᴏɴᴀᴅᴏ <light_purple>%amount% xᴘ</light_purple> <gray>ᴘᴀʀᴀ <white>%player%</white><gray>.</gray>"
+  invalid_amount: "<red>✖</red> <gray>ԡᴜᴀɴᴛɪᴅᴀᴅᴇ ɪɴᴠᴀʟɪᴅᴀ.</gray>"
+  reset_success: "<green>✔</green> <gray>ʟɪɴʜᴀɢᴇᴍ ᴅᴇ <white>%player%</white> <gray>ʀᴇsᴇᴛᴀᴅᴀ.</gray>"
+  usage_reset: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/rpg race reset <player></white>"
+
+# ─────────────────────────────────────────
+# ATRIBUTOS E TRAITS
+# ─────────────────────────────────────────
+attributes:
+  names:
+    MAX_HEALTH: "ᴠɪᴅᴀ"
+    STRENGTH: "ꜰᴏʀᴄᴀ"
+    DEFENSE: "ᴅᴇꜰᴇsᴀ"
+    SPEED: "ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ"
+    ATTACK_SPEED: "ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇ ᴀᴛᴀӫᴜᴇ"
+    KNOCKBACK_RESISTANCE: "ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴀ ʀᴇᴘᴜʟsᴀᴏ"
+    LUCK: "sᴏʀᴛᴇ"
+    ARMOR: "ᴀʀᴍᴀᴅᴜʀᴀ"
+    ARMOR_TOUGHNESS: "ᴛᴇɴᴀᴄɪᴅᴀᴅᴇ"
+    SCALE: "ᴇsᴄᴀʟᴀ"
+    MOVEMENT_SPEED: "ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇ ᴍᴏᴠɪᴍᴇɴᴛᴏ"
+    STEP_HEIGHT: "ᴀʟᴛᴜʀᴀ ᴅᴏ ᴘᴀssᴏ"
+    FIRE_DEFENSE: "ᴅᴇꜰᴇsᴀ ᴅᴇ ꜰᴏɢᴏ"
+    MAGIC_DEFENSE: "ᴅᴇꜰᴇsᴀ ᴍᴀɢɪᴄᴀ"
+    REGENERATION_MODIFIER: "ᴍᴏᴅɪꜰɪᴄᴀᴅᴏʀ ᴅᴇ ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ"
+  traits:
+    attribute_modifier: "ᴀᴛʀɪʙᴜᴛᴏ"
+    potion_effect: "ᴇꜰᴇɪᴛᴏ"
+    damage_modifier: "ᴅᴀɴᴏ"
+    command: "ᴄᴏᴍᴀɴᴅᴏ"
+    particle: "ᴘᴀʀᴛɪᴄᴜʟᴀ"
+    sound: "sᴏᴍ"
+    diet_restriction: "ᴅɪᴇᴛᴀ"
+    exp_boost: "xᴘ ʙᴏᴏsᴛ"
+    regen: "ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ"
+    active_ability: "ʜᴀʙɪʟɪᴅᴀᴅᴇ"
+    biome_buff: "ʙɪᴏᴍᴀ"
+    time_buff: "ᴛᴇᴍᴘᴏʀᴀʟ"
+    sun_burn: "sᴏʟᴀʀ"
+    life_steal: "ʀᴏᴜʙᴏ ᴅᴇ ᴠɪᴅᴀ"
+
+# ─────────────────────────────────────────
+# EVENTOS
+# ─────────────────────────────────────────
+event:
+  race_change: "<green>✔</green> <gray>ɴᴏᴠᴀ ʟɪɴʜᴀɢᴇᴍ: <aqua>%race%</aqua>"
+  race_reset: "<yellow>⚠</yellow> <gray>sᴜᴀ ʟɪɴʜᴀɢᴇᴍ ꜰᴏɪ ʀᴇsᴇᴛᴀᴅᴀ.</gray>"
+  mutation_unlocked: "<light_purple>✦</light_purple> <gray>ᴍᴜᴛᴀᴄᴀᴏ ᴅᴇsʙʟᴏǫᴜᴇᴀᴅᴀ: <white>%mutation%</white>"
+  level_up:
+    - ""
+    - "  <gradient:#a855f7:#ec4899><bold>ʀᴀᴄᴇ ʟᴇᴠᴇʟ ᴜᴘ!</bold></gradient>"
+    - "  <gray>ɴɪᴠᴇʟ <white>%new%</white> <gray>ᴀʟᴄᴀɴᴄᴀᴅᴏ!</gray>"
+    - ""
+
+# ─────────────────────────────────────────
+# EVOLUÇÃO (Mensagens de sistema)
+# ─────────────────────────────────────────
+evolution:
+  requirements_not_met: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴀᴛᴇɴᴅᴇ ᴏs ʀᴇǫᴜɪsɪᴛᴏs ᴘᴀʀᴀ <white>%race%</white>."
+  branch_locked: "<red>✖</red> <gray>ᴏ ᴄᴀᴍɪɴʜᴏ <white>%race%</white> <gray>ᴇsᴛᴀ ꜰᴇᴄʜᴀᴅᴏ. ᴠᴏᴄᴇ ᴊᴀ ᴇsᴄᴏʟʜᴇᴜ ᴏᴜᴛʀᴏ ʙʀᴀɴᴄʜ ᴇᴍ <white>%branch%</white>."
+  devolution_disabled: "<red>✖</red> <gray>ᴅᴇ-ᴇᴠᴏʟᴜᴄᴀᴏ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴀ."
+  devolution_blocked: "<red>✖</red> <gray>ɴᴀᴏ ᴇ ᴘᴏssɪᴠᴇʟ ʀᴇɢʀᴇᴅɪʀ ɴᴀ ʀᴀᴄᴀ <white>%race%</white>."
+  no_previous_race: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ᴜᴍᴀ ʀᴀᴄᴀ ᴀɴᴛᴇʀɪᴏʀ ɴᴏ ʜɪsᴛᴏʀɪᴄᴏ."
+  previous_race_invalid: "<red>✖</red> <gray>ᴀ ʀᴀᴄᴀ ᴀɴᴛᴇʀɪᴏʀ ɴᴀᴏ ᴇxɪsᴛᴇ ᴍᴀɪs."
+  devolution_no_money: "<red>✖</red> <gray>ᴠᴏᴄᴇ ᴘʀᴇᴄɪsᴀ ᴅᴇ <gold>%cost%</gold> <gray>ᴘᴀʀᴀ ᴅᴇ-ᴇᴠᴏʟᴜɪʀ."
+  devolved: "<yellow>⚠</yellow> <gray>ᴠᴏᴄᴇ ʀᴇɢʀᴇᴅɪᴜ ᴘᴀʀᴀ <aqua>%race%</aqua>."
+
+# ─────────────────────────────────────────
+# AJUDA
+# ─────────────────────────────────────────
+help:
+  header: "<gradient:#a855f7:#ec4899><bold>ᴄᴏᴍᴀɴᴅᴏs ᴅᴇ ʟɪɴʜᴀɢᴇᴍ</bold></gradient>"
+  select: "<gray>• <white>/rpg race select</white> <gray>- ᴇsᴄᴏʟʜᴇʀ ʟɪɴʜᴀɢᴇᴍ</gray>"
+  info: "<gray>• <white>/rpg race info</white> <gray>- ᴠᴇʀ sᴇᴜ ᴘᴇʀꜰɪʟ</gray>"
+  set: "<gray>• <white>/rpg race set <jogador> <id></white> <gray>- ᴅᴇꜰɪɴɪʀ (ᴀᴅᴍɪɴ)</gray>"
+  reset: "<gray>• <white>/rpg race reset <jogador></white> <gray>- ʀᴇsᴇᴛᴀʀ (ᴀᴅᴍɪɴ)</gray>"
+  exp: "<gray>• <white>/rpg race exp <jogador> <qtd></white> <gray>- ᴅᴀʀ xᴘ (ᴀᴅᴍɪɴ)</gray>"
+  reload: "<gray>• <white>/rpg race reload</white> <gray>- ʀᴇᴄᴀʀʀᴇɢᴀʀ ᴄᴏɴꜰɪɢs</gray>"
+  admin: "<gray>• <white>/rpg race admin</white> <gray>- ᴘᴀɪɴᴇʟ ᴀᴅᴍɪɴ</gray>"
+
+# ═══════════════════════════════════════════════════════════════════
+# GUI - INTERFACE DO USUÁRIO
+# ═══════════════════════════════════════════════════════════════════
+
+gui:
+  # ─────────────────────────────────────────
+  # ELEMENTOS GERAIS
+  # ─────────────────────────────────────────
+  general:
+    back: "<gray>« ᴠᴏʟᴛᴀʀ"
+    close: "<gray>✕ ꜰᴇᴄʜᴀʀ"
+    filler_name: " "
+    page_indicator: "<dark_gray>ᴘᴀɢɪɴᴀ <white>%current%"
+    previous_page: "<gray>« ᴀɴᴛᴇʀɪᴏʀ"
+    next_page: "<gray>ᴘʀᴏxɪᴍᴀ »"
+
+  errors:
+    insufficient_level: "<red>✖</red> <gray>ɴɪᴠᴇʟ ɪɴsᴜꜰɪᴄɪᴇɴᴛᴇ ᴘᴀʀᴀ ᴇsᴛᴀ ᴇᴠᴏʟᴜᴄᴀᴏ.</gray>"
+    diet_restriction: "<red>✖</red> <gray>sᴜᴀ ʟɪɴʜᴀɢᴇᴍ ʀᴇᴊᴇɪᴛᴀ ᴇsᴛᴇ ᴀʟɪᴍᴇɴᴛᴏ.</gray>"
+    ability_cooldown: "<red>⏱</red> <gray>ʀᴇᴄᴀʀɢᴀ: <white>%remaining%s</white>"
+
+  # ─────────────────────────────────────────
+  # MENU PRINCIPAL (3 linhas - compacto)
+  # ─────────────────────────────────────────
+  main_menu:
+    title: "<white>ʟɪɴʜᴀɢᴇᴍ"
+
+    # Perfil do jogador (item central superior)
+    profile:
+      name: "<white>%player%"
+      lore_with_race: "\n<gray>ʟɪɴʜᴀɢᴇᴍ: <aqua>%race%\n<gray>ɴɪᴠᴇʟ ᴅᴇ ʟɪɴʜᴀɢᴇᴍ: <light_purple>%level%\n<gray>xᴘ: <white>%xp%<dark_gray>/<white>%required%\n<gray>ᴘʀᴏɢʀᴇssᴏ: <green>%percent%%\n\n<dark_gray>• <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇs ɴᴏ ᴍᴇɴᴜ ᴀᴏ ʟᴀᴅᴏ\n<dark_gray>• <gray>ᴇᴠᴏʟᴜᴄᴏᴇs ᴅᴇsᴛʀᴀᴠᴀᴍ ᴘᴏʀ ɴɪᴠᴇʟ"
+      lore_no_race: "\n<dark_gray>sᴇᴍ ʟɪɴʜᴀɢᴇᴍ\n<gray>ᴠᴏᴄᴇ ᴀɪɴᴅᴀ ɴᴀᴏ ᴇsᴄᴏʟʜᴇᴜ sᴜᴀ ᴏʀɪɢᴇᴍ.\n\n<yellow>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ɪɴɪᴄɪᴀʀ"
+
+    # Botões informativos
+    info_what_is:
+      name: "<aqua>ᴏ ǫᴜᴇ sᴀᴏ ʟɪɴʜᴀɢᴇɴs?</aqua>"
+      lore: "\n<gray>ʟɪɴʜᴀɢᴇɴs ᴅᴇꜰɪɴᴇᴍ sᴜᴀ ᴇssᴇɴᴄɪᴀ\n<gray>ᴀɴᴄᴇsᴛʀᴀʟ ᴇ ᴘᴏᴅᴇʀ ᴇxᴄʟᴜsɪᴠᴏ.\n\n<dark_gray>• <gray>ᴀᴛʀɪʙᴜᴛᴏs ʙᴀsᴇ ᴇ ᴘᴏʀ ɴɪᴠᴇʟ\n<dark_gray>• <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴘᴀssɪᴠᴀs ᴇ ᴀᴛɪᴠᴀs\n<dark_gray>• <gray>ᴇᴠᴏʟᴜᴄᴏᴇs ᴄᴏᴍ ʀᴇǫᴜɪsɪᴛᴏs"
+    info_benefits:
+      name: "<green>ʙᴇɴᴇꜰɪᴄɪᴏs</green>"
+      lore: "\n<green>✔ <gray>ʙᴏɴᴜs ᴅᴇ ᴀᴛʀɪʙᴜᴛᴏs ᴜɴɪᴄᴏs\n<green>✔ <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴇxᴄʟᴜsɪᴠᴀs\n<green>✔ <gray>ʟɪɴʜᴀs ᴅᴇ ᴇᴠᴏʟᴜᴄᴀᴏ\n\n<yellow>⚠ <gray>ᴇsᴄᴏʟʜᴀ ᴇ ᴘᴇʀᴍᴀɴᴇɴᴛᴇ"
+
+    # Botão de info da raça atual
+    race_info:
+      name: "<aqua>%race%</aqua>"
+      lore: "\n<gray>sᴜᴀ ʟɪɴʜᴀɢᴇᴍ ᴀᴛᴜᴀʟ.\n<dark_gray>ᴠᴇᴊᴀ ᴀᴛʀɪʙᴜᴛᴏs, ʙᴏɴᴜs ᴇ ᴇᴠᴏʟᴜᴄᴀᴏ.\n\n<yellow>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇᴛᴀʟʜᴇs"
+
+    # Botões de navegação
+    abilities:
+      name: "<light_purple>ʜᴀʙɪʟɪᴅᴀᴅᴇs</light_purple>"
+      lore: "\n<gray>ʜᴀʙɪʟɪᴅᴀᴅᴇs ʀᴀᴄɪᴀɪs ᴇ ᴛʀᴀᴄᴏs\n<gray>ǫᴜᴇ ᴇᴠᴏʟᴜᴇᴍ ᴄᴏᴍ sᴇᴜ ɴɪᴠᴇʟ.\n\n<yellow>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴠᴇʀ"
+
+    progression:
+      name: "<gold>ᴘʀᴏɢʀᴇssᴀᴏ</gold>"
+      lore: "\n<gray>ɴɪᴠᴇʟ <light_purple>%level%\n<gray>xᴘ <white>%xp%<dark_gray>/<white>%required%\n<gray>ᴘʀᴏɢʀᴇssᴏ ᴅᴀ ʟɪɴʜᴀɢᴇᴍ\n\n<yellow>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇᴛᴀʟʜᴇs"
+
+    evolution:
+      name: "<red>ᴇᴠᴏʟᴜᴄᴀᴏ</red>"
+      lore_available: "\n<gray>ᴇᴠᴏʟᴜᴄᴏᴇs ᴅɪsᴘᴏɴɪᴠᴇɪs\n<gray>ᴘᴀʀᴀ sᴜᴀ ʟɪɴʜᴀɢᴇᴍ.\n<dark_gray>ʀᴇǫᴜɪsɪᴛᴏs ᴘᴏʀ ɴɪᴠᴇʟ.\n\n<yellow>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴠᴇʀ"
+      lore_none: "\n<dark_gray>sᴜᴀ ʟɪɴʜᴀɢᴇᴍ ᴀʟᴄᴀɴᴄᴏᴜ\n<dark_gray>ᴏ ᴀᴘɪᴄᴇ ᴅᴀ ᴇᴠᴏʟᴜᴄᴀᴏ."
+
+    select_race:
+      name: "<gradient:#10b981:#059669>✦ ᴇsᴄᴏʟʜᴇʀ ʟɪɴʜᴀɢᴇᴍ</gradient>"
+      lore: "\n<gray>ᴇsᴄᴏʟʜᴀ sᴜᴀ ᴏʀɪɢᴇᴍ ᴀɴᴄᴇsᴛʀᴀʟ\n<gray>ᴇ ɪɴɪᴄɪᴇ sᴜᴀ ᴊᴏʀɴᴀᴅᴀ ᴇᴍ ᴍɪᴅɢᴀʀᴅ.\n\n<green>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇsᴄᴏʟʜᴇʀ"
+
+    help:
+      name: "<aqua>ᴀᴊᴜᴅᴀ</aqua>"
+      lore: "\n<gray>ɪɴꜰᴏʀᴍᴀᴄᴏᴇs ᴇ ᴄᴏᴍᴀɴᴅᴏs\n<gray>ᴅᴏ sɪsᴛᴇᴍᴀ ᴅᴇ ʟɪɴʜᴀɢᴇɴs.\n\n<yellow>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴊᴜᴅᴀ"
+
+    admin_change:
+      name: "<red>⚡ ᴀᴅᴍɪɴ</red>"
+
+  # ─────────────────────────────────────────
+  # SELEÇÃO DE RAÇAS
+  # ─────────────────────────────────────────
+  selection:
+    title: "<white>ᴇsᴄᴏʟʜᴇʀ ʟɪɴʜᴀɢᴇᴍ"
+
+    race_item:
+      name: "<aqua>%race%</aqua>"
+      current_badge: ""
+      current_badge_text: "<green>✔ ᴀᴛᴜᴀʟ</green>"
+      description_prefix: ""
+      attributes_title: ""
+      attribute_format: "<%color%>%sign%%value% <gray>%name%"
+      abilities_format: "<dark_gray>%count% ʜᴀʙɪʟɪᴅᴀᴅᴇs"
+      click_hint: "<yellow>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇᴛᴀʟʜᴇs"
+
+    info_book:
+      name: "<aqua>ɢᴜɪᴀ ᴅᴀs ʟɪɴʜᴀɢᴇɴs</aqua>"
+      lore:
+        - ""
+        - "<gray>ᴇxᴘʟᴏʀᴇ ᴀs ʟɪɴʜᴀɢᴇɴs"
+        - "<gray>ᴅɪsᴘᴏɴɪᴠᴇɪs ᴇᴍ ᴍɪᴅɢᴀʀᴅ."
+        - ""
+        - "<yellow>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʟᴇʀ"
+      messages:
+        - "<aqua>ɢᴜɪᴀ ᴅᴀs ʟɪɴʜᴀɢᴇɴs</aqua>"
+        - "<gray>ᴇsᴄᴏʟʜᴀ ᴜᴍᴀ ᴘᴀʀᴀ ᴠᴇʀ ᴅᴇᴛᴀʟʜᴇs.</gray>"
+
+    help:
+      name: "<yellow>ᴄᴏᴍᴏ ꜰᴜɴᴄɪᴏɴᴀ?</yellow>"
+      lore:
+        - ""
+        - "<gray>ᴇsᴄᴏʟʜᴀ sᴜᴀ ʟɪɴʜᴀɢᴇᴍ"
+        - "<gray>ᴇ ᴇᴠᴏʟᴜᴀ ᴇᴍ ʙᴀᴛᴀʟʜᴀ."
+        - ""
+        - "<red>⚠ ᴇsᴄᴏʟʜᴀ ᴘᴇʀᴍᴀɴᴇɴᴛᴇ!</red>"
+      messages:
+        - "<yellow>sɪsᴛᴇᴍᴀ ᴅᴇ ʟɪɴʜᴀɢᴇɴs</yellow>"
+        - "<gray>ᴜsᴇ /rpg race ᴘᴀʀᴀ ᴀᴄᴇssᴀʀ ᴏs ᴍᴇɴᴜs.</gray>"
+
+    player_display:
+      name: "<white>sᴇᴜ ᴘᴇʀꜰɪʟ</white>"
+      no_race: "ɴᴇɴʜᴜᴍᴀ"
+      lore:
+        - "<dark_gray>ʟɪɴʜᴀɢᴇᴍ: <aqua>%race_name%</aqua>"
+        - "<dark_gray>ɴɪᴠᴇʟ: <light_purple>%race_level%</light_purple>"
+
+    navigation:
+      next:
+        name: "<gray>ᴘʀᴏxɪᴍᴀ »"
+        lore: [""]
+        disabled_name: "<dark_gray>ᴘʀᴏxɪᴍᴀ »"
+        disabled_lore: [""]
+      previous:
+        name: "<gray>« ᴀɴᴛᴇʀɪᴏʀ"
+        lore: [""]
+        disabled_name: "<dark_gray>« ᴀɴᴛᴇʀɪᴏʀ"
+        disabled_lore: [""]
+
+    race_icon:
+      name: "<aqua>%race_name%</aqua>"
+      separator: ""
+      description_line: "<gray>%description%"
+      highlights_title: ""
+      highlight_format: "<dark_gray>• <gray>%trait%"
+      highlight_more_format: "<aqua>+%count% ᴍᴀɪs...</aqua>"
+      no_traits: ""
+      click_to_view: "<yellow>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇᴛᴀʟʜᴇs"
+      selected:
+        - ""
+        - "<green>✔ sᴇʟᴇᴄɪᴏɴᴀᴅᴏ</green>"
+
+  # ─────────────────────────────────────────
+  # PREVIEW DE RAÇA (estilo item tooltip Wynncraft)
+  # ─────────────────────────────────────────
+  preview:
+    title: "<aqua>%race%</aqua>"
+
+    central_icon:
+      name: "<aqua>%race%</aqua>"
+
+    description:
+      name: "<white>ᴅᴇsᴄʀɪᴄᴀᴏ</white>"
+      no_description: "<dark_gray>sᴇᴍ ᴅᴇsᴄʀɪᴄᴀᴏ.</dark_gray>"
+
+    attributes:
+      name: "<gold>ᴀᴛʀɪʙᴜᴛᴏs ʙᴀsᴇ</gold>"
+      base_title: ""
+      per_level_title: "<dark_gray>ᴘᴏʀ ɴɪᴠᴇʟ:"
+      attribute_format: "<%color%>%sign%%value% <gray>%name%"
+      no_attributes: "<dark_gray>ɴᴇɴʜᴜᴍ ʙᴏɴᴜs.</dark_gray>"
+
+    traits:
+      name: "<light_purple>ʜᴀʙɪʟɪᴅᴀᴅᴇs</light_purple>"
+      total_format: "<dark_gray>%count% ʜᴀʙɪʟɪᴅᴀᴅᴇs"
+      trait_format: "<dark_gray>• <gray>%name%"
+      trait_level_format: "<dark_gray>• <gray>%name% <dark_gray>[ɴᴠ.%level%]"
+      more_format: "<aqua>+%count% ᴍᴀɪs...</aqua>"
+      no_traits: "<dark_gray>ɴᴇɴʜᴜᴍᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ.</dark_gray>"
+      footer: ""
+
+    evolutions:
+      name: "<red>ᴇᴠᴏʟᴜᴄᴏᴇs</red>"
+      available_format: "<dark_gray>%count% ᴇᴠᴏʟᴜᴄᴏᴇs"
+      description:
+        - "<gray>ᴇᴠᴏʟᴜᴀ ᴘᴀʀᴀ sᴜʙ-ʀᴀᴄᴀs"
+        - "<gray>ᴍᴀɪs ᴘᴏᴅᴇʀᴏsᴀs.</gray>"
+      none:
+        - "<dark_gray>sᴇᴍ ᴇᴠᴏʟᴜᴄᴏᴇs.</dark_gray>"
+
+    requirements:
+      name: "<aqua>ʀᴇǫᴜɪsɪᴛᴏs</aqua>"
+      min_level_format: "<dark_gray>• ɴɪᴠᴇʟ ᴍɪɴɪᴍᴏ: <white>%level%"
+      no_level: "<green>✔ sᴇᴍ ʀᴇǫᴜɪsɪᴛᴏs</green>"
+      parent_race_format: "<dark_gray>• ʀᴇǫᴜᴇʀ: <white>%parent%"
+
+    perks:
+      name: "<green>✓ ᴠᴀɴᴛᴀɢᴇɴs</green>"
+      positive_attrs_format: "<green>+%count% <gray>ᴀᴛʀɪʙᴜᴛᴏs ᴘᴏsɪᴛɪᴠᴏs"
+      traits_format: "<green>%count% <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴜɴɪᴄᴀs"
+      balanced: "<gray>ʀᴀᴄᴀ ʙᴀʟᴀɴᴄᴇᴀᴅᴀ.</gray>"
+
+    restrictions:
+      name: "<red>✕ ʀᴇsᴛʀɪᴄᴏᴇs</red>"
+      negative_attrs_format: "<red>%count% <gray>ᴘᴇɴᴀʟɪᴅᴀᴅᴇs"
+      no_restrictions: "<green>✔ sᴇᴍ ʀᴇsᴛʀɪᴄᴏᴇs</green>"
+
+    confirm_button:
+      name: "<gradient:#10b981:#059669>✓ ᴄᴏɴꜰɪʀᴍᴀʀ</gradient>"
+      current_race: "<green>✔ ʟɪɴʜᴀɢᴇᴍ ᴀᴛᴜᴀʟ</green>"
+      current_desc: "<dark_gray>ᴇsᴛᴀ ᴊᴀ ᴇ sᴜᴀ ʟɪɴʜᴀɢᴇᴍ."
+      warning_title: "<red>⚠ ᴀᴠɪsᴏ"
+      warning_desc: "<yellow>ᴛʀᴏᴄᴀʀ ɪʀᴀ:"
+      warning_reset: "<dark_gray>• ʀᴇsᴇᴛᴀʀ ᴘʀᴏɢʀᴇssᴏ"
+      warning_remove: "<dark_gray>• ʀᴇᴍᴏᴠᴇʀ ʜᴀʙɪʟɪᴅᴀᴅᴇs"
+      warning_xp: "<dark_gray>• ᴀᴘᴀɢᴀʀ xᴘ"
+      warning_admin: "<gold>ᴀᴘᴇɴᴀs ᴀᴅᴍɪɴs ʀᴇᴠᴇʀᴛᴇᴍ."
+      new_choice_1: "<aqua>ᴇsᴄᴏʟʜᴇʀ ᴇsᴛᴀ ʟɪɴʜᴀɢᴇᴍ?"
+      new_choice_2: ""
+      permanent_1: "<yellow>ᴇsᴄᴏʟʜᴀ ᴘᴇʀᴍᴀɴᴇɴᴛᴇ."
+      permanent_2: ""
+      click_hint: "<green>▶ ᴄᴏɴꜰɪʀᴍᴀʀ"
+
+    back:
+      name: "<gray>« ᴠᴏʟᴛᴀʀ"
+      desc: ""
+
+    close:
+      name: "<gray>✕ ꜰᴇᴄʜᴀʀ"
+
+  # ─────────────────────────────────────────
+  # TELA DE CONFIRMAÇÃO
+  # ─────────────────────────────────────────
+  confirmation:
+    title: "<yellow>ᴄᴏɴꜰɪʀᴍᴀʀ"
+
+    race_icon:
+      name: "<aqua>%race%</aqua>"
+      line1: "<gray>ɴᴏᴠᴀ ʟɪɴʜᴀɢᴇᴍ:"
+      line2: "<white>%race%"
+
+    warning:
+      name: "<yellow>⚠ ᴀᴛᴇɴᴄᴀᴏ</yellow>"
+      separator: ""
+      current_line: "<dark_gray>ᴀᴛᴜᴀʟ: <white>%current%"
+      new_line: "<dark_gray>ɴᴏᴠᴀ: <aqua>%new%"
+      will_lose_title: "<red>ᴠᴏᴄᴇ ᴘᴇʀᴅᴇʀᴀ:"
+      will_lose_items:
+        - "<dark_gray>• ᴛᴏᴅᴏ ᴘʀᴏɢʀᴇssᴏ"
+        - "<dark_gray>• ᴛᴏᴅᴀ xᴘ"
+        - "<dark_gray>• ᴛᴏᴅᴀs ʜᴀʙɪʟɪᴅᴀᴅᴇs"
+      irreversible: "<gold>ᴀᴄᴀᴏ ɪʀʀᴇᴠᴇʀsɪᴠᴇʟ!"
+      admin_only: "<dark_gray>ᴀᴘᴇɴᴀs ᴀᴅᴍɪɴs ʀᴇᴠᴇʀᴛᴇᴍ."
+      new_journey: "<green>✓ ɴᴏᴠᴀ ᴊᴏʀɴᴀᴅᴀ!"
+      important_title: "<gold>⚠ ɪᴍᴘᴏʀᴛᴀɴᴛᴇ"
+      permanent: "<yellow>ᴇsᴄᴏʟʜᴀ ᴘᴇʀᴍᴀɴᴇɴᴛᴇ."
+      admin_change_only:
+        - "<dark_gray>ᴀᴘᴇɴᴀs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs"
+        - "<dark_gray>ᴘᴏᴅᴇᴍ ᴀʟᴛᴇʀᴀʀ ᴅᴇᴘᴏɪs."
+      final_question: "<white>ᴛᴇᴍ ᴄᴇʀᴛᴇzᴀ?"
+
+    confirm:
+      name: "<gradient:#10b981:#059669>✓ ᴄᴏɴꜰɪʀᴍᴀʀ</gradient>"
+      line_change: "<yellow>ᴛʀᴏᴄᴀʀ ᴘᴀʀᴀ:"
+      line_select: "<yellow>ᴇsᴄᴏʟʜᴇʀ:"
+      race_name: "<aqua>%race%</aqua>"
+      aware_1: "<gray>ᴇsᴛᴏᴜ ᴄɪᴇɴᴛᴇ."
+      aware_2: ""
+      click_hint: "<green>▶ ᴄᴏɴꜰɪʀᴍᴀʀ"
+
+    cancel:
+      name: "<gray>✕ ᴄᴀɴᴄᴇʟᴀʀ"
+      desc_1: "<dark_gray>ᴄᴀɴᴄᴇʟᴀʀ ᴏᴘᴇʀᴀᴄᴀᴏ."
+      desc_2: ""
+      rethink: ""
+      click_hint: "<red>▶ ᴄᴀɴᴄᴇʟᴀʀ"
+
+  # ─────────────────────────────────────────
+  # DETALHES DA RAÇA ATUAL
+  # ─────────────────────────────────────────
+  detail:
+    title: "<aqua>%race%</aqua>"
+
+    central_icon:
+      name: "<aqua>%race%</aqua>"
+      level_line: "<dark_gray>ɴɪᴠᴇʟ <light_purple>%level%"
+      xp_line: "<dark_gray>xᴘ <white>%xp%"
+
+    stats:
+      name: "<gold>ᴇsᴛᴀᴛɪsᴛɪᴄᴀs</gold>"
+      current_level: "<dark_gray>ɴɪᴠᴇʟ <light_purple>%level%"
+      xp_progress: "<dark_gray>xᴘ <white>%current%<dark_gray>/<white>%required%"
+      progress_percent: "<dark_gray>ᴘʀᴏɢʀᴇssᴏ <green>%percent%"
+      total_abilities: "<dark_gray>ʜᴀʙɪʟɪᴅᴀᴅᴇs: <white>%count%"
+
+    attributes:
+      name: "<aqua>ᴀᴛʀɪʙᴜᴛᴏs</aqua>"
+      base_title: ""
+      attr_line: "<%color%>%sign%%value% <gray>%attr%"
+      per_level_title: "<dark_gray>ᴘᴏʀ ɴɪᴠᴇʟ:"
+      per_level_line: "<yellow>+%value% <gray>%attr%"
+
+    bonuses:
+      name: "<green>ʙᴏɴᴜs</green>"
+      permissions_title: "<dark_gray>ᴘᴇʀᴍɪssᴏᴇs:"
+      permission_line: "<dark_gray>• <gray>%perm%"
+      more_perms: "<aqua>+%count% ᴍᴀɪs</aqua>"
+      no_perms: "<dark_gray>sᴇᴍ ᴘᴇʀᴍɪssᴏᴇs ᴇxᴛʀᴀs.</dark_gray>"
+
+    lore:
+      name: "<white>ᴅᴇsᴄʀɪᴄᴀᴏ</white>"
+      line: "<gray>%text%"
+      no_description: "<dark_gray>sᴇᴍ ᴅᴇsᴄʀɪᴄᴀᴏ.</dark_gray>"
+
+  # ─────────────────────────────────────────
+  # PROGRESSÃO
+  # ─────────────────────────────────────────
+  progress:
+    title: "<gold>ᴘʀᴏɢʀᴇssᴀᴏ</gold>"
+
+    profile:
+      name: "<aqua>%race%</aqua>"
+      level_line: "<dark_gray>ɴɪᴠᴇʟ <light_purple>%level%"
+      xp_line: "<dark_gray>xᴘ <white>%xp%"
+
+    progress_bar:
+      name: "<gold>ᴘʀᴏxɪᴍᴏ ɴɪᴠᴇʟ</gold>"
+      current_xp: "<dark_gray>ᴀᴛᴜᴀʟ: <white>%current%"
+      required_xp: "<dark_gray>ɴᴇᴄᴇssᴀʀɪᴏ: <white>%required%"
+      missing_xp: "<dark_gray>ꜰᴀʟᴛᴀᴍ: <yellow>%missing%"
+      percent: "<green>%percent%"
+
+    current_level:
+      name: "<green>✓ ɴɪᴠᴇʟ %level%</green>"
+      desc_1: "<dark_gray>ɴɪᴠᴇʟ ᴀᴛᴜᴀʟ"
+      desc_2: ""
+      desc_3: ""
+
+    next_level:
+      name: "<aqua>ɴɪᴠᴇʟ %level%</aqua>"
+      required_line: "<dark_gray>ʀᴇǫᴜᴇʀ <white>%required% xᴘ"
+      desc_1: ""
+      desc_2: ""
+
+    unlocks:
+      name: "<light_purple>ᴅᴇsʙʟᴏǫᴜᴇɪᴏs</light_purple>"
+      unlocked_line: "<green>%count% <gray>ᴅᴇsʙʟᴏǫᴜᴇᴀᴅᴀs"
+      locked_line: "<red>%count% <gray>ʙʟᴏǫᴜᴇᴀᴅᴀs"
+      desc_1: ""
+      desc_2: ""
+
+    achievements:
+      name: "<gold>ᴍᴀʀᴄᴏs</gold>"
+      milestone_novice: "<gray>ɪɴɪᴄɪᴀɴᴛᴇ <dark_gray>(ɴᴠ.1)"
+      milestone_apprentice: "<gray>ᴀᴘʀᴇɴᴅɪz <dark_gray>(ɴᴠ.10)"
+      milestone_experienced: "<gray>ᴇxᴘᴇʀɪᴇɴᴛᴇ <dark_gray>(ɴᴠ.25)"
+      milestone_veteran: "<gray>ᴠᴇᴛᴇʀᴀɴᴏ <dark_gray>(ɴᴠ.50)"
+      milestone_master: "<gray>ᴍᴇsᴛʀᴇ <dark_gray>(ɴᴠ.75)"
+      milestone_legendary: "<gold>ʟᴇɴᴅᴀʀɪᴏ <dark_gray>(ɴᴠ.100)"
+      next_milestone: "<dark_gray>ᴘʀᴏxɪᴍᴏ: ɴɪᴠᴇʟ %level%"
+
+  # ─────────────────────────────────────────
+  # EVOLUÇÃO
+  # ─────────────────────────────────────────
+  evolution:
+    title: "<red>ᴇᴠᴏʟᴜᴄᴀᴏ</red>"
+
+    center_display:
+      name: "<aqua>%race%</aqua>"
+      lore:
+        - "<dark_gray>ᴀᴛᴜᴀʟ: <white>%current_race%"
+        - "<dark_gray>ɴɪᴠᴇʟ: <light_purple>%race_level%"
+
+    icons:
+      unlocked:
+        name: "<green>%race_name%</green>"
+        lore_append:
+          - ""
+          - "<green>✔ ᴅᴏᴍɪɴᴀᴅᴏ</green>"
+      locked:
+        name: "<dark_gray>%race_name%"
+        lore_append:
+          - ""
+          - "<red>✖ ʙʟᴏǫᴜᴇᴀᴅᴏ</red>"
+          - "<dark_gray>ʀᴇǫᴜᴇʀ ɴɪᴠᴇʟ <white>%level%"
+      available:
+        name: "<aqua>%race_name%</aqua>"
+        lore_append:
+          - ""
+          - "<yellow>ᴅɪsᴘᴏɴɪᴠᴇʟ</yellow>"
+          - "<yellow>▶ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇᴠᴏʟᴜɪʀ"
+
+    navigation:
+      next:
+        name: "<gray>ᴘʀᴏxɪᴍᴏ »"
+      previous:
+        name: "<gray>« ᴀɴᴛᴇʀɪᴏʀ"
+
+    current_race:
+      name: "<aqua>%race%</aqua>"
+      current_label: "<dark_gray>ᴀᴛᴜᴀʟ"
+      level_line: "<dark_gray>ɴɪᴠᴇʟ <light_purple>%level%"
+      available_count: "<dark_gray>%count% ᴇᴠᴏʟᴜᴄᴏᴇs"
+
+    evolution_available:
+      name: "<green>%race%</green>"
+      status: "<yellow>ᴅɪsᴘᴏɴɪᴠᴇʟ</yellow>"
+
+    evolution_locked:
+      name: "<dark_gray>%race%"
+      status: "<red>ʙʟᴏǫᴜᴇᴀᴅᴀ</red>"
+      required_level: "<dark_gray>ʀᴇǫᴜᴇʀ ɴɪᴠᴇʟ <white>%required%"
+      your_level: "<dark_gray>sᴇᴜ ɴɪᴠᴇʟ: <white>%level%"
+      locked_hint: "<dark_gray>ᴄᴏɴᴛɪɴᴜᴇ ᴇᴠᴏʟᴜɪɴᴅᴏ"
+
+    evolution_info:
+      desc_line: "<gray>%text%"
+      new_abilities: "<dark_gray>%count% ʜᴀʙɪʟɪᴅᴀᴅᴇs"
+      new_attributes: "<dark_gray>%count% ᴀᴛʀɪʙᴜᴛᴏs"
+      click_hint: "<yellow>▶ ᴇᴠᴏʟᴜɪʀ"
+
+    more_evolutions:
+      name: "<light_purple>ᴍᴀɪs ᴇᴠᴏʟᴜᴄᴏᴇs</light_purple>"
+      desc_1: "<dark_gray>+%count% ᴇᴠᴏʟᴜᴄᴏᴇs"
+      desc_2: ""
+
+    no_evolutions:
+      name: "<gold>%race%</gold>"
+      desc_1: "<dark_gray>ᴀᴘɪᴄᴇ ᴅᴀ ᴇᴠᴏʟᴜᴄᴀᴏ"
+      desc_2: ""
+      desc_3: "<dark_gray>sᴇᴍ ᴇᴠᴏʟᴜᴄᴏᴇs"
+
+    info:
+      name: "<aqua>ɪɴꜰᴏ</aqua>"
+      desc: "<gray>ᴇᴠᴏʟᴜᴄᴏᴇs sᴀᴏ sᴜʙ-ʀᴀᴄᴀs\nᴅᴇsʙʟᴏǫᴜᴇᴀᴅᴀs ᴘᴏʀ ɴɪᴠᴇʟ."
+      hint: ""
+
+  # ─────────────────────────────────────────
+  # HABILIDADES
+  # ─────────────────────────────────────────
+  abilities:
+    title: "<light_purple>ʜᴀʙɪʟɪᴅᴀᴅᴇs</light_purple>"
+
+    trait_unlocked:
+      name_format: "<white>%name%"
+      status: "<green>✔ ᴅᴇsʙʟᴏǫᴜᴇᴀᴅᴀ</green>"
+
+    trait_locked:
+      name_format: "<dark_gray>%name%"
+      status: "<red>✖ ʙʟᴏǫᴜᴇᴀᴅᴀ</red>"
+      required_level: "<dark_gray>ʀᴇǫᴜᴇʀ ɴɪᴠᴇʟ <white>%level%"
+      your_level: "<dark_gray>sᴇᴜ ɴɪᴠᴇʟ: <white>%level%"
+
+    mutation_label: "<light_purple>ᴍᴜᴛᴀᴄᴀᴏ</light_purple>"
+    description_line: "<gray>%text%"
+    trigger_type: "<dark_gray>ᴛɪᴘᴏ: <white>%type%"
+    condition_line: "<dark_gray>ᴀᴛɪᴠᴀ: <white>%condition%"
+
+    info:
+      name: "<light_purple>ɪɴꜰᴏ</light_purple>"
+      total_line: "<dark_gray>ᴛᴏᴛᴀʟ: <white>%total%"
+      unlocked_line: "<green>%unlocked% <gray>ᴅᴇsʙʟᴏǫᴜᴇᴀᴅᴀs"
+      locked_line: "<red>%locked% <gray>ʙʟᴏǫᴜᴇᴀᴅᴀs"
+      page_line: "<dark_gray>ᴘᴀɢɪɴᴀ %page%"
+
+    navigation:
+      prev_page: "<gray>« ᴀɴᴛᴇʀɪᴏʀ"
+      next_page: "<gray>ᴘʀᴏxɪᴍᴀ »"
+
+  # ─────────────────────────────────────────
+  # PASSIVAS (menu legado)
+  # ─────────────────────────────────────────
+  passives:
+    title: "<light_purple>ᴘᴀssɪᴠᴀs</light_purple>"
+
+    back:
+      name: "<gray>« ᴠᴏʟᴛᴀʀ"
+      lore: [""]
+
+    navigation:
+      next:
+        name: "<gray>ᴘʀᴏxɪᴍᴀ »"
+        lore: [""]
+        disabled_name: "<dark_gray>ᴘʀᴏxɪᴍᴀ »"
+        disabled_lore: [""]
+      previous:
+        name: "<gray>« ᴀɴᴛᴇʀɪᴏʀ"
+        lore: [""]
+        disabled_name: "<dark_gray>« ᴀɴᴛᴇʀɪᴏʀ"
+        disabled_lore: [""]
+
+    passive_item:
+      name: "<aqua>%trait_id%</aqua>"
+      lore_header:
+        - "<dark_gray>ʀᴇǫᴜᴇʀ ɴɪᴠᴇʟ <white>%level%"
+        - ""
+      description_line: "<gray>%line%"
+      footer: ""
+
+  # ─────────────────────────────────────────
+  # MUTAÇÕES
+  # ─────────────────────────────────────────
+  mutations:
+    title: "<light_purple>ᴍᴜᴛᴀᴄᴏᴇs</light_purple>"
+
+    back:
+      name: "<gray>« ᴠᴏʟᴛᴀʀ"
+      lore: [""]
+
+    navigation:
+      next:
+        name: "<gray>ᴘʀᴏxɪᴍᴀ »"
+        lore: [""]
+        disabled_name: "<dark_gray>ᴘʀᴏxɪᴍᴀ »"
+        disabled_lore: [""]
+      previous:
+        name: "<gray>« ᴀɴᴛᴇʀɪᴏʀ"
+        lore: [""]
+        disabled_name: "<dark_gray>« ᴀɴᴛᴇʀɪᴏʀ"
+        disabled_lore: [""]
+
+    progress:
+      name: "<light_purple>ᴘʀᴏɢʀᴇssᴏ</light_purple>"
+      lore:
+        - "<dark_gray>ɴɪᴠᴇʟ: <light_purple>%level%"
+        - ""
+        - "<gray>ᴍᴜᴛᴀᴄᴏᴇs sᴀᴏ ᴀᴅᴀᴘᴛᴀᴄᴏᴇs"
+        - "<gray>ᴜɴɪᴄᴀs ᴅᴏ sᴇᴜ ᴅɴᴀ."
+
+    mutation_item:
+      name_unlocked: "<green>✔ %trait_id%</green>"
+      name_available: "<aqua>✦ %trait_id%</aqua>"
+      name_blocked: "<red>✖ %trait_id%</red>"
+      name_locked: "<dark_gray>🔒 %trait_id%"
+      level_line: "<dark_gray>ʀᴇǫᴜᴇʀ ɴɪᴠᴇʟ <white>%level%"
+      exclusion_group_line: "<dark_gray>ɢʀᴜᴘᴏ: <white>%group%"
+      description_line: "<gray>%line%"
+      status_unlocked: "<green>✔ ᴀᴛɪᴠᴀ</green>"
+      status_available: "<yellow>▶ ᴅᴇsʙʟᴏǫᴜᴇᴀʀ"
+      status_blocked: "<red>ɢʀᴜᴘᴏ sᴇʟᴇᴄɪᴏɴᴀᴅᴏ</red>"
+      status_locked: "<dark_gray>ʀᴇǫᴜɪsɪᴛᴏs ɴᴀᴏ ᴀᴛɪɴɢɪᴅᴏs"
+
+  # ─────────────────────────────────────────
+  # ESTATÍSTICAS
+  # ─────────────────────────────────────────
+  stats:
+    title: "<green>ᴇsᴛᴀᴛɪsᴛɪᴄᴀs</green>"
+
+    back:
+      name: "<gray>« ᴠᴏʟᴛᴀʀ"
+      lore: [""]
+
+    stats_item:
+      name: "<green>ᴘᴇʀꜰɪʟ ᴛᴇᴄɴɪᴄᴏ</green>"
+      level_line: "<dark_gray>ɴɪᴠᴇʟ: <light_purple>%level%"
+      xp_line: "<dark_gray>xᴘ: <white>%current%<dark_gray>/<white>%required%"
+      attributes_title: ""
+      attribute_format: "<%color%>%sign%%value% <gray>%attr%"
+      no_attributes: "<dark_gray>ɴᴇɴʜᴜᴍ ᴀᴛʀɪʙᴜᴛᴏ."
+      footer: ""
+
+  # ─────────────────────────────────────────
+  # ADMIN
+  # ─────────────────────────────────────────
+  admin:
+    title: "<red>ᴀᴅᴍɪɴ</red>"
+
+    player_selector:
+      name: "<white>ᴊᴏɢᴀᴅᴏʀᴇs</white>"
+      lore:
+        - "<gray>ɢᴇʀᴇɴᴄɪᴀʀ ᴊᴏɢᴀᴅᴏʀᴇs"
+      messages:
+        - "<gold>ɢᴇsᴛᴀᴏ:</gold>"
+        - "<gray>/rpg race set <ᴊᴏɢᴀᴅᴏʀ> <ɪᴅ>"
+        - "<gray>/rpg race reset <ᴊᴏɢᴀᴅᴏʀ>"
+
+    plugin_tools:
+      name: "<aqua>ꜰᴇʀʀᴀᴍᴇɴᴛᴀs</aqua>"
+      lore: ["<gray>ᴅɪᴀɢɴᴏsᴛɪᴄᴏ ᴇ sɪsᴛᴇᴍᴀ"]
+
+    player_management:
+      name: "<aqua>ᴊᴏɢᴀᴅᴏʀᴇs</aqua>"
+      desc_1: "<gray>ᴄᴏɴꜰɪɢᴜʀᴇ ʀᴀᴄᴀs"
+      desc_2: ""
+      online_count: "<dark_gray>ᴏɴʟɪɴᴇ: <white>%count%"
+      commands_title: "<dark_gray>ᴄᴏᴍᴀɴᴅᴏs:"
+      command_set: "<gray>/rpg race set <ᴊᴏɢᴀᴅᴏʀ> <ʀᴀᴄᴀ>"
+      command_reset: "<gray>/rpg race reset <ᴊᴏɢᴀᴅᴏʀ>"
+      command_exp: "<gray>/rpg race exp <ᴊᴏɢᴀᴅᴏʀ> <ǫᴛᴅ>"
+      hint: ""
+
+    system_tools:
+      name: "<gold>sɪsᴛᴇᴍᴀ</gold>"
+      desc_1: "<gray>ꜰᴇʀʀᴀᴍᴇɴᴛᴀs ᴀᴅᴍɪɴ"
+      desc_2: ""
+      resources_title: ""
+      resource_diagnostics: "<gray>ᴅɪᴀɢɴᴏsᴛɪᴄᴏ"
+      resource_integrity: "<gray>ɪɴᴛᴇɢʀɪᴅᴀᴅᴇ"
+      resource_logs: "<gray>ʟᴏɢs"
+      click_hint: ""
+
+    reload:
+      name: "<green>ʀᴇᴄᴀʀʀᴇɢᴀʀ</green>"
+      desc_1: "<gray>ʀᴇᴄᴀʀʀᴇɢᴀʀ ᴄᴏɴꜰɪɢs"
+      desc_2: ""
+      warning_title: ""
+      warning_desc: ""
+      reload_races: "<gray>• ʀᴀᴄᴀs"
+      reload_traits: "<gray>• ʜᴀʙɪʟɪᴅᴀᴅᴇs"
+      reload_messages: "<gray>• ᴍᴇɴsᴀɢᴇɴs"
+      click_hint: "<yellow>▶ ʀᴇᴄᴀʀʀᴇɢᴀʀ"
+
+    stats:
+      name: "<light_purple>ᴇsᴛᴀᴛɪsᴛɪᴄᴀs</light_purple>"
+      total_races: "<dark_gray>ᴛᴏᴛᴀʟ: <white>%total%"
+      base_races: "<dark_gray>ʙᴀsᴇ: <white>%count%"
+      sub_races: "<dark_gray>sᴜʙ-ʀᴀᴄᴀs: <white>%count%"
+      online_with_race: "<dark_gray>ᴏɴʟɪɴᴇ ᴄ/ ʀᴀᴄᴀ:"
+      online_count: "<white>%count%"
+
+    race_list:
+      name: "<aqua>ʀᴀᴄᴀs</aqua>"
+      desc_1: "<gray>ʟɪsᴛᴀ ᴅᴇ ʀᴀᴄᴀs"
+      desc_2: ""
+      total_line: "<dark_gray>ᴛᴏᴛᴀʟ: <white>%count%"
+      click_hint: ""
+
+    help:
+      name: "<yellow>ᴀᴊᴜᴅᴀ</yellow>"
+      commands_title: "<dark_gray>ᴄᴏᴍᴀɴᴅᴏs:"
+      cmd_set_usage: "<gray>/rpg race set"
+      cmd_set_desc: "<dark_gray>ᴅᴇꜰɪɴᴇ ʀᴀᴄᴀ"
+      cmd_reset_usage: "<gray>/rpg race reset"
+      cmd_reset_desc: "<dark_gray>ʀᴇᴍᴏᴠᴇ ʀᴀᴄᴀ"
+      cmd_exp_usage: "<gray>/rpg race exp"
+      cmd_exp_desc: "<dark_gray>ᴀᴅɪᴄɪᴏɴᴀ xᴘ"
+      cmd_reload_usage: "<gray>/rpg race reload"
+      cmd_reload_desc: "<dark_gray>ʀᴇᴄᴀʀʀᴇɢᴀ"
+
+  admin_help:
+    title: "<white>ᴀᴅᴍɪɴ</white>"
+    command_set: "<gray>/rpg race set <ᴊᴏɢᴀᴅᴏʀ> <ʀᴀᴄᴀ>"
+    command_reset: "<gray>/rpg race reset <ᴊᴏɢᴀᴅᴏʀ>"
+    command_exp: "<gray>/rpg race exp <ᴊᴏɢᴀᴅᴏʀ> <ǫᴛᴅ>"
+    tools_title: "<white>ꜰᴇʀʀᴀᴍᴇɴᴛᴀs</white>"
+    tools_info: "<gray>ᴄᴏᴍᴀɴᴅᴏs ᴀᴅᴍɪɴɪsᴛʀᴀᴛɪᴠᴏs"
+    races_list_header: "<white>ʀᴀᴄᴀs ʀᴇɢɪsᴛʀᴀᴅᴀs</white>"
+    race_list_format: "<dark_gray>%type% <white>%id% <dark_gray>- <gray>%name%"

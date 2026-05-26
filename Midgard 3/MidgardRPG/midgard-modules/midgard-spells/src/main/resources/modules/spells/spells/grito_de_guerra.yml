@@ -1,0 +1,83 @@
+name: "<red>ɢʀɪᴛᴏ ᴅᴇ ɢᴜᴇʀʀᴀ</red>"
+mythic-skill: "GritoDeGuerra"
+spell-type: COMMON
+
+cooldown:
+  base: 15.0
+  per-level: -0.5
+mana:
+  base: 25.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guerreiro"
+  level: 5
+
+icon:
+  material: GOAT_HORN
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<red><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></red>"
+  - ""
+  - "<gray>sᴏʟᴛᴀ ᴜᴍ ɢʀɪᴛᴏ ᴅᴇ ɢᴜᴇʀʀᴀ ǫᴜᴇ</gray>"
+  - "<gray>ɪɴsᴘɪʀᴀ ᴀʟɪᴀᴅᴏs ᴘʀᴏxɪᴍᴏs,</gray>"
+  - "<gray>ᴀᴜᴍᴇɴᴛᴀɴᴅᴏ sᴜᴀ ꜰᴏʀᴄᴀ.</gray>"
+  - ""
+  - "<red><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></red>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ꜰᴏʀᴄᴀ:<red>{strength_buff}</red>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<red>{duration}s</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  strength_buff:
+    base: 4.0
+    per-level: 1.5
+  duration:
+    base: 5.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "war_shout"
+    mechanic-override: "GritoDeGuerraMk2"
+    stat-bonus:
+      strength: 1.0
+  5:
+    visual: "war_roar"
+    mechanic-override: "GritoDeGuerraMk3"
+    stat-bonus:
+      strength: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 5
+
+sounds:
+  cast-start:
+    sound: "entity.ender_dragon.growl"
+    volume: 1.0
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.ravager.roar"
+    volume: 1.0
+    pitch: 0.8
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

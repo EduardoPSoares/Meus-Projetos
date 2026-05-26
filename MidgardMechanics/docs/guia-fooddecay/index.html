@@ -1,0 +1,2251 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#131f1a">
+  <title>FoodDecay | Guia do Jogador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg-top: #8dd4ff;
+  --bg-horizon: #d8f2ff;
+  --bg-deep: #09110f;
+  --terrain-dark: #15201c;
+  --terrain-mid: #1b2924;
+  --surface: rgba(20, 31, 27, 0.94);
+  --surface-soft: rgba(28, 43, 37, 0.92);
+  --surface-raised: rgba(34, 52, 45, 0.96);
+  --surface-glass: rgba(12, 20, 17, 0.58);
+  --line: rgba(146, 182, 157, 0.26);
+  --line-strong: rgba(190, 230, 196, 0.44);
+  --line-warm: rgba(255, 202, 115, 0.3);
+  --text: #eff8ee;
+  --muted: #a3b4a6;
+  --muted-strong: #cad9cc;
+  --accent-grass: #78c850;
+  --accent-grass-dark: #426f2f;
+  --accent-gold: #f0cd76;
+  --accent-water: #6edbff;
+  --accent-red: #ff6e62;
+  --accent-lava: #ff9d58;
+  --accent-amethyst: #b08cff;
+  --shadow-deep: 0 24px 46px rgba(0, 0, 0, 0.34);
+  --shadow-block: 0 8px 0 rgba(6, 10, 9, 0.72), 0 24px 34px rgba(0, 0, 0, 0.24);
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --max-width: 1320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    linear-gradient(180deg, rgba(5, 12, 10, 0.04), rgba(5, 12, 10, 0.76)),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-horizon) 22%, #3b6640 22.1%, #18231e 54%, var(--bg-deep) 100%);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  opacity: 0.2;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent 86%);
+}
+
+body::after {
+  background:
+    radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.2), transparent 18%),
+    radial-gradient(circle at 84% 12%, rgba(255, 255, 255, 0.12), transparent 20%),
+    radial-gradient(circle at center, transparent 50%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+  padding: 22px 22px 96px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0 40px;
+}
+
+.hero > *:not(.hero-scene) {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 36%),
+    linear-gradient(180deg, rgba(128, 221, 255, 0.5) 0%, rgba(240, 251, 255, 0.3) 32%, rgba(41, 75, 53, 0.28) 62%, rgba(7, 12, 10, 0.82) 100%);
+  box-shadow: inset 0 -120px 140px rgba(6, 10, 8, 0.48);
+}
+
+.hero-scene span {
+  position: absolute;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.scene-sun {
+  top: 44px;
+  right: 132px;
+  width: 84px;
+  height: 84px;
+  background: linear-gradient(180deg, #fff3a1 0%, #f0cb65 100%);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 0 0 18px rgba(255, 232, 125, 0.1),
+    0 0 0 36px rgba(255, 232, 125, 0.05),
+    0 0 36px rgba(255, 223, 109, 0.34);
+  animation: sun-glow 7s ease-in-out infinite;
+}
+
+.scene-cloud {
+  --cloud-scale: 1;
+  height: 18px;
+  width: 72px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    18px -18px 0 rgba(255, 255, 255, 0.92),
+    36px -18px 0 rgba(255, 255, 255, 0.92),
+    54px 0 0 rgba(255, 255, 255, 0.92),
+    72px 0 0 rgba(255, 255, 255, 0.92),
+    90px -18px 0 rgba(255, 255, 255, 0.92);
+  opacity: 0.72;
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.08));
+  animation: cloud-drift 28s linear infinite;
+}
+
+.cloud-a {
+  top: 88px;
+  left: -8%;
+  --cloud-scale: 1.04;
+}
+
+.cloud-b {
+  top: 150px;
+  left: 34%;
+  --cloud-scale: 0.92;
+  animation-duration: 34s;
+}
+
+.cloud-c {
+  top: 62px;
+  left: 62%;
+  --cloud-scale: 0.8;
+  animation-duration: 38s;
+}
+
+.scene-layer {
+  left: -4%;
+  width: 108%;
+}
+
+.scene-layer::before,
+.scene-layer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.layer-far {
+  bottom: 144px;
+  height: 166px;
+  background: linear-gradient(180deg, rgba(77, 117, 80, 0.8) 0%, rgba(43, 71, 50, 0.88) 100%);
+  clip-path: polygon(0 100%, 0 48%, 7% 44%, 12% 28%, 18% 34%, 27% 16%, 35% 36%, 44% 22%, 52% 42%, 63% 20%, 71% 40%, 79% 26%, 88% 42%, 100% 22%, 100% 100%);
+}
+
+.layer-far::before {
+  top: 0;
+  height: 18px;
+  background: repeating-linear-gradient(90deg, #7ec857 0 24px, #5da241 24px 48px);
+}
+
+.layer-mid {
+  bottom: 74px;
+  height: 196px;
+  background: linear-gradient(180deg, #6b482e 0%, #4b3422 58%, #362518 100%);
+  clip-path: polygon(0 100%, 0 60%, 8% 60%, 16% 40%, 22% 56%, 31% 32%, 40% 50%, 49% 34%, 58% 56%, 67% 38%, 77% 56%, 85% 28%, 93% 40%, 100% 32%, 100% 100%);
+}
+
+.layer-mid::before {
+  top: 0;
+  height: 20px;
+  background: repeating-linear-gradient(90deg, #76c54f 0 24px, #5a983a 24px 48px);
+}
+
+.layer-mid::after {
+  top: 20px;
+  height: 14px;
+  background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.14) 0 24px, transparent 24px 48px);
+}
+
+.layer-near {
+  bottom: -18px;
+  height: 160px;
+  background: linear-gradient(180deg, #7a5535 0%, #5b3f27 38%, #2d2015 100%);
+  clip-path: polygon(0 100%, 0 54%, 10% 54%, 18% 32%, 26% 48%, 34% 26%, 43% 44%, 51% 34%, 58% 58%, 67% 30%, 77% 42%, 85% 24%, 92% 42%, 100% 28%, 100% 100%);
+}
+
+.layer-near::before {
+  top: 0;
+  height: 22px;
+  background: repeating-linear-gradient(90deg, #7bc751 0 26px, #61a53d 26px 52px);
+}
+
+.layer-near::after {
+  bottom: 0;
+  height: 56px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.28) 100%);
+}
+
+.topbar,
+.hero-copy,
+.hero-card,
+.card,
+.feature-panel,
+.machine-detail,
+.quality-card,
+.command-card,
+.accordion-item,
+.nutrition-banner,
+.footer,
+.timeline-step,
+.machine-tabs button,
+.mini-card,
+.brew-card,
+.machine-stat,
+.recipe-entry,
+.guide-ribbon,
+.nav-links a {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(33, 49, 43, 0.94) 0%, rgba(18, 28, 24, 0.96) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -5px 0 rgba(0, 0, 0, 0.34),
+    var(--shadow-deep);
+  backdrop-filter: blur(12px);
+}
+
+.topbar::before,
+.hero-copy::before,
+.hero-card::before,
+.card::before,
+.feature-panel::before,
+.machine-detail::before,
+.quality-card::before,
+.command-card::before,
+.accordion-item::before,
+.nutrition-banner::before,
+.footer::before,
+.timeline-step::before,
+.machine-tabs button::before,
+.mini-card::before,
+.brew-card::before,
+.machine-stat::before,
+.recipe-entry::before,
+.guide-ribbon::before,
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 38%),
+    linear-gradient(90deg, rgba(120, 200, 80, 0.08), transparent 38%, rgba(110, 219, 255, 0.08));
+  pointer-events: none;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 30px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(32, 49, 42, 0.95) 0%, rgba(14, 22, 19, 0.97) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -6px 0 rgba(0, 0, 0, 0.42),
+    var(--shadow-block);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  flex: none;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background:
+    linear-gradient(180deg, #82d45a 0 34%, #755137 34% 100%);
+  color: #f8fff4;
+  font-family: "Silkscreen", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  box-shadow:
+    inset 0 3px 0 rgba(255, 255, 255, 0.16),
+    inset 0 -6px 0 rgba(0, 0, 0, 0.22),
+    0 8px 16px rgba(0, 0, 0, 0.18);
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand-copy strong {
+  font-family: "Silkscreen", monospace;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-copy small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-family: "Silkscreen", monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-strong);
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 8px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-grass), var(--accent-water));
+  opacity: 0;
+  transform: scaleX(0.7);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a.is-active {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  color: var(--text);
+}
+
+.nav-links a:hover::after,
+.nav-links a.is-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.95fr);
+  gap: 24px;
+}
+
+.hero-copy {
+  padding: 38px;
+  border-radius: 28px;
+  min-height: 100%;
+}
+
+.hero-copy h1,
+.section-heading h2,
+.card h3,
+.feature-panel h3,
+.machine-detail h3,
+.quality-card h3,
+.timeline-copy h3,
+.accordion-trigger span,
+.nutrition-card h3,
+.command-card code,
+.machine-tabs button strong {
+  font-family: "Silkscreen", monospace;
+}
+
+.eyebrow,
+.card-kicker,
+.machine-kicker,
+.card-badge,
+.tag,
+.brew-pill {
+  font-family: "Silkscreen", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--accent-water);
+  font-size: 0.68rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.16;
+}
+
+h1 {
+  max-width: 13ch;
+  font-size: clamp(2.35rem, 4vw, 4.45rem);
+  color: #f8fffc;
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3vw, 2.9rem);
+  color: #f6fffb;
+}
+
+h3 {
+  font-size: 1.15rem;
+  color: #f6fffb;
+}
+
+h4 {
+  font-size: 0.92rem;
+  font-family: "Silkscreen", monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.hero-text,
+.section-heading p,
+.feature-panel p,
+.card p,
+.command-card p,
+.accordion-copy,
+.machine-copy p,
+.mini-card p,
+.mini-card ul,
+.recipe-entry p,
+.timeline-copy p,
+.brew-card p,
+.machine-tabs button span,
+.stat-card span,
+.footer p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.hero-text {
+  max-width: 64ch;
+  margin: 18px 0 0;
+  font-size: 1.03rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  font-family: "Silkscreen", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 0 rgba(7, 11, 9, 0.7), 0 18px 30px rgba(0, 0, 0, 0.22);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(3px);
+  box-shadow: 0 5px 0 rgba(7, 11, 9, 0.7), 0 12px 20px rgba(0, 0, 0, 0.18);
+}
+
+.button-primary {
+  color: #f9fff6;
+  border-color: rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(180deg, #7fd257 0%, #63a33f 100%);
+}
+
+.button-secondary {
+  color: var(--text);
+  border-color: var(--line);
+  background:
+    linear-gradient(180deg, rgba(54, 72, 64, 0.96) 0%, rgba(29, 43, 37, 0.96) 100%);
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.hero-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(58, 78, 70, 0.94) 0%, rgba(28, 43, 37, 0.94) 100%);
+  color: var(--muted-strong);
+  font-family: "Silkscreen", monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.28);
+}
+
+.hero-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.hero-card {
+  padding: 24px;
+  border-radius: 22px;
+}
+
+.hero-card-accent {
+  background:
+    linear-gradient(180deg, rgba(27, 42, 38, 0.95) 0%, rgba(18, 26, 24, 0.98) 100%);
+}
+
+.card-kicker {
+  margin: 0 0 14px;
+  color: var(--accent-gold);
+  font-size: 0.62rem;
+}
+
+.hero-flow {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted-strong);
+  line-height: 1.6;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(150, 191, 159, 0.12);
+  background:
+    linear-gradient(180deg, rgba(46, 67, 59, 0.84) 0%, rgba(23, 34, 30, 0.9) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 10px;
+  color: #f6fffb;
+  font-family: "Silkscreen", monospace;
+  font-size: 1.5rem;
+}
+
+.guide-ribbon {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+  padding: 14px;
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(16, 24, 21, 0.78) 0%, rgba(11, 17, 15, 0.9) 100%);
+}
+
+.guide-ribbon span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(41, 58, 51, 0.96) 0%, rgba(20, 29, 26, 0.96) 100%);
+  color: var(--muted-strong);
+  font-family: "Silkscreen", monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.guide-main {
+  position: relative;
+}
+
+.section {
+  position: relative;
+  padding-top: 84px;
+}
+
+.section::before {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 6px;
+  margin-bottom: 22px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-grass), var(--accent-gold), transparent);
+  box-shadow: 0 0 18px rgba(240, 205, 118, 0.18);
+}
+
+.section-heading {
+  max-width: 76ch;
+  margin-bottom: 26px;
+}
+
+.section-heading h2 {
+  margin-bottom: 14px;
+}
+
+.card-grid,
+.mini-grid,
+.commands-grid,
+.quality-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.card-grid.three-up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card-grid.four-up {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card-grid.five-up {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.card,
+.command-card,
+.quality-card {
+  padding: 22px;
+  border-radius: 18px;
+}
+
+.card {
+  display: grid;
+  gap: 12px;
+}
+
+.card-badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 0.54rem;
+}
+
+.badge-live {
+  color: #d8ffd0;
+  background: rgba(95, 170, 76, 0.18);
+  border: 1px solid rgba(122, 200, 92, 0.16);
+}
+
+.badge-optional {
+  color: #fff0be;
+  background: rgba(240, 205, 118, 0.16);
+  border: 1px solid rgba(240, 205, 118, 0.16);
+}
+
+.badge-off {
+  color: #ffd5ce;
+  background: rgba(255, 110, 98, 0.16);
+  border: 1px solid rgba(255, 110, 98, 0.16);
+}
+
+.layout-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.panel-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.feature-panel {
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.rich-list {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.mini-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 16px;
+}
+
+.mini-card {
+  min-height: 100%;
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.mini-card strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.mini-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background:
+    linear-gradient(180deg, rgba(45, 63, 56, 0.96) 0%, rgba(22, 34, 30, 0.96) 100%);
+  color: var(--muted-strong);
+  font-size: 0.54rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 16px;
+}
+
+.timeline-step {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 20px 22px;
+  border-radius: 18px;
+}
+
+.timeline-index {
+  display: inline-grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(180deg, #7fd257 0%, #5b933c 100%);
+  color: #f8fff3;
+  font-family: "Silkscreen", monospace;
+  font-size: 1.15rem;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -5px 0 rgba(0, 0, 0, 0.2),
+    0 10px 18px rgba(0, 0, 0, 0.18);
+}
+
+.nutrition-banner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 18px;
+}
+
+.nutrition-banner div {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(50, 72, 63, 0.88) 0%, rgba(24, 35, 31, 0.92) 100%);
+}
+
+.nutrition-card {
+  border-top: 4px solid var(--nutrition-accent, var(--accent-grass));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    inset 0 -5px 0 rgba(0, 0, 0, 0.34),
+    0 24px 46px rgba(0, 0, 0, 0.34);
+}
+
+.nutrition-card h3,
+.nutrition-card p strong {
+  color: var(--nutrition-accent, var(--accent-grass));
+}
+
+.nutrition-card p:last-child {
+  color: var(--muted);
+}
+
+.fermentation-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.brew-card {
+  padding: 18px;
+  border-radius: 14px;
+}
+
+.brew-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 12px;
+}
+
+.brew-pill {
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(110, 219, 255, 0.18);
+  background: rgba(50, 110, 131, 0.16);
+  color: var(--accent-water);
+  font-size: 0.52rem;
+}
+
+.machine-shell {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.machine-tabs {
+  display: grid;
+  gap: 12px;
+}
+
+.machine-tabs button {
+  width: 100%;
+  padding: 18px;
+  border-radius: 16px;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.machine-tabs button:hover {
+  transform: translateX(4px);
+  border-color: var(--line-strong);
+}
+
+.machine-tabs button.is-active {
+  border-color: rgba(120, 200, 80, 0.42);
+  background:
+    linear-gradient(180deg, rgba(43, 64, 55, 0.98) 0%, rgba(23, 35, 31, 0.98) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 0 0 1px rgba(120, 200, 80, 0.1),
+    inset 0 -5px 0 rgba(0, 0, 0, 0.34),
+    0 24px 46px rgba(0, 0, 0, 0.34);
+}
+
+.machine-tabs button strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.machine-tabs button span {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.machine-detail {
+  padding: 28px;
+  border-radius: 22px;
+}
+
+.machine-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.machine-kicker {
+  display: inline-flex;
+  padding: 7px 10px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: rgba(110, 219, 255, 0.14);
+  border: 1px solid rgba(110, 219, 255, 0.12);
+  color: var(--accent-water);
+  font-size: 0.54rem;
+}
+
+.machine-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0 24px;
+}
+
+.machine-stat {
+  padding: 14px;
+  border-radius: 14px;
+}
+
+.machine-stat strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--text);
+}
+
+.recipe-list {
+  display: grid;
+  gap: 12px;
+}
+
+.recipe-entry {
+  padding: 14px 16px;
+  border-radius: 14px;
+}
+
+.recipe-entry strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.quality-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.commands-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.command-card code {
+  display: inline-flex;
+  width: fit-content;
+  padding: 9px 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(240, 205, 118, 0.16);
+  background:
+    linear-gradient(180deg, rgba(73, 59, 29, 0.92) 0%, rgba(46, 37, 18, 0.95) 100%);
+  color: var(--accent-gold);
+  font-size: 0.62rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.accordion {
+  display: grid;
+  gap: 14px;
+}
+
+.accordion-item {
+  border-radius: 18px;
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordion-trigger span {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.accordion-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(52, 71, 63, 0.92) 0%, rgba(29, 42, 36, 0.96) 100%);
+  color: var(--accent-water);
+  transition: transform 160ms ease;
+}
+
+.accordion-item.is-open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-copy {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 22px;
+  transition: max-height 220ms ease, padding-bottom 220ms ease;
+}
+
+.accordion-item.is-open .accordion-copy {
+  max-height: 280px;
+  padding-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 84px;
+  padding: 20px 22px;
+  border-radius: 20px;
+}
+
+.footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(48, 69, 60, 0.94) 0%, rgba(25, 37, 32, 0.96) 100%);
+  color: var(--muted-strong);
+  font-family: "Silkscreen", monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.footer a:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(0) scale(var(--cloud-scale));
+  }
+
+  100% {
+    transform: translateX(120px) scale(var(--cloud-scale));
+  }
+}
+
+@keyframes sun-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 18px rgba(255, 232, 125, 0.1),
+      0 0 0 36px rgba(255, 232, 125, 0.05),
+      0 0 36px rgba(255, 223, 109, 0.34);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 24px rgba(255, 232, 125, 0.14),
+      0 0 0 44px rgba(255, 232, 125, 0.07),
+      0 0 50px rgba(255, 223, 109, 0.42);
+  }
+}
+
+@media (max-width: 1180px) {
+  .hero-grid,
+  .machine-shell,
+  .layout-split,
+  .card-grid.three-up,
+  .card-grid.four-up,
+  .card-grid.five-up,
+  .commands-grid,
+  .quality-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-ribbon {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mini-grid,
+  .stats-grid,
+  .machine-stats,
+  .nutrition-banner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .page-shell {
+    padding-inline: 16px;
+  }
+
+  .hero {
+    padding-top: 10px;
+  }
+
+  .hero-scene {
+    border-radius: 22px;
+  }
+
+  .topbar,
+  .footer,
+  .machine-head,
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .hero-copy,
+  .hero-card,
+  .feature-panel,
+  .machine-detail,
+  .card,
+  .command-card,
+  .quality-card,
+  .timeline-step,
+  .guide-ribbon,
+  .nutrition-banner,
+  .accordion-trigger {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .scene-sun {
+    right: 32px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .layer-far {
+    bottom: 132px;
+  }
+
+  .layer-mid {
+    bottom: 66px;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 14px;
+  }
+
+  .brand {
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-links a {
+    flex: 1 1 120px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-copy {
+    padding-top: 28px;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: clamp(1.35rem, 8vw, 1.9rem);
+  }
+
+  .timeline-step {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-index {
+    width: 58px;
+    height: 58px;
+    font-size: 1rem;
+  }
+
+  .guide-ribbon,
+  .mini-grid,
+  .stats-grid,
+  .machine-stats,
+  .nutrition-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-tags {
+    gap: 8px;
+  }
+
+  .hero-tags span,
+  .guide-ribbon span,
+  .footer a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section {
+    padding-top: 72px;
+  }
+
+  .footer {
+    align-items: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+  </style>
+</head>
+<body class="minecraft-guide">
+  <div class="page-shell">
+    <header class="hero" id="topo">
+      <div class="hero-scene" aria-hidden="true">
+        <span class="scene-sun"></span>
+        <span class="scene-cloud cloud-a"></span>
+        <span class="scene-cloud cloud-b"></span>
+        <span class="scene-cloud cloud-c"></span>
+        <span class="scene-layer layer-far"></span>
+        <span class="scene-layer layer-mid"></span>
+        <span class="scene-layer layer-near"></span>
+      </div>
+      <nav class="topbar">
+        <a class="brand" href="#topo">
+          <span class="brand-mark">FD</span>
+          <span class="brand-copy">
+            <strong>Guia do FoodDecay</strong>
+            <small>Midgard Mechanics</small>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#visao-geral">Visao Geral</a>
+          <a href="#sobrevivencia">Sobrevivencia</a>
+          <a href="#nutricao">Nutricao</a>
+          <a href="#maquinas">Maquinas</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <section class="hero-copy">
+          <p class="eyebrow">Manual do jogador</p>
+          <h1>Aprenda a viver com comida que envelhece, pesa, estraga e pode ser transformada em algo melhor.</h1>
+          <p class="hero-text">
+            Este guia foi montado a partir do comportamento atual do projeto. Ele mostra como os sistemas do
+            <strong>FoodDecay</strong> funcionam no servidor hoje: validade, nutricao, liquidos, fermentacao,
+            multiblocos, cookbook e todos os atalhos que um player realmente usa.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#primeiros-passos">Comecar pelo basico</a>
+            <a class="button button-secondary" href="#maquinas">Ver maquinas</a>
+          </div>
+          <div class="hero-tags" aria-label="Sistemas principais">
+            <span>Frescor real</span>
+            <span>Nutricao por grupos</span>
+            <span>Multiblocos vivos</span>
+            <span>Receitas por descoberta</span>
+          </div>
+        </section>
+
+        <aside class="hero-panel">
+          <div class="hero-card">
+            <p class="card-kicker">Loop principal</p>
+            <ol class="hero-flow">
+              <li>Inspecione o alimento</li>
+              <li>Controle tempo, clima e armazenamento</li>
+              <li>Use maquinas e barris para conservar</li>
+              <li>Descubra receitas por tentativa</li>
+              <li>Monte uma dieta variada para ganhar bonus</li>
+            </ol>
+          </div>
+          <div class="hero-card hero-card-accent stats-grid" id="stats-grid"></div>
+        </aside>
+      </div>
+
+      <div class="guide-ribbon" aria-label="Destaques do sistema">
+        <span>Paper 1.21.4</span>
+        <span>Sobrevivencia alimentar</span>
+        <span>Fermentacao ativa</span>
+        <span>Cookbook por tentativa</span>
+      </div>
+    </header>
+
+    <main class="guide-main">
+      <section class="section reveal" id="visao-geral">
+        <div class="section-heading">
+          <p class="eyebrow">Visao geral</p>
+          <h2>O que muda no gameplay</h2>
+          <p>
+            O plugin transforma comida em um sistema completo de sobrevivencia. Guardar qualquer item de qualquer jeito
+            deixa de funcionar; agora voce precisa ler o ambiente, escolher onde armazenar, montar dieta e investir em
+            preparos mais avancados.
+          </p>
+        </div>
+        <div class="card-grid three-up" id="overview-grid"></div>
+      </section>
+
+      <section class="section reveal" id="primeiros-passos">
+        <div class="section-heading">
+          <p class="eyebrow">Onboarding</p>
+          <h2>Primeiros passos no servidor</h2>
+          <p>
+            Se voce acabou de entrar e quer sobreviver sem desperdiÃ§ar comida, siga esta ordem. Ela cobre o que mais
+            pesa na experiencia inicial.
+          </p>
+        </div>
+        <div class="timeline" id="onboarding-timeline"></div>
+      </section>
+
+      <section class="section reveal" id="sobrevivencia">
+        <div class="section-heading">
+          <p class="eyebrow">Sobrevivencia</p>
+          <h2>Validade, porcoes, peso e ambiente</h2>
+          <p>
+            O frescor dos alimentos depende de tempo, temperatura, estacao, profundidade, gelo, container e tracos de
+            conservacao. Esta e a camada mais importante do sistema.
+          </p>
+        </div>
+
+        <div class="layout-split">
+          <div class="panel-stack">
+            <article class="feature-panel">
+              <h3>Como o frescor funciona</h3>
+              <ul class="rich-list">
+                <li>Comida expirada nao pode ser comida.</li>
+                <li>O item mostra barra de frescor e tempo restante na lore.</li>
+                <li>`Shift + clique direito` com a comida na mao abre a tela completa de inspecao.</li>
+                <li>`/fd check` faz a mesma coisa via comando.</li>
+              </ul>
+            </article>
+            <article class="feature-panel">
+              <h3>Exemplos de validade base</h3>
+              <div class="mini-grid" id="expiration-grid"></div>
+            </article>
+          </div>
+
+          <div class="panel-stack">
+            <article class="feature-panel">
+              <h3>Ambiente e armazenamento</h3>
+              <div class="mini-grid" id="environment-grid"></div>
+            </article>
+            <article class="feature-panel">
+              <h3>Tracos de conservacao</h3>
+              <div class="mini-grid" id="traits-grid"></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="card-grid three-up" id="logistics-grid"></div>
+      </section>
+
+      <section class="section reveal" id="nutricao">
+        <div class="section-heading">
+          <p class="eyebrow">Nutricao</p>
+          <h2>Comer variado vira bonus real</h2>
+          <p>
+            O sistema de nutricao tem 5 grupos. Cada grupo ativo libera vida extra e efeito proprio. O ganho nao e mais
+            fixo: snacks leves rendem pouco, refeicoes fortes chegam mais perto do teto configurado, e itens em porcoes
+            dividem esse ganho.
+          </p>
+        </div>
+
+        <div class="nutrition-banner">
+          <div>
+            <strong>Limiar de ativacao:</strong> 25%
+          </div>
+          <div>
+            <strong>Ganho maximo de uma refeicao forte:</strong> 20%
+          </div>
+          <div>
+            <strong>Decaimento:</strong> 0.5% por minuto
+          </div>
+        </div>
+
+        <div class="card-grid five-up" id="nutrition-grid"></div>
+      </section>
+
+      <section class="section reveal" id="liquidos">
+        <div class="section-heading">
+          <p class="eyebrow">Liquidos</p>
+          <h2>Containers, caldeiroes e fermentacao</h2>
+          <p>
+            Liquidos usam mB. Voce enche recipientes em agua e caldeiroes, despeja no mundo ou em barris de fermentacao,
+            e combina isso com conservas e bebidas.
+          </p>
+        </div>
+
+        <div class="layout-split">
+          <article class="feature-panel">
+            <h3>Capacidades e tipos</h3>
+            <div class="mini-grid" id="liquid-containers-grid"></div>
+            <div class="tag-cloud" id="liquid-types-cloud"></div>
+          </article>
+          <article class="feature-panel">
+            <h3>Fermentacao ativa hoje</h3>
+            <div class="fermentation-list" id="fermentation-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="maquinas">
+        <div class="section-heading">
+          <p class="eyebrow">Maquinas</p>
+          <h2>Multiblocos de conservacao</h2>
+          <p>
+            Existem 5 maquinas principais. Cada uma tem estrutura, recurso de alimentacao e familia de receitas
+            proprias. O cookbook mostra o que voce suspeita, testou e dominou.
+          </p>
+        </div>
+
+        <div class="machine-shell">
+          <div class="machine-tabs" id="machine-tabs"></div>
+          <article class="machine-detail" id="machine-detail"></article>
+        </div>
+
+        <div class="quality-grid" id="quality-grid"></div>
+      </section>
+
+      <section class="section reveal" id="descoberta">
+        <div class="section-heading">
+          <p class="eyebrow">Cookbook</p>
+          <h2>Como receitas sao descobertas</h2>
+          <p>
+            O cookbook nao entrega tudo de uma vez. Ele cresce junto com suas tentativas e registros de coleta.
+          </p>
+        </div>
+        <div class="card-grid four-up" id="discovery-grid"></div>
+      </section>
+
+      <section class="section reveal" id="extras">
+        <div class="section-heading">
+          <p class="eyebrow">Extras</p>
+          <h2>Outros sistemas uteis para o player</h2>
+          <p>
+            Alem das maquinas, o projeto tambem traz caldeirao, compostagem, atalhos de interface e um sistema de
+            cozimento em fogueira que existe no codigo, mas hoje esta desligado na configuracao atual.
+          </p>
+        </div>
+        <div class="card-grid three-up" id="extras-grid"></div>
+      </section>
+
+      <section class="section reveal" id="atalhos">
+        <div class="section-heading">
+          <p class="eyebrow">Atalhos</p>
+          <h2>Comandos e controles do jogador</h2>
+          <p>
+            O foco do player fica em poucos atalhos. O resto do sistema e interacao direta com bloco, item ou GUI.
+          </p>
+        </div>
+        <div class="commands-grid" id="commands-grid"></div>
+      </section>
+
+      <section class="section reveal" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Perguntas que os players costumam fazer</h2>
+          <p>Use esta parte para onboarding em Discord, wiki ou tela de ajuda do servidor.</p>
+        </div>
+        <div class="accordion" id="faq-accordion"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Guia montado a partir do projeto atual do FoodDecay para Paper 1.21.4.</p>
+      <a href="#topo">Voltar ao topo</a>
+    </footer>
+  </div>
+
+  <script>
+const stats = [
+  { value: "5", label: "maquinas principais" },
+  { value: "4", label: "bebidas fermentaveis" },
+  { value: "5", label: "grupos de nutricao" },
+  { value: "3", label: "coletas para dominar receita" }
+];
+
+const overviewCards = [
+  {
+    title: "Comida tem vida util real",
+    badge: "Ativo",
+    badgeClass: "badge-live",
+    copy: "Cada alimento tem frescor, tempo restante, impacto de calor, estacao, profundidade e armazenamento. Guardar carne no inventario para sempre deixa de ser opcao."
+  },
+  {
+    title: "Conservacao vira progressao",
+    badge: "Ativo",
+    badgeClass: "badge-live",
+    copy: "Secar, salgar, defumar, conservar em vinagre e selar com cera passa a ser parte do loop. Cada multibloco aplica tracos que reduzem o decaimento."
+  },
+  {
+    title: "Receitas se revelam na pratica",
+    badge: "Ativo",
+    badgeClass: "badge-live",
+    copy: "O cookbook usa descoberta por tentativa. Primeiro voce abre suspeitas, depois registra a receita, e por repeticao domina a categoria."
+  }
+];
+
+const onboardingSteps = [
+  {
+    title: "Aprenda a ler a comida",
+    copy: "Segure um alimento e use `Shift + clique direito` ou `/fd check`. A tela mostra frescor, tempo restante, multiplicador ambiental e tracos de conservacao."
+  },
+  {
+    title: "Nao trate todo lugar como geladeira",
+    copy: "Calor acelera o decaimento, profundidade ajuda a resfriar, inverno segura melhor que verao, gelo reforca armazenamento e containers diferentes conservam em ritmos diferentes."
+  },
+  {
+    title: "Use os sistemas de suporte cedo",
+    copy: "Porcoes ajudam a esticar comida, peso limita stacks, ensopados de caldeirao misturam ingredientes e comida estragada pode ser reaproveitada no composteiro."
+  },
+  {
+    title: "Entre nas maquinas e no cookbook",
+    copy: "Quando o alimento basico deixar de ser suficiente, comece a usar secador, defumeiro, barril de sal, tina e prensa. Abra `/fd cookbook` para acompanhar suspeitas e receitas dominadas."
+  }
+];
+
+const expirationExamples = [
+  { title: "Carne crua", text: "BEEF / PORKCHOP: 30 min. Estraga rapido e pede pressa ou processamento." },
+  { title: "Carne cozida", text: "COOKED_BEEF / COOKED_PORKCHOP: 90 min. Melhor que crua, mas longe de eterna." },
+  { title: "Pao", text: "BREAD: 120 min. Bom item de viagem e base para selagem." },
+  { title: "Fruta", text: "APPLE: 240 min. Muito mais tolerante para exploracao inicial." }
+];
+
+const environmentFactors = [
+  {
+    title: "Temperatura",
+    text: "Zonas frias seguram o decay. Freezing chega a 0.1x, cold a 0.5x e hot sobe para 2.0x."
+  },
+  {
+    title: "Profundidade",
+    text: "Cavernas funcionam como refrigeracao natural. Em Y baixo o sistema reduz a temperatura efetiva."
+  },
+  {
+    title: "Estacao",
+    text: "Primavera 1.0x, verao 1.3x, outono 0.9x e inverno 0.6x. Ver o clima como storage passivo faz diferenca."
+  },
+  {
+    title: "Gelo e container",
+    text: "Barril = 0.7x, bau = 0.9x, shulker = 0.5x, smoker = 0.6x. Com 6 lados de gelo o alvo chega a 0.3x."
+  }
+];
+
+const traits = [
+  { title: "Salgado", text: "Multiplicador 0.5x. O barril de sal usa SUGAR como sal na configuracao atual." },
+  { title: "Defumado", text: "Multiplicador 0.4x. Pode vir do defumeiro ou automaticamente do smoker vanilla quando habilitado." },
+  { title: "Desidratado", text: "Multiplicador 0.3x. O secador e a forma mais limpa de preservar comida sem combustivel." },
+  { title: "Em conserva", text: "Multiplicador 0.35x. Exige a tina abastecida com agua, vinagre e combustivel." },
+  { title: "Em salmoura", text: "Multiplicador 0.45x. Existe no sistema como traco, embora nao seja o foco do fluxo atual." },
+  { title: "Selado", text: "Multiplicador 0.25x. A melhor conservacao direta no projeto atual." }
+];
+
+const logistics = [
+  {
+    title: "Porcoes de comida",
+    badge: "Ativo",
+    badgeClass: "badge-live",
+    copy: "Comidas nao somem em uma mordida. O padrao e 4 porcoes, mas ha excecoes: bife 4, frango 3, bacalhau 2, bolo 6, maca 2 e cookie 1."
+  },
+  {
+    title: "Peso e tamanho",
+    badge: "Ativo",
+    badgeClass: "badge-live",
+    copy: "Cada item tem peso em kg e tamanho. Isso limita stacks e bloqueia containers pequenos para alimentos grandes."
+  },
+  {
+    title: "Restricoes de container",
+    badge: "Ativo",
+    badgeClass: "badge-live",
+    copy: "Shulker box nao aceita comida HUGE. Bundle bloqueia LARGE e HUGE. O sistema forÃ§a o player a pensar em logistica, nao so em stack."
+  }
+];
+
+const nutritionGroups = [
+  {
+    name: "Graos",
+    color: "#a88429",
+    bonus: "+2 HP e Saturation",
+    foods: "Bread, Cookie, Cake, Pumpkin Pie, Baked Potato"
+  },
+  {
+    name: "Frutas",
+    color: "#4f8c44",
+    bonus: "+1 HP e Speed",
+    foods: "Apple, Melon Slice, Sweet Berries, Glow Berries, Chorus Fruit"
+  },
+  {
+    name: "Vegetais",
+    color: "#2d7042",
+    bonus: "+2 HP e Regeneration",
+    foods: "Carrot, Potato, Beetroot, Dried Kelp, Golden Carrot"
+  },
+  {
+    name: "Proteina",
+    color: "#a4472d",
+    bonus: "+3 HP e Resistance",
+    foods: "Carnes e peixes crus ou cozidos"
+  },
+  {
+    name: "Laticinios",
+    color: "#7d7d7d",
+    bonus: "+2 HP e Absorption",
+    foods: "Milk Bucket, Mushroom Stew, Rabbit Stew, Beetroot Soup, Suspicious Stew"
+  }
+];
+
+const liquidContainers = [
+  { title: "Bowl", text: "500 mB" },
+  { title: "Bucket", text: "1000 mB" },
+  { title: "Glass Bottle", text: "250 mB" },
+  { title: "Flower Pot", text: "750 mB" }
+];
+
+const liquidTypes = ["Agua", "Leite", "Vinagre", "Mel", "Caldo", "Oleo"];
+
+const fermentation = [
+  {
+    name: "Cerveja Artesanal",
+    meta: ["Agua", "250 mB", "30 min"],
+    effects: "Strength I por 60s e Nausea por 10s."
+  },
+  {
+    name: "Vinho Tinto",
+    meta: ["Agua", "500 mB", "45 min"],
+    effects: "Regeneration II por 30s e Nausea por 20s."
+  },
+  {
+    name: "Hidromel",
+    meta: ["Mel", "250 mB", "40 min"],
+    effects: "Absorption II por 90s e Luck I por 60s."
+  },
+  {
+    name: "Vinagre Fermentado",
+    meta: ["Vinagre", "250 mB", "20 min"],
+    effects: "Speed I por 45s."
+  }
+];
+
+const machines = [
+  {
+    id: "secador",
+    name: "Secador",
+    kicker: "Sem combustivel",
+    time: "30 min base",
+    supply: "Ceu aberto, dia e sem chuva",
+    result: "Aplica o traco Desidratado",
+    description: "Ideal para conservacao leve e barata. O secador so trabalha quando o clima ajuda e pausa se chover, anoitecer ou perder o ceu aberto.",
+    recipeExamples: [
+      "Carne seca a partir de cooked beef",
+      "Frango desidratado",
+      "Bacalhau seco"
+    ],
+    tips: [
+      "E a maquina mais sensivel ao ambiente.",
+      "Boa para players que investem em base externa.",
+      "Se dominar receitas aqui, outras suspeitas da categoria aparecem mais facil."
+    ]
+  },
+  {
+    id: "defumeiro",
+    name: "Defumeiro",
+    kicker: "Usa carvao ou charcoal",
+    time: "20 min base",
+    supply: "1 carga de combustivel por processamento",
+    result: "Aplica o traco Defumado",
+    description: "Conservacao robusta e direta. O player abastece, coloca o alimento e acompanha o progresso. A categoria costuma ser forte para carnes e peixes.",
+    recipeExamples: [
+      "Carne defumada",
+      "Salmao defumado",
+      "Bacon defumado"
+    ],
+    tips: [
+      "Defumar e um dos meios mais confiaveis para comida proteica.",
+      "Durante o processo podem surgir eventos para manter a fumaca certa.",
+      "Ficar perto da maquina aumenta a qualidade final."
+    ]
+  },
+  {
+    id: "barril-sal",
+    name: "Barril de Sal",
+    kicker: "Usa SUGAR como sal",
+    time: "15 min base",
+    supply: "2 unidades por preparo na config atual",
+    result: "Aplica o traco Salgado",
+    description: "Um passo intermedio forte para carnes e peixes. O barril precisa estar carregado antes de aceitar a receita.",
+    recipeExamples: [
+      "Carne salgada",
+      "Bacalhau salgado"
+    ],
+    tips: [
+      "O cookbook mostra bem quando uma receita pede um traco anterior.",
+      "Se faltar sal, a maquina avisa e nao consome o alimento.",
+      "Boa categoria para abrir cadeias de receitas futuras."
+    ]
+  },
+  {
+    id: "tina",
+    name: "Tina de Conserva",
+    kicker: "Usa agua, vinagre e combustivel",
+    time: "10 min base",
+    supply: "Water Bucket + Glass Bottle de vinagre + carvao",
+    result: "Aplica o traco Em conserva",
+    description: "O player monta a tina com tres recursos antes de processar. E excelente para vegetais e cria uma rota clara entre vinagre, liquidos e preservacao.",
+    recipeExamples: [
+      "Cenoura em conserva",
+      "Batata em conserva",
+      "Beterraba em conserva"
+    ],
+    tips: [
+      "Tambem conversa bem com o sistema de caldeirao e liquidos.",
+      "Cada processamento consome os recursos da tina.",
+      "Eventos de qualidade aqui giram em torno de fogo e mistura."
+    ]
+  },
+  {
+    id: "prensa",
+    name: "Prensa de Selagem",
+    kicker: "Usa honeycomb",
+    time: "15 min base",
+    supply: "1 selo de cera por preparo",
+    result: "Aplica o traco Selado",
+    description: "A conservacao mais forte da config atual. Ideal para itens que voce quer guardar por muito mais tempo.",
+    recipeExamples: [
+      "Carne selada",
+      "Pao selado"
+    ],
+    tips: [
+      "Selado e o melhor multiplicador de conservacao do projeto atual.",
+      "A prensa tambem participa do sistema de qualidade e eventos.",
+      "Vale muito para viagens longas, raids e reserva de base."
+    ]
+  }
+];
+
+const qualityCards = [
+  {
+    title: "Qualidade comum, boa e excelente",
+    copy: "O item final ganha prefixo e lore de qualidade. Os thresholds atuais sao 5 para Bom e 20 para Excelente."
+  },
+  {
+    title: "Proximidade conta",
+    copy: "Ficar perto da maquina soma bonus de qualidade ao longo do tempo. Abandonar o processo desperdiÃ§a potencial."
+  },
+  {
+    title: "Eventos interativos",
+    copy: "Cada maquina pode abrir alertas tematicos. Resolver da bonus, ignorar tira qualidade. O resultado final nao e so timer: e atencao do player."
+  }
+];
+
+const discoveryStages = [
+  {
+    title: "Oculta",
+    copy: "A receita ainda nao mostrou pista nenhuma. No cookbook ela aparece escondida dentro da categoria."
+  },
+  {
+    title: "Suspeita",
+    copy: "Aparece quando voce faz uma tentativa valida. O livro mostra a maquina, a familia do ingrediente e uma pista parcial."
+  },
+  {
+    title: "Testada",
+    copy: "Acontece quando voce conclui e coleta a receita ao menos uma vez. O preparo passa a ficar registrado."
+  },
+  {
+    title: "Dominada",
+    copy: "Com 3 coletas bem-sucedidas, a receita vira dominada. Ao dominar uma, o sistema ainda abre suspeitas de outras receitas da mesma maquina."
+  }
+];
+
+const extras = [
+  {
+    title: "Caldeirao artesanal",
+    badge: "Ativo",
+    badgeClass: "badge-live",
+    copy: "Clique em caldeirao com agua usando comida. Ate 3 ingredientes geram um ensopado artesanal com lore dos grupos de nutricao envolvidos."
+  },
+  {
+    title: "Composteiro",
+    badge: "Ativo",
+    badgeClass: "badge-live",
+    copy: "Comida estragada vai para o composteiro. Quando ele enche, voce coleta fertilizante. Hoje o resultado padrao e bone meal."
+  },
+  {
+    title: "Cozimento em fogueira",
+    badge: "Desligado na config",
+    badgeClass: "badge-off",
+    copy: "O projeto ja tem sistema de cozinhar em campfire e soul campfire, com chance de queimar. Mas no config atual ele esta desativado."
+  }
+];
+
+const commands = [
+  {
+    command: "Shift + clique direito",
+    copy: "Abre a inspecao de alimento sem precisar de chat. E o atalho mais importante do sistema."
+  },
+  {
+    command: "/fd check",
+    copy: "Abre a mesma inspecao via comando. Bom para quem prefere confirmar frescor, velocidade de decay e ambiente."
+  },
+  {
+    command: "/fd nutrition",
+    copy: "Mostra os 5 grupos, quais estao ativos, o que falta para ativar cada um e que comida voce deveria priorizar."
+  },
+  {
+    command: "/fd cookbook",
+    copy: "Abre o livro de receitas com categorias separadas para maquinas e fermentacao."
+  },
+  {
+    command: "Clique direito nas maquinas",
+    copy: "O processamento real acontece no mundo. Cada maquina responde com dicas diferentes dependendo do recurso ou alimento que voce segura."
+  },
+  {
+    command: "Clique direito no barril de fermentacao",
+    copy: "Com container cheio voce despeja ou inicia bebida. Com a mao vazia abre a GUI do barril."
+  }
+];
+
+const faq = [
+  {
+    question: "Por que minha comida estraga tao rapido na mochila?",
+    answer: "Porque o ambiente conta. Superficie quente, verao, falta de gelo e ausencia de tracos aceleram o decay. O inventario cru do player nao e storage seguro."
+  },
+  {
+    question: "Como eu sei se vale mais guardar ou processar?",
+    answer: "Inspecione primeiro. Se a comida esta perto da area amarela ou vermelha, processe. Secar, defumar, salgar, conservar ou selar sempre e melhor que deixar vencendo."
+  },
+  {
+    question: "O cookbook nao mostra a receita inteira. Isso e bug?",
+    answer: "Nao. O sistema atual usa descoberta por tentativa. Primeiro voce abre suspeita, depois registra a receita ao coletar e por fim domina apos repetir."
+  },
+  {
+    question: "Por que nao consigo colocar alguns alimentos em bundle ou shulker?",
+    answer: "Por causa do peso e tamanho. Itens LARGE e HUGE ja nao cabem em todo lugar. O servidor usa isso para forÃ§ar logistica melhor."
+  },
+  {
+    question: "Vale a pena ficar perto da maquina durante o processo?",
+    answer: "Sim. Proximidade soma qualidade, e eventos interativos tambem afetam o resultado. Se voce quer itens bons ou excelentes, ficar perto compensa."
+  }
+];
+
+function renderCards(containerId, items, mapper) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = items.map(mapper).join("");
+}
+
+function renderStats() {
+  const container = document.getElementById("stats-grid");
+  container.innerHTML = stats.map((stat) => `
+    <div class="stat-card">
+      <span>${stat.label}</span>
+      <strong>${stat.value}</strong>
+    </div>
+  `).join("");
+}
+
+function renderOverview() {
+  renderCards("overview-grid", overviewCards, (item) => `
+    <article class="card">
+      <span class="card-badge ${item.badgeClass}">${item.badge}</span>
+      <h3>${item.title}</h3>
+      <p>${item.copy}</p>
+    </article>
+  `);
+}
+
+function renderTimeline() {
+  renderCards("onboarding-timeline", onboardingSteps, (step, index) => `
+    <article class="timeline-step">
+      <div class="timeline-index">${index + 1}</div>
+      <div class="timeline-copy">
+        <h3>${step.title}</h3>
+        <p>${step.copy}</p>
+      </div>
+    </article>
+  `);
+}
+
+function renderMiniCards(containerId, items) {
+  renderCards(containerId, items, (item) => `
+    <div class="mini-card">
+      <strong>${item.title}</strong>
+      <p>${item.text}</p>
+    </div>
+  `);
+}
+
+function renderNutrition() {
+  renderCards("nutrition-grid", nutritionGroups, (group) => `
+    <article class="card nutrition-card" style="--nutrition-accent:${group.color}">
+      <h3>${group.name}</h3>
+      <p><strong>${group.bonus}</strong></p>
+      <p>${group.foods}</p>
+    </article>
+  `);
+}
+
+function renderLiquidSection() {
+  renderMiniCards("liquid-containers-grid", liquidContainers);
+
+  const cloud = document.getElementById("liquid-types-cloud");
+  cloud.innerHTML = liquidTypes.map((type) => `<span class="tag">${type}</span>`).join("");
+
+  renderCards("fermentation-list", fermentation, (brew) => `
+    <article class="brew-card">
+      <h3>${brew.name}</h3>
+      <div class="brew-meta">
+        ${brew.meta.map((entry) => `<span class="brew-pill">${entry}</span>`).join("")}
+      </div>
+      <p>${brew.effects}</p>
+    </article>
+  `);
+}
+
+function renderMachineTabs() {
+  const tabs = document.getElementById("machine-tabs");
+  tabs.innerHTML = machines.map((machine, index) => `
+    <button class="${index === 0 ? "is-active" : ""}" data-machine="${machine.id}">
+      <strong>${machine.name}</strong>
+      <span>${machine.kicker} â€¢ ${machine.result}</span>
+    </button>
+  `).join("");
+
+  tabs.addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-machine]");
+    if (!button) {
+      return;
+    }
+
+    tabs.querySelectorAll("button").forEach((tab) => tab.classList.remove("is-active"));
+    button.classList.add("is-active");
+    renderMachineDetail(button.dataset.machine);
+  });
+}
+
+function renderMachineDetail(machineId) {
+  const machine = machines.find((entry) => entry.id === machineId) || machines[0];
+  const detail = document.getElementById("machine-detail");
+  detail.innerHTML = `
+    <div class="machine-head">
+      <div class="machine-copy">
+        <span class="machine-kicker">${machine.kicker}</span>
+        <h3>${machine.name}</h3>
+        <p>${machine.description}</p>
+      </div>
+    </div>
+
+    <div class="machine-stats">
+      <div class="machine-stat">
+        <span>Tempo base</span>
+        <strong>${machine.time}</strong>
+      </div>
+      <div class="machine-stat">
+        <span>Abastecimento</span>
+        <strong>${machine.supply}</strong>
+      </div>
+      <div class="machine-stat">
+        <span>Resultado</span>
+        <strong>${machine.result}</strong>
+      </div>
+    </div>
+
+    <div class="layout-split">
+      <div>
+        <h4>Receitas que ja existem</h4>
+        <div class="recipe-list">
+          ${machine.recipeExamples.map((recipe) => `
+            <div class="recipe-entry">
+              <strong>${recipe}</strong>
+              <p>Esse preparo ja esta cadastrado no projeto atual.</p>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+      <div>
+        <h4>Dicas de uso</h4>
+        <div class="recipe-list">
+          ${machine.tips.map((tip) => `
+            <div class="recipe-entry">
+              <p>${tip}</p>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderQuality() {
+  renderCards("quality-grid", qualityCards, (item) => `
+    <article class="quality-card">
+      <h3>${item.title}</h3>
+      <p>${item.copy}</p>
+    </article>
+  `);
+}
+
+function renderDiscovery() {
+  renderCards("discovery-grid", discoveryStages, (item) => `
+    <article class="card">
+      <h3>${item.title}</h3>
+      <p>${item.copy}</p>
+    </article>
+  `);
+}
+
+function renderExtras() {
+  renderCards("extras-grid", extras, (item) => `
+    <article class="card">
+      <span class="card-badge ${item.badgeClass}">${item.badge}</span>
+      <h3>${item.title}</h3>
+      <p>${item.copy}</p>
+    </article>
+  `);
+}
+
+function renderCommands() {
+  renderCards("commands-grid", commands, (item) => `
+    <article class="command-card">
+      <code>${item.command}</code>
+      <p>${item.copy}</p>
+    </article>
+  `);
+}
+
+function renderFaq() {
+  const container = document.getElementById("faq-accordion");
+  container.innerHTML = faq.map((item, index) => `
+    <article class="accordion-item ${index === 0 ? "is-open" : ""}">
+      <button class="accordion-trigger" type="button">
+        <span>${item.question}</span>
+        <strong class="accordion-icon">+</strong>
+      </button>
+      <div class="accordion-copy">
+        <p>${item.answer}</p>
+      </div>
+    </article>
+  `).join("");
+
+  container.addEventListener("click", (event) => {
+    const trigger = event.target.closest(".accordion-trigger");
+    if (!trigger) {
+      return;
+    }
+
+    const item = trigger.closest(".accordion-item");
+    item.classList.toggle("is-open");
+  });
+}
+
+function setupRevealObserver() {
+  const sections = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+function setupNavSpy() {
+  const sections = [...document.querySelectorAll("main .section")];
+  const links = [...document.querySelectorAll(".nav-links a")];
+  const byId = new Map(links.map((link) => [link.getAttribute("href").slice(1), link]));
+
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+    if (!visible) {
+      return;
+    }
+
+    links.forEach((link) => link.classList.remove("is-active"));
+    const active = byId.get(visible.target.id);
+    if (active) {
+      active.classList.add("is-active");
+    }
+  }, {
+    threshold: 0.35,
+    rootMargin: "-15% 0px -35% 0px"
+  });
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+function init() {
+  renderStats();
+  renderOverview();
+  renderTimeline();
+  renderMiniCards("expiration-grid", expirationExamples);
+  renderMiniCards("environment-grid", environmentFactors);
+  renderMiniCards("traits-grid", traits);
+  renderCards("logistics-grid", logistics, (item) => `
+    <article class="card">
+      <span class="card-badge ${item.badgeClass}">${item.badge}</span>
+      <h3>${item.title}</h3>
+      <p>${item.copy}</p>
+    </article>
+  `);
+  renderNutrition();
+  renderLiquidSection();
+  renderMachineTabs();
+  renderMachineDetail(machines[0].id);
+  renderQuality();
+  renderDiscovery();
+  renderExtras();
+  renderCommands();
+  renderFaq();
+  setupRevealObserver();
+  setupNavSpy();
+}
+
+init();
+
+  </script>
+</body>
+</html>
+

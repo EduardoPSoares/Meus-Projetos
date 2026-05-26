@@ -1,0 +1,78 @@
+name: "<green>ᴛᴇᴍᴘᴇsᴛᴀᴅᴇ ᴅᴇ ꜰʟᴇᴄʜᴀs</green>"
+mythic-skill: "TempestadeDeFlechas"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 45.0
+  per-level: -1.0
+mana:
+  base: 20.0
+  per-level: -0.5
+stamina: 40.0
+
+max-level: 10
+
+requirements:
+  class: "Arqueiro"
+  level: 15
+
+icon:
+  material: BOW
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<green><bold>ᴜʟᴛɪᴍᴀᴛᴇ</bold></green>"
+  - ""
+  - "<gray>ɪɴᴠᴏᴄᴀ ᴜᴍᴀ ᴛᴇᴍᴘᴇsᴛᴀᴅᴇ ᴅᴇ ꜰʟᴇᴄʜᴀs</gray>"
+  - "<gray>ǫᴜᴇ ᴄᴏʙʀᴇ ᴜᴍᴀ ɢʀᴀɴᴅᴇ ᴀʀᴇᴀ,</gray>"
+  - "<gray>ᴅᴇᴠᴀsᴛᴀɴᴅᴏ ᴛᴏᴅᴏs ᴏs ɪɴɪᴍɪɢᴏs.</gray>"
+  - ""
+  - "<green><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></green>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴀʀǫᴜᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>15</yellow>"
+
+variables:
+  damage:
+    base: 40.0
+    per-level: 8.0
+
+milestones:
+  3:
+    visual: "tempestade_flechas_rain"
+    mechanic-override: "TempestadeDeFlechasMk2"
+    stat-bonus:
+      dexterity: 2.0
+  5:
+    visual: "tempestade_flechas_storm"
+    mechanic-override: "TempestadeDeFlechasMk3"
+    stat-bonus:
+      dexterity: 3.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.arrow.shoot"
+    volume: 1.0
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.lightning_bolt.thunder"
+    volume: 1.0
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

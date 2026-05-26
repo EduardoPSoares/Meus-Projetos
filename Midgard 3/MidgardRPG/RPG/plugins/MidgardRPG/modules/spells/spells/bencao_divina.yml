@@ -1,0 +1,75 @@
+name: "<gold>ʙᴇɴᴄᴀᴏ ᴅɪᴠɪɴᴀ</gold>"
+mythic-skill: "BencaoDivina"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Clerigo"
+  level: 1
+
+icon:
+  material: GOLDEN_APPLE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></gold>"
+  - ""
+  - "<gray>ᴏ ᴄʟᴇʀɪɢᴏ ʀᴇᴄᴇʙᴇ ᴜᴍᴀ ʙᴇɴᴄᴀᴏ ᴅɪᴠɪɴᴀ,</gray>"
+  - "<gray>ᴀᴜᴍᴇɴᴛᴀɴᴅᴏ ᴘᴀssɪᴠᴀᴍᴇɴᴛᴇ ᴏ ᴘᴏᴅᴇʀ</gray>"
+  - "<gray>ᴅᴇ ᴄᴜʀᴀ ᴅᴇ sᴜᴀs ᴍᴀɢɪᴀs.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></gold>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ᴄᴜʀᴀ:<gold>{heal_bonus}%</gold>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴄʟᴇʀɪɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  heal_bonus:
+    base: 5.0
+    per-level: 2.0
+
+milestones:
+  3:
+    visual: "bencao_divina_glow"
+    mechanic-override: "BencaoDivinaMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "bencao_divina_holy"
+    mechanic-override: "BencaoDivinaMk3"
+    stat-bonus:
+      vitality: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 3
+    vitality: 2
+
+sounds:
+  cast-start:
+    sound: "block.beacon.activate"
+    volume: 0.6
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.experience_orb.pickup"
+    volume: 0.5
+    pitch: 1.4
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

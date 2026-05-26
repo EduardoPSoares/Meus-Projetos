@@ -1,0 +1,79 @@
+name: "<gold>ɢᴏʟᴘᴇ ᴅᴏ ᴅʀᴀɢᴀᴏ</gold>"
+mythic-skill: "GolpeDoDragao"
+spell-type: COMMON
+
+cooldown:
+  base: 14.0
+  per-level: -0.4
+mana:
+  base: 20.0
+  per-level: -0.5
+stamina: 28.0
+
+max-level: 10
+
+requirements:
+  class: "Monge"
+  level: 12
+
+icon:
+  material: DRAGON_BREATH
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></gold>"
+  - ""
+  - "<gray>ᴅᴇsꜰᴇʀᴇ ᴜᴍ ɢᴏʟᴘᴇ ɪᴍʙᴜɪᴅᴏ ᴄᴏᴍ ᴀ</gray>"
+  - "<gray>ꜰᴜʀɪᴀ ᴅᴇ ᴜᴍ ᴅʀᴀɢᴀᴏ, ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ</gray>"
+  - "<gray>ᴍᴀssɪᴠᴏ ᴀᴏ ᴀʟᴠᴏ ᴇ ǫᴜᴇɪᴍᴀɴᴅᴏ-ᴏ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴏɴɢᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>12</yellow>"
+
+variables:
+  damage:
+    base: 28.0
+    per-level: 6.0
+
+milestones:
+  3:
+    visual: "golpe_dragao_flame"
+    mechanic-override: "GolpeDoDragaoMk2"
+    stat-bonus:
+      strength: 1.0
+  5:
+    visual: "golpe_dragao_inferno"
+    mechanic-override: "GolpeDoDragaoMk3"
+    stat-bonus:
+      strength: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 3
+    dexterity: 2
+
+sounds:
+  cast-start:
+    sound: "entity.ender_dragon.growl"
+    volume: 0.8
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.ender_dragon.hurt"
+    volume: 1.0
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

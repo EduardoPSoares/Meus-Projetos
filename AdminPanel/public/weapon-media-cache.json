@@ -1,0 +1,2109 @@
+{
+  "ar03": {
+    "image": "/img/weapons/wiki/ar03.png",
+    "wikiName": "AUG A3",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6f/Ar03.png",
+    "updatedAt": "2026-05-11T16:15:42.434Z"
+  },
+  "ar05": {
+    "image": "/img/weapons/wiki/ar05.png",
+    "wikiName": "XM8",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar05.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/84/Ar05.png",
+    "updatedAt": "2026-05-11T16:15:45.577Z"
+  },
+  "medic_vest_armagedon": {
+    "image": "/img/weapons/wiki/medic_vest_armagedon.png",
+    "wikiName": "Armageddon Medic Vest",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_vest_armagedon.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/40/Medic_vest_armagedon.png",
+    "updatedAt": "2026-05-11T16:15:48.218Z"
+  },
+  "soldier_vest_warlord_02": {
+    "image": "/img/weapons/wiki/soldier_vest_warlord_02.png",
+    "wikiName": "Premium Warlord soldier vest",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_vest_warlord_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/35/Soldier_vest_warlord_02.png",
+    "updatedAt": "2026-05-11T16:15:50.845Z"
+  },
+  "sniper_vest_blackwood_01": {
+    "image": "/img/weapons/wiki/sniper_vest_blackwood_01.png",
+    "wikiName": "Blackwood sniper vest",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_vest_blackwood_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a7/Sniper_vest_blackwood_01.png",
+    "updatedAt": "2026-05-11T16:15:53.477Z"
+  },
+  "gunner_vest_02": {
+    "image": "/img/weapons/wiki/gunner_vest_02.png",
+    "wikiName": "SED Runner body module",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Gunner_vest_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e5/Gunner_vest_02.png",
+    "updatedAt": "2026-05-11T16:15:56.075Z"
+  },
+  "ar00001": {
+    "image": "/img/weapons/wiki/ar00001.png",
+    "wikiName": "Pharaoh Galil AR Special",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar00001.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7c/Ar00001.png",
+    "updatedAt": "2026-05-11T16:20:19.620Z"
+  },
+  "ar00002": {
+    "image": "/img/weapons/wiki/ar00002.png",
+    "wikiName": "AK-47 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar00002.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a0/Ar00002.png",
+    "updatedAt": "2026-05-11T16:20:22.513Z"
+  },
+  "ar01": {
+    "image": "/img/weapons/wiki/ar01.png",
+    "wikiName": "Tavor TAR-21",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e2/Ar01.png",
+    "updatedAt": "2026-05-11T16:20:25.604Z"
+  },
+  "ar02": {
+    "image": "/img/weapons/wiki/ar02.png",
+    "wikiName": "M4A1",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/74/Ar02.png",
+    "updatedAt": "2026-05-11T16:20:28.444Z"
+  },
+  "ar04": {
+    "image": "/img/weapons/wiki/ar04.png",
+    "wikiName": "AK-103",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7f/Ar04.png",
+    "updatedAt": "2026-05-11T16:20:31.545Z"
+  },
+  "ar06": {
+    "image": "/img/weapons/wiki/ar06.png",
+    "wikiName": "H&K G36K",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar06.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5e/Ar06.png",
+    "updatedAt": "2026-05-11T16:20:34.929Z"
+  },
+  "ar07": {
+    "image": "/img/weapons/wiki/ar07.png",
+    "wikiName": "CALICO M955A",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar07.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/cd/Ar07.png",
+    "updatedAt": "2026-05-11T16:20:38.054Z"
+  },
+  "ar08": {
+    "image": "/img/weapons/wiki/ar08.png",
+    "wikiName": "SIG 551",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar08.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/fb/Ar08.png",
+    "updatedAt": "2026-05-11T16:20:41.199Z"
+  },
+  "ar09": {
+    "image": "/img/weapons/wiki/ar09.png",
+    "wikiName": "Daewoo K2",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar09.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/29/Ar09.png",
+    "updatedAt": "2026-05-11T16:20:44.322Z"
+  },
+  "ar10": {
+    "image": "/img/weapons/wiki/ar10.png",
+    "wikiName": "FN F2000",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar10.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e5/Ar10.png",
+    "updatedAt": "2026-05-11T16:20:47.446Z"
+  },
+  "ar11": {
+    "image": "/img/weapons/wiki/ar11.png",
+    "wikiName": "FN SCAR-H",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5b/Ar11.png",
+    "updatedAt": "2026-05-11T16:20:50.617Z"
+  },
+  "ar12": {
+    "image": "/img/weapons/wiki/ar12.png",
+    "wikiName": "M16A3",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2a/Ar12.png",
+    "updatedAt": "2026-05-11T16:20:53.793Z"
+  },
+  "ar13": {
+    "image": "/img/weapons/wiki/ar13.png",
+    "wikiName": "Famas F1",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar13.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e8/Ar13.png",
+    "updatedAt": "2026-05-11T16:20:56.942Z"
+  },
+  "ar15": {
+    "image": "/img/weapons/wiki/ar15.png",
+    "wikiName": "Type 97B",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar15.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/ac/Ar15.png",
+    "updatedAt": "2026-05-11T16:21:04.059Z"
+  },
+  "ar16": {
+    "image": "/img/weapons/wiki/ar16.png",
+    "wikiName": "Type 97",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar16.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/44/Ar16.png",
+    "updatedAt": "2026-05-11T16:21:07.211Z"
+  },
+  "ar17": {
+    "image": "/img/weapons/wiki/ar17.png",
+    "wikiName": "Galil AR",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar17.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e4/Ar17.png",
+    "updatedAt": "2026-05-11T16:21:10.321Z"
+  },
+  "ar19": {
+    "image": "/img/weapons/wiki/ar19.png",
+    "wikiName": "ACR",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/ACR",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/71/Ar20.png",
+    "updatedAt": "2026-05-11T16:21:19.513Z"
+  },
+  "ar20": {
+    "image": "/img/weapons/wiki/ar20.png",
+    "wikiName": "ACR",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar20.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/71/Ar20.png",
+    "updatedAt": "2026-05-11T16:21:22.634Z"
+  },
+  "ar22": {
+    "image": "/img/weapons/wiki/ar22.png",
+    "wikiName": "AK-47",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar22.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/78/Ar22.png",
+    "updatedAt": "2026-05-11T16:21:25.798Z"
+  },
+  "ar24": {
+    "image": "/img/weapons/wiki/ar24.png",
+    "wikiName": "IMBEL IA2",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar24.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/46/Ar24.png",
+    "updatedAt": "2026-05-11T16:21:28.909Z"
+  },
+  "ar25": {
+    "image": "/img/weapons/wiki/ar25.png",
+    "wikiName": "Enfield L85A2 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar25.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/74/Ar25.png",
+    "updatedAt": "2026-05-11T16:21:32.057Z"
+  },
+  "ar26": {
+    "image": "/img/weapons/wiki/ar26.png",
+    "wikiName": "MSBS Radon",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar26.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/fd/Ar26.png",
+    "updatedAt": "2026-05-11T16:21:35.226Z"
+  },
+  "ar27": {
+    "image": "/img/weapons/wiki/ar27.png",
+    "wikiName": "Beretta ARX160",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar27.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f6/Ar27.png",
+    "updatedAt": "2026-05-11T16:21:38.324Z"
+  },
+  "ar28": {
+    "image": "/img/weapons/wiki/ar28.png",
+    "wikiName": "SAI GRY AR-15",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar28.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/da/Ar28.png",
+    "updatedAt": "2026-05-11T16:21:41.459Z"
+  },
+  "ar30": {
+    "image": "/img/weapons/wiki/ar30.png",
+    "wikiName": "FN FAL DSA-58",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar30.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/81/Ar30.png",
+    "updatedAt": "2026-05-11T16:21:44.575Z"
+  },
+  "ar31": {
+    "image": "/img/weapons/wiki/ar31.png",
+    "wikiName": "Special scope for VHS-2",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar31.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7f/Ar31.png",
+    "updatedAt": "2026-05-11T16:21:47.725Z"
+  },
+  "ar32": {
+    "image": "/img/weapons/wiki/ar32.png",
+    "wikiName": "Hera Arms CQR",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar32.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/30/Ar32.png",
+    "updatedAt": "2026-05-11T16:21:50.847Z"
+  },
+  "ar33": {
+    "image": "/img/weapons/wiki/ar33.png",
+    "wikiName": "HCAR",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar33.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/ce/Ar33.png",
+    "updatedAt": "2026-05-11T16:21:53.974Z"
+  },
+  "ar35": {
+    "image": "/img/weapons/wiki/ar35.png",
+    "wikiName": "AK-12",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar35.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/c5/Ar35.png",
+    "updatedAt": "2026-05-11T16:21:57.143Z"
+  },
+  "ar36": {
+    "image": "/img/weapons/wiki/ar36.png",
+    "wikiName": "F90 MBR",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar36.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/88/Ar36.png",
+    "updatedAt": "2026-05-11T16:22:00.274Z"
+  },
+  "ar41": {
+    "image": "/img/weapons/wiki/ar41.png",
+    "wikiName": "Sturmgewehr 44",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar41.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/c3/Ar41.png",
+    "updatedAt": "2026-05-11T16:22:03.742Z"
+  },
+  "ar43": {
+    "image": "/img/weapons/wiki/ar43.png",
+    "wikiName": "AN-94 Abakan",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar43.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/0f/Ar43.png",
+    "updatedAt": "2026-05-11T16:22:06.879Z"
+  },
+  "ar44": {
+    "image": "/img/weapons/wiki/ar44.png",
+    "wikiName": "HCAR Auto",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar44.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/de/Ar44.png",
+    "updatedAt": "2026-05-11T16:22:10.104Z"
+  },
+  "ar45": {
+    "image": "/img/weapons/wiki/ar45.png",
+    "wikiName": "IWI Carmel",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar45.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/69/Ar45.png",
+    "updatedAt": "2026-05-11T16:22:13.240Z"
+  },
+  "ar46": {
+    "image": "/img/weapons/wiki/ar46.png",
+    "wikiName": "AK-15 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar46.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/60/Ar46.png",
+    "updatedAt": "2026-05-11T16:22:16.369Z"
+  },
+  "ar47": {
+    "image": "/img/weapons/wiki/ar47.png",
+    "wikiName": "M4A1 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar47.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5b/Ar47.png",
+    "updatedAt": "2026-05-11T16:22:19.767Z"
+  },
+  "ar48": {
+    "image": "/img/weapons/wiki/ar48.png",
+    "wikiName": "KAC PDW",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar48.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e2/Ar48.png",
+    "updatedAt": "2026-05-11T16:22:22.915Z"
+  },
+  "ar49": {
+    "image": "/img/weapons/wiki/ar49.png",
+    "wikiName": "OTs-14 Groza",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar49.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/76/Ar49.png",
+    "updatedAt": "2026-05-11T16:22:26.044Z"
+  },
+  "ar50": {
+    "image": "/img/weapons/wiki/ar50.png",
+    "wikiName": "MSBS Radon Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar50.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/c2/Ar50.png",
+    "updatedAt": "2026-05-11T16:22:29.257Z"
+  },
+  "ar51": {
+    "image": "/img/weapons/wiki/ar51.png",
+    "wikiName": "AS Val Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar51.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e0/Ar51.png",
+    "updatedAt": "2026-05-11T16:22:32.369Z"
+  },
+  "ar52": {
+    "image": "/img/weapons/wiki/ar52.png",
+    "wikiName": "IMI Galil AR Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar52.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5a/Ar52.png",
+    "updatedAt": "2026-05-11T16:22:35.487Z"
+  },
+  "ar53": {
+    "image": "/img/weapons/wiki/ar53.png",
+    "wikiName": "IWI Galil ACE Gen II Rifle",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar53.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f8/Ar53.png",
+    "updatedAt": "2026-05-11T16:22:38.892Z"
+  },
+  "ar54": {
+    "image": "/img/weapons/wiki/ar54.png",
+    "wikiName": "IMBEL IA2 Assault",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar54.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2b/Ar54.png",
+    "updatedAt": "2026-05-11T16:22:42.049Z"
+  },
+  "ar55": {
+    "image": "/img/weapons/wiki/ar55.png",
+    "wikiName": "IWI Galil ACE Gen II Rifle",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar55.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/46/Ar55.png",
+    "updatedAt": "2026-05-11T16:22:45.442Z"
+  },
+  "ar56": {
+    "image": "/img/weapons/wiki/ar56.png",
+    "wikiName": "H&K G36 Assault",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar56.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/0a/Ar56.png",
+    "updatedAt": "2026-05-11T16:22:48.804Z"
+  },
+  "ar57": {
+    "image": "/img/weapons/wiki/ar57.png",
+    "wikiName": "SA Hellion",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar57.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/01/Ar57.png",
+    "updatedAt": "2026-05-11T16:22:52.219Z"
+  },
+  "ar58": {
+    "image": "/img/weapons/wiki/ar58.png",
+    "wikiName": "HK433",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar58.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/dc/Ar58.png",
+    "updatedAt": "2026-05-11T16:22:55.616Z"
+  },
+  "ar59": {
+    "image": "/img/weapons/wiki/ar59.png",
+    "wikiName": "STK CMCR",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar59.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6c/Ar59.png",
+    "updatedAt": "2026-05-11T16:22:58.846Z"
+  },
+  "ar60": {
+    "image": "/img/weapons/wiki/ar60.png",
+    "wikiName": "QBZ-191",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar60.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/37/Ar60.png",
+    "updatedAt": "2026-05-11T16:23:02.121Z"
+  },
+  "ar61": {
+    "image": "/img/weapons/wiki/ar61.png",
+    "wikiName": "MRAR-556",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar61.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/0f/Ar61.png",
+    "updatedAt": "2026-05-11T16:23:05.309Z"
+  },
+  "ar62": {
+    "image": "/img/weapons/wiki/ar62.png",
+    "wikiName": "A-545",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar62.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2a/Ar62.png",
+    "updatedAt": "2026-05-11T16:23:08.409Z"
+  },
+  "hmg01": {
+    "image": "/img/weapons/wiki/hmg01.png",
+    "wikiName": "KAC Chainsaw",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Hmg01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6d/Hmg01.png",
+    "updatedAt": "2026-05-11T16:23:11.019Z"
+  },
+  "hmg02": {
+    "image": "/img/weapons/wiki/hmg02.png",
+    "wikiName": "XM556 Microgun",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Hmg02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/d0/Hmg02.png",
+    "updatedAt": "2026-05-11T16:23:13.956Z"
+  },
+  "kn00002": {
+    "image": "/img/weapons/wiki/kn00002.png",
+    "wikiName": "Kunai Knife",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn00002.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a0/Kn00002.png",
+    "updatedAt": "2026-05-11T16:23:16.724Z"
+  },
+  "kn00003": {
+    "image": "/img/weapons/wiki/kn00003.png",
+    "wikiName": "Corrupt Kiridashi Knife",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn00003.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f5/Kn00003.png",
+    "updatedAt": "2026-05-11T16:23:19.632Z"
+  },
+  "kn00004": {
+    "image": "/img/weapons/wiki/kn00004.png",
+    "wikiName": "Switchblade",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn00004.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/eb/Kn00004.png",
+    "updatedAt": "2026-05-11T16:23:22.814Z"
+  },
+  "kn01": {
+    "image": "/img/weapons/wiki/kn01.png",
+    "wikiName": "Executor knife",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/18/Kn01.png",
+    "updatedAt": "2026-05-11T16:23:25.962Z"
+  },
+  "kn02": {
+    "image": "/img/weapons/wiki/kn02.png",
+    "wikiName": "Ultra Marine",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/3d/Kn02.png",
+    "updatedAt": "2026-05-11T16:23:29.129Z"
+  },
+  "kn03": {
+    "image": "/img/weapons/wiki/kn03.png",
+    "wikiName": "Black Hawk",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/71/Kn03.png",
+    "updatedAt": "2026-05-11T16:23:32.006Z"
+  },
+  "kn04": {
+    "image": "/img/weapons/wiki/kn04.png",
+    "wikiName": "Army Knife",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/9d/Kn04.png",
+    "updatedAt": "2026-05-11T16:23:35.140Z"
+  },
+  "kn05": {
+    "image": "/img/weapons/wiki/kn05.png",
+    "wikiName": "Sapper shovel",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn05.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/81/Kn05.png",
+    "updatedAt": "2026-05-11T16:23:38.239Z"
+  },
+  "kn06": {
+    "image": "/img/weapons/wiki/kn06.png",
+    "wikiName": "KA-BAR Utility Knife",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn06.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/ed/Kn06.png",
+    "updatedAt": "2026-05-11T16:23:41.346Z"
+  },
+  "kn07": {
+    "image": "/img/weapons/wiki/kn07.png",
+    "wikiName": "KA-BAR Kukri Machete",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn07.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2f/Kn07.png",
+    "updatedAt": "2026-05-11T16:23:44.527Z"
+  },
+  "kn10": {
+    "image": "/img/weapons/wiki/kn10.png",
+    "wikiName": "S&W Survival Tanto Blade",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn10.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/3e/Kn10.png",
+    "updatedAt": "2026-05-11T16:23:53.326Z"
+  },
+  "kn13": {
+    "image": "/img/weapons/wiki/kn13.png",
+    "wikiName": "Katana",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn13.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/bf/Kn13.png",
+    "updatedAt": "2026-05-11T16:23:56.572Z"
+  },
+  "kn14": {
+    "image": "/img/weapons/wiki/kn14.png",
+    "wikiName": "ICE-AXE",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn14.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5e/Kn14.png",
+    "updatedAt": "2026-05-11T16:23:59.743Z"
+  },
+  "kn15": {
+    "image": "/img/weapons/wiki/kn15.png",
+    "wikiName": "Cleaver",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn15.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/73/Kn15.png",
+    "updatedAt": "2026-05-11T16:24:02.953Z"
+  },
+  "kn16": {
+    "image": "/img/weapons/wiki/kn16.png",
+    "wikiName": "Tactical Axe",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn16.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/8d/Kn16.png",
+    "updatedAt": "2026-05-11T16:24:06.070Z"
+  },
+  "kn17": {
+    "image": "/img/weapons/wiki/kn17.png",
+    "wikiName": "Jagdkommando",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn17.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/c5/Kn17.png",
+    "updatedAt": "2026-05-11T16:24:08.945Z"
+  },
+  "kn18": {
+    "image": "/img/weapons/wiki/kn18.png",
+    "wikiName": "M48 Bowie Knife",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn18.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/31/Kn18.png",
+    "updatedAt": "2026-05-11T16:24:12.087Z"
+  },
+  "kn19": {
+    "image": "/img/weapons/wiki/kn19.png",
+    "wikiName": "Balisong Knife",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn19.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7b/Kn19.png",
+    "updatedAt": "2026-05-11T16:24:14.940Z"
+  },
+  "kn20": {
+    "image": "/img/weapons/wiki/kn20.png",
+    "wikiName": "Magic Wand",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn20.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/df/Kn20.png",
+    "updatedAt": "2026-05-11T16:24:17.593Z"
+  },
+  "kn200": {
+    "image": "/img/weapons/wiki/kn200.png",
+    "wikiName": "Khopesh",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn200.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/d8/Kn200.png",
+    "updatedAt": "2026-05-11T16:24:20.725Z"
+  },
+  "kn201": {
+    "image": "/img/weapons/wiki/kn201.png",
+    "wikiName": "Flamethrower Machete",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn201.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/32/Kn201.png",
+    "updatedAt": "2026-05-11T16:24:23.662Z"
+  },
+  "kn202": {
+    "image": "/img/weapons/wiki/kn202.png",
+    "wikiName": "Chainsaw Machete",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn202.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a4/Kn202.png",
+    "updatedAt": "2026-05-11T16:24:26.536Z"
+  },
+  "kn22": {
+    "image": "/img/weapons/wiki/kn22.png",
+    "wikiName": "HX Outdoors Trident",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn22.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e4/Kn22.png",
+    "updatedAt": "2026-05-11T16:24:29.675Z"
+  },
+  "kn23": {
+    "image": "/img/weapons/wiki/kn23.png",
+    "wikiName": "Toy Hammer",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn23.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/60/Kn23.png",
+    "updatedAt": "2026-05-11T16:24:32.304Z"
+  },
+  "kn45": {
+    "image": "/img/weapons/wiki/kn45.png",
+    "wikiName": "Karambit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn45.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/62/Kn45.png",
+    "updatedAt": "2026-05-11T16:24:35.421Z"
+  },
+  "kn47": {
+    "image": "/img/weapons/wiki/kn47.png",
+    "wikiName": "Barbed Wire Bat",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn47_plank_console.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/ca/Kn47_plank_console.png",
+    "updatedAt": "2026-05-11T16:24:39.591Z"
+  },
+  "kn48": {
+    "image": "/img/weapons/wiki/kn48.png",
+    "wikiName": "Reinforced Bat",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn48_planka_console.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/73/Kn48_planka_console.png",
+    "updatedAt": "2026-05-11T16:24:43.761Z"
+  },
+  "kn49": {
+    "image": "/img/weapons/wiki/kn49.png",
+    "wikiName": "Metal Bat",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn49_glo01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e8/Kn49_glo01.png",
+    "updatedAt": "2026-05-11T16:24:47.971Z"
+  },
+  "kn50": {
+    "image": "/img/weapons/wiki/kn50.png",
+    "wikiName": "Hidden War Kiridashi Knife",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn50_console.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/9b/Kn50_console.png",
+    "updatedAt": "2026-05-11T16:24:52.635Z"
+  },
+  "kn54": {
+    "image": "/img/weapons/wiki/kn54.png",
+    "wikiName": "Hunting Knife",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn54.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/db/Kn54.png",
+    "updatedAt": "2026-05-11T16:24:55.762Z"
+  },
+  "kn55": {
+    "image": "/img/weapons/wiki/kn55.png",
+    "wikiName": "Push Daggers",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn55.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/50/Kn55.png",
+    "updatedAt": "2026-05-11T16:24:59.152Z"
+  },
+  "kn56": {
+    "image": "/img/weapons/wiki/kn56.png",
+    "wikiName": "Scout Knife",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Kn56.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e7/Kn56.png",
+    "updatedAt": "2026-05-11T16:25:02.290Z"
+  },
+  "mg01": {
+    "image": "/img/weapons/wiki/mg01.png",
+    "wikiName": "M240B",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6b/Mg01.png",
+    "updatedAt": "2026-05-11T16:25:05.407Z"
+  },
+  "mg02": {
+    "image": "/img/weapons/wiki/mg02.png",
+    "wikiName": "MG4",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6b/Mg02.png",
+    "updatedAt": "2026-05-11T16:25:08.514Z"
+  },
+  "mg03": {
+    "image": "/img/weapons/wiki/mg03.png",
+    "wikiName": "Daewoo K3",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/0f/Mg03.png",
+    "updatedAt": "2026-05-11T16:25:11.823Z"
+  },
+  "mg04": {
+    "image": "/img/weapons/wiki/mg04.png",
+    "wikiName": "RPK",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/16/Mg04.png",
+    "updatedAt": "2026-05-11T16:25:14.958Z"
+  },
+  "mg05": {
+    "image": "/img/weapons/wiki/mg05.png",
+    "wikiName": "XM8 LMG",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg05.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/eb/Mg05.png",
+    "updatedAt": "2026-05-11T16:25:18.077Z"
+  },
+  "mg06": {
+    "image": "/img/weapons/wiki/mg06.png",
+    "wikiName": "H&K MG36",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg06.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2a/Mg06.png",
+    "updatedAt": "2026-05-11T16:25:21.201Z"
+  },
+  "mg07": {
+    "image": "/img/weapons/wiki/mg07.png",
+    "wikiName": "M249 Para",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg07.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/54/Mg07.png",
+    "updatedAt": "2026-05-11T16:25:24.312Z"
+  },
+  "mg08": {
+    "image": "/img/weapons/wiki/mg08.png",
+    "wikiName": "AUG A3 H_bar",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg08.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/dc/Mg08.png",
+    "updatedAt": "2026-05-11T16:25:27.581Z"
+  },
+  "mg09": {
+    "image": "/img/weapons/wiki/mg09.png",
+    "wikiName": "MG3",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg09.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/4c/Mg09.png",
+    "updatedAt": "2026-05-11T16:25:30.746Z"
+  },
+  "mg12": {
+    "image": "/img/weapons/wiki/mg12.png",
+    "wikiName": "M60E4",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg12.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/4c/Mg12.png",
+    "updatedAt": "2026-05-11T16:25:40.242Z"
+  },
+  "mg18": {
+    "image": "/img/weapons/wiki/mg18.png",
+    "wikiName": "M240B",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/M240B",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6b/Mg01.png",
+    "updatedAt": "2026-05-11T16:26:02.096Z"
+  },
+  "mg19": {
+    "image": "/img/weapons/wiki/mg19.png",
+    "wikiName": "H&K MG4",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/H%26K_MG4",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6b/Mg02.png",
+    "updatedAt": "2026-05-11T16:26:08.035Z"
+  },
+  "mg21": {
+    "image": "/img/weapons/wiki/mg21.png",
+    "wikiName": "M16A2 LMG",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg21.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f3/Mg21.png",
+    "updatedAt": "2026-05-11T16:26:14.345Z"
+  },
+  "ar01_steam01": {
+    "image": "/img/weapons/wiki/ar01_steam01.png",
+    "wikiName": "Tavor TAR-21 Steam set",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar01_steam01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/d5/Ar01_steam01.png",
+    "updatedAt": "2026-05-11T16:27:17.281Z"
+  },
+  "ar00003_sc01": {
+    "image": "/img/weapons/wiki/ar00003_sc01.png",
+    "wikiName": "FN SCAR-H Special Silencer",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar00003_sc01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/03/Ar00003_sc01.png",
+    "updatedAt": "2026-05-11T16:27:17.288Z"
+  },
+  "ar01_bra01": {
+    "image": "/img/weapons/wiki/ar01_bra01.png",
+    "wikiName": "Tavor TAR-21 Brazilian World Cup",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar01_bra01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e1/Ar01_bra01.png",
+    "updatedAt": "2026-05-11T16:27:17.319Z"
+  },
+  "ar00003_valkyrie00001": {
+    "image": "/img/weapons/wiki/ar00003_valkyrie00001.png",
+    "wikiName": "Valkyrie FN SCAR-H Special",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar00003_valkyrie00001.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6d/Ar00003_valkyrie00001.png",
+    "updatedAt": "2026-05-11T16:27:17.567Z"
+  },
+  "ar00003_gp_d": {
+    "image": "/img/weapons/wiki/ar00003_gp_d.png",
+    "wikiName": "FN SCAR-H Special Grip",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar00003_sc01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/03/Ar00003_sc01.png",
+    "updatedAt": "2026-05-11T16:27:19.634Z"
+  },
+  "ar00001_card": {
+    "image": "/img/weapons/wiki/ar00001_card.png",
+    "wikiName": "Pharaoh Galil AR Special Card",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar00001.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7c/Ar00001.png",
+    "updatedAt": "2026-05-11T16:27:19.761Z"
+  },
+  "ar00002_card": {
+    "image": "/img/weapons/wiki/ar00002_card.png",
+    "wikiName": "AK-47 Custom Card",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar00002.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a0/Ar00002.png",
+    "updatedAt": "2026-05-11T16:27:19.802Z"
+  },
+  "ar01_bra01skin": {
+    "image": "/img/weapons/wiki/ar01_bra01skin.png",
+    "wikiName": "Carnival Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e2/Ar01.png",
+    "updatedAt": "2026-05-11T16:27:19.910Z"
+  },
+  "ar01_camo03skin": {
+    "image": "/img/weapons/wiki/ar01_camo03skin.png",
+    "wikiName": "Jungle Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e2/Ar01.png",
+    "updatedAt": "2026-05-11T16:27:19.943Z"
+  },
+  "ar01_camo06skin": {
+    "image": "/img/weapons/wiki/ar01_camo06skin.png",
+    "wikiName": "Desert Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e2/Ar01.png",
+    "updatedAt": "2026-05-11T16:27:19.994Z"
+  },
+  "ar02_camo02": {
+    "image": "/img/weapons/wiki/ar02_camo02.png",
+    "wikiName": "M4A1 Winter Camo",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar02_camo02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/60/Ar02_camo02.png",
+    "updatedAt": "2026-05-11T16:27:20.432Z"
+  },
+  "ar02_eua01": {
+    "image": "/img/weapons/wiki/ar02_eua01.png",
+    "wikiName": "M4A1 Anniversary",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar02_eua01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/c2/Ar02_eua01.png",
+    "updatedAt": "2026-05-11T16:27:20.471Z"
+  },
+  "ar02_camo07": {
+    "image": "/img/weapons/wiki/ar02_camo07.png",
+    "wikiName": "M4A1 U.S. set",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar02_camo07.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/45/Ar02_camo07.png",
+    "updatedAt": "2026-05-11T16:27:20.663Z"
+  },
+  "ar02_camo07skin": {
+    "image": "/img/weapons/wiki/ar02_camo07skin.png",
+    "wikiName": "Wilderness Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/74/Ar02.png",
+    "updatedAt": "2026-05-11T16:27:22.602Z"
+  },
+  "ar02_set01": {
+    "image": "/img/weapons/wiki/ar02_set01.png",
+    "wikiName": "M4A1 Basic",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar02_set01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/3f/Ar02_set01.png",
+    "updatedAt": "2026-05-11T16:27:22.617Z"
+  },
+  "ar02_winter01_console": {
+    "image": "/img/weapons/wiki/ar02_winter01_console.png",
+    "wikiName": "Hidden War M4A1 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar02_winter01_console.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/14/Ar02_winter01_console.png",
+    "updatedAt": "2026-05-11T16:27:22.996Z"
+  },
+  "ar02_gp_d": {
+    "image": "/img/weapons/wiki/ar02_gp_d.png",
+    "wikiName": "Default Grip",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/74/Ar02.png",
+    "updatedAt": "2026-05-11T16:27:23.260Z"
+  },
+  "ar02_set01skin": {
+    "image": "/img/weapons/wiki/ar02_set01skin.png",
+    "wikiName": "Urban Warfare Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/74/Ar02.png",
+    "updatedAt": "2026-05-11T16:27:23.413Z"
+  },
+  "ar02_winter01_console_card": {
+    "image": "/img/weapons/wiki/ar02_winter01_console_card.png",
+    "wikiName": "Hidden War M4A1 Custom Card",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/74/Ar02.png",
+    "updatedAt": "2026-05-11T16:27:23.854Z"
+  },
+  "ar03_auto_test": {
+    "image": "/img/weapons/wiki/ar03_auto_test.png",
+    "wikiName": "Auto test weapon",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6f/Ar03.png",
+    "updatedAt": "2026-05-11T16:27:25.453Z"
+  },
+  "ar03_test": {
+    "image": "/img/weapons/wiki/ar03_test.png",
+    "wikiName": "Test weapon",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6f/Ar03.png",
+    "updatedAt": "2026-05-11T16:27:26.086Z"
+  },
+  "ar04_afro01": {
+    "image": "/img/weapons/wiki/ar04_afro01.png",
+    "wikiName": "Anubis Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04_afro01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/b1/Ar04_afro01.png",
+    "updatedAt": "2026-05-11T16:27:25.817Z"
+  },
+  "ar03_camo06skin": {
+    "image": "/img/weapons/wiki/ar03_camo06skin.png",
+    "wikiName": "Desert Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6f/Ar03.png",
+    "updatedAt": "2026-05-11T16:27:25.865Z"
+  },
+  "ar03_camo03skin": {
+    "image": "/img/weapons/wiki/ar03_camo03skin.png",
+    "wikiName": "Jungle Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6f/Ar03.png",
+    "updatedAt": "2026-05-11T16:27:25.877Z"
+  },
+  "ar03_test_unrepairable": {
+    "image": "/img/weapons/wiki/ar03_test_unrepairable.png",
+    "wikiName": "Test unrepairable weapon",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6f/Ar03.png",
+    "updatedAt": "2026-05-11T16:27:26.496Z"
+  },
+  "ar04_bra03": {
+    "image": "/img/weapons/wiki/ar04_bra03.png",
+    "wikiName": "BRA Anniversary Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04_bra03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/8d/Ar04_bra03.png",
+    "updatedAt": "2026-05-11T16:27:26.562Z"
+  },
+  "ar04_camo04": {
+    "image": "/img/weapons/wiki/ar04_camo04.png",
+    "wikiName": "AK-103 City",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04_camo04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5c/Ar04_camo04.png",
+    "updatedAt": "2026-05-11T16:27:26.710Z"
+  },
+  "ar04_camo05": {
+    "image": "/img/weapons/wiki/ar04_camo05.png",
+    "wikiName": "АK-103 Shiny metal set",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04_camo05.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/b5/Ar04_camo05.png",
+    "updatedAt": "2026-05-11T16:27:28.285Z"
+  },
+  "ar04_rua02": {
+    "image": "/img/weapons/wiki/ar04_rua02.png",
+    "wikiName": "RU Anniversary",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04_rua02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a8/Ar04_rua02.png",
+    "updatedAt": "2026-05-11T16:27:28.455Z"
+  },
+  "ar04_anubis": {
+    "image": "/img/weapons/wiki/ar04_anubis.png",
+    "wikiName": "Anubis AK-103",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7f/Ar04.png",
+    "updatedAt": "2026-05-11T16:27:28.654Z"
+  },
+  "ar04_samurai02": {
+    "image": "/img/weapons/wiki/ar04_samurai02.png",
+    "wikiName": "Samurai AK-103",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04_samurai02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/10/Ar04_samurai02.png",
+    "updatedAt": "2026-05-11T16:27:28.712Z"
+  },
+  "ar04_camo04skin": {
+    "image": "/img/weapons/wiki/ar04_camo04skin.png",
+    "wikiName": "Urban Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7f/Ar04.png",
+    "updatedAt": "2026-05-11T16:27:29.290Z"
+  },
+  "ar04_set01": {
+    "image": "/img/weapons/wiki/ar04_set01.png",
+    "wikiName": "AK-103 Basic",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04_set01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/24/Ar04_set01.png",
+    "updatedAt": "2026-05-11T16:27:29.377Z"
+  },
+  "ar04_set01skin": {
+    "image": "/img/weapons/wiki/ar04_set01skin.png",
+    "wikiName": "Urban Warfare Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04_set01skin.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/79/Ar04_set01skin.png",
+    "updatedAt": "2026-05-11T16:27:29.449Z"
+  },
+  "ar04_viet01": {
+    "image": "/img/weapons/wiki/ar04_viet01.png",
+    "wikiName": "Lake Bird Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04_viet01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/cb/Ar04_viet01.png",
+    "updatedAt": "2026-05-11T16:27:29.553Z"
+  },
+  "ar04_camo05skin": {
+    "image": "/img/weapons/wiki/ar04_camo05skin.png",
+    "wikiName": "Polished Metal Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7f/Ar04.png",
+    "updatedAt": "2026-05-11T16:27:29.653Z"
+  },
+  "ar04_samurai02skin": {
+    "image": "/img/weapons/wiki/ar04_samurai02skin.png",
+    "wikiName": "Samurai Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7f/Ar04.png",
+    "updatedAt": "2026-05-11T16:27:29.983Z"
+  },
+  "ar05_joker01": {
+    "image": "/img/weapons/wiki/ar05_joker01.png",
+    "wikiName": "Joker XM8",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar05_joker01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/ce/Ar05_joker01.png",
+    "updatedAt": "2026-05-11T16:27:31.584Z"
+  },
+  "ar04_xmas02": {
+    "image": "/img/weapons/wiki/ar04_xmas02.png",
+    "wikiName": "AK-103 Evil Santa",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04_xmas02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7b/Ar04_xmas02.png",
+    "updatedAt": "2026-05-11T16:27:31.762Z"
+  },
+  "ar04_viet02": {
+    "image": "/img/weapons/wiki/ar04_viet02.png",
+    "wikiName": "Lake Bird AK-103",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7f/Ar04.png",
+    "updatedAt": "2026-05-11T16:27:32.176Z"
+  },
+  "ar06_camo03": {
+    "image": "/img/weapons/wiki/ar06_camo03.png",
+    "wikiName": "H&K G36K Jungle",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar06_camo03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/37/Ar06_camo03.png",
+    "updatedAt": "2026-05-11T16:27:32.249Z"
+  },
+  "ar04_west03": {
+    "image": "/img/weapons/wiki/ar04_west03.png",
+    "wikiName": "3rd Anniversary Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7f/Ar04.png",
+    "updatedAt": "2026-05-11T16:27:32.341Z"
+  },
+  "ar05_joker01skin": {
+    "image": "/img/weapons/wiki/ar05_joker01skin.png",
+    "wikiName": "Joker Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar05.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/84/Ar05.png",
+    "updatedAt": "2026-05-11T16:27:34.742Z"
+  },
+  "ar06_camo03skin": {
+    "image": "/img/weapons/wiki/ar06_camo03skin.png",
+    "wikiName": "Jungle Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar06.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5e/Ar06.png",
+    "updatedAt": "2026-05-11T16:27:34.878Z"
+  },
+  "ar06_hlw01": {
+    "image": "/img/weapons/wiki/ar06_hlw01.png",
+    "wikiName": "H&K G36K",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar06_hlw01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f7/Ar06_hlw01.png",
+    "updatedAt": "2026-05-11T16:27:37.809Z"
+  },
+  "ar08_camo07": {
+    "image": "/img/weapons/wiki/ar08_camo07.png",
+    "wikiName": "Wilderness Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar08_camo07.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6d/Ar08_camo07.png",
+    "updatedAt": "2026-05-11T16:27:37.813Z"
+  },
+  "ar08_camo03": {
+    "image": "/img/weapons/wiki/ar08_camo03.png",
+    "wikiName": "Jungle Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar08_camo03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2c/Ar08_camo03.png",
+    "updatedAt": "2026-05-11T16:27:37.843Z"
+  },
+  "ar08_camo04": {
+    "image": "/img/weapons/wiki/ar08_camo04.png",
+    "wikiName": "Urban Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar08_camo04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/0c/Ar08_camo04.png",
+    "updatedAt": "2026-05-11T16:27:37.868Z"
+  },
+  "ar08_set01": {
+    "image": "/img/weapons/wiki/ar08_set01.png",
+    "wikiName": "Urban Warfare Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar08_set01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/8a/Ar08_set01.png",
+    "updatedAt": "2026-05-11T16:27:37.896Z"
+  },
+  "ar08_camo06": {
+    "image": "/img/weapons/wiki/ar08_camo06.png",
+    "wikiName": "Desert Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar08_camo06.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/c5/Ar08_camo06.png",
+    "updatedAt": "2026-05-11T16:27:37.920Z"
+  },
+  "ar08_clr01": {
+    "image": "/img/weapons/wiki/ar08_clr01.png",
+    "wikiName": "Navy Blue Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar08_clr01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/52/Ar08_clr01.png",
+    "updatedAt": "2026-05-11T16:27:37.947Z"
+  },
+  "ar07_camo02": {
+    "image": "/img/weapons/wiki/ar07_camo02.png",
+    "wikiName": "CALICO M955A Winter Camo",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar07_camo02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/da/Ar07_camo02.png",
+    "updatedAt": "2026-05-11T16:27:38.077Z"
+  },
+  "ar09_kra01": {
+    "image": "/img/weapons/wiki/ar09_kra01.png",
+    "wikiName": "Daewoo K2 Korea Anniversary",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar09_kra01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/9a/Ar09_kra01.png",
+    "updatedAt": "2026-05-11T16:27:38.146Z"
+  },
+  "ar09_kra01skin": {
+    "image": "/img/weapons/wiki/ar09_kra01skin.png",
+    "wikiName": "Korea Anniversary Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar09.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/29/Ar09.png",
+    "updatedAt": "2026-05-11T16:27:40.346Z"
+  },
+  "ar10_set02": {
+    "image": "/img/weapons/wiki/ar10_set02.png",
+    "wikiName": "FN F2000 Black Dragon",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar10_set02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/30/Ar10_set02.png",
+    "updatedAt": "2026-05-11T16:27:40.710Z"
+  },
+  "ar10_set03": {
+    "image": "/img/weapons/wiki/ar10_set03.png",
+    "wikiName": "FN F2000 Jade Dragon",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar10_set03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/15/Ar10_set03.png",
+    "updatedAt": "2026-05-11T16:27:40.777Z"
+  },
+  "ar10_set04": {
+    "image": "/img/weapons/wiki/ar10_set04.png",
+    "wikiName": "FN F2000 Scarlet Dragon",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar10_set04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a5/Ar10_set04.png",
+    "updatedAt": "2026-05-11T16:27:40.814Z"
+  },
+  "ar11_25rating03": {
+    "image": "/img/weapons/wiki/ar11_25rating03.png",
+    "wikiName": "\"Football\" FN SCAR-H",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11_25rating03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/3a/Ar11_25rating03.png",
+    "updatedAt": "2026-05-11T16:27:41.091Z"
+  },
+  "ar10_set04skin": {
+    "image": "/img/weapons/wiki/ar10_set04skin.png",
+    "wikiName": "Scarlet Dragon Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar10.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e5/Ar10.png",
+    "updatedAt": "2026-05-11T16:27:43.394Z"
+  },
+  "ar10_set03skin": {
+    "image": "/img/weapons/wiki/ar10_set03skin.png",
+    "wikiName": "Jade Dragon Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar10.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e5/Ar10.png",
+    "updatedAt": "2026-05-11T16:27:43.423Z"
+  },
+  "ar11_25rating03_kill": {
+    "image": "/img/weapons/wiki/ar11_25rating03_kill.png",
+    "wikiName": "\"Football\" FN SCAR-H",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5b/Ar11.png",
+    "updatedAt": "2026-05-11T16:27:43.554Z"
+  },
+  "ar11_25rating03_skin": {
+    "image": "/img/weapons/wiki/ar11_25rating03_skin.png",
+    "wikiName": "\"Football\" Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5b/Ar11.png",
+    "updatedAt": "2026-05-11T16:27:43.602Z"
+  },
+  "ar11_bp09": {
+    "image": "/img/weapons/wiki/ar11_bp09.png",
+    "wikiName": "Gorgona FN SCAR-H",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11_bp09.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/de/Ar11_bp09.png",
+    "updatedAt": "2026-05-11T16:27:43.652Z"
+  },
+  "ar10_set02skin": {
+    "image": "/img/weapons/wiki/ar10_set02skin.png",
+    "wikiName": "Black Dragon Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar10.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e5/Ar10.png",
+    "updatedAt": "2026-05-11T16:27:43.860Z"
+  },
+  "ar11_anniversary23": {
+    "image": "/img/weapons/wiki/ar11_anniversary23.png",
+    "wikiName": "Shark FN SCAR-H",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11_anniversary23.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/41/Ar11_anniversary23.png",
+    "updatedAt": "2026-05-11T16:27:44.011Z"
+  },
+  "ar11_anniversary23_kill": {
+    "image": "/img/weapons/wiki/ar11_anniversary23_kill.png",
+    "wikiName": "Shark FN SCAR-H",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5b/Ar11.png",
+    "updatedAt": "2026-05-11T16:27:44.559Z"
+  },
+  "ar11_anniversary23_skin": {
+    "image": "/img/weapons/wiki/ar11_anniversary23_skin.png",
+    "wikiName": "Shark Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5b/Ar11.png",
+    "updatedAt": "2026-05-11T16:27:44.654Z"
+  },
+  "ar11_bp09skin": {
+    "image": "/img/weapons/wiki/ar11_bp09skin.png",
+    "wikiName": "Gorgona Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5b/Ar11.png",
+    "updatedAt": "2026-05-11T16:27:45.042Z"
+  },
+  "ar11_crown02": {
+    "image": "/img/weapons/wiki/ar11_crown02.png",
+    "wikiName": "FN SCAR-H Crown",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11_crown02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f6/Ar11_crown02.png",
+    "updatedAt": "2026-05-11T16:27:46.163Z"
+  },
+  "ar11_crown": {
+    "image": "/img/weapons/wiki/ar11_crown.png",
+    "wikiName": "FN SCAR-H Crown",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11_crown.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/05/Ar11_crown.png",
+    "updatedAt": "2026-05-11T16:27:46.267Z"
+  },
+  "ar11_bra02": {
+    "image": "/img/weapons/wiki/ar11_bra02.png",
+    "wikiName": "FN-SCAR-H BRA Anniversary",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11_bra02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/20/Ar11_bra02.png",
+    "updatedAt": "2026-05-11T16:27:46.548Z"
+  },
+  "ar11_rua01": {
+    "image": "/img/weapons/wiki/ar11_rua01.png",
+    "wikiName": "FN-SCAR-H RU Anniversary",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11_rua01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/99/Ar11_rua01.png",
+    "updatedAt": "2026-05-11T16:27:46.693Z"
+  },
+  "ar11_gc01": {
+    "image": "/img/weapons/wiki/ar11_gc01.png",
+    "wikiName": "FN-SCAR-H Gamescom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11_gc01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/84/Ar11_gc01.png",
+    "updatedAt": "2026-05-11T16:27:46.726Z"
+  },
+  "ar11_gold01": {
+    "image": "/img/weapons/wiki/ar11_gold01.png",
+    "wikiName": "Gold FN SCAR-H",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11_gold01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2b/Ar11_gold01.png",
+    "updatedAt": "2026-05-11T16:27:46.757Z"
+  },
+  "ar11_zsd02": {
+    "image": "/img/weapons/wiki/ar11_zsd02.png",
+    "wikiName": "Cyber Slayer FN SCAR-H",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar11_zsd02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/59/Ar11_zsd02.png",
+    "updatedAt": "2026-05-11T16:27:46.877Z"
+  },
+  "ar12_bp07": {
+    "image": "/img/weapons/wiki/ar12_bp07.png",
+    "wikiName": "Rune M16A3",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12_bp07.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/86/Ar12_bp07.png",
+    "updatedAt": "2026-05-11T16:27:47.437Z"
+  },
+  "ar12_crown02": {
+    "image": "/img/weapons/wiki/ar12_crown02.png",
+    "wikiName": "M16A3 Custom Crown",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12_crown02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a7/Ar12_crown02.png",
+    "updatedAt": "2026-05-11T16:27:47.623Z"
+  },
+  "ar12_ec01": {
+    "image": "/img/weapons/wiki/ar12_ec01.png",
+    "wikiName": "M16A3 Custom EURO 2016",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12_ec01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/88/Ar12_ec01.png",
+    "updatedAt": "2026-05-11T16:27:48.833Z"
+  },
+  "ar12_ec03": {
+    "image": "/img/weapons/wiki/ar12_ec03.png",
+    "wikiName": "M16A3 Custom Tourney",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12_ec03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/0a/Ar12_ec03.png",
+    "updatedAt": "2026-05-11T16:27:48.878Z"
+  },
+  "ar12_oc01": {
+    "image": "/img/weapons/wiki/ar12_oc01.png",
+    "wikiName": "Hexagon Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12_oc01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/18/Ar12_oc01.png",
+    "updatedAt": "2026-05-11T16:27:49.511Z"
+  },
+  "ar12_ice01": {
+    "image": "/img/weapons/wiki/ar12_ice01.png",
+    "wikiName": "Frozen M16A3 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12_ice01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6b/Ar12_ice01.png",
+    "updatedAt": "2026-05-11T16:27:49.542Z"
+  },
+  "ar12_gold01": {
+    "image": "/img/weapons/wiki/ar12_gold01.png",
+    "wikiName": "Gold M16A3 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12_gold01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e9/Ar12_gold01.png",
+    "updatedAt": "2026-05-11T16:27:49.800Z"
+  },
+  "ar12_viet01": {
+    "image": "/img/weapons/wiki/ar12_viet01.png",
+    "wikiName": "Lake Bird Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12_viet01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/24/Ar12_viet01.png",
+    "updatedAt": "2026-05-11T16:27:50.033Z"
+  },
+  "ar12_bp07skin": {
+    "image": "/img/weapons/wiki/ar12_bp07skin.png",
+    "wikiName": "Rune skin of M16A3",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2a/Ar12.png",
+    "updatedAt": "2026-05-11T16:27:50.048Z"
+  },
+  "ar12_ec03skin": {
+    "image": "/img/weapons/wiki/ar12_ec03skin.png",
+    "wikiName": "Fiesta Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2a/Ar12.png",
+    "updatedAt": "2026-05-11T16:27:50.399Z"
+  },
+  "ar12_ice01skin": {
+    "image": "/img/weapons/wiki/ar12_ice01skin.png",
+    "wikiName": "Icebreaker Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2a/Ar12.png",
+    "updatedAt": "2026-05-11T16:27:50.598Z"
+  },
+  "ar12_viet02": {
+    "image": "/img/weapons/wiki/ar12_viet02.png",
+    "wikiName": "Lake Bird M16A3 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar12.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/2a/Ar12.png",
+    "updatedAt": "2026-05-11T16:27:51.488Z"
+  },
+  "ar13_drum_01_console": {
+    "image": "/img/weapons/wiki/ar13_drum_01_console.png",
+    "wikiName": "Famas F1 Special",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar13_drum_01_console.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f2/Ar13_drum_01_console.png",
+    "updatedAt": "2026-05-11T16:27:52.633Z"
+  },
+  "ar13_drum_01_console_meteorgold02": {
+    "image": "/img/weapons/wiki/ar13_drum_01_console_meteorgold02.png",
+    "wikiName": "Pyrite Famas F1",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar13_drum_01_console_meteorgold02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/92/Ar13_drum_01_console_meteorgold02.png",
+    "updatedAt": "2026-05-11T16:27:52.648Z"
+  },
+  "ar13_camo04skin": {
+    "image": "/img/weapons/wiki/ar13_camo04skin.png",
+    "wikiName": "Urban Skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar13.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e8/Ar13.png",
+    "updatedAt": "2026-05-11T16:27:54.287Z"
+  },
+  "ar13_drum01_card": {
+    "image": "/img/weapons/wiki/ar13_drum01_card.png",
+    "wikiName": "Famas F1 Special Card",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar13.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e8/Ar13.png",
+    "updatedAt": "2026-05-11T16:27:54.337Z"
+  },
+  "ar13_drum01_hr00001_card": {
+    "image": "/img/weapons/wiki/ar13_drum01_hr00001_card.png",
+    "wikiName": "Highwayman Famas F1 Special Card",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar13.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e8/Ar13.png",
+    "updatedAt": "2026-05-11T16:27:54.956Z"
+  },
+  "ar38_card": {
+    "image": "/img/weapons/wiki/ar38_card.png",
+    "wikiName": "Card Cobalt Kinetics EDGE",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar38.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/94/Ar38.png",
+    "updatedAt": "2026-05-11T16:30:29.323Z"
+  },
+  "shg53_card": {
+    "image": "/img/weapons/wiki/shg53_card.png",
+    "wikiName": "Card Cobalt Kinetics Typhoon F12 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shg53.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e5/Shg53.png",
+    "updatedAt": "2026-05-11T16:30:32.643Z"
+  },
+  "smg48_card": {
+    "image": "/img/weapons/wiki/smg48_card.png",
+    "wikiName": "Card Cobalt Kinetics Stealth Pistol",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Smg48.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/1e/Smg48.png",
+    "updatedAt": "2026-05-11T16:30:32.837Z"
+  },
+  "ar36_raid02_card": {
+    "image": "/img/weapons/wiki/ar36_raid02_card.png",
+    "wikiName": "Card Raid F90 MBR",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar36.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/88/Ar36.png",
+    "updatedAt": "2026-05-11T16:30:33.347Z"
+  },
+  "smg50_card": {
+    "image": "/img/weapons/wiki/smg50_card.png",
+    "wikiName": "Card M4 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Smg50.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5a/Smg50.png",
+    "updatedAt": "2026-05-11T16:30:33.480Z"
+  },
+  "smg52_card": {
+    "image": "/img/weapons/wiki/smg52_card.png",
+    "wikiName": "Card ACR CQB Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Smg52.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/b2/Smg52.png",
+    "updatedAt": "2026-05-11T16:30:33.505Z"
+  },
+  "smg52_raid02_card": {
+    "image": "/img/weapons/wiki/smg52_raid02_card.png",
+    "wikiName": "Card Raid ACR CQB Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Smg52.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/b2/Smg52.png",
+    "updatedAt": "2026-05-11T16:30:33.411Z"
+  },
+  "sr49_card": {
+    "image": "/img/weapons/wiki/sr49_card.png",
+    "wikiName": "Card Cobalt Kinetics Twenty-Seven",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sr49.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/27/Sr49.png",
+    "updatedAt": "2026-05-11T16:30:33.717Z"
+  },
+  "hmg03_raid02_card": {
+    "image": "/img/weapons/wiki/hmg03_raid02_card.png",
+    "wikiName": "Card Raid M134-GAU19b Hybrid",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Hmg03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/0b/Hmg03.png",
+    "updatedAt": "2026-05-11T16:30:33.760Z"
+  },
+  "shg52_raid02_card": {
+    "image": "/img/weapons/wiki/shg52_raid02_card.png",
+    "wikiName": "Card Raid TAVOR TS12 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shg52.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/b7/Shg52.png",
+    "updatedAt": "2026-05-11T16:30:34.289Z"
+  },
+  "sr45_raid02_card": {
+    "image": "/img/weapons/wiki/sr45_raid02_card.png",
+    "wikiName": "Card Raid HK G28",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sr45.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/bd/Sr45.png",
+    "updatedAt": "2026-05-11T16:30:34.841Z"
+  },
+  "ar36_apache01_card": {
+    "image": "/img/weapons/wiki/ar36_apache01_card.png",
+    "wikiName": "Card Apache F90 MBR",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Ar36.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/88/Ar36.png",
+    "updatedAt": "2026-05-11T16:30:36.778Z"
+  },
+  "hmg03_apache01_card": {
+    "image": "/img/weapons/wiki/hmg03_apache01_card.png",
+    "wikiName": "Card Apache M134-GAU19b Hybrid",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Hmg03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/0b/Hmg03.png",
+    "updatedAt": "2026-05-11T16:30:36.813Z"
+  },
+  "sr45_apache01_card": {
+    "image": "/img/weapons/wiki/sr45_apache01_card.png",
+    "wikiName": "Card Apache HK G28",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sr45.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/bd/Sr45.png",
+    "updatedAt": "2026-05-11T16:30:37.676Z"
+  },
+  "smg52_apache01_card": {
+    "image": "/img/weapons/wiki/smg52_apache01_card.png",
+    "wikiName": "Card Apache ACR CQB Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Smg52.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/b2/Smg52.png",
+    "updatedAt": "2026-05-11T16:30:37.868Z"
+  },
+  "shg52_apache01_card": {
+    "image": "/img/weapons/wiki/shg52_apache01_card.png",
+    "wikiName": "Card Apache TAVOR TS12 Custom",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shg52.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/b7/Shg52.png",
+    "updatedAt": "2026-05-11T16:30:37.842Z"
+  },
+  "smg51_card": {
+    "image": "/img/weapons/wiki/smg51_card.png",
+    "wikiName": "Card Gilboa DBR Snake",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Smg51.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/83/Smg51.png",
+    "updatedAt": "2026-05-11T16:30:37.903Z"
+  },
+  "shg55_card": {
+    "image": "/img/weapons/wiki/shg55_card.png",
+    "wikiName": "Card Chiappa Triple Threat",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shg55.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/1f/Shg55.png",
+    "updatedAt": "2026-05-11T16:30:39.123Z"
+  },
+  "shg51_card": {
+    "image": "/img/weapons/wiki/shg51_card.png",
+    "wikiName": "Card Typhoon F12",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shg51.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/15/Shg51.png",
+    "updatedAt": "2026-05-11T16:30:39.568Z"
+  },
+  "mg26_card": {
+    "image": "/img/weapons/wiki/mg26_card.png",
+    "wikiName": "Card H&K 121",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Mg26.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/eb/Mg26.png",
+    "updatedAt": "2026-05-11T16:30:39.831Z"
+  },
+  "engineer_fbs_01": {
+    "image": "/img/weapons/wiki/engineer_fbs_01.png",
+    "wikiName": "Special Engineer's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_fbs_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/1e/Engineer_fbs_01.png",
+    "updatedAt": "2026-05-11T16:30:50.332Z"
+  },
+  "engineer_fbs_23fb_01": {
+    "image": "/img/weapons/wiki/engineer_fbs_23fb_01.png",
+    "wikiName": "Engineer Resistance Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_fbs_23fb_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/81/Engineer_fbs_23fb_01.png",
+    "updatedAt": "2026-05-11T16:30:50.370Z"
+  },
+  "engineer_fbs_cf_01": {
+    "image": "/img/weapons/wiki/engineer_fbs_cf_01.png",
+    "wikiName": "C.S.F. Engineer",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_fbs_cf_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a4/Engineer_fbs_cf_01.png",
+    "updatedAt": "2026-05-11T16:30:50.822Z"
+  },
+  "engineer_fbs_exo_01": {
+    "image": "/img/weapons/wiki/engineer_fbs_exo_01.png",
+    "wikiName": "Engineer Exosuit \"AOS M2\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_fbs_exo_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/04/Engineer_fbs_exo_01.png",
+    "updatedAt": "2026-05-11T16:30:51.084Z"
+  },
+  "engineer_fbs_usf_01": {
+    "image": "/img/weapons/wiki/engineer_fbs_usf_01.png",
+    "wikiName": "Engineer from \"Paragon Squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_fbs_usf_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e1/Engineer_fbs_usf_01.png",
+    "updatedAt": "2026-05-11T16:30:51.147Z"
+  },
+  "f_engineer_fbs_02": {
+    "image": "/img/weapons/wiki/f_engineer_fbs_02.png",
+    "wikiName": "Lady Engineer",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_engineer_fbs_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/04/F_engineer_fbs_02.png",
+    "updatedAt": "2026-05-11T16:30:51.795Z"
+  },
+  "f_engineer_fbs_03": {
+    "image": "/img/weapons/wiki/f_engineer_fbs_03.png",
+    "wikiName": "Engineer of the \"Domination squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_engineer_fbs_03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/ba/F_engineer_fbs_03.png",
+    "updatedAt": "2026-05-11T16:30:52.132Z"
+  },
+  "f_engineer_fbs_04": {
+    "image": "/img/weapons/wiki/f_engineer_fbs_04.png",
+    "wikiName": "Engineer of \"Widow makers squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_engineer_fbs_04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/74/F_engineer_fbs_04.png",
+    "updatedAt": "2026-05-11T16:30:52.865Z"
+  },
+  "f_medic_fbs_02": {
+    "image": "/img/weapons/wiki/f_medic_fbs_02.png",
+    "wikiName": "Lady Medic",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_medic_fbs_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7a/F_medic_fbs_02.png",
+    "updatedAt": "2026-05-11T16:30:52.834Z"
+  },
+  "f_medic_fbs_03": {
+    "image": "/img/weapons/wiki/f_medic_fbs_03.png",
+    "wikiName": "Medic of the \"Domination squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_medic_fbs_03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/64/F_medic_fbs_03.png",
+    "updatedAt": "2026-05-11T16:30:52.908Z"
+  },
+  "f_sniper_fbs_02": {
+    "image": "/img/weapons/wiki/f_sniper_fbs_02.png",
+    "wikiName": "Lady Sniper",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_sniper_fbs_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7d/F_sniper_fbs_02.png",
+    "updatedAt": "2026-05-11T16:30:53.293Z"
+  },
+  "f_medic_fbs_04": {
+    "image": "/img/weapons/wiki/f_medic_fbs_04.png",
+    "wikiName": "Medic of \"Widow makers squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_medic_fbs_04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/8e/F_medic_fbs_04.png",
+    "updatedAt": "2026-05-11T16:30:53.428Z"
+  },
+  "f_sniper_fbs_03": {
+    "image": "/img/weapons/wiki/f_sniper_fbs_03.png",
+    "wikiName": "Sniper of the \"Domination squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_sniper_fbs_03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7a/F_sniper_fbs_03.png",
+    "updatedAt": "2026-05-11T16:30:53.774Z"
+  },
+  "f_sniper_fbs_04": {
+    "image": "/img/weapons/wiki/f_sniper_fbs_04.png",
+    "wikiName": "Sniper of \"Widow makers squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_sniper_fbs_04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/cc/F_sniper_fbs_04.png",
+    "updatedAt": "2026-05-11T16:30:53.809Z"
+  },
+  "medic_fbs_23fb_01": {
+    "image": "/img/weapons/wiki/medic_fbs_23fb_01.png",
+    "wikiName": "Medic Resistance Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_fbs_23fb_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/93/Medic_fbs_23fb_01.png",
+    "updatedAt": "2026-05-11T16:31:14.855Z"
+  },
+  "f_soldier_fbs_02": {
+    "image": "/img/weapons/wiki/f_soldier_fbs_02.png",
+    "wikiName": "Lady Soldier",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_soldier_fbs_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/b/bd/F_soldier_fbs_02.png",
+    "updatedAt": "2026-05-11T16:31:14.893Z"
+  },
+  "sniper_fbs_23fb_01": {
+    "image": "/img/weapons/wiki/sniper_fbs_23fb_01.png",
+    "wikiName": "Sniper Resistance Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_fbs_23fb_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/3a/Sniper_fbs_23fb_01.png",
+    "updatedAt": "2026-05-11T16:31:14.953Z"
+  },
+  "medic_fbs_usf_01": {
+    "image": "/img/weapons/wiki/medic_fbs_usf_01.png",
+    "wikiName": "Medic from \"Paragon Squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_fbs_usf_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/60/Medic_fbs_usf_01.png",
+    "updatedAt": "2026-05-11T16:31:14.961Z"
+  },
+  "sniper_fbs_01": {
+    "image": "/img/weapons/wiki/sniper_fbs_01.png",
+    "wikiName": "Special Sniper's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_fbs_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/d5/Sniper_fbs_01.png",
+    "updatedAt": "2026-05-11T16:31:14.990Z"
+  },
+  "medic_fbs_cf_01": {
+    "image": "/img/weapons/wiki/medic_fbs_cf_01.png",
+    "wikiName": "C.S.F. Medic",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_fbs_cf_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/2/26/Medic_fbs_cf_01.png",
+    "updatedAt": "2026-05-11T16:31:15.020Z"
+  },
+  "medic_fbs_01": {
+    "image": "/img/weapons/wiki/medic_fbs_01.png",
+    "wikiName": "Special Medic's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_fbs_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/dc/Medic_fbs_01.png",
+    "updatedAt": "2026-05-11T16:31:15.055Z"
+  },
+  "f_soldier_fbs_03": {
+    "image": "/img/weapons/wiki/f_soldier_fbs_03.png",
+    "wikiName": "Soldier of the \"Domination squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_soldier_fbs_03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/05/F_soldier_fbs_03.png",
+    "updatedAt": "2026-05-11T16:31:15.082Z"
+  },
+  "medic_fbs_exo_01": {
+    "image": "/img/weapons/wiki/medic_fbs_exo_01.png",
+    "wikiName": "Medic Exosuit \"AOS M2\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_fbs_exo_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/37/Medic_fbs_exo_01.png",
+    "updatedAt": "2026-05-11T16:31:15.110Z"
+  },
+  "f_soldier_fbs_04": {
+    "image": "/img/weapons/wiki/f_soldier_fbs_04.png",
+    "wikiName": "Soldier of \"Widow makers squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_soldier_fbs_04.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/06/F_soldier_fbs_04.png",
+    "updatedAt": "2026-05-11T16:31:15.141Z"
+  },
+  "sniper_fbs_cf_01": {
+    "image": "/img/weapons/wiki/sniper_fbs_cf_01.png",
+    "wikiName": "C.S.F. Sniper",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_fbs_cf_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/7e/Sniper_fbs_cf_01.png",
+    "updatedAt": "2026-05-11T16:31:17.715Z"
+  },
+  "sniper_fbs_exo_01": {
+    "image": "/img/weapons/wiki/sniper_fbs_exo_01.png",
+    "wikiName": "Sniper Exosuit \"AOS M2\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_fbs_exo_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/9a/Sniper_fbs_exo_01.png",
+    "updatedAt": "2026-05-11T16:31:17.766Z"
+  },
+  "sniper_fbs_usf_01": {
+    "image": "/img/weapons/wiki/sniper_fbs_usf_01.png",
+    "wikiName": "Sniper from \"Paragon Squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_fbs_usf_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/c2/Sniper_fbs_usf_01.png",
+    "updatedAt": "2026-05-11T16:31:17.817Z"
+  },
+  "soldier_fbs_01": {
+    "image": "/img/weapons/wiki/soldier_fbs_01.png",
+    "wikiName": "Special Soldier's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_fbs_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f2/Soldier_fbs_01.png",
+    "updatedAt": "2026-05-11T16:31:17.885Z"
+  },
+  "soldier_fbs_23fb_01": {
+    "image": "/img/weapons/wiki/soldier_fbs_23fb_01.png",
+    "wikiName": "Soldier Resistance Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_fbs_23fb_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/d0/Soldier_fbs_23fb_01.png",
+    "updatedAt": "2026-05-11T16:31:17.893Z"
+  },
+  "soldier_fbs_cf_01": {
+    "image": "/img/weapons/wiki/soldier_fbs_cf_01.png",
+    "wikiName": "C.S.F. Soldier",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_fbs_cf_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/d7/Soldier_fbs_cf_01.png",
+    "updatedAt": "2026-05-11T16:31:17.917Z"
+  },
+  "soldier_fbs_exo_01": {
+    "image": "/img/weapons/wiki/soldier_fbs_exo_01.png",
+    "wikiName": "Soldier Exosuit \"AOS M2\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_fbs_exo_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/c2/Soldier_fbs_exo_01.png",
+    "updatedAt": "2026-05-11T16:31:17.993Z"
+  },
+  "soldier_fbs_usf_01": {
+    "image": "/img/weapons/wiki/soldier_fbs_usf_01.png",
+    "wikiName": "Soldier from \"Paragon Squad\"",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_fbs_usf_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/8/89/Soldier_fbs_usf_01.png",
+    "updatedAt": "2026-05-11T16:31:18.043Z"
+  },
+  "default_gunner_skin": {
+    "image": "/img/weapons/wiki/default_gunner_skin.png",
+    "wikiName": "default_gunner_skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Default_gunner_skin_b_bw.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/d8/Default_gunner_skin_b_bw.png",
+    "updatedAt": "2026-05-11T16:31:20.146Z"
+  },
+  "sed_skin": {
+    "image": "/img/weapons/wiki/sed_skin.png",
+    "wikiName": "sed_skin",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sed_skin_b.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/92/Sed_skin_b.png",
+    "updatedAt": "2026-05-11T16:31:20.162Z"
+  },
+  "f_engineer_fbs_gorgona_01": {
+    "image": "/img/weapons/wiki/f_engineer_fbs_gorgona_01.png",
+    "wikiName": "Gorgona Engineer's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_engineer_fbs_gorgona_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/48/F_engineer_fbs_gorgona_01.png",
+    "updatedAt": "2026-05-11T16:31:20.555Z"
+  },
+  "engineer_fbs_blackwood_01": {
+    "image": "/img/weapons/wiki/engineer_fbs_blackwood_01.png",
+    "wikiName": "Blackwood Engineer",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_fbs_blackwood_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/38/Engineer_fbs_blackwood_01.png",
+    "updatedAt": "2026-05-11T16:31:20.600Z"
+  },
+  "soldier_fbs_blackwood_01": {
+    "image": "/img/weapons/wiki/soldier_fbs_blackwood_01.png",
+    "wikiName": "Blackwood Soldier",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_fbs_blackwood_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e1/Soldier_fbs_blackwood_01.png",
+    "updatedAt": "2026-05-11T16:31:20.604Z"
+  },
+  "medic_fbs_blackwood_01": {
+    "image": "/img/weapons/wiki/medic_fbs_blackwood_01.png",
+    "wikiName": "Blackwood Medic",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_fbs_blackwood_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5d/Medic_fbs_blackwood_01.png",
+    "updatedAt": "2026-05-11T16:31:20.640Z"
+  },
+  "sniper_fbs_blackwood_01": {
+    "image": "/img/weapons/wiki/sniper_fbs_blackwood_01.png",
+    "wikiName": "Blackwood Sniper",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_fbs_blackwood_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/72/Sniper_fbs_blackwood_01.png",
+    "updatedAt": "2026-05-11T16:31:20.717Z"
+  },
+  "f_medic_fbs_gorgona_01": {
+    "image": "/img/weapons/wiki/f_medic_fbs_gorgona_01.png",
+    "wikiName": "Gorgona Medic's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_medic_fbs_gorgona_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/45/F_medic_fbs_gorgona_01.png",
+    "updatedAt": "2026-05-11T16:31:20.850Z"
+  },
+  "f_soldier_fbs_gorgona_01": {
+    "image": "/img/weapons/wiki/f_soldier_fbs_gorgona_01.png",
+    "wikiName": "Gorgona Soldier's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_soldier_fbs_gorgona_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/c0/F_soldier_fbs_gorgona_01.png",
+    "updatedAt": "2026-05-11T16:31:20.876Z"
+  },
+  "f_sniper_fbs_gorgona_01": {
+    "image": "/img/weapons/wiki/f_sniper_fbs_gorgona_01.png",
+    "wikiName": "Gorgona Sniper's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_sniper_fbs_gorgona_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a3/F_sniper_fbs_gorgona_01.png",
+    "updatedAt": "2026-05-11T16:31:20.885Z"
+  },
+  "f_soldier_fbs_gorgona_premium_01": {
+    "image": "/img/weapons/wiki/f_soldier_fbs_gorgona_premium_01.png",
+    "wikiName": "Gorgona Premium Soldier's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_soldier_fbs_gorgona_premium_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f1/F_soldier_fbs_gorgona_premium_01.png",
+    "updatedAt": "2026-05-11T16:31:23.267Z"
+  },
+  "f_engineer_fbs_gorgona_premium_01": {
+    "image": "/img/weapons/wiki/f_engineer_fbs_gorgona_premium_01.png",
+    "wikiName": "Gorgona Premium Engineer's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_engineer_fbs_gorgona_premium_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f0/F_engineer_fbs_gorgona_premium_01.png",
+    "updatedAt": "2026-05-11T16:31:23.273Z"
+  },
+  "f_medic_fbs_gorgona_premium_01": {
+    "image": "/img/weapons/wiki/f_medic_fbs_gorgona_premium_01.png",
+    "wikiName": "Gorgona Premium Medic's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_medic_fbs_gorgona_premium_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/18/F_medic_fbs_gorgona_premium_01.png",
+    "updatedAt": "2026-05-11T16:31:23.687Z"
+  },
+  "engineer_fbs_samurai_01": {
+    "image": "/img/weapons/wiki/engineer_fbs_samurai_01.png",
+    "wikiName": "Samurai Engineer Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_fbs_samurai_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/9a/Engineer_fbs_samurai_01.png",
+    "updatedAt": "2026-05-11T16:31:23.767Z"
+  },
+  "soldier_fbs_samurai_01": {
+    "image": "/img/weapons/wiki/soldier_fbs_samurai_01.png",
+    "wikiName": "Samurai Soldier Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_fbs_samurai_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/cc/Soldier_fbs_samurai_01.png",
+    "updatedAt": "2026-05-11T16:31:23.775Z"
+  },
+  "f_sniper_fbs_gorgona_premium_01": {
+    "image": "/img/weapons/wiki/f_sniper_fbs_gorgona_premium_01.png",
+    "wikiName": "Gorgona Premium Sniper's Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/F_sniper_fbs_gorgona_premium_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/95/F_sniper_fbs_gorgona_premium_01.png",
+    "updatedAt": "2026-05-11T16:31:23.812Z"
+  },
+  "medic_fbs_samurai_01": {
+    "image": "/img/weapons/wiki/medic_fbs_samurai_01.png",
+    "wikiName": "Samurai Medic Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_fbs_samurai_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/66/Medic_fbs_samurai_01.png",
+    "updatedAt": "2026-05-11T16:31:23.832Z"
+  },
+  "sniper_fbs_samurai_01": {
+    "image": "/img/weapons/wiki/sniper_fbs_samurai_01.png",
+    "wikiName": "Samurai Sniper Suit",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_fbs_samurai_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/c4/Sniper_fbs_samurai_01.png",
+    "updatedAt": "2026-05-11T16:31:23.938Z"
+  },
+  "engineer_hands_01": {
+    "image": "/img/weapons/wiki/engineer_hands_01.png",
+    "wikiName": "Engineer gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_hands_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e6/Engineer_hands_01.png",
+    "updatedAt": "2026-05-11T16:31:24.015Z"
+  },
+  "medic_hands_01": {
+    "image": "/img/weapons/wiki/medic_hands_01.png",
+    "wikiName": "Light gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_hands_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/55/Medic_hands_01.png",
+    "updatedAt": "2026-05-11T16:31:24.023Z"
+  },
+  "shared_hands_03": {
+    "image": "/img/weapons/wiki/shared_hands_03.png",
+    "wikiName": "Melee hit gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shared_hands_03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f0/Shared_hands_03.png",
+    "updatedAt": "2026-05-11T16:31:26.471Z"
+  },
+  "shared_hands_02": {
+    "image": "/img/weapons/wiki/shared_hands_02.png",
+    "wikiName": "Protective gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shared_hands_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/62/Shared_hands_02.png",
+    "updatedAt": "2026-05-11T16:31:26.498Z"
+  },
+  "shared_hands_05": {
+    "image": "/img/weapons/wiki/shared_hands_05.png",
+    "wikiName": "Kevlar gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shared_hands_05.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a9/Shared_hands_05.png",
+    "updatedAt": "2026-05-11T16:31:26.791Z"
+  },
+  "shared_hands_07": {
+    "image": "/img/weapons/wiki/shared_hands_07.png",
+    "wikiName": "Warlord gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shared_hands_07.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e5/Shared_hands_07.png",
+    "updatedAt": "2026-05-11T16:31:26.901Z"
+  },
+  "soldier_hands_01": {
+    "image": "/img/weapons/wiki/soldier_hands_01.png",
+    "wikiName": "Knock-down gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_hands_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/40/Soldier_hands_01.png",
+    "updatedAt": "2026-05-11T16:31:26.968Z"
+  },
+  "sniper_hands_01": {
+    "image": "/img/weapons/wiki/sniper_hands_01.png",
+    "wikiName": "Multi purpose gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_hands_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/0/0d/Sniper_hands_01.png",
+    "updatedAt": "2026-05-11T16:31:27.014Z"
+  },
+  "soldier_hands_03": {
+    "image": "/img/weapons/wiki/soldier_hands_03.png",
+    "wikiName": "Mobility gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_hands_03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f4/Soldier_hands_03.png",
+    "updatedAt": "2026-05-11T16:31:27.032Z"
+  },
+  "medic_hands_legend_01_02": {
+    "image": "/img/weapons/wiki/medic_hands_legend_01_02.png",
+    "wikiName": "Modern Force medic gloves 2",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_hands_legend_01_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/7/72/Medic_hands_legend_01_02.png",
+    "updatedAt": "2026-05-11T16:31:27.156Z"
+  },
+  "shared_hands_syndicat": {
+    "image": "/img/weapons/wiki/shared_hands_syndicat.png",
+    "wikiName": "Syndicat gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shared_hands_syndicat.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/aa/Shared_hands_syndicat.png",
+    "updatedAt": "2026-05-11T16:31:27.182Z"
+  },
+  "shared_hands_06": {
+    "image": "/img/weapons/wiki/shared_hands_06.png",
+    "wikiName": "Assault gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shared_hands_06.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5d/Shared_hands_06.png",
+    "updatedAt": "2026-05-11T16:31:27.194Z"
+  },
+  "sniper_hands_legend_01_02": {
+    "image": "/img/weapons/wiki/sniper_hands_legend_01_02.png",
+    "wikiName": "Modern Force sniper gloves 2",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_hands_legend_01_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/1e/Sniper_hands_legend_01_02.png",
+    "updatedAt": "2026-05-11T16:31:29.615Z"
+  },
+  "soldier_hands_legend_01_02": {
+    "image": "/img/weapons/wiki/soldier_hands_legend_01_02.png",
+    "wikiName": "Modern Force soldier gloves 2",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_hands_legend_01_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/f/f6/Soldier_hands_legend_01_02.png",
+    "updatedAt": "2026-05-11T16:31:29.630Z"
+  },
+  "engineer_hands_legend_01_02": {
+    "image": "/img/weapons/wiki/engineer_hands_legend_01_02.png",
+    "wikiName": "Modern Force engineer gloves 2",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_hands_legend_01_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/53/Engineer_hands_legend_01_02.png",
+    "updatedAt": "2026-05-11T16:31:29.872Z"
+  },
+  "soldier_hands_legend_01_03": {
+    "image": "/img/weapons/wiki/soldier_hands_legend_01_03.png",
+    "wikiName": "Spectre Evo soldier gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_hands_legend_01_03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/9b/Soldier_hands_legend_01_03.png",
+    "updatedAt": "2026-05-11T16:31:30.049Z"
+  },
+  "sniper_hands_legend_01_03": {
+    "image": "/img/weapons/wiki/sniper_hands_legend_01_03.png",
+    "wikiName": "Spectre Evo sniper gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_hands_legend_01_03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/c/cd/Sniper_hands_legend_01_03.png",
+    "updatedAt": "2026-05-11T16:31:30.084Z"
+  },
+  "shared_hands_armagedon": {
+    "image": "/img/weapons/wiki/shared_hands_armagedon.png",
+    "wikiName": "Armageddon shared gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Shared_hands_armagedon.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a0/Shared_hands_armagedon.png",
+    "updatedAt": "2026-05-11T16:31:30.118Z"
+  },
+  "medic_hands_legend_01": {
+    "image": "/img/weapons/wiki/medic_hands_legend_01.png",
+    "wikiName": "Spectre medic gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_hands_legend_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e4/Medic_hands_legend_01.png",
+    "updatedAt": "2026-05-11T16:31:30.132Z"
+  },
+  "soldier_hands_legend_01": {
+    "image": "/img/weapons/wiki/soldier_hands_legend_01.png",
+    "wikiName": "Spectre soldier gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_hands_legend_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/6c/Soldier_hands_legend_01.png",
+    "updatedAt": "2026-05-11T16:31:30.271Z"
+  },
+  "engineer_hands_legend_01": {
+    "image": "/img/weapons/wiki/engineer_hands_legend_01.png",
+    "wikiName": "Spectre engineer gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_hands_legend_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/4/46/Engineer_hands_legend_01.png",
+    "updatedAt": "2026-05-11T16:31:30.336Z"
+  },
+  "sniper_hands_legend_01": {
+    "image": "/img/weapons/wiki/sniper_hands_legend_01.png",
+    "wikiName": "Spectre sniper gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_hands_legend_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/1a/Sniper_hands_legend_01.png",
+    "updatedAt": "2026-05-11T16:31:30.357Z"
+  },
+  "gunner_hands_01": {
+    "image": "/img/weapons/wiki/gunner_hands_01.png",
+    "wikiName": "SEDimproved hands module",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Gunner_hands_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/3/33/Gunner_hands_01.png",
+    "updatedAt": "2026-05-11T16:31:32.763Z"
+  },
+  "engineer_hands_legend_01_03": {
+    "image": "/img/weapons/wiki/engineer_hands_legend_01_03.png",
+    "wikiName": "Spectre Evo engineer gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_hands_legend_01_03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/ef/Engineer_hands_legend_01_03.png",
+    "updatedAt": "2026-05-11T16:31:32.823Z"
+  },
+  "medic_hands_legend_01_03": {
+    "image": "/img/weapons/wiki/medic_hands_legend_01_03.png",
+    "wikiName": "Spectre Evo medic gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_hands_legend_01_03.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/aa/Medic_hands_legend_01_03.png",
+    "updatedAt": "2026-05-11T16:31:32.873Z"
+  },
+  "soldier_hands_warlord_02": {
+    "image": "/img/weapons/wiki/soldier_hands_warlord_02.png",
+    "wikiName": "Premium Warlord soldier gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_hands_warlord_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/66/Soldier_hands_warlord_02.png",
+    "updatedAt": "2026-05-11T16:31:32.998Z"
+  },
+  "sniper_hands_blackwood_01": {
+    "image": "/img/weapons/wiki/sniper_hands_blackwood_01.png",
+    "wikiName": "Blackwood sniper gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_hands_blackwood_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/1/16/Sniper_hands_blackwood_01.png",
+    "updatedAt": "2026-05-11T16:31:33.126Z"
+  },
+  "engineer_hands_warlord_02": {
+    "image": "/img/weapons/wiki/engineer_hands_warlord_02.png",
+    "wikiName": "Premium Warlord engineer gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_hands_warlord_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/5/5c/Engineer_hands_warlord_02.png",
+    "updatedAt": "2026-05-11T16:31:33.148Z"
+  },
+  "soldier_hands_blackwood_01": {
+    "image": "/img/weapons/wiki/soldier_hands_blackwood_01.png",
+    "wikiName": "Blackwood soldier gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Soldier_hands_blackwood_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/9/9c/Soldier_hands_blackwood_01.png",
+    "updatedAt": "2026-05-11T16:31:33.192Z"
+  },
+  "medic_hands_blackwood_01": {
+    "image": "/img/weapons/wiki/medic_hands_blackwood_01.png",
+    "wikiName": "Blackwood medic gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_hands_blackwood_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e7/Medic_hands_blackwood_01.png",
+    "updatedAt": "2026-05-11T16:31:33.205Z"
+  },
+  "sniper_hands_warlord_02": {
+    "image": "/img/weapons/wiki/sniper_hands_warlord_02.png",
+    "wikiName": "Premium Warlord sniper gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Sniper_hands_warlord_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/a/a8/Sniper_hands_warlord_02.png",
+    "updatedAt": "2026-05-11T16:31:33.223Z"
+  },
+  "medic_hands_warlord_02": {
+    "image": "/img/weapons/wiki/medic_hands_warlord_02.png",
+    "wikiName": "Premium Warlord medic gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Medic_hands_warlord_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/d/d4/Medic_hands_warlord_02.png",
+    "updatedAt": "2026-05-11T16:31:33.256Z"
+  },
+  "gunner_hands_02": {
+    "image": "/img/weapons/wiki/gunner_hands_02.png",
+    "wikiName": "SED Runner hands module",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Gunner_hands_02.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/ec/Gunner_hands_02.png",
+    "updatedAt": "2026-05-11T16:31:35.420Z"
+  },
+  "engineer_hands_blackwood_01": {
+    "image": "/img/weapons/wiki/engineer_hands_blackwood_01.png",
+    "wikiName": "Blackwood engineer gloves",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:FilePath/Engineer_hands_blackwood_01.png",
+    "imageUrl": "https://ru.warface.com/wiki/images/e/e6/Engineer_hands_blackwood_01.png",
+    "updatedAt": "2026-05-11T16:31:35.638Z"
+  },
+  "a": {
+    "image": "/img/weapons/wiki/a.png",
+    "wikiName": "Золотой Vigilance Rifles A-M20",
+    "pageUrl": "https://ru.warface.com/wiki/index.php/%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B9_Vigilance_Rifles_A-M20",
+    "imageUrl": "https://ru.warface.com/wiki/images/6/61/Smg68_mastery01.png",
+    "updatedAt": "2026-05-25T03:07:23.281Z"
+  }
+}

@@ -1,0 +1,11 @@
+me\ray\midgard\modules\commands\registry\CommandDescriptor$Builder.class
+me\ray\midgard\modules\commands\registry\CommandDescriptor$CommandSource.class
+me\ray\midgard\modules\commands\validator\CommandValidator$ValidationIssue.class
+me\ray\midgard\modules\commands\CommandsModule.class
+me\ray\midgard\modules\commands\registry\CommandDescriptor.class
+me\ray\midgard\modules\commands\registry\CommandRegistrationHelper.class
+me\ray\midgard\modules\commands\registry\CentralCommandRegistry.class
+me\ray\midgard\modules\commands\validator\CommandValidator.class
+me\ray\midgard\modules\commands\admin\CommandsAdminCommand$1.class
+me\ray\midgard\modules\commands\admin\CommandsAdminCommand.class
+me\ray\midgard\modules\commands\validator\CommandValidator$ValidationIssue$Severity.class

@@ -1,0 +1,166 @@
+gema_forca:
+  base:
+    material: DIAMOND
+    name: "<green>ɢᴇᴍᴀ ᴅᴇ ꜰᴏʀᴄᴀ</green>"
+    tier: UNCOMMON
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ǫᴜᴇ ᴘᴜʟsᴀ ᴄᴏᴍ</gray>"
+    - "<gray>ᴏ ᴘᴏᴅᴇʀ ᴅᴀ ꜰᴏʀᴄᴀ ʙʀᴜᴛᴀ.</gray>"
+    revision-id: 1
+    strength: 4
+
+gema_inteligencia:
+  base:
+    material: DIAMOND
+    name: "<green>ɢᴇᴍᴀ ᴅᴇ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ</green>"
+    tier: UNCOMMON
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ǫᴜᴇ ʙʀɪʟʜᴀ ᴄᴏᴍ</gray>"
+    - "<gray>ᴏ ᴄᴏɴʜᴇᴄɪᴍᴇɴᴛᴏ ᴀʀᴄᴀɴᴏ.</gray>"
+    revision-id: 1
+    intelligence: 4
+
+gema_destreza:
+  base:
+    material: DIAMOND
+    name: "<green>ɢᴇᴍᴀ ᴅᴇ ᴅᴇsᴛʀᴇᴢᴀ</green>"
+    tier: UNCOMMON
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ǫᴜᴇ ᴄᴏɴᴄᴇᴅᴇ</gray>"
+    - "<gray>ᴀɢɪʟɪᴅᴀᴅᴇ ᴀᴏ ᴘᴏʀᴛᴀᴅᴏʀ.</gray>"
+    revision-id: 1
+    dexterity: 4
+
+gema_vitalidade:
+  base:
+    material: DIAMOND
+    name: "<green>ɢᴇᴍᴀ ᴅᴇ ᴠɪᴛᴀʟɪᴅᴀᴅᴇ</green>"
+    tier: UNCOMMON
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ǫᴜᴇ ꜰᴏʀᴛᴀʟᴇᴄᴇ</gray>"
+    - "<gray>ᴏ ᴄᴏʀᴘᴏ ᴇ ᴀ ᴠɪᴛᴀʟɪᴅᴀᴅᴇ.</gray>"
+    revision-id: 1
+    max-health: 15
+
+gema_defesa:
+  base:
+    material: DIAMOND
+    name: "<green>ɢᴇᴍᴀ ᴅᴇ ᴅᴇꜰᴇsᴀ</green>"
+    tier: UNCOMMON
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ǫᴜᴇ ᴇɴᴅᴜʀᴇᴄᴇ</gray>"
+    - "<gray>ᴀ ᴀʀᴍᴀᴅᴜʀᴀ ᴅᴏ ᴘᴏʀᴛᴀᴅᴏʀ.</gray>"
+    revision-id: 1
+    defense: 4
+    armor: 3
+
+gema_critica:
+  base:
+    material: DIAMOND
+    name: "<blue>ɢᴇᴍᴀ ᴄʀɪᴛɪᴄᴀ</blue>"
+    tier: RARE
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ᴀꜰɪᴀᴅᴀ ǫᴜᴇ</gray>"
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ᴘʀᴇᴄɪsᴀᴏ ᴍᴏʀᴛᴀʟ.</gray>"
+    revision-id: 1
+    critical-strike-chance: 3
+    critical-strike-power: 8
+
+gema_mana:
+  base:
+    material: DIAMOND
+    name: "<blue>ɢᴇᴍᴀ ᴅᴇ ᴍᴀɴᴀ</blue>"
+    tier: RARE
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ǫᴜᴇ ᴛʀᴀɴsʙᴏʀᴅᴀ</gray>"
+    - "<gray>ᴄᴏᴍ ᴇɴᴇʀɢɪᴀ ᴍᴀɢɪᴄᴀ.</gray>"
+    revision-id: 1
+    max-mana: 25
+    mana-regeneration: 2
+
+gema_fogo:
+  base:
+    material: DIAMOND
+    name: "<blue>ɢᴇᴍᴀ ᴅᴇ ꜰᴏɢᴏ</blue>"
+    tier: RARE
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ǫᴜᴇ ᴀʀᴅᴇ ᴄᴏᴍ</gray>"
+    - "<gray>ᴏ ꜰᴏɢᴏ ɪɴᴛᴇʀɪᴏʀ ᴅᴀ ᴛᴇʀʀᴀ.</gray>"
+    revision-id: 1
+    fire-damage: 6
+
+gema_gelo:
+  base:
+    material: DIAMOND
+    name: "<blue>ɢᴇᴍᴀ ᴅᴇ ɢᴇʟᴏ</blue>"
+    tier: RARE
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ɢᴇʟᴀᴅᴀ ǫᴜᴇ</gray>"
+    - "<gray>ᴇᴍᴀɴᴀ ᴏ ꜰʀɪᴏ ᴅᴏ ɪɴᴠᴇʀɴᴏ.</gray>"
+    revision-id: 1
+    ice-damage: 6
+
+gema_luz:
+  base:
+    material: DIAMOND
+    name: "<blue>ɢᴇᴍᴀ ᴅᴇ ʟᴜᴢ</blue>"
+    tier: RARE
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ʀᴀᴅɪᴀɴᴛᴇ ǫᴜᴇ</gray>"
+    - "<gray>ʙʀɪʟʜᴀ ᴄᴏᴍ ʟᴜᴢ sᴀɢʀᴀᴅᴀ.</gray>"
+    revision-id: 1
+    light-damage: 6
+
+gema_trevas:
+  base:
+    material: DIAMOND
+    name: "<blue>ɢᴇᴍᴀ ᴅᴇ ᴛʀᴇᴠᴀs</blue>"
+    tier: RARE
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ sᴏᴍʙʀɪᴀ ǫᴜᴇ</gray>"
+    - "<gray>ᴀʙsᴏʀᴠᴇ ᴀ ʟᴜᴢ ᴀᴏ ʀᴇᴅᴏʀ.</gray>"
+    revision-id: 1
+    darkness-damage: 6
+
+gema_perfeita:
+  base:
+    material: DIAMOND
+    name: "<purple>ɢᴇᴍᴀ ᴘᴇʀꜰᴇɪᴛᴀ</purple>"
+    tier: EPIC
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ᴘᴇʀꜰᴇɪᴛᴀᴍᴇɴᴛᴇ ʟᴀᴘɪᴅᴀᴅᴀ,</gray>"
+    - "<gray>ᴄᴏɴᴄᴇᴅᴇ ᴘᴏᴅᴇʀ ᴇᴍ ᴛᴏᴅᴏs ᴏs ᴀsᴘᴇᴄᴛᴏs.</gray>"
+    revision-id: 1
+    strength: 5
+    intelligence: 5
+    dexterity: 5
+    max-health: 20
+    required-level: 35
+
+gema_divina:
+  base:
+    material: DIAMOND
+    name: "<gold>ɢᴇᴍᴀ ᴅɪᴠɪɴᴀ</gold>"
+    tier: LEGENDARY
+    type: GEM_STONE
+    description:
+    - "<gray>ᴜᴍᴀ ɢᴇᴍᴀ ᴛᴏᴄᴀᴅᴀ ᴘᴇʟᴏs ᴅᴇᴜsᴇs,</gray>"
+    - "<gray>ɪʀʀᴀᴅɪᴀ ᴘᴏᴅᴇʀ ᴅɪᴠɪɴᴏ.</gray>"
+    revision-id: 1
+    divine-damage: 10
+    max-health: 20
+    strength: 5
+    intelligence: 5
+    required-level: 50

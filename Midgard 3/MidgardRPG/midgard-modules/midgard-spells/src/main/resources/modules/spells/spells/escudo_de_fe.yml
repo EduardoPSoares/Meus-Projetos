@@ -1,0 +1,83 @@
+name: "<gold>ᴇsᴄᴜᴅᴏ ᴅᴇ ꜰᴇ</gold>"
+mythic-skill: "EscudoDeFe"
+spell-type: COMMON
+
+cooldown:
+  base: 10.0
+  per-level: -0.3
+mana:
+  base: 25.0
+  per-level: -0.6
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Clerigo"
+  level: 3
+
+icon:
+  material: SHIELD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></gold>"
+  - ""
+  - "<gray>ᴄʀɪᴀ ᴜᴍ ᴇsᴄᴜᴅᴏ ᴅᴇ ꜰᴇ ǫᴜᴇ ᴀʙsᴏʀᴠᴇ</gray>"
+  - "<gray>ᴅᴀɴᴏ ᴘᴀʀᴀ ᴏ ᴄʟᴇʀɪɢᴏ ᴏᴜ ᴜᴍ ᴀʟɪᴀᴅᴏ</gray>"
+  - "<gray>ᴘᴏʀ ᴜᴍ ᴘᴇʀɪᴏᴅᴏ ᴅᴇ ᴛᴇᴍᴘᴏ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴇsᴄᴜᴅᴏ:<yellow>{shield}</yellow>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<gold>{duration}s</gold>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴄʟᴇʀɪɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>3</yellow>"
+
+variables:
+  shield:
+    base: 20.0
+    per-level: 5.0
+  duration:
+    base: 5.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "escudo_fe_barrier"
+    mechanic-override: "EscudoDeFeMk2"
+    stat-bonus:
+      vitality: 1.0
+  5:
+    visual: "escudo_fe_divine"
+    mechanic-override: "EscudoDeFeMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 3
+    vitality: 2
+
+sounds:
+  cast-start:
+    sound: "item.shield.block"
+    volume: 1.0
+    pitch: 1.2
+  cast-finish:
+    sound: "block.beacon.activate"
+    volume: 0.8
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

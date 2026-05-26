@@ -1,0 +1,356 @@
+# ==============================================================================
+#                    MENSAGENS DE ATRIBUTOS - MIDGARDRPG
+# ==============================================================================
+# Este arquivo contém todas as mensagens e descrições dos atributos do sistema.
+# Essas mensagens aparecem nos menus, tooltips de itens e interfaces do jogo.
+#
+# Formato MiniMessage suportado: <color>, <bold>, <gradient>, etc.
+# Placeholders disponíveis: %value%, %max%, %min%, %percentage%
+#
+# IMPORTANTE: Mantenha as descrições claras e objetivas para os jogadores!
+# ==============================================================================
+
+# ==============================================================================
+#                           ATRIBUTOS VITAIS
+# ==============================================================================
+# Atributos que controlam a sobrevivência básica do jogador
+# ==============================================================================
+max_health:
+  name: "<red>❤ ᴠɪᴅᴀ ᴍᴀxɪᴍᴀ"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ᴄᴏɴᴛʀᴏʟᴀ ǫᴜᴀɴᴛᴀ ᴠɪᴅᴀ ᴠᴏᴄᴇ ᴘᴏᴅᴇ ᴛᴇʀ.</gray>"
+    - "<gray>ᴠᴀʟᴏʀᴇs ᴀʟᴛᴏs ᴘᴇʀᴍɪᴛᴇᴍ sᴜᴘᴏʀᴛᴀʀ ᴍᴀɪs ᴅᴀɴᴏ.</gray>"
+    - "<yellow>✨ ᴇssᴇɴᴄɪᴀʟ ᴘᴀʀᴀ sᴏʙʀᴇᴠɪᴠᴇɴᴄɪᴀ ᴇᴍ ᴄᴏᴍʙᴀᴛᴇ!</yellow>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+health_regen:
+  name: "<red>❤ ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ ᴅᴇ ᴠɪᴅᴀ"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ʀᴇᴄᴜᴘᴇʀᴀ sᴜᴀ ᴠɪᴅᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀᴍᴇɴᴛᴇ ᴀᴏ ʟᴏɴɢᴏ ᴅᴏ ᴛᴇᴍᴘᴏ.</gray>"
+    - "<yellow>⚡ ᴠᴀʟᴏʀ ᴇ ᴄᴀʟᴄᴜʟᴀᴅᴏ ᴘᴏʀ sᴇɢᴜɴᴅᴏ.</yellow>"
+    - "<aqua>✚ ɪᴅᴇᴀʟ ᴘᴀʀᴀ ʙᴀᴛᴀʟʜᴀs ʟᴏɴɢᴀs!</aqua>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+max_mana:
+  name: "<blue>💧 ᴍᴀɴᴀ ᴍᴀxɪᴍᴀ"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ sᴜᴀ ʀᴇsᴇʀᴠᴀ ᴅᴇ ᴇɴᴇʀɢɪᴀ ᴍᴀɢɪᴄᴀ.</gray>"
+    - "<gray>ᴘᴇʀᴍɪᴛᴇ ᴜsᴀʀ ᴍᴀɪs ꜰᴇɪᴛɪᴄᴏs ᴀɴᴛᴇs ᴅᴇ ᴇsɢᴏᴛᴀʀ.</gray>"
+    - "<yellow>✨ ꜰᴜɴᴅᴀᴍᴇɴᴛᴀʟ ᴘᴀʀᴀ ᴄʟᴀssᴇs ᴍᴀɢɪᴄᴀs!</yellow>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+mana_regen:
+  name: "<blue>💧 ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ ᴅᴇ ᴍᴀɴᴀ"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ʀᴇᴄᴜᴘᴇʀᴀ sᴜᴀ ᴍᴀɴᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀᴍᴇɴᴛᴇ ᴀᴏ ʟᴏɴɢᴏ ᴅᴏ ᴛᴇᴍᴘᴏ.</gray>"
+    - "<yellow>💡 ᴠᴀʟᴏʀ ᴇ ᴄᴀʟᴄᴜʟᴀᴅᴏ ᴘᴏʀ sᴇɢᴜɴᴅᴏ.</yellow>"
+    - "<aqua>🔮 ᴘᴇʀᴍɪᴛᴇ ᴜsᴀʀ ꜰᴇɪᴛɪᴄᴏs ᴍᴀɪs ꜰʀᴇǫᴜᴇɴᴛᴇᴍᴇɴᴛᴇ!</aqua>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+max_stamina:
+  name: "<yellow>⚡ ᴇsᴛᴀᴍɪɴᴀ ᴍᴀxɪᴍᴀ"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ sᴜᴀ ᴇɴᴇʀɢɪᴀ ꜰɪsɪᴄᴀ ᴅɪsᴘᴏɴɪᴠᴇʟ.</gray>"
+    - "<gray>ɴᴇᴄᴇssᴀʀɪᴀ ᴘᴀʀᴀ ᴄᴏʀʀᴇʀ ᴇ ᴜsᴀʀ ʜᴀʙɪʟɪᴅᴀᴅᴇs ꜰɪsɪᴄᴀs.</gray>"
+    - "<yellow>⚔ ɪᴍᴘᴏʀᴛᴀɴᴛᴇ ᴘᴀʀᴀ ᴄʟᴀssᴇs ᴄᴏʀᴘᴏ-ᴀ-ᴄᴏʀᴘᴏ!</yellow>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+stamina_regen:
+  name: "<yellow>⚡ ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ ᴅᴇ ᴇsᴛᴀᴍɪɴᴀ"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ʀᴇᴄᴜᴘᴇʀᴀ sᴜᴀ ᴇsᴛᴀᴍɪɴᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀᴍᴇɴᴛᴇ.</gray>"
+    - "<yellow>💡 ᴠᴀʟᴏʀ ᴇ ᴄᴀʟᴄᴜʟᴀᴅᴏ ᴘᴏʀ sᴇɢᴜɴᴅᴏ.</yellow>"
+    - "<aqua>🏃 ᴘᴇʀᴍɪᴛᴇ ᴀᴄᴏᴇs ꜰɪsɪᴄᴀs ᴍᴀɪs ꜰʀᴇǫᴜᴇɴᴛᴇs!</aqua>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+# ==============================================================================
+#                           ATRIBUTOS PRIMÁRIOS
+# ==============================================================================
+# Atributos principais que afetam múltiplos aspectos do personagem
+# ==============================================================================
+strength:
+  name: "<dark_red>⚔ ꜰᴏʀᴄᴀ"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ᴄᴀᴜsᴀᴅᴏ ᴘᴏʀ ᴀᴛᴀǫᴜᴇs ꜰɪsɪᴄᴏs.</gray>"
+    - "<gray>ɪɴꜰʟᴜᴇɴᴄɪᴀ ᴀ ᴄᴀᴘᴀᴄɪᴅᴀᴅᴇ ᴅᴇ ᴄᴀʀɢᴀ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    - "<yellow>💪 ᴘʀɪɴᴄɪᴘᴀʟ ᴀᴛʀɪʙᴜᴛᴏ ᴘᴀʀᴀ ɢᴜᴇʀʀᴇɪʀᴏs!</yellow>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+intelligence:
+  name: "<aqua>🧠 ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ ᴅᴇ ꜰᴇɪᴛɪᴄᴏs ᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇs.</gray>"
+    - "<gray>ᴛᴀᴍʙᴇᴍ ᴀᴜᴍᴇɴᴛᴀ sᴜᴀ ᴍᴀɴᴀ ᴍᴀxɪᴍᴀ.</gray>"
+    - "<yellow>✨ ᴘʀɪɴᴄɪᴘᴀʟ ᴀᴛʀɪʙᴜᴛᴏ ᴘᴀʀᴀ ᴍᴀɢᴏs!</yellow>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+dexterity:
+  name: "<green>🏹 ᴅᴇsᴛʀᴇᴢᴀ"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ᴄʜᴀɴᴄᴇ ᴅᴇ ᴀᴄᴇʀᴛᴀʀ ᴄʀɪᴛɪᴄᴏs.</gray>"
+    - "<gray>ᴍᴇʟʜᴏʀᴀ ᴀ ᴘʀᴇᴄɪsᴀᴏ ᴅᴇ ᴀᴛᴀǫᴜᴇs.</gray>"
+    - "<yellow>🎯 ᴘʀɪɴᴄɪᴘᴀʟ ᴀᴛʀɪʙᴜᴛᴏ ᴘᴀʀᴀ ᴀʀǫᴜᴇɪʀᴏs!</yellow>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+defense:
+  name: "<dark_gray>🛡 ᴅᴇꜰᴇsᴀ"
+  lore:
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ꜰɪsɪᴄᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴅᴏs ɪɴɪᴍɪɢᴏs.</gray>"
+    - "<yellow>🛡 ꜰᴜɴᴅᴀᴍᴇɴᴛᴀʟ ᴘᴀʀᴀ ᴛᴀɴǫᴜᴇs!</yellow>"
+    - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+
+# Atributos Ofensivos
+physical_damage:
+  name: "<dark_red>ᴅᴀɴᴏ ꜰɪsɪᴄᴏ"
+  lore:
+    - "<gray>ᴅᴀɴᴏ ᴄᴀᴜsᴀᴅᴏ ᴘᴏʀ ᴀᴛᴀǫᴜᴇs ʙᴀsɪᴄᴏs ᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇs ꜰɪsɪᴄᴀs.</gray>"
+magic_damage:
+  name: "<aqua>ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ"
+  lore:
+    - "<gray>ᴅᴀɴᴏ ᴄᴀᴜsᴀᴅᴏ ᴘᴏʀ ꜰᴇɪᴛɪᴄᴏs ᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴍᴀɢɪᴄᴀs.</gray>"
+critical_chance:
+  name: "<red>ᴄʜᴀɴᴄᴇ ᴄʀɪᴛɪᴄᴀ"
+  lore:
+    - "<gray>ᴘʀᴏʙᴀʙɪʟɪᴅᴀᴅᴇ ᴅᴇ ᴄᴀᴜsᴀʀ ᴅᴀɴᴏ ᴇxᴛʀᴀ.</gray>"
+critical_damage:
+  name: "<red>ᴅᴀɴᴏ ᴄʀɪᴛɪᴄᴏ"
+  lore:
+    - "<gray>ᴍᴜʟᴛɪᴘʟɪᴄᴀᴅᴏʀ ᴅᴇ ᴅᴀɴᴏ ᴀᴏ ᴀᴄᴇʀᴛᴀʀ ᴜᴍ ᴄʀɪᴛɪᴄᴏ.</gray>"
+armor_penetration:
+  name: "<gold>ᴘᴇɴᴇᴛʀᴀᴄᴀᴏ ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀ"
+  lore:
+    - "<gray>ɪɢɴᴏʀᴀ ᴜᴍᴀ ᴘᴏʀᴄᴇɴᴛᴀɢᴇᴍ ᴅᴀ ᴀʀᴍᴀᴅᴜʀᴀ ᴅᴏ ᴀʟᴠᴏ.</gray>"
+armor_penetration_flat:
+  name: "<gold>ᴘᴇɴᴇᴛʀᴀᴄᴀᴏ ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀ (ꜰɪxᴀ)"
+  lore:
+    - "<gray>ɪɢɴᴏʀᴀ ᴜᴍ ᴠᴀʟᴏʀ ꜰɪxᴏ ᴅᴀ ᴀʀᴍᴀᴅᴜʀᴀ ᴅᴏ ᴀʟᴠᴏ.</gray>"
+magic_penetration:
+  name: "<light_purple>ᴘᴇɴᴇᴛʀᴀᴄᴀᴏ ᴍᴀɢɪᴄᴀ"
+  lore:
+    - "<gray>ɪɢɴᴏʀᴀ ᴜᴍᴀ ᴘᴏʀᴄᴇɴᴛᴀɢᴇᴍ ᴅᴀ ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴍᴀɢɪᴄᴀ ᴅᴏ ᴀʟᴠᴏ.</gray>"
+magic_penetration_flat:
+  name: "<light_purple>ᴘᴇɴᴇᴛʀᴀᴄᴀᴏ ᴍᴀɢɪᴄᴀ (ꜰɪxᴀ)"
+  lore:
+    - "<gray>ɪɢɴᴏʀᴀ ᴜᴍ ᴠᴀʟᴏʀ ꜰɪxᴏ ᴅᴀ ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴍᴀɢɪᴄᴀ ᴅᴏ ᴀʟᴠᴏ.</gray>"
+accuracy:
+  name: "<yellow>ᴘʀᴇᴄɪsᴀᴏ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ᴄʜᴀɴᴄᴇ ᴅᴇ ᴀᴄᴇʀᴛᴀʀ ᴏ ᴀʟᴠᴏ.</gray>"
+attack_speed:
+  name: "<yellow>ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇ ᴀᴛᴀǫᴜᴇ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ꜰʀᴇǫᴜᴇɴᴄɪᴀ ᴅᴏs ᴀᴛᴀǫᴜᴇs.</gray>"
+weapon_damage:
+  name: "<gray>ᴅᴀɴᴏ ᴅᴀ ᴀʀᴍᴀ"
+  lore:
+    - "<gray>ᴅᴀɴᴏ ʙᴀsᴇ ᴅᴀ ᴀʀᴍᴀ ᴇǫᴜɪᴘᴀᴅᴀ.</gray>"
+skill_damage:
+  name: "<dark_aqua>ᴅᴀɴᴏ ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ᴅᴇ ᴛᴏᴅᴀs ᴀs ʜᴀʙɪʟɪᴅᴀᴅᴇs.</gray>"
+projectile_damage:
+  name: "<gray>ᴅᴀɴᴏ ᴅᴇ ᴘʀᴏᴊᴇᴛɪʟ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ᴅᴇ ꜰʟᴇᴄʜᴀs ᴇ ᴘʀᴏᴊᴇᴛᴇɪs.</gray>"
+undead_damage:
+  name: "<dark_green>ᴅᴀɴᴏ ᴄᴏɴᴛʀᴀ ᴍᴏʀᴛᴏs-ᴠɪᴠᴏs"
+  lore:
+    - "<gray>ᴅᴀɴᴏ ᴇxᴛʀᴀ ᴄᴏɴᴛʀᴀ zᴜᴍʙɪs, ᴇsǫᴜᴇʟᴇᴛᴏs, ᴇᴛᴄ.</gray>"
+skill_critical_chance:
+  name: "<dark_aqua>ᴄʜᴀɴᴄᴇ ᴄʀɪᴛɪᴄᴀ ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ"
+  lore:
+    - "<gray>ᴄʜᴀɴᴄᴇ ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴄᴀᴜsᴀʀᴇᴍ ᴅᴀɴᴏ ᴄʀɪᴛɪᴄᴏ.</gray>"
+skill_critical_damage:
+  name: "<dark_aqua>ᴅᴀɴᴏ ᴄʀɪᴛɪᴄᴏ ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ"
+  lore:
+    - "<gray>ᴅᴀɴᴏ ᴇxᴛʀᴀ ᴇᴍ ᴄʀɪᴛɪᴄᴏs ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ.</gray>"
+
+# Atributos Defensivos
+armor:
+  name: "<gray>ᴀʀᴍᴀᴅᴜʀᴀ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ꜰɪsɪᴄᴏ ʀᴇᴄᴇʙɪᴅᴏ.</gray>"
+armor_toughness:
+  name: "<dark_gray>ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴀ ᴇꜰɪᴄᴀᴄɪᴀ ᴅᴀ ᴘᴇɴᴇᴛʀᴀᴄᴀᴏ ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀ ɪɴɪᴍɪɢᴀ.</gray>"
+magic_resistance:
+  name: "<light_purple>ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴍᴀɢɪᴄᴀ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ ʀᴇᴄᴇʙɪᴅᴏ.</gray>"
+critical_resistance:
+  name: "<gray>ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴄʀɪᴛɪᴄᴀ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴀ ᴄʜᴀɴᴄᴇ ᴅᴇ ʀᴇᴄᴇʙᴇʀ ᴀᴄᴇʀᴛᴏs ᴄʀɪᴛɪᴄᴏs.</gray>"
+block_power:
+  name: "<gold>ᴘᴏᴅᴇʀ ᴅᴇ ʙʟᴏǫᴜᴇɪᴏ"
+  lore:
+    - "<gray>ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ ᴅᴀɴᴏ ᴀʙsᴏʀᴠɪᴅᴏ ᴀᴏ ʙʟᴏǫᴜᴇᴀʀ.</gray>"
+block_rating:
+  name: "<gold>ᴄʜᴀɴᴄᴇ ᴅᴇ ʙʟᴏǫᴜᴇɪᴏ"
+  lore:
+    - "<gray>ᴄʜᴀɴᴄᴇ ᴅᴇ ʙʟᴏǫᴜᴇᴀʀ ᴜᴍ ᴀᴛᴀǫᴜᴇ.</gray>"
+dodge_rating:
+  name: "<green>ᴄʜᴀɴᴄᴇ ᴅᴇ ᴇsǫᴜɪᴠᴀ"
+  lore:
+    - "<gray>ᴄʜᴀɴᴄᴇ ᴅᴇ ᴇᴠɪᴛᴀʀ ᴄᴏᴍᴘʟᴇᴛᴀᴍᴇɴᴛᴇ ᴜᴍ ᴀᴛᴀǫᴜᴇ.</gray>"
+parry_rating:
+  name: "<yellow>ᴄʜᴀɴᴄᴇ ᴅᴇ ᴀᴘᴀʀᴀʀ"
+  lore:
+    - "<gray>ᴄʜᴀɴᴄᴇ ᴅᴇ ᴀᴘᴀʀᴀʀ ᴜᴍ ᴀᴛᴀǫᴜᴇ ᴇ ᴄᴏɴᴛʀᴀ-ᴀᴛᴀᴄᴀʀ.</gray>"
+damage_reduction:
+  name: "<dark_gray>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴛᴏᴅᴏ ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴇᴍ ᴘᴏʀᴄᴇɴᴛᴀɢᴇᴍ.</gray>"
+fall_damage_reduction:
+  name: "<gray>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ ᴅᴇ ǫᴜᴇᴅᴀ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴀᴏ ᴄᴀɪʀ.</gray>"
+projectile_damage_reduction:
+  name: "<gray>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ ᴅᴇ ᴘʀᴏᴊᴇᴛɪʟ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴅᴇ ᴘʀᴏᴊᴇᴛᴇɪs.</gray>"
+physical_damage_reduction:
+  name: "<dark_red>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ ꜰɪsɪᴄᴏ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ꜰɪsɪᴄᴏ ʀᴇᴄᴇʙɪᴅᴏ.</gray>"
+magic_damage_reduction:
+  name: "<aqua>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ ʀᴇᴄᴇʙɪᴅᴏ.</gray>"
+pve_damage_reduction:
+  name: "<dark_green>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ ᴘᴠᴇ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴅᴇ ᴍᴏɴsᴛʀᴏs.</gray>"
+pvp_damage_reduction:
+  name: "<red>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ᴅᴀɴᴏ ᴘᴠᴘ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴅᴇ ᴊᴏɢᴀᴅᴏʀᴇs.</gray>"
+knockback_resistance:
+  name: "<dark_gray>ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴀ ʀᴇᴘᴜʟsᴀᴏ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴇᴍᴘᴜʀʀᴀᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴅᴇ ᴀᴛᴀǫᴜᴇs.</gray>"
+thorns:
+  name: "<dark_green>ᴇsᴘɪɴʜᴏs"
+  lore:
+    - "<gray>ʀᴇꜰʟᴇᴛᴇ ᴘᴀʀᴛᴇ ᴅᴏ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴅᴇ ᴠᴏʟᴛᴀ ᴀᴏ ᴀᴛᴀᴄᴀɴᴛᴇ.</gray>"
+
+# Atributos Utilitários
+speed:
+  name: "<white>ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ ᴅᴇ ᴍᴏᴠɪᴍᴇɴᴛᴏ.</gray>"
+luck:
+  name: "<green>sᴏʀᴛᴇ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ᴄʜᴀɴᴄᴇ ᴅᴇ ᴅʀᴏᴘs ʀᴀʀᴏs.</gray>"
+cooldown_reduction:
+  name: "<aqua>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴛᴇᴍᴘᴏ ᴅᴇ ᴇsᴘᴇʀᴀ ᴅᴀs ʜᴀʙɪʟɪᴅᴀᴅᴇs.</gray>"
+life_steal:
+  name: "<red>ʀᴏᴜʙᴏ ᴅᴇ ᴠɪᴅᴀ"
+  lore:
+    - "<gray>ᴄᴜʀᴀ ᴜᴍᴀ ᴘᴏʀᴄᴇɴᴛᴀɢᴇᴍ ᴅᴏ ᴅᴀɴᴏ ᴄᴀᴜsᴀᴅᴏ.</gray>"
+spell_vampirism:
+  name: "<light_purple>ᴠᴀᴍᴘɪʀɪsᴍᴏ ᴍᴀɢɪᴄᴏ"
+  lore:
+    - "<gray>ᴄᴜʀᴀ ᴜᴍᴀ ᴘᴏʀᴄᴇɴᴛᴀɢᴇᴍ ᴅᴏ ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ ᴄᴀᴜsᴀᴅᴏ.</gray>"
+block_cooldown_reduction:
+  name: "<gold>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ ᴅᴇ ʙʟᴏǫᴜᴇɪᴏ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴛᴇᴍᴘᴏ ᴅᴇ ᴇsᴘᴇʀᴀ ᴅᴏ ʙʟᴏǫᴜᴇɪᴏ.</gray>"
+dodge_cooldown_reduction:
+  name: "<green>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ ᴅᴇ ᴇsǫᴜɪᴠᴀ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴛᴇᴍᴘᴏ ᴅᴇ ᴇsᴘᴇʀᴀ ᴅᴀ ᴇsǫᴜɪᴠᴀ.</gray>"
+parry_cooldown_reduction:
+  name: "<yellow>ʀᴇᴅᴜᴄᴀᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ ᴅᴇ ᴀᴘᴀʀᴀʀ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴛᴇᴍᴘᴏ ᴅᴇ ᴇsᴘᴇʀᴀ ᴅᴏ ᴀᴘᴀʀᴀʀ.</gray>"
+
+# Amplificadores e Limites
+health_regen_amp:
+  name: "<red>ᴀᴍᴘʟɪꜰɪᴄᴀᴅᴏʀ ᴅᴇ ʀᴇɢᴇɴ. ᴠɪᴅᴀ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ᴇꜰɪᴄᴀᴄɪᴀ ᴅᴀ ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ ᴅᴇ ᴠɪᴅᴀ.</gray>"
+mana_regen_amp:
+  name: "<blue>ᴀᴍᴘʟɪꜰɪᴄᴀᴅᴏʀ ᴅᴇ ʀᴇɢᴇɴ. ᴍᴀɴᴀ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ᴇꜰɪᴄᴀᴄɪᴀ ᴅᴀ ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ ᴅᴇ ᴍᴀɴᴀ.</gray>"
+stamina_regen_amp:
+  name: "<yellow>ᴀᴍᴘʟɪꜰɪᴄᴀᴅᴏʀ ᴅᴇ ʀᴇɢᴇɴ. ᴇsᴛᴀᴍɪɴᴀ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ᴇꜰɪᴄᴀᴄɪᴀ ᴅᴀ ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ ᴅᴇ ᴇsᴛᴀᴍɪɴᴀ.</gray>"
+max_health_regen:
+  name: "<red>ʟɪᴍɪᴛᴇ ᴅᴇ ʀᴇɢᴇɴ. ᴠɪᴅᴀ"
+  lore:
+    - "<gray>ᴠᴀʟᴏʀ ᴍᴀxɪᴍᴏ ᴅᴇ ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ ᴅᴇ ᴠɪᴅᴀ ᴘᴏʀ sᴇɢᴜɴᴅᴏ.</gray>"
+max_mana_regen:
+  name: "<blue>ʟɪᴍɪᴛᴇ ᴅᴇ ʀᴇɢᴇɴ. ᴍᴀɴᴀ"
+  lore:
+    - "<gray>ᴠᴀʟᴏʀ ᴍᴀxɪᴍᴏ ᴅᴇ ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ ᴅᴇ ᴍᴀɴᴀ ᴘᴏʀ sᴇɢᴜɴᴅᴏ.</gray>"
+max_stamina_regen:
+  name: "<yellow>ʟɪᴍɪᴛᴇ ᴅᴇ ʀᴇɢᴇɴ. ᴇsᴛᴀᴍɪɴᴀ"
+  lore:
+    - "<gray>ᴠᴀʟᴏʀ ᴍᴀxɪᴍᴏ ᴅᴇ ʀᴇɢᴇɴᴇʀᴀᴄᴀᴏ ᴅᴇ ᴇsᴛᴀᴍɪɴᴀ ᴘᴏʀ sᴇɢᴜɴᴅᴏ.</gray>"
+max_stellium:
+  name: "<dark_purple>sᴛᴇʟʟɪᴜᴍ ᴍᴀxɪᴍᴏ"
+  lore:
+    - "<gray>ʀᴇᴄᴜʀsᴏ ᴇsᴘᴇᴄɪᴀʟ ᴘᴀʀᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴀᴠᴀɴᴄᴀᴅᴀs.</gray>"
+max_absorption:
+  name: "<gold>ᴀʙsᴏʀᴄᴀᴏ ᴍᴀxɪᴍᴀ"
+  lore:
+    - "<gray>ʟɪᴍɪᴛᴇ ᴅᴇ ᴇsᴄᴜᴅᴏ ᴅᴇ ᴀʙsᴏʀᴄᴀᴏ.</gray>"
+
+# Elementais
+fire_damage:
+  name: "<gold>ᴅᴀɴᴏ ᴅᴇ ꜰᴏɢᴏ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ᴄᴀᴜsᴀᴅᴏ ᴘᴏʀ ꜰᴏɢᴏ.</gray>"
+ice_damage:
+  name: "<aqua>ᴅᴀɴᴏ ᴅᴇ ɢᴇʟᴏ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ᴄᴀᴜsᴀᴅᴏ ᴘᴏʀ ɢᴇʟᴏ.</gray>"
+light_damage:
+  name: "<yellow>ᴅᴀɴᴏ ᴅᴇ ʟᴜᴢ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ᴄᴀᴜsᴀᴅᴏ ᴘᴏʀ ʟᴜᴢ.</gray>"
+darkness_damage:
+  name: "<dark_gray>ᴅᴀɴᴏ ᴅᴇ ᴛʀᴇᴠᴀs"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ ᴄᴀᴜsᴀᴅᴏ ᴘᴏʀ ᴛʀᴇᴠᴀs.</gray>"
+divine_damage:
+  name: "<gold>ᴅᴀɴᴏ ᴅɪᴠɪɴᴏ"
+  lore:
+    - "<gray>ᴀᴜᴍᴇɴᴛᴀ ᴏ ᴅᴀɴᴏ sᴀɢʀᴀᴅᴏ.</gray>"
+fire_defense:
+  name: "<gold>ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴀ ꜰᴏɢᴏ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ᴅᴇ ꜰᴏɢᴏ ʀᴇᴄᴇʙɪᴅᴏ.</gray>"
+ice_defense:
+  name: "<aqua>ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴀ ɢᴇʟᴏ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ᴅᴇ ɢᴇʟᴏ ʀᴇᴄᴇʙɪᴅᴏ.</gray>"
+light_defense:
+  name: "<yellow>ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴀ ʟᴜᴢ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ᴅᴇ ʟᴜᴢ ʀᴇᴄᴇʙɪᴅᴏ.</gray>"
+darkness_defense:
+  name: "<dark_gray>ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴀ ᴛʀᴇᴠᴀs"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ ᴅᴇ ᴛʀᴇᴠᴀs ʀᴇᴄᴇʙɪᴅᴏ.</gray>"
+divine_defense:
+  name: "<gold>ʀᴇsɪsᴛᴇɴᴄɪᴀ ᴅɪᴠɪɴᴀ"
+  lore:
+    - "<gray>ʀᴇᴅᴜᴢ ᴏ ᴅᴀɴᴏ sᴀɢʀᴀᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ.</gray>"

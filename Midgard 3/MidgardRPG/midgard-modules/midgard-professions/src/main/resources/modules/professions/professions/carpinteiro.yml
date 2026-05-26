@@ -1,0 +1,169 @@
+# ============================================
+# CARPINTEIRO - Definição e Recompensas
+# ============================================
+
+definition:
+  menu-icon: IRON_AXE
+  gradient: "<gradient:#d97706:#f59e0b>"
+  description: "Corte madeira, processe toras e construa estruturas para ganhar XP."
+  bonuses:
+    - "<green>▸ Rendimento de madeira</green>"
+    - "<green>▸ Velocidade de corte</green>"
+    - "<green>▸ Eficiência de crafting</green>"
+    - "<green>▸ Preservação de material</green>"
+  xp-source-icon: OAK_LOG
+  extra-button-icon: CRAFTING_TABLE
+  extra-button-name: "<gold>Bancada do Carpinteiro"
+  extra-button-lore:
+    - "<gray>Acesse seus projetos de construção"
+    - "<gray>e especializações em madeira."
+
+rewards:
+  1:
+    name: "Aprendiz de Carpintaria"
+    bonuses:
+      - "+2% rendimento de madeira"
+  5:
+    bonuses:
+      - "+5% rendimento de madeira"
+      - "+3% velocidade de corte"
+  10:
+    name: "Carpinteiro"
+    bonuses:
+      - "+10% rendimento de madeira"
+    ability: "Corte Limpo"
+    ability-desc: "Chance de derrubar a árvore inteira."
+  25:
+    name: "Artesão"
+    bonuses:
+      - "+5% eficiência de crafting"
+    ability: "Madeira Reforçada"
+    ability-desc: "Estruturas de madeira ganham durabilidade extra."
+  50:
+    name: "Mestre Artesão"
+    bonuses:
+      - "+30% rendimento de madeira"
+    ability: "Montagem Rápida"
+    ability-desc: "Crafting de itens de madeira é 50% mais rápido."
+  75:
+    name: "Grão-Mestre Artesão"
+    bonuses:
+      - "+10% preservação de material"
+    perks:
+      - "Chance de não consumir material"
+  100:
+    name: "Lenda da Madeira"
+    bonuses:
+      - "+50% rendimento de madeira"
+    ability: "Precisão Artesanal"
+    ability-desc: "Crafting nunca falha — qualidade máxima."
+    perks:
+      - "Título: Lenda da Madeira"
+
+# ============================================
+# FONTES DE XP
+# ============================================
+# block-break: XP ao cortar madeira
+# craft: XP ao fabricar itens de madeira
+xp-config:
+  block-break:
+    OAK_LOG: 5.0
+    SPRUCE_LOG: 5.0
+    BIRCH_LOG: 5.0
+    JUNGLE_LOG: 5.0
+    ACACIA_LOG: 5.0
+    DARK_OAK_LOG: 5.0
+    MANGROVE_LOG: 6.0
+    CHERRY_LOG: 6.0
+    CRIMSON_STEM: 7.0
+    WARPED_STEM: 7.0
+    BAMBOO_BLOCK: 4.0
+    STRIPPED_OAK_LOG: 3.0
+    STRIPPED_SPRUCE_LOG: 3.0
+    STRIPPED_BIRCH_LOG: 3.0
+    STRIPPED_JUNGLE_LOG: 3.0
+    STRIPPED_ACACIA_LOG: 3.0
+    STRIPPED_DARK_OAK_LOG: 3.0
+    STRIPPED_MANGROVE_LOG: 4.0
+    STRIPPED_CHERRY_LOG: 4.0
+  craft:
+    OAK_PLANKS: 1.0
+    SPRUCE_PLANKS: 1.0
+    BIRCH_PLANKS: 1.0
+    JUNGLE_PLANKS: 1.0
+    ACACIA_PLANKS: 1.0
+    DARK_OAK_PLANKS: 1.0
+    MANGROVE_PLANKS: 1.0
+    CHERRY_PLANKS: 1.0
+    BAMBOO_PLANKS: 1.0
+    CRIMSON_PLANKS: 1.0
+    WARPED_PLANKS: 1.0
+    CRAFTING_TABLE: 3.0
+    CHEST: 5.0
+    BARREL: 5.0
+    BOOKSHELF: 8.0
+    STICK: 0.5
+    OAK_DOOR: 4.0
+    OAK_FENCE: 2.0
+    OAK_STAIRS: 2.0
+    OAK_SLAB: 1.0
+    OAK_BOAT: 6.0
+
+# ============================================
+# PENALIDADES PARA NÃO-CARPINTEIROS
+# ============================================
+# Jogadores sem a profissão de Carpinteiro ativa sofrem estas penalidades
+# ao cortar madeira e craftar itens de madeira.
+penalties:
+  enabled: true
+  show-message: true
+
+  # Materiais que sofrem penalidade (troncos para block, itens para craft)
+  affected-materials:
+    # Troncos (block-break penalty)
+    - OAK_LOG
+    - SPRUCE_LOG
+    - BIRCH_LOG
+    - JUNGLE_LOG
+    - ACACIA_LOG
+    - DARK_OAK_LOG
+    - MANGROVE_LOG
+    - CHERRY_LOG
+    - CRIMSON_STEM
+    - WARPED_STEM
+    # Itens de madeira (craft penalty)
+    - OAK_PLANKS
+    - SPRUCE_PLANKS
+    - BIRCH_PLANKS
+    - JUNGLE_PLANKS
+    - ACACIA_PLANKS
+    - DARK_OAK_PLANKS
+    - MANGROVE_PLANKS
+    - CHERRY_PLANKS
+    - BAMBOO_PLANKS
+    - CRIMSON_PLANKS
+    - WARPED_PLANKS
+    - CRAFTING_TABLE
+    - CHEST
+    - BARREL
+    - BOOKSHELF
+    - STICK
+    - OAK_DOOR
+    - OAK_FENCE
+    - OAK_STAIRS
+    - OAK_SLAB
+    - OAK_BOAT
+
+  # Penalidade ao cortar madeira
+  block:
+    drop-chance: 0.60          # 60% de chance de dropar
+    durability-multiplier: 1.5 # Machado gasta 50% mais durabilidade
+    effect:
+      type: SLOWNESS            # Trabalho pesado
+      duration: 40              # 2 segundos
+      amplifier: 0              # Nível I
+
+  # Penalidade ao craftar itens de madeira
+  craft:
+    fail-chance: 0.15          # 15% de chance de falhar
+    # fail-result: null        # Sem resultado de falha

@@ -1,0 +1,1111 @@
+# ============================================================================
+#  ██╗      █████╗ ██████╗ ██╗███╗   ██╗ ██████╗
+#  ██║     ██╔══██╗██╔══██╗██║████╗  ██║██╔═══██╗
+#  ██║     ███████║██║  ██║██║██╔██╗ ██║██║   ██║
+#  ██║     ██╔══██║██║  ██║██║██║╚██╗██║██║   ██║
+#  ███████╗██║  ██║██████╔╝██║██║ ╚████║╚██████╔╝
+#  ╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝
+#
+#  Ladino (Rogue / Assassin) — Master of Shadows and Blades
+#  Dark purple (#330066, #6600cc) | Shadow black (#0d0d0d, #1a0033)
+#  Crimson (#cc0000) | Poison green (#00cc00)
+#
+#  Minecraft 1.21.1 — Folia Compatible
+#  All dynamic values use <skill.var.VARIABLE_NAME> syntax
+#  Custom mechanics: midgardDamage, midgardShield
+# ============================================================================
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  1. SOMBRAS FURTIVAS — Stealth Shadows (PASSIVE)                          ║
+# ║  The rogue cloaks in living shadows, gaining a passive stealth bonus.      ║
+# ║  Variables: stealth_damage (5.0 base / 2.5 per level)                     ║
+# ║  Milestones: lvl3=sombras_furtivas_mist, lvl5=sombras_furtivas_shadow     ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+SombrasFurtivas:
+  Skills:
+  - skill{s=SombrasFurtivas_Cast} @self
+
+SombrasFurtivas_Cast:
+  Skills:
+  - sound{s=entity.phantom.ambient;v=0.4;p=0.5} @self
+  - particles{p=large_smoke;amount=8;hS=0.4;vS=0.2;y=0.2;speed=0.02} @self
+  - particles{p=dust_color_transition;color1=#1a0033;color2=#330066;amount=10;hS=0.5;vS=0.4;y=0.5;size=1.0;speed=0} @self
+  - particles{p=smoke;amount=6;hS=0.3;vS=0.1;y=0.1;speed=0.01} @self
+  - midgardDamage{type=SHADOW;bonus=<skill.var.stealth_damage>} @self
+
+# --- Mk2 (Milestone: sombras_furtivas_mist) ---
+SombrasFurtivasMk2:
+  Skills:
+  - skill{s=SombrasFurtivasMk2_Cast} @self
+
+SombrasFurtivasMk2_Cast:
+  Skills:
+  - sound{s=entity.phantom.ambient;v=0.5;p=0.4} @self
+  - particles{p=large_smoke;amount=14;hS=0.5;vS=0.3;y=0.2;speed=0.03} @self
+  - particles{p=dust_color_transition;color1=#1a0033;color2=#6600cc;amount=16;hS=0.6;vS=0.5;y=0.5;size=1.3;speed=0} @self
+  - particles{p=smoke;amount=10;hS=0.4;vS=0.2;y=0.1;speed=0.02} @self
+  - particles{p=soul;amount=4;hS=0.3;vS=0.3;y=0.3;speed=0.01} @self
+  # Shadow mist orbital around feet
+  - orbital{auraName=sombras_mist;bulletType=ITEM;bulletItem=BLACK_DYE;radius=0.8;points=3;interval=1;duration=999999;oy=0.3} @self
+  - midgardDamage{type=SHADOW;bonus=<skill.var.stealth_damage>} @self
+
+# --- Mk3 (Milestone: sombras_furtivas_shadow) ---
+SombrasFurtivasMk3:
+  Skills:
+  - skill{s=SombrasFurtivasMk3_Cast} @self
+
+SombrasFurtivasMk3_Cast:
+  Skills:
+  - sound{s=entity.phantom.ambient;v=0.6;p=0.3} @self
+  - sound{s=entity.enderman.teleport;v=0.3;p=1.8} @self
+  - particles{p=large_smoke;amount=20;hS=0.6;vS=0.4;y=0.2;speed=0.04} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=22;hS=0.7;vS=0.6;y=0.5;size=1.6;speed=0} @self
+  - particles{p=smoke;amount=14;hS=0.5;vS=0.3;y=0.1;speed=0.03} @self
+  - particles{p=soul;amount=8;hS=0.4;vS=0.4;y=0.3;speed=0.02} @self
+  - particles{p=reverse_portal;amount=6;hS=0.3;vS=0.5;y=0.8;speed=0.01} @self
+  # Living shadow orbital
+  - orbital{auraName=sombras_shadow_inner;bulletType=ITEM;bulletItem=BLACK_DYE;radius=0.8;points=3;interval=1;duration=999999;oy=0.3} @self
+  - orbital{auraName=sombras_shadow_outer;bulletType=ITEM;bulletItem=PURPLE_DYE;radius=1.3;points=4;interval=1;duration=999999;oy=0.5} @self
+  - midgardDamage{type=SHADOW;bonus=<skill.var.stealth_damage>} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  2. GOLPE CRÍTICO — Critical Strike (PASSIVE)                             ║
+# ║  The rogue's trained eye finds weak points, increasing crit chance/damage. ║
+# ║  Variables: crit_chance (5.0/2.0), crit_damage (10.0/5.0)                 ║
+# ║  Milestones: lvl3=golpe_critico_slash, lvl5=golpe_critico_lethal          ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+GolpeCritico:
+  Skills:
+  - skill{s=GolpeCritico_Cast} @self
+
+GolpeCritico_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=0.5;p=1.5} @self
+  - particles{p=crit;amount=8;hS=0.3;vS=0.5;y=1.0;speed=0.05} @self
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#0d0d0d;amount=6;hS=0.4;vS=0.3;y=0.8;size=1.0;speed=0} @self
+  - particles{p=sweep_attack;amount=2;hS=0.2;vS=0.1;y=1.0;speed=0} @self
+
+# --- Mk2 (Milestone: golpe_critico_slash) ---
+GolpeCriticoMk2:
+  Skills:
+  - skill{s=GolpeCriticoMk2_Cast} @self
+
+GolpeCriticoMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=0.6;p=1.3} @self
+  - particles{p=crit;amount=14;hS=0.4;vS=0.6;y=1.0;speed=0.08} @self
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#330066;amount=10;hS=0.5;vS=0.4;y=0.8;size=1.3;speed=0} @self
+  - particles{p=sweep_attack;amount=4;hS=0.3;vS=0.2;y=1.0;speed=0} @self
+  - particles{p=enchanted_hit;amount=6;hS=0.3;vS=0.4;y=1.0;speed=0.05} @self
+
+# --- Mk3 (Milestone: golpe_critico_lethal) ---
+GolpeCriticoMk3:
+  Skills:
+  - skill{s=GolpeCriticoMk3_Cast} @self
+
+GolpeCriticoMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=0.7;p=1.2} @self
+  - sound{s=entity.phantom.ambient;v=0.3;p=1.5} @self
+  - particles{p=crit;amount=20;hS=0.5;vS=0.8;y=1.0;speed=0.1} @self
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#6600cc;amount=14;hS=0.6;vS=0.5;y=0.8;size=1.6;speed=0} @self
+  - particles{p=sweep_attack;amount=6;hS=0.4;vS=0.3;y=1.0;speed=0} @self
+  - particles{p=enchanted_hit;amount=10;hS=0.4;vS=0.5;y=1.0;speed=0.08} @self
+  - particles{p=soul;amount=4;hS=0.3;vS=0.3;y=1.2;speed=0.02} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  3. PUNHALADA — Dagger Stab (COMMON)                                      ║
+# ║  A lightning-fast dagger stab that pierces the target's defenses.          ║
+# ║  Variables: damage (14.0 base / 4.0 per level)                            ║
+# ║  Milestones: lvl3=punhalada_slash, lvl5=punhalada_deep                    ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+Punhalada:
+  Skills:
+  - skill{s=Punhalada_Cast} @self
+
+Punhalada_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.0;p=1.5} @self
+  - particles{p=sweep_attack;amount=3;hS=0.2;vS=0.1;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#0d0d0d;amount=8;hS=0.3;vS=0.2;y=1.0;size=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - delay 1
+  - skill{s=Punhalada_Impact} @self
+
+Punhalada_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.2;p=1.3} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @EntitiesInCone{angle=35;range=3;rotation=0;length=3}
+  - particles{p=sweep_attack;amount=4;hS=0.3;vS=0.2;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=crit;amount=6;hS=0.3;vS=0.3;y=1.0;speed=0.05} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#330066;amount=10;hS=0.5;vS=0.3;y=0.8;size=1.2;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=smoke;amount=5;hS=0.3;vS=0.2;y=0.5;speed=0.03} @forward{f=2;lockpitch=true}
+
+# --- Mk2 (Milestone: punhalada_slash) ---
+PunhaladaMk2:
+  Skills:
+  - skill{s=PunhaladaMk2_Cast} @self
+
+PunhaladaMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.2;p=1.4} @self
+  - particles{p=sweep_attack;amount=5;hS=0.3;vS=0.2;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#0d0d0d;amount=12;hS=0.4;vS=0.3;y=1.0;size=1.3;speed=0} @forward{f=1.5;lockpitch=true}
+  - delay 1
+  - skill{s=PunhaladaMk2_Impact} @self
+
+PunhaladaMk2_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.4;p=1.2} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @EntitiesInCone{angle=40;range=3.5;rotation=0;length=3.5}
+  # Double slash visual
+  - particles{p=sweep_attack;amount=6;hS=0.4;vS=0.3;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=sweep_attack;amount=4;hS=0.3;vS=0.2;y=0.7;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=crit;amount=10;hS=0.4;vS=0.4;y=1.0;speed=0.08} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#6600cc;amount=15;hS=0.6;vS=0.4;y=0.8;size=1.5;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=enchanted_hit;amount=6;hS=0.3;vS=0.3;y=1.0;speed=0.05} @forward{f=2;lockpitch=true}
+  - particles{p=smoke;amount=8;hS=0.4;vS=0.3;y=0.5;speed=0.05} @forward{f=2;lockpitch=true}
+
+# --- Mk3 (Milestone: punhalada_deep) ---
+PunhaladaMk3:
+  Skills:
+  - skill{s=PunhaladaMk3_Cast} @self
+
+PunhaladaMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.4;p=1.3} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.5;p=1.5} @self
+  - particles{p=sweep_attack;amount=6;hS=0.4;vS=0.3;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#330066;amount=16;hS=0.5;vS=0.4;y=1.0;size=1.5;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=soul;amount=4;hS=0.2;vS=0.3;y=1.2;speed=0.02} @self
+  - delay 1
+  - skill{s=PunhaladaMk3_Impact} @self
+
+PunhaladaMk3_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.6;p=1.1} @self
+  - sound{s=entity.phantom.ambient;v=0.3;p=1.2} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @EntitiesInCone{angle=45;range=4;rotation=0;length=4}
+  # Triple slash — deep penetration
+  - particles{p=sweep_attack;amount=8;hS=0.5;vS=0.4;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=sweep_attack;amount=5;hS=0.4;vS=0.3;y=0.7;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=sweep_attack;amount=4;hS=0.3;vS=0.2;y=1.3;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=crit;amount=16;hS=0.5;vS=0.5;y=1.0;speed=0.1} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#6600cc;amount=22;hS=0.8;vS=0.5;y=0.8;size=1.8;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=enchanted_hit;amount=10;hS=0.4;vS=0.4;y=1.0;speed=0.08} @forward{f=2;lockpitch=true}
+  - particles{p=reverse_portal;amount=6;hS=0.3;vS=0.3;y=1.0;speed=0.03} @forward{f=2;lockpitch=true}
+  - particles{p=large_smoke;amount=8;hS=0.5;vS=0.4;y=0.3;speed=0.06} @forward{f=2;lockpitch=true}
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  4. EVASÃO — Evasion (COMMON)                                             ║
+# ║  A swift dodge backward, vanishing momentarily in a puff of shadow.        ║
+# ║  Variables: duration (2.0 base / 0.3 per level)                           ║
+# ║  Milestones: lvl3=evasao_dash, lvl5=evasao_phantom                        ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+Evasao:
+  Skills:
+  - skill{s=Evasao_Cast} @self
+
+Evasao_Cast:
+  Skills:
+  - sound{s=entity.enderman.teleport;v=0.8;p=1.5} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.6;p=1.2} @self
+  # Smoke burst at origin
+  - particles{p=large_smoke;amount=20;hS=0.6;vS=0.8;y=0.5;speed=0.08} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#330066;amount=12;hS=0.5;vS=0.6;y=0.5;size=1.5;speed=0} @self
+  # Lunge backward
+  - lunge{velocity=-2.0;velocityY=0.2} @self
+  # Brief invisibility
+  - potion{type=INVISIBILITY;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  # Shadow trail
+  - particles{p=smoke;amount=6;hS=0.3;vS=0.2;y=0.5;speed=0.05;repeat=4;repeati=2} @self
+  - particles{p=large_smoke;amount=4;hS=0.2;vS=0.3;y=0.3;speed=0.03;repeat=4;repeati=2} @self
+
+# --- Mk2 (Milestone: evasao_dash) ---
+EvasaoMk2:
+  Skills:
+  - skill{s=EvasaoMk2_Cast} @self
+
+EvasaoMk2_Cast:
+  Skills:
+  - sound{s=entity.enderman.teleport;v=0.9;p=1.4} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.7;p=1.1} @self
+  # Enhanced smoke burst
+  - particles{p=large_smoke;amount=28;hS=0.7;vS=1.0;y=0.5;speed=0.1} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=18;hS=0.6;vS=0.8;y=0.5;size=1.8;speed=0} @self
+  - particles{p=soul;amount=6;hS=0.4;vS=0.5;y=0.8;speed=0.03} @self
+  # Faster backward dash
+  - lunge{velocity=-2.8;velocityY=0.2} @self
+  # Longer invisibility + speed boost
+  - potion{type=INVISIBILITY;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=SPEED;duration=<skill.var.duration>;level=1;hasParticles=false} @self
+  # Enhanced shadow trail
+  - particles{p=smoke;amount=10;hS=0.4;vS=0.3;y=0.5;speed=0.06;repeat=6;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#1a0033;color2=#330066;amount=6;hS=0.3;vS=0.4;y=0.5;size=1.2;speed=0;repeat=6;repeati=2} @self
+  - particles{p=large_smoke;amount=6;hS=0.3;vS=0.4;y=0.3;speed=0.04;repeat=6;repeati=2} @self
+
+# --- Mk3 (Milestone: evasao_phantom) ---
+EvasaoMk3:
+  Skills:
+  - skill{s=EvasaoMk3_Cast} @self
+
+EvasaoMk3_Cast:
+  Skills:
+  - sound{s=entity.enderman.teleport;v=1.0;p=1.3} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.8;p=1.0} @self
+  - sound{s=entity.phantom.ambient;v=0.4;p=1.0} @self
+  # Phantom smoke explosion
+  - particles{p=large_smoke;amount=36;hS=0.8;vS=1.2;y=0.5;speed=0.12} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=24;hS=0.8;vS=1.0;y=0.5;size=2.0;speed=0} @self
+  - particles{p=soul;amount=10;hS=0.5;vS=0.6;y=0.8;speed=0.04} @self
+  - particles{p=reverse_portal;amount=8;hS=0.4;vS=0.8;y=1.0;speed=0.03} @self
+  # Phantom dash backward
+  - lunge{velocity=-3.5;velocityY=0.25} @self
+  # Extended invisibility + speed + midgardShield
+  - potion{type=INVISIBILITY;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=SPEED;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  - midgardShield{a=5;d=<skill.var.duration>} @self
+  # Phantom shadow trail
+  - particles{p=smoke;amount=14;hS=0.5;vS=0.4;y=0.5;speed=0.08;repeat=8;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#1a0033;color2=#6600cc;amount=10;hS=0.4;vS=0.5;y=0.5;size=1.5;speed=0;repeat=8;repeati=2} @self
+  - particles{p=reverse_portal;amount=4;hS=0.3;vS=0.4;y=0.8;speed=0.02;repeat=8;repeati=2} @self
+  - particles{p=large_smoke;amount=8;hS=0.4;vS=0.5;y=0.3;speed=0.05;repeat=8;repeati=2} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  5. VENENO MORTAL — Deadly Poison (COMMON)                                ║
+# ║  Coats the blade in lethal venom, dealing poison DoT to the target.        ║
+# ║  Variables: damage (8.0/2.5), poison_damage (4.0/1.5)                     ║
+# ║  Milestones: lvl3=veneno_mortal_drip, lvl5=veneno_mortal_toxic             ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+VenenoMortal:
+  Skills:
+  - skill{s=VenenoMortal_Cast} @self
+
+VenenoMortal_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=0.8;p=1.3} @self
+  # Poison cloud on impact
+  - particles{p=dust_color_transition;color1=#00cc00;color2=#006600;amount=12;hS=0.3;vS=0.4;y=1.0;size=1.2;speed=0} @target
+  - particles{p=witch;amount=10;hS=0.3;vS=0.5;y=0.8;speed=0.03} @target
+  - particles{p=smoke;amount=6;hS=0.3;vS=0.3;y=0.5;speed=0.02} @target
+  # Initial strike
+  - midgardDamage{a=<skill.var.damage>;type=POISON} @target
+  # Poison DoT ticks
+  - midgardDamage{a=<skill.var.poison_damage>;type=POISON;repeat=4;repeati=20} @target
+  - particles{p=dust_color_transition;color1=#00cc00;color2=#0d0d0d;amount=6;hS=0.2;vS=0.3;y=0.8;size=1.0;speed=0;repeat=4;repeati=20} @target
+  - particles{p=witch;amount=4;hS=0.2;vS=0.3;y=0.6;speed=0.02;repeat=4;repeati=20} @target
+
+# --- Mk2 (Milestone: veneno_mortal_drip) ---
+VenenoMortalMk2:
+  Skills:
+  - skill{s=VenenoMortalMk2_Cast} @self
+
+VenenoMortalMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=0.9;p=1.2} @self
+  - sound{s=entity.phantom.ambient;v=0.3;p=1.0} @self
+  # Enhanced poison cloud with dripping effect
+  - particles{p=dust_color_transition;color1=#00cc00;color2=#006600;amount=18;hS=0.4;vS=0.5;y=1.0;size=1.5;speed=0} @target
+  - particles{p=witch;amount=14;hS=0.4;vS=0.6;y=0.8;speed=0.04} @target
+  - particles{p=dust_color_transition;color1=#006600;color2=#0d0d0d;amount=8;hS=0.2;vS=0.1;y=0.1;size=0.8;speed=0.01} @target
+  - particles{p=smoke;amount=8;hS=0.4;vS=0.4;y=0.5;speed=0.03} @target
+  # Initial strike
+  - midgardDamage{a=<skill.var.damage>;type=POISON} @target
+  - potion{type=SLOWNESS;duration=40;level=0;hasParticles=false} @target
+  # Poison DoT ticks — more ticks
+  - midgardDamage{a=<skill.var.poison_damage>;type=POISON;repeat=6;repeati=20} @target
+  - particles{p=dust_color_transition;color1=#00cc00;color2=#006600;amount=8;hS=0.3;vS=0.4;y=0.8;size=1.2;speed=0;repeat=6;repeati=20} @target
+  - particles{p=witch;amount=6;hS=0.3;vS=0.4;y=0.6;speed=0.03;repeat=6;repeati=20} @target
+  # Dripping particles on ground under target
+  - particles{p=dust_color_transition;color1=#00cc00;color2=#0d0d0d;amount=4;hS=0.3;vS=0.05;y=0.05;size=0.6;speed=0;repeat=6;repeati=20} @target
+
+# --- Mk3 (Milestone: veneno_mortal_toxic) ---
+VenenoMortalMk3:
+  Skills:
+  - skill{s=VenenoMortalMk3_Cast} @self
+
+VenenoMortalMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.0;p=1.1} @self
+  - sound{s=entity.phantom.ambient;v=0.4;p=0.8} @self
+  # Toxic cloud — larger, more lethal
+  - particles{p=dust_color_transition;color1=#00cc00;color2=#330066;amount=24;hS=0.6;vS=0.7;y=1.0;size=1.8;speed=0} @target
+  - particles{p=witch;amount=20;hS=0.5;vS=0.8;y=0.8;speed=0.05} @target
+  - particles{p=dust_color_transition;color1=#006600;color2=#0d0d0d;amount=12;hS=0.3;vS=0.2;y=0.1;size=1.0;speed=0.02} @target
+  - particles{p=large_smoke;amount=10;hS=0.5;vS=0.6;y=0.5;speed=0.04} @target
+  - particles{p=soul;amount=4;hS=0.2;vS=0.3;y=1.2;speed=0.02} @target
+  # Initial strike + debuffs
+  - midgardDamage{a=<skill.var.damage>;type=POISON} @target
+  - potion{type=SLOWNESS;duration=60;level=1;hasParticles=false} @target
+  - potion{type=WEAKNESS;duration=60;level=0;hasParticles=false} @target
+  # Toxic DoT ticks — more damage, more ticks
+  - midgardDamage{a=<skill.var.poison_damage>;type=POISON;repeat=8;repeati=20} @target
+  - particles{p=dust_color_transition;color1=#00cc00;color2=#330066;amount=10;hS=0.4;vS=0.5;y=0.8;size=1.4;speed=0;repeat=8;repeati=20} @target
+  - particles{p=witch;amount=8;hS=0.4;vS=0.5;y=0.6;speed=0.04;repeat=8;repeati=20} @target
+  - particles{p=reverse_portal;amount=3;hS=0.2;vS=0.3;y=1.0;speed=0.02;repeat=8;repeati=20} @target
+  # Toxic puddle on ground
+  - particles{p=dust_color_transition;color1=#00cc00;color2=#0d0d0d;amount=6;hS=0.5;vS=0.05;y=0.05;size=0.8;speed=0;repeat=8;repeati=20} @target
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  6. EMBOSCADA — Ambush (COMMON)                                           ║
+# ║  Vanishes in smoke and teleports behind the target for a devastating       ║
+# ║  backstab from the shadows.                                                ║
+# ║  Variables: damage (22.0 base / 5.5 per level)                            ║
+# ║  Milestones: lvl3=emboscada_shadow, lvl5=emboscada_strike                 ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+Emboscada:
+  Skills:
+  - skill{s=Emboscada_Cast} @self
+
+Emboscada_Cast:
+  Skills:
+  # Vanish in smoke at origin
+  - sound{s=entity.enderman.teleport;v=1.0;p=0.8} @self
+  - particles{p=large_smoke;amount=25;hS=0.6;vS=1.0;y=0.5;speed=0.1} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#1a0033;amount=15;hS=0.5;vS=0.8;y=0.5;size=1.5;speed=0} @self
+  - potion{type=INVISIBILITY;duration=10;level=0;hasParticles=false} @self
+  - delay 4
+  # Teleport behind target
+  - teleport{destination=@target;offset=0,0,-2} @self
+  - delay 1
+  - skill{s=Emboscada_Strike} @self
+
+Emboscada_Strike:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.5;p=1.0} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.8;p=0.8} @self
+  # Appear from shadows — dark backstab
+  - particles{p=large_smoke;amount=15;hS=0.4;vS=0.6;y=0.5;speed=0.06} @self
+  - particles{p=dust_color_transition;color1=#330066;color2=#cc0000;amount=14;hS=0.5;vS=0.5;y=1.0;size=1.5;speed=0} @self
+  - particles{p=sweep_attack;amount=4;hS=0.3;vS=0.2;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=crit;amount=8;hS=0.3;vS=0.4;y=1.0;speed=0.05} @forward{f=1.5;lockpitch=true}
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @target
+
+# --- Mk2 (Milestone: emboscada_shadow) ---
+EmboscadaMk2:
+  Skills:
+  - skill{s=EmboscadaMk2_Cast} @self
+
+EmboscadaMk2_Cast:
+  Skills:
+  # Enhanced vanish
+  - sound{s=entity.enderman.teleport;v=1.0;p=0.7} @self
+  - sound{s=entity.phantom.ambient;v=0.4;p=0.6} @self
+  - particles{p=large_smoke;amount=32;hS=0.7;vS=1.2;y=0.5;speed=0.12} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=20;hS=0.6;vS=1.0;y=0.5;size=1.8;speed=0} @self
+  - particles{p=soul;amount=6;hS=0.4;vS=0.5;y=0.8;speed=0.03} @self
+  - potion{type=INVISIBILITY;duration=12;level=0;hasParticles=false} @self
+  - delay 4
+  # Teleport behind target
+  - teleport{destination=@target;offset=0,0,-2} @self
+  - delay 1
+  - skill{s=EmboscadaMk2_Strike} @self
+
+EmboscadaMk2_Strike:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.7;p=0.9} @self
+  - sound{s=entity.illusioner.mirror_move;v=1.0;p=0.7} @self
+  # Shadow backstab — enhanced
+  - particles{p=large_smoke;amount=20;hS=0.5;vS=0.8;y=0.5;speed=0.08} @self
+  - particles{p=dust_color_transition;color1=#330066;color2=#cc0000;amount=20;hS=0.6;vS=0.6;y=1.0;size=1.8;speed=0} @self
+  - particles{p=sweep_attack;amount=6;hS=0.4;vS=0.3;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=crit;amount=12;hS=0.4;vS=0.5;y=1.0;speed=0.08} @forward{f=1.5;lockpitch=true}
+  - particles{p=enchanted_hit;amount=6;hS=0.3;vS=0.3;y=1.0;speed=0.05} @forward{f=1.5;lockpitch=true}
+  - particles{p=soul;amount=4;hS=0.3;vS=0.4;y=1.2;speed=0.02} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @target
+  - potion{type=SLOWNESS;duration=30;level=1;hasParticles=false} @target
+
+# --- Mk3 (Milestone: emboscada_strike) ---
+EmboscadaMk3:
+  Skills:
+  - skill{s=EmboscadaMk3_Cast} @self
+
+EmboscadaMk3_Cast:
+  Skills:
+  # Phantom vanish — supreme
+  - sound{s=entity.enderman.teleport;v=1.2;p=0.6} @self
+  - sound{s=entity.phantom.ambient;v=0.5;p=0.5} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.6;p=0.8} @self
+  - particles{p=large_smoke;amount=40;hS=0.8;vS=1.5;y=0.5;speed=0.15} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=26;hS=0.8;vS=1.2;y=0.5;size=2.0;speed=0} @self
+  - particles{p=soul;amount=10;hS=0.5;vS=0.7;y=0.8;speed=0.04} @self
+  - particles{p=reverse_portal;amount=8;hS=0.4;vS=0.8;y=1.0;speed=0.03} @self
+  - potion{type=INVISIBILITY;duration=15;level=0;hasParticles=false} @self
+  - delay 4
+  # Teleport behind target
+  - teleport{destination=@target;offset=0,0,-2} @self
+  - delay 1
+  - skill{s=EmboscadaMk3_Strike} @self
+
+EmboscadaMk3_Strike:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.8} @self
+  - sound{s=entity.illusioner.mirror_move;v=1.2;p=0.6} @self
+  - sound{s=entity.phantom.ambient;v=0.5;p=0.9} @self
+  # Lethal backstab from the void
+  - particles{p=large_smoke;amount=28;hS=0.6;vS=1.0;y=0.5;speed=0.1} @self
+  - particles{p=dust_color_transition;color1=#330066;color2=#cc0000;amount=28;hS=0.8;vS=0.8;y=1.0;size=2.2;speed=0} @self
+  - particles{p=sweep_attack;amount=8;hS=0.5;vS=0.4;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=crit;amount=18;hS=0.5;vS=0.6;y=1.0;speed=0.1} @forward{f=1.5;lockpitch=true}
+  - particles{p=enchanted_hit;amount=10;hS=0.4;vS=0.4;y=1.0;speed=0.08} @forward{f=1.5;lockpitch=true}
+  - particles{p=soul;amount=8;hS=0.4;vS=0.5;y=1.2;speed=0.03} @self
+  - particles{p=reverse_portal;amount=6;hS=0.3;vS=0.6;y=1.0;speed=0.02} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @target
+  - potion{type=SLOWNESS;duration=40;level=2;hasParticles=false} @target
+  - potion{type=WEAKNESS;duration=40;level=0;hasParticles=false} @target
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  7. PASSO SOMBRIO — Shadow Step (COMMON)                                  ║
+# ║  Lunges through the shadows, leaving a trail of darkness and dealing       ║
+# ║  damage to all enemies in the path.                                        ║
+# ║  Variables: damage (18.0 base / 4.5 per level)                            ║
+# ║  Milestones: lvl3=passo_sombrio_mist, lvl5=passo_sombrio_void             ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+PassoSombrio:
+  Skills:
+  - skill{s=PassoSombrio_Cast} @self
+
+PassoSombrio_Cast:
+  Skills:
+  - sound{s=entity.enderman.teleport;v=0.9;p=1.2} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.7;p=1.0} @self
+  # Smoke burst at origin
+  - particles{p=large_smoke;amount=18;hS=0.5;vS=0.6;y=0.5;speed=0.08} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#330066;amount=12;hS=0.4;vS=0.5;y=0.5;size=1.5;speed=0} @self
+  # Shadow lunge forward
+  - lunge{velocity=3.0;velocityY=0} @forward{f=6;lockpitch=true}
+  # Damage in path
+  - midgardDamage{a=<skill.var.damage>;type=SHADOW} @EntitiesInCone{angle=30;range=6;rotation=0;length=6}
+  # Shadow trail behind
+  - particles{p=large_smoke;amount=8;hS=0.3;vS=0.3;y=0.5;speed=0.04;repeat=6;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#1a0033;color2=#0d0d0d;amount=6;hS=0.3;vS=0.4;y=0.5;size=1.2;speed=0;repeat=6;repeati=2} @self
+  - particles{p=smoke;amount=5;hS=0.2;vS=0.2;y=0.3;speed=0.03;repeat=6;repeati=2} @self
+  # Arrival burst
+  - delay 6
+  - particles{p=large_smoke;amount=14;hS=0.4;vS=0.5;y=0.5;speed=0.06} @self
+  - sound{s=entity.player.attack.sweep;v=0.8;p=1.0} @self
+
+# --- Mk2 (Milestone: passo_sombrio_mist) ---
+PassoSombrioMk2:
+  Skills:
+  - skill{s=PassoSombrioMk2_Cast} @self
+
+PassoSombrioMk2_Cast:
+  Skills:
+  - sound{s=entity.enderman.teleport;v=1.0;p=1.1} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.8;p=0.9} @self
+  # Enhanced smoke burst
+  - particles{p=large_smoke;amount=25;hS=0.6;vS=0.8;y=0.5;speed=0.1} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=18;hS=0.5;vS=0.7;y=0.5;size=1.8;speed=0} @self
+  - particles{p=soul;amount=4;hS=0.3;vS=0.4;y=0.8;speed=0.02} @self
+  # Shadow lunge — faster, farther
+  - lunge{velocity=3.5;velocityY=0} @forward{f=7;lockpitch=true}
+  # Damage in wider path
+  - midgardDamage{a=<skill.var.damage>;type=SHADOW} @EntitiesInCone{angle=35;range=7;rotation=0;length=7}
+  - throw{velocity=0.6;velocityY=0.3} @EntitiesInCone{angle=35;range=7;rotation=0;length=7}
+  # Shadow mist trail
+  - particles{p=large_smoke;amount=12;hS=0.4;vS=0.4;y=0.5;speed=0.06;repeat=8;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#1a0033;color2=#330066;amount=8;hS=0.3;vS=0.5;y=0.5;size=1.5;speed=0;repeat=8;repeati=2} @self
+  - particles{p=soul;amount=3;hS=0.2;vS=0.3;y=0.6;speed=0.02;repeat=8;repeati=2} @self
+  - particles{p=smoke;amount=8;hS=0.3;vS=0.3;y=0.3;speed=0.04;repeat=8;repeati=2} @self
+  # Arrival dark burst
+  - delay 8
+  - particles{p=large_smoke;amount=20;hS=0.5;vS=0.7;y=0.5;speed=0.08} @self
+  - particles{p=dust_color_transition;color1=#330066;color2=#0d0d0d;amount=12;hS=0.4;vS=0.5;y=0.5;size=1.5;speed=0} @self
+  - sound{s=entity.player.attack.sweep;v=1.0;p=0.9} @self
+
+# --- Mk3 (Milestone: passo_sombrio_void) ---
+PassoSombrioMk3:
+  Skills:
+  - skill{s=PassoSombrioMk3_Cast} @self
+
+PassoSombrioMk3_Cast:
+  Skills:
+  - sound{s=entity.enderman.teleport;v=1.2;p=1.0} @self
+  - sound{s=entity.illusioner.mirror_move;v=1.0;p=0.8} @self
+  - sound{s=entity.phantom.ambient;v=0.5;p=0.7} @self
+  # Void eruption at origin
+  - particles{p=large_smoke;amount=34;hS=0.8;vS=1.0;y=0.5;speed=0.12} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=24;hS=0.7;vS=0.9;y=0.5;size=2.0;speed=0} @self
+  - particles{p=soul;amount=8;hS=0.4;vS=0.6;y=0.8;speed=0.04} @self
+  - particles{p=reverse_portal;amount=8;hS=0.4;vS=0.7;y=1.0;speed=0.03} @self
+  # Void lunge — maximum speed
+  - lunge{velocity=4.0;velocityY=0} @forward{f=8;lockpitch=true}
+  # Damage in wide path + debuff
+  - midgardDamage{a=<skill.var.damage>;type=SHADOW} @EntitiesInCone{angle=40;range=8;rotation=0;length=8}
+  - throw{velocity=1.0;velocityY=0.4} @EntitiesInCone{angle=40;range=8;rotation=0;length=8}
+  - potion{type=BLINDNESS;duration=30;level=0;hasParticles=false} @EntitiesInCone{angle=40;range=8;rotation=0;length=8}
+  # Void shadow trail
+  - particles{p=large_smoke;amount=16;hS=0.5;vS=0.5;y=0.5;speed=0.08;repeat=10;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#1a0033;color2=#6600cc;amount=12;hS=0.4;vS=0.6;y=0.5;size=1.8;speed=0;repeat=10;repeati=2} @self
+  - particles{p=soul;amount=4;hS=0.3;vS=0.4;y=0.6;speed=0.03;repeat=10;repeati=2} @self
+  - particles{p=reverse_portal;amount=3;hS=0.2;vS=0.4;y=0.8;speed=0.02;repeat=10;repeati=2} @self
+  - particles{p=smoke;amount=10;hS=0.4;vS=0.4;y=0.3;speed=0.05;repeat=10;repeati=2} @self
+  # Void arrival explosion
+  - delay 10
+  - skill{s=PassoSombrioMk3_Arrival} @self
+
+PassoSombrioMk3_Arrival:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.2;p=0.8} @self
+  - sound{s=entity.enderman.teleport;v=0.6;p=0.6} @self
+  - particles{p=large_smoke;amount=30;hS=0.7;vS=1.0;y=0.5;speed=0.1} @self
+  - particles{p=dust_color_transition;color1=#6600cc;color2=#0d0d0d;amount=18;hS=0.6;vS=0.8;y=0.5;size=2.0;speed=0} @self
+  - particles{p=reverse_portal;amount=10;hS=0.5;vS=0.8;y=1.0;speed=0.04} @self
+  - particles{p=soul;amount=6;hS=0.4;vS=0.5;y=0.8;speed=0.03} @self
+  - midgardDamage{a=<skill.var.damage> * 0.3;type=SHADOW} @EntitiesNearOrigin{r=3}
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  8. CORTE PROFUNDO — Deep Cut (COMMON)                                    ║
+# ║  A precise deep slash that causes severe bleeding over time.               ║
+# ║  Variables: damage (20.0/5.0), bleed_damage (3.0/1.0)                     ║
+# ║  Milestones: lvl3=corte_profundo_slash, lvl5=corte_profundo_bleed          ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+CorteProfundo:
+  Skills:
+  - skill{s=CorteProfundo_Cast} @self
+
+CorteProfundo_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.2;p=0.9} @self
+  - particles{p=sweep_attack;amount=4;hS=0.3;vS=0.2;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#0d0d0d;amount=10;hS=0.4;vS=0.3;y=1.0;size=1.3;speed=0} @forward{f=1.5;lockpitch=true}
+  - delay 2
+  - skill{s=CorteProfundo_Impact} @self
+
+CorteProfundo_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.4;p=0.8} @self
+  # Deep slash
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @target
+  - particles{p=sweep_attack;amount=5;hS=0.4;vS=0.3;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#660000;amount=14;hS=0.5;vS=0.4;y=0.8;size=1.5;speed=0} @target
+  - particles{p=crit;amount=8;hS=0.3;vS=0.3;y=1.0;speed=0.05} @target
+  # Bleed DoT ticks
+  - midgardDamage{a=<skill.var.bleed_damage>;type=PHYSICAL;repeat=5;repeati=20} @target
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#0d0d0d;amount=5;hS=0.2;vS=0.1;y=0.3;size=0.8;speed=0.01;repeat=5;repeati=20} @target
+  - particles{p=smoke;amount=3;hS=0.2;vS=0.2;y=0.5;speed=0.02;repeat=5;repeati=20} @target
+
+# --- Mk2 (Milestone: corte_profundo_slash) ---
+CorteProfundoMk2:
+  Skills:
+  - skill{s=CorteProfundoMk2_Cast} @self
+
+CorteProfundoMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.3;p=0.8} @self
+  - sound{s=entity.phantom.ambient;v=0.3;p=1.2} @self
+  - particles{p=sweep_attack;amount=6;hS=0.4;vS=0.3;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#330066;amount=14;hS=0.5;vS=0.4;y=1.0;size=1.5;speed=0} @forward{f=1.5;lockpitch=true}
+  - delay 2
+  - skill{s=CorteProfundoMk2_Impact} @self
+
+CorteProfundoMk2_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.6;p=0.7} @self
+  # Deeper slash with dual cut
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @target
+  - particles{p=sweep_attack;amount=7;hS=0.5;vS=0.4;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=sweep_attack;amount=4;hS=0.3;vS=0.2;y=0.6;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#660000;amount=20;hS=0.6;vS=0.5;y=0.8;size=1.8;speed=0} @target
+  - particles{p=crit;amount=12;hS=0.4;vS=0.4;y=1.0;speed=0.08} @target
+  - particles{p=enchanted_hit;amount=6;hS=0.3;vS=0.3;y=1.0;speed=0.05} @target
+  # Enhanced bleed — more ticks, slower target
+  - potion{type=SLOWNESS;duration=40;level=0;hasParticles=false} @target
+  - midgardDamage{a=<skill.var.bleed_damage>;type=PHYSICAL;repeat=7;repeati=20} @target
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#0d0d0d;amount=7;hS=0.3;vS=0.2;y=0.3;size=1.0;speed=0.02;repeat=7;repeati=20} @target
+  - particles{p=smoke;amount=4;hS=0.2;vS=0.2;y=0.5;speed=0.03;repeat=7;repeati=20} @target
+  # Blood drip on ground
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#660000;amount=3;hS=0.3;vS=0.05;y=0.05;size=0.6;speed=0;repeat=7;repeati=20} @target
+
+# --- Mk3 (Milestone: corte_profundo_bleed) ---
+CorteProfundoMk3:
+  Skills:
+  - skill{s=CorteProfundoMk3_Cast} @self
+
+CorteProfundoMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.5;p=0.7} @self
+  - sound{s=entity.phantom.ambient;v=0.4;p=1.0} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.4;p=1.2} @self
+  - particles{p=sweep_attack;amount=8;hS=0.5;vS=0.4;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#6600cc;amount=18;hS=0.6;vS=0.5;y=1.0;size=1.8;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=soul;amount=4;hS=0.2;vS=0.3;y=1.2;speed=0.02} @self
+  - delay 2
+  - skill{s=CorteProfundoMk3_Impact} @self
+
+CorteProfundoMk3_Impact:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.8;p=0.6} @self
+  - sound{s=entity.enderman.teleport;v=0.4;p=1.5} @self
+  # Lethal deep slash — triple cut
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @target
+  - particles{p=sweep_attack;amount=10;hS=0.6;vS=0.5;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=sweep_attack;amount=6;hS=0.4;vS=0.3;y=0.6;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=sweep_attack;amount=4;hS=0.3;vS=0.2;y=1.4;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#6600cc;amount=26;hS=0.7;vS=0.6;y=0.8;size=2.2;speed=0} @target
+  - particles{p=crit;amount=18;hS=0.5;vS=0.5;y=1.0;speed=0.1} @target
+  - particles{p=enchanted_hit;amount=10;hS=0.4;vS=0.4;y=1.0;speed=0.08} @target
+  - particles{p=reverse_portal;amount=5;hS=0.3;vS=0.4;y=1.0;speed=0.02} @target
+  # Hemorrhage — severe bleed + debuffs
+  - potion{type=SLOWNESS;duration=60;level=1;hasParticles=false} @target
+  - potion{type=WEAKNESS;duration=60;level=0;hasParticles=false} @target
+  - midgardDamage{a=<skill.var.bleed_damage>;type=PHYSICAL;repeat=10;repeati=20} @target
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#0d0d0d;amount=8;hS=0.3;vS=0.3;y=0.3;size=1.2;speed=0.02;repeat=10;repeati=20} @target
+  - particles{p=smoke;amount=5;hS=0.3;vS=0.3;y=0.5;speed=0.03;repeat=10;repeati=20} @target
+  - particles{p=soul;amount=2;hS=0.2;vS=0.3;y=1.0;speed=0.02;repeat=10;repeati=20} @target
+  # Blood pooling on ground
+  - particles{p=dust_color_transition;color1=#cc0000;color2=#660000;amount=5;hS=0.4;vS=0.05;y=0.05;size=0.8;speed=0;repeat=10;repeati=20} @target
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  9. ASSASSINATO — Assassination (ULTIMATE — Channeled)                    ║
+# ║  The rogue vanishes completely, shadows converge on the target, and a      ║
+# ║  single devastating strike is delivered from pure darkness.                 ║
+# ║  Variables: damage (50.0 base / 10.0 per level)                           ║
+# ║  Milestones: lvl3=assassinato_shadow, lvl5=assassinato_execute             ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+Assassinato:
+  Skills:
+  - skill{s=Assassinato_Cast} @self
+
+Assassinato_Cast:
+  Skills:
+  # The rogue vanishes into shadow
+  - sound{s=entity.enderman.teleport;v=1.0;p=0.6} @self
+  - sound{s=entity.phantom.ambient;v=0.8;p=0.4} @self
+  - particles{p=large_smoke;amount=30;hS=0.7;vS=1.2;y=0.5;speed=0.12} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#1a0033;amount=20;hS=0.6;vS=1.0;y=0.5;size=2.0;speed=0} @self
+  - particles{p=soul;amount=8;hS=0.4;vS=0.6;y=0.8;speed=0.03} @self
+  - potion{type=INVISIBILITY;duration=30;level=0;hasParticles=false} @self
+  - delay 5
+  # Shadows converge on target
+  - skill{s=Assassinato_Converge} @self
+  - delay 10
+  # Teleport and execute
+  - teleport{destination=@target;offset=0,0,-2} @self
+  - delay 2
+  - skill{s=Assassinato_Execute} @self
+
+Assassinato_Converge:
+  Skills:
+  - sound{s=entity.phantom.ambient;v=0.5;p=0.3} @target
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#330066;amount=16;hS=2.0;vS=0.3;y=0.8;size=1.2;speed=0.2} @target
+  - particles{p=large_smoke;amount=10;hS=1.5;vS=0.2;y=0.5;speed=0.15} @target
+  - particles{p=soul;amount=6;hS=1.5;vS=0.3;y=1.0;speed=0.1} @target
+  - delay 5
+  - particles{p=dust_color_transition;color1=#330066;color2=#0d0d0d;amount=20;hS=1.2;vS=0.3;y=0.8;size=1.5;speed=0.15} @target
+  - particles{p=smoke;amount=12;hS=1.0;vS=0.3;y=0.5;speed=0.1} @target
+
+Assassinato_Execute:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.5} @self
+  - sound{s=entity.illusioner.mirror_move;v=1.5;p=0.6} @self
+  - sound{s=entity.enderman.teleport;v=0.8;p=0.4} @self
+  # Lethal strike from shadows
+  - midgardDamage{a=<skill.var.damage>;type=SHADOW} @target
+  - particles{p=sweep_attack;amount=8;hS=0.5;vS=0.4;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#330066;color2=#cc0000;amount=30;hS=0.8;vS=0.8;y=1.0;size=2.5;speed=0} @target
+  - particles{p=crit;amount=20;hS=0.5;vS=0.6;y=1.0;speed=0.1} @target
+  - particles{p=large_smoke;amount=20;hS=0.6;vS=0.8;y=0.5;speed=0.08} @self
+  - particles{p=soul;amount=10;hS=0.4;vS=0.5;y=1.0;speed=0.03} @self
+  - particles{p=reverse_portal;amount=6;hS=0.3;vS=0.5;y=1.0;speed=0.02} @target
+
+# --- Mk2 (Milestone: assassinato_shadow) ---
+AssassinatoMk2:
+  Skills:
+  - skill{s=AssassinatoMk2_Cast} @self
+
+AssassinatoMk2_Cast:
+  Skills:
+  # Deep shadow vanish
+  - sound{s=entity.enderman.teleport;v=1.2;p=0.5} @self
+  - sound{s=entity.phantom.ambient;v=1.0;p=0.3} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.5;p=0.6} @self
+  - particles{p=large_smoke;amount=40;hS=0.8;vS=1.5;y=0.5;speed=0.15} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=28;hS=0.7;vS=1.2;y=0.5;size=2.2;speed=0} @self
+  - particles{p=soul;amount=12;hS=0.5;vS=0.8;y=0.8;speed=0.04} @self
+  - particles{p=reverse_portal;amount=8;hS=0.4;vS=0.7;y=1.0;speed=0.03} @self
+  - potion{type=INVISIBILITY;duration=35;level=0;hasParticles=false} @self
+  - delay 5
+  # Enhanced shadow convergence
+  - skill{s=AssassinatoMk2_Converge} @self
+  - delay 10
+  # Teleport and shadow strike
+  - teleport{destination=@target;offset=0,0,-2} @self
+  - delay 2
+  - skill{s=AssassinatoMk2_Execute} @self
+
+AssassinatoMk2_Converge:
+  Skills:
+  - sound{s=entity.phantom.ambient;v=0.6;p=0.3} @target
+  - sound{s=entity.enderman.teleport;v=0.3;p=1.0} @target
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=22;hS=2.5;vS=0.4;y=0.8;size=1.5;speed=0.25} @target
+  - particles{p=large_smoke;amount=14;hS=2.0;vS=0.3;y=0.5;speed=0.18} @target
+  - particles{p=soul;amount=10;hS=2.0;vS=0.4;y=1.0;speed=0.12} @target
+  - particles{p=reverse_portal;amount=6;hS=1.5;vS=0.3;y=1.0;speed=0.08} @target
+  - delay 5
+  - particles{p=dust_color_transition;color1=#6600cc;color2=#0d0d0d;amount=28;hS=1.5;vS=0.4;y=0.8;size=1.8;speed=0.18} @target
+  - particles{p=smoke;amount=16;hS=1.2;vS=0.4;y=0.5;speed=0.12} @target
+  - particles{p=soul;amount=8;hS=1.0;vS=0.3;y=0.8;speed=0.08} @target
+
+AssassinatoMk2_Execute:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.4} @self
+  - sound{s=entity.illusioner.mirror_move;v=1.8;p=0.5} @self
+  - sound{s=entity.enderman.teleport;v=1.0;p=0.3} @self
+  # Shadow assassination strike
+  - midgardDamage{a=<skill.var.damage>;type=SHADOW} @target
+  - potion{type=SLOWNESS;duration=40;level=2;hasParticles=false} @target
+  - particles{p=sweep_attack;amount=10;hS=0.6;vS=0.5;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#6600cc;color2=#cc0000;amount=38;hS=1.0;vS=1.0;y=1.0;size=2.8;speed=0} @target
+  - particles{p=crit;amount=26;hS=0.6;vS=0.8;y=1.0;speed=0.12} @target
+  - particles{p=enchanted_hit;amount=10;hS=0.4;vS=0.5;y=1.0;speed=0.08} @target
+  - particles{p=large_smoke;amount=26;hS=0.7;vS=1.0;y=0.5;speed=0.1} @self
+  - particles{p=soul;amount=14;hS=0.5;vS=0.6;y=1.0;speed=0.04} @self
+  - particles{p=reverse_portal;amount=8;hS=0.4;vS=0.6;y=1.0;speed=0.03} @target
+
+# --- Mk3 (Milestone: assassinato_execute) ---
+AssassinatoMk3:
+  Skills:
+  - skill{s=AssassinatoMk3_Cast} @self
+
+AssassinatoMk3_Cast:
+  Skills:
+  # Absolute shadow erasure
+  - sound{s=entity.enderman.teleport;v=1.5;p=0.4} @self
+  - sound{s=entity.phantom.ambient;v=1.2;p=0.2} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.8;p=0.5} @self
+  # The rogue dissolves into pure darkness
+  - particles{p=large_smoke;amount=50;hS=1.0;vS=2.0;y=0.5;speed=0.18} @self
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=36;hS=0.8;vS=1.5;y=0.5;size=2.5;speed=0} @self
+  - particles{p=soul;amount=16;hS=0.6;vS=1.0;y=0.8;speed=0.06} @self
+  - particles{p=reverse_portal;amount=12;hS=0.5;vS=1.0;y=1.0;speed=0.04} @self
+  # Shadow pillar at origin
+  - particles{p=dust_color_transition;color1=#1a0033;color2=#0d0d0d;amount=10;hS=0.3;vS=4.0;y=2.5;size=2.0;speed=0;repeat=10;repeati=2} @self
+  - potion{type=INVISIBILITY;duration=40;level=0;hasParticles=false} @self
+  - delay 5
+  # Shadow convergence — apocalyptic
+  - skill{s=AssassinatoMk3_Converge} @self
+  - delay 12
+  # Teleport and obliterate
+  - teleport{destination=@target;offset=0,0,-2} @self
+  - delay 2
+  - skill{s=AssassinatoMk3_Execute} @self
+
+AssassinatoMk3_Converge:
+  Skills:
+  - sound{s=entity.phantom.ambient;v=0.8;p=0.2} @target
+  - sound{s=entity.enderman.teleport;v=0.4;p=0.8} @target
+  # Darkness closes in from all sides
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=30;hS=3.0;vS=0.5;y=0.8;size=1.8;speed=0.3} @target
+  - particles{p=large_smoke;amount=20;hS=2.5;vS=0.4;y=0.5;speed=0.22} @target
+  - particles{p=soul;amount=14;hS=2.5;vS=0.5;y=1.0;speed=0.15} @target
+  - particles{p=reverse_portal;amount=10;hS=2.0;vS=0.4;y=1.0;speed=0.1} @target
+  - delay 4
+  - particles{p=dust_color_transition;color1=#6600cc;color2=#cc0000;amount=28;hS=2.0;vS=0.5;y=0.8;size=2.0;speed=0.22} @target
+  - particles{p=smoke;amount=18;hS=1.5;vS=0.5;y=0.5;speed=0.15} @target
+  - delay 4
+  # Final tightening — nowhere to run
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#cc0000;amount=32;hS=1.0;vS=0.5;y=0.8;size=2.2;speed=0.15} @target
+  - particles{p=soul;amount=12;hS=0.8;vS=0.4;y=1.0;speed=0.08} @target
+  - particles{p=large_smoke;amount=16;hS=0.8;vS=0.6;y=0.5;speed=0.1} @target
+  - particles{p=reverse_portal;amount=8;hS=0.6;vS=0.5;y=1.0;speed=0.05} @target
+  - sound{s=entity.phantom.ambient;v=0.6;p=0.5} @target
+
+AssassinatoMk3_Execute:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.3} @self
+  - sound{s=entity.illusioner.mirror_move;v=2.0;p=0.4} @self
+  - sound{s=entity.enderman.teleport;v=1.2;p=0.2} @self
+  - sound{s=entity.phantom.ambient;v=0.8;p=0.6} @self
+  # Execution — death from the void
+  - midgardDamage{a=<skill.var.damage>;type=SHADOW} @target
+  - potion{type=SLOWNESS;duration=60;level=2;hasParticles=false} @target
+  - potion{type=WEAKNESS;duration=60;level=1;hasParticles=false} @target
+  - potion{type=BLINDNESS;duration=20;level=0;hasParticles=false} @target
+  # Visual carnage
+  - particles{p=sweep_attack;amount=14;hS=0.8;vS=0.6;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#6600cc;color2=#cc0000;amount=50;hS=1.2;vS=1.2;y=1.0;size=3.0;speed=0} @target
+  - particles{p=crit;amount=34;hS=0.8;vS=1.0;y=1.0;speed=0.15} @target
+  - particles{p=enchanted_hit;amount=16;hS=0.5;vS=0.6;y=1.0;speed=0.1} @target
+  - particles{p=large_smoke;amount=34;hS=0.8;vS=1.2;y=0.5;speed=0.12} @self
+  - particles{p=soul;amount=18;hS=0.6;vS=0.8;y=1.0;speed=0.05} @self
+  - particles{p=reverse_portal;amount=12;hS=0.5;vS=0.8;y=1.0;speed=0.04} @target
+  # Shadow shockwave on execution
+  - particlering{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;radius=2;points=30;amount=4;hS=0.1;vS=0.1;y=0.3;size=2.0;speed=0} @target
+  - particlering{p=large_smoke;radius=3;points=25;amount=3;hS=0.2;vS=0.1;y=0.3;speed=0.08;delay=1} @target
+  - particlering{p=dust_color_transition;color1=#330066;color2=#cc0000;radius=4.5;points=35;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0;delay=2} @target
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  10. DANÇA DAS LÂMINAS — Blade Dance (ULTIMATE — Channeled)               ║
+# ║  A deadly spinning blade dance, delivering rapid multi-hit AoE slashes     ║
+# ║  that expand outward in a whirlwind of steel and shadow.                   ║
+# ║  Variables: damage (55.0 base / 12.0 per level)                           ║
+# ║  Milestones: lvl3=danca_laminas_whirl, lvl5=danca_laminas_storm            ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+DancaDasLaminas:
+  Skills:
+  - skill{s=DancaDasLaminas_Cast} @self
+
+DancaDasLaminas_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.2;p=1.2} @self
+  - sound{s=entity.illusioner.mirror_move;v=0.8;p=1.0} @self
+  - particles{p=dust_color_transition;color1=#330066;color2=#cc0000;amount=20;hS=0.5;vS=1.0;y=0.8;size=1.8;speed=0} @self
+  # First spin — close range
+  - skill{s=DancaDasLaminas_Spin1} @self
+  - delay 4
+  # Second spin — medium range
+  - skill{s=DancaDasLaminas_Spin2} @self
+  - delay 4
+  # Third spin — wide range
+  - skill{s=DancaDasLaminas_Spin3} @self
+  - delay 4
+  # Finale burst
+  - skill{s=DancaDasLaminas_Finale} @self
+
+DancaDasLaminas_Spin1:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.3;p=1.1} @self
+  - midgardDamage{a=<skill.var.damage> * 0.2;type=PHYSICAL} @EntitiesNearOrigin{r=3}
+  - particlering{p=sweep_attack;radius=2;points=16;amount=2;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#cc0000;color2=#330066;radius=2;points=25;amount=3;hS=0.1;vS=0.1;y=1.0;size=1.5;speed=0} @self
+  - particles{p=crit;amount=8;hS=1.0;vS=0.3;y=1.0;speed=0.05} @self
+  - particles{p=smoke;amount=6;hS=0.8;vS=0.2;y=0.5;speed=0.03} @self
+
+DancaDasLaminas_Spin2:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.4;p=1.0} @self
+  - midgardDamage{a=<skill.var.damage> * 0.3;type=PHYSICAL} @EntitiesNearOrigin{r=4}
+  - particlering{p=sweep_attack;radius=3;points=20;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#cc0000;color2=#6600cc;radius=3;points=30;amount=3;hS=0.1;vS=0.1;y=1.0;size=1.8;speed=0} @self
+  - particles{p=crit;amount=12;hS=1.5;vS=0.4;y=1.0;speed=0.08} @self
+  - particles{p=large_smoke;amount=8;hS=1.2;vS=0.3;y=0.5;speed=0.05} @self
+
+DancaDasLaminas_Spin3:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.5;p=0.9} @self
+  - midgardDamage{a=<skill.var.damage> * 0.3;type=PHYSICAL} @EntitiesNearOrigin{r=5}
+  - throw{velocity=0.6;velocityY=0.3} @EntitiesNearOrigin{r=5}
+  - particlering{p=sweep_attack;radius=4;points=24;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#6600cc;color2=#cc0000;radius=4;points=35;amount=3;hS=0.1;vS=0.1;y=1.0;size=2.0;speed=0} @self
+  - particles{p=crit;amount=16;hS=2.0;vS=0.5;y=1.0;speed=0.1} @self
+  - particles{p=large_smoke;amount=10;hS=1.5;vS=0.4;y=0.5;speed=0.06} @self
+  - particles{p=soul;amount=6;hS=1.0;vS=0.3;y=0.8;speed=0.03} @self
+
+DancaDasLaminas_Finale:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.8;p=0.8} @self
+  - sound{s=entity.enderman.teleport;v=0.6;p=0.8} @self
+  - midgardDamage{a=<skill.var.damage> * 0.2;type=PHYSICAL} @EntitiesNearOrigin{r=5}
+  - particles{p=sweep_attack;amount=10;hS=1.5;vS=0.5;y=1.0;speed=0} @self
+  - particles{p=dust_color_transition;color1=#330066;color2=#cc0000;amount=25;hS=2.0;vS=0.6;y=0.8;size=2.0;speed=0} @self
+  - particles{p=crit;amount=20;hS=2.0;vS=0.5;y=1.0;speed=0.1} @self
+  - particles{p=large_smoke;amount=16;hS=1.5;vS=0.6;y=0.3;speed=0.08} @self
+  - particles{p=smoke;amount=12;hS=1.5;vS=0.4;y=0.5;speed=0.06} @self
+
+# --- Mk2 (Milestone: danca_laminas_whirl) ---
+DancaDasLaminasMk2:
+  Skills:
+  - skill{s=DancaDasLaminasMk2_Cast} @self
+
+DancaDasLaminasMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.4;p=1.1} @self
+  - sound{s=entity.illusioner.mirror_move;v=1.0;p=0.9} @self
+  - sound{s=entity.phantom.ambient;v=0.4;p=0.6} @self
+  - particles{p=dust_color_transition;color1=#330066;color2=#cc0000;amount=30;hS=0.6;vS=1.2;y=0.8;size=2.0;speed=0} @self
+  - particles{p=soul;amount=6;hS=0.4;vS=0.5;y=1.0;speed=0.03} @self
+  # Rapid 5-spin whirl
+  - skill{s=DancaDasLaminasMk2_Spin1} @self
+  - delay 3
+  - skill{s=DancaDasLaminasMk2_Spin2} @self
+  - delay 3
+  - skill{s=DancaDasLaminasMk2_Spin3} @self
+  - delay 3
+  - skill{s=DancaDasLaminasMk2_Spin4} @self
+  - delay 3
+  - skill{s=DancaDasLaminasMk2_Finale} @self
+
+DancaDasLaminasMk2_Spin1:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.4;p=1.1} @self
+  - midgardDamage{a=<skill.var.damage> * 0.15;type=PHYSICAL} @EntitiesNearOrigin{r=3}
+  - particlering{p=sweep_attack;radius=2;points=18;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#cc0000;color2=#330066;radius=2;points=28;amount=3;hS=0.1;vS=0.1;y=1.0;size=1.6;speed=0} @self
+  - particles{p=crit;amount=10;hS=1.0;vS=0.3;y=1.0;speed=0.06} @self
+
+DancaDasLaminasMk2_Spin2:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.5;p=1.0} @self
+  - midgardDamage{a=<skill.var.damage> * 0.2;type=PHYSICAL} @EntitiesNearOrigin{r=3.5}
+  - particlering{p=sweep_attack;radius=2.5;points=20;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#cc0000;color2=#6600cc;radius=2.5;points=30;amount=3;hS=0.1;vS=0.1;y=1.0;size=1.8;speed=0} @self
+  - particles{p=crit;amount=12;hS=1.2;vS=0.4;y=1.0;speed=0.08} @self
+  - particles{p=enchanted_hit;amount=6;hS=0.8;vS=0.3;y=1.0;speed=0.05} @self
+
+DancaDasLaminasMk2_Spin3:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.6;p=0.9} @self
+  - midgardDamage{a=<skill.var.damage> * 0.2;type=PHYSICAL} @EntitiesNearOrigin{r=4}
+  - particlering{p=sweep_attack;radius=3;points=22;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#6600cc;color2=#cc0000;radius=3.5;points=35;amount=3;hS=0.1;vS=0.1;y=1.0;size=2.0;speed=0} @self
+  - particles{p=crit;amount=14;hS=1.5;vS=0.5;y=1.0;speed=0.1} @self
+  - particles{p=soul;amount=4;hS=0.8;vS=0.3;y=0.8;speed=0.03} @self
+
+DancaDasLaminasMk2_Spin4:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.7;p=0.8} @self
+  - midgardDamage{a=<skill.var.damage> * 0.2;type=PHYSICAL} @EntitiesNearOrigin{r=5}
+  - throw{velocity=0.5;velocityY=0.2} @EntitiesNearOrigin{r=5}
+  - particlering{p=sweep_attack;radius=4;points=26;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#6600cc;color2=#cc0000;radius=4.5;points=40;amount=3;hS=0.1;vS=0.1;y=1.0;size=2.2;speed=0} @self
+  - particles{p=crit;amount=16;hS=2.0;vS=0.5;y=1.0;speed=0.1} @self
+  - particles{p=large_smoke;amount=10;hS=1.5;vS=0.4;y=0.5;speed=0.06} @self
+
+DancaDasLaminasMk2_Finale:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.7} @self
+  - sound{s=entity.enderman.teleport;v=0.8;p=0.7} @self
+  - midgardDamage{a=<skill.var.damage> * 0.25;type=PHYSICAL} @EntitiesNearOrigin{r=6}
+  - throw{velocity=0.8;velocityY=0.4} @EntitiesNearOrigin{r=6}
+  - particlering{p=sweep_attack;radius=5;points=30;amount=4;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#330066;color2=#cc0000;radius=5;points=50;amount=4;hS=0.1;vS=0.2;y=1.0;size=2.5;speed=0} @self
+  - particles{p=sweep_attack;amount=12;hS=2.0;vS=0.6;y=1.0;speed=0} @self
+  - particles{p=crit;amount=24;hS=2.5;vS=0.6;y=1.0;speed=0.12} @self
+  - particles{p=enchanted_hit;amount=10;hS=1.5;vS=0.5;y=1.0;speed=0.08} @self
+  - particles{p=large_smoke;amount=20;hS=2.0;vS=0.8;y=0.3;speed=0.1} @self
+  - particles{p=soul;amount=8;hS=1.0;vS=0.5;y=0.8;speed=0.04} @self
+
+# --- Mk3 (Milestone: danca_laminas_storm) ---
+DancaDasLaminasMk3:
+  Skills:
+  - skill{s=DancaDasLaminasMk3_Cast} @self
+
+DancaDasLaminasMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.5;p=1.0} @self
+  - sound{s=entity.illusioner.mirror_move;v=1.2;p=0.8} @self
+  - sound{s=entity.phantom.ambient;v=0.6;p=0.5} @self
+  - sound{s=entity.enderman.teleport;v=0.5;p=0.6} @self
+  # Shadow pillar rising
+  - particles{p=dust_color_transition;color1=#0d0d0d;color2=#6600cc;amount=40;hS=0.8;vS=1.5;y=0.8;size=2.5;speed=0} @self
+  - particles{p=soul;amount=10;hS=0.5;vS=0.8;y=1.0;speed=0.04} @self
+  - particles{p=reverse_portal;amount=8;hS=0.4;vS=1.0;y=1.0;speed=0.03} @self
+  # Column of shadow blades
+  - particles{p=dust_color_transition;color1=#330066;color2=#cc0000;amount=8;hS=0.3;vS=4.0;y=2.5;size=2.0;speed=0;repeat=14;repeati=2} @self
+  # 6-spin blade storm
+  - skill{s=DancaDasLaminasMk3_Spin1} @self
+  - delay 3
+  - skill{s=DancaDasLaminasMk3_Spin2} @self
+  - delay 3
+  - skill{s=DancaDasLaminasMk3_Spin3} @self
+  - delay 3
+  - skill{s=DancaDasLaminasMk3_Spin4} @self
+  - delay 3
+  - skill{s=DancaDasLaminasMk3_Spin5} @self
+  - delay 3
+  - skill{s=DancaDasLaminasMk3_Finale} @self
+
+DancaDasLaminasMk3_Spin1:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.5;p=1.1} @self
+  - midgardDamage{a=<skill.var.damage> * 0.1;type=PHYSICAL} @EntitiesNearOrigin{r=3}
+  - particlering{p=sweep_attack;radius=2;points=20;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#cc0000;color2=#330066;radius=2;points=30;amount=4;hS=0.1;vS=0.1;y=1.0;size=1.8;speed=0} @self
+  - particles{p=crit;amount=12;hS=1.0;vS=0.3;y=1.0;speed=0.06} @self
+
+DancaDasLaminasMk3_Spin2:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.6;p=1.0} @self
+  - midgardDamage{a=<skill.var.damage> * 0.12;type=PHYSICAL} @EntitiesNearOrigin{r=3.5}
+  - particlering{p=sweep_attack;radius=2.5;points=22;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#cc0000;color2=#6600cc;radius=3;points=35;amount=4;hS=0.1;vS=0.1;y=1.0;size=2.0;speed=0} @self
+  - particles{p=crit;amount=14;hS=1.3;vS=0.4;y=1.0;speed=0.08} @self
+  - particles{p=enchanted_hit;amount=6;hS=0.8;vS=0.3;y=1.0;speed=0.05} @self
+
+DancaDasLaminasMk3_Spin3:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.7;p=0.9} @self
+  - midgardDamage{a=<skill.var.damage> * 0.14;type=PHYSICAL} @EntitiesNearOrigin{r=4}
+  - particlering{p=sweep_attack;radius=3;points=24;amount=3;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#6600cc;color2=#cc0000;radius=3.5;points=40;amount=4;hS=0.1;vS=0.1;y=1.0;size=2.2;speed=0} @self
+  - particles{p=crit;amount=16;hS=1.5;vS=0.5;y=1.0;speed=0.1} @self
+  - particles{p=soul;amount=4;hS=0.8;vS=0.3;y=0.8;speed=0.03} @self
+
+DancaDasLaminasMk3_Spin4:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.8;p=0.8} @self
+  - midgardDamage{a=<skill.var.damage> * 0.14;type=PHYSICAL} @EntitiesNearOrigin{r=5}
+  - particlering{p=sweep_attack;radius=4;points=28;amount=4;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#6600cc;color2=#cc0000;radius=4.5;points=45;amount=4;hS=0.1;vS=0.1;y=1.0;size=2.5;speed=0} @self
+  - particles{p=crit;amount=18;hS=2.0;vS=0.5;y=1.0;speed=0.1} @self
+  - particles{p=large_smoke;amount=10;hS=1.5;vS=0.4;y=0.5;speed=0.06} @self
+  - particles{p=reverse_portal;amount=4;hS=1.0;vS=0.3;y=1.0;speed=0.03} @self
+
+DancaDasLaminasMk3_Spin5:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.9;p=0.7} @self
+  - midgardDamage{a=<skill.var.damage> * 0.15;type=PHYSICAL} @EntitiesNearOrigin{r=6}
+  - throw{velocity=0.6;velocityY=0.3} @EntitiesNearOrigin{r=6}
+  - particlering{p=sweep_attack;radius=5;points=32;amount=4;hS=0.1;vS=0.1;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#330066;color2=#cc0000;radius=5.5;points=50;amount=4;hS=0.1;vS=0.2;y=1.0;size=2.8;speed=0} @self
+  - particles{p=crit;amount=22;hS=2.5;vS=0.6;y=1.0;speed=0.12} @self
+  - particles{p=soul;amount=6;hS=1.5;vS=0.4;y=0.8;speed=0.04} @self
+  - particles{p=large_smoke;amount=14;hS=2.0;vS=0.5;y=0.5;speed=0.08} @self
+
+DancaDasLaminasMk3_Finale:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.5} @self
+  - sound{s=entity.enderman.teleport;v=1.0;p=0.5} @self
+  - sound{s=entity.illusioner.mirror_move;v=1.5;p=0.6} @self
+  - sound{s=entity.phantom.ambient;v=0.8;p=0.7} @self
+  # Final devastating blade storm explosion
+  - midgardDamage{a=<skill.var.damage> * 0.35;type=PHYSICAL} @EntitiesNearOrigin{r=7}
+  - throw{velocity=1.2;velocityY=0.5} @EntitiesNearOrigin{r=7}
+  - potion{type=SLOWNESS;duration=40;level=1;hasParticles=false} @EntitiesNearOrigin{r=7}
+  # Visual blade storm explosion
+  - particlering{p=sweep_attack;radius=3;points=30;amount=5;hS=0.2;vS=0.2;y=1.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#cc0000;color2=#6600cc;radius=4;points=40;amount=5;hS=0.1;vS=0.2;y=1.0;size=3.0;speed=0;delay=1} @self
+  - particlering{p=sweep_attack;radius=5.5;points=35;amount=4;hS=0.2;vS=0.1;y=1.0;speed=0;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#330066;color2=#cc0000;radius=7;points=55;amount=3;hS=0.1;vS=0.1;y=0.5;size=2.5;speed=0;delay=3} @self
+  - particles{p=sweep_attack;amount=18;hS=2.5;vS=0.8;y=1.0;speed=0} @self
+  - particles{p=crit;amount=30;hS=3.0;vS=0.8;y=1.0;speed=0.15} @self
+  - particles{p=enchanted_hit;amount=14;hS=2.0;vS=0.6;y=1.0;speed=0.1} @self
+  - particles{p=large_smoke;amount=28;hS=2.5;vS=1.0;y=0.3;speed=0.12} @self
+  - particles{p=soul;amount=12;hS=1.5;vS=0.6;y=0.8;speed=0.05} @self
+  - particles{p=reverse_portal;amount=8;hS=1.5;vS=0.8;y=1.0;speed=0.04} @self
+
+
+# ============================================================================
+#  End of Ladino Skills — Strike from the shadows, leave no trace.
+# ============================================================================

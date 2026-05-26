@@ -1,0 +1,58 @@
+# Configuração Principal do Módulo de Economia
+# Aqui você pode ativar ou desativar sistemas inteiros e configurar valores.
+#
+# Sistema de moedas medievais:
+#   100 Bronze = 1 Prata
+#   100 Prata  = 1 Ouro
+#   100 Ouro   = 1 Platina
+
+features:
+  # Ativa o sistema de moeda física (Bronze, Prata, Ouro, Platina)
+  currency-system: true
+  # Ativa o sistema de bolsas (Pouches) para guardar dinheiro
+  pouch-system: true
+
+# Configuração das Moedas
+# Defina aqui quais itens (do MidgardItem) valem dinheiro e quanto valem.
+# Valor em unidades base (bronze). 100 bronze = 1 prata, 100 prata = 1 ouro, 100 ouro = 1 platina.
+currencies:
+  bronze_coin:
+    value: 1
+  silver_coin:
+    value: 100
+  gold_coin:
+    value: 10000
+  platinum_coin:
+    value: 1000000
+
+# Configuração das Bolsas
+# Defina as propriedades de cada tier de bolsa.
+# O nome da chave deve corresponder ao ID do item no MidgardItem.
+pouches:
+  coin_pouch_tier1:
+    capacity: 10000       # ~1 ouro
+    rows: 1
+    auto-compact: false
+    # permission: "midgard.pouch.tier1"
+  coin_pouch_tier2:
+    capacity: 1000000     # ~1 platina
+    rows: 3
+    auto-compact: true
+  coin_pouch_tier3:
+    capacity: 100000000   # ~100 platinas
+    rows: 6
+    auto-compact: true
+
+# Configuração de Recursos Automáticos
+# O plugin irá gerar automaticamente os arquivos de itens em modules/item/
+# caso eles não existam.
+resources:
+  currencies:
+    - bronze_coin.yml
+    - silver_coin.yml
+    - gold_coin.yml
+    - platinum_coin.yml
+  pouches:
+    - coin_pouch_tier1.yml
+    - coin_pouch_tier2.yml
+    - coin_pouch_tier3.yml

@@ -1,0 +1,9 @@
+me\ray\midgard\modules\economy\gui\PouchGui.class
+me\ray\midgard\modules\economy\manager\CurrencyManager.class
+me\ray\midgard\modules\economy\manager\PouchManager$PouchSettings.class
+me\ray\midgard\modules\economy\manager\PouchManager.class
+me\ray\midgard\modules\economy\command\EconomyCommand.class
+me\ray\midgard\modules\economy\EconomyModule.class
+me\ray\midgard\modules\economy\listener\PouchListener.class
+me\ray\midgard\modules\economy\command\EconomyAdminCommand.class
+me\ray\midgard\modules\economy\EconomyModule$PhysicalEconomyProvider.class

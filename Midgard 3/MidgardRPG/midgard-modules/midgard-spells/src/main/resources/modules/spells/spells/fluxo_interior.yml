@@ -1,0 +1,75 @@
+name: "<gold>ꜰʟᴜxᴏ ɪɴᴛᴇʀɪᴏʀ</gold>"
+mythic-skill: "FluxoInterior"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Monge"
+  level: 1
+
+icon:
+  material: BLAZE_POWDER
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></gold>"
+  - ""
+  - "<gray>ᴏ ᴍᴏɴɢᴇ ᴄᴀɴᴀʟɪᴢᴀ sᴇᴜ ᴄʜɪ ɪɴᴛᴇʀɪᴏʀ,</gray>"
+  - "<gray>ᴀᴜᴍᴇɴᴛᴀɴᴅᴏ ᴘᴀssɪᴠᴀᴍᴇɴᴛᴇ ᴏ ᴅᴀɴᴏ</gray>"
+  - "<gray>ᴅᴇ sᴇᴜs ɢᴏʟᴘᴇs ᴅᴇsᴀʀᴍᴀᴅᴏs.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></gold>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ᴅᴀɴᴏ:<gold>{damage_bonus}%</gold>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴏɴɢᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  damage_bonus:
+    base: 5.0
+    per-level: 2.0
+
+milestones:
+  3:
+    visual: "fluxo_interior_chi"
+    mechanic-override: "FluxoInteriorMk2"
+    stat-bonus:
+      strength: 1.0
+  5:
+    visual: "fluxo_interior_energy"
+    mechanic-override: "FluxoInteriorMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 3
+    dexterity: 2
+
+sounds:
+  cast-start:
+    sound: "entity.blaze.ambient"
+    volume: 0.4
+    pitch: 1.4
+  cast-finish:
+    sound: "entity.experience_orb.pickup"
+    volume: 0.5
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

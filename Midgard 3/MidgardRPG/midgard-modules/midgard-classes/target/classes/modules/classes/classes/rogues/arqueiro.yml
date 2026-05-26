@@ -1,0 +1,62 @@
+display-name: '<green>ᴀʀǫᴜᴇɪʀᴏ</green>'
+icon: BOW
+lore:
+  - '<gray>ᴛɪᴘᴏ:<green><bold>ᴀᴛɪʀᴀᴅᴏʀ</bold></green>'
+  - ''
+  - '<gray>ᴀʀǫᴜᴇɪʀᴏs sᴀᴏ ᴍᴇsᴛʀᴇs ᴅᴏ ᴀʀᴄᴏ,</gray>'
+  - '<gray>ᴀᴛɪɴɢɪɴᴅᴏ ᴀʟᴠᴏs ᴀ ɢʀᴀɴᴅᴇ ᴅɪsᴛᴀɴᴄɪᴀ</gray>'
+  - '<gray>ᴄᴏᴍ ᴘʀᴇᴄɪsᴀᴏ ᴍᴏʀᴛᴀʟ.</gray>'
+  - ''
+  - '<yellow><bold>✦ ᴇsᴛɪʟᴏ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ ✦</bold></yellow>'
+  - ''
+  - '<gray>• ᴅᴀɴᴏ:<red>ᴀʟᴛᴏ</red>'
+  - '<gray>• ᴅᴇꜰᴇsᴀ:<yellow>ᴍᴇᴅɪᴀ</yellow>'
+  - '<gray>• ᴀʟᴄᴀɴᴄᴇ:<green>ᴀʟᴛᴏ</green>'
+attributes:
+  base:
+    strength: 4
+    defense: 4
+    vitality: 6
+    intelligence: 3
+    dexterity: 12
+  per-level:
+    dexterity: 2
+    strength: 1
+    vitality: 0.5
+health:
+  base: 18
+  per-level: 4
+mana:
+  base: 15
+  per-level: 3
+skills:
+  OLHO_DE_AGUIA:
+    level: 1
+    type: passive
+  REFLEXOS_RAPIDOS:
+    level: 5
+    type: passive
+  FLECHA_CERTEIRA:
+    level: 1
+    type: active
+  CHUVA_DE_FLECHAS:
+    level: 3
+    type: active
+  FLECHA_ENVENENADA:
+    level: 5
+    type: active
+  TIRO_PERFURANTE:
+    level: 8
+    type: active
+  ARMADILHA:
+    level: 10
+    type: active
+  FLECHA_EXPLOSIVA:
+    level: 12
+    type: active
+  TEMPESTADE_DE_FLECHAS:
+    level: 15
+    type: ultimate
+  FLECHA_DO_DESTINO:
+    level: 20
+    type: ultimate

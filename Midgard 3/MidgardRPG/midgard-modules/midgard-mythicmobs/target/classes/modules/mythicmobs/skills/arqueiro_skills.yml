@@ -1,0 +1,1262 @@
+﻿# ============================================================
+# Arqueiro (Archer) Class Skills - MythicMobs Skill Definitions
+# Midgard RPG - Minecraft 1.21.1 (Folia)
+# ============================================================
+# All dynamic values use <skill.var.VARIABLE_NAME> syntax.
+# Custom mechanics: midgardDamage, midgardShield
+# Color theme: green (#00cc00, #44ff44), gold (#ffcc00),
+#              brown (#996633), light blue (#88ccff)
+# Particles: end_rod, crit, enchanted_hit, dust_color_transition,
+#            flame, snowflake, block_crack
+# Sounds: entity.arrow.shoot, entity.arrow.hit_player,
+#         entity.generic.explode, item.crossbow.shoot
+# ============================================================
+
+
+# ############################################################
+#  1. OLHO DE AGUIA (Eagle Eye) - PASSIVE
+#     Passive accuracy and range bonus
+#     Variables: precision_bonus (base 3.0 / scale 1.5)
+#     Milestones: lvl3=eagle_eye_keen, lvl5=eagle_eye_hawk
+#     Effect: Golden eye particles, eagle feather trail
+# ############################################################
+
+OlhoDeAguia:
+  Skills:
+  - skill{s=OlhoDeAguia_Cast} @self
+
+OlhoDeAguia_Cast:
+  Skills:
+  - effect:particles{p=end_rod;a=3;hs=0.15;vs=0.4;s=0.02} @self
+  - effect:particles{p=dust;color=#ffcc00;size=0.6;a=4;hs=0.15;vs=0.35} @self
+
+# --- OlhoDeAguia Mk2: eagle_eye_keen ---
+
+OlhoDeAguiaMk2:
+  Skills:
+  - skill{s=OlhoDeAguiaMk2_Cast} @self
+
+OlhoDeAguiaMk2_Cast:
+  Skills:
+  - effect:particles{p=end_rod;a=5;hs=0.2;vs=0.45;s=0.02} @self
+  - effect:particles{p=dust;color=#ffcc00;size=0.7;a=6;hs=0.2;vs=0.4} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#44ff44;size=0.5;a=3;hs=0.25;vs=0.5} @self
+
+# --- OlhoDeAguia Mk3: eagle_eye_hawk ---
+
+OlhoDeAguiaMk3:
+  Skills:
+  - skill{s=OlhoDeAguiaMk3_Cast} @self
+
+OlhoDeAguiaMk3_Cast:
+  Skills:
+  - effect:particles{p=end_rod;a=8;hs=0.25;vs=0.5;s=0.03} @self
+  - effect:particles{p=dust;color=#ffcc00;size=0.9;a=8;hs=0.2;vs=0.45} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#44ff44;size=0.7;a=5;hs=0.3;vs=0.55} @self
+  - effect:particles{p=enchanted_hit;a=4;hs=0.2;vs=0.35;s=0.02} @self
+
+
+# ############################################################
+#  2. REFLEXOS RAPIDOS (Quick Reflexes) - PASSIVE
+#     Passive dodge chance
+#     Variables: dodge_chance (base 5.0 / scale 2.0)
+#     Milestones: lvl3=reflexos_swift, lvl5=reflexos_blur
+#     Effect: Wind/speed particles, light green trail, blur
+# ############################################################
+
+ReflexosRapidos:
+  Skills:
+  - skill{s=ReflexosRapidos_Cast} @self
+
+ReflexosRapidos_Cast:
+  Skills:
+  - effect:particles{p=snowflake;a=4;hs=0.3;vs=0.6;s=0.05} @self
+  - effect:particles{p=dust;color=#44ff44;size=0.5;a=3;hs=0.2;vs=0.5} @self
+
+# --- ReflexosRapidos Mk2: reflexos_swift ---
+
+ReflexosRapidosMk2:
+  Skills:
+  - skill{s=ReflexosRapidosMk2_Cast} @self
+
+ReflexosRapidosMk2_Cast:
+  Skills:
+  - effect:particles{p=snowflake;a=6;hs=0.35;vs=0.7;s=0.06} @self
+  - effect:particles{p=dust;color=#44ff44;size=0.6;a=5;hs=0.25;vs=0.55} @self
+  - effect:particles{p=end_rod;a=3;hs=0.3;vs=0.5;s=0.04} @self
+
+# --- ReflexosRapidos Mk3: reflexos_blur ---
+
+ReflexosRapidosMk3:
+  Skills:
+  - skill{s=ReflexosRapidosMk3_Cast} @self
+
+ReflexosRapidosMk3_Cast:
+  Skills:
+  - effect:particles{p=snowflake;a=8;hs=0.4;vs=0.8;s=0.07} @self
+  - effect:particles{p=dust;color=#44ff44;size=0.8;a=7;hs=0.3;vs=0.6} @self
+  - effect:particles{p=end_rod;a=5;hs=0.35;vs=0.6;s=0.05} @self
+  - effect:particles{p=dust_color_transition;fromColor=#44ff44;toColor=#88ccff;size=0.6;a=4;hs=0.4;vs=0.7} @self
+
+
+# ############################################################
+#  3. FLECHA CERTEIRA (Precise Arrow) - COMMON
+#     Enhanced damage single-target shot
+#     Variables: damage (base 12.0 / scale 3.5)
+#     Milestones: lvl3=flecha_certeira_glow, lvl5=flecha_certeira_trail
+#     Effect: Glowing arrow projectile, green trail, precision hit
+# ############################################################
+
+FlechaCerteira:
+  Skills:
+  - skill{s=FlechaCerteira_Cast} @self
+
+FlechaCerteira_Cast:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=1.0;p=1.2} @self
+  - effect:particles{p=crit;a=8;hs=0.1;vs=0.1;s=0.3} @self
+  - projectile{oT=FlechaCerteira_Trail;onHit=FlechaCerteira_Hit;onEnd=FlechaCerteira_End;v=35;i=1;hR=0.5;vR=0.5;mr=40;ham=false;hitConditions=[- isLiving true]} @forward{f=40}
+
+FlechaCerteira_Trail:
+  Skills:
+  - effect:particles{p=crit;a=2;hs=0.05;vs=0.05;s=0.01} @origin
+  - effect:particles{p=dust;color=#00cc00;size=0.5;a=2;hs=0.05;vs=0.05} @origin
+
+FlechaCerteira_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.0;p=1.0} @trigger
+  - effect:particles{p=crit;a=15;hs=0.3;vs=0.3;s=0.2} @trigger
+  - effect:particles{p=enchanted_hit;a=10;hs=0.2;vs=0.2;s=0.1} @trigger
+
+FlechaCerteira_End:
+  Skills:
+  - effect:particles{p=crit;a=5;hs=0.2;vs=0.2;s=0.05} @origin
+
+# --- FlechaCerteira Mk2: flecha_certeira_glow ---
+
+FlechaCerteiraMk2:
+  Skills:
+  - skill{s=FlechaCerteiraMk2_Cast} @self
+
+FlechaCerteiraMk2_Cast:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=1.0;p=1.2} @self
+  - effect:particles{p=crit;a=10;hs=0.1;vs=0.1;s=0.3} @self
+  - effect:particles{p=end_rod;a=5;hs=0.15;vs=0.15;s=0.05} @self
+  - projectile{oT=FlechaCerteiraMk2_Trail;onHit=FlechaCerteiraMk2_Hit;onEnd=FlechaCerteiraMk2_End;v=38;i=1;hR=0.5;vR=0.5;mr=45;ham=false;hitConditions=[- isLiving true]} @forward{f=45}
+
+FlechaCerteiraMk2_Trail:
+  Skills:
+  - effect:particles{p=crit;a=3;hs=0.05;vs=0.05;s=0.01} @origin
+  - effect:particles{p=dust;color=#00cc00;size=0.6;a=3;hs=0.05;vs=0.05} @origin
+  - effect:particles{p=end_rod;a=1;hs=0.02;vs=0.02;s=0.01} @origin
+
+FlechaCerteiraMk2_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.0;p=1.0} @trigger
+  - effect:particles{p=crit;a=20;hs=0.35;vs=0.35;s=0.25} @trigger
+  - effect:particles{p=enchanted_hit;a=15;hs=0.25;vs=0.25;s=0.15} @trigger
+  - effect:particles{p=end_rod;a=8;hs=0.3;vs=0.3;s=0.05} @trigger
+
+FlechaCerteiraMk2_End:
+  Skills:
+  - effect:particles{p=crit;a=8;hs=0.25;vs=0.25;s=0.05} @origin
+  - effect:particles{p=end_rod;a=3;hs=0.15;vs=0.15;s=0.02} @origin
+
+# --- FlechaCerteira Mk3: flecha_certeira_trail ---
+
+FlechaCerteiraMk3:
+  Skills:
+  - skill{s=FlechaCerteiraMk3_Cast} @self
+
+FlechaCerteiraMk3_Cast:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=1.2;p=1.3} @self
+  - effect:particles{p=crit;a=12;hs=0.1;vs=0.1;s=0.35} @self
+  - effect:particles{p=end_rod;a=8;hs=0.2;vs=0.2;s=0.06} @self
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#ffcc00;size=0.8;a=5;hs=0.15;vs=0.15} @self
+  - projectile{oT=FlechaCerteiraMk3_Trail;onHit=FlechaCerteiraMk3_Hit;onEnd=FlechaCerteiraMk3_End;v=42;i=1;hR=0.5;vR=0.5;mr=50;ham=false;hitConditions=[- isLiving true]} @forward{f=50}
+
+FlechaCerteiraMk3_Trail:
+  Skills:
+  - effect:particles{p=crit;a=4;hs=0.06;vs=0.06;s=0.02} @origin
+  - effect:particles{p=dust;color=#00cc00;size=0.7;a=4;hs=0.08;vs=0.08} @origin
+  - effect:particles{p=end_rod;a=2;hs=0.03;vs=0.03;s=0.01} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#ffcc00;size=0.5;a=2;hs=0.05;vs=0.05} @origin
+
+FlechaCerteiraMk3_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.2;p=1.1} @trigger
+  - effect:particles{p=crit;a=25;hs=0.4;vs=0.4;s=0.3} @trigger
+  - effect:particles{p=enchanted_hit;a=20;hs=0.3;vs=0.3;s=0.2} @trigger
+  - effect:particles{p=end_rod;a=12;hs=0.35;vs=0.35;s=0.08} @trigger
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#ffcc00;size=1.0;a=8;hs=0.3;vs=0.3} @trigger
+
+FlechaCerteiraMk3_End:
+  Skills:
+  - effect:particles{p=crit;a=10;hs=0.3;vs=0.3;s=0.08} @origin
+  - effect:particles{p=end_rod;a=5;hs=0.2;vs=0.2;s=0.03} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#ffcc00;size=0.6;a=3;hs=0.15;vs=0.15} @origin
+
+
+# ############################################################
+#  4. CHUVA DE FLECHAS (Rain of Arrows) - COMMON
+#     AoE rain at target location
+#     Variables: damage (base 18.0 / scale 4.0)
+#     Milestones: lvl3=chuva_flechas_light, lvl5=chuva_flechas_storm
+#     Effect: Warning circle, then arrows rain from sky (syo=15)
+# ############################################################
+
+ChuvaDeFlechas:
+  Skills:
+  - skill{s=ChuvaDeFlechas_Cast} @self
+
+ChuvaDeFlechas_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.0;p=0.6} @self
+  - skill{s=ChuvaDeFlechas_Warning} @forward{f=25}
+  - delay 20
+  - sound{s=entity.arrow.shoot;v=1.2;p=0.8} @self
+  - skill{s=ChuvaDeFlechas_Wave;repeat=3;repeatInterval=4} @forward{f=25}
+
+ChuvaDeFlechas_Warning:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.2;a=30;hs=3.0;vs=0.05;s=0.01} @origin
+  - effect:particles{p=end_rod;a=10;hs=2.5;vs=0.05;s=0.01} @origin
+
+ChuvaDeFlechas_Wave:
+  Skills:
+  - projectile{oT=ChuvaDeFlechas_Trail;onHit=ChuvaDeFlechas_Hit;onEnd=ChuvaDeFlechas_End;v=30;i=1;hR=1.0;vR=1.0;mr=20;syo=15;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechas_Trail;onHit=ChuvaDeFlechas_Hit;onEnd=ChuvaDeFlechas_End;v=28;i=1;hR=1.0;vR=1.0;mr=20;syo=15;sxo=2;szo=1;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechas_Trail;onHit=ChuvaDeFlechas_Hit;onEnd=ChuvaDeFlechas_End;v=32;i=1;hR=1.0;vR=1.0;mr=20;syo=15;sxo=-1;szo=2;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechas_Trail;onHit=ChuvaDeFlechas_Hit;onEnd=ChuvaDeFlechas_End;v=26;i=1;hR=1.0;vR=1.0;mr=20;syo=15;sxo=1;szo=-2;ham=false;hitConditions=[- isLiving true]} @origin
+
+ChuvaDeFlechas_Trail:
+  Skills:
+  - effect:particles{p=crit;a=2;hs=0.05;vs=0.05;s=0.02} @origin
+  - effect:particles{p=dust;color=#00cc00;size=0.4;a=1;hs=0.03;vs=0.03} @origin
+
+ChuvaDeFlechas_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=0.8;p=1.2} @trigger
+  - effect:particles{p=crit;a=8;hs=0.2;vs=0.2;s=0.15} @trigger
+
+ChuvaDeFlechas_End:
+  Skills:
+  - effect:particles{p=crit;a=4;hs=0.3;vs=0.1;s=0.05} @origin
+  - effect:particles{p=dust;color=#996633;size=0.6;a=3;hs=0.3;vs=0.1} @origin
+
+# --- ChuvaDeFlechas Mk2: chuva_flechas_light ---
+
+ChuvaDeFlechasMk2:
+  Skills:
+  - skill{s=ChuvaDeFlechasMk2_Cast} @self
+
+ChuvaDeFlechasMk2_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.0;p=0.6} @self
+  - skill{s=ChuvaDeFlechasMk2_Warning} @forward{f=28}
+  - delay 18
+  - sound{s=entity.arrow.shoot;v=1.2;p=0.8} @self
+  - skill{s=ChuvaDeFlechasMk2_Wave;repeat=4;repeatInterval=4} @forward{f=28}
+
+ChuvaDeFlechasMk2_Warning:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.3;a=35;hs=3.5;vs=0.05;s=0.01} @origin
+  - effect:particles{p=end_rod;a=15;hs=3.0;vs=0.05;s=0.01} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#44ff44;size=0.8;a=10;hs=3.0;vs=0.05} @origin
+
+ChuvaDeFlechasMk2_Wave:
+  Skills:
+  - projectile{oT=ChuvaDeFlechasMk2_Trail;onHit=ChuvaDeFlechasMk2_Hit;onEnd=ChuvaDeFlechasMk2_End;v=30;i=1;hR=1.0;vR=1.0;mr=20;syo=15;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechasMk2_Trail;onHit=ChuvaDeFlechasMk2_Hit;onEnd=ChuvaDeFlechasMk2_End;v=28;i=1;hR=1.0;vR=1.0;mr=20;syo=15;sxo=2;szo=1;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechasMk2_Trail;onHit=ChuvaDeFlechasMk2_Hit;onEnd=ChuvaDeFlechasMk2_End;v=32;i=1;hR=1.0;vR=1.0;mr=20;syo=15;sxo=-2;szo=2;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechasMk2_Trail;onHit=ChuvaDeFlechasMk2_Hit;onEnd=ChuvaDeFlechasMk2_End;v=26;i=1;hR=1.0;vR=1.0;mr=20;syo=15;sxo=1;szo=-2;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechasMk2_Trail;onHit=ChuvaDeFlechasMk2_Hit;onEnd=ChuvaDeFlechasMk2_End;v=29;i=1;hR=1.0;vR=1.0;mr=20;syo=15;sxo=-1;szo=-1;ham=false;hitConditions=[- isLiving true]} @origin
+
+ChuvaDeFlechasMk2_Trail:
+  Skills:
+  - effect:particles{p=crit;a=3;hs=0.05;vs=0.05;s=0.02} @origin
+  - effect:particles{p=dust;color=#00cc00;size=0.5;a=2;hs=0.04;vs=0.04} @origin
+  - effect:particles{p=end_rod;a=1;hs=0.02;vs=0.02;s=0.01} @origin
+
+ChuvaDeFlechasMk2_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=0.8;p=1.2} @trigger
+  - effect:particles{p=crit;a=10;hs=0.25;vs=0.25;s=0.18} @trigger
+  - effect:particles{p=end_rod;a=4;hs=0.2;vs=0.2;s=0.05} @trigger
+
+ChuvaDeFlechasMk2_End:
+  Skills:
+  - effect:particles{p=crit;a=6;hs=0.35;vs=0.1;s=0.06} @origin
+  - effect:particles{p=dust;color=#996633;size=0.7;a=4;hs=0.35;vs=0.1} @origin
+  - effect:particles{p=end_rod;a=2;hs=0.2;vs=0.1;s=0.02} @origin
+
+# --- ChuvaDeFlechas Mk3: chuva_flechas_storm ---
+
+ChuvaDeFlechasMk3:
+  Skills:
+  - skill{s=ChuvaDeFlechasMk3_Cast} @self
+
+ChuvaDeFlechasMk3_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.2;p=0.5} @self
+  - skill{s=ChuvaDeFlechasMk3_Warning} @forward{f=30}
+  - delay 15
+  - sound{s=entity.arrow.shoot;v=1.4;p=0.7} @self
+  - skill{s=ChuvaDeFlechasMk3_Wave;repeat=5;repeatInterval=3} @forward{f=30}
+
+ChuvaDeFlechasMk3_Warning:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.5;a=40;hs=4.0;vs=0.05;s=0.01} @origin
+  - effect:particles{p=end_rod;a=20;hs=3.5;vs=0.05;s=0.02} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#44ff44;size=1.0;a=15;hs=3.5;vs=0.05} @origin
+  - effect:particles{p=enchanted_hit;a=8;hs=3.0;vs=0.05;s=0.01} @origin
+
+ChuvaDeFlechasMk3_Wave:
+  Skills:
+  - projectile{oT=ChuvaDeFlechasMk3_Trail;onHit=ChuvaDeFlechasMk3_Hit;onEnd=ChuvaDeFlechasMk3_End;v=32;i=1;hR=1.2;vR=1.2;mr=20;syo=15;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechasMk3_Trail;onHit=ChuvaDeFlechasMk3_Hit;onEnd=ChuvaDeFlechasMk3_End;v=28;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=3;szo=1;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechasMk3_Trail;onHit=ChuvaDeFlechasMk3_Hit;onEnd=ChuvaDeFlechasMk3_End;v=34;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=-2;szo=3;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechasMk3_Trail;onHit=ChuvaDeFlechasMk3_Hit;onEnd=ChuvaDeFlechasMk3_End;v=26;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=2;szo=-2;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechasMk3_Trail;onHit=ChuvaDeFlechasMk3_Hit;onEnd=ChuvaDeFlechasMk3_End;v=30;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=-1;szo=-3;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=ChuvaDeFlechasMk3_Trail;onHit=ChuvaDeFlechasMk3_Hit;onEnd=ChuvaDeFlechasMk3_End;v=31;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=1;szo=2;ham=false;hitConditions=[- isLiving true]} @origin
+
+ChuvaDeFlechasMk3_Trail:
+  Skills:
+  - effect:particles{p=crit;a=4;hs=0.06;vs=0.06;s=0.03} @origin
+  - effect:particles{p=dust;color=#00cc00;size=0.6;a=3;hs=0.05;vs=0.05} @origin
+  - effect:particles{p=end_rod;a=2;hs=0.03;vs=0.03;s=0.01} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#ffcc00;size=0.4;a=1;hs=0.04;vs=0.04} @origin
+
+ChuvaDeFlechasMk3_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=0.9;p=1.2} @trigger
+  - effect:particles{p=crit;a=15;hs=0.3;vs=0.3;s=0.2} @trigger
+  - effect:particles{p=enchanted_hit;a=8;hs=0.25;vs=0.25;s=0.1} @trigger
+  - effect:particles{p=end_rod;a=6;hs=0.2;vs=0.2;s=0.06} @trigger
+
+ChuvaDeFlechasMk3_End:
+  Skills:
+  - effect:particles{p=crit;a=8;hs=0.4;vs=0.15;s=0.08} @origin
+  - effect:particles{p=dust;color=#996633;size=0.8;a=5;hs=0.4;vs=0.15} @origin
+  - effect:particles{p=end_rod;a=4;hs=0.25;vs=0.1;s=0.03} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#ffcc00;size=0.5;a=3;hs=0.3;vs=0.1} @origin
+
+
+# ############################################################
+#  5. FLECHA ENVENENADA (Poisoned Arrow) - COMMON
+#     Poison DoT arrow
+#     Variables: damage (base 10.0 / scale 3.0),
+#                poison_damage (base 3.0 / scale 1.0)
+#     Milestones: lvl3=flecha_veneno_drip, lvl5=flecha_veneno_toxic
+#     Effect: Green dripping trail, poison on hit
+# ############################################################
+
+FlechaEnvenenada:
+  Skills:
+  - skill{s=FlechaEnvenenada_Cast} @self
+
+FlechaEnvenenada_Cast:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=1.0;p=0.9} @self
+  - effect:particles{p=dust;color=#00cc00;size=0.8;a=6;hs=0.15;vs=0.15} @self
+  - projectile{oT=FlechaEnvenenada_Trail;onHit=FlechaEnvenenada_Hit;onEnd=FlechaEnvenenada_End;v=33;i=1;hR=0.5;vR=0.5;mr=40;ham=false;hitConditions=[- isLiving true]} @forward{f=40}
+
+FlechaEnvenenada_Trail:
+  Skills:
+  - effect:particles{p=dust;color=#00cc00;size=0.6;a=3;hs=0.06;vs=0.06} @origin
+  - effect:particles{p=dust;color=#44ff44;size=0.3;a=2;hs=0.1;vs=0.15;s=0.03} @origin
+
+FlechaEnvenenada_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.0;p=0.8} @trigger
+  - effect:particles{p=dust;color=#00cc00;size=1.0;a=15;hs=0.3;vs=0.3} @trigger
+  - effect:particles{p=dust;color=#44ff44;size=0.5;a=8;hs=0.2;vs=0.4;s=0.05} @trigger
+  - skill{s=FlechaEnvenenada_Poison;repeat=5;repeatInterval=20} @trigger
+
+FlechaEnvenenada_Poison:
+  Skills:
+  - midgardDamage{a=<skill.var.poison_damage>} @self
+  - effect:particles{p=dust;color=#00cc00;size=0.5;a=5;hs=0.3;vs=0.5} @self
+  - effect:particles{p=dust;color=#44ff44;size=0.3;a=3;hs=0.2;vs=0.3;s=0.02} @self
+
+FlechaEnvenenada_End:
+  Skills:
+  - effect:particles{p=dust;color=#00cc00;size=0.5;a=6;hs=0.2;vs=0.2} @origin
+
+# --- FlechaEnvenenada Mk2: flecha_veneno_drip ---
+
+FlechaEnvenenadaMk2:
+  Skills:
+  - skill{s=FlechaEnvenenadaMk2_Cast} @self
+
+FlechaEnvenenadaMk2_Cast:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=1.0;p=0.9} @self
+  - effect:particles{p=dust;color=#00cc00;size=0.9;a=8;hs=0.15;vs=0.15} @self
+  - effect:particles{p=dust;color=#44ff44;size=0.4;a=4;hs=0.1;vs=0.2;s=0.03} @self
+  - projectile{oT=FlechaEnvenenadaMk2_Trail;onHit=FlechaEnvenenadaMk2_Hit;onEnd=FlechaEnvenenadaMk2_End;v=35;i=1;hR=0.5;vR=0.5;mr=42;ham=false;hitConditions=[- isLiving true]} @forward{f=42}
+
+FlechaEnvenenadaMk2_Trail:
+  Skills:
+  - effect:particles{p=dust;color=#00cc00;size=0.7;a=4;hs=0.06;vs=0.06} @origin
+  - effect:particles{p=dust;color=#44ff44;size=0.4;a=3;hs=0.1;vs=0.2;s=0.04} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#44ff44;size=0.3;a=2;hs=0.08;vs=0.08} @origin
+
+FlechaEnvenenadaMk2_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.0;p=0.8} @trigger
+  - effect:particles{p=dust;color=#00cc00;size=1.2;a=18;hs=0.35;vs=0.35} @trigger
+  - effect:particles{p=dust;color=#44ff44;size=0.6;a=10;hs=0.25;vs=0.45;s=0.06} @trigger
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#44ff44;size=0.5;a=6;hs=0.3;vs=0.3} @trigger
+  - skill{s=FlechaEnvenenadaMk2_Poison;repeat=6;repeatInterval=20} @trigger
+
+FlechaEnvenenadaMk2_Poison:
+  Skills:
+  - midgardDamage{a=<skill.var.poison_damage>} @self
+  - effect:particles{p=dust;color=#00cc00;size=0.6;a=6;hs=0.3;vs=0.5} @self
+  - effect:particles{p=dust;color=#44ff44;size=0.3;a=4;hs=0.25;vs=0.4;s=0.03} @self
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#44ff44;size=0.3;a=2;hs=0.2;vs=0.3} @self
+
+FlechaEnvenenadaMk2_End:
+  Skills:
+  - effect:particles{p=dust;color=#00cc00;size=0.6;a=8;hs=0.25;vs=0.25} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#44ff44;size=0.4;a=3;hs=0.15;vs=0.15} @origin
+
+# --- FlechaEnvenenada Mk3: flecha_veneno_toxic ---
+
+FlechaEnvenenadaMk3:
+  Skills:
+  - skill{s=FlechaEnvenenadaMk3_Cast} @self
+
+FlechaEnvenenadaMk3_Cast:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=1.2;p=0.85} @self
+  - effect:particles{p=dust;color=#00cc00;size=1.0;a=10;hs=0.2;vs=0.2} @self
+  - effect:particles{p=dust;color=#44ff44;size=0.5;a=6;hs=0.15;vs=0.25;s=0.04} @self
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#996633;size=0.6;a=4;hs=0.15;vs=0.15} @self
+  - projectile{oT=FlechaEnvenenadaMk3_Trail;onHit=FlechaEnvenenadaMk3_Hit;onEnd=FlechaEnvenenadaMk3_End;v=37;i=1;hR=0.5;vR=0.5;mr=45;ham=false;hitConditions=[- isLiving true]} @forward{f=45}
+
+FlechaEnvenenadaMk3_Trail:
+  Skills:
+  - effect:particles{p=dust;color=#00cc00;size=0.8;a=5;hs=0.07;vs=0.07} @origin
+  - effect:particles{p=dust;color=#44ff44;size=0.5;a=4;hs=0.12;vs=0.2;s=0.05} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#44ff44;size=0.4;a=3;hs=0.08;vs=0.08} @origin
+  - effect:particles{p=dust;color=#996633;size=0.3;a=2;hs=0.1;vs=0.15;s=0.06} @origin
+
+FlechaEnvenenadaMk3_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.2;p=0.75} @trigger
+  - effect:particles{p=dust;color=#00cc00;size=1.5;a=25;hs=0.4;vs=0.4} @trigger
+  - effect:particles{p=dust;color=#44ff44;size=0.8;a=15;hs=0.3;vs=0.5;s=0.08} @trigger
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#996633;size=0.7;a=10;hs=0.35;vs=0.35} @trigger
+  - skill{s=FlechaEnvenenadaMk3_Poison;repeat=7;repeatInterval=20} @trigger
+  - skill{s=FlechaEnvenenadaMk3_ToxicCloud} @trigger
+
+FlechaEnvenenadaMk3_Poison:
+  Skills:
+  - midgardDamage{a=<skill.var.poison_damage>} @self
+  - effect:particles{p=dust;color=#00cc00;size=0.7;a=7;hs=0.35;vs=0.55} @self
+  - effect:particles{p=dust;color=#44ff44;size=0.4;a=5;hs=0.3;vs=0.45;s=0.04} @self
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#996633;size=0.4;a=3;hs=0.25;vs=0.35} @self
+
+FlechaEnvenenadaMk3_ToxicCloud:
+  Skills:
+  - effect:particles{p=dust;color=#00cc00;size=1.2;a=20;hs=1.5;vs=0.8;s=0.02} @self
+  - effect:particles{p=dust;color=#44ff44;size=0.6;a=12;hs=1.2;vs=0.6;s=0.03} @self
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#996633;size=0.8;a=8;hs=1.0;vs=0.5} @self
+
+FlechaEnvenenadaMk3_End:
+  Skills:
+  - effect:particles{p=dust;color=#00cc00;size=0.8;a=10;hs=0.3;vs=0.3} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#44ff44;size=0.5;a=5;hs=0.2;vs=0.2} @origin
+  - effect:particles{p=dust;color=#996633;size=0.4;a=3;hs=0.15;vs=0.15} @origin
+
+
+# ############################################################
+#  6. TIRO PERFURANTE (Piercing Shot) - COMMON
+#     Piercing arrow that passes through enemies
+#     Variables: damage (base 20.0 / scale 5.0),
+#                armor_pen (base 10.0 / scale 3.0)
+#     Milestones: lvl3=tiro_perfurante_spark, lvl5=tiro_perfurante_pierce
+#     Effect: Blue/white arrow, sparking trail, pierces targets
+#     Uses se=false to pass through entities
+# ############################################################
+
+TiroPerfurante:
+  Skills:
+  - skill{s=TiroPerfurante_Cast} @self
+
+TiroPerfurante_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.2;p=1.4} @self
+  - effect:particles{p=enchanted_hit;a=10;hs=0.1;vs=0.1;s=0.4} @self
+  - effect:particles{p=dust;color=#88ccff;size=0.8;a=6;hs=0.1;vs=0.1} @self
+  - projectile{oT=TiroPerfurante_Trail;onHit=TiroPerfurante_Hit;onEnd=TiroPerfurante_End;v=40;i=1;hR=0.4;vR=0.4;mr=50;se=false;ham=false;hitConditions=[- isLiving true]} @forward{f=50}
+
+TiroPerfurante_Trail:
+  Skills:
+  - effect:particles{p=enchanted_hit;a=3;hs=0.04;vs=0.04;s=0.02} @origin
+  - effect:particles{p=dust;color=#88ccff;size=0.5;a=2;hs=0.04;vs=0.04} @origin
+  - effect:particles{p=end_rod;a=1;hs=0.02;vs=0.02;s=0.01} @origin
+
+TiroPerfurante_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>;armorPen=<skill.var.armor_pen>} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.0;p=1.4} @trigger
+  - effect:particles{p=enchanted_hit;a=12;hs=0.2;vs=0.2;s=0.3} @trigger
+  - effect:particles{p=crit;a=8;hs=0.15;vs=0.15;s=0.2} @trigger
+  - effect:particles{p=dust;color=#88ccff;size=0.8;a=8;hs=0.2;vs=0.2} @trigger
+
+TiroPerfurante_End:
+  Skills:
+  - effect:particles{p=enchanted_hit;a=8;hs=0.3;vs=0.3;s=0.1} @origin
+  - effect:particles{p=dust;color=#88ccff;size=0.6;a=5;hs=0.2;vs=0.2} @origin
+
+# --- TiroPerfurante Mk2: tiro_perfurante_spark ---
+
+TiroPerfuranteMk2:
+  Skills:
+  - skill{s=TiroPerfuranteMk2_Cast} @self
+
+TiroPerfuranteMk2_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.3;p=1.5} @self
+  - effect:particles{p=enchanted_hit;a=14;hs=0.12;vs=0.12;s=0.45} @self
+  - effect:particles{p=dust;color=#88ccff;size=0.9;a=8;hs=0.12;vs=0.12} @self
+  - effect:particles{p=crit;a=6;hs=0.1;vs=0.1;s=0.3} @self
+  - projectile{oT=TiroPerfuranteMk2_Trail;onHit=TiroPerfuranteMk2_Hit;onEnd=TiroPerfuranteMk2_End;v=43;i=1;hR=0.4;vR=0.4;mr=55;se=false;ham=false;hitConditions=[- isLiving true]} @forward{f=55}
+
+TiroPerfuranteMk2_Trail:
+  Skills:
+  - effect:particles{p=enchanted_hit;a=4;hs=0.05;vs=0.05;s=0.03} @origin
+  - effect:particles{p=dust;color=#88ccff;size=0.6;a=3;hs=0.05;vs=0.05} @origin
+  - effect:particles{p=end_rod;a=2;hs=0.03;vs=0.03;s=0.01} @origin
+  - effect:particles{p=crit;a=2;hs=0.06;vs=0.06;s=0.04} @origin
+
+TiroPerfuranteMk2_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>;armorPen=<skill.var.armor_pen>} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.1;p=1.5} @trigger
+  - effect:particles{p=enchanted_hit;a=16;hs=0.25;vs=0.25;s=0.35} @trigger
+  - effect:particles{p=crit;a=10;hs=0.2;vs=0.2;s=0.25} @trigger
+  - effect:particles{p=dust;color=#88ccff;size=1.0;a=10;hs=0.25;vs=0.25} @trigger
+  - effect:particles{p=end_rod;a=5;hs=0.15;vs=0.15;s=0.05} @trigger
+
+TiroPerfuranteMk2_End:
+  Skills:
+  - effect:particles{p=enchanted_hit;a=12;hs=0.35;vs=0.35;s=0.12} @origin
+  - effect:particles{p=dust;color=#88ccff;size=0.7;a=6;hs=0.25;vs=0.25} @origin
+  - effect:particles{p=crit;a=5;hs=0.2;vs=0.2;s=0.06} @origin
+
+# --- TiroPerfurante Mk3: tiro_perfurante_pierce ---
+
+TiroPerfuranteMk3:
+  Skills:
+  - skill{s=TiroPerfuranteMk3_Cast} @self
+
+TiroPerfuranteMk3_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.5;p=1.6} @self
+  - effect:particles{p=enchanted_hit;a=18;hs=0.15;vs=0.15;s=0.5} @self
+  - effect:particles{p=dust;color=#88ccff;size=1.0;a=10;hs=0.15;vs=0.15} @self
+  - effect:particles{p=dust_color_transition;fromColor=#88ccff;toColor=#ffffff;size=0.8;a=6;hs=0.12;vs=0.12} @self
+  - effect:particles{p=crit;a=8;hs=0.1;vs=0.1;s=0.35} @self
+  - projectile{oT=TiroPerfuranteMk3_Trail;onHit=TiroPerfuranteMk3_Hit;onEnd=TiroPerfuranteMk3_End;v=48;i=1;hR=0.4;vR=0.4;mr=60;se=false;ham=false;hitConditions=[- isLiving true]} @forward{f=60}
+
+TiroPerfuranteMk3_Trail:
+  Skills:
+  - effect:particles{p=enchanted_hit;a=5;hs=0.06;vs=0.06;s=0.04} @origin
+  - effect:particles{p=dust;color=#88ccff;size=0.7;a=4;hs=0.06;vs=0.06} @origin
+  - effect:particles{p=end_rod;a=3;hs=0.04;vs=0.04;s=0.02} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#88ccff;toColor=#ffffff;size=0.5;a=2;hs=0.05;vs=0.05} @origin
+  - effect:particles{p=crit;a=3;hs=0.07;vs=0.07;s=0.05} @origin
+
+TiroPerfuranteMk3_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>;armorPen=<skill.var.armor_pen>} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.3;p=1.6} @trigger
+  - effect:particles{p=enchanted_hit;a=22;hs=0.3;vs=0.3;s=0.4} @trigger
+  - effect:particles{p=crit;a=15;hs=0.25;vs=0.25;s=0.3} @trigger
+  - effect:particles{p=dust;color=#88ccff;size=1.2;a=12;hs=0.3;vs=0.3} @trigger
+  - effect:particles{p=dust_color_transition;fromColor=#88ccff;toColor=#ffffff;size=0.8;a=8;hs=0.25;vs=0.25} @trigger
+  - effect:particles{p=end_rod;a=8;hs=0.2;vs=0.2;s=0.06} @trigger
+
+TiroPerfuranteMk3_End:
+  Skills:
+  - effect:particles{p=enchanted_hit;a=15;hs=0.4;vs=0.4;s=0.15} @origin
+  - effect:particles{p=dust;color=#88ccff;size=0.8;a=8;hs=0.3;vs=0.3} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#88ccff;toColor=#ffffff;size=0.6;a=5;hs=0.2;vs=0.2} @origin
+  - effect:particles{p=crit;a=8;hs=0.25;vs=0.25;s=0.08} @origin
+
+
+# ############################################################
+#  7. ARMADILHA (Trap) - COMMON
+#     Place a trap that triggers on nearby enemies
+#     Variables: damage (base 15.0 / scale 4.0)
+#     Milestones: lvl3=armadilha_snare, lvl5=armadilha_spike
+#     Effect: Glowing rune on ground, explode on trigger, slowness
+#     Uses repeating proximity check with particle mark
+# ############################################################
+
+Armadilha:
+  Skills:
+  - skill{s=Armadilha_Cast} @self
+
+Armadilha_Cast:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=0.8;p=1.5} @self
+  - skill{s=Armadilha_Mark} @forward{f=8}
+  - delay 5
+  - skill{s=Armadilha_Watch;repeat=40;repeatInterval=5} @forward{f=8}
+
+Armadilha_Mark:
+  Skills:
+  - effect:particles{p=dust;color=#996633;size=1.5;a=30;hs=1.0;vs=0.05;s=0.01} @origin
+  - effect:particles{p=end_rod;a=15;hs=0.8;vs=0.05;s=0.01} @origin
+  - effect:particles{p=dust;color=#ffcc00;size=0.8;a=12;hs=0.6;vs=0.05;s=0.01} @origin
+  - sound{s=entity.arrow.hit_player;v=0.6;p=1.8} @origin
+
+Armadilha_Watch:
+  Skills:
+  - effect:particles{p=dust;color=#996633;size=0.6;a=4;hs=0.8;vs=0.05;s=0.005} @origin
+  - effect:particles{p=end_rod;a=2;hs=0.6;vs=0.05;s=0.005} @origin
+  - skill{s=Armadilha_Trigger} @ENO{r=2.5}
+
+Armadilha_Trigger:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @self
+  - potion{t=SLOWNESS;d=60;l=1} @self
+  - sound{s=entity.generic.explode;v=0.8;p=1.4} @self
+  - effect:particles{p=crit;a=25;hs=1.2;vs=0.8;s=0.3} @self
+  - effect:particles{p=dust;color=#996633;size=1.5;a=20;hs=1.5;vs=0.5} @self
+  - effect:particles{p=enchanted_hit;a=12;hs=1.0;vs=0.5;s=0.2} @self
+
+# --- Armadilha Mk2: armadilha_snare ---
+
+ArmadilhaMk2:
+  Skills:
+  - skill{s=ArmadilhaMk2_Cast} @self
+
+ArmadilhaMk2_Cast:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=0.8;p=1.5} @self
+  - skill{s=ArmadilhaMk2_Mark} @forward{f=10}
+  - delay 5
+  - skill{s=ArmadilhaMk2_Watch;repeat=50;repeatInterval=5} @forward{f=10}
+
+ArmadilhaMk2_Mark:
+  Skills:
+  - effect:particles{p=dust;color=#996633;size=1.6;a=35;hs=1.2;vs=0.05;s=0.01} @origin
+  - effect:particles{p=end_rod;a=18;hs=1.0;vs=0.05;s=0.01} @origin
+  - effect:particles{p=dust;color=#ffcc00;size=0.9;a=15;hs=0.8;vs=0.05;s=0.01} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#996633;toColor=#ffcc00;size=0.6;a=8;hs=0.7;vs=0.05} @origin
+  - sound{s=entity.arrow.hit_player;v=0.6;p=1.8} @origin
+
+ArmadilhaMk2_Watch:
+  Skills:
+  - effect:particles{p=dust;color=#996633;size=0.7;a=5;hs=1.0;vs=0.05;s=0.005} @origin
+  - effect:particles{p=end_rod;a=3;hs=0.8;vs=0.05;s=0.005} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#996633;toColor=#ffcc00;size=0.3;a=2;hs=0.6;vs=0.05} @origin
+  - skill{s=ArmadilhaMk2_Trigger} @ENO{r=3.0}
+
+ArmadilhaMk2_Trigger:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @self
+  - potion{t=SLOWNESS;d=80;l=2} @self
+  - sound{s=entity.generic.explode;v=0.9;p=1.3} @self
+  - effect:particles{p=crit;a=30;hs=1.5;vs=1.0;s=0.35} @self
+  - effect:particles{p=dust;color=#996633;size=1.8;a=25;hs=1.8;vs=0.6} @self
+  - effect:particles{p=enchanted_hit;a=15;hs=1.2;vs=0.6;s=0.25} @self
+  - effect:particles{p=dust_color_transition;fromColor=#996633;toColor=#ffcc00;size=0.8;a=10;hs=1.0;vs=0.5} @self
+
+# --- Armadilha Mk3: armadilha_spike ---
+
+ArmadilhaMk3:
+  Skills:
+  - skill{s=ArmadilhaMk3_Cast} @self
+
+ArmadilhaMk3_Cast:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=0.9;p=1.5} @self
+  - skill{s=ArmadilhaMk3_Mark} @forward{f=12}
+  - delay 5
+  - skill{s=ArmadilhaMk3_Watch;repeat=60;repeatInterval=5} @forward{f=12}
+
+ArmadilhaMk3_Mark:
+  Skills:
+  - effect:particles{p=dust;color=#996633;size=1.8;a=40;hs=1.5;vs=0.05;s=0.01} @origin
+  - effect:particles{p=end_rod;a=22;hs=1.2;vs=0.05;s=0.02} @origin
+  - effect:particles{p=dust;color=#ffcc00;size=1.0;a=18;hs=1.0;vs=0.05;s=0.01} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#996633;toColor=#00cc00;size=0.7;a=10;hs=0.8;vs=0.05} @origin
+  - effect:particles{p=enchanted_hit;a=8;hs=0.6;vs=0.05;s=0.01} @origin
+  - sound{s=entity.arrow.hit_player;v=0.7;p=1.8} @origin
+
+ArmadilhaMk3_Watch:
+  Skills:
+  - effect:particles{p=dust;color=#996633;size=0.8;a=6;hs=1.2;vs=0.05;s=0.005} @origin
+  - effect:particles{p=end_rod;a=4;hs=1.0;vs=0.05;s=0.008} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#996633;toColor=#00cc00;size=0.4;a=3;hs=0.8;vs=0.05} @origin
+  - effect:particles{p=enchanted_hit;a=2;hs=0.5;vs=0.05;s=0.005} @origin
+  - skill{s=ArmadilhaMk3_Trigger} @ENO{r=3.5}
+
+ArmadilhaMk3_Trigger:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @self
+  - potion{t=SLOWNESS;d=100;l=2} @self
+  - sound{s=entity.generic.explode;v=1.0;p=1.2} @self
+  - effect:particles{p=crit;a=40;hs=2.0;vs=1.2;s=0.4} @self
+  - effect:particles{p=dust;color=#996633;size=2.0;a=30;hs=2.0;vs=0.8} @self
+  - effect:particles{p=enchanted_hit;a=20;hs=1.5;vs=0.8;s=0.3} @self
+  - effect:particles{p=dust_color_transition;fromColor=#996633;toColor=#00cc00;size=1.0;a=12;hs=1.2;vs=0.6} @self
+  - effect:particles{p=end_rod;a=10;hs=1.0;vs=1.0;s=0.08} @self
+
+
+# ############################################################
+#  8. FLECHA EXPLOSIVA (Explosive Arrow) - COMMON
+#     Explosive arrow with AoE on impact
+#     Variables: damage (base 25.0 / scale 6.0)
+#     Milestones: lvl3=flecha_explosiva_spark, lvl5=flecha_explosiva_blast
+#     Effect: Red/orange trail, massive explosion, fire AoE
+# ############################################################
+
+FlechaExplosiva:
+  Skills:
+  - skill{s=FlechaExplosiva_Cast} @self
+
+FlechaExplosiva_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.2;p=0.7} @self
+  - effect:particles{p=flame;a=10;hs=0.15;vs=0.15;s=0.2} @self
+  - effect:particles{p=dust;color=#ff6600;size=0.8;a=6;hs=0.1;vs=0.1} @self
+  - projectile{oT=FlechaExplosiva_Trail;onHit=FlechaExplosiva_Hit;onEnd=FlechaExplosiva_End;v=32;i=1;hR=0.5;vR=0.5;mr=40;ham=false;hitConditions=[- isLiving true]} @forward{f=40}
+
+FlechaExplosiva_Trail:
+  Skills:
+  - effect:particles{p=flame;a=3;hs=0.06;vs=0.06;s=0.04} @origin
+  - effect:particles{p=dust;color=#ff6600;size=0.6;a=2;hs=0.05;vs=0.05} @origin
+  - effect:particles{p=dust;color=#ff0000;size=0.4;a=1;hs=0.08;vs=0.08;s=0.02} @origin
+
+FlechaExplosiva_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.generic.explode;v=1.0;p=1.0} @trigger
+  - effect:particles{p=flame;a=30;hs=1.5;vs=1.0;s=0.3} @trigger
+  - effect:particles{p=dust;color=#ff6600;size=1.5;a=25;hs=1.5;vs=1.0} @trigger
+  - effect:particles{p=dust;color=#ff0000;size=1.2;a=15;hs=1.2;vs=0.8} @trigger
+  - effect:particles{p=crit;a=15;hs=1.0;vs=0.8;s=0.25} @trigger
+  - skill{s=FlechaExplosiva_AoE} @trigger
+
+FlechaExplosiva_AoE:
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @ENO{r=3}
+  - effect:particles{p=flame;a=15;hs=2.0;vs=0.5;s=0.15} @origin
+  - effect:particles{p=dust;color=#ff6600;size=1.0;a=10;hs=2.0;vs=0.5} @origin
+
+FlechaExplosiva_End:
+  Skills:
+  - effect:particles{p=flame;a=10;hs=0.5;vs=0.5;s=0.1} @origin
+  - effect:particles{p=dust;color=#ff6600;size=0.8;a=8;hs=0.4;vs=0.4} @origin
+
+# --- FlechaExplosiva Mk2: flecha_explosiva_spark ---
+
+FlechaExplosivaMk2:
+  Skills:
+  - skill{s=FlechaExplosivaMk2_Cast} @self
+
+FlechaExplosivaMk2_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.3;p=0.65} @self
+  - effect:particles{p=flame;a=14;hs=0.18;vs=0.18;s=0.25} @self
+  - effect:particles{p=dust;color=#ff6600;size=0.9;a=8;hs=0.12;vs=0.12} @self
+  - effect:particles{p=crit;a=6;hs=0.1;vs=0.1;s=0.15} @self
+  - projectile{oT=FlechaExplosivaMk2_Trail;onHit=FlechaExplosivaMk2_Hit;onEnd=FlechaExplosivaMk2_End;v=34;i=1;hR=0.5;vR=0.5;mr=42;ham=false;hitConditions=[- isLiving true]} @forward{f=42}
+
+FlechaExplosivaMk2_Trail:
+  Skills:
+  - effect:particles{p=flame;a=4;hs=0.07;vs=0.07;s=0.05} @origin
+  - effect:particles{p=dust;color=#ff6600;size=0.7;a=3;hs=0.06;vs=0.06} @origin
+  - effect:particles{p=dust;color=#ff0000;size=0.5;a=2;hs=0.09;vs=0.09;s=0.03} @origin
+  - effect:particles{p=crit;a=2;hs=0.05;vs=0.05;s=0.03} @origin
+
+FlechaExplosivaMk2_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.generic.explode;v=1.1;p=0.9} @trigger
+  - effect:particles{p=flame;a=40;hs=2.0;vs=1.2;s=0.35} @trigger
+  - effect:particles{p=dust;color=#ff6600;size=1.8;a=30;hs=2.0;vs=1.2} @trigger
+  - effect:particles{p=dust;color=#ff0000;size=1.4;a=20;hs=1.5;vs=1.0} @trigger
+  - effect:particles{p=crit;a=20;hs=1.2;vs=1.0;s=0.3} @trigger
+  - skill{s=FlechaExplosivaMk2_AoE} @trigger
+
+FlechaExplosivaMk2_AoE:
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @ENO{r=3.5}
+  - effect:particles{p=flame;a=20;hs=2.5;vs=0.6;s=0.18} @origin
+  - effect:particles{p=dust;color=#ff6600;size=1.2;a=15;hs=2.5;vs=0.6} @origin
+  - effect:particles{p=crit;a=8;hs=1.5;vs=0.5;s=0.1} @origin
+
+FlechaExplosivaMk2_End:
+  Skills:
+  - effect:particles{p=flame;a=14;hs=0.6;vs=0.6;s=0.12} @origin
+  - effect:particles{p=dust;color=#ff6600;size=0.9;a=10;hs=0.5;vs=0.5} @origin
+  - effect:particles{p=crit;a=5;hs=0.3;vs=0.3;s=0.05} @origin
+
+# --- FlechaExplosiva Mk3: flecha_explosiva_blast ---
+
+FlechaExplosivaMk3:
+  Skills:
+  - skill{s=FlechaExplosivaMk3_Cast} @self
+
+FlechaExplosivaMk3_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.5;p=0.6} @self
+  - effect:particles{p=flame;a=18;hs=0.2;vs=0.2;s=0.3} @self
+  - effect:particles{p=dust;color=#ff6600;size=1.0;a=10;hs=0.15;vs=0.15} @self
+  - effect:particles{p=dust;color=#ff0000;size=0.7;a=6;hs=0.12;vs=0.12} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ff6600;toColor=#ff0000;size=0.8;a=5;hs=0.12;vs=0.12} @self
+  - projectile{oT=FlechaExplosivaMk3_Trail;onHit=FlechaExplosivaMk3_Hit;onEnd=FlechaExplosivaMk3_End;v=36;i=1;hR=0.5;vR=0.5;mr=45;ham=false;hitConditions=[- isLiving true]} @forward{f=45}
+
+FlechaExplosivaMk3_Trail:
+  Skills:
+  - effect:particles{p=flame;a=6;hs=0.08;vs=0.08;s=0.06} @origin
+  - effect:particles{p=dust;color=#ff6600;size=0.8;a=4;hs=0.07;vs=0.07} @origin
+  - effect:particles{p=dust;color=#ff0000;size=0.5;a=3;hs=0.1;vs=0.1;s=0.04} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ff6600;toColor=#ff0000;size=0.4;a=2;hs=0.06;vs=0.06} @origin
+  - effect:particles{p=crit;a=2;hs=0.05;vs=0.05;s=0.04} @origin
+
+FlechaExplosivaMk3_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.generic.explode;v=1.4;p=0.8} @trigger
+  - effect:particles{p=flame;a=50;hs=2.5;vs=1.5;s=0.4} @trigger
+  - effect:particles{p=dust;color=#ff6600;size=2.0;a=35;hs=2.5;vs=1.5} @trigger
+  - effect:particles{p=dust;color=#ff0000;size=1.6;a=25;hs=2.0;vs=1.2} @trigger
+  - effect:particles{p=dust_color_transition;fromColor=#ff6600;toColor=#ff0000;size=1.2;a=15;hs=1.8;vs=1.0} @trigger
+  - effect:particles{p=crit;a=25;hs=1.5;vs=1.2;s=0.35} @trigger
+  - skill{s=FlechaExplosivaMk3_AoE} @trigger
+
+FlechaExplosivaMk3_AoE:
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @ENO{r=4.0}
+  - effect:particles{p=flame;a=30;hs=3.0;vs=0.8;s=0.22} @origin
+  - effect:particles{p=dust;color=#ff6600;size=1.5;a=20;hs=3.0;vs=0.8} @origin
+  - effect:particles{p=dust;color=#ff0000;size=1.0;a=12;hs=2.5;vs=0.6} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ff6600;toColor=#ff0000;size=0.8;a=8;hs=2.0;vs=0.5} @origin
+
+FlechaExplosivaMk3_End:
+  Skills:
+  - effect:particles{p=flame;a=20;hs=0.8;vs=0.8;s=0.15} @origin
+  - effect:particles{p=dust;color=#ff6600;size=1.0;a=12;hs=0.6;vs=0.6} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ff6600;toColor=#ff0000;size=0.7;a=6;hs=0.4;vs=0.4} @origin
+  - effect:particles{p=crit;a=8;hs=0.4;vs=0.4;s=0.08} @origin
+
+
+# ############################################################
+#  9. TEMPESTADE DE FLECHAS (Arrow Storm) - ULTIMATE
+#     Massive AoE barrage, channeled
+#     Variables: damage (base 40.0 / scale 8.0)
+#     Milestones: lvl3=tempestade_flechas_rain, lvl5=tempestade_flechas_storm
+#     Effect: Sustained rain of glowing arrows over large area, multiple waves
+#     Uses syo=15 for sky-origin projectiles
+# ############################################################
+
+TempestadeDeFlechas:
+  Skills:
+  - skill{s=TempestadeDeFlechas_Cast} @self
+
+TempestadeDeFlechas_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.5;p=0.4} @self
+  - effect:particles{p=dust;color=#ffcc00;size=1.5;a=25;hs=0.3;vs=0.5} @self
+  - skill{s=TempestadeDeFlechas_Warning} @forward{f=25}
+  - delay 20
+  - sound{s=entity.arrow.shoot;v=1.5;p=0.5} @self
+  - skill{s=TempestadeDeFlechas_Channel;repeat=6;repeatInterval=8} @forward{f=25}
+
+TempestadeDeFlechas_Warning:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.5;a=50;hs=5.0;vs=0.05;s=0.01} @origin
+  - effect:particles{p=end_rod;a=25;hs=4.5;vs=0.05;s=0.02} @origin
+  - effect:particles{p=dust;color=#00cc00;size=1.0;a=20;hs=4.0;vs=0.05;s=0.01} @origin
+
+TempestadeDeFlechas_Channel:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=1.0;p=0.7} @origin
+  - skill{s=TempestadeDeFlechas_Wave} @origin
+
+TempestadeDeFlechas_Wave:
+  Skills:
+  - projectile{oT=TempestadeDeFlechas_Trail;onHit=TempestadeDeFlechas_Hit;onEnd=TempestadeDeFlechas_End;v=28;i=1;hR=1.2;vR=1.2;mr=20;syo=15;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechas_Trail;onHit=TempestadeDeFlechas_Hit;onEnd=TempestadeDeFlechas_End;v=30;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=3;szo=2;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechas_Trail;onHit=TempestadeDeFlechas_Hit;onEnd=TempestadeDeFlechas_End;v=26;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=-2;szo=3;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechas_Trail;onHit=TempestadeDeFlechas_Hit;onEnd=TempestadeDeFlechas_End;v=32;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=2;szo=-3;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechas_Trail;onHit=TempestadeDeFlechas_Hit;onEnd=TempestadeDeFlechas_End;v=29;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=-3;szo=-1;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechas_Trail;onHit=TempestadeDeFlechas_Hit;onEnd=TempestadeDeFlechas_End;v=27;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=4;szo=0;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechas_Trail;onHit=TempestadeDeFlechas_Hit;onEnd=TempestadeDeFlechas_End;v=31;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=0;szo=-4;ham=false;hitConditions=[- isLiving true]} @origin
+
+TempestadeDeFlechas_Trail:
+  Skills:
+  - effect:particles{p=crit;a=3;hs=0.05;vs=0.05;s=0.03} @origin
+  - effect:particles{p=dust;color=#00cc00;size=0.5;a=2;hs=0.04;vs=0.04} @origin
+  - effect:particles{p=end_rod;a=1;hs=0.03;vs=0.03;s=0.01} @origin
+
+TempestadeDeFlechas_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=0.7;p=1.1} @trigger
+  - effect:particles{p=crit;a=10;hs=0.25;vs=0.25;s=0.2} @trigger
+  - effect:particles{p=enchanted_hit;a=6;hs=0.2;vs=0.2;s=0.1} @trigger
+
+TempestadeDeFlechas_End:
+  Skills:
+  - effect:particles{p=crit;a=5;hs=0.3;vs=0.1;s=0.06} @origin
+  - effect:particles{p=dust;color=#996633;size=0.7;a=4;hs=0.3;vs=0.1} @origin
+
+# --- TempestadeDeFlechas Mk2: tempestade_flechas_rain ---
+
+TempestadeDeFlechasMk2:
+  Skills:
+  - skill{s=TempestadeDeFlechasMk2_Cast} @self
+
+TempestadeDeFlechasMk2_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.6;p=0.35} @self
+  - effect:particles{p=dust;color=#ffcc00;size=1.8;a=30;hs=0.35;vs=0.55} @self
+  - effect:particles{p=enchanted_hit;a=10;hs=0.2;vs=0.3;s=0.05} @self
+  - skill{s=TempestadeDeFlechasMk2_Warning} @forward{f=28}
+  - delay 18
+  - sound{s=entity.arrow.shoot;v=1.6;p=0.45} @self
+  - skill{s=TempestadeDeFlechasMk2_Channel;repeat=8;repeatInterval=7} @forward{f=28}
+
+TempestadeDeFlechasMk2_Warning:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.8;a=60;hs=5.5;vs=0.05;s=0.01} @origin
+  - effect:particles{p=end_rod;a=30;hs=5.0;vs=0.05;s=0.02} @origin
+  - effect:particles{p=dust;color=#00cc00;size=1.2;a=25;hs=4.5;vs=0.05;s=0.01} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#00cc00;size=0.8;a=15;hs=4.0;vs=0.05} @origin
+
+TempestadeDeFlechasMk2_Channel:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=1.1;p=0.65} @origin
+  - skill{s=TempestadeDeFlechasMk2_Wave} @origin
+
+TempestadeDeFlechasMk2_Wave:
+  Skills:
+  - projectile{oT=TempestadeDeFlechasMk2_Trail;onHit=TempestadeDeFlechasMk2_Hit;onEnd=TempestadeDeFlechasMk2_End;v=30;i=1;hR=1.2;vR=1.2;mr=20;syo=15;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk2_Trail;onHit=TempestadeDeFlechasMk2_Hit;onEnd=TempestadeDeFlechasMk2_End;v=28;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=3;szo=2;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk2_Trail;onHit=TempestadeDeFlechasMk2_Hit;onEnd=TempestadeDeFlechasMk2_End;v=32;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=-3;szo=3;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk2_Trail;onHit=TempestadeDeFlechasMk2_Hit;onEnd=TempestadeDeFlechasMk2_End;v=26;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=2;szo=-3;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk2_Trail;onHit=TempestadeDeFlechasMk2_Hit;onEnd=TempestadeDeFlechasMk2_End;v=31;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=-4;szo=-1;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk2_Trail;onHit=TempestadeDeFlechasMk2_Hit;onEnd=TempestadeDeFlechasMk2_End;v=29;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=4;szo=1;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk2_Trail;onHit=TempestadeDeFlechasMk2_Hit;onEnd=TempestadeDeFlechasMk2_End;v=27;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=1;szo=4;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk2_Trail;onHit=TempestadeDeFlechasMk2_Hit;onEnd=TempestadeDeFlechasMk2_End;v=30;i=1;hR=1.2;vR=1.2;mr=20;syo=15;sxo=-1;szo=-4;ham=false;hitConditions=[- isLiving true]} @origin
+
+TempestadeDeFlechasMk2_Trail:
+  Skills:
+  - effect:particles{p=crit;a=4;hs=0.06;vs=0.06;s=0.03} @origin
+  - effect:particles{p=dust;color=#00cc00;size=0.6;a=3;hs=0.05;vs=0.05} @origin
+  - effect:particles{p=end_rod;a=2;hs=0.03;vs=0.03;s=0.01} @origin
+
+TempestadeDeFlechasMk2_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=0.8;p=1.1} @trigger
+  - effect:particles{p=crit;a=12;hs=0.3;vs=0.3;s=0.22} @trigger
+  - effect:particles{p=enchanted_hit;a=8;hs=0.25;vs=0.25;s=0.12} @trigger
+  - effect:particles{p=end_rod;a=4;hs=0.15;vs=0.15;s=0.05} @trigger
+
+TempestadeDeFlechasMk2_End:
+  Skills:
+  - effect:particles{p=crit;a=6;hs=0.35;vs=0.15;s=0.07} @origin
+  - effect:particles{p=dust;color=#996633;size=0.8;a=5;hs=0.35;vs=0.15} @origin
+  - effect:particles{p=end_rod;a=2;hs=0.2;vs=0.1;s=0.02} @origin
+
+# --- TempestadeDeFlechas Mk3: tempestade_flechas_storm ---
+
+TempestadeDeFlechasMk3:
+  Skills:
+  - skill{s=TempestadeDeFlechasMk3_Cast} @self
+
+TempestadeDeFlechasMk3_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.8;p=0.3} @self
+  - effect:particles{p=dust;color=#ffcc00;size=2.0;a=35;hs=0.4;vs=0.6} @self
+  - effect:particles{p=enchanted_hit;a=15;hs=0.25;vs=0.35;s=0.06} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#00cc00;size=1.0;a=10;hs=0.3;vs=0.4} @self
+  - skill{s=TempestadeDeFlechasMk3_Warning} @forward{f=30}
+  - delay 15
+  - sound{s=entity.arrow.shoot;v=1.8;p=0.4} @self
+  - skill{s=TempestadeDeFlechasMk3_Channel;repeat=10;repeatInterval=6} @forward{f=30}
+
+TempestadeDeFlechasMk3_Warning:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=2.0;a=70;hs=6.0;vs=0.05;s=0.02} @origin
+  - effect:particles{p=end_rod;a=40;hs=5.5;vs=0.05;s=0.03} @origin
+  - effect:particles{p=dust;color=#00cc00;size=1.5;a=35;hs=5.0;vs=0.05;s=0.02} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#00cc00;size=1.0;a=20;hs=4.5;vs=0.05} @origin
+  - effect:particles{p=enchanted_hit;a=15;hs=4.0;vs=0.05;s=0.01} @origin
+
+TempestadeDeFlechasMk3_Channel:
+  Skills:
+  - sound{s=entity.arrow.shoot;v=1.2;p=0.6} @origin
+  - skill{s=TempestadeDeFlechasMk3_Wave} @origin
+
+TempestadeDeFlechasMk3_Wave:
+  Skills:
+  - projectile{oT=TempestadeDeFlechasMk3_Trail;onHit=TempestadeDeFlechasMk3_Hit;onEnd=TempestadeDeFlechasMk3_End;v=32;i=1;hR=1.5;vR=1.5;mr=22;syo=15;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk3_Trail;onHit=TempestadeDeFlechasMk3_Hit;onEnd=TempestadeDeFlechasMk3_End;v=28;i=1;hR=1.5;vR=1.5;mr=22;syo=15;sxo=4;szo=2;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk3_Trail;onHit=TempestadeDeFlechasMk3_Hit;onEnd=TempestadeDeFlechasMk3_End;v=34;i=1;hR=1.5;vR=1.5;mr=22;syo=15;sxo=-3;szo=4;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk3_Trail;onHit=TempestadeDeFlechasMk3_Hit;onEnd=TempestadeDeFlechasMk3_End;v=26;i=1;hR=1.5;vR=1.5;mr=22;syo=15;sxo=3;szo=-4;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk3_Trail;onHit=TempestadeDeFlechasMk3_Hit;onEnd=TempestadeDeFlechasMk3_End;v=30;i=1;hR=1.5;vR=1.5;mr=22;syo=15;sxo=-4;szo=-2;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk3_Trail;onHit=TempestadeDeFlechasMk3_Hit;onEnd=TempestadeDeFlechasMk3_End;v=33;i=1;hR=1.5;vR=1.5;mr=22;syo=15;sxo=5;szo=0;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk3_Trail;onHit=TempestadeDeFlechasMk3_Hit;onEnd=TempestadeDeFlechasMk3_End;v=27;i=1;hR=1.5;vR=1.5;mr=22;syo=15;sxo=0;szo=-5;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk3_Trail;onHit=TempestadeDeFlechasMk3_Hit;onEnd=TempestadeDeFlechasMk3_End;v=31;i=1;hR=1.5;vR=1.5;mr=22;syo=15;sxo=-5;szo=1;ham=false;hitConditions=[- isLiving true]} @origin
+  - projectile{oT=TempestadeDeFlechasMk3_Trail;onHit=TempestadeDeFlechasMk3_Hit;onEnd=TempestadeDeFlechasMk3_End;v=29;i=1;hR=1.5;vR=1.5;mr=22;syo=15;sxo=2;szo=5;ham=false;hitConditions=[- isLiving true]} @origin
+
+TempestadeDeFlechasMk3_Trail:
+  Skills:
+  - effect:particles{p=crit;a=5;hs=0.07;vs=0.07;s=0.04} @origin
+  - effect:particles{p=dust;color=#00cc00;size=0.7;a=4;hs=0.06;vs=0.06} @origin
+  - effect:particles{p=end_rod;a=3;hs=0.04;vs=0.04;s=0.02} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#ffcc00;size=0.4;a=2;hs=0.05;vs=0.05} @origin
+
+TempestadeDeFlechasMk3_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.arrow.hit_player;v=0.9;p=1.0} @trigger
+  - effect:particles{p=crit;a=18;hs=0.35;vs=0.35;s=0.28} @trigger
+  - effect:particles{p=enchanted_hit;a=12;hs=0.3;vs=0.3;s=0.15} @trigger
+  - effect:particles{p=end_rod;a=6;hs=0.2;vs=0.2;s=0.06} @trigger
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#ffcc00;size=0.6;a=5;hs=0.25;vs=0.25} @trigger
+
+TempestadeDeFlechasMk3_End:
+  Skills:
+  - effect:particles{p=crit;a=10;hs=0.4;vs=0.2;s=0.1} @origin
+  - effect:particles{p=dust;color=#996633;size=1.0;a=8;hs=0.4;vs=0.2} @origin
+  - effect:particles{p=end_rod;a=4;hs=0.25;vs=0.15;s=0.03} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#00cc00;toColor=#ffcc00;size=0.5;a=3;hs=0.3;vs=0.15} @origin
+
+
+# ############################################################
+#  10. FLECHA DO DESTINO (Arrow of Destiny) - ULTIMATE
+#      Extreme single-target charged arrow, channeled
+#      Variables: damage (base 60.0 / scale 12.0)
+#      Milestones: lvl3=flecha_destino_glow, lvl5=flecha_destino_divine
+#      Effect: Charged golden/divine arrow, massive trail, devastating hit
+# ############################################################
+
+FlechaDoDestino:
+  Skills:
+  - skill{s=FlechaDoDestino_Cast} @self
+
+FlechaDoDestino_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.0;p=0.4} @self
+  - skill{s=FlechaDoDestino_Charge;repeat=4;repeatInterval=10} @self
+  - delay 40
+  - sound{s=entity.arrow.shoot;v=1.8;p=0.5} @self
+  - effect:particles{p=end_rod;a=20;hs=0.2;vs=0.2;s=0.1} @self
+  - projectile{oT=FlechaDoDestino_Trail;onHit=FlechaDoDestino_Hit;onEnd=FlechaDoDestino_End;v=45;i=1;hR=0.8;vR=0.8;mr=60;ham=false;hitConditions=[- isLiving true]} @forward{f=60}
+
+FlechaDoDestino_Charge:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.5;a=15;hs=0.8;vs=0.8;s=0.02} @self
+  - effect:particles{p=end_rod;a=8;hs=0.6;vs=0.6;s=0.03} @self
+  - effect:particles{p=enchanted_hit;a=6;hs=0.5;vs=0.5;s=0.02} @self
+  - sound{s=entity.arrow.shoot;v=0.5;p=0.6} @self
+
+FlechaDoDestino_Trail:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.0;a=5;hs=0.08;vs=0.08} @origin
+  - effect:particles{p=end_rod;a=4;hs=0.06;vs=0.06;s=0.02} @origin
+  - effect:particles{p=enchanted_hit;a=3;hs=0.05;vs=0.05;s=0.01} @origin
+  - effect:particles{p=crit;a=2;hs=0.04;vs=0.04;s=0.02} @origin
+
+FlechaDoDestino_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.generic.explode;v=1.2;p=0.6} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.5;p=0.7} @trigger
+  - effect:particles{p=dust;color=#ffcc00;size=2.0;a=40;hs=1.5;vs=1.5} @trigger
+  - effect:particles{p=end_rod;a=30;hs=1.2;vs=1.2;s=0.15} @trigger
+  - effect:particles{p=enchanted_hit;a=25;hs=1.0;vs=1.0;s=0.25} @trigger
+  - effect:particles{p=crit;a=20;hs=0.8;vs=0.8;s=0.3} @trigger
+
+FlechaDoDestino_End:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.2;a=15;hs=0.5;vs=0.5} @origin
+  - effect:particles{p=end_rod;a=10;hs=0.4;vs=0.4;s=0.06} @origin
+  - effect:particles{p=enchanted_hit;a=8;hs=0.3;vs=0.3;s=0.04} @origin
+
+# --- FlechaDoDestino Mk2: flecha_destino_glow ---
+
+FlechaDoDestinoMk2:
+  Skills:
+  - skill{s=FlechaDoDestinoMk2_Cast} @self
+
+FlechaDoDestinoMk2_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.2;p=0.35} @self
+  - skill{s=FlechaDoDestinoMk2_Charge;repeat=4;repeatInterval=10} @self
+  - delay 40
+  - sound{s=entity.arrow.shoot;v=2.0;p=0.45} @self
+  - effect:particles{p=end_rod;a=28;hs=0.25;vs=0.25;s=0.12} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#44ff44;size=1.2;a=12;hs=0.2;vs=0.2} @self
+  - projectile{oT=FlechaDoDestinoMk2_Trail;onHit=FlechaDoDestinoMk2_Hit;onEnd=FlechaDoDestinoMk2_End;v=48;i=1;hR=0.8;vR=0.8;mr=65;ham=false;hitConditions=[- isLiving true]} @forward{f=65}
+
+FlechaDoDestinoMk2_Charge:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.8;a=20;hs=1.0;vs=1.0;s=0.02} @self
+  - effect:particles{p=end_rod;a=12;hs=0.8;vs=0.8;s=0.04} @self
+  - effect:particles{p=enchanted_hit;a=8;hs=0.6;vs=0.6;s=0.03} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#44ff44;size=0.6;a=6;hs=0.5;vs=0.5} @self
+  - sound{s=entity.arrow.shoot;v=0.6;p=0.55} @self
+
+FlechaDoDestinoMk2_Trail:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.2;a=6;hs=0.1;vs=0.1} @origin
+  - effect:particles{p=end_rod;a=5;hs=0.08;vs=0.08;s=0.03} @origin
+  - effect:particles{p=enchanted_hit;a=4;hs=0.06;vs=0.06;s=0.02} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#44ff44;size=0.6;a=3;hs=0.07;vs=0.07} @origin
+  - effect:particles{p=crit;a=3;hs=0.05;vs=0.05;s=0.02} @origin
+
+FlechaDoDestinoMk2_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.generic.explode;v=1.4;p=0.55} @trigger
+  - sound{s=entity.arrow.hit_player;v=1.6;p=0.65} @trigger
+  - effect:particles{p=dust;color=#ffcc00;size=2.5;a=50;hs=1.8;vs=1.8} @trigger
+  - effect:particles{p=end_rod;a=35;hs=1.5;vs=1.5;s=0.18} @trigger
+  - effect:particles{p=enchanted_hit;a=30;hs=1.2;vs=1.2;s=0.3} @trigger
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#44ff44;size=1.2;a=15;hs=1.0;vs=1.0} @trigger
+  - effect:particles{p=crit;a=25;hs=1.0;vs=1.0;s=0.35} @trigger
+
+FlechaDoDestinoMk2_End:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.5;a=18;hs=0.6;vs=0.6} @origin
+  - effect:particles{p=end_rod;a=12;hs=0.5;vs=0.5;s=0.07} @origin
+  - effect:particles{p=enchanted_hit;a=10;hs=0.4;vs=0.4;s=0.05} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#44ff44;size=0.7;a=5;hs=0.3;vs=0.3} @origin
+
+# --- FlechaDoDestino Mk3: flecha_destino_divine ---
+
+FlechaDoDestinoMk3:
+  Skills:
+  - skill{s=FlechaDoDestinoMk3_Cast} @self
+
+FlechaDoDestinoMk3_Cast:
+  Skills:
+  - sound{s=item.crossbow.shoot;v=1.5;p=0.3} @self
+  - skill{s=FlechaDoDestinoMk3_Charge;repeat=5;repeatInterval=8} @self
+  - delay 40
+  - sound{s=entity.arrow.shoot;v=2.0;p=0.35} @self
+  - sound{s=entity.generic.explode;v=0.6;p=1.8} @self
+  - effect:particles{p=end_rod;a=40;hs=0.3;vs=0.3;s=0.15} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffff;size=1.5;a=20;hs=0.25;vs=0.25} @self
+  - effect:particles{p=enchanted_hit;a=15;hs=0.2;vs=0.2;s=0.08} @self
+  - projectile{oT=FlechaDoDestinoMk3_Trail;onHit=FlechaDoDestinoMk3_Hit;onEnd=FlechaDoDestinoMk3_End;v=52;i=1;hR=1.0;vR=1.0;mr=70;ham=false;hitConditions=[- isLiving true]} @forward{f=70}
+
+FlechaDoDestinoMk3_Charge:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=2.0;a=25;hs=1.2;vs=1.2;s=0.02} @self
+  - effect:particles{p=end_rod;a=16;hs=1.0;vs=1.0;s=0.05} @self
+  - effect:particles{p=enchanted_hit;a=12;hs=0.8;vs=0.8;s=0.04} @self
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffff;size=0.8;a=8;hs=0.7;vs=0.7} @self
+  - effect:particles{p=dust;color=#ffffff;size=0.5;a=5;hs=0.5;vs=1.0;s=0.08} @self
+  - sound{s=entity.arrow.shoot;v=0.7;p=0.5} @self
+
+FlechaDoDestinoMk3_Trail:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=1.5;a=8;hs=0.12;vs=0.12} @origin
+  - effect:particles{p=end_rod;a=7;hs=0.1;vs=0.1;s=0.04} @origin
+  - effect:particles{p=enchanted_hit;a=5;hs=0.08;vs=0.08;s=0.03} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffff;size=0.8;a=4;hs=0.09;vs=0.09} @origin
+  - effect:particles{p=dust;color=#ffffff;size=0.4;a=3;hs=0.06;vs=0.06;s=0.02} @origin
+  - effect:particles{p=crit;a=4;hs=0.07;vs=0.07;s=0.03} @origin
+
+FlechaDoDestinoMk3_Hit:
+  TargetConditions:
+  - isLiving true
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @trigger
+  - sound{s=entity.generic.explode;v=1.8;p=0.5} @trigger
+  - sound{s=entity.arrow.hit_player;v=2.0;p=0.6} @trigger
+  - effect:particles{p=dust;color=#ffcc00;size=3.0;a=60;hs=2.0;vs=2.0} @trigger
+  - effect:particles{p=dust;color=#ffffff;size=2.0;a=30;hs=1.5;vs=1.5} @trigger
+  - effect:particles{p=end_rod;a=45;hs=2.0;vs=2.0;s=0.2} @trigger
+  - effect:particles{p=enchanted_hit;a=40;hs=1.5;vs=1.5;s=0.35} @trigger
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffff;size=1.5;a=25;hs=1.5;vs=1.5} @trigger
+  - effect:particles{p=crit;a=30;hs=1.2;vs=1.2;s=0.4} @trigger
+  - skill{s=FlechaDoDestinoMk3_Impact} @trigger
+
+FlechaDoDestinoMk3_Impact:
+  Skills:
+  - effect:particles{p=end_rod;a=60;hs=3.0;vs=3.0;s=0.25} @self
+  - effect:particles{p=dust;color=#ffcc00;size=2.5;a=40;hs=2.5;vs=0.5} @self
+  - effect:particles{p=dust;color=#ffffff;size=1.5;a=25;hs=2.0;vs=2.0;s=0.1} @self
+  - effect:particles{p=enchanted_hit;a=30;hs=2.0;vs=2.0;s=0.15} @self
+
+FlechaDoDestinoMk3_End:
+  Skills:
+  - effect:particles{p=dust;color=#ffcc00;size=2.0;a=25;hs=0.8;vs=0.8} @origin
+  - effect:particles{p=dust;color=#ffffff;size=1.2;a=15;hs=0.6;vs=0.6} @origin
+  - effect:particles{p=end_rod;a=18;hs=0.6;vs=0.6;s=0.1} @origin
+  - effect:particles{p=enchanted_hit;a=12;hs=0.5;vs=0.5;s=0.06} @origin
+  - effect:particles{p=dust_color_transition;fromColor=#ffcc00;toColor=#ffffff;size=0.8;a=8;hs=0.4;vs=0.4} @origin

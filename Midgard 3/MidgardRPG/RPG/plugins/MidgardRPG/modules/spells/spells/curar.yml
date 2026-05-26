@@ -1,0 +1,79 @@
+name: "<yellow>ᴄᴜʀᴀʀ</yellow>"
+mythic-skill: "Curar"
+spell-type: COMMON
+
+cooldown:
+  base: 6.0
+  per-level: -0.2
+mana:
+  base: 20.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Clerigo"
+  level: 1
+
+icon:
+  material: GLISTERING_MELON_SLICE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<yellow><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴀɴᴀʟɪᴢᴀ ᴇɴᴇʀɢɪᴀ ᴅɪᴠɪɴᴀ ᴘᴀʀᴀ ᴄᴜʀᴀʀ</gray>"
+  - "<gray>ᴀ sɪ ᴍᴇsᴍᴏ ᴏᴜ ᴜᴍ ᴀʟɪᴀᴅᴏ ᴘʀᴏxɪᴍᴏ,</gray>"
+  - "<gray>ʀᴇsᴛᴀᴜʀᴀɴᴅᴏ ᴠɪᴅᴀ ɪɴsᴛᴀɴᴛᴀɴᴇᴀᴍᴇɴᴛᴇ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴄᴜʀᴀ:<green>{heal}</green>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴄʟᴇʀɪɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  heal:
+    base: 15.0
+    per-level: 5.0
+
+milestones:
+  3:
+    visual: "curar_glow"
+    mechanic-override: "CurarMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "curar_radiance"
+    mechanic-override: "CurarMk3"
+    stat-bonus:
+      vitality: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 3
+    vitality: 2
+
+sounds:
+  cast-start:
+    sound: "block.beacon.activate"
+    volume: 0.8
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.player.levelup"
+    volume: 0.6
+    pitch: 1.4
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

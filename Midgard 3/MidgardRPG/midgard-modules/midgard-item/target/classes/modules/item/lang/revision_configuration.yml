@@ -1,0 +1,61 @@
+# ============================================
+# MIDGARD ITEM - CONFIGURAÇíO DE REVISíO
+# ============================================
+# Padrão V2.0 - Oficial
+# ============================================
+
+title: "<gradient:#55ffff:#00aaaa><bold>✦ ᴄᴏɴꜰɪɢᴜʀᴀᴄᴀᴏ ᴅᴇ ʀᴇᴠɪꜱᴀᴏ ✦</bold></gradient>"
+enabled_config: "<gray>ʜᴀʙɪʟɪᴛᴀᴅᴏ (ɴᴏ ᴄᴏɴꜰɪɢ)? %s"
+
+revision_id:
+  name: "<gradient:#ffff55:#ffaa00><bold>⟳ ɪᴅ ᴅᴇ ʀᴇᴠɪꜱᴀᴏ</bold></gradient>"
+  lore:
+    - "<gray>ᴏ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏʀ ᴇꜱᴛᴀ ꜱᴇᴍᴘʀᴇ ᴀᴛɪᴠᴏ. ᴀᴜᴍᴇɴᴛᴀʀ"
+    - "<gray>ᴇꜱᴛᴇ ɴᴜᴍᴇʀᴏ ᴀᴛᴜᴀʟɪᴢᴀʀᴀ ᴛᴏᴅᴀꜱ ᴀꜱ ɪɴꜱᴛᴀɴᴄɪᴀꜱ"
+    - "<gray>ᴅᴇꜱᴛᴇ ɪᴛᴇᴍ ꜱᴇᴍ ɴᴇɴʜᴜᴍᴀ ᴀᴄᴀᴏ ᴀᴅɪᴄɪᴏɴᴀʟ."
+    - ""
+    - "<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <yellow>%value%"
+    - ""
+    - "<yellow>▸ <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ"
+
+toggles:
+  keep_lore:
+    name: "<gradient:#ffff55:#ffaa00><bold>📜 ᴍᴀɴᴛᴇʀ ʟᴏʀᴇ</bold></gradient>"
+    lore:
+      - "<gray>ᴍᴀɴᴛᴇᴍ ᴇꜱᴘᴇᴄɪꜰɪᴄᴀᴍᴇɴᴛᴇ ʟɪɴʜᴀꜱ ᴅᴇ ʟᴏʀᴇ"
+      - "<gray>ǫᴜᴇ ᴄᴏᴍᴇᴄᴀᴍ ᴄᴏᴍ ᴄᴏᴅɪɢᴏ ᴅᴇ ᴄᴏʀ ᴇꜱᴘᴇᴄɪꜰɪᴄᴏ."
+  
+  keep_name:
+    name: "<gradient:#ffff55:#ffaa00><bold>✎ ᴍᴀɴᴛᴇʀ ɴᴏᴍᴇ</bold></gradient>"
+    lore:
+      - "<gray>ᴍᴀɴᴛᴇᴍ ᴏ ɴᴏᴍᴇ ᴅᴇ ᴇxɪʙɪᴄᴀᴏ ᴅᴏ ɪᴛᴇᴍ."
+  
+  keep_enchantments:
+    name: "<gradient:#ffff55:#ffaa00><bold>✨ ᴍᴀɴᴛᴇʀ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏꜱ</bold></gradient>"
+    lore:
+      - "<gray>ᴍᴀɴᴛᴇᴍ ᴇꜱᴘᴇᴄɪꜰɪᴄᴀᴍᴇɴᴛᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏꜱ ǫᴜᴇ"
+      - "<gray>ꜰᴏʀᴀᴍ ᴀᴅɪᴄɪᴏɴᴀᴅᴏꜱ ᴘᴇʟᴏ ᴊᴏɢᴀᴅᴏʀ."
+  
+  keep_external_sh:
+    name: "<gradient:#ffff55:#ffaa00><bold>🔗 ᴍᴀɴᴛᴇʀ ꜱʜ ᴇxᴛᴇʀɴᴏꜱ</bold></gradient>"
+    lore:
+      - "<gray>ᴅᴀᴅᴏꜱ ʀᴇɢɪꜱᴛʀᴀᴅᴏꜱ ɴᴏꜱ ꜱᴛᴀᴛʜɪꜱᴛᴏʀʏ ᴅᴏ ɪᴛᴇᴍ"
+      - "<gray>(ꜱɪᴍɪʟᴀʀ ᴀꜱ ɢᴇᴍꜱᴛᴏɴᴇꜱ ᴍᴀꜱ ɴᴀᴏ ʀᴇᴍᴏᴠɪᴠᴇɪꜱ)."
+  
+  keep_upgrades:
+    name: "<gradient:#ffff55:#ffaa00><bold>⬆ ᴍᴀɴᴛᴇʀ ᴜᴘɢʀᴀᴅᴇꜱ</bold></gradient>"
+    lore:
+      - "<gray>ᴏ ɪᴛᴇᴍ ʀᴇᴛᴇʀᴀ ᴏ ɴɪᴠᴇʟ ᴅᴇ ᴜᴘɢʀᴀᴅᴇ"
+      - "<gray>ᴍᴇꜱᴍᴏ ᴄᴏᴍ ɴᴏᴠᴏ ᴍᴀxɪᴍᴏ."
+  
+  keep_gem_stones:
+    name: "<gradient:#ffff55:#ffaa00><bold>💎 ᴍᴀɴᴛᴇʀ ɢᴇᴍᴀꜱ</bold></gradient>"
+    lore:
+      - "<gray>ᴏ ɪᴛᴇᴍ ʀᴇᴛᴇʀᴀ ꜱᴜᴀꜱ ɢᴇᴍᴀꜱ ǫᴜᴀɴᴅᴏ"
+      - "<gray>ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ (ᴍᴇꜱᴍᴏ ᴄᴏᴍ ᴍᴇɴᴏꜱ ꜱᴏᴄᴋᴇᴛꜱ)."
+  
+  keep_soulbind:
+    name: "<gradient:#ffff55:#ffaa00><bold>🔒 ᴍᴀɴᴛᴇʀ ꜱᴏᴜʟʙɪɴᴅ</bold></gradient>"
+    lore:
+      - "<gray>ꜱᴇ ᴏ ɪᴛᴇᴍ ᴀɴᴛɪɢᴏ ᴇꜱᴛᴀ ᴠɪɴᴄᴜʟᴀᴅᴏ ᴀ ᴀʟᴍᴀ,"
+      - "<gray>ᴀ ᴀᴛᴜᴀʟɪᴢᴀᴄᴀᴏ ᴍᴀɴᴛᴇʀᴀ ᴏ ᴠɪɴᴄᴜʟᴏ."

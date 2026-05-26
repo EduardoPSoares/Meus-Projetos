@@ -1,0 +1,181 @@
+# ============================================
+# MIDGARD CLASSES MODULE - MESSAGES
+# ============================================
+# Formato: Small Caps Unicode para estilo visual
+
+# ============================================
+# MENSAGENS DE CLASSE
+# ============================================
+class:
+  # Seleção
+  selected: "<green>✔</green> <gray>ᴠᴏᴄᴇ ᴇsᴄᴏʟʜᴇᴜ ᴏ ᴄᴀᴍɪɴʜᴏ ᴅᴇ <yellow>%class_name%</yellow><gray>.</gray>"
+  changed: "<yellow>⚠</yellow> <gray>ᴄʟᴀssᴇ ᴀʟᴛᴇʀᴀᴅᴀ ᴅᴇ <white>%old_class%</white> <gray>ᴘᴀʀᴀ <yellow>%new_class%</yellow><gray>.</gray>"
+  
+  # Primeira vez
+  welcome: "<gold><bold>✦</bold></gold> <aqua>ʙᴇᴍ-ᴠɪɴᴅᴏ, %class_name%!</aqua>"
+  welcome_lore:
+    - ""
+    - "<gray>ᴠᴏᴄᴇ ᴇsᴄᴏʟʜᴇᴜ ᴏ ᴄᴀᴍɪɴʜᴏ ᴅᴏ <yellow>%class_name%</yellow><gray>.</gray>"
+    - "<gray>ᴜsᴇ <white>/class info</white> <gray>ᴘᴀʀᴀ ᴠᴇʀ sᴜᴀs ʜᴀʙɪʟɪᴅᴀᴅᴇs.</gray>"
+  
+  # Informações
+  current: "<gray>ᴄʟᴀssᴇ ᴀᴛᴜᴀʟ: <yellow>%class_name%</yellow> <dark_gray>(ʟᴠ. %level%)</dark_gray>"
+  no_class: "<yellow>⚠</yellow> <gray>ᴠᴏᴄᴇ ᴀɪɴᴅᴀ ɴᴀᴏ ᴇsᴄᴏʟʜᴇᴜ ᴜᴍᴀ ᴄʟᴀssᴇ.</gray>"
+  no_class_prompt: "<gray>ᴜsᴇ <white>/class select</white> <gray>ᴘᴀʀᴀ ᴇsᴄᴏʟʜᴇʀ sᴜᴀ ᴄʟᴀssᴇ.</gray>"
+  
+  # Disponibilidade
+  available_classes: "<gray>ᴄʟᴀssᴇs ᴅɪsᴘᴏɴɪᴠᴇɪs: <white>%classes%</white>"
+  class_locked: "<red>✖</red> <gray>ᴄʟᴀssᴇ ʙʟᴏԡᴜᴇᴀᴅᴀ. ʀᴇԡᴜɪsɪᴛᴏ: <yellow>%requirement%</yellow>"
+  class_unlocked: "<green>✔</green> <gray>ᴄʟᴀssᴇ ᴅᴇsʙʟᴏԡᴜᴇᴀᴅᴀ: <yellow>%class_name%</yellow><gray>.</gray>"
+  
+  gui:
+    error_select: "<red>✖</red> <gray>ᴏᴄᴏʀʀᴇᴜ ᴜᴍ ᴇʀʀᴏ ᴀᴏ sᴇʟᴇᴄɪᴏɴᴀʀ ᴀ ᴄʟᴀssᴇ.</gray>"
+    error_manager: "<red>✖</red> <gray>ᴇʀʀᴏ ɪɴᴛᴇʀɴᴏ: ɢᴇʀᴇɴᴄɪᴀᴅᴏʀ ᴅᴇ ᴄʟᴀssᴇs ɴᴀᴏ ɪɴɪᴄɪᴀʟɪzᴀᴅᴏ.</gray>"
+    error_confirm: "<red>✖</red> <gray>ᴇʀʀᴏ ᴀᴏ ᴄᴏɴꜰɪʀᴍᴀʀ sᴇʟᴇᴄᴀᴏ ᴅᴇ ᴄʟᴀssᴇ.</gray>"
+    already_set: "<red>✖</red> <gray>ᴠᴏᴄᴇ ᴊᴀ ᴘᴏssᴜɪ ᴜᴍᴀ ᴄʟᴀssᴇ ᴅᴇꜰɪɴɪᴅᴀ. <dark_gray>(ᴀᴘᴇɴᴀs ᴀᴅᴍɪɴs ᴘᴏᴅᴇᴍ ᴀʟᴛᴇʀᴀʀ)</dark_gray>"
+
+# ============================================
+# MENSAGENS DE LEVEL E XP
+# ============================================
+progression:
+  # Level Up
+  level_up: "<yellow>★ sᴜʙɪᴜ ᴅᴇ ɴɪᴠᴇʟ ᴅᴀ ᴄʟᴀssᴇ!</yellow> <gray>%class_name% <gray>ᴀᴛɪɴɢɪᴜ ᴏ ɴɪᴠᴇʟ <white>%level%</white><gray>!</gray>"
+  combat_level_up: "<yellow>★ sᴜʙɪᴜ ᴅᴇ ɴɪᴠᴇʟ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ!</yellow> <gray>ɴɪᴠᴇʟ <white>%level%</white><gray>!</gray>"
+  level_up_rewards:
+    - "<gray>ʀᴇᴄᴏᴍᴘᴇɴsᴀs:</gray>"
+    - "<yellow>+%attribute_points%</yellow> <gray>ᴘᴏɴᴛᴏs ᴅᴇ ᴀᴛʀɪʙᴜᴛᴏ</gray>"
+    - "<yellow>+%skill_points%</yellow> <gray>ᴘᴏɴᴛᴏs ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ</gray>"
+  
+  # XP
+  xp_gained: "<gray>+<yellow>%amount%</yellow> xᴘ <dark_gray>(%source%)</dark_gray>"
+  xp_gained_bonus: "<gray>+<yellow>%amount%</yellow> xᴘ <yellow>★</yellow> <gray>ʙᴏɴᴜs: <yellow>+%bonus%%</yellow>"
+  xp_info: "<gray>xᴘ: <yellow>%current%</yellow><gray>/</gray><yellow>%required%</yellow> <dark_gray>(%percentage%%)</dark_gray>"
+  next_level: "<gray>ᴘʀᴏxɪᴍᴏ ɴɪᴠᴇʟ: <yellow>%xp_needed% xᴘ</yellow>"
+  
+  # Prestígio
+  max_level: "<gold>★</gold> <gray>ɴɪᴠᴇʟ ᴍᴀxɪᴍᴏ ᴀᴛɪɴɢɪᴅᴏ.</gray>"
+  prestige_available: "<light_purple>★</light_purple> <gray>ᴘʀᴇsᴛɪɢɪᴏ ᴅɪsᴘᴏɴɪᴠᴇʟ. <gray>ᴜsᴇ <white>/class prestige</white>"
+  prestige_success: "<light_purple>★ ᴘʀᴇsᴛɪɢɪᴏ!</light_purple> <yellow>%class_name%</yellow> <gray>ʀᴇɴᴀsᴄᴇᴜ ɴᴏ ᴘʀᴇsᴛɪɢɪᴏ <white>%prestige%</white><gray>!</gray>"
+
+# ============================================
+# MENSAGENS DE ATRIBUTOS
+# ============================================
+attributes:
+  # Pontos
+  points_received: "<green>✔</green> <gray>ᴠᴏᴄᴇ ʀᴇᴄᴇʙᴇᴜ <yellow>%points%</yellow> <gray>ᴘᴏɴᴛᴏs ᴅᴇ ᴀᴛʀɪʙᴜᴛᴏ.</gray>"
+  points_spent: "<green>✔</green> <gray>ᴠᴏᴄᴇ ɢᴀsᴛᴏᴜ <yellow>%points%</yellow> <gray>ᴘᴏɴᴛᴏs.</gray>"
+  not_enough_points: "<red>✖</red> <gray>ᴘᴏɴᴛᴏs ɪɴsᴜꜰɪᴄɪᴇɴᴛᴇs. <gray>ᴠᴏᴄᴇ ᴛᴇᴍ <yellow>%available%</yellow><gray>, ᴘʀᴇᴄɪsᴀ ᴅᴇ <yellow>%required%</yellow><gray>.</gray>"
+  
+  # Reset
+  reset_success: "<yellow>⚠</yellow> <gray>ᴘᴏɴᴛᴏs ᴅᴇ ᴀᴛʀɪʙᴜᴛᴏ ʀᴇsᴇᴛᴀᴅᴏs. <gray>ᴠᴏᴄᴇ ʀᴇᴄᴜᴘᴇʀᴏᴜ <white>%points%</white> <gray>ᴘᴏɴᴛᴏs.</gray>"
+  reset_cost: "<gray>ᴄᴜsᴛᴏ ᴅᴏ ʀᴇsᴇᴛ: <yellow>%cost%</yellow>"
+  reset_confirm: "<red>⚠</red> <gray>ᴅɪɢɪᴛᴇ<white>/class reset confirm</white> <gray>ᴘᴀʀᴀ ᴄᴏɴꜰɪʀᴍᴀʀ.</gray>"
+  
+  # Limites
+  max_reached: "<gold>★</gold> <gray>ᴍᴀxɪᴍᴏ ᴀᴛɪɴɢɪᴅᴏ ᴇᴍ <aqua>%attribute%</aqua><gray>.</gray>"
+  min_required: "<red>✖</red> <aqua>%attribute%</aqua> <gray>ʀᴇǫᴜᴇʀ ɴᴏ ᴍɪɴɪᴍᴏ <yellow>%min%</yellow> <gray>ᴘᴏɴᴛᴏs.</gray>"
+
+# ============================================
+# MENSAGENS DE HABILIDADES
+# ============================================
+skills:
+  # Desbloqueio
+  unlocked: "<green>✔</green> <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴅᴇsʙʟᴏǫᴜᴇᴀᴅᴀ:<yellow>%skill_name%</yellow><gray>.</gray>"
+  upgraded: "<green>✔</green> <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴍᴇʟʜᴏʀᴀᴅᴀ:<yellow>%skill_name%</yellow> <gray>→<white>ʟᴠ. %level%</white>"
+  
+  # Uso
+  activated: "<gold>★</gold> <yellow>%skill_name%</yellow> <gray>ᴀᴛɪᴠᴀᴅᴏ.</gray>"
+  on_cooldown: "<red>✖</red> <yellow>%skill_name%</yellow> <gray>ᴇᴍ ʀᴇᴄᴀʀɢᴀ. <gray>ᴀɢᴜᴀʀᴅᴇ <white>%time%s</white><gray>.</gray>"
+  insufficient_mana: "<blue>✖</blue> <gray>ᴍᴀɴᴀ ɪɴsᴜꜰɪᴄɪᴇɴᴛᴇ ᴘᴀʀᴀ <yellow>%skill_name%</yellow><gray>. <gray>ᴄᴜsᴛᴏ: <blue>%required%</blue>"
+  
+  # Requisitos
+  level_required: "<red>✖</red> <yellow>%skill_name%</yellow> <gray>ʀᴇǫᴜᴇʀ ʟᴇᴠᴇʟ <yellow>%level%</yellow><gray>.</gray>"
+  skill_required: "<red>✖</red> <yellow>%skill_name%</yellow> <gray>ʀᴇǫᴜᴇʀ: <yellow>%requirement%</yellow>"
+  
+  # Pontos de habilidade
+  skill_points_received: "<green>✔</green> <gray>ᴠᴏᴄᴇ ʀᴇᴄᴇʙᴇᴜ <yellow>%points%</yellow> <gray>ᴘᴏɴᴛᴏs ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ.</gray>"
+  skill_points_spent: "<green>✔</green> <gray>ᴠᴏᴄᴇ ɢᴀsᴛᴏᴜ <yellow>%points%</yellow> <gray>ᴘᴏɴᴛᴏs ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ.</gray>"
+  not_enough_skill_points: "<red>✖</red> <gray>ᴘᴏɴᴛᴏs ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ ɪɴsᴜꜰɪᴄɪᴇɴᴛᴇs.</gray>"
+  points_needed: "<red>✖</red> <gray>ᴠᴏᴄᴇ ᴘʀᴇᴄɪsᴀ ᴅᴇ <yellow>%cost%</yellow> <gray>ᴘᴏɴᴛᴏ(s) ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇ.</gray>"
+  max_level_reached: "<red>✖</red> <gray>ᴇsᴛᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴊᴀ ᴇsᴛᴀ ɴᴏ ɴɪᴠᴇʟ ᴍᴀxɪᴍᴏ!</gray>"
+  data_error: "<red>✖</red> <gray>ᴅᴀᴅᴏs ᴅᴀ ᴄʟᴀssᴇ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏs.</gray>"
+  system_error: "<red>✖</red> <gray>sɪsᴛᴇᴍᴀ ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇs ɪɴᴅɪsᴘᴏɴɪᴠᴇʟ.</gray>"
+  tree_max_points: "<red>✖</red> <gray>ᴠᴏᴄᴇ ᴀᴛɪɴɢɪᴜ ᴏ ᴍᴀxɪᴍᴏ ᴅᴇ ᴘᴏɴᴛᴏs ᴅᴇsᴛᴀ ᴀʀᴠᴏʀᴇ.</gray>"
+  requirement_format: "%skill% Nível %level%"
+
+
+# ============================================
+# ERROS E COMANDOS (ADMIN)
+# ============================================
+errors:
+  no_permission: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ɪssᴏ.</gray>"
+  player_not_found: "<red>✖</red> <gray>ᴊᴏɢᴀᴅᴏʀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ: <white>%player%</white><gray>.</gray>"
+  class_not_found: "<red>✖</red> <gray>ᴄʟᴀssᴇ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ: <white>%class%</white><gray>.</gray>"
+  profile_error: "<red>✖</red> <gray>ᴇʀʀᴏ ᴀᴏ ᴄᴀʀʀᴇɢᴀʀ ᴏ ᴘᴇʀꜰɪʟ ᴅᴏ ᴊᴏɢᴀᴅᴏʀ.</gray>"
+  invalid_number: "<red>✖</red> <gray>ɴᴜᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ.</gray>"
+  no_class_set: "<yellow>⚠</yellow> <gray>ᴇsᴛᴇ ᴊᴏɢᴀᴅᴏʀ ᴀɪɴᴅᴀ ɴᴀᴏ ᴛᴇᴍ ᴜᴍᴀ ᴄʟᴀssᴇ ᴅᴇꜰɪɴɪᴅᴀ.</gray>"
+  no_points: "<red>✖</red> <gray>ᴘᴏɴᴛᴏs ɪɴsᴜꜰɪᴄɪᴇɴᴛᴇs.</gray>"
+
+commands:
+  usage_set: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/class set <player> <class> [level]</white>"
+  list_header: "<aqua>ᴄʟᴀssᴇs ᴅɪsᴘᴏɴɪᴠᴇɪs:</aqua>"
+  list_item: "<gray>- <white>%name%</white> <dark_gray>(%id%)</dark_gray>"
+  abilities:
+    header: "<aqua>sᴜᴀs ʜᴀʙɪʟɪᴅᴀᴅᴇs:</aqua>"
+    no_abilities: "<yellow>⚠</yellow> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏssᴜɪ ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴅᴇsʙʟᴏǫᴜᴇᴀᴅᴀs.</gray>"
+    ability_entry: "<gray>- <white>%ability%</white> <dark_gray>(ʟᴠ. %level%)</dark_gray>"
+
+admin:
+  class_set_success: "<green>✔</green> <gray>ᴄʟᴀssᴇ ᴅᴇ <aqua>%player%</aqua> <gray>ᴅᴇꜰɪɴɪᴅᴀ ᴘᴀʀᴀ <yellow>%class%</yellow> <gray>ɴɪᴠᴇʟ <yellow>%level%</yellow><gray>."
+
+help:
+  title: "<aqua>ᴍɪᴅɢᴀʀᴅ ᴄʟᴀss ᴀᴅᴍɪɴ</aqua>"
+  lines:
+    - "<white>/class set <player> <class> [level]</white> <gray>- ᴅᴇꜰɪɴᴇ ᴀ ᴄʟᴀssᴇ ᴇ ɴɪᴠᴇʟ ᴅᴇ ᴜᴍ ᴊᴏɢᴀᴅᴏʀ</gray>"
+    - "<white>/class list</white> <gray>- ʟɪsᴛᴀ ᴛᴏᴅᴀs ᴀs ᴄʟᴀssᴇs</gray>"
+
+gui:
+  opening_selection: "<yellow>⚠</yellow> <gray>ᴇsᴄᴏʟʜᴀ sᴜᴀ ᴄʟᴀssᴇ ᴘᴀʀᴀ ᴄᴏᴍᴇᴄᴀʀ.</gray>"
+  selection_title: "Seleção de Classe"
+  default_class_description: "Classe poderosa"
+  skill_tree_title: "Árvore: %name%"
+  skill_tree_invalid: "Inválida"
+  nav_up: "<yellow>Cima"
+  nav_down: "<yellow>Baixo"
+  nav_left: "<yellow>Esquerda"
+  nav_right: "<yellow>Direita"
+  nav_back: "<red>Voltar"
+  node_level: "<gray>Nível: <yellow>%current%/%max%"
+  node_position: "<gray>Pos: %x%,%y%"
+
+command:
+  class_description: "Gerencia classes dos jogadores (admin)"
+  class_usage: "/rpg admin class <set|list> [args]"
+  import_description: "Importa pacotes de outros plugins (MMOCore, etc)"
+  import_usage: "/rpg admin import <tipo> <pasta>"
+
+# ============================================
+# IMPORTAÇÃO DE PACOTES
+# ============================================
+import:
+  usage: "<red>Uso: /rpg admin import <tipo> <pasta></red>"
+  available_types: "<gray>Tipos disponíveis: <yellow>mmocore</yellow></gray>"
+  folder_hint: "<gray>A pasta deve estar em: <yellow>plugins/MidgardRPG/imports/</yellow></gray>"
+  invalid_path: "<red>Caminho inválido.</red>"
+  path_error: "<red>Erro ao validar caminho.</red>"
+  folder_not_found: "<red>Pasta não encontrada: <white>%path%</white></red>"
+  folder_hint_specific: "<gray>Coloque o pacote em: <yellow>plugins/MidgardRPG/imports/%folder%/</yellow></gray>"
+  unknown_type: "<red>Tipo de importação desconhecido: <white>%type%</white></red>"
+  starting: "<yellow>⏳</yellow> <gray>Iniciando importação do pacote MMOCore...</gray>"
+  success: "<green>✔</green> <gray>%message%</gray>"
+  warnings_title: "<yellow>⚠</yellow> <gray>Avisos durante a importação:</gray>"
+  warning_item: "<gray>  - %warning%</gray>"
+  warnings_more: "<gray>  ... e mais %count% avisos.</gray>"
+  files_title: "<aqua>ℹ</aqua> <gray>Arquivos importados para:</gray>"
+  files_classes: "<gray>  Classes: <white>modules/classes/classes/</white></gray>"
+  files_spells: "<gray>  Spells: <white>modules/spells/spells/</white></gray>"
+  files_items: "<gray>  Items: <white>modules/item/imported/</white></gray>"
+  files_mythic: "<gray>  MythicMobs Skills: <white>plugins/MythicMobs/Skills/</white></gray>"
+  reload_hint: "<yellow>⚠</yellow> <gray>Execute <yellow>/midgard reload</yellow> para carregar os novos arquivos.</gray>"
+  reload_mythic_hint: "<yellow>⚠</yellow> <gray>Execute <yellow>/mm reload</yellow> para recarregar as skills do MythicMobs.</gray>"
+  failed: "<red>✖</red> <gray>Falha na importação: <white>%message%</white></gray>"

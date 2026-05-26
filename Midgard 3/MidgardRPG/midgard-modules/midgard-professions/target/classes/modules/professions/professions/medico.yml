@@ -1,0 +1,93 @@
+# ============================================
+# MÉDICO - Definição e Recompensas
+# ============================================
+
+definition:
+  menu-icon: GOLDEN_APPLE
+  gradient: "<gradient:#f472b6:#ec4899>"
+  description: "Cure jogadores, aplique tratamentos e crie remédios para ganhar XP."
+  bonuses:
+    - "<green>▸ Poder de cura</green>"
+    - "<green>▸ Eficiência de revive</green>"
+    - "<green>▸ Duração de tratamento</green>"
+    - "<green>▸ Maestria de suporte</green>"
+  xp-source-icon: SPLASH_POTION
+  extra-button-icon: TOTEM_OF_UNDYING
+  extra-button-name: "<light_purple>Manual Médico"
+  extra-button-lore:
+    - "<gray>Acesse suas técnicas médicas"
+    - "<gray>e protocolos de tratamento."
+
+rewards:
+  1:
+    name: "Aprendiz de Medicina"
+    bonuses:
+      - "+2% poder de cura"
+  5:
+    bonuses:
+      - "+5% poder de cura"
+      - "+3% duração de tratamento"
+  10:
+    name: "Médico"
+    bonuses:
+      - "+10% poder de cura"
+    ability: "Cura Acelerada"
+    ability-desc: "Habilidades de cura agem 20% mais rápido."
+  25:
+    name: "Cirurgião"
+    bonuses:
+      - "+5% eficiência de revive"
+    ability: "Tratamento Estável"
+    ability-desc: "Curas aplicadas duram 30% mais."
+  50:
+    name: "Mestre Médico"
+    bonuses:
+      - "+30% poder de cura"
+    ability: "Recuperação Intensiva"
+    ability-desc: "Regenera vida de aliados em área."
+  75:
+    name: "Grão-Mestre Médico"
+    bonuses:
+      - "+10% duração de tratamento"
+    perks:
+      - "Remove debuffs ao curar"
+  100:
+    name: "Lenda da Medicina"
+    bonuses:
+      - "+50% poder de cura"
+    ability: "Primeiros Socorros"
+    ability-desc: "Revive aliados caídos com 50% de vida."
+    perks:
+      - "Título: Lenda da Medicina"
+
+# ============================================
+# FONTES DE XP
+# ============================================
+# craft: XP ao criar itens de cura e remédios
+# Nota: XP de cura direta será adicionado com o sistema de habilidades médicas
+xp-config:
+  craft:
+    GOLDEN_APPLE: 15.0
+    GLISTERING_MELON_SLICE: 5.0
+    FERMENTED_SPIDER_EYE: 4.0
+
+# ============================================
+# PENALIDADES PARA NÃO-MÉDICOS
+# ============================================
+# Jogadores sem a profissão de Médico ativa sofrem estas penalidades
+# ao preparar itens medicinais.
+penalties:
+  enabled: true
+  show-message: true
+  affected-materials: []
+
+  # Penalidade ao craftar itens medicinais
+  craft:
+    fail-chance: 0.25          # 25% de chance de falhar
+    fail-result: POISONOUS_POTATO # Falha vira batata venenosa
+
+  # Efeito colateral ao falhar
+  action-effect:
+    type: POISON               # Envenenamento leve ao falhar
+    duration: 60               # 3 segundos
+    amplifier: 0               # Nível I

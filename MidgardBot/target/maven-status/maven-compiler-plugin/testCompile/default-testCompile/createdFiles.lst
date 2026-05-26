@@ -1,0 +1,5 @@
+com\midgardbot\utils\PermissionUtilsTest.class
+com\midgardbot\config\ConfigValidatorTest.class
+com\midgardbot\config\ConstantsTest.class
+com\midgardbot\config\BotConfigTest.class
+com\midgardbot\exceptions\BotExceptionTest.class

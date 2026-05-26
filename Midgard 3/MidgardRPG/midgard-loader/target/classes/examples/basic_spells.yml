@@ -1,0 +1,28 @@
+# Copie este conteúdo para um arquivo na pastaplugins/MythicMobs/Skills/spells.yml
+
+MagicMissile:
+  Skills:
+  - projectile{onTick=MagicMissile-Tick;onHit=MagicMissile-Hit;v=20;i=1;hR=1;vR=1} @TargetLocation
+
+MagicMissile-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#7d00f9;amount=5;speed=0;hS=0.1;vS=0.1} @origin
+
+MagicMissile-Hit:
+  Skills:
+  - damage{amount=10;element=MAGIC}
+  - effect:particles{p=witch;amount=20;speed=0.5;hS=0.5;vS=0.5}
+
+Fireball:
+  Skills:
+  - projectile{onTick=Fireball-Tick;onHit=Fireball-Hit;v=15;i=1;hR=1;vR=1} @TargetLocation
+
+Fireball-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=5;speed=0;hS=0.1;vS=0.1} @origin
+
+Fireball-Hit:
+  Skills:
+  - damage{amount=20;element=FIRE}
+  - effect:particles{p=lava;amount=20;speed=0.5;hS=0.5;vS=0.5}
+  - effect:sound{s=entity.generic.explode;v=1;p=1}

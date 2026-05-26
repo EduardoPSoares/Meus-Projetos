@@ -1,0 +1,3 @@
+# Configuração de Performance
+monitor:
+  interval: 200 # 10 segundos

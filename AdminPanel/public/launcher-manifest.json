@@ -1,0 +1,510 @@
+{
+  "version": "1.0.14",
+  "previous_version": "1.0.13",
+  "update_mode": "manifest",
+  "required": true,
+  "base_url": "https://pub-5359fa4ead8743cbbc40f1166dd089f1.r2.dev/warface-launcher/",
+  "notes": "",
+  "generated_at": "2026-05-18T05:23:49.847Z",
+  "file_count": 78,
+  "total_size": 1138464177,
+  "changed_files": [
+    {
+      "path": "builder-debug.yml",
+      "size": 7112,
+      "hash": "7e25df12ad80cab7ae4e2b1e3d2e052a007080215549a75f3bcfe9404fb5734b",
+      "mtime": "2026-05-18T05:22:38.721Z"
+    },
+    {
+      "path": "WarfaceSurvivorSetup.exe",
+      "size": 352331421,
+      "hash": "9fdb6cd5d018998749000243e5cec863698d59a09451ae9aad50f0139ddb4044",
+      "mtime": "2026-05-18T05:22:35.472Z"
+    },
+    {
+      "path": "WarfaceSurvivorSetup.exe.blockmap",
+      "size": 360438,
+      "hash": "8f3adabf054684f125ad6c362b34d3abc471db44281f3430653e43f8bdb9517e",
+      "mtime": "2026-05-18T05:22:38.678Z"
+    },
+    {
+      "path": "win-unpacked/resources/app.asar",
+      "size": 522226704,
+      "hash": "93a0f0191c91bf25ea99875fd624ab431afbbecaf0e3b0a598af6fec0606fda9",
+      "mtime": "2026-05-18T05:21:56.500Z"
+    }
+  ],
+  "changed_count": 4,
+  "removed_files": [],
+  "removed_count": 0,
+  "files": [
+    {
+      "path": "builder-debug.yml",
+      "size": 7112,
+      "hash": "7e25df12ad80cab7ae4e2b1e3d2e052a007080215549a75f3bcfe9404fb5734b",
+      "mtime": "2026-05-18T05:22:38.721Z"
+    },
+    {
+      "path": "builder-effective-config.yaml",
+      "size": 270,
+      "hash": "979d09cbb5f6d206b619eca92eba8a7886615afcde98700f4b989e486f29ccb4",
+      "mtime": "2026-05-06T15:46:40.878Z"
+    },
+    {
+      "path": "launcher-config.json",
+      "size": 1114,
+      "hash": "7eee0272957845a2250a45dd8b78ccd0a7c8cd05b10dac06bf8439c73e44dd0e",
+      "mtime": "2026-05-12T04:04:09.990Z"
+    },
+    {
+      "path": "WarfaceSurvivorSetup.exe",
+      "size": 352331421,
+      "hash": "9fdb6cd5d018998749000243e5cec863698d59a09451ae9aad50f0139ddb4044",
+      "mtime": "2026-05-18T05:22:35.472Z"
+    },
+    {
+      "path": "WarfaceSurvivorSetup.exe.blockmap",
+      "size": 360438,
+      "hash": "8f3adabf054684f125ad6c362b34d3abc471db44281f3430653e43f8bdb9517e",
+      "mtime": "2026-05-18T05:22:38.678Z"
+    },
+    {
+      "path": "win-unpacked/chrome_100_percent.pak",
+      "size": 167733,
+      "hash": "b7805392bfce11118165e3a4e747ac0ca515e4e0ceadab356d685575f6aa45fb",
+      "mtime": "2026-05-18T05:21:52.765Z"
+    },
+    {
+      "path": "win-unpacked/chrome_200_percent.pak",
+      "size": 227823,
+      "hash": "fac820a98b746a04ce14ec40c7268d6a58819133972b538f9720a5363c862e32",
+      "mtime": "2026-05-18T05:21:52.816Z"
+    },
+    {
+      "path": "win-unpacked/d3dcompiler_47.dll",
+      "size": 4916712,
+      "hash": "7353f25dc5cf84d09894e3e0461cef0e56799adbc617fce37620ca67240b547d",
+      "mtime": "2026-05-18T05:21:52.702Z"
+    },
+    {
+      "path": "win-unpacked/ffmpeg.dll",
+      "size": 2877440,
+      "hash": "c8476ee68088d72b9fab25703093df19237d14387016b77f472e10c99c9415ed",
+      "mtime": "2026-05-18T05:21:52.723Z"
+    },
+    {
+      "path": "win-unpacked/icudtl.dat",
+      "size": 10717392,
+      "hash": "f5170aa2b388d23bebf98784dd488a9bcb741470384a6a9a8d7a2638d768defb",
+      "mtime": "2026-05-18T05:21:52.646Z"
+    },
+    {
+      "path": "win-unpacked/libEGL.dll",
+      "size": 478208,
+      "hash": "7bee4e33d89e5a4f2b3bc74d632f7c773ae9a399b6b2ba6d29b1192e25695a8b",
+      "mtime": "2026-05-18T05:21:52.622Z"
+    },
+    {
+      "path": "win-unpacked/libGLESv2.dll",
+      "size": 7808512,
+      "hash": "ee039e42a4948e9f26ece8515f3c699014fa7803ae597cd3427fa1548962f9af",
+      "mtime": "2026-05-18T05:21:52.804Z"
+    },
+    {
+      "path": "win-unpacked/LICENSE.electron.txt",
+      "size": 1096,
+      "hash": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d",
+      "mtime": "2026-05-18T05:21:52.551Z"
+    },
+    {
+      "path": "win-unpacked/LICENSES.chromium.html",
+      "size": 9142459,
+      "hash": "000ae5775ffa701d57afe7ac3831b76799e8250a2d0c328d1785cba935aab38d",
+      "mtime": "2026-05-18T05:21:52.595Z"
+    },
+    {
+      "path": "win-unpacked/locales/af.pak",
+      "size": 475987,
+      "hash": "57670eae6d1871e648ad6148125ee82d08575bec5b323459fc14c3831570774a",
+      "mtime": "2026-05-18T05:21:52.565Z"
+    },
+    {
+      "path": "win-unpacked/locales/am.pak",
+      "size": 774206,
+      "hash": "b05dcb8136751aee5eced680a5bad935e386bfce657dd283d3ec00ee722fd740",
+      "mtime": "2026-05-18T05:21:52.794Z"
+    },
+    {
+      "path": "win-unpacked/locales/ar.pak",
+      "size": 848943,
+      "hash": "ea49bc2ceb6b185030eaa0ee0155feca90e632390417299113b02fbe365ff731",
+      "mtime": "2026-05-18T05:21:52.654Z"
+    },
+    {
+      "path": "win-unpacked/locales/bg.pak",
+      "size": 881843,
+      "hash": "50e4f6b9c387adf4baba3377c61d99326cc3987928d8d60b88d1ac29352820ea",
+      "mtime": "2026-05-18T05:21:52.755Z"
+    },
+    {
+      "path": "win-unpacked/locales/bn.pak",
+      "size": 1138948,
+      "hash": "e6adcfb4f3b3bccd4a27edadc168b503c36551cd6b27fb24043efeb21f691ce5",
+      "mtime": "2026-05-18T05:21:52.547Z"
+    },
+    {
+      "path": "win-unpacked/locales/ca.pak",
+      "size": 536688,
+      "hash": "4ecfa3785ab52564e0bd7dda04d59a30163561588a04f3bd1b1b71de051d2c53",
+      "mtime": "2026-05-18T05:21:52.671Z"
+    },
+    {
+      "path": "win-unpacked/locales/cs.pak",
+      "size": 552003,
+      "hash": "1c9448ea3aefce1a7e1491e73af91af772d8b22d538676a2beab690558e668fa",
+      "mtime": "2026-05-18T05:21:52.604Z"
+    },
+    {
+      "path": "win-unpacked/locales/da.pak",
+      "size": 499433,
+      "hash": "438d2b1fd396c2108ca3902f69eeb372219edd5d95fe70970d8ee9e64556c9a4",
+      "mtime": "2026-05-18T05:21:52.536Z"
+    },
+    {
+      "path": "win-unpacked/locales/de.pak",
+      "size": 534385,
+      "hash": "47253e2fcf0e4691f29b3ebbe8f888a97b28d6aeaf73ab000857a6b8d0907ff3",
+      "mtime": "2026-05-18T05:21:52.829Z"
+    },
+    {
+      "path": "win-unpacked/locales/el.pak",
+      "size": 966750,
+      "hash": "6a06d1d6b566214f7c3b693052beec488f7aae5ceeca26781a5d66fade39388b",
+      "mtime": "2026-05-18T05:21:52.789Z"
+    },
+    {
+      "path": "win-unpacked/locales/en-GB.pak",
+      "size": 434881,
+      "hash": "4e4d71f24f5eea6892b961fcda014fc74914c1340366f9c62f0535e9b94ae846",
+      "mtime": "2026-05-18T05:21:52.610Z"
+    },
+    {
+      "path": "win-unpacked/locales/en-US.pak",
+      "size": 438820,
+      "hash": "0db4f65e527553b9e7bee395f774cc9447971bf0b86d1728856b6c15b88207bb",
+      "mtime": "2026-05-18T05:21:52.762Z"
+    },
+    {
+      "path": "win-unpacked/locales/es-419.pak",
+      "size": 528171,
+      "hash": "d1019c780e836e0c30fe01928d23ecdd0ca04ed8ee886adb3428e3683e4ed6ea",
+      "mtime": "2026-05-18T05:21:52.638Z"
+    },
+    {
+      "path": "win-unpacked/locales/es.pak",
+      "size": 528159,
+      "hash": "f6a01c26bc18dcf701e1d4b6ff76602f14c4bb9adf9dd176c9107d5aedb4503f",
+      "mtime": "2026-05-18T05:21:52.775Z"
+    },
+    {
+      "path": "win-unpacked/locales/et.pak",
+      "size": 479354,
+      "hash": "292eb18ec61502b0e952b447f73a66143c56dd95f170981945e5aab53a6b32b3",
+      "mtime": "2026-05-18T05:21:52.807Z"
+    },
+    {
+      "path": "win-unpacked/locales/fa.pak",
+      "size": 786229,
+      "hash": "7a856070430e3cfad15b96b153b1cb483cca9a1b9a43453df3707b09c748a3f2",
+      "mtime": "2026-05-18T05:21:52.826Z"
+    },
+    {
+      "path": "win-unpacked/locales/fi.pak",
+      "size": 489527,
+      "hash": "e6454458dfbe150112c37f8b02f8c72c593af22e8be16980ebc854ad113fb763",
+      "mtime": "2026-05-18T05:21:52.840Z"
+    },
+    {
+      "path": "win-unpacked/locales/fil.pak",
+      "size": 554334,
+      "hash": "ab107369d45e105a4cb4f2f6bc8da2a8c1b6c65d5e94a7ab3e703e619c083dae",
+      "mtime": "2026-05-18T05:21:52.517Z"
+    },
+    {
+      "path": "win-unpacked/locales/fr.pak",
+      "size": 572576,
+      "hash": "976622fb851378f57f81423e5625e40d0753d7a5e34caed2c39e4b130a3427b8",
+      "mtime": "2026-05-18T05:21:52.822Z"
+    },
+    {
+      "path": "win-unpacked/locales/gu.pak",
+      "size": 1117670,
+      "hash": "716ea0433e19edb5113dc8a25ae67c2587bc17c7fb63a93ac473bdcef8f72d34",
+      "mtime": "2026-05-18T05:21:52.647Z"
+    },
+    {
+      "path": "win-unpacked/locales/he.pak",
+      "size": 688870,
+      "hash": "c3955c97b6998f1806f8871fd3137f6f504bdd091f8bd1ff5ab8cd089474ae8e",
+      "mtime": "2026-05-18T05:21:52.558Z"
+    },
+    {
+      "path": "win-unpacked/locales/hi.pak",
+      "size": 1176726,
+      "hash": "1f49622ec6682c90e03fc42c319074565cf9d3532a2a4e3798e2f6cc159b2e8a",
+      "mtime": "2026-05-18T05:21:52.749Z"
+    },
+    {
+      "path": "win-unpacked/locales/hr.pak",
+      "size": 533826,
+      "hash": "e442d083c32d752d1ef2225d84a4f1a91efab768e86fc63a7ed22c10fbf7e520",
+      "mtime": "2026-05-18T05:21:52.510Z"
+    },
+    {
+      "path": "win-unpacked/locales/hu.pak",
+      "size": 574850,
+      "hash": "6ca150d0fc35492bafb411bbc520f3b34da6399969fa9685ae74201623882560",
+      "mtime": "2026-05-18T05:21:52.653Z"
+    },
+    {
+      "path": "win-unpacked/locales/id.pak",
+      "size": 473577,
+      "hash": "af63384cf7d1d39e57decd823dff7538ab2b1e7e36e9ac61238477f7889d1d46",
+      "mtime": "2026-05-18T05:21:52.683Z"
+    },
+    {
+      "path": "win-unpacked/locales/it.pak",
+      "size": 521539,
+      "hash": "a7f555e7e797e1de1a66cfca8c7b709b0e542ca62e7de96e034701fcef316d0c",
+      "mtime": "2026-05-18T05:21:52.510Z"
+    },
+    {
+      "path": "win-unpacked/locales/ja.pak",
+      "size": 637276,
+      "hash": "8260f4c9500b64d541386a8515fd0c9ddef82e3f044951b7b51a33ad81c1128f",
+      "mtime": "2026-05-18T05:21:52.690Z"
+    },
+    {
+      "path": "win-unpacked/locales/kn.pak",
+      "size": 1280837,
+      "hash": "58d16195170f76e40e18ee0ac2e10e1b73bcfd083821158927a7d67a51bcbc42",
+      "mtime": "2026-05-18T05:21:52.512Z"
+    },
+    {
+      "path": "win-unpacked/locales/ko.pak",
+      "size": 538740,
+      "hash": "cba6b7633cce796407821264e176a6266f80c1799ade16bf16893d68144236c6",
+      "mtime": "2026-05-18T05:21:52.510Z"
+    },
+    {
+      "path": "win-unpacked/locales/lt.pak",
+      "size": 578461,
+      "hash": "1bd385b780f3d13d41f8cf782a322e37be889aee273ffde3d8959e0ebcaabd0b",
+      "mtime": "2026-05-18T05:21:52.605Z"
+    },
+    {
+      "path": "win-unpacked/locales/lv.pak",
+      "size": 577630,
+      "hash": "91642c04de64f88a5c49b4eeaf5d627554e60d56fc40e7cd58cd2601b0d3dbf2",
+      "mtime": "2026-05-18T05:21:52.659Z"
+    },
+    {
+      "path": "win-unpacked/locales/ml.pak",
+      "size": 1332459,
+      "hash": "83d187cd70048f4129fa65ba148c74a04a47ee1f14218e7c85b36fe83e87b5e3",
+      "mtime": "2026-05-18T05:21:52.740Z"
+    },
+    {
+      "path": "win-unpacked/locales/mr.pak",
+      "size": 1094665,
+      "hash": "0877f2e75e0b9f5e709f0a0bf7cc793a02ff5bbb28bd6a8b6b6012760c1bbff3",
+      "mtime": "2026-05-18T05:21:52.578Z"
+    },
+    {
+      "path": "win-unpacked/locales/ms.pak",
+      "size": 496447,
+      "hash": "c7b56e9ca2f75b4414c13144ff4deee1459c2a7cde79730d863ab234cd4c2f8b",
+      "mtime": "2026-05-18T05:21:52.630Z"
+    },
+    {
+      "path": "win-unpacked/locales/nb.pak",
+      "size": 482576,
+      "hash": "96747543d9b2dbfb4482d4c24d7818d366545b2476633ad4fec8cc958ab760d3",
+      "mtime": "2026-05-18T05:21:52.598Z"
+    },
+    {
+      "path": "win-unpacked/locales/nl.pak",
+      "size": 496419,
+      "hash": "c7a18764ca908ec7f66c48cae2be06fef95213d7a5580b45f9bacee474456167",
+      "mtime": "2026-05-18T05:21:52.614Z"
+    },
+    {
+      "path": "win-unpacked/locales/pl.pak",
+      "size": 556829,
+      "hash": "69e16e41f5fe7fa18557b938874f20cda6879f3cc616ead9a815c1381fe94158",
+      "mtime": "2026-05-18T05:21:52.797Z"
+    },
+    {
+      "path": "win-unpacked/locales/pt-BR.pak",
+      "size": 523253,
+      "hash": "6d54f87f6c8b5e01bd0da9a961236344e95e85c3dc55fc92a34542777d6f6275",
+      "mtime": "2026-05-18T05:21:52.530Z"
+    },
+    {
+      "path": "win-unpacked/locales/pt-PT.pak",
+      "size": 524567,
+      "hash": "a903ca2a8e52f987e23d040de7403b58d925a6c39668d3bc0822fb2aadd34cb1",
+      "mtime": "2026-05-18T05:21:52.660Z"
+    },
+    {
+      "path": "win-unpacked/locales/ro.pak",
+      "size": 543759,
+      "hash": "82e69f505222125ea62f8e90d8030d82a1bd49871192cb4274a8fd9d0e03d577",
+      "mtime": "2026-05-18T05:21:52.532Z"
+    },
+    {
+      "path": "win-unpacked/locales/ru.pak",
+      "size": 893079,
+      "hash": "d0068b9ddf8a9e6a5b1186bd0e00ed9f09224ed56ba7e653e2d54158d938c6f2",
+      "mtime": "2026-05-18T05:21:52.730Z"
+    },
+    {
+      "path": "win-unpacked/locales/sk.pak",
+      "size": 561212,
+      "hash": "f9cd222838721a618c23c8f6493bc9699c795c0063998f1a8d506b4b7a297cdc",
+      "mtime": "2026-05-18T05:21:52.837Z"
+    },
+    {
+      "path": "win-unpacked/locales/sl.pak",
+      "size": 539150,
+      "hash": "b174c4c49654f7d65d223568c700bfaace74238447ae63171787236ce2aab00e",
+      "mtime": "2026-05-18T05:21:52.785Z"
+    },
+    {
+      "path": "win-unpacked/locales/sr.pak",
+      "size": 830811,
+      "hash": "a2bc6b064ff1f7b15707f61bd76ddd9d889bd982c4182e9e74272d39c6235c85",
+      "mtime": "2026-05-18T05:21:52.810Z"
+    },
+    {
+      "path": "win-unpacked/locales/sv.pak",
+      "size": 484580,
+      "hash": "48a71912e4843b03358fede7176b2e57ced83d3a1344a92b989886374dbded62",
+      "mtime": "2026-05-18T05:21:52.538Z"
+    },
+    {
+      "path": "win-unpacked/locales/sw.pak",
+      "size": 510585,
+      "hash": "1949953d638f266ce74d84c020174c074780166b880e7c2ec38bc6047bbb8ecc",
+      "mtime": "2026-05-18T05:21:52.814Z"
+    },
+    {
+      "path": "win-unpacked/locales/ta.pak",
+      "size": 1320024,
+      "hash": "6348cc2d385b9808fdf1b815914dbfb26f552da4d10f85b2613a5e6e9f95b8fa",
+      "mtime": "2026-05-18T05:21:52.675Z"
+    },
+    {
+      "path": "win-unpacked/locales/te.pak",
+      "size": 1220352,
+      "hash": "09ab1ac2b69f868539d4f2e59dfea8c3c2f418a5455777e4c91d13c5ee55ab4c",
+      "mtime": "2026-05-18T05:21:52.715Z"
+    },
+    {
+      "path": "win-unpacked/locales/th.pak",
+      "size": 1027321,
+      "hash": "f06a45f0395c3e42e42c46de2c19a2a104661b47be6f9ee97f8c68b05706ef1e",
+      "mtime": "2026-05-18T05:21:52.619Z"
+    },
+    {
+      "path": "win-unpacked/locales/tr.pak",
+      "size": 521272,
+      "hash": "676d46d19d1673eeff4f5e908aec3b53a6273c440e69e7d655ced6c70531cb9a",
+      "mtime": "2026-05-18T05:21:52.544Z"
+    },
+    {
+      "path": "win-unpacked/locales/uk.pak",
+      "size": 891667,
+      "hash": "29d68d90512ee9952635c7e074d5ab210531d93ae24c11a8f91bca20b685e9a2",
+      "mtime": "2026-05-18T05:21:52.552Z"
+    },
+    {
+      "path": "win-unpacked/locales/ur.pak",
+      "size": 780171,
+      "hash": "2520ba8471c840aa075075524c4ad2bde10f43fa7a1b623aa14555180ecd30ef",
+      "mtime": "2026-05-18T05:21:52.518Z"
+    },
+    {
+      "path": "win-unpacked/locales/vi.pak",
+      "size": 616935,
+      "hash": "25aeee59775ae38b21a091107022312fc228f96dbea906042bf3626b7cf86b98",
+      "mtime": "2026-05-18T05:21:52.700Z"
+    },
+    {
+      "path": "win-unpacked/locales/zh-CN.pak",
+      "size": 445903,
+      "hash": "6a9a1f5b7674da36f20cb76af7e3e75e9e56873539e8a3b32895ebba439af83a",
+      "mtime": "2026-05-18T05:21:52.820Z"
+    },
+    {
+      "path": "win-unpacked/locales/zh-TW.pak",
+      "size": 441078,
+      "hash": "6a43c8fac5a0ce7c7a21b30ac7bc2167488e17c81c76c00f0b92b49e9e46e469",
+      "mtime": "2026-05-18T05:21:52.524Z"
+    },
+    {
+      "path": "win-unpacked/resources.pak",
+      "size": 5331889,
+      "hash": "1d241f5d4403a6e802e898c61e4753f8508ae4dda8fcb7750558ec1ecade52c6",
+      "mtime": "2026-05-18T05:21:52.865Z"
+    },
+    {
+      "path": "win-unpacked/resources/app.asar",
+      "size": 522226704,
+      "hash": "93a0f0191c91bf25ea99875fd624ab431afbbecaf0e3b0a598af6fec0606fda9",
+      "mtime": "2026-05-18T05:21:56.500Z"
+    },
+    {
+      "path": "win-unpacked/resources/elevate.exe",
+      "size": 107520,
+      "hash": "9b1fbf0c11c520ae714af8aa9af12cfd48503eedecd7398d8992ee94d1b4dc37",
+      "mtime": "2019-06-17T19:21:30.000Z"
+    },
+    {
+      "path": "win-unpacked/snapshot_blob.bin",
+      "size": 276794,
+      "hash": "b6bea91727efb8c88e7c059856553d3a47abd883e60dd60efc01b04dc6eec621",
+      "mtime": "2026-05-18T05:21:52.550Z"
+    },
+    {
+      "path": "win-unpacked/v8_context_snapshot.bin",
+      "size": 642377,
+      "hash": "2db4a98abe705ef9bc18e69d17f91bc3f4c0f5703f9f57b41acb877100718918",
+      "mtime": "2026-05-18T05:21:52.813Z"
+    },
+    {
+      "path": "win-unpacked/vk_swiftshader_icd.json",
+      "size": 106,
+      "hash": "32d83ff113fef532a9f97e0d2831f8656628ab1c99e9060f0332b1532839afd9",
+      "mtime": "2026-05-18T05:21:52.802Z"
+    },
+    {
+      "path": "win-unpacked/vk_swiftshader.dll",
+      "size": 5238784,
+      "hash": "680ea3717671c896d516517ff322976ab708f18862135be4216a27ad57353dcc",
+      "mtime": "2026-05-18T05:21:52.775Z"
+    },
+    {
+      "path": "win-unpacked/vulkan-1.dll",
+      "size": 947200,
+      "hash": "d5df2f59cc8b32abd6178250e7d1370a7f37270cc727449e21778080b5e29cd2",
+      "mtime": "2026-05-18T05:21:52.591Z"
+    },
+    {
+      "path": "win-unpacked/Warface Survivor Launcher.exe",
+      "size": 176798720,
+      "hash": "1ae1aefdac16fa7f38ec0e0981d2d37f10491aa781370ecb51d140774fb62815",
+      "mtime": "2026-05-18T05:21:57.585Z"
+    }
+  ]
+}

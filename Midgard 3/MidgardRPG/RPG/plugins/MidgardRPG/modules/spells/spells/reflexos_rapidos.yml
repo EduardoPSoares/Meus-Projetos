@@ -1,0 +1,74 @@
+name: "<green>ʀᴇꜰʟᴇxᴏs ʀᴀᴘɪᴅᴏs</green>"
+mythic-skill: "ReflexosRapidos"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Arqueiro"
+  level: 5
+
+icon:
+  material: FEATHER
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<green><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></green>"
+  - ""
+  - "<gray>ᴏ ᴀʀǫᴜᴇɪʀᴏ ᴅᴇsᴇɴᴠᴏʟᴠᴇ ʀᴇꜰʟᴇxᴏs</gray>"
+  - "<gray>sᴏʙʀᴇ-ʜᴜᴍᴀɴᴏs, ɢᴀɴʜᴀɴᴅᴏ ᴄʜᴀɴᴄᴇ</gray>"
+  - "<gray>ᴅᴇ ᴇsǫᴜɪᴠᴀʀ ᴅᴇ ᴀᴛᴀǫᴜᴇs.</gray>"
+  - ""
+  - "<green><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></green>"
+  - ""
+  - "<gray>ᴄʜᴀɴᴄᴇ ᴅᴇ ᴇsǫᴜɪᴠᴀ:<green>{dodge_chance}%</green>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴀʀǫᴜᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  dodge_chance:
+    base: 5.0
+    per-level: 2.0
+
+milestones:
+  3:
+    visual: "reflexos_swift"
+    mechanic-override: "ReflexosRapidosMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "reflexos_blur"
+    mechanic-override: "ReflexosRapidosMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.bat.takeoff"
+    volume: 0.6
+    pitch: 1.4
+  cast-finish:
+    sound: "entity.experience_orb.pickup"
+    volume: 0.5
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

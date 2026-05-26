@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "enabled": false,
+  "intervalMinutes": 360,
+  "packageIds": [
+    "pacote-1",
+    "pacote-2",
+    "pacote-3",
+    "pacote-4"
+  ],
+  "currentIndex": 0,
+  "nextRunAt": 0,
+  "lastAppliedAt": 0,
+  "lastAppliedPackageId": null,
+  "updatedAt": 1778966458121
+}

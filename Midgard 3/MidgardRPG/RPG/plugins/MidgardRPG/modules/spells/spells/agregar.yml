@@ -1,0 +1,87 @@
+name: "<blue>ᴀɢʀᴇɢᴀʀ</blue>"
+mythic-skill: "Agregar"
+spell-type: COMMON
+
+cooldown:
+  base: 14.0
+  per-level: -0.3
+mana:
+  base: 22.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guardiao"
+  level: 12
+
+icon:
+  material: BEACON
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<blue><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></blue>"
+  - ""
+  - "<gray>ʀᴇᴜɴᴇ ᴀʟɪᴀᴅᴏs ᴘʀᴏxɪᴍᴏs ᴇ</gray>"
+  - "<gray>ꜰᴏʀᴛᴀʟᴇᴄᴇ sᴜᴀ ᴅᴇꜰᴇsᴀ ᴄᴏᴍ</gray>"
+  - "<gray>ᴀ ꜰᴏʀᴄᴀ ᴅᴏ ɢᴜᴀʀᴅɪᴀᴏ.</gray>"
+  - ""
+  - "<blue><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></blue>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ᴅᴇꜰᴇsᴀ:<blue>{defense_buff}</blue>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<blue>{duration}s</blue>"
+  - "<gray>ʀᴀɪᴏ:<blue>{radius}</blue>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<blue>ɢᴜᴀʀᴅɪᴀᴏ</blue>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>12</yellow>"
+
+variables:
+  defense_buff:
+    base: 6.0
+    per-level: 2.0
+  duration:
+    base: 6.0
+    per-level: 0.5
+  radius:
+    base: 5.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "rally_glow"
+    mechanic-override: "AgregarMk2"
+    stat-bonus:
+      defense: 1.0
+  5:
+    visual: "rally_beacon"
+    mechanic-override: "AgregarMk3"
+    stat-bonus:
+      defense: 2.0
+
+mastery:
+  attribute-bonus:
+    defense: 5
+
+sounds:
+  cast-start:
+    sound: "block.beacon.activate"
+    volume: 1.0
+    pitch: 1.0
+  cast-finish:
+    sound: "block.beacon.power_select"
+    volume: 0.8
+    pitch: 1.2
+  cast-fail:
+    sound: "item.shield.break"
+    volume: 0.5
+    pitch: 0.8

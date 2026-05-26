@@ -1,0 +1,286 @@
+# Page 1
+SWORD:
+  name: "<white>ᴇsᴘᴀᴅᴀ</white>"
+  icon: IRON_SWORD
+  model-data: 0
+  slot: 10
+  page: 1
+
+DAGGER:
+  name: "<white>ᴀᴅᴀɢᴀ</white>"
+  icon: IRON_SWORD
+  model-data: 0
+  slot: 11
+  page: 1
+
+SPEAR:
+  name: "<white>ʟᴀɴᴄᴀ</white>"
+  icon: STICK
+  model-data: 0
+  slot: 12
+  page: 1
+
+HAMMER:
+  name: "<white>ᴍᴀʀᴛᴇʟᴏ</white>"
+  icon: IRON_SHOVEL
+  model-data: 0
+  slot: 13
+  page: 1
+
+GAUNTLET:
+  name: "<white>ᴍᴀɴᴏᴘʟᴀ</white>"
+  icon: LEATHER_HELMET
+  model-data: 0
+  slot: 14
+  page: 1
+
+WHIP:
+  name: "<white>ᴄʜɪᴄᴏᴛᴇ</white>"
+  icon: LEAD
+  model-data: 0
+  slot: 15
+  page: 1
+
+STAFF:
+  name: "<white>ᴄᴀᴊᴀᴅᴏ</white>"
+  icon: STICK
+  model-data: 0
+  slot: 16
+  page: 1
+
+BOW:
+  name: "<white>ᴀʀᴄᴏ</white>"
+  icon: BOW
+  model-data: 0
+  slot: 19
+  page: 1
+
+CROSSBOW:
+  name: "<white>ʙᴇsᴛᴀ</white>"
+  icon: CROSSBOW
+  model-data: 0
+  slot: 20
+  page: 1
+
+MUSKET:
+  name: "<white>ᴍᴏsǫᴜᴇᴛᴇ</white>"
+  icon: IRON_HORSE_ARMOR
+  model-data: 0
+  slot: 21
+  page: 1
+
+LUTE:
+  name: "<white>ᴀʟᴀᴜᴅᴇ</white>"
+  icon: MUSIC_DISC_STRAD
+  model-data: 0
+  slot: 22
+  page: 1
+
+TOOL:
+  name: "<white>ꜰᴇʀʀᴀᴍᴇɴᴛᴀ</white>"
+  icon: IRON_PICKAXE
+  model-data: 0
+  slot: 23
+  page: 1
+
+CATALYST:
+  name: "<white>ᴄᴀᴛᴀʟɪsᴀᴅᴏʀ</white>"
+  icon: EMERALD
+  model-data: 0
+  slot: 24
+  page: 1
+
+OFF_CATALYST:
+  name: "<white>ᴄᴀᴛᴀʟɪsᴀᴅᴏʀ (ᴍᴀᴏ sᴇᴄᴜɴᴅᴀʀɪᴀ)</white>"
+  icon: BOOK
+  model-data: 0
+  slot: 25
+  page: 1
+
+MAIN_CATALYST:
+  name: "<white>ᴄᴀᴛᴀʟɪsᴀᴅᴏʀ (ᴍᴀᴏ ᴘʀɪᴍᴀʀɪᴀ)</white>"
+  icon: ENCHANTED_BOOK
+  model-data: 0
+  slot: 28
+  page: 1
+
+ORNAMENT:
+  name: "<white>ᴏʀɴᴀᴍᴇɴᴛᴏ</white>"
+  icon: FLOWER_POT
+  model-data: 0
+  slot: 29
+  page: 1
+
+ARMOR:
+  name: "<white>ᴀʀᴍᴀᴅᴜʀᴀ</white>"
+  icon: IRON_CHESTPLATE
+  model-data: 0
+  slot: 30
+  page: 1
+
+CONSUMABLE:
+  name: "<white>ᴄᴏɴsᴜᴍɪᴠᴇʟ</white>"
+  icon: POTION
+  model-data: 0
+  slot: 31
+  page: 1
+
+MISCELLANEOUS:
+  name: "<white>ᴍɪsᴄᴇʟᴀɴᴇᴀ</white>"
+  icon: CHEST
+  model-data: 0
+  slot: 32
+  page: 1
+
+GEM_STONE:
+  name: "<white>ɢᴇᴍᴀ</white>"
+  icon: DIAMOND
+  model-data: 0
+  slot: 33
+  page: 1
+
+SKIN:
+  name: "<white>sᴋɪɴ</white>"
+  icon: PLAYER_HEAD
+  model-data: 0
+  slot: 34
+  page: 1
+
+# Page 2
+ACCESSORY:
+  name: "<white>ᴀᴄᴇssᴏʀɪᴏ</white>"
+  icon: GOLD_NUGGET
+  model-data: 0
+  slot: 10
+  page: 2
+
+BLOCK:
+  name: "<white>ʙʟᴏᴄᴏ</white>"
+  icon: STONE
+  model-data: 0
+  slot: 11
+  page: 2
+
+GREATSWORD:
+  name: "<white>ᴇsᴘᴀᴅᴀ ɢʀᴀɴᴅᴇ</white>"
+  icon: IRON_SWORD
+  model-data: 0
+  slot: 12
+  page: 2
+
+LONG_SWORD:
+  name: "<white>ᴇsᴘᴀᴅᴀ ʟᴏɴɢᴀ</white>"
+  icon: IRON_SWORD
+  model-data: 0
+  slot: 13
+  page: 2
+
+KATANA:
+  name: "<white>ᴋᴀᴛᴀɴᴀ</white>"
+  icon: IRON_SWORD
+  model-data: 0
+  slot: 14
+  page: 2
+
+THRUSTING_SWORD:
+  name: "<white>ᴇsᴘᴀᴅᴀ ᴅᴇ ᴇsᴛᴏᴄᴀᴅᴀ</white>"
+  icon: IRON_SWORD
+  model-data: 0
+  slot: 15
+  page: 2
+
+AXE:
+  name: "<white>ᴍᴀᴄʜᴀᴅᴏ</white>"
+  icon: IRON_AXE
+  model-data: 0
+  slot: 16
+  page: 2
+
+GREATAXE:
+  name: "<white>ᴍᴀᴄʜᴀᴅᴏ ɢʀᴀɴᴅᴇ</white>"
+  icon: IRON_AXE
+  model-data: 0
+  slot: 19
+  page: 2
+
+HALBERD:
+  name: "<white>ᴀʟᴀʙᴀʀᴅᴀ</white>"
+  icon: IRON_AXE
+  model-data: 0
+  slot: 20
+  page: 2
+
+LANCE:
+  name: "<white>ʟᴀɴᴄᴀ ᴅᴇ ᴄᴀᴠᴀʟᴀʀɪᴀ</white>"
+  icon: STICK
+  model-data: 0
+  slot: 21
+  page: 2
+
+GREATHAMMER:
+  name: "<white>ᴍᴀʀᴛᴇʟᴏ ɢʀᴀɴᴅᴇ</white>"
+  icon: IRON_SHOVEL
+  model-data: 0
+  slot: 22
+  page: 2
+
+GREATSTAFF:
+  name: "<white>ᴄᴀᴊᴀᴅᴏ ɢʀᴀɴᴅᴇ</white>"
+  icon: STICK
+  model-data: 0
+  slot: 23
+  page: 2
+
+CLUB:
+  name: "<white>ʙᴀsᴛᴀᴏ</white>"
+  icon: STICK
+  model-data: 0
+  slot: 24
+  page: 2
+
+TOME:
+  name: "<white>ᴛᴏᴍᴏ</white>"
+  icon: BOOK
+  model-data: 0
+  slot: 25
+  page: 2
+
+TALISMAN:
+  name: "<white>ᴛᴀʟɪsᴍᴀ</white>"
+  icon: TOTEM_OF_UNDYING
+  model-data: 0
+  slot: 28
+  page: 2
+
+WAND:
+  name: "<white>ᴠᴀʀɪɴʜᴀ</white>"
+  icon: STICK
+  model-data: 0
+  slot: 29
+  page: 2
+
+GREATBOW:
+  name: "<white>ᴀʀᴄᴏ ɢʀᴀɴᴅᴇ</white>"
+  icon: BOW
+  model-data: 0
+  slot: 30
+  page: 2
+
+SHIELD:
+  name: "<white>ᴇsᴄᴜᴅᴏ</white>"
+  icon: SHIELD
+  model-data: 0
+  slot: 31
+  page: 2
+
+MATERIAL:
+  name: "<white>ᴍᴀᴛᴇʀɪᴀʟ</white>"
+  icon: IRON_INGOT
+  model-data: 0
+  slot: 32
+  page: 2
+
+MISC:
+  name: '<white>ᴏᴜᴛʀᴏs</white>'
+  icon: PAPER
+  model-data: 0

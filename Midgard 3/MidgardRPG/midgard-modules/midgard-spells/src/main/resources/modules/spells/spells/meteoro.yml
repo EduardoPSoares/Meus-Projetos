@@ -1,0 +1,82 @@
+name: "<aqua>ᴍᴇᴛᴇᴏʀᴏ</aqua>"
+mythic-skill: "Meteoro"
+spell-type: COMMON
+
+cooldown:
+  base: 12.0
+  per-level: -0.3
+mana:
+  base: 40.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Mago"
+  level: 10
+
+icon:
+  material: MAGMA_BLOCK
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<aqua><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></aqua>"
+  - ""
+  - "<gray>ᴏ ᴍᴀɢᴏ ɪɴᴠᴏᴄᴀ ᴜᴍ ᴍᴇᴛᴇᴏʀᴏ</gray>"
+  - "<gray>ᴅᴏs ᴄᴇᴜs ǫᴜᴇ ᴄᴀɪ sᴏʙʀᴇ ᴀ ᴀʀᴇᴀ</gray>"
+  - "<gray>ᴀʟᴠᴏ, ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ ᴇᴍ ᴀʀᴇᴀ.</gray>"
+  - ""
+  - "<aqua><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></aqua>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ʀᴀɪᴏ:<aqua>{radius}</aqua>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴀɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>10</yellow>"
+
+variables:
+  damage:
+    base: 25.0
+    per-level: 6.0
+  radius:
+    base: 3.0
+    per-level: 0.2
+
+milestones:
+  3:
+    visual: "meteor_blaze"
+    mechanic-override: "MeteoroMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "meteor_cataclysm"
+    mechanic-override: "MeteoroMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.blaze.shoot"
+    volume: 1.0
+    pitch: 0.8
+  cast-finish:
+    sound: "entity.generic.explode"
+    volume: 1.0
+    pitch: 0.6
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

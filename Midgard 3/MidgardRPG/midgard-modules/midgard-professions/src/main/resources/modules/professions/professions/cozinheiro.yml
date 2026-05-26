@@ -1,0 +1,109 @@
+# ============================================
+# COZINHEIRO - Definição e Recompensas
+# ============================================
+
+definition:
+  menu-icon: COOKED_BEEF
+  gradient: "<gradient:#f97316:#ef4444>"
+  description: "Cozinhe alimentos, prepare receitas e combine ingredientes para ganhar XP."
+  bonuses:
+    - "<green>▸ Qualidade da comida</green>"
+    - "<green>▸ Duração de buffs</green>"
+    - "<green>▸ Porções extras</green>"
+    - "<green>▸ Velocidade de preparo</green>"
+  xp-source-icon: CAMPFIRE
+  extra-button-icon: MUSHROOM_STEW
+  extra-button-name: "<red>Receituário do Chef"
+  extra-button-lore:
+    - "<gray>Acesse suas receitas especiais"
+    - "<gray>e aprimoramentos culinários."
+
+rewards:
+  1:
+    name: "Aprendiz Culinário"
+    bonuses:
+      - "+2% qualidade da comida"
+  5:
+    bonuses:
+      - "+5% qualidade da comida"
+      - "+3% duração de buffs"
+  10:
+    name: "Cozinheiro"
+    bonuses:
+      - "+10% qualidade da comida"
+    ability: "Receita Aprimorada"
+    ability-desc: "Comidas preparadas ganham buff extra."
+  25:
+    name: "Chef"
+    bonuses:
+      - "+5% porções extras"
+    ability: "Preparo Rápido"
+    ability-desc: "Cozinha 30% mais rápido."
+  50:
+    name: "Mestre Chef"
+    bonuses:
+      - "+30% qualidade da comida"
+    ability: "Tempero Especial"
+    ability-desc: "Comidas ganham efeito bônus aleatório."
+  75:
+    name: "Grão-Mestre Chef"
+    bonuses:
+      - "+10% duração de buffs"
+    perks:
+      - "Chance de refeição lendária"
+  100:
+    name: "Lenda da Culinária"
+    bonuses:
+      - "+50% qualidade da comida"
+    ability: "Refeição Energizante"
+    ability-desc: "Comidas dão regeneração passiva por 5min."
+    perks:
+      - "Título: Lenda da Culinária"
+
+# ============================================
+# FONTES DE XP
+# ============================================
+# smelt: XP ao cozinhar na fornalha (material do item cozido)
+# craft: XP ao preparar receitas (material do item fabricado)
+xp-config:
+  smelt:
+    COOKED_BEEF: 8.0
+    COOKED_CHICKEN: 6.0
+    COOKED_PORKCHOP: 8.0
+    COOKED_MUTTON: 7.0
+    COOKED_RABBIT: 7.0
+    COOKED_COD: 6.0
+    COOKED_SALMON: 8.0
+    BAKED_POTATO: 5.0
+    DRIED_KELP: 3.0
+  craft:
+    BREAD: 5.0
+    CAKE: 15.0
+    COOKIE: 3.0
+    PUMPKIN_PIE: 8.0
+    MUSHROOM_STEW: 6.0
+    RABBIT_STEW: 10.0
+    BEETROOT_SOUP: 6.0
+    SUSPICIOUS_STEW: 8.0
+    GOLDEN_APPLE: 20.0
+    GOLDEN_CARROT: 8.0
+
+# ============================================
+# PENALIDADES PARA NÃO-COZINHEIROS
+# ============================================
+# Jogadores sem a profissão de Cozinheiro ativa sofrem estas penalidades
+# ao cozinhar e preparar receitas.
+penalties:
+  enabled: true
+  show-message: true
+  affected-materials: []
+
+  # Penalidade ao cozinhar na fornalha
+  smelt:
+    fail-chance: 0.25          # 25% de chance de queimar a comida
+    fail-result: CHARCOAL      # Comida queimada vira carvão
+
+  # Penalidade ao preparar receitas
+  craft:
+    fail-chance: 0.20          # 20% de chance de falhar a receita
+    fail-result: ROTTEN_FLESH  # Receita falha vira carne podre

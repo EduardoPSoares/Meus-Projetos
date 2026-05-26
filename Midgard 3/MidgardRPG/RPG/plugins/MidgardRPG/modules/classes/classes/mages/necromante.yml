@@ -1,0 +1,62 @@
+display-name: '<dark_green>ɴᴇᴄʀᴏᴍᴀɴᴛᴇ</dark_green>'
+icon: WITHER_SKELETON_SKULL
+lore:
+  - '<gray>ᴛɪᴘᴏ:<dark_green><bold>ɪɴᴠᴏᴄᴀᴅᴏʀ sᴏᴍʙʀɪᴏ</bold></dark_green>'
+  - ''
+  - '<gray>ɴᴇᴄʀᴏᴍᴀɴᴛᴇs ᴄᴏᴍᴀɴᴅᴀᴍ ᴀs ꜰᴏʀᴄᴀs</gray>'
+  - '<gray>ᴅᴀ ᴍᴏʀᴛᴇ, ɪɴᴠᴏᴄᴀɴᴅᴏ ᴄʀɪᴀᴛᴜʀᴀs sᴏᴍʙʀɪᴀs</gray>'
+  - '<gray>ᴇ ᴅʀᴇɴᴀɴᴅᴏ ᴀ ᴠɪᴅᴀ ᴅᴏs ɪɴɪᴍɪɢᴏs.</gray>'
+  - ''
+  - '<yellow><bold>✦ ᴇsᴛɪʟᴏ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ ✦</bold></yellow>'
+  - ''
+  - '<gray>• ᴅᴀɴᴏ:<red>ᴀʟᴛᴏ</red>'
+  - '<gray>• ᴅᴇꜰᴇsᴀ:<red>ʙᴀɪxᴀ</red>'
+  - '<gray>• ᴀʟᴄᴀɴᴄᴇ:<yellow>ᴍᴇᴅɪᴏ</yellow>'
+attributes:
+  base:
+    strength: 2
+    defense: 4
+    vitality: 6
+    intelligence: 12
+    dexterity: 4
+  per-level:
+    intelligence: 2
+    vitality: 1
+    defense: 0.5
+health:
+  base: 16
+  per-level: 3
+mana:
+  base: 25
+  per-level: 5
+skills:
+  PACTO_SOMBRIO:
+    level: 1
+    type: passive
+  ALMA_CORROMPIDA:
+    level: 5
+    type: passive
+  DRENAR_VIDA:
+    level: 1
+    type: active
+  INVOCAR_ESQUELETO:
+    level: 3
+    type: active
+  MALDICAO:
+    level: 5
+    type: active
+  TOQUE_DA_MORTE:
+    level: 8
+    type: active
+  ENXAME_DE_ALMAS:
+    level: 10
+    type: active
+  EXPLOSAO_NECROTICA:
+    level: 12
+    type: active
+  EXERCITO_DOS_MORTOS:
+    level: 15
+    type: ultimate
+  CEIFADOR_DE_ALMAS:
+    level: 20
+    type: ultimate

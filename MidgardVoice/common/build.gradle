@@ -1,0 +1,53 @@
+plugins {
+    id 'java'
+    id 'io.papermc.paperweight.userdev'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.maxhenkel.de/repository/public' }
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    mavenLocal()
+}
+
+dependencies {
+    paperweight.paperDevBundle("${bukkit_version}")
+    compileOnly project(':api')
+    compileOnly "com.google.code.findbugs:jsr305:3.0.2"
+    compileOnly "de.maxhenkel.configbuilder:configbuilder:${configbuilder_version}"
+    compileOnly "de.maxhenkel.opus4j:opus4j:${opus4j_version}"
+    compileOnly "de.maxhenkel.lame4j:lame4j:${lame4j_version}"
+    compileOnly "org.concentus:Concentus:${concentus_version}"
+}
+
+sourceSets {
+    template {
+        java {
+            srcDir 'src/template/java'
+        }
+    }
+    main {
+        compileClasspath += sourceSets.template.output
+        runtimeClasspath += sourceSets.template.output
+    }
+}
+
+tasks.register('generateBuildConstants', Copy) {
+    from 'src/template/java'
+    into "${layout.buildDirectory.asFile.get()}/generated/java"
+    expand 'compatibility_version': voicechat_compatibility_version,
+            'mod_compatible_version': mod_compatible_version,
+            'minecraft_version': minecraft_version
+}
+compileJava.dependsOn generateBuildConstants
+
+sourceSets.main.java {
+    srcDir "${layout.buildDirectory.asFile.get()}/generated/java"
+}
+

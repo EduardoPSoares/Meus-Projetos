@@ -1,0 +1,78 @@
+name: "<aqua>ʀᴇʟᴀᴍᴘᴀɢᴏ</aqua>"
+mythic-skill: "Relampago"
+spell-type: COMMON
+
+cooldown:
+  base: 10.0
+  per-level: -0.3
+mana:
+  base: 30.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Mago"
+  level: 5
+
+icon:
+  material: LIGHTNING_ROD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<aqua><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></aqua>"
+  - ""
+  - "<gray>ᴏ ᴍᴀɢᴏ ɪɴᴠᴏᴄᴀ ᴜᴍ ᴘᴏᴅᴇʀᴏsᴏ</gray>"
+  - "<gray>ʀᴇʟᴀᴍᴘᴀɢᴏ ǫᴜᴇ ᴄᴀɪ sᴏʙʀᴇ ᴏ</gray>"
+  - "<gray>ɪɴɪᴍɪɢᴏ, ᴇʟᴇᴛʀᴏᴄᴜᴛᴀɴᴅᴏ-ᴏ.</gray>"
+  - ""
+  - "<aqua><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></aqua>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴀɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  damage:
+    base: 20.0
+    per-level: 5.0
+
+milestones:
+  3:
+    visual: "lightning_spark"
+    mechanic-override: "RelampagoMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "lightning_storm"
+    mechanic-override: "RelampagoMk3"
+    stat-bonus:
+      intelligence: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 5
+
+sounds:
+  cast-start:
+    sound: "entity.lightning_bolt.thunder"
+    volume: 1.0
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.lightning_bolt.impact"
+    volume: 0.8
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

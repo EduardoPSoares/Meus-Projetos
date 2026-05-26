@@ -1,0 +1,36 @@
+title: "<green>sᴇʟᴇᴄɪᴏɴᴇ ᴏ ɪᴅɪᴏᴍᴀ</green>"
+size: 27
+items:
+  pt-br:
+    material: PLAYER_HEAD
+    name: "<green><bold>🇧🇷 ᴘᴏʀᴛᴜɢᴜᴇs (ʙʀᴀsɪʟ)</bold>"
+    lore:
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+      - "<gray>ᴀʟᴛᴇʀᴇ ᴏ ɪᴅɪᴏᴍᴀ ᴅᴏ ᴘʟᴜɢɪɴ ᴘᴀʀᴀ"
+      - "<gray>ᴘᴏʀᴛᴜɢᴜᴇs ʙʀᴀsɪʟᴇɪʀᴏ."
+      - ""
+      - "<aqua>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ sᴇʟᴇᴄɪᴏɴᴀʀ!"
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    slot: 11
+    action: "set_lang: pt-br"
+    hdb-id: "27585"
+  
+  en-us:
+    material: PLAYER_HEAD
+    name: "<green><bold>🇺🇸 ᴇɴɢʟɪsʚ (ᴜs)</bold>"
+    lore:
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+      - "<gray>ᴀʟᴛᴇʀᴇ ᴏ ɪᴅɪᴏᴍᴀ ᴅᴏ ᴘʟᴜɢɪɴ ᴘᴀʀᴀ"
+      - "<gray>ɪɴɢʟᴇs ᴀᴍᴇʀɪᴄᴀɴᴏ."
+      - ""
+      - "<aqua>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ sᴇʟᴇᴄɪᴏɴᴀʀ!"
+      - "<dark_gray>━━━━━━━━━━━━━━━━━━━━━"
+    slot: 15
+    action: "set_lang: en-us"
+    hdb-id: "890"
+
+  close:
+    material: BARRIER
+    name: "<red><bold>✖ ꜰᴇᴄʚᴀʀ</bold>"
+    slot: 22
+    action: "close"

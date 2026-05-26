@@ -1,0 +1,238 @@
+# ==============================================================================
+# MRPremiumAddons Custom Recipe Configuration Guide
+# ==============================================================================
+
+# This entire section is a guide to help you understand and customize
+# your own recipes. Read through each part and then scroll down to the
+# “customRecipes:” section to actually enable and define your recipes.
+
+# 1) Enabling custom recipes
+#    --------------------------------------------------
+#    customRecipes:
+#      enabled: true|false
+#        • true  = plugin will load and register these recipes
+#        • false = plugin will ignore everything under “recipes:”
+#
+# 2) Recipe definitions
+#    --------------------------------------------------
+#    recipes:
+#      <recipeKey>:
+#        type: shapeless|shaped
+#          • shapeless = ingredients can be in any order
+#          • shaped   = ingredients must match a pattern (not covered in this guide)
+#
+#        result:
+#          material: <MATERIAL_NAME>
+#            – any vanilla Minecraft material (e.g. DIAMOND_SWORD, PAPER)
+#          amount: <number>
+#            – how many items you get when crafting
+#          customModelData: <ID>
+#            – your resource pack’s custom model override
+#          name: "<colour code + display name>"
+#            – e.g. "&cExplosive Snowball"
+#          lore:
+#            – list of description lines shown in the tooltip
+#            – start each line with “-” and wrap in quotes if using colour codes
+#
+#        ingredients:
+#          – list of materials required
+#          – for shapeless, order doesn’t matter
+#          – must be valid vanilla material names
+#
+#        abilities:
+#          – You should read the MRPremiumAddons documentation for details on abilities.
+# 3) Colour codes
+#    --------------------------------------------------
+#    &0 = black        &8 = dark gray
+#    &1 = dark blue    &9 = blue
+#    &2 = dark green   &a = green
+#    &3 = dark aqua    &b = aqua
+#    &4 = dark red     &c = red
+#    &5 = dark purple  &d = light purple
+#    &6 = gold         &e = yellow
+#    &7 = gray         &f = white
+#
+# 4) Finding valid material names
+#    --------------------------------------------------
+#    • Use SpigotMC’s Material enum documentation:
+#
+# 5) Example abilities breakdown
+#    --------------------------------------------------
+#    "PROJECTILEEVENT====SNOWBALL====summon minecraft:tnt {x} {y} {z} {Fuse:0}====100====1000"
+#    – on snowball impact, summon instant TNT at that location
+#
+#    "CUSTOMABILITY====GLISTERING_MELON_SLICE====effect give {name} minecraft:instant_health 1 1 false====100====1000====SELF====ALL====RIGHTCLICKAIRCONSUME"
+#    – when right-clicking melon, give instant health I to the user
+#
+# ------------------------------------------------------------------------------
+# After reading the above, scroll down to “customRecipes:” and tweak as you like.
+# ==============================================================================
+
+customRecipes:
+  enabled: false
+
+  recipes:
+
+    explosiveSnowball:
+      type: shapeless
+      result:
+        material: SNOWBALL
+        amount: 1
+        customModelData: 101
+        name: "&cExplosive Snowball"
+        lore:
+          - "&7Throws an explosive snowball at an entity."
+          - "&7Upon impact with an entity, it explodes with a bang!"
+      ingredients:
+        - SNOWBALL
+        - GUNPOWDER
+      abilities:
+        - "PROJECTILEEVENT====SNOWBALL====summon minecraft:tnt {x} {y} {z} {Fuse:0}====100====1000"
+
+    slimeLauncher:
+      type: shapeless
+      result:
+        material: SLIME_BALL
+        amount: 1
+        customModelData: 102
+        name: "&aSlime Launcher"
+        lore:
+          - "&7Bouncy, sticky projectiles."
+          - "&7Right-click to launch yourself"
+      ingredients:
+        - SLIME_BALL
+        - GUNPOWDER
+        - IRON_BLOCK
+      abilities:
+        - "CUSTOMABILITY====SLIME_BALL====addLookVelocity-0.5-1.5-0.5====100====1000====SELF====ALL====RIGHTCLICKAIR"
+
+    healingBundle:
+      type: shapeless
+      result:
+        material: GLISTERING_MELON_SLICE
+        amount: 1
+        customModelData: 103
+        name: "&2Healing Bundle"
+        lore:
+          - "&7Instantly restore some health."
+          - "&7Right-click to consume and heal."
+      ingredients:
+        - GLISTERING_MELON_SLICE
+        - GOLD_NUGGET
+        - REDSTONE
+      abilities:
+        - "CUSTOMABILITY====GLISTERING_MELON_SLICE====effect give {name} minecraft:instant_health 1 1 false====100====1000====SELF====ALL====RIGHTCLICKAIRCONSUME"
+
+    invisibilityPowder:
+      type: shapeless
+      result:
+        material: SUGAR
+        amount: 3
+        customModelData: 104
+        name: "&8Invisibility Powder"
+        lore:
+          - "&7Grants temporary invisibility."
+          - "&7Right-click to become invisible for a short time."
+      ingredients:
+        - SUGAR
+        - FERMENTED_SPIDER_EYE
+        - REDSTONE
+      abilities:
+        - "CUSTOMABILITY====SUGAR====effect give {name} minecraft:invisibility 10 0 false====100====1000====SELF====ALL====RIGHTCLICKAIRCONSUME"
+
+    teleportScroll:
+      type: shapeless
+      result:
+        material: PAPER
+        amount: 1
+        customModelData: 105
+        name: "&9Teleport Scroll"
+        lore:
+          - "&7Right-click to teleport a short distance upwards."
+      ingredients:
+        - PAPER
+        - ENDER_PEARL
+        - BLAZE_POWDER
+      abilities:
+        - "CUSTOMABILITY====PAPER====execute at {name} run tp {name} {x} {[mathY+5]} {z}====100====1000====SELF====ALL====RIGHTCLICKAIRCONSUME"
+
+    luckyCharm:
+      type: shapeless
+      result:
+        material: GOLDEN_APPLE
+        amount: 1
+        customModelData: 106
+        name: "&6Lucky Charm"
+        lore:
+          - "&7Increases your luck for better drops."
+          - "&7Right-click to gain a luck boost."
+      ingredients:
+        - GOLDEN_APPLE
+        - RABBIT_FOOT
+        - EMERALD
+      abilities:
+        - "CUSTOMABILITY====GOLDEN_APPLE====effect give {name} minecraft:luck 60 1 false====100====1000====SELF====ALL====RIGHTCLICKAIRCONSUME"
+
+    frostSword:
+      type: shapeless
+      result:
+        material: DIAMOND_SWORD
+        amount: 1
+        customModelData: 107
+        name: "&bFrost Sword"
+        lore:
+          - "&7Freezes enemies on hit."
+      ingredients:
+        - DIAMOND_SWORD
+        - ICE
+        - BLUE_ICE
+      abilities:
+        - "INFLICTDAMAGEEVENT====execute at {name} run effect give @e[x={x},y={y},z={z},limit=1,sort=nearest,name=!{name}] minecraft:slowness 3 1====100====1000"
+
+    flameRod:
+      type: shapeless
+      result:
+        material: BLAZE_ROD
+        amount: 1
+        customModelData: 108
+        name: "&cFlame Rod"
+        lore:
+          - "&7Ignites targets with every strike."
+      ingredients:
+        - BLAZE_ROD
+        - BLAZE_POWDER
+        - REDSTONE
+      abilities:
+        - "INFLICTDAMAGEEVENT====execute at {name} run data merge entity @e[x={x},y={y},z={z},limit=1,sort=nearest,name=!{name}] {Fire:60}====100====10000"
+
+    speedBoots:
+      type: shapeless
+      result:
+        material: LEATHER_BOOTS
+        amount: 1
+        customModelData: 109
+        name: "&eBoots of Swiftness"
+        lore:
+          - "&7Grants a significant speed boost."
+      ingredients:
+        - LEATHER_BOOTS
+        - FEATHER
+        - SUGAR
+      abilities:
+        - "CUSTOMABILITY====LEATHER_BOOTS====effect give {name} minecraft:speed 10 2 true====100====1000====SELF====ALL====WEARINGARMOR"
+
+    nightVisionGoggles:
+      type: shapeless
+      result:
+        material: IRON_HELMET
+        amount: 1
+        customModelData: 110
+        name: "&fNight Vision Goggles"
+        lore:
+          - "&7See clearly in complete darkness."
+      ingredients:
+        - IRON_HELMET
+        - GLOWSTONE_DUST
+        - GOLDEN_CARROT
+      abilities:
+        - "CUSTOMABILITY====IRON_HELMET====effect give {name} minecraft:night_vision 60 0 true====100====1000====SELF====ALL====WEARINGARMOR"

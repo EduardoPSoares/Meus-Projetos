@@ -1,0 +1,5 @@
+me\ray\midgard\modules\economy\command\EconomyAdminCommandTest$TabCompleteTests.class
+me\ray\midgard\modules\economy\command\EconomyAdminCommandTest$ParseAmountTests.class
+me\ray\midgard\modules\economy\command\EconomyCommandTest.class
+me\ray\midgard\modules\economy\manager\PouchManagerSessionTest.class
+me\ray\midgard\modules\economy\command\EconomyAdminCommandTest.class

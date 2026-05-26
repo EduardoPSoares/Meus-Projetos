@@ -1,0 +1,83 @@
+name: "<gold>ʀᴇɴᴏᴠᴀʀ</gold>"
+mythic-skill: "Renovar"
+spell-type: COMMON
+
+cooldown:
+  base: 10.0
+  per-level: -0.3
+mana:
+  base: 25.0
+  per-level: -0.6
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Clerigo"
+  level: 10
+
+icon:
+  material: GOLDEN_CARROT
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></gold>"
+  - ""
+  - "<gray>ᴀᴘʟɪᴄᴀ ᴜᴍ ᴇꜰᴇɪᴛᴏ ᴅᴇ ʀᴇɴᴏᴠᴀᴄᴀᴏ</gray>"
+  - "<gray>ǫᴜᴇ ᴄᴜʀᴀ ᴏ ᴀʟᴠᴏ ᴄᴏɴᴛɪɴᴜᴀᴍᴇɴᴛᴇ</gray>"
+  - "<gray>ᴅᴜʀᴀɴᴛᴇ ᴀʟɢᴜɴs sᴇɢᴜɴᴅᴏs.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴄᴜʀᴀ ᴘᴏʀ sᴇɢᴜɴᴅᴏ:<green>{heal_per_sec}</green>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<gold>{duration}s</gold>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴄʟᴇʀɪɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>10</yellow>"
+
+variables:
+  heal_per_sec:
+    base: 5.0
+    per-level: 2.0
+  duration:
+    base: 5.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "renovar_pulse"
+    mechanic-override: "RenovarMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "renovar_bloom"
+    mechanic-override: "RenovarMk3"
+    stat-bonus:
+      vitality: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 3
+    vitality: 2
+
+sounds:
+  cast-start:
+    sound: "block.beacon.ambient"
+    volume: 0.8
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.player.levelup"
+    volume: 0.6
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

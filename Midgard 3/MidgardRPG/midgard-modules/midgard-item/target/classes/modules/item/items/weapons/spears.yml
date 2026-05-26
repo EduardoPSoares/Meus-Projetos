@@ -1,0 +1,136 @@
+lanca_ferro:
+  base:
+    material: STICK
+    name: "<white>ʟᴀɴᴄᴀ ᴅᴇ ꜰᴇʀʀᴏ</white>"
+    tier: COMMON
+    type: SPEAR
+    description:
+    - "<gray>ᴜᴍᴀ ʟᴀɴᴄᴀ sɪᴍᴘʟᴇs ᴄᴏᴍ ᴘᴏɴᴛᴀ ᴅᴇ ꜰᴇʀʀᴏ,</gray>"
+    - "<gray>ᴏꜰᴇʀᴇᴄᴇ ᴀʟᴄᴀɴᴄᴇ ᴇ ᴠᴇʀsᴀᴛɪʟɪᴅᴀᴅᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 6
+    dexterity: 2
+    strength: 1
+    crafting:
+      enabled: true
+      recipes:
+        craft_lanca_ferro:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_ferro"
+            4: "STICK"
+            7: "STICK"
+
+lanca_imperial:
+  base:
+    material: STICK
+    name: "<green>ʟᴀɴᴄᴀ ɪᴍᴘᴇʀɪᴀʟ</green>"
+    tier: UNCOMMON
+    type: SPEAR
+    description:
+    - "<gray>ᴀ ʟᴀɴᴄᴀ ᴅᴀs ʟᴇɢɪᴏᴇs ɪᴍᴘᴇʀɪᴀɪs,</gray>"
+    - "<gray>ᴅɪsᴄɪᴘʟɪɴᴀ ᴇ ᴘʀᴇᴄɪsᴀᴏ ᴇᴍ ᴄᴀᴅᴀ ɪɴᴠᴇsᴛɪᴅᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 11
+    dexterity: 4
+    strength: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_lanca_imperial:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_aco"
+            4: "midgard:lingote_aco"
+            7: "STICK"
+
+lanca_draconiana:
+  base:
+    material: STICK
+    name: "<blue>ʟᴀɴᴄᴀ ᴅʀᴀᴄᴏɴɪᴀɴᴀ</blue>"
+    tier: RARE
+    type: SPEAR
+    description:
+    - "<gray>ꜰᴏʀᴊᴀᴅᴀ ᴄᴏᴍ ᴇsᴄᴀᴍᴀs ᴅᴇ ᴅʀᴀɢᴀᴏ,</gray>"
+    - "<gray>sᴜᴀ ᴘᴏɴᴛᴀ ǫᴜᴇɪᴍᴀ ᴄᴏᴍ ꜰᴏɢᴏ ᴅʀᴀᴄᴏɴɪᴄᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 18
+    dexterity: 7
+    strength: 5
+    fire-damage: 5
+    crafting:
+      enabled: true
+      recipes:
+        craft_lanca_draconiana:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:lingote_mithril"
+            4: "midgard:essencia_fogo"
+            7: "STICK"
+
+gungnir:
+  base:
+    material: STICK
+    name: "<gold>ɢᴜɴɢɴɪʀ</gold>"
+    tier: LEGENDARY
+    type: SPEAR
+    description:
+    - "<gray>ᴀ ʟᴀɴᴄᴀ ᴅᴏ ᴘᴀɪ ᴅᴏs ᴅᴇᴜsᴇs,</gray>"
+    - "<gray>ᴊᴀᴍᴀɪs ᴇʀʀᴀ sᴇᴜ ᴀʟᴠᴏ ᴇ ʙʀɪʟʜᴀ ᴄᴏᴍ ʟᴜᴢ ᴅɪᴠɪɴᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 44
+    dexterity: 15
+    strength: 12
+    critical-strike-chance: 10
+    light-damage: 14
+    armor-penetration: 8
+    required-level: 52
+
+lanca_cavalaria:
+  base:
+    material: STICK
+    name: "<green>ʟᴀɴᴄᴀ ᴅᴇ ᴄᴀᴠᴀʟᴀʀɪᴀ</green>"
+    tier: UNCOMMON
+    type: LANCE
+    description:
+    - "<gray>ᴜᴍᴀ ʟᴀɴᴄᴀ ʟᴏɴɢᴀ ᴅᴇ ᴄᴀᴠᴀʟᴀʀɪᴀ,</gray>"
+    - "<gray>ᴅᴇᴠᴀsᴛᴀᴅᴏʀᴀ ᴇᴍ ᴄᴀʀɢᴀs ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ.</gray>"
+    revision-id: 1
+    attack-damage: 13
+    strength: 5
+    movement-speed: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_lanca_cavalaria:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            0: "midgard:lingote_aco"
+            1: "midgard:lingote_aco"
+            4: "STICK"
+            7: "STICK"
+
+lanca_cavalaria_real:
+  base:
+    material: STICK
+    name: "<purple>ʟᴀɴᴄᴀ ᴅᴇ ᴄᴀᴠᴀʟᴀʀɪᴀ ʀᴇᴀʟ</purple>"
+    tier: EPIC
+    type: LANCE
+    description:
+    - "<gray>ᴀ ʟᴀɴᴄᴀ ᴅᴀ ᴄᴀᴠᴀʟᴀʀɪᴀ ʀᴇᴀʟ,</gray>"
+    - "<gray>sɪᴍʙᴏʟᴏ ᴅᴇ ɴᴏʙʀᴇᴢᴀ ᴇ ᴘᴏᴅᴇʀ ᴍɪʟɪᴛᴀʀ.</gray>"
+    revision-id: 1
+    attack-damage: 30
+    strength: 12
+    dexterity: 8
+    movement-speed: 5
+    armor-penetration: 6
+    required-level: 38

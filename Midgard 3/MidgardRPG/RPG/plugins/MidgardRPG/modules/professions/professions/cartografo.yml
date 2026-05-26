@@ -1,0 +1,90 @@
+# ============================================
+# CARTÓGRAFO - Definição e Recompensas
+# ============================================
+
+definition:
+  menu-icon: FILLED_MAP
+  gradient: "<gradient:#facc15:#f59e0b>"
+  description: "Explore áreas, crie mapas e descubra regiões para ganhar XP."
+  bonuses:
+    - "<green>▸ Alcance de exploração</green>"
+    - "<green>▸ Precisão de mapas</green>"
+    - "<green>▸ XP de descoberta</green>"
+    - "<green>▸ Eficiência de navegação</green>"
+  xp-source-icon: COMPASS
+  extra-button-icon: RECOVERY_COMPASS
+  extra-button-name: "<yellow>Diário do Explorador"
+  extra-button-lore:
+    - "<gray>Acesse seus registros de viagem"
+    - "<gray>e mapas descobertos."
+
+rewards:
+  1:
+    name: "Aprendiz Explorador"
+    bonuses:
+      - "+2% alcance de exploração"
+  5:
+    bonuses:
+      - "+5% alcance de exploração"
+      - "+3% XP de descoberta"
+  10:
+    name: "Cartógrafo"
+    bonuses:
+      - "+10% alcance de exploração"
+    ability: "Visão Territorial"
+    ability-desc: "Mapa revela mais área ao explorar."
+  25:
+    name: "Explorador"
+    bonuses:
+      - "+5% precisão de mapas"
+    ability: "Rota Precisa"
+    ability-desc: "Mostra caminho mais curto para destino."
+  50:
+    name: "Mestre Explorador"
+    bonuses:
+      - "+30% alcance de exploração"
+    ability: "Reconhecimento Avançado"
+    ability-desc: "Detecta estruturas e dungeons próximas."
+  75:
+    name: "Grão-Mestre Explorador"
+    bonuses:
+      - "+10% XP de descoberta"
+    perks:
+      - "Velocidade de viagem +5%"
+  100:
+    name: "Lenda da Exploração"
+    bonuses:
+      - "+50% alcance de exploração"
+    ability: "Mestre da Exploração"
+    ability-desc: "Revela todo o mapa do bioma atual."
+    perks:
+      - "Título: Lenda da Exploração"
+
+# ============================================
+# FONTES DE XP
+# ============================================
+# craft: XP ao criar mapas e instrumentos de navegação
+# Nota: XP de exploração será adicionado com o sistema de descoberta
+xp-config:
+  craft:
+    MAP: 10.0
+    PAPER: 2.0
+    COMPASS: 8.0
+    CARTOGRAPHY_TABLE: 15.0
+    ITEM_FRAME: 3.0
+    SPYGLASS: 10.0
+
+# ============================================
+# PENALIDADES PARA NÃO-CARTÓGRAFOS
+# ============================================
+# O cartógrafo não possui penalidades ativas por padrão,
+# pois seus crafts são simples e não impactam o gameplay.
+# Habilite se desejar.
+penalties:
+  enabled: false
+  show-message: true
+  affected-materials: []
+
+  # Penalidade ao craftar mapas (desabilitada por padrão)
+  craft:
+    fail-chance: 0.10          # 10% de chance de falhar

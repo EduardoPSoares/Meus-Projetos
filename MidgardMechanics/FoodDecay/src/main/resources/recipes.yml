@@ -1,0 +1,192 @@
+# ============================================================
+#  FoodDecay — Receitas Multibloco
+#  Receitas configuráveis para cada estrutura de processamento
+# ============================================================
+#
+# Formato de receita:
+#   input:
+#     material: COOKED_BEEF          # Material vanilla
+#     # OU para MMOItems:
+#     # mmoitems: "CONSUMABLE:carne_bovina"
+#     custom-model-data: 0           # 0 = qualquer model data (opcional)
+#   output:
+#     material: COOKED_BEEF          # Material do resultado
+#     # OU para MMOItems:
+#     # mmoitems: "CONSUMABLE:carne_seca"
+#     name: "&6Carne Seca"           # Nome customizado (opcional)
+#     lore:                           # Lore customizada (opcional)
+#       - "&7Carne desidratada ao sol"
+#     custom-model-data: 10001       # Model customizado (opcional)
+#   spoiled:                          # Configuração quando expira (opcional)
+#     custom-model-data: 10002       # Model quando estragado
+#     name: "&cCarne Seca Estragada" # Nome quando estragado
+#   time-minutes: 30                 # Tempo de processamento
+#   trait: DRIED                     # Trait de conservação (opcional)
+#   requires-trait: SALTED           # Requer trait prévio (opcional)
+#   requires-recipe: carne-salgada   # Requer receita prévia descoberta (opcional)
+#   extra-inputs:                    # Ingredientes extras consumidos do inventário (opcional)
+#     - material: BREAD
+#       amount: 1
+#     - material: COOKED_BEEF
+#       amount: 1
+#   nutrition-groups:                # Override manual dos grupos nutricionais (opcional)
+#     - GRAIN
+#     - PROTEIN
+
+secador:
+  carne-seca:
+    input:
+      material: COOKED_BEEF
+    output:
+      material: COOKED_BEEF
+      name: "&6Carne Seca"
+      lore:
+        - "&7Carne desidratada ao sol"
+        - "&7Conservação natural"
+      custom-model-data: 0
+    spoiled:
+      custom-model-data: 0
+      name: "&cCarne Seca Estragada"
+    time-minutes: 30
+    trait: DRIED
+  frango-seco:
+    input:
+      material: COOKED_CHICKEN
+    output:
+      material: COOKED_CHICKEN
+      name: "&6Frango Desidratado"
+      lore:
+        - "&7Frango seco ao sol"
+      custom-model-data: 0
+    time-minutes: 25
+    trait: DRIED
+  peixe-seco:
+    input:
+      material: COOKED_COD
+    output:
+      material: COOKED_COD
+      name: "&6Bacalhau Seco"
+      lore:
+        - "&7Peixe desidratado"
+      custom-model-data: 0
+    time-minutes: 20
+    trait: DRIED
+
+defumeiro:
+  carne-defumada:
+    input:
+      material: COOKED_BEEF
+    output:
+      material: COOKED_BEEF
+      name: "&6Carne Defumada"
+      lore:
+        - "&7Defumada lentamente"
+      custom-model-data: 0
+    time-minutes: 20
+    trait: SMOKED
+  salmao-defumado:
+    input:
+      material: COOKED_SALMON
+    output:
+      material: COOKED_SALMON
+      name: "&6Salmão Defumado"
+      lore:
+        - "&7Salmão defumado artesanalmente"
+      custom-model-data: 0
+    time-minutes: 15
+    trait: SMOKED
+  porco-defumado:
+    input:
+      material: COOKED_PORKCHOP
+    output:
+      material: COOKED_PORKCHOP
+      name: "&6Bacon Defumado"
+      lore:
+        - "&7Porco defumado e suculento"
+      custom-model-data: 0
+    time-minutes: 20
+    trait: SMOKED
+
+barril-de-sal:
+  carne-salgada:
+    input:
+      material: COOKED_BEEF
+    output:
+      material: COOKED_BEEF
+      name: "&eCarne Salgada"
+      lore:
+        - "&7Conservada em sal"
+      custom-model-data: 0
+    time-minutes: 15
+    trait: SALTED
+  peixe-salgado:
+    input:
+      material: COOKED_COD
+    output:
+      material: COOKED_COD
+      name: "&eBacalhau Salgado"
+      lore:
+        - "&7Salgado e curado"
+      custom-model-data: 0
+    time-minutes: 10
+    trait: SALTED
+
+tina-de-conserva:
+  cenoura-em-conserva:
+    input:
+      material: CARROT
+    output:
+      material: CARROT
+      name: "&2Cenoura em Conserva"
+      lore:
+        - "&7Conservada em vinagre"
+      custom-model-data: 0
+    time-minutes: 10
+    trait: PICKLED
+  batata-em-conserva:
+    input:
+      material: POTATO
+    output:
+      material: POTATO
+      name: "&2Batata em Conserva"
+      lore:
+        - "&7Conservada em salmoura"
+      custom-model-data: 0
+    time-minutes: 10
+    trait: PICKLED
+  beterraba-em-conserva:
+    input:
+      material: BEETROOT
+    output:
+      material: BEETROOT
+      name: "&2Beterraba em Conserva"
+      lore:
+        - "&7Conservada em vinagre"
+      custom-model-data: 0
+    time-minutes: 12
+    trait: PICKLED
+
+prensa-de-selagem:
+  carne-selada:
+    input:
+      material: COOKED_BEEF
+    output:
+      material: COOKED_BEEF
+      name: "&dCarne Selada"
+      lore:
+        - "&7Selada com cera de abelha"
+        - "&7Preservação máxima"
+      custom-model-data: 0
+    time-minutes: 15
+    trait: PRESERVED
+  pao-selado:
+    input:
+      material: BREAD
+    output:
+      material: BREAD
+      name: "&dPão Selado"
+      lore:
+        - "&7Selado hermeticamente"
+      custom-model-data: 0
+    time-minutes: 10
+    trait: PRESERVED

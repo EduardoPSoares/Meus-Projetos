@@ -1,0 +1,77 @@
+{
+  "name": "warface-survivor-launcher",
+  "version": "1.0.10",
+  "description": "Warface Survivor Launcher",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "admin": "electron AdminPanel",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win"
+  },
+  "keywords": [
+    "warface",
+    "launcher",
+    "game"
+  ],
+  "author": "Warface Survivor Team",
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.5.10"
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.warface.survival.launcher",
+    "productName": "Warface Survivor Launcher",
+    "asar": true,
+    "compression": "maximum",
+    "electronLanguages": [
+      "pt-BR",
+      "en-US"
+    ],
+    "files": [
+      "main.js",
+      "main/**/*",
+      "preload-main.js",
+      "preload-account.js",
+      "renderer.js",
+      "renderer/**/*",
+      "config.js",
+      "index.html",
+      "styles.css",
+      "account.html",
+      "account-renderer.js",
+      "account-styles.css",
+      "download-cdn-game.js",
+      "icon.ico",
+      "img/**/*",
+      "package.json",
+      "node_modules/adm-zip/**/*"
+    ],
+    "extraMetadata": {
+      "main": "main.js"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon.ico",
+      "sign": null
+    },
+    "nsis": {
+      "artifactName": "WarfaceSurvivorSetup.exe",
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Warface Survivor Launcher"
+    }
+  }
+}
+
+

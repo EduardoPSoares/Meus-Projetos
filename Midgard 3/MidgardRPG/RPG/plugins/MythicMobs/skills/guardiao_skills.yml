@@ -1,0 +1,1046 @@
+# ══════════════════════════════════════════════════════════════════
+#  MIDGARD GUARDIÃO (GUARDIAN/TANK) SKILLS — MythicMobs Skill Definitions
+#  Classe defensiva focada em proteção, escudos e suporte de equipe.
+#  Todas as skills usam variáveis injetadas pelo SpellManager.
+#  Variáveis disponíveis:  <skill.var.NOME>
+#  Minecraft 1.21.1 / Folia / MythicMobs
+#  Color Theme: Gold (#ffcc00), White (#ffffff), Blue (#4488ff), Silver (#c0c0c0)
+# ══════════════════════════════════════════════════════════════════
+
+
+# ─────────────────────────────────────────────
+#  1. ESCUDO DIVINO (PASSIVA) — Aumento passivo de chance de bloqueio
+#     Variables: block_chance
+#     Milestones: lvl3=divine_glow, lvl5=divine_aura
+# ─────────────────────────────────────────────
+
+EscudoDivino:
+  Skills:
+  - skill{s=EscudoDivino_Cast} @self
+
+EscudoDivino_Cast:
+  Skills:
+  - potion{type=RESISTANCE;duration=999999;level=0;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=20;hS=0.4;vS=0.8;y=1.0;size=1.2;speed=0} @self
+  - particles{p=end_rod;amount=10;hS=0.3;vS=0.6;y=1.0;speed=0.02} @self
+  - sound{s=block.amethyst_block.chime;v=0.6;p=1.2} @self
+
+EscudoDivino_Particles:
+  Skills:
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=8;hS=0.3;vS=0.5;y=1.0;size=1.0;speed=0} @self
+  - particles{p=end_rod;amount=4;hS=0.2;vS=0.4;y=1.0;speed=0.01} @self
+
+# === ESCUDO DIVINO MK2 (Milestone lvl 3 — divine_glow) ===
+EscudoDivinoMk2:
+  Skills:
+  - skill{s=EscudoDivinoMk2_Cast} @self
+
+EscudoDivinoMk2_Cast:
+  Skills:
+  - potion{type=RESISTANCE;duration=999999;level=0;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=30;hS=0.5;vS=1.0;y=1.0;size=1.5;speed=0} @self
+  - particles{p=end_rod;amount=15;hS=0.4;vS=0.8;y=1.0;speed=0.03} @self
+  - particles{p=enchant;amount=12;hS=0.4;vS=0.6;y=0.5;speed=0.08} @self
+  # Divine glow orbital
+  - orbital{auraName=divine_glow;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=1.2;points=3;interval=1;duration=999999;oy=1.0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;radius=1.0;points=20;amount=2;hS=0.1;vS=0.1;y=0.1;size=1.2;speed=0} @self
+  - sound{s=block.amethyst_block.chime;v=0.7;p=1.4} @self
+
+# === ESCUDO DIVINO MK3 (Milestone lvl 5 — divine_aura) ===
+EscudoDivinoMk3:
+  Skills:
+  - skill{s=EscudoDivinoMk3_Cast} @self
+
+EscudoDivinoMk3_Cast:
+  Skills:
+  - potion{type=RESISTANCE;duration=999999;level=1;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=45;hS=0.6;vS=1.2;y=1.0;size=1.8;speed=0} @self
+  - particles{p=end_rod;amount=25;hS=0.5;vS=1.0;y=1.0;speed=0.04} @self
+  - particles{p=enchant;amount=18;hS=0.5;vS=0.8;y=0.5;speed=0.1} @self
+  # Divine aura — double orbital
+  - orbital{auraName=divine_aura_inner;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=1.2;points=4;interval=1;duration=999999;oy=1.0} @self
+  - orbital{auraName=divine_aura_outer;bulletType=ITEM;bulletItem=GLOWSTONE_DUST;radius=1.8;points=6;interval=1;duration=999999;oy=0.5} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;radius=1.5;points=28;amount=3;hS=0.1;vS=0.1;y=0.1;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=2.0;points=32;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.0;speed=0} @self
+  - sound{s=block.beacon.ambient;v=0.8;p=1.2} @self
+  - sound{s=block.amethyst_block.chime;v=0.6;p=1.6} @self
+
+
+# ─────────────────────────────────────────────
+#  2. FORTALEZA INTERIOR (PASSIVA) — Fortaleza interior, defesa passiva
+#     Variables: damage_reduction
+#     Milestones: lvl3=fortress_glow, lvl5=fortress_aura
+# ─────────────────────────────────────────────
+
+FortalezaInterior:
+  Skills:
+  - skill{s=FortalezaInterior_Cast} @self
+
+FortalezaInterior_Cast:
+  Skills:
+  - potion{type=RESISTANCE;duration=999999;level=<skill.var.damage_reduction>;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#8c8c8c;amount=15;hS=0.5;vS=0.8;y=0.5;size=1.0;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=8;hS=0.4;vS=0.5;y=0.3;speed=0.03} @self
+  - sound{s=item.armor.equip_iron;v=0.6;p=1.0} @self
+
+FortalezaInterior_Particles:
+  Skills:
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#8c8c8c;amount=6;hS=0.3;vS=0.5;y=0.5;size=0.8;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=3;hS=0.2;vS=0.3;y=0.3;speed=0.01} @self
+
+# === FORTALEZA INTERIOR MK2 (Milestone lvl 3 — fortress_glow) ===
+FortalezaInteriorMk2:
+  Skills:
+  - skill{s=FortalezaInteriorMk2_Cast} @self
+
+FortalezaInteriorMk2_Cast:
+  Skills:
+  - potion{type=RESISTANCE;duration=999999;level=<skill.var.damage_reduction>;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=999999;level=0;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;amount=25;hS=0.6;vS=1.0;y=0.5;size=1.3;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=12;hS=0.5;vS=0.6;y=0.3;speed=0.05} @self
+  - particles{p=enchant;amount=10;hS=0.4;vS=0.6;y=0.5;speed=0.08} @self
+  # Fortress glow orbital
+  - orbital{auraName=fortress_glow;bulletType=ITEM;bulletItem=IRON_NUGGET;radius=1.3;points=4;interval=1;duration=999999;oy=0.8} @self
+  - particlering{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;radius=1.2;points=22;amount=2;hS=0.1;vS=0.1;y=0.1;size=1.0;speed=0} @self
+  - sound{s=item.armor.equip_iron;v=0.8;p=0.8} @self
+  - sound{s=block.anvil.land;v=0.4;p=1.5} @self
+
+# === FORTALEZA INTERIOR MK3 (Milestone lvl 5 — fortress_aura) ===
+FortalezaInteriorMk3:
+  Skills:
+  - skill{s=FortalezaInteriorMk3_Cast} @self
+
+FortalezaInteriorMk3_Cast:
+  Skills:
+  - potion{type=RESISTANCE;duration=999999;level=<skill.var.damage_reduction>;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=999999;level=1;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0;hasParticles=false} @self
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;amount=40;hS=0.7;vS=1.2;y=0.5;size=1.8;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=18;hS=0.6;vS=0.8;y=0.3;speed=0.06} @self
+  - particles{p=block_crack;m=DIAMOND_BLOCK;amount=8;hS=0.4;vS=0.6;y=0.3;speed=0.04} @self
+  - particles{p=end_rod;amount=12;hS=0.5;vS=0.8;y=0.5;speed=0.03} @self
+  # Fortress aura — double orbital
+  - orbital{auraName=fortress_aura_inner;bulletType=ITEM;bulletItem=IRON_NUGGET;radius=1.2;points=4;interval=1;duration=999999;oy=0.8} @self
+  - orbital{auraName=fortress_aura_outer;bulletType=ITEM;bulletItem=DIAMOND;radius=1.8;points=6;interval=1;duration=999999;oy=0.5} @self
+  - particlering{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;radius=1.5;points=28;amount=3;hS=0.1;vS=0.1;y=0.1;size=1.3;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=2.0;points=32;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.0;speed=0} @self
+  - sound{s=item.armor.equip_netherite;v=0.8;p=0.8} @self
+  - sound{s=block.anvil.land;v=0.5;p=1.2} @self
+
+
+# ─────────────────────────────────────────────
+#  3. BLOQUEAR (COMUM) — Bloqueio ativo com escudo de absorção
+#     Variables: damage_blocked
+#     Milestones: lvl3=shield_glow, lvl5=shield_radiance
+# ─────────────────────────────────────────────
+
+Bloquear:
+  Skills:
+  - skill{s=Bloquear_Cast} @self
+
+Bloquear_Cast:
+  Skills:
+  # Shield raise
+  - sound{s=item.shield.block;v=1.2;p=0.8} @self
+  - sound{s=item.armor.equip_iron;v=0.8;p=1.2} @self
+  - midgardShield{a=<skill.var.damage_blocked>;d=60} @self
+  # Shield raise visual
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=25;hS=0.6;vS=1.0;y=0.8;size=1.5;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=12;hS=0.4;vS=0.5;y=0.5;speed=0.05} @self
+  - particles{p=enchant;amount=10;hS=0.3;vS=0.5;y=0.5;speed=0.08} @self
+  # Shield wall effect in front
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;amount=20;hS=0.8;vS=1.2;y=0.8;size=1.8;speed=0} @forward{f=1;lockpitch=true}
+  - particles{p=end_rod;amount=6;hS=0.5;vS=0.8;y=0.8;speed=0.02} @forward{f=1;lockpitch=true}
+
+Bloquear_Block:
+  Skills:
+  # On-block feedback particles
+  - sound{s=item.shield.block;v=1.5;p=1.0} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;amount=15;hS=0.5;vS=0.5;y=0.8;size=1.2;speed=0.05} @forward{f=0.8;lockpitch=true}
+  - particles{p=block_crack;m=IRON_BLOCK;amount=8;hS=0.3;vS=0.3;y=0.5;speed=0.08} @forward{f=0.8;lockpitch=true}
+  - particles{p=electric_spark;amount=6;hS=0.3;vS=0.3;y=0.8;speed=0.05} @forward{f=0.8;lockpitch=true}
+
+# === BLOQUEAR MK2 (Milestone lvl 3 — shield_glow) ===
+BloquearMk2:
+  Skills:
+  - skill{s=BloquearMk2_Cast} @self
+
+BloquearMk2_Cast:
+  Skills:
+  - sound{s=item.shield.block;v=1.4;p=0.7} @self
+  - sound{s=item.armor.equip_iron;v=1.0;p=1.0} @self
+  - sound{s=block.amethyst_block.chime;v=0.6;p=1.5} @self
+  - midgardShield{a=<skill.var.damage_blocked>;d=80} @self
+  - potion{type=RESISTANCE;duration=80;level=0;hasParticles=false} @self
+  # Enhanced shield visual
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=35;hS=0.7;vS=1.2;y=0.8;size=1.8;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=18;hS=0.5;vS=0.6;y=0.5;speed=0.06} @self
+  - particles{p=enchant;amount=15;hS=0.4;vS=0.6;y=0.5;speed=0.1} @self
+  - particles{p=end_rod;amount=10;hS=0.6;vS=1.0;y=0.8;speed=0.03} @self
+  # Glowing shield wall
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;amount=30;hS=1.0;vS=1.5;y=0.8;size=2.0;speed=0} @forward{f=1;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=12;hS=0.6;vS=1.0;y=0.8;size=1.2;speed=0} @forward{f=1;lockpitch=true}
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=0.8;points=16;amount=2;hS=0.1;vS=0.1;y=0.8;size=1.0;speed=0} @forward{f=1;lockpitch=true}
+
+BloquearMk2_Block:
+  Skills:
+  - sound{s=item.shield.block;v=1.8;p=0.9} @self
+  - sound{s=block.amethyst_block.chime;v=0.5;p=1.8} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;amount=25;hS=0.6;vS=0.6;y=0.8;size=1.5;speed=0.06} @forward{f=0.8;lockpitch=true}
+  - particles{p=block_crack;m=IRON_BLOCK;amount=12;hS=0.4;vS=0.4;y=0.5;speed=0.1} @forward{f=0.8;lockpitch=true}
+  - particles{p=electric_spark;amount=10;hS=0.4;vS=0.4;y=0.8;speed=0.08} @forward{f=0.8;lockpitch=true}
+  - particles{p=end_rod;amount=5;hS=0.3;vS=0.5;y=0.8;speed=0.03} @forward{f=0.8;lockpitch=true}
+
+# === BLOQUEAR MK3 (Milestone lvl 5 — shield_radiance) ===
+BloquearMk3:
+  Skills:
+  - skill{s=BloquearMk3_Cast} @self
+
+BloquearMk3_Cast:
+  Skills:
+  - sound{s=item.shield.block;v=1.6;p=0.6} @self
+  - sound{s=item.armor.equip_netherite;v=1.0;p=0.8} @self
+  - sound{s=block.beacon.activate;v=0.8;p=1.5} @self
+  - midgardShield{a=<skill.var.damage_blocked>;d=100} @self
+  - potion{type=RESISTANCE;duration=100;level=1;hasParticles=false} @self
+  # Radiant shield burst
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=50;hS=0.8;vS=1.5;y=0.8;size=2.2;speed=0} @self
+  - particles{p=block_crack;m=DIAMOND_BLOCK;amount=15;hS=0.5;vS=0.7;y=0.5;speed=0.06} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=20;hS=0.6;vS=0.8;y=0.5;speed=0.08} @self
+  - particles{p=end_rod;amount=20;hS=0.7;vS=1.2;y=0.8;speed=0.05} @self
+  - particles{p=enchant;amount=20;hS=0.5;vS=0.8;y=0.5;speed=0.12} @self
+  # Radiant shield dome
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;amount=40;hS=1.2;vS=1.8;y=0.8;size=2.5;speed=0} @forward{f=1;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=20;hS=0.8;vS=1.2;y=0.8;size=1.5;speed=0} @forward{f=1;lockpitch=true}
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.0;points=20;amount=3;hS=0.1;vS=0.1;y=0.3;size=1.2;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#4488ff;radius=1.5;points=24;amount=2;hS=0.1;vS=0.1;y=0.8;size=1.0;speed=0} @self
+  # Shield radiance AoE knockback
+  - throw{velocity=0.5;velocityY=0.2} @EntitiesNearOrigin{r=3}
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=15;hS=0.4;vS=0.3;y=0.8;size=1.0;speed=0} @EntitiesNearOrigin{r=3}
+
+BloquearMk3_Block:
+  Skills:
+  - sound{s=item.shield.block;v=2.0;p=0.8} @self
+  - sound{s=block.beacon.activate;v=0.5;p=2.0} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;amount=35;hS=0.8;vS=0.8;y=0.8;size=2.0;speed=0.08} @forward{f=0.8;lockpitch=true}
+  - particles{p=block_crack;m=DIAMOND_BLOCK;amount=10;hS=0.4;vS=0.4;y=0.5;speed=0.1} @forward{f=0.8;lockpitch=true}
+  - particles{p=electric_spark;amount=15;hS=0.5;vS=0.5;y=0.8;speed=0.1} @forward{f=0.8;lockpitch=true}
+  - particles{p=end_rod;amount=10;hS=0.4;vS=0.6;y=0.8;speed=0.05} @forward{f=0.8;lockpitch=true}
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.5;points=20;amount=2;hS=0.1;vS=0.1;y=0.8;size=1.5;speed=0} @self
+
+
+# ─────────────────────────────────────────────
+#  4. PROTEGER ALIADO (COMUM) — Protege aliado, redireciona dano
+#     Variables: absorption, duration
+#     Milestones: lvl3=protect_glow, lvl5=protect_barrier
+# ─────────────────────────────────────────────
+
+ProtegerAliado:
+  Skills:
+  - skill{s=ProtegerAliado_Cast} @self
+
+ProtegerAliado_Cast:
+  Skills:
+  # Cast sound
+  - sound{s=block.beacon.activate;v=1.0;p=1.5} @self
+  - sound{s=item.armor.equip_gold;v=0.8;p=1.2} @self
+  # Shield on target ally
+  - midgardShield{a=<skill.var.absorption>;d=<skill.var.duration>} @target
+  # Golden beam to ally
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=15;hS=0.2;vS=0.2;y=1.0;size=1.2;speed=0.1;repeat=5;repeati=2} @target
+  - particles{p=end_rod;amount=6;hS=0.15;vS=0.15;y=1.0;speed=0.08;repeat=5;repeati=2} @target
+  # Caster visual
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;amount=20;hS=0.4;vS=0.8;y=1.0;size=1.3;speed=0} @self
+  - particles{p=enchant;amount=10;hS=0.3;vS=0.5;y=0.5;speed=0.08} @self
+  # Target visual — golden shield
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=25;hS=0.5;vS=1.0;y=0.8;size=1.5;speed=0} @target
+  - particles{p=end_rod;amount=8;hS=0.4;vS=0.8;y=0.8;speed=0.03} @target
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=0.8;points=16;amount=2;hS=0.1;vS=0.1;y=0.1;size=1.0;speed=0} @target
+
+ProtegerAliado_Link:
+  Skills:
+  # Persistent link visual between caster and target
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;amount=5;hS=0.1;vS=0.1;y=1.0;size=0.8;speed=0} @target
+  - particles{p=end_rod;amount=2;hS=0.1;vS=0.1;y=1.0;speed=0.01} @target
+
+# === PROTEGER ALIADO MK2 (Milestone lvl 3 — protect_glow) ===
+ProtegerAliadoMk2:
+  Skills:
+  - skill{s=ProtegerAliadoMk2_Cast} @self
+
+ProtegerAliadoMk2_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.2;p=1.3} @self
+  - sound{s=item.armor.equip_gold;v=1.0;p=1.0} @self
+  - sound{s=block.amethyst_block.chime;v=0.6;p=1.5} @self
+  # Shield + minor resistance on target
+  - midgardShield{a=<skill.var.absorption>;d=<skill.var.duration>} @target
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @target
+  # Enhanced golden beam
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=20;hS=0.25;vS=0.25;y=1.0;size=1.5;speed=0.12;repeat=5;repeati=2} @target
+  - particles{p=end_rod;amount=10;hS=0.2;vS=0.2;y=1.0;speed=0.1;repeat=5;repeati=2} @target
+  # Caster glow
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;amount=30;hS=0.5;vS=1.0;y=1.0;size=1.5;speed=0} @self
+  - particles{p=enchant;amount=15;hS=0.4;vS=0.6;y=0.5;speed=0.1} @self
+  - particles{p=end_rod;amount=8;hS=0.4;vS=0.8;y=1.0;speed=0.03} @self
+  # Target — glowing golden shield
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=35;hS=0.6;vS=1.2;y=0.8;size=1.8;speed=0} @target
+  - particles{p=end_rod;amount=12;hS=0.5;vS=1.0;y=0.8;speed=0.04} @target
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.0;points=20;amount=3;hS=0.1;vS=0.1;y=0.1;size=1.2;speed=0} @target
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=1.0;points=16;amount=2;hS=0.1;vS=0.1;y=1.5;size=0.8;speed=0} @target
+
+# === PROTEGER ALIADO MK3 (Milestone lvl 5 — protect_barrier) ===
+ProtegerAliadoMk3:
+  Skills:
+  - skill{s=ProtegerAliadoMk3_Cast} @self
+
+ProtegerAliadoMk3_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.5;p=1.0} @self
+  - sound{s=item.armor.equip_netherite;v=1.0;p=0.8} @self
+  - sound{s=block.beacon.power_select;v=0.8;p=1.5} @self
+  # Strong shield + resistance + regeneration on target
+  - midgardShield{a=<skill.var.absorption>;d=<skill.var.duration>} @target
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=1;hasParticles=false} @target
+  - potion{type=REGENERATION;duration=<skill.var.duration>;level=0;hasParticles=false} @target
+  # Brilliant beam
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=25;hS=0.3;vS=0.3;y=1.0;size=1.8;speed=0.15;repeat=5;repeati=2} @target
+  - particles{p=end_rod;amount=15;hS=0.25;vS=0.25;y=1.0;speed=0.12;repeat=5;repeati=2} @target
+  # Caster — divine protection aura
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;amount=40;hS=0.6;vS=1.2;y=1.0;size=2.0;speed=0} @self
+  - particles{p=end_rod;amount=15;hS=0.5;vS=1.0;y=1.0;speed=0.05} @self
+  - particles{p=enchant;amount=20;hS=0.5;vS=0.8;y=0.5;speed=0.12} @self
+  # Target — full barrier dome
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=50;hS=0.8;vS=1.5;y=0.8;size=2.2;speed=0} @target
+  - particles{p=end_rod;amount=20;hS=0.6;vS=1.2;y=0.8;speed=0.05} @target
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.2;points=24;amount=4;hS=0.1;vS=0.1;y=0.1;size=1.5;speed=0} @target
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=1.2;points=20;amount=3;hS=0.1;vS=0.1;y=1.0;size=1.0;speed=0} @target
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=1.2;points=18;amount=2;hS=0.1;vS=0.1;y=2.0;size=0.8;speed=0} @target
+  # Barrier orbital on target
+  - orbital{auraName=protect_barrier;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=1.2;points=4;interval=1;duration=<skill.var.duration>;oy=1.0} @target
+
+
+# ─────────────────────────────────────────────
+#  5. CONTRA-ATAQUE (COMUM) — Reflexão de dano após bloqueio
+#     Variables: damage_reflected
+#     Milestones: lvl3=counter_flash, lvl5=counter_shield
+# ─────────────────────────────────────────────
+
+ContraAtaque:
+  Skills:
+  - skill{s=ContraAtaque_Cast} @self
+
+ContraAtaque_Cast:
+  Skills:
+  # Counter-attack stance
+  - sound{s=item.shield.block;v=1.0;p=1.5} @self
+  - sound{s=entity.player.attack.sweep;v=1.2;p=1.0} @self
+  # Flash of light
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;amount=20;hS=0.5;vS=1.0;y=0.8;size=1.5;speed=0} @self
+  - particles{p=flash;amount=1;hS=0;vS=0;y=1.0;speed=0} @self
+  - delay 2
+  # Counter strike
+  - skill{s=ContraAtaque_Strike} @self
+
+ContraAtaque_Strike:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.5;p=0.8} @self
+  # Reflected damage
+  - midgardDamage{a=<skill.var.damage_reflected>} @target
+  - throw{velocity=0.6;velocityY=0.2} @target
+  # Sweep visual
+  - particles{p=sweep_attack;amount=5;hS=0.3;vS=0.2;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=20;hS=0.8;vS=0.5;y=0.8;size=1.5;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=electric_spark;amount=8;hS=0.5;vS=0.3;y=0.8;speed=0.08} @forward{f=1.5;lockpitch=true}
+  - particles{p=enchanted_hit;amount=6;hS=0.3;vS=0.3;y=0.8;speed=0.05} @target
+
+# === CONTRA-ATAQUE MK2 (Milestone lvl 3 — counter_flash) ===
+ContraAtaqueMk2:
+  Skills:
+  - skill{s=ContraAtaqueMk2_Cast} @self
+
+ContraAtaqueMk2_Cast:
+  Skills:
+  - sound{s=item.shield.block;v=1.2;p=1.3} @self
+  - sound{s=entity.player.attack.sweep;v=1.4;p=0.9} @self
+  - sound{s=block.amethyst_block.chime;v=0.7;p=1.8} @self
+  # Brilliant counter flash
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;amount=30;hS=0.6;vS=1.2;y=0.8;size=2.0;speed=0} @self
+  - particles{p=flash;amount=1;hS=0;vS=0;y=1.0;speed=0} @self
+  - particles{p=end_rod;amount=10;hS=0.4;vS=0.8;y=0.8;speed=0.05} @self
+  - delay 2
+  - skill{s=ContraAtaqueMk2_Strike} @self
+
+ContraAtaqueMk2_Strike:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.8;p=0.7} @self
+  - sound{s=entity.firework_rocket.blast;v=0.8;p=1.2} @self
+  # Enhanced reflected damage
+  - midgardDamage{a=<skill.var.damage_reflected>} @target
+  - throw{velocity=1.0;velocityY=0.3} @target
+  - potion{type=SLOWNESS;duration=40;level=0;hasParticles=false} @target
+  # Counter flash visual
+  - particles{p=sweep_attack;amount=8;hS=0.5;vS=0.3;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=30;hS=1.0;vS=0.6;y=0.8;size=2.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=electric_spark;amount=15;hS=0.6;vS=0.4;y=0.8;speed=0.1} @forward{f=2;lockpitch=true}
+  - particles{p=firework;amount=10;hS=0.4;vS=0.4;y=0.8;speed=0.08} @forward{f=2;lockpitch=true}
+  - particles{p=enchanted_hit;amount=10;hS=0.4;vS=0.4;y=0.8;speed=0.06} @target
+  # Light burst ring
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.5;points=20;amount=3;hS=0.1;vS=0.1;y=0.8;size=1.5;speed=0} @self
+
+# === CONTRA-ATAQUE MK3 (Milestone lvl 5 — counter_shield) ===
+ContraAtaqueMk3:
+  Skills:
+  - skill{s=ContraAtaqueMk3_Cast} @self
+
+ContraAtaqueMk3_Cast:
+  Skills:
+  - sound{s=item.shield.block;v=1.5;p=1.0} @self
+  - sound{s=entity.player.attack.sweep;v=1.6;p=0.8} @self
+  - sound{s=block.beacon.activate;v=0.8;p=1.8} @self
+  # Divine counter stance — radiating light
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;amount=45;hS=0.8;vS=1.5;y=0.8;size=2.5;speed=0} @self
+  - particles{p=flash;amount=1;hS=0;vS=0;y=1.0;speed=0} @self
+  - particles{p=end_rod;amount=18;hS=0.6;vS=1.0;y=0.8;speed=0.06} @self
+  - particles{p=enchant;amount=15;hS=0.5;vS=0.8;y=0.5;speed=0.1} @self
+  - midgardShield{a=<skill.var.damage_reflected>;d=40} @self
+  - delay 2
+  - skill{s=ContraAtaqueMk3_Strike} @self
+
+ContraAtaqueMk3_Strike:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.6} @self
+  - sound{s=entity.firework_rocket.blast;v=1.0;p=1.0} @self
+  - sound{s=entity.lightning_bolt.thunder;v=0.5;p=1.5} @self
+  # Devastating counter
+  - midgardDamage{a=<skill.var.damage_reflected>} @target
+  - throw{velocity=1.5;velocityY=0.5} @target
+  - potion{type=SLOWNESS;duration=60;level=1;hasParticles=false} @target
+  - potion{type=WEAKNESS;duration=60;level=0;hasParticles=false} @target
+  # Counter shield shockwave
+  - particles{p=sweep_attack;amount=12;hS=0.8;vS=0.4;y=1.0;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=45;hS=1.5;vS=0.8;y=0.8;size=2.5;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=electric_spark;amount=20;hS=0.8;vS=0.5;y=0.8;speed=0.12} @forward{f=2.5;lockpitch=true}
+  - particles{p=firework;amount=15;hS=0.5;vS=0.5;y=0.8;speed=0.1} @forward{f=2.5;lockpitch=true}
+  - particles{p=enchanted_hit;amount=15;hS=0.5;vS=0.5;y=0.8;speed=0.08} @target
+  - particles{p=end_rod;amount=12;hS=0.5;vS=0.8;y=0.8;speed=0.05} @target
+  # Counter ring explosion
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.5;points=24;amount=4;hS=0.1;vS=0.1;y=0.8;size=2.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#4488ff;radius=2.5;points=28;amount=3;hS=0.1;vS=0.1;y=0.8;size=1.5;speed=0;delay=1} @self
+  # AoE minor counter damage
+  - midgardDamage{a=<skill.var.damage_reflected> * 0.3} @EntitiesNearOrigin{r=3}
+
+
+# ─────────────────────────────────────────────
+#  6. ESCUDO SAGRADO (COMUM) — Escudo sagrado de absorção de dano
+#     Variables: shield_amount, duration
+#     Milestones: lvl3=sacred_glow, lvl5=sacred_barrier
+# ─────────────────────────────────────────────
+
+EscudoSagrado:
+  Skills:
+  - skill{s=EscudoSagrado_Cast} @self
+
+EscudoSagrado_Cast:
+  Skills:
+  # Sacred shield activation
+  - sound{s=block.beacon.activate;v=1.0;p=1.2} @self
+  - sound{s=item.armor.equip_gold;v=1.0;p=0.8} @self
+  # Apply absorption shield
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=1;hasParticles=false} @self
+  # Golden dome visual
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=35;hS=0.8;vS=1.5;y=1.0;size=1.8;speed=0} @self
+  - particles{p=end_rod;amount=12;hS=0.5;vS=1.0;y=1.0;speed=0.04} @self
+  - particles{p=enchant;amount=15;hS=0.5;vS=0.8;y=0.5;speed=0.1} @self
+  # Dome ring
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.5;points=24;amount=3;hS=0.1;vS=0.1;y=0.1;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=1.2;points=20;amount=2;hS=0.1;vS=0.1;y=1.5;size=1.0;speed=0} @self
+
+EscudoSagrado_Pulse:
+  Skills:
+  # Persistent pulse effect while shield is active
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=10;hS=0.6;vS=0.8;y=0.8;size=1.0;speed=0} @self
+  - particles{p=end_rod;amount=4;hS=0.4;vS=0.6;y=0.8;speed=0.02} @self
+
+# === ESCUDO SAGRADO MK2 (Milestone lvl 3 — sacred_glow) ===
+EscudoSagradoMk2:
+  Skills:
+  - skill{s=EscudoSagradoMk2_Cast} @self
+
+EscudoSagradoMk2_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.2;p=1.0} @self
+  - sound{s=item.armor.equip_gold;v=1.2;p=0.7} @self
+  - sound{s=block.amethyst_block.chime;v=0.8;p=1.3} @self
+  # Enhanced sacred shield
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  # Glowing sacred dome
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=50;hS=1.0;vS=2.0;y=1.0;size=2.2;speed=0} @self
+  - particles{p=end_rod;amount=20;hS=0.6;vS=1.2;y=1.0;speed=0.05} @self
+  - particles{p=enchant;amount=20;hS=0.6;vS=1.0;y=0.5;speed=0.12} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=15;hS=0.5;vS=0.8;y=1.0;size=1.2;speed=0} @self
+  # Sacred dome rings
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.8;points=28;amount=4;hS=0.1;vS=0.1;y=0.1;size=1.8;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=1.5;points=24;amount=3;hS=0.1;vS=0.1;y=1.0;size=1.2;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=1.2;points=20;amount=2;hS=0.1;vS=0.1;y=2.0;size=0.8;speed=0} @self
+  # Sacred orbital
+  - orbital{auraName=sacred_glow;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=1.5;points=3;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+
+# === ESCUDO SAGRADO MK3 (Milestone lvl 5 — sacred_barrier) ===
+EscudoSagradoMk3:
+  Skills:
+  - skill{s=EscudoSagradoMk3_Cast} @self
+
+EscudoSagradoMk3_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.5;p=0.8} @self
+  - sound{s=item.armor.equip_netherite;v=1.2;p=0.6} @self
+  - sound{s=block.beacon.power_select;v=1.0;p=1.2} @self
+  - sound{s=block.amethyst_block.chime;v=0.8;p=1.6} @self
+  # Maximum sacred shield
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=3;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=1;hasParticles=false} @self
+  - potion{type=REGENERATION;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  # Sacred barrier dome — massive
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=70;hS=1.2;vS=2.5;y=1.0;size=2.8;speed=0} @self
+  - particles{p=end_rod;amount=30;hS=0.8;vS=1.5;y=1.0;speed=0.06} @self
+  - particles{p=enchant;amount=25;hS=0.7;vS=1.2;y=0.5;speed=0.15} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=25;hS=0.7;vS=1.2;y=1.0;size=1.5;speed=0} @self
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;amount=15;hS=0.6;vS=1.0;y=0.5;size=1.2;speed=0} @self
+  # Multi-layered dome rings
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=2.0;points=32;amount=5;hS=0.1;vS=0.1;y=0.1;size=2.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#4488ff;radius=1.8;points=28;amount=4;hS=0.1;vS=0.1;y=0.8;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffcc00;radius=1.5;points=24;amount=3;hS=0.1;vS=0.1;y=1.5;size=1.2;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.0;points=16;amount=2;hS=0.1;vS=0.1;y=2.2;size=1.0;speed=0} @self
+  # Sacred barrier double orbital
+  - orbital{auraName=sacred_barrier_inner;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=1.3;points=4;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+  - orbital{auraName=sacred_barrier_outer;bulletType=ITEM;bulletItem=GLOWSTONE_DUST;radius=2.0;points=6;interval=1;duration=<skill.var.duration>;oy=0.5} @self
+  # Pillar of golden light above
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=8;hS=0.2;vS=4.0;y=3.0;size=1.5;speed=0;repeat=10;repeati=4} @self
+  - particles{p=end_rod;amount=5;hS=0.15;vS=3.0;y=2.5;speed=0.02;repeat=10;repeati=4} @self
+
+
+# ─────────────────────────────────────────────
+#  7. MURALHA DE AÇO (COMUM) — Muralha defensiva, buff massivo
+#     Variables: defense_bonus, duration
+#     Milestones: lvl3=steel_wall, lvl5=steel_fortress
+# ─────────────────────────────────────────────
+
+MuralhaDeAco:
+  Skills:
+  - skill{s=MuralhaDeAco_Cast} @self
+
+MuralhaDeAco_Cast:
+  Skills:
+  # Heavy metal defense activation
+  - sound{s=block.anvil.land;v=1.2;p=0.6} @self
+  - sound{s=item.armor.equip_iron;v=1.0;p=0.8} @self
+  # Resistance buff
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=<skill.var.defense_bonus>;hasParticles=false} @self
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  # Iron wall visual
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#8c8c8c;amount=30;hS=0.7;vS=1.5;y=0.8;size=1.5;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=20;hS=0.5;vS=0.8;y=0.3;speed=0.06} @self
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#c0c0c0;amount=12;hS=0.4;vS=0.6;y=0.8;size=1.2;speed=0} @self
+  # Wall particles in front
+  - particles{p=block_crack;m=IRON_BLOCK;amount=30;hS=1.2;vS=2.0;y=1.0;speed=0.03} @forward{f=1.2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffffff;amount=20;hS=1.0;vS=1.8;y=1.0;size=2.0;speed=0} @forward{f=1.2;lockpitch=true}
+  # Base ring
+  - particlering{p=dust_color_transition;color1=#c0c0c0;color2=#8c8c8c;radius=1.5;points=24;amount=3;hS=0.1;vS=0.1;y=0.1;size=1.2;speed=0} @self
+
+MuralhaDeAco_Sustain:
+  Skills:
+  # Sustained wall particles
+  - particles{p=block_crack;m=IRON_BLOCK;amount=5;hS=0.8;vS=1.2;y=0.8;speed=0.02} @forward{f=1.2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#8c8c8c;amount=8;hS=0.5;vS=0.8;y=0.8;size=1.0;speed=0} @self
+
+# === MURALHA DE AÇO MK2 (Milestone lvl 3 — steel_wall) ===
+MuralhaDeAcoMk2:
+  Skills:
+  - skill{s=MuralhaDeAcoMk2_Cast} @self
+
+MuralhaDeAcoMk2_Cast:
+  Skills:
+  - sound{s=block.anvil.land;v=1.5;p=0.5} @self
+  - sound{s=item.armor.equip_iron;v=1.2;p=0.7} @self
+  - sound{s=block.anvil.use;v=0.8;p=1.0} @self
+  # Enhanced resistance
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=<skill.var.defense_bonus>;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - midgardShield{a=10;d=<skill.var.duration>} @self
+  # Steel wall visual
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;amount=45;hS=0.8;vS=2.0;y=0.8;size=2.0;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=30;hS=0.6;vS=1.0;y=0.3;speed=0.08} @self
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#c0c0c0;amount=18;hS=0.5;vS=0.8;y=0.8;size=1.5;speed=0} @self
+  - particles{p=enchant;amount=12;hS=0.4;vS=0.6;y=0.5;speed=0.08} @self
+  # Enhanced wall in front
+  - particles{p=block_crack;m=IRON_BLOCK;amount=45;hS=1.5;vS=2.5;y=1.2;speed=0.04} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffffff;amount=30;hS=1.2;vS=2.2;y=1.2;size=2.5;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=block_crack;m=GOLD_BLOCK;amount=10;hS=0.8;vS=1.5;y=1.0;speed=0.03} @forward{f=1.5;lockpitch=true}
+  # Steel wall rings
+  - particlering{p=dust_color_transition;color1=#c0c0c0;color2=#8c8c8c;radius=1.8;points=28;amount=4;hS=0.1;vS=0.1;y=0.1;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#c0c0c0;radius=1.5;points=22;amount=2;hS=0.1;vS=0.1;y=1.0;size=1.0;speed=0} @self
+  # Orbital
+  - orbital{auraName=steel_wall;bulletType=ITEM;bulletItem=IRON_NUGGET;radius=1.5;points=4;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+
+# === MURALHA DE AÇO MK3 (Milestone lvl 5 — steel_fortress) ===
+MuralhaDeAcoMk3:
+  Skills:
+  - skill{s=MuralhaDeAcoMk3_Cast} @self
+
+MuralhaDeAcoMk3_Cast:
+  Skills:
+  - sound{s=block.anvil.land;v=1.8;p=0.4} @self
+  - sound{s=item.armor.equip_netherite;v=1.2;p=0.6} @self
+  - sound{s=block.beacon.activate;v=0.8;p=1.0} @self
+  - sound{s=block.anvil.use;v=1.0;p=0.8} @self
+  # Maximum fortress defense
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=<skill.var.defense_bonus>;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  - midgardShield{a=20;d=<skill.var.duration>} @self
+  # Colossus visual
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;amount=60;hS=1.0;vS=2.5;y=1.0;size=2.5;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=40;hS=0.7;vS=1.2;y=0.3;speed=0.1} @self
+  - particles{p=block_crack;m=NETHERITE_BLOCK;amount=15;hS=0.5;vS=0.8;y=0.3;speed=0.06} @self
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=25;hS=0.6;vS=1.0;y=1.0;size=1.8;speed=0} @self
+  - particles{p=end_rod;amount=12;hS=0.5;vS=1.0;y=1.0;speed=0.04} @self
+  - particles{p=enchant;amount=18;hS=0.5;vS=0.8;y=0.5;speed=0.1} @self
+  # Impenetrable fortress wall
+  - particles{p=block_crack;m=IRON_BLOCK;amount=60;hS=1.8;vS=3.0;y=1.5;speed=0.05} @forward{f=1.5;lockpitch=true}
+  - particles{p=block_crack;m=NETHERITE_BLOCK;amount=20;hS=1.2;vS=2.0;y=1.2;speed=0.04} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffffff;amount=40;hS=1.5;vS=2.8;y=1.5;size=3.0;speed=0} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#c0c0c0;amount=20;hS=1.0;vS=2.0;y=1.2;size=1.5;speed=0} @forward{f=1.5;lockpitch=true}
+  # Multi-ring fortress
+  - particlering{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;radius=2.0;points=32;amount=5;hS=0.1;vS=0.1;y=0.1;size=2.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.8;points=28;amount=3;hS=0.1;vS=0.1;y=1.0;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#c0c0c0;radius=1.5;points=22;amount=2;hS=0.1;vS=0.1;y=2.0;size=1.0;speed=0} @self
+  # Double orbital
+  - orbital{auraName=steel_fortress_inner;bulletType=ITEM;bulletItem=IRON_NUGGET;radius=1.3;points=4;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+  - orbital{auraName=steel_fortress_outer;bulletType=ITEM;bulletItem=NETHERITE_SCRAP;radius=2.0;points=6;interval=1;duration=<skill.var.duration>;oy=0.5} @self
+  # Ground impact shockwave
+  - particlering{p=block_crack;m=IRON_BLOCK;radius=3;points=35;amount=3;hS=0.2;vS=0.1;y=0.1;speed=0.08} @self
+  - particlering{p=dust_color_transition;color1=#c0c0c0;color2=#8c8c8c;radius=4;points=40;amount=2;hS=0.1;vS=0.1;y=0.1;size=1.5;speed=0;delay=2} @self
+
+
+# ─────────────────────────────────────────────
+#  8. AGREGAR (COMUM) — Rally: buff aliados e puxa inimigos
+#     Variables: defense_buff, duration, radius
+#     Milestones: lvl3=rally_glow, lvl5=rally_beacon
+# ─────────────────────────────────────────────
+
+Agregar:
+  Skills:
+  - skill{s=Agregar_Cast} @self
+
+Agregar_Cast:
+  Skills:
+  # Rally shout
+  - sound{s=entity.evoker.prepare_attack;v=1.2;p=1.2} @self
+  - sound{s=entity.player.levelup;v=0.8;p=1.0} @self
+  # Defense buff on allies
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=<skill.var.defense_buff>;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=<skill.var.defense_buff>;hasParticles=false} @PlayersNearOrigin{r=<skill.var.radius>}
+  # Pull enemies inward
+  - throw{velocity=-0.5;velocityY=0.1} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - potion{type=SLOWNESS;duration=40;level=0;hasParticles=false} @EntitiesNearOrigin{r=<skill.var.radius>}
+  # Rally visual — golden shockwave
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=35;hS=0.6;vS=1.5;y=0.8;size=2.0;speed=0} @self
+  - particles{p=end_rod;amount=12;hS=0.4;vS=1.0;y=0.8;speed=0.05} @self
+  - particles{p=enchant;amount=15;hS=0.5;vS=0.6;y=0.5;speed=0.1} @self
+  # Expanding golden rings
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=2;points=24;amount=3;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=3.5;points=30;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.2;speed=0;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;radius=<skill.var.radius>;points=40;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.0;speed=0;delay=4} @self
+  # Buff particles on allies
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=10;hS=0.3;vS=0.5;y=0.8;size=1.2;speed=0} @PlayersNearOrigin{r=<skill.var.radius>}
+  - particles{p=enchant;amount=5;hS=0.2;vS=0.4;y=0.5;speed=0.05} @PlayersNearOrigin{r=<skill.var.radius>}
+
+# === AGREGAR MK2 (Milestone lvl 3 — rally_glow) ===
+AgregarMk2:
+  Skills:
+  - skill{s=AgregarMk2_Cast} @self
+
+AgregarMk2_Cast:
+  Skills:
+  - sound{s=entity.evoker.prepare_attack;v=1.5;p=1.0} @self
+  - sound{s=entity.player.levelup;v=1.0;p=0.8} @self
+  - sound{s=block.amethyst_block.chime;v=0.8;p=1.2} @self
+  # Enhanced buffs
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=<skill.var.defense_buff>;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=<skill.var.defense_buff>;hasParticles=false} @PlayersNearOrigin{r=<skill.var.radius>}
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=0;hasParticles=false} @PlayersNearOrigin{r=<skill.var.radius>}
+  # Enhanced pull
+  - throw{velocity=-0.8;velocityY=0.15} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - potion{type=SLOWNESS;duration=60;level=1;hasParticles=false} @EntitiesNearOrigin{r=<skill.var.radius>}
+  # Rally glow — brilliant shockwave
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=50;hS=0.8;vS=2.0;y=0.8;size=2.5;speed=0} @self
+  - particles{p=end_rod;amount=20;hS=0.6;vS=1.2;y=0.8;speed=0.06} @self
+  - particles{p=enchant;amount=20;hS=0.6;vS=0.8;y=0.5;speed=0.12} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=15;hS=0.5;vS=0.8;y=1.0;size=1.2;speed=0} @self
+  # Enhanced golden rings
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=2;points=30;amount=4;hS=0.1;vS=0.1;y=0.3;size=2.0;speed=0} @self
+  - particlering{p=end_rod;radius=3;points=20;amount=2;hS=0.1;vS=0.1;y=0.3;speed=0.03;delay=1} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=4.5;points=38;amount=3;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=6;points=45;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.2;speed=0;delay=3} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;radius=<skill.var.radius>;points=55;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.0;speed=0;delay=4} @self
+  # Ally glow
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=15;hS=0.4;vS=0.6;y=0.8;size=1.5;speed=0} @PlayersNearOrigin{r=<skill.var.radius>}
+  - particles{p=end_rod;amount=5;hS=0.3;vS=0.5;y=0.8;speed=0.03} @PlayersNearOrigin{r=<skill.var.radius>}
+  - particles{p=enchant;amount=8;hS=0.3;vS=0.5;y=0.5;speed=0.08} @PlayersNearOrigin{r=<skill.var.radius>}
+
+# === AGREGAR MK3 (Milestone lvl 5 — rally_beacon) ===
+AgregarMk3:
+  Skills:
+  - skill{s=AgregarMk3_Cast} @self
+
+AgregarMk3_Cast:
+  Skills:
+  - sound{s=entity.evoker.prepare_attack;v=1.8;p=0.8} @self
+  - sound{s=entity.player.levelup;v=1.2;p=0.6} @self
+  - sound{s=block.beacon.activate;v=1.2;p=1.0} @self
+  - sound{s=block.beacon.power_select;v=0.8;p=1.5} @self
+  # Maximum buffs + shield
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=<skill.var.defense_buff>;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=1;hasParticles=false} @self
+  - midgardShield{a=15;d=<skill.var.duration>} @self
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=<skill.var.defense_buff>;hasParticles=false} @PlayersNearOrigin{r=<skill.var.radius>}
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=1;hasParticles=false} @PlayersNearOrigin{r=<skill.var.radius>}
+  - potion{type=REGENERATION;duration=<skill.var.duration>;level=0;hasParticles=false} @PlayersNearOrigin{r=<skill.var.radius>}
+  - midgardShield{a=10;d=<skill.var.duration>} @PlayersNearOrigin{r=<skill.var.radius>}
+  # Strong pull + debuff
+  - throw{velocity=-1.0;velocityY=0.2} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - potion{type=SLOWNESS;duration=80;level=2;hasParticles=false} @EntitiesNearOrigin{r=<skill.var.radius>}
+  - potion{type=WEAKNESS;duration=80;level=0;hasParticles=false} @EntitiesNearOrigin{r=<skill.var.radius>}
+  # Rally beacon — epic shockwave + beacon of light
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=70;hS=1.0;vS=2.5;y=1.0;size=3.0;speed=0} @self
+  - particles{p=end_rod;amount=30;hS=0.8;vS=1.5;y=1.0;speed=0.08} @self
+  - particles{p=enchant;amount=25;hS=0.8;vS=1.0;y=0.5;speed=0.15} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=25;hS=0.7;vS=1.0;y=1.0;size=1.5;speed=0} @self
+  # Beacon pillar of light
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=10;hS=0.3;vS=5.0;y=3.0;size=2.0;speed=0;repeat=15;repeati=2} @self
+  - particles{p=end_rod;amount=6;hS=0.2;vS=4.0;y=2.5;speed=0.03;repeat=15;repeati=2} @self
+  # Epic expanding golden rings
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=2;points=35;amount=5;hS=0.1;vS=0.2;y=0.3;size=2.5;speed=0} @self
+  - particlering{p=end_rod;radius=3;points=25;amount=3;hS=0.1;vS=0.1;y=0.3;speed=0.05;delay=1} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=5;points=45;amount=4;hS=0.1;vS=0.2;y=0.3;size=2.0;speed=0;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=7;points=55;amount=3;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0;delay=3} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;radius=<skill.var.radius>;points=65;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.2;speed=0;delay=4} @self
+  # Ally full glow effect
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=25;hS=0.5;vS=0.8;y=0.8;size=2.0;speed=0} @PlayersNearOrigin{r=<skill.var.radius>}
+  - particles{p=end_rod;amount=10;hS=0.4;vS=0.6;y=0.8;speed=0.04} @PlayersNearOrigin{r=<skill.var.radius>}
+  - particles{p=enchant;amount=12;hS=0.4;vS=0.6;y=0.5;speed=0.1} @PlayersNearOrigin{r=<skill.var.radius>}
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=0.8;points=12;amount=2;hS=0.1;vS=0.1;y=0.1;size=1.0;speed=0} @PlayersNearOrigin{r=<skill.var.radius>}
+
+
+# ─────────────────────────────────────────────
+#  9. BASTIÃO IMORTAL (ULTIMATE — Canalizada) — Quase-invulnerabilidade
+#     Variables: duration
+#     Milestones: lvl3=bastion_glow, lvl5=bastion_divine
+# ─────────────────────────────────────────────
+
+BastiaoImortal:
+  Skills:
+  - skill{s=BastiaoImortal_Cast} @self
+
+BastiaoImortal_Cast:
+  Skills:
+  # Immortal bastion activation
+  - sound{s=block.beacon.activate;v=1.5;p=0.8} @self
+  - sound{s=entity.iron_golem.repair;v=1.2;p=0.6} @self
+  # Near-invulnerability buffs
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=4;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=3;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=REGENERATION;duration=<skill.var.duration>;level=1;hasParticles=false} @self
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  - potion{type=GLOWING;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  # Golden pillar of light
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=60;hS=0.8;vS=3.0;y=1.5;size=2.5;speed=0} @self
+  - particles{p=end_rod;amount=30;hS=0.5;vS=2.5;y=1.5;speed=0.06} @self
+  - particles{p=enchant;amount=25;hS=0.6;vS=1.5;y=0.5;speed=0.15} @self
+  # Pillar reaching skyward
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=12;hS=0.3;vS=5.0;y=3.0;size=2.0;speed=0;repeat=<skill.var.duration>;repeati=3} @self
+  - particles{p=end_rod;amount=6;hS=0.2;vS=4.0;y=2.5;speed=0.03;repeat=<skill.var.duration>;repeati=3} @self
+  # Shield dome base ring
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=2.0;points=30;amount=4;hS=0.1;vS=0.1;y=0.1;size=2.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=1.8;points=24;amount=3;hS=0.1;vS=0.1;y=1.0;size=1.5;speed=0} @self
+  # Persistent shield dome aura
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=12;hS=0.7;vS=1.0;y=0.8;size=1.5;speed=0;repeat=<skill.var.duration>;repeati=5} @self
+  - particles{p=end_rod;amount=5;hS=0.5;vS=0.8;y=0.8;speed=0.03;repeat=<skill.var.duration>;repeati=5} @self
+
+BastiaoImortal_Pulse:
+  Skills:
+  # Periodic pulse while channeling
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=20;hS=0.8;vS=1.2;y=0.8;size=1.8;speed=0} @self
+  - particles{p=end_rod;amount=8;hS=0.5;vS=1.0;y=0.8;speed=0.04} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=2.0;points=24;amount=3;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0} @self
+  - sound{s=block.beacon.ambient;v=0.4;p=1.5} @self
+
+# === BASTIÃO IMORTAL MK2 (Milestone lvl 3 — bastion_glow) ===
+BastiaoImortalMk2:
+  Skills:
+  - skill{s=BastiaoImortalMk2_Cast} @self
+
+BastiaoImortalMk2_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.8;p=0.6} @self
+  - sound{s=entity.iron_golem.repair;v=1.5;p=0.5} @self
+  - sound{s=block.beacon.power_select;v=1.0;p=1.2} @self
+  # Enhanced invulnerability
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=4;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=4;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=REGENERATION;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  - potion{type=GLOWING;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - midgardShield{a=30;d=<skill.var.duration>} @self
+  # Massive golden pillar
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=80;hS=1.0;vS=3.5;y=1.5;size=3.0;speed=0} @self
+  - particles{p=end_rod;amount=40;hS=0.7;vS=3.0;y=1.5;speed=0.08} @self
+  - particles{p=enchant;amount=30;hS=0.7;vS=2.0;y=0.5;speed=0.18} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=20;hS=0.6;vS=1.5;y=1.0;size=1.5;speed=0} @self
+  # Bastion pillar
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=15;hS=0.3;vS=6.0;y=3.5;size=2.5;speed=0;repeat=<skill.var.duration>;repeati=2} @self
+  - particles{p=end_rod;amount=8;hS=0.2;vS=5.0;y=3.0;speed=0.04;repeat=<skill.var.duration>;repeati=2} @self
+  # Enhanced dome rings
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=2.2;points=34;amount=5;hS=0.1;vS=0.1;y=0.1;size=2.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=2.0;points=28;amount=4;hS=0.1;vS=0.1;y=1.0;size=1.8;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=1.5;points=22;amount=3;hS=0.1;vS=0.1;y=2.0;size=1.2;speed=0} @self
+  # Glow orbital
+  - orbital{auraName=bastion_glow;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=2.0;points=5;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+  # Persistent glowing aura
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=18;hS=0.8;vS=1.2;y=0.8;size=2.0;speed=0;repeat=<skill.var.duration>;repeati=4} @self
+  - particles{p=end_rod;amount=8;hS=0.6;vS=1.0;y=0.8;speed=0.04;repeat=<skill.var.duration>;repeati=4} @self
+
+BastiaoImortalMk2_Pulse:
+  Skills:
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=30;hS=1.0;vS=1.5;y=0.8;size=2.2;speed=0} @self
+  - particles{p=end_rod;amount=12;hS=0.6;vS=1.2;y=0.8;speed=0.05} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=10;hS=0.5;vS=0.8;y=1.0;size=1.2;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=2.2;points=28;amount=3;hS=0.1;vS=0.1;y=0.3;size=2.0;speed=0} @self
+  - sound{s=block.beacon.ambient;v=0.5;p=1.3} @self
+
+# === BASTIÃO IMORTAL MK3 (Milestone lvl 5 — bastion_divine) ===
+BastiaoImortalMk3:
+  Skills:
+  - skill{s=BastiaoImortalMk3_Cast} @self
+
+BastiaoImortalMk3_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=2.0;p=0.5} @self
+  - sound{s=entity.iron_golem.repair;v=1.8;p=0.4} @self
+  - sound{s=block.beacon.power_select;v=1.2;p=1.0} @self
+  - sound{s=block.end_portal.spawn;v=0.6;p=1.5} @self
+  # Maximum divine invulnerability
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=4;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=5;hasParticles=false} @self
+  - potion{type=FIRE_RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - potion{type=REGENERATION;duration=<skill.var.duration>;level=3;hasParticles=false} @self
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=3;hasParticles=false} @self
+  - potion{type=GLOWING;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  - midgardShield{a=50;d=<skill.var.duration>} @self
+  # Divine bastion — full light eruption
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=100;hS=1.2;vS=4.0;y=2.0;size=3.5;speed=0} @self
+  - particles{p=end_rod;amount=50;hS=0.8;vS=3.5;y=2.0;speed=0.1} @self
+  - particles{p=enchant;amount=40;hS=0.8;vS=2.5;y=0.5;speed=0.2} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=35;hS=0.8;vS=2.0;y=1.0;size=2.0;speed=0} @self
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;amount=20;hS=0.6;vS=1.5;y=0.5;size=1.5;speed=0} @self
+  # Grand pillar of divine light
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=20;hS=0.4;vS=8.0;y=5.0;size=3.0;speed=0;repeat=<skill.var.duration>;repeati=2} @self
+  - particles{p=end_rod;amount=12;hS=0.3;vS=7.0;y=4.0;speed=0.05;repeat=<skill.var.duration>;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=8;hS=0.2;vS=6.0;y=3.5;size=1.5;speed=0;repeat=<skill.var.duration>;repeati=3} @self
+  # Multi-layered divine dome
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=2.5;points=40;amount=6;hS=0.1;vS=0.1;y=0.1;size=3.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=2.3;points=34;amount=5;hS=0.1;vS=0.1;y=0.8;size=2.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=2.0;points=28;amount=4;hS=0.1;vS=0.1;y=1.5;size=2.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;radius=1.5;points=20;amount=3;hS=0.1;vS=0.1;y=2.2;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=0.8;points=12;amount=2;hS=0.1;vS=0.1;y=2.8;size=1.0;speed=0} @self
+  # ActivatIon shockwave
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=3;points=40;amount=4;hS=0.2;vS=0.2;y=0.3;size=2.5;speed=0} @self
+  - particlering{p=end_rod;radius=5;points=50;amount=3;hS=0.1;vS=0.1;y=0.3;speed=0.05;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#4488ff;radius=7;points=60;amount=2;hS=0.1;vS=0.1;y=0.3;size=2.0;speed=0;delay=4} @self
+  # Divine double orbital
+  - orbital{auraName=bastion_divine_inner;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=1.5;points=5;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+  - orbital{auraName=bastion_divine_outer;bulletType=ITEM;bulletItem=GLOWSTONE_DUST;radius=2.5;points=8;interval=1;duration=<skill.var.duration>;oy=0.5} @self
+  # Divine persistent aura
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=22;hS=1.0;vS=1.5;y=1.0;size=2.5;speed=0;repeat=<skill.var.duration>;repeati=3} @self
+  - particles{p=end_rod;amount=10;hS=0.7;vS=1.2;y=1.0;speed=0.05;repeat=<skill.var.duration>;repeati=3} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=8;hS=0.5;vS=0.8;y=1.0;size=1.2;speed=0;repeat=<skill.var.duration>;repeati=4} @self
+
+BastiaoImortalMk3_Pulse:
+  Skills:
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=40;hS=1.2;vS=2.0;y=1.0;size=2.8;speed=0} @self
+  - particles{p=end_rod;amount=18;hS=0.8;vS=1.5;y=1.0;speed=0.06} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=15;hS=0.6;vS=1.0;y=1.2;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=2.5;points=32;amount=4;hS=0.1;vS=0.1;y=0.3;size=2.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=2.0;points=24;amount=2;hS=0.1;vS=0.1;y=1.5;size=1.5;speed=0} @self
+  - sound{s=block.beacon.ambient;v=0.6;p=1.0} @self
+
+
+# ─────────────────────────────────────────────
+#  10. BARREIRA ABSOLUTA (ULTIMATE — Canalizada) — Escudo total para o grupo
+#      Variables: shield_amount, duration
+#      Milestones: lvl3=barrier_glow, lvl5=barrier_absolute
+# ─────────────────────────────────────────────
+
+BarreiraAbsoluta:
+  Skills:
+  - skill{s=BarreiraAbsoluta_Cast} @self
+
+BarreiraAbsoluta_Cast:
+  Skills:
+  # Grand barrier activation
+  - sound{s=block.beacon.activate;v=1.5;p=1.0} @self
+  - sound{s=block.beacon.power_select;v=1.0;p=0.8} @self
+  - sound{s=entity.iron_golem.repair;v=1.0;p=0.8} @self
+  # Shield all nearby allies
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @self
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @PlayersNearOrigin{r=8}
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=2;hasParticles=false} @PlayersNearOrigin{r=8}
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  # Massive golden/white dome
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=60;hS=1.5;vS=3.0;y=1.5;size=2.5;speed=0} @self
+  - particles{p=end_rod;amount=25;hS=1.0;vS=2.5;y=1.5;speed=0.06} @self
+  - particles{p=enchant;amount=25;hS=1.0;vS=1.5;y=0.5;speed=0.15} @self
+  # Dome wall rings — expanding
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=3;points=40;amount=5;hS=0.1;vS=0.1;y=0.1;size=2.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=3;points=35;amount=4;hS=0.1;vS=0.1;y=1.0;size=2.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=2.5;points=28;amount=3;hS=0.1;vS=0.1;y=2.0;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;radius=1.5;points=20;amount=2;hS=0.1;vS=0.1;y=2.5;size=1.0;speed=0} @self
+  # Persistent dome walls
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=15;hS=1.2;vS=1.5;y=1.0;size=1.5;speed=0;repeat=<skill.var.duration>;repeati=5} @self
+  - particles{p=end_rod;amount=6;hS=0.8;vS=1.0;y=1.0;speed=0.03;repeat=<skill.var.duration>;repeati=5} @self
+  # Shield particles on allies
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=15;hS=0.4;vS=0.6;y=0.8;size=1.5;speed=0} @PlayersNearOrigin{r=8}
+  - particles{p=end_rod;amount=5;hS=0.3;vS=0.5;y=0.8;speed=0.03} @PlayersNearOrigin{r=8}
+
+BarreiraAbsoluta_Pulse:
+  Skills:
+  # Periodic pulse effect for the dome
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=3;points=35;amount=3;hS=0.1;vS=0.1;y=0.3;size=2.0;speed=0} @self
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=12;hS=1.0;vS=1.2;y=0.8;size=1.2;speed=0} @self
+  - particles{p=end_rod;amount=5;hS=0.7;vS=0.8;y=0.8;speed=0.02} @self
+  - sound{s=block.beacon.ambient;v=0.3;p=1.2} @self
+
+# === BARREIRA ABSOLUTA MK2 (Milestone lvl 3 — barrier_glow) ===
+BarreiraAbsolutaMk2:
+  Skills:
+  - skill{s=BarreiraAbsolutaMk2_Cast} @self
+
+BarreiraAbsolutaMk2_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.8;p=0.8} @self
+  - sound{s=block.beacon.power_select;v=1.2;p=0.7} @self
+  - sound{s=entity.iron_golem.repair;v=1.2;p=0.6} @self
+  - sound{s=block.amethyst_block.chime;v=0.8;p=1.2} @self
+  # Enhanced party shield
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @self
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @PlayersNearOrigin{r=10}
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=3;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=3;hasParticles=false} @PlayersNearOrigin{r=10}
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=0;hasParticles=false} @PlayersNearOrigin{r=10}
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  # Glowing barrier dome — enhanced
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=80;hS=2.0;vS=3.5;y=1.5;size=3.0;speed=0} @self
+  - particles{p=end_rod;amount=35;hS=1.2;vS=3.0;y=1.5;speed=0.08} @self
+  - particles{p=enchant;amount=30;hS=1.2;vS=1.8;y=0.5;speed=0.18} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=25;hS=1.0;vS=1.5;y=1.0;size=1.8;speed=0} @self
+  # Grand dome wall rings
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=4;points=50;amount=6;hS=0.1;vS=0.1;y=0.1;size=3.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=3.8;points=45;amount=5;hS=0.1;vS=0.1;y=0.8;size=2.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=3.5;points=40;amount=4;hS=0.1;vS=0.1;y=1.5;size=2.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;radius=3.0;points=32;amount=3;hS=0.1;vS=0.1;y=2.2;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=2.0;points=24;amount=2;hS=0.1;vS=0.1;y=2.8;size=1.0;speed=0} @self
+  # Barrier glow orbital
+  - orbital{auraName=barrier_glow;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=3.5;points=6;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+  # Persistent dome
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=20;hS=1.5;vS=2.0;y=1.0;size=1.8;speed=0;repeat=<skill.var.duration>;repeati=4} @self
+  - particles{p=end_rod;amount=8;hS=1.0;vS=1.2;y=1.0;speed=0.04;repeat=<skill.var.duration>;repeati=4} @self
+  # Ally shield glow
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=20;hS=0.5;vS=0.8;y=0.8;size=1.8;speed=0} @PlayersNearOrigin{r=10}
+  - particles{p=end_rod;amount=8;hS=0.4;vS=0.6;y=0.8;speed=0.04} @PlayersNearOrigin{r=10}
+  - particles{p=enchant;amount=6;hS=0.3;vS=0.5;y=0.5;speed=0.06} @PlayersNearOrigin{r=10}
+
+BarreiraAbsolutaMk2_Pulse:
+  Skills:
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=4;points=45;amount=4;hS=0.1;vS=0.1;y=0.3;size=2.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=3.5;points=30;amount=2;hS=0.1;vS=0.1;y=1.5;size=1.5;speed=0} @self
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=15;hS=1.2;vS=1.5;y=0.8;size=1.5;speed=0} @self
+  - particles{p=end_rod;amount=6;hS=0.8;vS=1.0;y=0.8;speed=0.03} @self
+  - sound{s=block.beacon.ambient;v=0.4;p=1.0} @self
+
+# === BARREIRA ABSOLUTA MK3 (Milestone lvl 5 — barrier_absolute) ===
+BarreiraAbsolutaMk3:
+  Skills:
+  - skill{s=BarreiraAbsolutaMk3_Cast} @self
+
+BarreiraAbsolutaMk3_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=2.0;p=0.6} @self
+  - sound{s=block.beacon.power_select;v=1.5;p=0.5} @self
+  - sound{s=entity.iron_golem.repair;v=1.5;p=0.4} @self
+  - sound{s=block.end_portal.spawn;v=0.5;p=1.5} @self
+  - sound{s=block.amethyst_block.chime;v=1.0;p=1.0} @self
+  # Maximum party shield
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @self
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @PlayersNearOrigin{r=12}
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=4;hasParticles=false} @self
+  - potion{type=ABSORPTION;duration=<skill.var.duration>;level=4;hasParticles=false} @PlayersNearOrigin{r=12}
+  - potion{type=RESISTANCE;duration=<skill.var.duration>;level=1;hasParticles=false} @PlayersNearOrigin{r=12}
+  - potion{type=REGENERATION;duration=<skill.var.duration>;level=0;hasParticles=false} @PlayersNearOrigin{r=12}
+  - potion{type=SLOWNESS;duration=<skill.var.duration>;level=3;hasParticles=false} @self
+  - potion{type=GLOWING;duration=<skill.var.duration>;level=0;hasParticles=false} @self
+  # ABSOLUTE BARRIER — maximum visual spectacle
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=120;hS=2.5;vS=4.0;y=2.0;size=3.5;speed=0} @self
+  - particles{p=end_rod;amount=50;hS=1.5;vS=3.5;y=2.0;speed=0.1} @self
+  - particles{p=enchant;amount=40;hS=1.5;vS=2.5;y=0.5;speed=0.2} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=40;hS=1.2;vS=2.0;y=1.5;size=2.5;speed=0} @self
+  - particles{p=dust_color_transition;color1=#c0c0c0;color2=#ffcc00;amount=25;hS=1.0;vS=1.5;y=1.0;size=1.8;speed=0} @self
+  # Golden pillar from dome center
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=15;hS=0.3;vS=8.0;y=5.0;size=2.5;speed=0;repeat=<skill.var.duration>;repeati=2} @self
+  - particles{p=end_rod;amount=10;hS=0.2;vS=6.0;y=4.0;speed=0.04;repeat=<skill.var.duration>;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=6;hS=0.15;vS=5.0;y=3.5;size=1.5;speed=0;repeat=<skill.var.duration>;repeati=3} @self
+  # Absolute dome — massive multi-layered rings
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=5;points=60;amount=8;hS=0.1;vS=0.1;y=0.1;size=3.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=4.8;points=55;amount=6;hS=0.1;vS=0.1;y=0.6;size=3.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=4.5;points=50;amount=5;hS=0.1;vS=0.1;y=1.2;size=2.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#4488ff;radius=4.0;points=45;amount=4;hS=0.1;vS=0.1;y=1.8;size=2.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=3.5;points=38;amount=3;hS=0.1;vS=0.1;y=2.4;size=1.8;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=2.5;points=28;amount=2;hS=0.1;vS=0.1;y=3.0;size=1.5;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.5;points=18;amount=2;hS=0.1;vS=0.1;y=3.5;size=1.2;speed=0} @self
+  # Activation shockwave
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=3;points=40;amount=5;hS=0.2;vS=0.2;y=0.3;size=3.0;speed=0} @self
+  - particlering{p=end_rod;radius=5;points=50;amount=3;hS=0.1;vS=0.1;y=0.3;speed=0.06;delay=2} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#4488ff;radius=8;points=65;amount=3;hS=0.1;vS=0.1;y=0.3;size=2.0;speed=0;delay=4} @self
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=12;points=80;amount=2;hS=0.1;vS=0.1;y=0.3;size=1.5;speed=0;delay=6} @self
+  # Absolute barrier double orbital
+  - orbital{auraName=barrier_absolute_inner;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=3.0;points=6;interval=1;duration=<skill.var.duration>;oy=1.0} @self
+  - orbital{auraName=barrier_absolute_outer;bulletType=ITEM;bulletItem=GLOWSTONE_DUST;radius=5.0;points=10;interval=1;duration=<skill.var.duration>;oy=0.5} @self
+  # Persistent absolute dome
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=25;hS=2.0;vS=2.5;y=1.2;size=2.2;speed=0;repeat=<skill.var.duration>;repeati=3} @self
+  - particles{p=end_rod;amount=12;hS=1.5;vS=1.8;y=1.2;speed=0.05;repeat=<skill.var.duration>;repeati=3} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=10;hS=1.0;vS=1.2;y=1.0;size=1.2;speed=0;repeat=<skill.var.duration>;repeati=4} @self
+  # Ally full shield glow
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=30;hS=0.6;vS=1.0;y=0.8;size=2.2;speed=0} @PlayersNearOrigin{r=12}
+  - particles{p=end_rod;amount=12;hS=0.5;vS=0.8;y=0.8;speed=0.05} @PlayersNearOrigin{r=12}
+  - particles{p=enchant;amount=10;hS=0.4;vS=0.6;y=0.5;speed=0.08} @PlayersNearOrigin{r=12}
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=1.0;points=14;amount=2;hS=0.1;vS=0.1;y=0.1;size=1.2;speed=0} @PlayersNearOrigin{r=12}
+
+BarreiraAbsolutaMk3_Pulse:
+  Skills:
+  - particlering{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;radius=5;points=55;amount=5;hS=0.1;vS=0.1;y=0.3;size=3.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#4488ff;color2=#ffffff;radius=4.5;points=40;amount=3;hS=0.1;vS=0.1;y=1.0;size=2.0;speed=0} @self
+  - particlering{p=dust_color_transition;color1=#ffffff;color2=#ffcc00;radius=3.5;points=30;amount=2;hS=0.1;vS=0.1;y=2.0;size=1.5;speed=0} @self
+  - particles{p=dust_color_transition;color1=#ffcc00;color2=#ffffff;amount=20;hS=1.8;vS=2.0;y=1.0;size=1.8;speed=0} @self
+  - particles{p=end_rod;amount=10;hS=1.2;vS=1.5;y=1.0;speed=0.04} @self
+  - particles{p=dust_color_transition;color1=#4488ff;color2=#ffffff;amount=8;hS=0.8;vS=1.0;y=1.0;size=1.0;speed=0} @self
+  - sound{s=block.beacon.ambient;v=0.6;p=0.8} @self

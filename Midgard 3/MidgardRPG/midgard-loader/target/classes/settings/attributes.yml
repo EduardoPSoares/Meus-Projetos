@@ -1,0 +1,409 @@
+# Configuração de Atributos do MidgardRPG
+# Aqui você define todos os atributos customizados do servidor.
+#
+# ==============================================================================
+#                        ESTRUTURA DOS ATRIBUTOS
+# ==============================================================================
+# id_do_atributo:           -> ID interno usado pelo plugin (não use espaços)
+#   name: "Nome Exibido"    -> Nome que aparece em menus e mensagens (Suporta MiniMessage)
+#   icon: "Ícone"           -> Emoji ou caractere unicode para representar o atributo
+#   format: "0.0"           -> Formato numérico (Java DecimalFormat). Ex: 0, 0.0, 0%
+#   base: 100.0             -> Valor inicial padrão para todos os jogadores
+#   min: 0.0                -> Valor mínimo que o atributo pode atingir
+#   max: 10000.0            -> Valor máximo (cap) do atributo
+#
+# ==============================================================================
+#                        LISTA DE ATRIBUTOS
+# ==============================================================================
+
+attributes:
+  # --- Status Básicos ---
+  # Atributos vitais que definem a sobrevivência e recursos do jogador.
+  max_health:
+    name: "<red>Vida Máxima"
+    icon: "<red>❤"
+    format: "0"
+    base: 20.0
+    min: 1.0
+    max: 100000.0
+  health_regen:
+    name: "<red>Regeneração de Vida"
+    icon: "<red>❤"
+    format: "0.0/s"
+    base: 1.0
+    min: 0.0
+    max: 1000.0
+  max_mana:
+    name: "<blue>Mana Máxima"
+    icon: "<blue>💧"
+    format: "0"
+    base: 100.0
+    min: 0.0
+    max: 10000.0
+  mana_regen:
+    name: "<blue>Regeneração de Mana"
+    icon: "<blue>💧"
+    format: "0.0/s"
+    base: 5.0
+    min: 0.0
+    max: 1000.0
+  max_stamina:
+    name: "<green>Stamina Máxima"
+    icon: "<green>⚡"
+    format: "0"
+    base: 100.0
+    min: 0.0
+    max: 10000.0
+  stamina_regen:
+    name: "<green>Regeneração de Stamina"
+    icon: "<green>⚡"
+    format: "0.0/s"
+    base: 10.0
+    min: 0.0
+    max: 1000.0
+  strength:
+    name: "<red>Força"
+    icon: "<red>⚔"
+    format: "0"
+    base: 10.0
+    min: 0.0
+    max: 10000.0
+  intelligence:
+    name: "<blue>Inteligência"
+    icon: "<blue>🧠"
+    format: "0"
+    base: 10.0
+    min: 0.0
+    max: 10000.0
+  dexterity:
+    name: "<green>Destreza"
+    icon: "<green>🏹"
+    format: "0"
+    base: 10.0
+    min: 0.0
+    max: 10000.0
+  agility:
+    name: "<white>Agilidade"
+    icon: "<white>👟"
+    format: "0"
+    base: 10.0
+    min: 0.0
+    max: 10000.0
+  defense:
+    name: "<gray>Defesa"
+    icon: "<gray>🛡"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  critical_chance:
+    name: "<yellow>Chance Crítica"
+    icon: "<yellow>☣"
+    format: "0'%'"
+    base: 5.0
+    min: 0.0
+    max: 100.0
+  critical_damage:
+    name: "<yellow>Dano Crítico"
+    icon: "<yellow>☠"
+    format: "0'%'"
+    base: 150.0
+    min: 0.0
+    max: 1000.0
+
+  # --- Amplificadores de Regeneração ---
+  health_regen_amp:
+    name: "<red>Amplificação de Regen. Vida"
+    icon: "<red>❤+"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 500.0
+  mana_regen_amp:
+    name: "<blue>Amplificação de Regen. Mana"
+    icon: "<blue>💧+"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 500.0
+  stamina_regen_amp:
+    name: "<green>Amplificação de Regen. Stamina"
+    icon: "<green>⚡+"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 500.0
+
+  # --- Dano Elemental ---
+  fire_damage:
+    name: "<red>Dano de Fogo"
+    icon: "<red>🔥"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  ice_damage:
+    name: "<aqua>Dano de Gelo"
+    icon: "<aqua>❄"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  light_damage:
+    name: "<yellow>Dano de Luz"
+    icon: "<yellow>☀"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  darkness_damage:
+    name: "<dark_purple>Dano de Escuridão"
+    icon: "<dark_purple>🌑"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  divine_damage:
+    name: "<gold>Dano Divino"
+    icon: "<gold>✨"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  earth_damage:
+    name: "<green>Dano de Terra"
+    icon: "<green>🍂"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  thunder_damage:
+    name: "<yellow>Dano de Trovão"
+    icon: "<yellow>⚡"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  water_damage:
+    name: "<blue>Dano de Água"
+    icon: "<blue>💧"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  air_damage:
+    name: "<white>Dano de Ar"
+    icon: "<white>💨"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+
+  # --- Defesa Elemental ---
+  fire_defense:
+    name: "<red>Defesa de Fogo"
+    icon: "<red>🛡️"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  ice_defense:
+    name: "<aqua>Defesa de Gelo"
+    icon: "<aqua>🛡️"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  light_defense:
+    name: "<yellow>Defesa de Luz"
+    icon: "<yellow>🛡️"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  darkness_defense:
+    name: "<dark_purple>Defesa de Escuridão"
+    icon: "<dark_purple>🛡️"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  divine_defense:
+    name: "<gold>Defesa Divina"
+    icon: "<gold>🛡️"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  earth_defense:
+    name: "<green>Defesa de Terra"
+    icon: "<green>🛡️"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  thunder_defense:
+    name: "<yellow>Defesa de Trovão"
+    icon: "<yellow>🛡️"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  water_defense:
+    name: "<blue>Defesa de Água"
+    icon: "<blue>🛡️"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  air_defense:
+    name: "<white>Defesa de Ar"
+    icon: "<white>🛡️"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+
+  # --- Atributos de Utilidade ---
+  speed:
+    name: "<white>Velocidade"
+    icon: "<white>⚡"
+    format: "0'%'"
+    base: 100.0
+    min: 0.0
+    max: 500.0
+  luck:
+    name: "<green>Sorte"
+    icon: "<green>🍀"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 1000.0
+  cooldown_reduction:
+    name: "<aqua>Redução de Cooldown"
+    icon: "<aqua>⌛"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 80.0
+  life_steal:
+    name: "<red>Roubo de Vida"
+    icon: "<red>🧛"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 100.0
+  thorns:
+    name: "<dark_green>Espinhos"
+    icon: "<dark_green>🌵"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 100.0
+  armor_penetration:
+    name: "<gray>Penetração de Armadura (%)"
+    icon: "<gray>🗡️"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 100.0
+  armor_penetration_flat:
+    name: "<gray>Letalidade (Pen. Flat)"
+    icon: "<gray>🗡️"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 1000.0
+
+  # --- Novos Atributos (Compatibilidade com StatsGui) ---
+  physical_damage:
+    name: "<red>Dano Físico"
+    icon: "<red>⚔"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  magic_damage:
+    name: "<blue>Dano Mágico"
+    icon: "<blue>✨"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  attack_speed:
+    name: "<yellow>Velocidade de Ataque"
+    icon: "<yellow>⚔"
+    format: "0.0"
+    base: 1.0
+    min: 0.1
+    max: 5.0
+  magic_penetration:
+    name: "<light_purple>Penetração Mágica (%)"
+    icon: "<light_purple>🔮"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 100.0
+  magic_penetration_flat:
+    name: "<light_purple>Penetração Mágica (Flat)"
+    icon: "<light_purple>🔮"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 1000.0
+  accuracy:
+    name: "<yellow>Precisão"
+    icon: "<yellow>🎯"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 1000.0
+  critical_resistance:
+    name: "<dark_red>Resistência Crítica"
+    icon: "<dark_red>🛡"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 100.0
+  armor:
+    name: "<blue>Armadura"
+    icon: "<blue>🛡"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  magic_resistance:
+    name: "<aqua>Resistência Mágica"
+    icon: "<aqua>🛡"
+    format: "0"
+    base: 0.0
+    min: 0.0
+    max: 10000.0
+  block_chance:
+    name: "<yellow>Chance de Bloqueio"
+    icon: "<yellow>🛡"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 100.0
+  dodge_chance:
+    name: "<green>Chance de Esquiva"
+    icon: "<green>💨"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 100.0
+  tenacity:
+    name: "<light_purple>Tenacidade"
+    icon: "<light_purple>🛡"
+    format: "0'%'"
+    base: 0.0
+    min: 0.0
+    max: 100.0
+  movement_speed:
+    name: "<white>Velocidade de Movimento"
+    icon: "<white>⚡"
+    format: "0"
+    base: 100.0
+    min: 0.0
+    max: 1000.0

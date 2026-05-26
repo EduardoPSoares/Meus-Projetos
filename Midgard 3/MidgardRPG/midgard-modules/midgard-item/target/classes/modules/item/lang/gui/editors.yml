@@ -1,0 +1,15 @@
+boolean:
+  reset: <green>ᴠᴀʟᴏʀ ʀᴇꜱᴇᴛᴀᴅᴏ ᴘᴀʀᴀ ꜰᴀʟꜱᴏ.
+  toggled: <green>ᴠᴀʟᴏʀ ᴀʟᴛᴇʀᴀᴅᴏ ᴘᴀʀᴀ %value%.
+string:
+  cleared: <green>%prompt% ʟɪᴍᴘᴏ!
+  enter_value: '<yellow>ᴅɪɢɪᴛᴇ %prompt% ɴᴀᴏ ᴄʜᴀᴛ (ᴏᴜ ᴅɪɢɪᴛᴇ ''ᴄᴀɴᴄᴇʟ'' ᴘᴀʀᴀ ᴄᴀɴᴄᴇʟᴀʀ):'
+  updated: <green>%prompt% ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!
+list:
+  cleared: <green>%title% ʟɪᴍᴘᴏ!
+  updated: <green>%title% ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!
+stat:
+  reset: <green>%stat% ʀᴇꜱᴇᴛᴀᴅᴏ ᴘᴀʀᴀ 0!
+  enter_value: '<yellow>ᴅɪɢɪᴛᴇ ᴏ ᴠᴀʟᴏʀ ᴘᴀʀᴀ %stat% ɴᴀᴏ ᴄʜᴀᴛ (ᴏᴜ ᴅɪɢɪᴛᴇ ''ᴄᴀɴᴄᴇʟ'' ᴘᴀʀᴀ ᴄᴀɴᴄᴇʟᴀʀ):'
+  updated: <green>%stat% ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!
+  invalid_format: <red>ꜰᴏʀᴍᴀᴛᴏ ᴅᴇ ɴᴜᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ.

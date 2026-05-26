@@ -1,0 +1,83 @@
+name: "<blue>ᴍᴜʀᴀʟʜᴀ ᴅᴇ ᴀᴄᴏ</blue>"
+mythic-skill: "MuralhaDeAco"
+spell-type: COMMON
+
+cooldown:
+  base: 15.0
+  per-level: -0.4
+mana:
+  base: 28.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guardiao"
+  level: 10
+
+icon:
+  material: IRON_BLOCK
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<blue><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></blue>"
+  - ""
+  - "<gray>ᴇʀɢᴜᴇ ᴜᴍᴀ ᴍᴜʀᴀʟʜᴀ ᴅᴇ ᴀᴄᴏ</gray>"
+  - "<gray>ɪᴍᴘᴇɴᴇᴛʀᴀᴠᴇʟ, ᴀᴜᴍᴇɴᴛᴀɴᴅᴏ</gray>"
+  - "<gray>ᴍᴀssɪᴠᴀᴍᴇɴᴛᴇ sᴜᴀ ᴅᴇꜰᴇsᴀ.</gray>"
+  - ""
+  - "<blue><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></blue>"
+  - ""
+  - "<gray>ʙᴏɴᴜs ᴅᴇ ᴅᴇꜰᴇsᴀ:<blue>{defense_bonus}</blue>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<blue>{duration}s</blue>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<blue>ɢᴜᴀʀᴅɪᴀᴏ</blue>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>10</yellow>"
+
+variables:
+  defense_bonus:
+    base: 10.0
+    per-level: 3.0
+  duration:
+    base: 6.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "steel_wall"
+    mechanic-override: "MuralhaDeAcoMk2"
+    stat-bonus:
+      defense: 1.0
+  5:
+    visual: "steel_fortress"
+    mechanic-override: "MuralhaDeAcoMk3"
+    stat-bonus:
+      defense: 2.0
+
+mastery:
+  attribute-bonus:
+    defense: 5
+
+sounds:
+  cast-start:
+    sound: "block.anvil.place"
+    volume: 1.0
+    pitch: 0.8
+  cast-finish:
+    sound: "block.anvil.land"
+    volume: 1.0
+    pitch: 0.6
+  cast-fail:
+    sound: "item.shield.break"
+    volume: 0.5
+    pitch: 0.8

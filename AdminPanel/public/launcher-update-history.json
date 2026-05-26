@@ -1,0 +1,174 @@
+{
+  "updates": [
+    {
+      "version": "1.0.14",
+      "previous_version": "1.0.13",
+      "generated_at": "2026-05-18T05:23:49.847Z",
+      "notes": "",
+      "file_count": 78,
+      "total_size": 1138464177,
+      "changed_count": 4,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.13",
+      "previous_version": "1.0.12",
+      "generated_at": "2026-05-18T05:09:31.686Z",
+      "notes": "",
+      "file_count": 78,
+      "total_size": 1138466841,
+      "changed_count": 4,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.12",
+      "previous_version": "1.0.11",
+      "generated_at": "2026-05-18T05:02:58.981Z",
+      "notes": "",
+      "file_count": 78,
+      "total_size": 1138475913,
+      "changed_count": 5,
+      "removed_count": 1
+    },
+    {
+      "version": "1.0.11",
+      "previous_version": "1.0.10",
+      "generated_at": "2026-05-18T04:24:17.235Z",
+      "notes": "",
+      "file_count": 78,
+      "total_size": 596179403,
+      "changed_count": 4,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.10",
+      "previous_version": "1.0.9",
+      "generated_at": "2026-05-17T22:07:38.115Z",
+      "notes": "",
+      "file_count": 78,
+      "total_size": 596174943,
+      "changed_count": 6,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.9",
+      "previous_version": "1.0.8",
+      "generated_at": "2026-05-17T21:59:43.351Z",
+      "notes": "Remove barra de rolagem externa do launcher",
+      "file_count": 78,
+      "total_size": 596177537,
+      "changed_count": 5,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.8",
+      "previous_version": "1.0.7",
+      "generated_at": "2026-05-17T21:56:11.050Z",
+      "notes": "Responsividade melhorada e icone corrigido",
+      "file_count": 78,
+      "total_size": 596176743,
+      "changed_count": 5,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.7",
+      "previous_version": "1.0.6",
+      "generated_at": "2026-05-17T21:49:31.242Z",
+      "notes": "Corrige loop de atualizacao e bloqueia interface durante update",
+      "file_count": 78,
+      "total_size": 596170384,
+      "changed_count": 4,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.6",
+      "previous_version": "1.0.5",
+      "generated_at": "2026-05-17T21:45:05.594Z",
+      "notes": "Atualizacao silenciosa sem abrir terminal",
+      "file_count": 78,
+      "total_size": 596171858,
+      "changed_count": 4,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.5",
+      "previous_version": "1.0.5",
+      "generated_at": "2026-05-17T21:41:26.971Z",
+      "notes": "Reparo de URLs do manifest do launcher",
+      "file_count": 78,
+      "total_size": 596159733,
+      "changed_count": 4,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.4",
+      "previous_version": "1.0.3",
+      "generated_at": "2026-05-17T21:33:51.773Z",
+      "notes": "Nota de segurança",
+      "file_count": 78,
+      "total_size": 596159627,
+      "changed_count": 4,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.3",
+      "previous_version": "1.0.2",
+      "generated_at": "2026-05-17T21:26:58.605Z",
+      "notes": "Icone do instalador e atalhos corrigido",
+      "file_count": 78,
+      "total_size": 596154264,
+      "changed_count": 4,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.2",
+      "previous_version": "1.0.2",
+      "generated_at": "2026-05-17T21:17:11.184Z",
+      "notes": "Instalador NSIS e atualizacao silenciosa do launcher",
+      "file_count": 78,
+      "total_size": 596150211,
+      "changed_count": 4,
+      "removed_count": 1
+    },
+    {
+      "version": "1.0.1",
+      "previous_version": "1.0.0",
+      "generated_at": "2026-05-17T21:09:37.314Z",
+      "notes": "Atualizacao silenciosa do launcher via CDN",
+      "file_count": 77,
+      "total_size": 578568524,
+      "changed_count": 4,
+      "removed_count": 0
+    },
+    {
+      "version": "1.0.0",
+      "previous_version": "1.0.0",
+      "generated_at": "2026-05-17T20:22:33.574Z",
+      "notes": "Build inicial do launcher com atualizacao automatica",
+      "file_count": 76,
+      "total_size": 578555706,
+      "changed_count": 75,
+      "removed_count": 0
+    },
+    {
+      "version": "2026-05-17.19.30.56",
+      "previous_version": "2026-05-17.19.30.21",
+      "generated_at": "2026-05-17T19:30:56.880Z",
+      "notes": "",
+      "file_count": 1,
+      "total_size": 1114,
+      "changed_count": 0,
+      "removed_count": 0
+    },
+    {
+      "version": "2026-05-17.19.30.21",
+      "previous_version": "0.0.0",
+      "generated_at": "2026-05-17T19:30:27.602Z",
+      "notes": "",
+      "file_count": 1,
+      "total_size": 1114,
+      "changed_count": 1,
+      "removed_count": 0
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+name: "<aqua>ᴛᴇᴍᴘᴇsᴛᴀᴅᴇ ᴇʟᴇᴍᴇɴᴛᴀʟ</aqua>"
+mythic-skill: "TempestadeElemental"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 45.0
+  per-level: -0.5
+mana:
+  base: 70.0
+  per-level: -1.0
+stamina: 0.0
+
+cast-time: 2.0
+interruptible: true
+
+max-level: 10
+
+requirements:
+  class: "Mago"
+  level: 15
+
+icon:
+  material: NETHER_STAR
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<aqua><bold>ᴍᴀɢɪᴀ sᴜᴘʀᴇᴍᴀ</bold></aqua>"
+  - ""
+  - "<gray>ᴏ ᴍᴀɢᴏ ᴄᴀɴᴀʟɪᴢᴀ ᴛᴏᴅᴏs ᴏs</gray>"
+  - "<gray>ᴇʟᴇᴍᴇɴᴛᴏs, ᴅᴇsᴇɴᴄᴀᴅᴇᴀɴᴅᴏ ᴜᴍᴀ</gray>"
+  - "<gray>ᴛᴇᴍᴘᴇsᴛᴀᴅᴇ ᴅᴇᴠᴀsᴛᴀᴅᴏʀᴀ ɴᴀ ᴀʀᴇᴀ.</gray>"
+  - ""
+  - "<aqua><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></aqua>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ʀᴀɪᴏ:<aqua>{radius}</aqua>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<aqua>{duration}s</aqua>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ᴄᴏɴᴊᴜʀᴀᴄᴀᴏ:<red>2.0s</red>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴀɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>15</yellow>"
+
+variables:
+  damage:
+    base: 35.0
+    per-level: 8.0
+  radius:
+    base: 5.0
+    per-level: 0.3
+  duration:
+    base: 6.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "elemental_storm_surge"
+    mechanic-override: "TempestadeElementalMk2"
+    stat-bonus:
+      intelligence: 2.0
+  5:
+    visual: "elemental_storm_cataclysm"
+    mechanic-override: "TempestadeElementalMk3"
+    stat-bonus:
+      intelligence: 3.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 8
+
+sounds:
+  cast-start:
+    sound: "entity.lightning_bolt.thunder"
+    volume: 1.0
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.generic.explode"
+    volume: 1.0
+    pitch: 0.5
+  cast-fail:
+    sound: "entity.blaze.hurt"
+    volume: 0.5
+    pitch: 0.8

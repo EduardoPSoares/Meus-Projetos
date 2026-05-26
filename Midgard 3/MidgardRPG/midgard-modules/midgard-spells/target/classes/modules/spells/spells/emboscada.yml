@@ -1,0 +1,78 @@
+name: "<dark_purple>ᴇᴍʙᴏsᴄᴀᴅᴀ</dark_purple>"
+mythic-skill: "Emboscada"
+spell-type: COMMON
+
+cooldown:
+  base: 12.0
+  per-level: -0.4
+mana:
+  base: 20.0
+  per-level: -0.5
+stamina: 18.0
+
+max-level: 10
+
+requirements:
+  class: "Ladino"
+  level: 8
+
+icon:
+  material: LEATHER
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴏ ʟᴀᴅɪɴᴏ sᴇ ᴇsᴄᴏɴᴅᴇ ɴᴀs sᴏᴍʙʀᴀs</gray>"
+  - "<gray>ᴇ ᴀᴛᴀᴄᴀ ᴅᴇ sᴜʀᴘʀᴇsᴀ, ᴄᴀᴜsᴀɴᴅᴏ</gray>"
+  - "<gray>ᴅᴀɴᴏ ᴍᴀssɪᴠᴏ ᴇ ᴀᴛᴏʀᴅᴏᴀɴᴅᴏ ᴏ ᴀʟᴠᴏ.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ʟᴀᴅɪɴᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>8</yellow>"
+
+variables:
+  damage:
+    base: 22.0
+    per-level: 5.5
+
+milestones:
+  3:
+    visual: "emboscada_shadow"
+    mechanic-override: "EmboscadaMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "emboscada_strike"
+    mechanic-override: "EmboscadaMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.phantom.flap"
+    volume: 0.6
+    pitch: 1.4
+  cast-finish:
+    sound: "entity.player.attack.crit"
+    volume: 1.0
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

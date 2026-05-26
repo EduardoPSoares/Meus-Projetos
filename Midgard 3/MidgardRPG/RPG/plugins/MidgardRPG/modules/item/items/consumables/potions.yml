@@ -1,0 +1,322 @@
+pocao_vida_menor:
+  base:
+    material: POTION
+    name: "<white>ᴘᴏᴄᴀᴏ ᴅᴇ ᴠɪᴅᴀ ᴍᴇɴᴏʀ</white>"
+    tier: COMMON
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴘᴏᴄᴀᴏ sɪᴍᴘʟᴇs ǫᴜᴇ</gray>"
+    - "<gray>ʀᴇsᴛᴀᴜʀᴀ ᴜᴍ ᴘᴏᴜᴄᴏ ᴅᴇ ᴠɪᴅᴀ.</gray>"
+    revision-id: 1
+    health-regeneration: 5
+    crafting:
+      enabled: true
+      recipes:
+        craft_pocao_vida_menor:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "RED_MUSHROOM"
+
+pocao_vida:
+  base:
+    material: POTION
+    name: "<green>ᴘᴏᴄᴀᴏ ᴅᴇ ᴠɪᴅᴀ</green>"
+    tier: UNCOMMON
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴘᴏᴄᴀᴏ ǫᴜᴇ ʀᴇsᴛᴀᴜʀᴀ</gray>"
+    - "<gray>ᴜᴍᴀ ʙᴏᴀ ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ ᴠɪᴅᴀ.</gray>"
+    revision-id: 1
+    health-regeneration: 12
+    crafting:
+      enabled: true
+      recipes:
+        craft_pocao_vida:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "GLISTERING_MELON_SLICE"
+            2: "midgard:essencia_luz"
+
+pocao_vida_maior:
+  base:
+    material: POTION
+    name: "<blue>ᴘᴏᴄᴀᴏ ᴅᴇ ᴠɪᴅᴀ ᴍᴀɪᴏʀ</blue>"
+    tier: RARE
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴘᴏᴄᴀᴏ ᴘᴏᴅᴇʀᴏsᴀ ǫᴜᴇ</gray>"
+    - "<gray>ʀᴇsᴛᴀᴜʀᴀ ɢʀᴀɴᴅᴇ ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ ᴠɪᴅᴀ.</gray>"
+    revision-id: 1
+    health-regeneration: 25
+    crafting:
+      enabled: true
+      recipes:
+        craft_pocao_vida_maior:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "midgard:essencia_divina"
+            2: "midgard:fragmento_alma"
+
+pocao_mana_menor:
+  base:
+    material: POTION
+    name: "<white>ᴘᴏᴄᴀᴏ ᴅᴇ ᴍᴀɴᴀ ᴍᴇɴᴏʀ</white>"
+    tier: COMMON
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴘᴏᴄᴀᴏ sɪᴍᴘʟᴇs ǫᴜᴇ</gray>"
+    - "<gray>ʀᴇsᴛᴀᴜʀᴀ ᴜᴍ ᴘᴏᴜᴄᴏ ᴅᴇ ᴍᴀɴᴀ.</gray>"
+    revision-id: 1
+    mana-regeneration: 5
+    crafting:
+      enabled: true
+      recipes:
+        craft_pocao_mana_menor:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "LAPIS_LAZULI"
+
+pocao_mana:
+  base:
+    material: POTION
+    name: "<green>ᴘᴏᴄᴀᴏ ᴅᴇ ᴍᴀɴᴀ</green>"
+    tier: UNCOMMON
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴘᴏᴄᴀᴏ ǫᴜᴇ ʀᴇsᴛᴀᴜʀᴀ</gray>"
+    - "<gray>ᴜᴍᴀ ʙᴏᴀ ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ ᴍᴀɴᴀ.</gray>"
+    revision-id: 1
+    mana-regeneration: 12
+    crafting:
+      enabled: true
+      recipes:
+        craft_pocao_mana:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "LAPIS_LAZULI"
+            2: "midgard:po_de_mithril"
+
+pocao_mana_maior:
+  base:
+    material: POTION
+    name: "<blue>ᴘᴏᴄᴀᴏ ᴅᴇ ᴍᴀɴᴀ ᴍᴀɪᴏʀ</blue>"
+    tier: RARE
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴘᴏᴄᴀᴏ ᴘᴏᴅᴇʀᴏsᴀ ǫᴜᴇ</gray>"
+    - "<gray>ʀᴇsᴛᴀᴜʀᴀ ɢʀᴀɴᴅᴇ ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ ᴍᴀɴᴀ.</gray>"
+    revision-id: 1
+    mana-regeneration: 25
+    crafting:
+      enabled: true
+      recipes:
+        craft_pocao_mana_maior:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "midgard:cristal_arcano"
+            2: "midgard:pedra_magica"
+
+pocao_stamina_menor:
+  base:
+    material: POTION
+    name: "<white>ᴘᴏᴄᴀᴏ ᴅᴇ sᴛᴀᴍɪɴᴀ ᴍᴇɴᴏʀ</white>"
+    tier: COMMON
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴘᴏᴄᴀᴏ sɪᴍᴘʟᴇs ǫᴜᴇ</gray>"
+    - "<gray>ʀᴇsᴛᴀᴜʀᴀ ᴜᴍ ᴘᴏᴜᴄᴏ ᴅᴇ sᴛᴀᴍɪɴᴀ.</gray>"
+    revision-id: 1
+    stamina-regeneration: 5
+    crafting:
+      enabled: true
+      recipes:
+        craft_pocao_stamina_menor:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "SUGAR"
+
+pocao_stamina:
+  base:
+    material: POTION
+    name: "<green>ᴘᴏᴄᴀᴏ ᴅᴇ sᴛᴀᴍɪɴᴀ</green>"
+    tier: UNCOMMON
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴘᴏᴄᴀᴏ ǫᴜᴇ ʀᴇsᴛᴀᴜʀᴀ</gray>"
+    - "<gray>ᴜᴍᴀ ʙᴏᴀ ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ sᴛᴀᴍɪɴᴀ.</gray>"
+    revision-id: 1
+    stamina-regeneration: 12
+    crafting:
+      enabled: true
+      recipes:
+        craft_pocao_stamina:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "SUGAR"
+            2: "midgard:essencia_terra"
+
+elixir_forca:
+  base:
+    material: POTION
+    name: "<blue>ᴇʟɪxɪʀ ᴅᴇ ꜰᴏʀᴄᴀ</blue>"
+    tier: RARE
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍ ᴇʟɪxɪʀ ǫᴜᴇ ᴀᴜᴍᴇɴᴛᴀ</gray>"
+    - "<gray>ᴛᴇᴍᴘᴏʀᴀʀɪᴀᴍᴇɴᴛᴇ ᴀ ꜰᴏʀᴄᴀ.</gray>"
+    revision-id: 1
+    strength: 8
+    attack-damage: 5
+    crafting:
+      enabled: true
+      recipes:
+        craft_elixir_forca:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "midgard:essencia_fogo"
+            2: "midgard:fragmento_alma"
+
+elixir_inteligencia:
+  base:
+    material: POTION
+    name: "<blue>ᴇʟɪxɪʀ ᴅᴇ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ</blue>"
+    tier: RARE
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍ ᴇʟɪxɪʀ ǫᴜᴇ ᴀᴍᴘʟɪᴀ</gray>"
+    - "<gray>ᴛᴇᴍᴘᴏʀᴀʀɪᴀᴍᴇɴᴛᴇ ᴀ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ.</gray>"
+    revision-id: 1
+    intelligence: 8
+    max-mana: 30
+    crafting:
+      enabled: true
+      recipes:
+        craft_elixir_inteligencia:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "midgard:essencia_luz"
+            2: "midgard:cristal_arcano"
+
+elixir_destreza:
+  base:
+    material: POTION
+    name: "<blue>ᴇʟɪxɪʀ ᴅᴇ ᴅᴇsᴛʀᴇᴢᴀ</blue>"
+    tier: RARE
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍ ᴇʟɪxɪʀ ǫᴜᴇ ᴀᴜᴍᴇɴᴛᴀ</gray>"
+    - "<gray>ᴛᴇᴍᴘᴏʀᴀʀɪᴀᴍᴇɴᴛᴇ ᴀ ᴅᴇsᴛʀᴇᴢᴀ.</gray>"
+    revision-id: 1
+    dexterity: 8
+    dodge-rating: 4
+    crafting:
+      enabled: true
+      recipes:
+        craft_elixir_destreza:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "midgard:essencia_ar"
+            2: "midgard:fragmento_alma"
+
+elixir_protecao:
+  base:
+    material: POTION
+    name: "<blue>ᴇʟɪxɪʀ ᴅᴇ ᴘʀᴏᴛᴇᴄᴀᴏ</blue>"
+    tier: RARE
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍ ᴇʟɪxɪʀ ǫᴜᴇ ᴄᴏɴᴄᴇᴅᴇ</gray>"
+    - "<gray>ᴘʀᴏᴛᴇᴄᴀᴏ ᴛᴇᴍᴘᴏʀᴀʀɪᴀ.</gray>"
+    revision-id: 1
+    defense: 8
+    damage-reduction: 4
+    crafting:
+      enabled: true
+      recipes:
+        craft_elixir_protecao:
+          type: SHAPELESS
+          output: 1
+          shaped: false
+          ingredients:
+            0: "GLASS_BOTTLE"
+            1: "midgard:essencia_terra"
+            2: "midgard:pedra_magica"
+
+elixir_critico:
+  base:
+    material: POTION
+    name: "<purple>ᴇʟɪxɪʀ ᴄʀɪᴛɪᴄᴏ</purple>"
+    tier: EPIC
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍ ᴇʟɪxɪʀ ʀᴀʀᴏ ǫᴜᴇ ᴀꜰɪᴀ</gray>"
+    - "<gray>ᴏs sᴇɴᴛɪᴅᴏs ᴘᴀʀᴀ ɢᴏʟᴘᴇs ᴄʀɪᴛɪᴄᴏs.</gray>"
+    revision-id: 1
+    critical-strike-chance: 10
+    critical-strike-power: 20
+    required-level: 30
+
+pocao_completa:
+  base:
+    material: POTION
+    name: "<purple>ᴘᴏᴄᴀᴏ ᴄᴏᴍᴘʟᴇᴛᴀ</purple>"
+    tier: EPIC
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍᴀ ᴘᴏᴄᴀᴏ ᴄᴏᴍᴘʟᴇᴛᴀ ǫᴜᴇ</gray>"
+    - "<gray>ʀᴇsᴛᴀᴜʀᴀ ᴠɪᴅᴀ, ᴍᴀɴᴀ ᴇ sᴛᴀᴍɪɴᴀ.</gray>"
+    revision-id: 1
+    health-regeneration: 30
+    mana-regeneration: 30
+    stamina-regeneration: 30
+    required-level: 30
+
+banquete_real:
+  base:
+    material: POTION
+    name: "<purple>ʙᴀɴǫᴜᴇᴛᴇ ʀᴇᴀʟ</purple>"
+    tier: EPIC
+    type: CONSUMABLE
+    description:
+    - "<gray>ᴜᴍ ʙᴀɴǫᴜᴇᴛᴇ ᴅɪɢɴᴏ ᴅᴇ ʀᴇɪs,</gray>"
+    - "<gray>ꜰᴏʀᴛᴀʟᴇᴄᴇ ᴛᴏᴅᴏs ᴏs ᴀᴛʀɪʙᴜᴛᴏs.</gray>"
+    revision-id: 1
+    max-health: 20
+    max-mana: 20
+    strength: 4
+    intelligence: 4
+    dexterity: 4
+    required-level: 30

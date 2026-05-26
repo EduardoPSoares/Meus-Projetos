@@ -1,0 +1,83 @@
+name: "<gold>ᴊᴜʟɢᴀᴍᴇɴᴛᴏ ᴅɪᴠɪɴᴏ</gold>"
+mythic-skill: "JulgamentoDivino"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 50.0
+  per-level: -1.5
+mana:
+  base: 45.0
+  per-level: -1.2
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Clerigo"
+  level: 20
+
+icon:
+  material: SUNFLOWER
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴜʟᴛɪᴍᴀᴛᴇ</bold></gold>"
+  - ""
+  - "<gray>ɪɴᴠᴏᴄᴀ ᴏ ᴊᴜʟɢᴀᴍᴇɴᴛᴏ ᴅɪᴠɪɴᴏ sᴏʙʀᴇ</gray>"
+  - "<gray>ᴏs ɪɴɪᴍɪɢᴏs, ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ sᴀɢʀᴀᴅᴏ</gray>"
+  - "<gray>ᴍᴀssɪᴠᴏ ᴇ ᴄᴜʀᴀɴᴅᴏ ᴀʟɪᴀᴅᴏs ɴᴀ ᴀʀᴇᴀ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ sᴀɢʀᴀᴅᴏ:<red>{damage}</red>"
+  - "<gray>ᴄᴜʀᴀ ᴅᴇ ᴀʟɪᴀᴅᴏs:<green>{heal}</green>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴄʟᴇʀɪɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>20</yellow>"
+
+variables:
+  damage:
+    base: 45.0
+    per-level: 10.0
+  heal:
+    base: 30.0
+    per-level: 6.0
+
+milestones:
+  3:
+    visual: "julgamento_divino_light"
+    mechanic-override: "JulgamentoDivinoMk2"
+    stat-bonus:
+      intelligence: 2.0
+  5:
+    visual: "julgamento_divino_wrath"
+    mechanic-override: "JulgamentoDivinoMk3"
+    stat-bonus:
+      vitality: 3.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 3
+    vitality: 2
+
+sounds:
+  cast-start:
+    sound: "entity.lightning_bolt.thunder"
+    volume: 1.0
+    pitch: 0.8
+  cast-finish:
+    sound: "block.beacon.activate"
+    volume: 1.0
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

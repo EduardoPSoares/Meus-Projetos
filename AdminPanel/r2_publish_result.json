@@ -1,0 +1,16 @@
+﻿{
+    "success":  true,
+    "version":  "1.0.1",
+    "source_dir":  "C:\\Users\\ray\\Desktop\\WarfaceDatabase\\WarfaceSurvival\\WarfaceSurvivor",
+    "game_version_url":  "https://pub-5359fa4ead8743cbbc40f1166dd089f1.r2.dev/game-version.json",
+    "manifest_url":  "https://pub-5359fa4ead8743cbbc40f1166dd089f1.r2.dev/game-manifest.json",
+    "base_url":  "https://pub-5359fa4ead8743cbbc40f1166dd089f1.r2.dev/",
+    "file_count":  483,
+    "total_size":  18850137072,
+    "uploaded_count":  285,
+    "uploaded_size":  17957246831,
+    "skipped_existing_count":  198,
+    "skipped_existing_size":  892890241,
+    "copied_size":  0,
+    "removed_count":  0
+}

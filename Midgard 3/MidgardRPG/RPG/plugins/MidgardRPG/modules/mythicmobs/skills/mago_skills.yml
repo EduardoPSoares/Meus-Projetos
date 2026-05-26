@@ -1,0 +1,1290 @@
+﻿# ============================================================================
+# MAGO (MAGE) CLASS SKILLS - MidgardRPG
+# ============================================================================
+# Color Theme:
+#   Blue (#0088ff) | Purple (#8800ff) | Cyan (#00ccff)
+#   Arcane Violet (#6600cc) | Fire Orange (#ff6600)
+#   Ice Blue (#00ccff) | Lightning Yellow (#ffff00)
+#
+# All dynamic values use <skill.var.VARIABLE_NAME> syntax
+# Custom mechanics: midgardDamage, midgardShield
+# Minecraft 1.21.1 + Folia compatible
+# ============================================================================
+
+
+# ============================================================================
+#  1. SABEDORIA ARCANA (PASSIVE) — Arcane Wisdom, Intelligence Bonus
+#     Variables: intelligence_bonus (base: 3.0 / scaling: 1.0)
+#     Milestones: lvl3=arcane_wisdom_aura, lvl5=arcane_wisdom_glow
+# ============================================================================
+
+SabedoriaArcana:
+  Skills:
+  - skill{s=SabedoriaArcana_Cast} @self
+
+SabedoriaArcana_Cast:
+  Skills:
+  - sound{s=entity.experience_orb.pickup;v=0.8;p=1.4} @self
+  - particles{p=enchant;amount=20;hS=0.5;vS=1.0;y=0.5;speed=0.3} @self
+  - particles{p=reddust;color=#8800ff;size=1.2;amount=15;hS=0.4;vS=0.8;y=0.5;speed=0.05} @self
+  - particles{p=end_rod;amount=8;hS=0.3;vS=0.6;y=0.5;speed=0.02} @self
+
+# --- Sabedoria Arcana Mk2 (arcane_wisdom_aura) ---
+
+SabedoriaArcanaMk2:
+  Skills:
+  - skill{s=SabedoriaArcanaMk2_Cast} @self
+
+SabedoriaArcanaMk2_Cast:
+  Skills:
+  - sound{s=entity.experience_orb.pickup;v=0.9;p=1.5} @self
+  - particles{p=enchant;amount=30;hS=0.6;vS=1.2;y=0.5;speed=0.35} @self
+  - particles{p=reddust;color=#8800ff;size=1.4;amount=20;hS=0.5;vS=1.0;y=0.5;speed=0.05} @self
+  - particles{p=end_rod;amount=12;hS=0.4;vS=0.8;y=0.5;speed=0.02} @self
+  - particlering{p=reddust;color=#6600cc;size=0.8;amount=20;radius=1.5;points=20;y=0.1} @self
+  - particles{p=witch;amount=10;hS=0.5;vS=0.8;y=0.5;speed=0.08} @self
+
+# --- Sabedoria Arcana Mk3 (arcane_wisdom_glow) ---
+
+SabedoriaArcanaMk3:
+  Skills:
+  - skill{s=SabedoriaArcanaMk3_Cast} @self
+
+SabedoriaArcanaMk3_Cast:
+  Skills:
+  - sound{s=entity.experience_orb.pickup;v=1.0;p=1.6} @self
+  - sound{s=block.beacon.ambient;v=0.5;p=1.8} @self
+  - particles{p=enchant;amount=40;hS=0.8;vS=1.5;y=0.5;speed=0.4} @self
+  - particles{p=reddust;color=#8800ff;size=1.6;amount=25;hS=0.6;vS=1.2;y=0.5;speed=0.05} @self
+  - particles{p=end_rod;amount=18;hS=0.5;vS=1.0;y=0.5;speed=0.03} @self
+  - particlering{p=reddust;color=#6600cc;size=1.0;amount=30;radius=2.0;points=30;y=0.1} @self
+  - particlering{p=reddust;color=#0088ff;size=0.6;amount=20;radius=1.0;points=20;y=1.5} @self
+  - particles{p=witch;amount=15;hS=0.7;vS=1.0;y=0.5;speed=0.1} @self
+  - particles{p=reverse_portal;amount=10;hS=0.3;vS=0.5;y=1.0;speed=0.02} @self
+
+
+# ============================================================================
+#  2. FLUXO DE MANA (PASSIVE) — Mana Flow, Passive Mana Regen
+#     Variables: mana_regen (base: 1.0 / scaling: 0.5)
+#     Milestones: lvl3=mana_flow_particles, lvl5=mana_flow_surge
+# ============================================================================
+
+FluxoDeMana:
+  Skills:
+  - skill{s=FluxoDeMana_Cast} @self
+
+FluxoDeMana_Cast:
+  Skills:
+  - sound{s=block.conduit.ambient;v=0.6;p=1.6} @self
+  - particles{p=reddust;color=#00ccff;size=1.0;amount=15;hS=0.4;vS=0.8;y=0.5;speed=0.05} @self
+  - particles{p=reddust;color=#0088ff;size=0.8;amount=10;hS=0.3;vS=0.6;y=0.3;speed=0.08} @self
+  - particles{p=sculk_soul;amount=5;hS=0.3;vS=0.5;y=0.5;speed=0.02} @self
+
+# --- Fluxo De Mana Mk2 (mana_flow_particles) ---
+
+FluxoDeManaMk2:
+  Skills:
+  - skill{s=FluxoDeManaMk2_Cast} @self
+
+FluxoDeManaMk2_Cast:
+  Skills:
+  - sound{s=block.conduit.ambient;v=0.7;p=1.6} @self
+  - particles{p=reddust;color=#00ccff;size=1.2;amount=20;hS=0.5;vS=1.0;y=0.5;speed=0.05} @self
+  - particles{p=reddust;color=#0088ff;size=1.0;amount=15;hS=0.4;vS=0.8;y=0.3;speed=0.08} @self
+  - particles{p=sculk_soul;amount=8;hS=0.4;vS=0.6;y=0.5;speed=0.02} @self
+  - particlering{p=reddust;color=#00ccff;size=0.6;amount=15;radius=1.0;points=15;y=0.2} @self
+  - particles{p=dripping_water;amount=5;hS=0.3;vS=0.3;y=1.0;speed=0.01} @self
+
+# --- Fluxo De Mana Mk3 (mana_flow_surge) ---
+
+FluxoDeManaMk3:
+  Skills:
+  - skill{s=FluxoDeManaMk3_Cast} @self
+
+FluxoDeManaMk3_Cast:
+  Skills:
+  - sound{s=block.conduit.ambient;v=0.8;p=1.8} @self
+  - sound{s=block.conduit.activate;v=0.4;p=1.6} @self
+  - particles{p=reddust;color=#00ccff;size=1.4;amount=30;hS=0.6;vS=1.2;y=0.5;speed=0.06} @self
+  - particles{p=reddust;color=#0088ff;size=1.2;amount=20;hS=0.5;vS=1.0;y=0.3;speed=0.1} @self
+  - particles{p=sculk_soul;amount=12;hS=0.5;vS=0.8;y=0.5;speed=0.03} @self
+  - particlering{p=reddust;color=#00ccff;size=0.8;amount=25;radius=1.5;points=25;y=0.2} @self
+  - particlering{p=reddust;color=#0088ff;size=0.6;amount=15;radius=0.8;points=15;y=1.2} @self
+  - particles{p=dripping_water;amount=8;hS=0.4;vS=0.4;y=1.2;speed=0.01} @self
+  - particles{p=end_rod;amount=6;hS=0.3;vS=0.5;y=0.8;speed=0.01} @self
+
+
+# ============================================================================
+#  3. BOLA DE FOGO (COMMON) — Fireball Projectile, Explodes on Hit
+#     Variables: damage (base: 15.0 / scaling: 4.0)
+#     Milestones: lvl3=fireball_enhanced, lvl5=fireball_inferno
+# ============================================================================
+
+BolaDeFogo:
+  Skills:
+  - skill{s=BolaDeFogo_Cast} @self
+
+BolaDeFogo_Cast:
+  Skills:
+  - sound{s=entity.blaze.shoot;v=1.0;p=0.8} @self
+  - particles{p=flame;amount=20;hS=0.3;vS=0.3;y=1.0;speed=0.1} @self
+  - projectile{onTick=BolaDeFogo_Tick;onHit=BolaDeFogo_Hit;onEnd=BolaDeFogo_End;v=8;i=1;hnp=true;hp=true;hR=1.0;sB=false;mr=30} @forward{f=30;y=1}
+
+BolaDeFogo_Tick:
+  Skills:
+  - particles{p=flame;amount=6;hS=0.15;vS=0.15;speed=0.02} @origin
+  - particles{p=smoke;amount=3;hS=0.1;vS=0.1;speed=0.01} @origin
+  - particles{p=reddust;color=#ff6600;size=1.5;amount=4;hS=0.1;vS=0.1;speed=0.01} @origin
+
+BolaDeFogo_Hit:
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @target
+  - sound{s=entity.generic.explode;v=1.0;p=1.2} @target
+  - particles{p=flame;amount=40;hS=0.8;vS=0.8;speed=0.15} @target
+  - particles{p=large_smoke;amount=15;hS=0.6;vS=0.6;speed=0.1} @target
+  - particles{p=lava;amount=8;hS=0.5;vS=0.5;speed=0.05} @target
+  - ignite{d=40} @target
+
+BolaDeFogo_End:
+  Skills:
+  - sound{s=entity.generic.explode;v=0.8;p=1.4} @origin
+  - particles{p=flame;amount=30;hS=0.6;vS=0.6;speed=0.12} @origin
+  - particles{p=large_smoke;amount=10;hS=0.5;vS=0.5;speed=0.08} @origin
+
+# --- Bola De Fogo Mk2 (fireball_enhanced) ---
+
+BolaDeFogoMk2:
+  Skills:
+  - skill{s=BolaDeFogoMk2_Cast} @self
+
+BolaDeFogoMk2_Cast:
+  Skills:
+  - sound{s=entity.blaze.shoot;v=1.0;p=0.7} @self
+  - sound{s=item.firecharge.use;v=0.8;p=0.9} @self
+  - particles{p=flame;amount=30;hS=0.4;vS=0.4;y=1.0;speed=0.12} @self
+  - projectile{onTick=BolaDeFogoMk2_Tick;onHit=BolaDeFogoMk2_Hit;onEnd=BolaDeFogoMk2_End;v=10;i=1;hnp=true;hp=true;hR=1.2;sB=false;mr=35} @forward{f=35;y=1}
+
+BolaDeFogoMk2_Tick:
+  Skills:
+  - particles{p=flame;amount=10;hS=0.2;vS=0.2;speed=0.03} @origin
+  - particles{p=soul_fire_flame;amount=4;hS=0.15;vS=0.15;speed=0.02} @origin
+  - particles{p=smoke;amount=4;hS=0.15;vS=0.15;speed=0.01} @origin
+  - particles{p=reddust;color=#ff6600;size=1.8;amount=6;hS=0.15;vS=0.15;speed=0.01} @origin
+
+BolaDeFogoMk2_Hit:
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @target
+  - sound{s=entity.generic.explode;v=1.0;p=1.0} @target
+  - particles{p=flame;amount=55;hS=1.0;vS=1.0;speed=0.18} @target
+  - particles{p=large_smoke;amount=20;hS=0.8;vS=0.8;speed=0.12} @target
+  - particles{p=lava;amount=12;hS=0.6;vS=0.6;speed=0.06} @target
+  - particles{p=reddust;color=#ff6600;size=2.0;amount=15;hS=0.8;vS=0.8;speed=0.05} @target
+  - ignite{d=60} @target
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=2}
+
+BolaDeFogoMk2_End:
+  Skills:
+  - sound{s=entity.generic.explode;v=0.9;p=1.2} @origin
+  - particles{p=flame;amount=40;hS=0.8;vS=0.8;speed=0.15} @origin
+  - particles{p=large_smoke;amount=15;hS=0.6;vS=0.6;speed=0.1} @origin
+  - particlering{p=flame;amount=20;radius=1.5;points=20} @origin
+
+# --- Bola De Fogo Mk3 (fireball_inferno) ---
+
+BolaDeFogoMk3:
+  Skills:
+  - skill{s=BolaDeFogoMk3_Cast} @self
+
+BolaDeFogoMk3_Cast:
+  Skills:
+  - sound{s=entity.blaze.shoot;v=1.0;p=0.6} @self
+  - sound{s=item.firecharge.use;v=1.0;p=0.8} @self
+  - sound{s=entity.ender_dragon.shoot;v=0.6;p=1.4} @self
+  - particles{p=flame;amount=40;hS=0.5;vS=0.5;y=1.0;speed=0.15} @self
+  - particles{p=soul_fire_flame;amount=15;hS=0.3;vS=0.3;y=1.0;speed=0.1} @self
+  - projectile{onTick=BolaDeFogoMk3_Tick;onHit=BolaDeFogoMk3_Hit;onEnd=BolaDeFogoMk3_End;v=12;i=1;hnp=true;hp=true;hR=1.5;sB=false;mr=40} @forward{f=40;y=1}
+
+BolaDeFogoMk3_Tick:
+  Skills:
+  - particles{p=flame;amount=14;hS=0.25;vS=0.25;speed=0.04} @origin
+  - particles{p=soul_fire_flame;amount=6;hS=0.2;vS=0.2;speed=0.03} @origin
+  - particles{p=smoke;amount=5;hS=0.2;vS=0.2;speed=0.02} @origin
+  - particles{p=reddust;color=#ff6600;size=2.2;amount=8;hS=0.2;vS=0.2;speed=0.01} @origin
+  - particlering{p=flame;amount=8;radius=0.4;points=8} @origin
+
+BolaDeFogoMk3_Hit:
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @target
+  - sound{s=entity.generic.explode;v=1.0;p=0.8} @target
+  - sound{s=entity.wither.break_block;v=0.8;p=1.2} @target
+  - particles{p=flame;amount=80;hS=1.5;vS=1.5;speed=0.2} @target
+  - particles{p=soul_fire_flame;amount=30;hS=1.2;vS=1.2;speed=0.15} @target
+  - particles{p=large_smoke;amount=30;hS=1.0;vS=1.0;speed=0.15} @target
+  - particles{p=lava;amount=20;hS=0.8;vS=0.8;speed=0.08} @target
+  - particles{p=reddust;color=#ff6600;size=2.5;amount=25;hS=1.2;vS=1.2;speed=0.05} @target
+  - particlering{p=flame;amount=30;radius=2.5;points=30} @target
+  - particlering{p=reddust;color=#ff6600;size=1.5;amount=20;radius=3.0;points=20;y=0.5} @target
+  - ignite{d=80} @target
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=3}
+  - ignite{d=60} @EntitiesInRadius{r=3}
+
+BolaDeFogoMk3_End:
+  Skills:
+  - sound{s=entity.generic.explode;v=1.0;p=1.0} @origin
+  - particles{p=flame;amount=60;hS=1.2;vS=1.2;speed=0.18} @origin
+  - particles{p=soul_fire_flame;amount=20;hS=1.0;vS=1.0;speed=0.12} @origin
+  - particles{p=large_smoke;amount=20;hS=0.8;vS=0.8;speed=0.12} @origin
+  - particlering{p=flame;amount=25;radius=2.0;points=25} @origin
+
+
+# ============================================================================
+#  4. RAIO GLACIAL (COMMON) — Frost Ray, Damage + Slow
+#     Variables: damage (base: 12.0 / scaling: 3.5),
+#                slowness_duration (base: 2.0 / scaling: 0.3)
+#     Milestones: lvl3=glacial_ray_frost, lvl5=glacial_ray_blizzard
+# ============================================================================
+
+RaioGlacial:
+  Skills:
+  - skill{s=RaioGlacial_Cast} @self
+
+RaioGlacial_Cast:
+  Skills:
+  - sound{s=entity.player.hurt_freeze;v=1.0;p=0.6} @self
+  - sound{s=block.glass.break;v=0.7;p=1.8} @self
+  - particles{p=snowflake;amount=15;hS=0.3;vS=0.3;y=1.0;speed=0.05} @self
+  - projectile{onTick=RaioGlacial_Tick;onHit=RaioGlacial_Hit;onEnd=RaioGlacial_End;v=10;i=1;hnp=true;hp=true;hR=0.8;sB=false;mr=25} @forward{f=25;y=1}
+
+RaioGlacial_Tick:
+  Skills:
+  - particles{p=snowflake;amount=5;hS=0.1;vS=0.1;speed=0.02} @origin
+  - particles{p=reddust;color=#00ccff;size=1.2;amount=4;hS=0.1;vS=0.1;speed=0.01} @origin
+  - particles{p=end_rod;amount=2;hS=0.05;vS=0.05;speed=0.01} @origin
+
+RaioGlacial_Hit:
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @target
+  - sound{s=block.glass.break;v=1.0;p=1.6} @target
+  - particles{p=snowflake;amount=35;hS=0.6;vS=0.6;speed=0.1} @target
+  - particles{p=reddust;color=#00ccff;size=1.5;amount=20;hS=0.5;vS=0.5;speed=0.05} @target
+  - particles{p=block_crack;m=ICE;amount=15;hS=0.5;vS=0.5;speed=0.08} @target
+  - potion{t=SLOWNESS;d=<skill.var.slowness_duration>;l=1} @target
+
+RaioGlacial_End:
+  Skills:
+  - sound{s=block.glass.break;v=0.6;p=1.8} @origin
+  - particles{p=snowflake;amount=20;hS=0.4;vS=0.4;speed=0.08} @origin
+  - particles{p=reddust;color=#00ccff;size=1.0;amount=10;hS=0.3;vS=0.3;speed=0.03} @origin
+
+# --- Raio Glacial Mk2 (glacial_ray_frost) ---
+
+RaioGlacialMk2:
+  Skills:
+  - skill{s=RaioGlacialMk2_Cast} @self
+
+RaioGlacialMk2_Cast:
+  Skills:
+  - sound{s=entity.player.hurt_freeze;v=1.0;p=0.5} @self
+  - sound{s=block.glass.break;v=0.8;p=1.6} @self
+  - sound{s=block.powder_snow.step;v=0.6;p=0.8} @self
+  - particles{p=snowflake;amount=25;hS=0.4;vS=0.4;y=1.0;speed=0.06} @self
+  - projectile{onTick=RaioGlacialMk2_Tick;onHit=RaioGlacialMk2_Hit;onEnd=RaioGlacialMk2_End;v=12;i=1;hnp=true;hp=true;hR=1.0;sB=false;mr=30} @forward{f=30;y=1}
+
+RaioGlacialMk2_Tick:
+  Skills:
+  - particles{p=snowflake;amount=8;hS=0.15;vS=0.15;speed=0.03} @origin
+  - particles{p=reddust;color=#00ccff;size=1.5;amount=6;hS=0.12;vS=0.12;speed=0.01} @origin
+  - particles{p=end_rod;amount=3;hS=0.08;vS=0.08;speed=0.01} @origin
+  - particles{p=reddust;color=#0088ff;size=0.8;amount=3;hS=0.1;vS=0.1;speed=0.02} @origin
+
+RaioGlacialMk2_Hit:
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @target
+  - sound{s=block.glass.break;v=1.0;p=1.4} @target
+  - sound{s=entity.player.hurt_freeze;v=0.8;p=0.8} @target
+  - particles{p=snowflake;amount=50;hS=0.8;vS=0.8;speed=0.12} @target
+  - particles{p=reddust;color=#00ccff;size=1.8;amount=25;hS=0.7;vS=0.7;speed=0.05} @target
+  - particles{p=block_crack;m=ICE;amount=20;hS=0.6;vS=0.6;speed=0.1} @target
+  - particles{p=block_crack;m=PACKED_ICE;amount=10;hS=0.5;vS=0.5;speed=0.08} @target
+  - particlering{p=snowflake;amount=15;radius=1.5;points=15} @target
+  - potion{t=SLOWNESS;d=<skill.var.slowness_duration>;l=2} @target
+
+RaioGlacialMk2_End:
+  Skills:
+  - sound{s=block.glass.break;v=0.7;p=1.6} @origin
+  - particles{p=snowflake;amount=30;hS=0.5;vS=0.5;speed=0.1} @origin
+  - particles{p=reddust;color=#00ccff;size=1.2;amount=15;hS=0.4;vS=0.4;speed=0.04} @origin
+
+# --- Raio Glacial Mk3 (glacial_ray_blizzard) ---
+
+RaioGlacialMk3:
+  Skills:
+  - skill{s=RaioGlacialMk3_Cast} @self
+
+RaioGlacialMk3_Cast:
+  Skills:
+  - sound{s=entity.player.hurt_freeze;v=1.0;p=0.4} @self
+  - sound{s=block.glass.break;v=1.0;p=1.4} @self
+  - sound{s=item.trident.thunder;v=0.5;p=1.8} @self
+  - particles{p=snowflake;amount=35;hS=0.5;vS=0.5;y=1.0;speed=0.08} @self
+  - particles{p=reddust;color=#00ccff;size=1.5;amount=10;hS=0.3;vS=0.3;y=1.0;speed=0.03} @self
+  - projectile{onTick=RaioGlacialMk3_Tick;onHit=RaioGlacialMk3_Hit;onEnd=RaioGlacialMk3_End;v=14;i=1;hnp=true;hp=true;hR=1.2;sB=false;mr=35} @forward{f=35;y=1}
+
+RaioGlacialMk3_Tick:
+  Skills:
+  - particles{p=snowflake;amount=12;hS=0.2;vS=0.2;speed=0.04} @origin
+  - particles{p=reddust;color=#00ccff;size=1.8;amount=8;hS=0.15;vS=0.15;speed=0.01} @origin
+  - particles{p=end_rod;amount=4;hS=0.1;vS=0.1;speed=0.01} @origin
+  - particles{p=reddust;color=#0088ff;size=1.0;amount=4;hS=0.12;vS=0.12;speed=0.02} @origin
+  - particlering{p=snowflake;amount=6;radius=0.3;points=6} @origin
+
+RaioGlacialMk3_Hit:
+  Skills:
+  - midgardDamage{a=<skill.var.damage>} @target
+  - sound{s=block.glass.break;v=1.0;p=1.2} @target
+  - sound{s=entity.player.hurt_freeze;v=1.0;p=0.6} @target
+  - sound{s=block.powder_snow.break;v=0.8;p=0.8} @target
+  - particles{p=snowflake;amount=70;hS=1.2;vS=1.2;speed=0.15} @target
+  - particles{p=reddust;color=#00ccff;size=2.2;amount=35;hS=1.0;vS=1.0;speed=0.06} @target
+  - particles{p=block_crack;m=ICE;amount=30;hS=0.8;vS=0.8;speed=0.12} @target
+  - particles{p=block_crack;m=PACKED_ICE;amount=15;hS=0.7;vS=0.7;speed=0.1} @target
+  - particles{p=block_crack;m=BLUE_ICE;amount=10;hS=0.6;vS=0.6;speed=0.08} @target
+  - particlering{p=snowflake;amount=25;radius=2.0;points=25} @target
+  - particlering{p=reddust;color=#00ccff;size=1.2;amount=20;radius=2.5;points=20;y=0.5} @target
+  - potion{t=SLOWNESS;d=<skill.var.slowness_duration>;l=3} @target
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=2}
+  - potion{t=SLOWNESS;d=<skill.var.slowness_duration>;l=1} @EntitiesInRadius{r=2}
+
+RaioGlacialMk3_End:
+  Skills:
+  - sound{s=block.glass.break;v=0.9;p=1.4} @origin
+  - particles{p=snowflake;amount=45;hS=0.8;vS=0.8;speed=0.12} @origin
+  - particles{p=reddust;color=#00ccff;size=1.5;amount=20;hS=0.6;vS=0.6;speed=0.05} @origin
+  - particlering{p=snowflake;amount=20;radius=1.5;points=20} @origin
+
+
+# ============================================================================
+#  5. RELAMPAGO (COMMON) — Lightning Bolt, High Damage
+#     Variables: damage (base: 20.0 / scaling: 5.0)
+#     Milestones: lvl3=lightning_spark, lvl5=lightning_storm
+# ============================================================================
+
+Relampago:
+  Skills:
+  - skill{s=Relampago_Cast} @self
+
+Relampago_Cast:
+  Skills:
+  - sound{s=item.trident.thunder;v=1.0;p=1.0} @self
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=1.2} @self
+  - particles{p=electric_spark;amount=25;hS=0.3;vS=0.3;y=1.0;speed=0.2} @self
+  - particles{p=reddust;color=#ffff00;size=1.0;amount=10;hS=0.2;vS=2.0;y=1.0;speed=0.05} @self
+  - lightning @target
+  - midgardDamage{a=<skill.var.damage>} @target
+  - particles{p=electric_spark;amount=40;hS=0.5;vS=1.0;speed=0.3} @target
+  - particles{p=reddust;color=#ffff00;size=1.5;amount=20;hS=0.5;vS=1.5;speed=0.1} @target
+  - particles{p=firework;amount=15;hS=0.3;vS=0.5;speed=0.15} @target
+
+# --- Relampago Mk2 (lightning_spark) ---
+
+RelampagoMk2:
+  Skills:
+  - skill{s=RelampagoMk2_Cast} @self
+
+RelampagoMk2_Cast:
+  Skills:
+  - sound{s=item.trident.thunder;v=1.0;p=0.9} @self
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=1.0} @self
+  - sound{s=entity.lightning_bolt.impact;v=0.8;p=1.2} @self
+  - particles{p=electric_spark;amount=35;hS=0.4;vS=0.4;y=1.0;speed=0.25} @self
+  - particles{p=reddust;color=#ffff00;size=1.2;amount=15;hS=0.3;vS=2.5;y=1.0;speed=0.06} @self
+  - lightning @target
+  - midgardDamage{a=<skill.var.damage>} @target
+  - particles{p=electric_spark;amount=55;hS=0.7;vS=1.2;speed=0.35} @target
+  - particles{p=reddust;color=#ffff00;size=1.8;amount=25;hS=0.7;vS=2.0;speed=0.12} @target
+  - particles{p=firework;amount=20;hS=0.4;vS=0.6;speed=0.18} @target
+  - particlering{p=electric_spark;amount=20;radius=2.0;points=20} @target
+  - skill{s=RelampagoMk2_Spark;delay=5} @target
+
+RelampagoMk2_Spark:
+  Skills:
+  - particles{p=electric_spark;amount=20;hS=0.3;vS=0.8;speed=0.2} @origin
+  - particles{p=reddust;color=#ffff00;size=0.8;amount=10;hS=0.5;vS=1.0;speed=0.08} @origin
+  - sound{s=entity.lightning_bolt.impact;v=0.5;p=1.6} @origin
+
+# --- Relampago Mk3 (lightning_storm) ---
+
+RelampagoMk3:
+  Skills:
+  - skill{s=RelampagoMk3_Cast} @self
+
+RelampagoMk3_Cast:
+  Skills:
+  - sound{s=item.trident.thunder;v=1.0;p=0.8} @self
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.8} @self
+  - sound{s=entity.wither.spawn;v=0.4;p=1.6} @self
+  - particles{p=electric_spark;amount=50;hS=0.5;vS=0.5;y=1.0;speed=0.3} @self
+  - particles{p=reddust;color=#ffff00;size=1.5;amount=20;hS=0.4;vS=3.0;y=1.0;speed=0.08} @self
+  - lightning @target
+  - midgardDamage{a=<skill.var.damage>} @target
+  - particles{p=electric_spark;amount=80;hS=1.0;vS=1.5;speed=0.4} @target
+  - particles{p=reddust;color=#ffff00;size=2.2;amount=35;hS=1.0;vS=2.5;speed=0.15} @target
+  - particles{p=firework;amount=30;hS=0.6;vS=0.8;speed=0.2} @target
+  - particlering{p=electric_spark;amount=30;radius=3.0;points=30} @target
+  - particlering{p=reddust;color=#ffff00;size=1.2;amount=20;radius=2.0;points=20;y=0.5} @target
+  - skill{s=RelampagoMk3_Chain;delay=8} @target
+  - skill{s=RelampagoMk3_Chain;delay=16} @target
+
+RelampagoMk3_Chain:
+  Skills:
+  - sound{s=entity.lightning_bolt.impact;v=0.8;p=1.4} @origin
+  - lightning @origin
+  - particles{p=electric_spark;amount=35;hS=0.6;vS=1.0;speed=0.25} @origin
+  - particles{p=reddust;color=#ffff00;size=1.5;amount=15;hS=0.8;vS=1.5;speed=0.1} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=3}
+
+
+# ============================================================================
+#  6. ESCUDO MAGICO (COMMON) — Magic Shield, Absorb Damage
+#     Variables: shield_amount (base: 20.0 / scaling: 5.0),
+#                duration (base: 5.0 / scaling: 0.5)
+#     Milestones: lvl3=magic_shield_reinforced, lvl5=magic_shield_arcane
+# ============================================================================
+
+EscudoMagico:
+  Skills:
+  - skill{s=EscudoMagico_Cast} @self
+
+EscudoMagico_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.0;p=1.4} @self
+  - sound{s=block.enchantment_table.use;v=0.8;p=1.2} @self
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @self
+  - particles{p=reddust;color=#0088ff;size=1.5;amount=30;hS=0.8;vS=1.0;y=0.5;speed=0.05} @self
+  - particles{p=enchant;amount=20;hS=0.6;vS=0.8;y=0.5;speed=0.2} @self
+  - particlering{p=reddust;color=#0088ff;size=1.0;amount=25;radius=1.5;points=25;y=0.1} @self
+  - particlering{p=reddust;color=#0088ff;size=1.0;amount=25;radius=1.5;points=25;y=1.0} @self
+  - particlering{p=reddust;color=#0088ff;size=1.0;amount=25;radius=1.5;points=25;y=1.8} @self
+  - particles{p=end_rod;amount=10;hS=0.5;vS=0.8;y=0.5;speed=0.02} @self
+
+# --- Escudo Magico Mk2 (magic_shield_reinforced) ---
+
+EscudoMagicoMk2:
+  Skills:
+  - skill{s=EscudoMagicoMk2_Cast} @self
+
+EscudoMagicoMk2_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.0;p=1.2} @self
+  - sound{s=block.enchantment_table.use;v=0.9;p=1.0} @self
+  - sound{s=block.respawn_anchor.charge;v=0.6;p=1.4} @self
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @self
+  - particles{p=reddust;color=#0088ff;size=1.8;amount=40;hS=1.0;vS=1.2;y=0.5;speed=0.06} @self
+  - particles{p=enchant;amount=30;hS=0.8;vS=1.0;y=0.5;speed=0.25} @self
+  - particles{p=reddust;color=#8800ff;size=1.0;amount=15;hS=0.6;vS=0.8;y=0.5;speed=0.04} @self
+  - particlering{p=reddust;color=#0088ff;size=1.2;amount=30;radius=2.0;points=30;y=0.1} @self
+  - particlering{p=reddust;color=#8800ff;size=0.8;amount=20;radius=1.8;points=20;y=1.0} @self
+  - particlering{p=reddust;color=#0088ff;size=1.2;amount=30;radius=2.0;points=30;y=1.8} @self
+  - particles{p=end_rod;amount=15;hS=0.6;vS=1.0;y=0.5;speed=0.02} @self
+  - skill{s=EscudoMagicoMk2_Pulse;delay=20} @self
+
+EscudoMagicoMk2_Pulse:
+  Skills:
+  - particlering{p=reddust;color=#0088ff;size=1.0;amount=20;radius=2.0;points=20;y=0.5} @self
+  - particles{p=enchant;amount=10;hS=0.5;vS=0.6;y=0.5;speed=0.15} @self
+  - sound{s=block.beacon.ambient;v=0.3;p=1.6} @self
+
+# --- Escudo Magico Mk3 (magic_shield_arcane) ---
+
+EscudoMagicoMk3:
+  Skills:
+  - skill{s=EscudoMagicoMk3_Cast} @self
+
+EscudoMagicoMk3_Cast:
+  Skills:
+  - sound{s=block.beacon.activate;v=1.0;p=1.0} @self
+  - sound{s=block.enchantment_table.use;v=1.0;p=0.8} @self
+  - sound{s=block.respawn_anchor.charge;v=0.8;p=1.2} @self
+  - sound{s=block.beacon.power_select;v=0.6;p=1.4} @self
+  - midgardShield{a=<skill.var.shield_amount>;d=<skill.var.duration>} @self
+  - particles{p=reddust;color=#0088ff;size=2.0;amount=50;hS=1.2;vS=1.5;y=0.5;speed=0.07} @self
+  - particles{p=enchant;amount=40;hS=1.0;vS=1.2;y=0.5;speed=0.3} @self
+  - particles{p=reddust;color=#8800ff;size=1.2;amount=20;hS=0.8;vS=1.0;y=0.5;speed=0.05} @self
+  - particles{p=reddust;color=#6600cc;size=0.8;amount=10;hS=0.5;vS=0.6;y=0.5;speed=0.03} @self
+  - particlering{p=reddust;color=#0088ff;size=1.5;amount=35;radius=2.5;points=35;y=0.1} @self
+  - particlering{p=reddust;color=#8800ff;size=1.0;amount=25;radius=2.2;points=25;y=0.6} @self
+  - particlering{p=reddust;color=#6600cc;size=0.8;amount=25;radius=2.0;points=25;y=1.2} @self
+  - particlering{p=reddust;color=#8800ff;size=1.0;amount=25;radius=2.2;points=25;y=1.8} @self
+  - particlering{p=reddust;color=#0088ff;size=1.5;amount=35;radius=2.5;points=35;y=2.4} @self
+  - particles{p=end_rod;amount=20;hS=0.8;vS=1.2;y=0.5;speed=0.02} @self
+  - particles{p=witch;amount=12;hS=0.6;vS=0.8;y=0.5;speed=0.08} @self
+  - skill{s=EscudoMagicoMk3_Pulse;repeat=3;repeatInterval=30} @self
+
+EscudoMagicoMk3_Pulse:
+  Skills:
+  - particlering{p=reddust;color=#0088ff;size=1.2;amount=25;radius=2.5;points=25;y=0.5} @self
+  - particlering{p=reddust;color=#8800ff;size=0.8;amount=15;radius=2.0;points=15;y=1.5} @self
+  - particles{p=enchant;amount=15;hS=0.6;vS=0.8;y=0.5;speed=0.2} @self
+  - particles{p=end_rod;amount=5;hS=0.5;vS=0.5;y=1.0;speed=0.01} @self
+  - sound{s=block.beacon.ambient;v=0.4;p=1.8} @self
+
+
+# ============================================================================
+#  7. METEORO (COMMON) — Meteor Strike, AoE Fire Damage at Target Location
+#     Variables: damage (base: 25.0 / scaling: 6.0),
+#                radius (base: 3.0 / scaling: 0.2)
+#     Milestones: lvl3=meteor_blaze, lvl5=meteor_cataclysm
+# ============================================================================
+
+Meteoro:
+  Skills:
+  - skill{s=Meteoro_Cast} @self
+
+Meteoro_Cast:
+  Skills:
+  - sound{s=entity.ender_dragon.shoot;v=1.0;p=0.6} @self
+  - particles{p=flame;amount=15;hS=0.3;vS=0.3;y=1.0;speed=0.1} @self
+  - skill{s=Meteoro_Warning} @target
+  - projectile{onTick=Meteoro_Tick;onHit=Meteoro_Impact;onEnd=Meteoro_Impact;v=6;i=1;hnp=true;hp=true;hR=1.5;sB=false;mr=30;syo=20} @target
+
+Meteoro_Warning:
+  Skills:
+  - particlering{p=reddust;color=#ff6600;size=1.0;amount=30;radius=<skill.var.radius>;points=30;y=0.1} @origin
+  - sound{s=block.note_block.pling;v=0.8;p=0.5} @origin
+
+Meteoro_Tick:
+  Skills:
+  - particles{p=flame;amount=10;hS=0.2;vS=0.2;speed=0.05} @origin
+  - particles{p=large_smoke;amount=5;hS=0.3;vS=0.3;speed=0.03} @origin
+  - particles{p=reddust;color=#ff6600;size=2.0;amount=6;hS=0.2;vS=0.2;speed=0.02} @origin
+  - particles{p=lava;amount=3;hS=0.2;vS=0.2;speed=0.02} @origin
+
+Meteoro_Impact:
+  Skills:
+  - sound{s=entity.generic.explode;v=1.0;p=0.6} @origin
+  - sound{s=entity.lightning_bolt.thunder;v=0.6;p=0.5} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - particles{p=flame;amount=60;hS=1.5;vS=1.0;speed=0.2} @origin
+  - particles{p=large_smoke;amount=30;hS=1.2;vS=1.5;speed=0.15} @origin
+  - particles{p=lava;amount=20;hS=1.0;vS=0.5;speed=0.1} @origin
+  - particles{p=reddust;color=#ff6600;size=2.5;amount=25;hS=1.5;vS=0.5;speed=0.08} @origin
+  - particlering{p=flame;amount=30;radius=<skill.var.radius>;points=30;y=0.2} @origin
+  - ignite{d=60} @EntitiesInRadius{r=<skill.var.radius>}
+
+# --- Meteoro Mk2 (meteor_blaze) ---
+
+MeteoroMk2:
+  Skills:
+  - skill{s=MeteoroMk2_Cast} @self
+
+MeteoroMk2_Cast:
+  Skills:
+  - sound{s=entity.ender_dragon.shoot;v=1.0;p=0.5} @self
+  - sound{s=entity.blaze.ambient;v=0.7;p=0.7} @self
+  - particles{p=flame;amount=25;hS=0.4;vS=0.4;y=1.0;speed=0.12} @self
+  - skill{s=MeteoroMk2_Warning} @target
+  - projectile{onTick=MeteoroMk2_Tick;onHit=MeteoroMk2_Impact;onEnd=MeteoroMk2_Impact;v=7;i=1;hnp=true;hp=true;hR=1.8;sB=false;mr=35;syo=20} @target
+
+MeteoroMk2_Warning:
+  Skills:
+  - particlering{p=reddust;color=#ff6600;size=1.2;amount=35;radius=<skill.var.radius>;points=35;y=0.1} @origin
+  - particlering{p=flame;amount=15;radius=<skill.var.radius>;points=15;y=0.2} @origin
+  - sound{s=block.note_block.pling;v=0.9;p=0.4} @origin
+
+MeteoroMk2_Tick:
+  Skills:
+  - particles{p=flame;amount=14;hS=0.25;vS=0.25;speed=0.06} @origin
+  - particles{p=soul_fire_flame;amount=5;hS=0.2;vS=0.2;speed=0.04} @origin
+  - particles{p=large_smoke;amount=7;hS=0.35;vS=0.35;speed=0.04} @origin
+  - particles{p=reddust;color=#ff6600;size=2.2;amount=8;hS=0.25;vS=0.25;speed=0.02} @origin
+  - particles{p=lava;amount=4;hS=0.25;vS=0.25;speed=0.03} @origin
+
+MeteoroMk2_Impact:
+  Skills:
+  - sound{s=entity.generic.explode;v=1.0;p=0.5} @origin
+  - sound{s=entity.lightning_bolt.thunder;v=0.8;p=0.4} @origin
+  - sound{s=entity.wither.break_block;v=0.6;p=0.8} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - particles{p=flame;amount=80;hS=2.0;vS=1.5;speed=0.25} @origin
+  - particles{p=soul_fire_flame;amount=25;hS=1.5;vS=1.0;speed=0.18} @origin
+  - particles{p=large_smoke;amount=40;hS=1.8;vS=2.0;speed=0.18} @origin
+  - particles{p=lava;amount=30;hS=1.5;vS=0.8;speed=0.12} @origin
+  - particles{p=reddust;color=#ff6600;size=2.8;amount=30;hS=2.0;vS=0.8;speed=0.1} @origin
+  - particlering{p=flame;amount=40;radius=<skill.var.radius>;points=40;y=0.2} @origin
+  - particlering{p=reddust;color=#ff6600;size=1.5;amount=25;radius=<skill.var.radius>;points=25;y=0.8} @origin
+  - ignite{d=80} @EntitiesInRadius{r=<skill.var.radius>}
+  - skill{s=MeteoroMk2_Afterburn;delay=10} @origin
+
+MeteoroMk2_Afterburn:
+  Skills:
+  - particles{p=flame;amount=25;hS=1.0;vS=0.5;speed=0.1} @origin
+  - particles{p=smoke;amount=15;hS=1.2;vS=1.0;speed=0.08} @origin
+  - sound{s=block.fire.ambient;v=0.6;p=0.8} @origin
+
+# --- Meteoro Mk3 (meteor_cataclysm) ---
+
+MeteoroMk3:
+  Skills:
+  - skill{s=MeteoroMk3_Cast} @self
+
+MeteoroMk3_Cast:
+  Skills:
+  - sound{s=entity.ender_dragon.shoot;v=1.0;p=0.4} @self
+  - sound{s=entity.wither.spawn;v=0.5;p=1.0} @self
+  - particles{p=flame;amount=35;hS=0.5;vS=0.5;y=1.0;speed=0.15} @self
+  - particles{p=soul_fire_flame;amount=15;hS=0.4;vS=0.4;y=1.0;speed=0.1} @self
+  - skill{s=MeteoroMk3_Warning} @target
+  - projectile{onTick=MeteoroMk3_Tick;onHit=MeteoroMk3_Impact;onEnd=MeteoroMk3_Impact;v=8;i=1;hnp=true;hp=true;hR=2.0;sB=false;mr=40;syo=20} @target
+
+MeteoroMk3_Warning:
+  Skills:
+  - particlering{p=reddust;color=#ff6600;size=1.5;amount=40;radius=<skill.var.radius>;points=40;y=0.1} @origin
+  - particlering{p=flame;amount=25;radius=<skill.var.radius>;points=25;y=0.2} @origin
+  - particlering{p=reddust;color=#ff6600;size=0.8;amount=20;radius=<skill.var.radius>;points=20;y=0.5} @origin
+  - sound{s=block.note_block.pling;v=1.0;p=0.3} @origin
+  - sound{s=entity.elder_guardian.curse;v=0.5;p=1.2} @origin
+
+MeteoroMk3_Tick:
+  Skills:
+  - particles{p=flame;amount=18;hS=0.3;vS=0.3;speed=0.07} @origin
+  - particles{p=soul_fire_flame;amount=8;hS=0.25;vS=0.25;speed=0.05} @origin
+  - particles{p=large_smoke;amount=10;hS=0.4;vS=0.4;speed=0.05} @origin
+  - particles{p=reddust;color=#ff6600;size=2.5;amount=10;hS=0.3;vS=0.3;speed=0.02} @origin
+  - particles{p=lava;amount=6;hS=0.3;vS=0.3;speed=0.04} @origin
+  - particlering{p=flame;amount=8;radius=0.5;points=8} @origin
+
+MeteoroMk3_Impact:
+  Skills:
+  - sound{s=entity.generic.explode;v=1.0;p=0.4} @origin
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.3} @origin
+  - sound{s=entity.wither.break_block;v=0.8;p=0.6} @origin
+  - sound{s=entity.ender_dragon.growl;v=0.5;p=1.2} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - particles{p=flame;amount=120;hS=2.5;vS=2.0;speed=0.3} @origin
+  - particles{p=soul_fire_flame;amount=40;hS=2.0;vS=1.5;speed=0.22} @origin
+  - particles{p=large_smoke;amount=50;hS=2.5;vS=2.5;speed=0.2} @origin
+  - particles{p=lava;amount=40;hS=2.0;vS=1.0;speed=0.15} @origin
+  - particles{p=reddust;color=#ff6600;size=3.0;amount=40;hS=2.5;vS=1.0;speed=0.12} @origin
+  - particlering{p=flame;amount=50;radius=<skill.var.radius>;points=50;y=0.2} @origin
+  - particlering{p=soul_fire_flame;amount=30;radius=<skill.var.radius>;points=30;y=0.8} @origin
+  - particlering{p=reddust;color=#ff6600;size=2.0;amount=30;radius=<skill.var.radius>;points=30;y=1.5} @origin
+  - ignite{d=100} @EntitiesInRadius{r=<skill.var.radius>}
+  - skill{s=MeteoroMk3_Aftershock;delay=10} @origin
+  - skill{s=MeteoroMk3_Aftershock;delay=25} @origin
+
+MeteoroMk3_Aftershock:
+  Skills:
+  - sound{s=entity.generic.explode;v=0.7;p=0.8} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - particles{p=flame;amount=40;hS=1.5;vS=1.0;speed=0.15} @origin
+  - particles{p=large_smoke;amount=20;hS=1.5;vS=1.5;speed=0.12} @origin
+  - particlering{p=flame;amount=25;radius=<skill.var.radius>;points=25;y=0.3} @origin
+
+
+# ============================================================================
+#  8. EXPLOSAO ARCANA (COMMON) — Arcane Explosion, AoE Around Caster
+#     Variables: damage (base: 22.0 / scaling: 5.5),
+#                radius (base: 4.0 / scaling: 0.3)
+#     Milestones: lvl3=arcane_burst, lvl5=arcane_nova
+# ============================================================================
+
+ExplosaoArcana:
+  Skills:
+  - skill{s=ExplosaoArcana_Cast} @self
+
+ExplosaoArcana_Cast:
+  Skills:
+  - sound{s=entity.wither.shoot;v=1.0;p=1.4} @self
+  - sound{s=block.respawn_anchor.deplete;v=0.8;p=1.2} @self
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - particles{p=reddust;color=#8800ff;size=2.0;amount=50;hS=1.5;vS=1.0;y=0.5;speed=0.15} @self
+  - particles{p=reddust;color=#0088ff;size=1.5;amount=30;hS=1.2;vS=0.8;y=0.5;speed=0.12} @self
+  - particles{p=witch;amount=25;hS=1.0;vS=0.8;y=0.5;speed=0.15} @self
+  - particles{p=dragon_breath;amount=20;hS=1.0;vS=0.5;y=0.5;speed=0.1} @self
+  - particlering{p=reddust;color=#8800ff;size=1.5;amount=30;radius=<skill.var.radius>;points=30;y=0.3} @self
+  - particles{p=explosion;amount=3;hS=0.8;vS=0.5;y=0.5;speed=0.05} @self
+
+# --- Explosao Arcana Mk2 (arcane_burst) ---
+
+ExplosaoArcanaMk2:
+  Skills:
+  - skill{s=ExplosaoArcanaMk2_Cast} @self
+
+ExplosaoArcanaMk2_Cast:
+  Skills:
+  - sound{s=entity.wither.shoot;v=1.0;p=1.2} @self
+  - sound{s=block.respawn_anchor.deplete;v=1.0;p=1.0} @self
+  - sound{s=entity.ender_dragon.shoot;v=0.5;p=1.4} @self
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - particles{p=reddust;color=#8800ff;size=2.2;amount=65;hS=2.0;vS=1.2;y=0.5;speed=0.18} @self
+  - particles{p=reddust;color=#0088ff;size=1.8;amount=40;hS=1.5;vS=1.0;y=0.5;speed=0.15} @self
+  - particles{p=witch;amount=35;hS=1.5;vS=1.0;y=0.5;speed=0.18} @self
+  - particles{p=dragon_breath;amount=30;hS=1.5;vS=0.8;y=0.5;speed=0.12} @self
+  - particlering{p=reddust;color=#8800ff;size=1.8;amount=35;radius=<skill.var.radius>;points=35;y=0.3} @self
+  - particlering{p=reddust;color=#0088ff;size=1.0;amount=25;radius=<skill.var.radius>;points=25;y=1.0} @self
+  - particles{p=explosion;amount=5;hS=1.0;vS=0.6;y=0.5;speed=0.06} @self
+  - particles{p=reverse_portal;amount=15;hS=0.5;vS=1.0;y=0.5;speed=0.08} @self
+  - skill{s=ExplosaoArcanaMk2_Ring;delay=5} @self
+
+ExplosaoArcanaMk2_Ring:
+  Skills:
+  - particlering{p=reddust;color=#6600cc;size=1.2;amount=25;radius=<skill.var.radius>;points=25;y=0.5} @self
+  - particles{p=witch;amount=15;hS=1.2;vS=0.5;y=0.5;speed=0.1} @self
+
+# --- Explosao Arcana Mk3 (arcane_nova) ---
+
+ExplosaoArcanaMk3:
+  Skills:
+  - skill{s=ExplosaoArcanaMk3_Cast} @self
+
+ExplosaoArcanaMk3_Cast:
+  Skills:
+  - sound{s=entity.wither.shoot;v=1.0;p=1.0} @self
+  - sound{s=block.respawn_anchor.deplete;v=1.0;p=0.8} @self
+  - sound{s=entity.ender_dragon.shoot;v=0.7;p=1.2} @self
+  - sound{s=entity.wither.spawn;v=0.4;p=1.6} @self
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - particles{p=reddust;color=#8800ff;size=2.5;amount=80;hS=2.5;vS=1.5;y=0.5;speed=0.2} @self
+  - particles{p=reddust;color=#0088ff;size=2.0;amount=50;hS=2.0;vS=1.2;y=0.5;speed=0.18} @self
+  - particles{p=reddust;color=#6600cc;size=1.5;amount=30;hS=1.5;vS=1.0;y=0.5;speed=0.12} @self
+  - particles{p=witch;amount=45;hS=2.0;vS=1.2;y=0.5;speed=0.2} @self
+  - particles{p=dragon_breath;amount=40;hS=2.0;vS=1.0;y=0.5;speed=0.15} @self
+  - particlering{p=reddust;color=#8800ff;size=2.0;amount=40;radius=<skill.var.radius>;points=40;y=0.2} @self
+  - particlering{p=reddust;color=#6600cc;size=1.5;amount=35;radius=<skill.var.radius>;points=35;y=0.8} @self
+  - particlering{p=reddust;color=#0088ff;size=1.2;amount=30;radius=<skill.var.radius>;points=30;y=1.5} @self
+  - particles{p=explosion;amount=8;hS=1.5;vS=0.8;y=0.5;speed=0.08} @self
+  - particles{p=reverse_portal;amount=25;hS=0.8;vS=1.5;y=0.5;speed=0.1} @self
+  - particles{p=end_rod;amount=15;hS=1.0;vS=1.5;y=0.5;speed=0.03} @self
+  - skill{s=ExplosaoArcanaMk3_Wave1;delay=5} @self
+  - skill{s=ExplosaoArcanaMk3_Wave2;delay=12} @self
+
+ExplosaoArcanaMk3_Wave1:
+  Skills:
+  - sound{s=entity.wither.shoot;v=0.7;p=1.4} @self
+  - particlering{p=reddust;color=#8800ff;size=1.5;amount=35;radius=<skill.var.radius>;points=35;y=0.5} @self
+  - particles{p=witch;amount=20;hS=1.8;vS=0.8;y=0.5;speed=0.15} @self
+  - particles{p=dragon_breath;amount=15;hS=1.5;vS=0.5;y=0.5;speed=0.1} @self
+
+ExplosaoArcanaMk3_Wave2:
+  Skills:
+  - sound{s=block.respawn_anchor.deplete;v=0.6;p=1.2} @self
+  - particlering{p=reddust;color=#6600cc;size=1.2;amount=30;radius=<skill.var.radius>;points=30;y=0.8} @self
+  - particles{p=reverse_portal;amount=15;hS=1.5;vS=1.0;y=0.5;speed=0.08} @self
+  - particles{p=end_rod;amount=10;hS=1.2;vS=1.0;y=0.5;speed=0.02} @self
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+
+# ============================================================================
+#  9. TEMPESTADE ELEMENTAL (ULTIMATE) — Elemental Storm, Channeled AoE
+#     Variables: damage (base: 35.0 / scaling: 8.0),
+#                radius (base: 5.0 / scaling: 0.3),
+#                duration (base: 6.0 / scaling: 0.5)
+#     Milestones: lvl3=elemental_storm_surge, lvl5=elemental_storm_cataclysm
+# ============================================================================
+
+TempestadeElemental:
+  Skills:
+  - skill{s=TempestadeElemental_Cast} @self
+
+TempestadeElemental_Cast:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.6} @self
+  - sound{s=entity.ender_dragon.growl;v=0.6;p=1.4} @self
+  - particles{p=reddust;color=#8800ff;size=2.0;amount=30;hS=0.5;vS=0.5;y=1.0;speed=0.1} @self
+  # Phase 1: Fire Rain
+  - skill{s=TempestadeElemental_FireRain;repeat=4;repeatInterval=25} @target
+  # Phase 2: Ice Shards (offset start)
+  - skill{s=TempestadeElemental_IceShards;repeat=4;repeatInterval=25;delay=12} @target
+  # Phase 3: Lightning Strikes
+  - skill{s=TempestadeElemental_Lightning;repeat=3;repeatInterval=35;delay=20} @target
+  # Ambient storm particles
+  - skill{s=TempestadeElemental_Ambient;repeat=6;repeatInterval=20} @target
+
+TempestadeElemental_FireRain:
+  Skills:
+  - sound{s=entity.blaze.shoot;v=0.7;p=1.0} @origin
+  - particles{p=flame;amount=30;hS=<skill.var.radius>;vS=0.3;y=5.0;speed=0.15} @origin
+  - particles{p=reddust;color=#ff6600;size=1.5;amount=15;hS=<skill.var.radius>;vS=0.2;y=5.0;speed=0.08} @origin
+  - particles{p=lava;amount=10;hS=<skill.var.radius>;vS=0.5;y=3.0;speed=0.1} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+TempestadeElemental_IceShards:
+  Skills:
+  - sound{s=block.glass.break;v=0.7;p=1.6} @origin
+  - particles{p=snowflake;amount=25;hS=<skill.var.radius>;vS=1.0;y=2.0;speed=0.12} @origin
+  - particles{p=reddust;color=#00ccff;size=1.5;amount=15;hS=<skill.var.radius>;vS=0.5;y=2.0;speed=0.06} @origin
+  - particles{p=block_crack;m=PACKED_ICE;amount=10;hS=<skill.var.radius>;vS=0.5;y=1.0;speed=0.08} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - potion{t=SLOWNESS;d=40;l=1} @EntitiesInRadius{r=<skill.var.radius>}
+
+TempestadeElemental_Lightning:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=0.8;p=1.0} @origin
+  - lightning @origin
+  - particles{p=electric_spark;amount=40;hS=<skill.var.radius>;vS=2.0;speed=0.3} @origin
+  - particles{p=reddust;color=#ffff00;size=1.8;amount=20;hS=<skill.var.radius>;vS=3.0;speed=0.12} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+TempestadeElemental_Ambient:
+  Skills:
+  - particlering{p=reddust;color=#8800ff;size=1.0;amount=20;radius=<skill.var.radius>;points=20;y=0.2} @origin
+  - particles{p=large_smoke;amount=10;hS=<skill.var.radius>;vS=2.0;y=0.5;speed=0.08} @origin
+  - particles{p=witch;amount=8;hS=<skill.var.radius>;vS=1.0;y=1.0;speed=0.06} @origin
+
+# --- Tempestade Elemental Mk2 (elemental_storm_surge) ---
+
+TempestadeElementalMk2:
+  Skills:
+  - skill{s=TempestadeElementalMk2_Cast} @self
+
+TempestadeElementalMk2_Cast:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.5} @self
+  - sound{s=entity.ender_dragon.growl;v=0.8;p=1.2} @self
+  - sound{s=entity.wither.ambient;v=0.5;p=1.4} @self
+  - particles{p=reddust;color=#8800ff;size=2.2;amount=40;hS=0.6;vS=0.6;y=1.0;speed=0.12} @self
+  - particles{p=end_rod;amount=10;hS=0.3;vS=0.5;y=1.0;speed=0.02} @self
+  # Phase 1: Intensified Fire Rain
+  - skill{s=TempestadeElementalMk2_FireRain;repeat=5;repeatInterval=22} @target
+  # Phase 2: Intensified Ice Shards
+  - skill{s=TempestadeElementalMk2_IceShards;repeat=5;repeatInterval=22;delay=10} @target
+  # Phase 3: Intensified Lightning
+  - skill{s=TempestadeElementalMk2_Lightning;repeat=4;repeatInterval=30;delay=18} @target
+  # Ambient storm particles
+  - skill{s=TempestadeElementalMk2_Ambient;repeat=8;repeatInterval=18} @target
+
+TempestadeElementalMk2_FireRain:
+  Skills:
+  - sound{s=entity.blaze.shoot;v=0.8;p=0.9} @origin
+  - particles{p=flame;amount=40;hS=<skill.var.radius>;vS=0.4;y=5.0;speed=0.18} @origin
+  - particles{p=soul_fire_flame;amount=12;hS=<skill.var.radius>;vS=0.3;y=4.0;speed=0.12} @origin
+  - particles{p=reddust;color=#ff6600;size=1.8;amount=20;hS=<skill.var.radius>;vS=0.3;y=5.0;speed=0.1} @origin
+  - particles{p=lava;amount=15;hS=<skill.var.radius>;vS=0.6;y=3.0;speed=0.12} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+TempestadeElementalMk2_IceShards:
+  Skills:
+  - sound{s=block.glass.break;v=0.8;p=1.4} @origin
+  - particles{p=snowflake;amount=35;hS=<skill.var.radius>;vS=1.2;y=2.5;speed=0.15} @origin
+  - particles{p=reddust;color=#00ccff;size=1.8;amount=20;hS=<skill.var.radius>;vS=0.6;y=2.0;speed=0.08} @origin
+  - particles{p=block_crack;m=PACKED_ICE;amount=14;hS=<skill.var.radius>;vS=0.6;y=1.0;speed=0.1} @origin
+  - particles{p=block_crack;m=BLUE_ICE;amount=6;hS=<skill.var.radius>;vS=0.4;y=1.5;speed=0.08} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - potion{t=SLOWNESS;d=50;l=2} @EntitiesInRadius{r=<skill.var.radius>}
+
+TempestadeElementalMk2_Lightning:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=0.9;p=0.9} @origin
+  - lightning @origin
+  - particles{p=electric_spark;amount=55;hS=<skill.var.radius>;vS=2.5;speed=0.35} @origin
+  - particles{p=reddust;color=#ffff00;size=2.0;amount=25;hS=<skill.var.radius>;vS=3.5;speed=0.15} @origin
+  - particles{p=firework;amount=10;hS=<skill.var.radius>;vS=1.0;speed=0.12} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+TempestadeElementalMk2_Ambient:
+  Skills:
+  - particlering{p=reddust;color=#8800ff;size=1.2;amount=25;radius=<skill.var.radius>;points=25;y=0.2} @origin
+  - particlering{p=reddust;color=#6600cc;size=0.8;amount=15;radius=<skill.var.radius>;points=15;y=1.5} @origin
+  - particles{p=large_smoke;amount=14;hS=<skill.var.radius>;vS=2.5;y=0.5;speed=0.1} @origin
+  - particles{p=witch;amount=12;hS=<skill.var.radius>;vS=1.2;y=1.0;speed=0.08} @origin
+
+# --- Tempestade Elemental Mk3 (elemental_storm_cataclysm) ---
+
+TempestadeElementalMk3:
+  Skills:
+  - skill{s=TempestadeElementalMk3_Cast} @self
+
+TempestadeElementalMk3_Cast:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.4} @self
+  - sound{s=entity.ender_dragon.growl;v=1.0;p=1.0} @self
+  - sound{s=entity.wither.spawn;v=0.6;p=1.2} @self
+  - particles{p=reddust;color=#8800ff;size=2.5;amount=50;hS=0.8;vS=0.8;y=1.0;speed=0.15} @self
+  - particles{p=end_rod;amount=15;hS=0.4;vS=0.6;y=1.0;speed=0.03} @self
+  - particles{p=reverse_portal;amount=15;hS=0.3;vS=0.5;y=1.0;speed=0.05} @self
+  # Phase 1: Cataclysmic Fire Rain
+  - skill{s=TempestadeElementalMk3_FireRain;repeat=6;repeatInterval=20} @target
+  # Phase 2: Cataclysmic Ice Shards
+  - skill{s=TempestadeElementalMk3_IceShards;repeat=6;repeatInterval=20;delay=8} @target
+  # Phase 3: Cataclysmic Lightning
+  - skill{s=TempestadeElementalMk3_Lightning;repeat=5;repeatInterval=25;delay=15} @target
+  # Phase 4: Elemental Convergence (extra phase for Mk3)
+  - skill{s=TempestadeElementalMk3_Convergence;repeat=3;repeatInterval=40;delay=30} @target
+  # Ambient storm particles
+  - skill{s=TempestadeElementalMk3_Ambient;repeat=10;repeatInterval=15} @target
+
+TempestadeElementalMk3_FireRain:
+  Skills:
+  - sound{s=entity.blaze.shoot;v=0.9;p=0.8} @origin
+  - particles{p=flame;amount=55;hS=<skill.var.radius>;vS=0.5;y=6.0;speed=0.2} @origin
+  - particles{p=soul_fire_flame;amount=20;hS=<skill.var.radius>;vS=0.4;y=5.0;speed=0.15} @origin
+  - particles{p=reddust;color=#ff6600;size=2.0;amount=25;hS=<skill.var.radius>;vS=0.4;y=6.0;speed=0.12} @origin
+  - particles{p=lava;amount=20;hS=<skill.var.radius>;vS=0.8;y=3.0;speed=0.15} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - ignite{d=40} @EntitiesInRadius{r=<skill.var.radius>}
+
+TempestadeElementalMk3_IceShards:
+  Skills:
+  - sound{s=block.glass.break;v=0.9;p=1.2} @origin
+  - particles{p=snowflake;amount=50;hS=<skill.var.radius>;vS=1.5;y=3.0;speed=0.18} @origin
+  - particles{p=reddust;color=#00ccff;size=2.0;amount=25;hS=<skill.var.radius>;vS=0.8;y=2.5;speed=0.1} @origin
+  - particles{p=block_crack;m=PACKED_ICE;amount=18;hS=<skill.var.radius>;vS=0.8;y=1.0;speed=0.12} @origin
+  - particles{p=block_crack;m=BLUE_ICE;amount=10;hS=<skill.var.radius>;vS=0.6;y=2.0;speed=0.1} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - potion{t=SLOWNESS;d=60;l=3} @EntitiesInRadius{r=<skill.var.radius>}
+
+TempestadeElementalMk3_Lightning:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.8} @origin
+  - lightning @origin
+  - particles{p=electric_spark;amount=70;hS=<skill.var.radius>;vS=3.0;speed=0.4} @origin
+  - particles{p=reddust;color=#ffff00;size=2.2;amount=30;hS=<skill.var.radius>;vS=4.0;speed=0.18} @origin
+  - particles{p=firework;amount=15;hS=<skill.var.radius>;vS=1.5;speed=0.15} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+TempestadeElementalMk3_Convergence:
+  Skills:
+  - sound{s=entity.wither.shoot;v=0.8;p=1.0} @origin
+  - sound{s=entity.ender_dragon.shoot;v=0.6;p=1.2} @origin
+  - particles{p=flame;amount=30;hS=<skill.var.radius>;vS=1.0;speed=0.15} @origin
+  - particles{p=snowflake;amount=30;hS=<skill.var.radius>;vS=1.0;speed=0.15} @origin
+  - particles{p=electric_spark;amount=30;hS=<skill.var.radius>;vS=1.0;speed=0.15} @origin
+  - particles{p=reddust;color=#8800ff;size=2.5;amount=30;hS=<skill.var.radius>;vS=1.5;speed=0.1} @origin
+  - particlering{p=reddust;color=#ff6600;size=1.2;amount=15;radius=<skill.var.radius>;points=15;y=0.3} @origin
+  - particlering{p=reddust;color=#00ccff;size=1.2;amount=15;radius=<skill.var.radius>;points=15;y=1.0} @origin
+  - particlering{p=reddust;color=#ffff00;size=1.2;amount=15;radius=<skill.var.radius>;points=15;y=1.7} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+TempestadeElementalMk3_Ambient:
+  Skills:
+  - particlering{p=reddust;color=#8800ff;size=1.5;amount=30;radius=<skill.var.radius>;points=30;y=0.2} @origin
+  - particlering{p=reddust;color=#6600cc;size=1.0;amount=20;radius=<skill.var.radius>;points=20;y=1.0} @origin
+  - particlering{p=reddust;color=#0088ff;size=0.8;amount=15;radius=<skill.var.radius>;points=15;y=2.0} @origin
+  - particles{p=large_smoke;amount=18;hS=<skill.var.radius>;vS=3.0;y=0.5;speed=0.12} @origin
+  - particles{p=witch;amount=15;hS=<skill.var.radius>;vS=1.5;y=1.0;speed=0.1} @origin
+  - particles{p=dragon_breath;amount=10;hS=<skill.var.radius>;vS=0.5;y=0.3;speed=0.06} @origin
+
+
+# ============================================================================
+#  10. APOCALIPSE ARCANO (ULTIMATE) — Arcane Apocalypse, Max AoE (Channeled)
+#      Variables: damage (base: 50.0 / scaling: 10.0),
+#                 radius (base: 6.0 / scaling: 0.4),
+#                 duration (base: 8.0 / scaling: 0.5)
+#      Milestones: lvl3=arcane_apocalypse_storm, lvl5=arcane_apocalypse_annihilation
+# ============================================================================
+
+ApocalipseArcano:
+  Skills:
+  - skill{s=ApocalipseArcano_Cast} @self
+
+ApocalipseArcano_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.8} @self
+  - sound{s=entity.ender_dragon.growl;v=0.8;p=0.6} @self
+  - sound{s=entity.elder_guardian.curse;v=0.6;p=0.8} @self
+  - particles{p=reddust;color=#8800ff;size=2.5;amount=40;hS=0.5;vS=0.5;y=1.0;speed=0.15} @self
+  - particles{p=reverse_portal;amount=20;hS=0.3;vS=0.5;y=1.0;speed=0.08} @self
+  # Phase 1: Arcane Vortex Formation
+  - skill{s=ApocalipseArcano_Vortex;repeat=5;repeatInterval=30} @target
+  # Phase 2: Purple Beam Strikes
+  - skill{s=ApocalipseArcano_Beams;repeat=4;repeatInterval=35;delay=15} @target
+  # Phase 3: Destruction Waves
+  - skill{s=ApocalipseArcano_Wave;repeat=4;repeatInterval=35;delay=30} @target
+  # Ambient vortex particles
+  - skill{s=ApocalipseArcano_Ambient;repeat=8;repeatInterval=20} @target
+  # Final devastation
+  - skill{s=ApocalipseArcano_Finale;delay=140} @target
+
+ApocalipseArcano_Vortex:
+  Skills:
+  - sound{s=entity.wither.shoot;v=0.8;p=1.2} @origin
+  - particlering{p=reddust;color=#8800ff;size=2.0;amount=40;radius=<skill.var.radius>;points=40;y=0.3} @origin
+  - particlering{p=reddust;color=#6600cc;size=1.5;amount=35;radius=<skill.var.radius>;points=35;y=1.0} @origin
+  - particlering{p=reddust;color=#0088ff;size=1.2;amount=30;radius=<skill.var.radius>;points=30;y=1.8} @origin
+  - particles{p=witch;amount=30;hS=<skill.var.radius>;vS=2.0;y=1.0;speed=0.15} @origin
+  - particles{p=dragon_breath;amount=25;hS=<skill.var.radius>;vS=1.0;y=0.5;speed=0.1} @origin
+  - particles{p=portal;amount=20;hS=<skill.var.radius>;vS=2.0;y=0.5;speed=0.5} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcano_Beams:
+  Skills:
+  - sound{s=block.respawn_anchor.deplete;v=0.9;p=0.8} @origin
+  - sound{s=entity.ender_dragon.shoot;v=0.7;p=1.0} @origin
+  - particles{p=reddust;color=#8800ff;size=2.5;amount=30;hS=0.3;vS=5.0;y=0.5;speed=0.05} @origin
+  - particles{p=reddust;color=#6600cc;size=2.0;amount=25;hS=0.5;vS=4.0;y=1.0;speed=0.06} @origin
+  - particles{p=end_rod;amount=15;hS=0.2;vS=4.0;y=0.5;speed=0.02} @origin
+  - particles{p=reverse_portal;amount=20;hS=0.3;vS=3.0;y=1.0;speed=0.08} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcano_Wave:
+  Skills:
+  - sound{s=entity.wither.break_block;v=0.8;p=0.8} @origin
+  - particles{p=reddust;color=#8800ff;size=2.0;amount=60;hS=<skill.var.radius>;vS=0.5;y=0.5;speed=0.2} @origin
+  - particles{p=reddust;color=#0088ff;size=1.5;amount=40;hS=<skill.var.radius>;vS=0.3;y=0.5;speed=0.15} @origin
+  - particles{p=explosion;amount=5;hS=<skill.var.radius>;vS=0.5;y=0.5;speed=0.08} @origin
+  - particles{p=witch;amount=25;hS=<skill.var.radius>;vS=1.0;y=0.5;speed=0.2} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcano_Ambient:
+  Skills:
+  - particlering{p=reddust;color=#8800ff;size=1.5;amount=35;radius=<skill.var.radius>;points=35;y=0.2} @origin
+  - particlering{p=reddust;color=#6600cc;size=1.0;amount=25;radius=<skill.var.radius>;points=25;y=1.2} @origin
+  - particles{p=large_smoke;amount=15;hS=<skill.var.radius>;vS=3.0;y=0.5;speed=0.1} @origin
+  - particles{p=witch;amount=12;hS=<skill.var.radius>;vS=1.5;y=1.0;speed=0.08} @origin
+  - particles{p=portal;amount=15;hS=<skill.var.radius>;vS=2.0;y=0.5;speed=0.4} @origin
+  - particles{p=enchant;amount=10;hS=<skill.var.radius>;vS=1.0;y=0.5;speed=0.2} @origin
+
+ApocalipseArcano_Finale:
+  Skills:
+  - sound{s=entity.generic.explode;v=1.0;p=0.4} @origin
+  - sound{s=entity.wither.death;v=0.8;p=1.2} @origin
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.5} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - particles{p=reddust;color=#8800ff;size=3.0;amount=100;hS=<skill.var.radius>;vS=3.0;y=1.0;speed=0.25} @origin
+  - particles{p=reddust;color=#6600cc;size=2.5;amount=60;hS=<skill.var.radius>;vS=2.0;y=1.0;speed=0.2} @origin
+  - particles{p=reddust;color=#0088ff;size=2.0;amount=40;hS=<skill.var.radius>;vS=1.5;y=1.0;speed=0.15} @origin
+  - particles{p=explosion;amount=10;hS=<skill.var.radius>;vS=1.0;y=1.0;speed=0.1} @origin
+  - particles{p=witch;amount=40;hS=<skill.var.radius>;vS=2.0;y=1.0;speed=0.2} @origin
+  - particles{p=end_rod;amount=25;hS=<skill.var.radius>;vS=3.0;y=1.0;speed=0.05} @origin
+  - particlering{p=reddust;color=#8800ff;size=2.0;amount=50;radius=<skill.var.radius>;points=50;y=0.3} @origin
+  - particlering{p=reddust;color=#6600cc;size=1.5;amount=40;radius=<skill.var.radius>;points=40;y=1.5} @origin
+  - particlering{p=reddust;color=#0088ff;size=1.2;amount=35;radius=<skill.var.radius>;points=35;y=3.0} @origin
+
+# --- Apocalipse Arcano Mk2 (arcane_apocalypse_storm) ---
+
+ApocalipseArcanoMk2:
+  Skills:
+  - skill{s=ApocalipseArcanoMk2_Cast} @self
+
+ApocalipseArcanoMk2_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.7} @self
+  - sound{s=entity.ender_dragon.growl;v=1.0;p=0.5} @self
+  - sound{s=entity.elder_guardian.curse;v=0.8;p=0.7} @self
+  - sound{s=entity.warden.emerge;v=0.5;p=1.2} @self
+  - particles{p=reddust;color=#8800ff;size=2.8;amount=50;hS=0.6;vS=0.6;y=1.0;speed=0.18} @self
+  - particles{p=reverse_portal;amount=25;hS=0.4;vS=0.6;y=1.0;speed=0.1} @self
+  - particles{p=end_rod;amount=12;hS=0.3;vS=0.5;y=1.0;speed=0.02} @self
+  # Phase 1: Storm Vortex
+  - skill{s=ApocalipseArcanoMk2_Vortex;repeat=6;repeatInterval=28} @target
+  # Phase 2: Arcane Beams
+  - skill{s=ApocalipseArcanoMk2_Beams;repeat=5;repeatInterval=32;delay=12} @target
+  # Phase 3: Destruction Waves
+  - skill{s=ApocalipseArcanoMk2_Wave;repeat=5;repeatInterval=32;delay=25} @target
+  # Phase 4: Lightning Strikes
+  - skill{s=ApocalipseArcanoMk2_Lightning;repeat=4;repeatInterval=40;delay=20} @target
+  # Ambient particles
+  - skill{s=ApocalipseArcanoMk2_Ambient;repeat=10;repeatInterval=18} @target
+  # Final devastation
+  - skill{s=ApocalipseArcanoMk2_Finale;delay=160} @target
+
+ApocalipseArcanoMk2_Vortex:
+  Skills:
+  - sound{s=entity.wither.shoot;v=0.9;p=1.0} @origin
+  - particlering{p=reddust;color=#8800ff;size=2.2;amount=45;radius=<skill.var.radius>;points=45;y=0.3} @origin
+  - particlering{p=reddust;color=#6600cc;size=1.8;amount=40;radius=<skill.var.radius>;points=40;y=1.2} @origin
+  - particlering{p=reddust;color=#0088ff;size=1.5;amount=35;radius=<skill.var.radius>;points=35;y=2.2} @origin
+  - particles{p=witch;amount=40;hS=<skill.var.radius>;vS=2.5;y=1.0;speed=0.18} @origin
+  - particles{p=dragon_breath;amount=30;hS=<skill.var.radius>;vS=1.5;y=0.5;speed=0.12} @origin
+  - particles{p=portal;amount=25;hS=<skill.var.radius>;vS=2.5;y=0.5;speed=0.6} @origin
+  - particles{p=reverse_portal;amount=15;hS=<skill.var.radius>;vS=2.0;y=1.0;speed=0.08} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcanoMk2_Beams:
+  Skills:
+  - sound{s=block.respawn_anchor.deplete;v=1.0;p=0.7} @origin
+  - sound{s=entity.ender_dragon.shoot;v=0.8;p=0.9} @origin
+  - particles{p=reddust;color=#8800ff;size=3.0;amount=40;hS=0.4;vS=6.0;y=0.5;speed=0.06} @origin
+  - particles{p=reddust;color=#6600cc;size=2.5;amount=30;hS=0.6;vS=5.0;y=1.0;speed=0.07} @origin
+  - particles{p=end_rod;amount=20;hS=0.3;vS=5.0;y=0.5;speed=0.03} @origin
+  - particles{p=reverse_portal;amount=25;hS=0.4;vS=4.0;y=1.0;speed=0.1} @origin
+  - particles{p=enchant;amount=15;hS=0.5;vS=3.0;y=0.5;speed=0.15} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcanoMk2_Wave:
+  Skills:
+  - sound{s=entity.wither.break_block;v=0.9;p=0.7} @origin
+  - particles{p=reddust;color=#8800ff;size=2.5;amount=75;hS=<skill.var.radius>;vS=0.6;y=0.5;speed=0.22} @origin
+  - particles{p=reddust;color=#0088ff;size=2.0;amount=50;hS=<skill.var.radius>;vS=0.4;y=0.5;speed=0.18} @origin
+  - particles{p=reddust;color=#6600cc;size=1.5;amount=30;hS=<skill.var.radius>;vS=0.3;y=0.8;speed=0.12} @origin
+  - particles{p=explosion;amount=7;hS=<skill.var.radius>;vS=0.6;y=0.5;speed=0.1} @origin
+  - particles{p=witch;amount=30;hS=<skill.var.radius>;vS=1.2;y=0.5;speed=0.22} @origin
+  - particles{p=dragon_breath;amount=15;hS=<skill.var.radius>;vS=0.5;y=0.3;speed=0.1} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcanoMk2_Lightning:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=0.8;p=0.8} @origin
+  - lightning @origin
+  - particles{p=electric_spark;amount=40;hS=<skill.var.radius>;vS=2.0;speed=0.3} @origin
+  - particles{p=reddust;color=#ffff00;size=1.5;amount=15;hS=<skill.var.radius>;vS=3.0;speed=0.1} @origin
+  - particles{p=reddust;color=#8800ff;size=1.0;amount=10;hS=<skill.var.radius>;vS=2.0;speed=0.08} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcanoMk2_Ambient:
+  Skills:
+  - particlering{p=reddust;color=#8800ff;size=1.8;amount=40;radius=<skill.var.radius>;points=40;y=0.2} @origin
+  - particlering{p=reddust;color=#6600cc;size=1.2;amount=30;radius=<skill.var.radius>;points=30;y=1.5} @origin
+  - particlering{p=reddust;color=#0088ff;size=0.8;amount=20;radius=<skill.var.radius>;points=20;y=3.0} @origin
+  - particles{p=large_smoke;amount=18;hS=<skill.var.radius>;vS=3.5;y=0.5;speed=0.12} @origin
+  - particles{p=witch;amount=15;hS=<skill.var.radius>;vS=2.0;y=1.0;speed=0.1} @origin
+  - particles{p=portal;amount=18;hS=<skill.var.radius>;vS=2.5;y=0.5;speed=0.5} @origin
+  - particles{p=enchant;amount=12;hS=<skill.var.radius>;vS=1.5;y=0.5;speed=0.25} @origin
+
+ApocalipseArcanoMk2_Finale:
+  Skills:
+  - sound{s=entity.generic.explode;v=1.0;p=0.3} @origin
+  - sound{s=entity.wither.death;v=1.0;p=1.0} @origin
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.4} @origin
+  - sound{s=entity.ender_dragon.death;v=0.5;p=1.4} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - particles{p=reddust;color=#8800ff;size=3.5;amount=120;hS=<skill.var.radius>;vS=4.0;y=1.0;speed=0.3} @origin
+  - particles{p=reddust;color=#6600cc;size=3.0;amount=80;hS=<skill.var.radius>;vS=3.0;y=1.0;speed=0.25} @origin
+  - particles{p=reddust;color=#0088ff;size=2.5;amount=50;hS=<skill.var.radius>;vS=2.0;y=1.0;speed=0.2} @origin
+  - particles{p=explosion;amount=12;hS=<skill.var.radius>;vS=1.5;y=1.0;speed=0.12} @origin
+  - particles{p=witch;amount=50;hS=<skill.var.radius>;vS=3.0;y=1.0;speed=0.25} @origin
+  - particles{p=end_rod;amount=30;hS=<skill.var.radius>;vS=4.0;y=1.0;speed=0.06} @origin
+  - particles{p=reverse_portal;amount=30;hS=<skill.var.radius>;vS=3.0;y=1.0;speed=0.12} @origin
+  - particles{p=dragon_breath;amount=25;hS=<skill.var.radius>;vS=2.0;y=0.5;speed=0.15} @origin
+  - particlering{p=reddust;color=#8800ff;size=2.5;amount=55;radius=<skill.var.radius>;points=55;y=0.3} @origin
+  - particlering{p=reddust;color=#6600cc;size=2.0;amount=45;radius=<skill.var.radius>;points=45;y=1.5} @origin
+  - particlering{p=reddust;color=#0088ff;size=1.5;amount=40;radius=<skill.var.radius>;points=40;y=3.0} @origin
+  - particlering{p=reddust;color=#8800ff;size=1.0;amount=35;radius=<skill.var.radius>;points=35;y=4.5} @origin
+
+# --- Apocalipse Arcano Mk3 (arcane_apocalypse_annihilation) ---
+
+ApocalipseArcanoMk3:
+  Skills:
+  - skill{s=ApocalipseArcanoMk3_Cast} @self
+
+ApocalipseArcanoMk3_Cast:
+  Skills:
+  - sound{s=entity.wither.spawn;v=1.0;p=0.6} @self
+  - sound{s=entity.ender_dragon.growl;v=1.0;p=0.4} @self
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=0.6} @self
+  - sound{s=entity.warden.emerge;v=0.7;p=1.0} @self
+  - sound{s=entity.warden.roar;v=0.4;p=1.6} @self
+  - particles{p=reddust;color=#8800ff;size=3.0;amount=60;hS=0.8;vS=0.8;y=1.0;speed=0.2} @self
+  - particles{p=reverse_portal;amount=30;hS=0.5;vS=0.8;y=1.0;speed=0.12} @self
+  - particles{p=end_rod;amount=18;hS=0.4;vS=0.6;y=1.0;speed=0.03} @self
+  - particles{p=soul;amount=10;hS=0.3;vS=0.5;y=1.0;speed=0.05} @self
+  # Phase 1: Annihilation Vortex
+  - skill{s=ApocalipseArcanoMk3_Vortex;repeat=8;repeatInterval=25} @target
+  # Phase 2: Arcane Annihilation Beams
+  - skill{s=ApocalipseArcanoMk3_Beams;repeat=6;repeatInterval=28;delay=10} @target
+  # Phase 3: Destruction Waves
+  - skill{s=ApocalipseArcanoMk3_Wave;repeat=6;repeatInterval=28;delay=20} @target
+  # Phase 4: Lightning Maelstrom
+  - skill{s=ApocalipseArcanoMk3_Lightning;repeat=5;repeatInterval=35;delay=18} @target
+  # Phase 5: Elemental Convergence
+  - skill{s=ApocalipseArcanoMk3_Convergence;repeat=3;repeatInterval=50;delay=40} @target
+  # Ambient annihilation particles
+  - skill{s=ApocalipseArcanoMk3_Ambient;repeat=12;repeatInterval=15} @target
+  # Grand Finale
+  - skill{s=ApocalipseArcanoMk3_Finale;delay=180} @target
+
+ApocalipseArcanoMk3_Vortex:
+  Skills:
+  - sound{s=entity.wither.shoot;v=1.0;p=0.8} @origin
+  - particlering{p=reddust;color=#8800ff;size=2.5;amount=50;radius=<skill.var.radius>;points=50;y=0.3} @origin
+  - particlering{p=reddust;color=#6600cc;size=2.0;amount=45;radius=<skill.var.radius>;points=45;y=1.0} @origin
+  - particlering{p=reddust;color=#0088ff;size=1.8;amount=40;radius=<skill.var.radius>;points=40;y=1.8} @origin
+  - particlering{p=reddust;color=#00ccff;size=1.5;amount=35;radius=<skill.var.radius>;points=35;y=2.5} @origin
+  - particles{p=witch;amount=50;hS=<skill.var.radius>;vS=3.0;y=1.0;speed=0.2} @origin
+  - particles{p=dragon_breath;amount=35;hS=<skill.var.radius>;vS=2.0;y=0.5;speed=0.15} @origin
+  - particles{p=portal;amount=30;hS=<skill.var.radius>;vS=3.0;y=0.5;speed=0.7} @origin
+  - particles{p=reverse_portal;amount=20;hS=<skill.var.radius>;vS=2.5;y=1.0;speed=0.1} @origin
+  - particles{p=soul;amount=8;hS=<skill.var.radius>;vS=2.0;y=0.5;speed=0.08} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcanoMk3_Beams:
+  Skills:
+  - sound{s=block.respawn_anchor.deplete;v=1.0;p=0.6} @origin
+  - sound{s=entity.ender_dragon.shoot;v=0.9;p=0.8} @origin
+  - particles{p=reddust;color=#8800ff;size=3.5;amount=50;hS=0.5;vS=7.0;y=0.5;speed=0.07} @origin
+  - particles{p=reddust;color=#6600cc;size=3.0;amount=40;hS=0.7;vS=6.0;y=1.0;speed=0.08} @origin
+  - particles{p=reddust;color=#0088ff;size=2.5;amount=30;hS=0.5;vS=5.0;y=0.5;speed=0.06} @origin
+  - particles{p=end_rod;amount=25;hS=0.4;vS=6.0;y=0.5;speed=0.04} @origin
+  - particles{p=reverse_portal;amount=30;hS=0.5;vS=5.0;y=1.0;speed=0.12} @origin
+  - particles{p=enchant;amount=20;hS=0.6;vS=4.0;y=0.5;speed=0.2} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcanoMk3_Wave:
+  Skills:
+  - sound{s=entity.wither.break_block;v=1.0;p=0.6} @origin
+  - sound{s=entity.generic.explode;v=0.7;p=0.8} @origin
+  - particles{p=reddust;color=#8800ff;size=3.0;amount=90;hS=<skill.var.radius>;vS=0.8;y=0.5;speed=0.25} @origin
+  - particles{p=reddust;color=#0088ff;size=2.5;amount=60;hS=<skill.var.radius>;vS=0.5;y=0.5;speed=0.2} @origin
+  - particles{p=reddust;color=#6600cc;size=2.0;amount=40;hS=<skill.var.radius>;vS=0.4;y=0.8;speed=0.15} @origin
+  - particles{p=explosion;amount=10;hS=<skill.var.radius>;vS=0.8;y=0.5;speed=0.12} @origin
+  - particles{p=witch;amount=40;hS=<skill.var.radius>;vS=1.5;y=0.5;speed=0.25} @origin
+  - particles{p=dragon_breath;amount=20;hS=<skill.var.radius>;vS=0.8;y=0.3;speed=0.12} @origin
+  - particles{p=soul;amount=6;hS=<skill.var.radius>;vS=1.0;y=0.5;speed=0.06} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcanoMk3_Lightning:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.6} @origin
+  - lightning @origin
+  - particles{p=electric_spark;amount=55;hS=<skill.var.radius>;vS=3.0;speed=0.35} @origin
+  - particles{p=reddust;color=#ffff00;size=2.0;amount=20;hS=<skill.var.radius>;vS=4.0;speed=0.12} @origin
+  - particles{p=reddust;color=#8800ff;size=1.5;amount=15;hS=<skill.var.radius>;vS=2.5;speed=0.1} @origin
+  - particles{p=firework;amount=10;hS=<skill.var.radius>;vS=1.5;speed=0.12} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcanoMk3_Convergence:
+  Skills:
+  - sound{s=entity.wither.spawn;v=0.6;p=1.2} @origin
+  - sound{s=entity.ender_dragon.shoot;v=0.8;p=0.8} @origin
+  - particles{p=flame;amount=30;hS=<skill.var.radius>;vS=1.5;speed=0.15} @origin
+  - particles{p=snowflake;amount=30;hS=<skill.var.radius>;vS=1.5;speed=0.15} @origin
+  - particles{p=electric_spark;amount=30;hS=<skill.var.radius>;vS=1.5;speed=0.15} @origin
+  - particles{p=reddust;color=#8800ff;size=3.0;amount=40;hS=<skill.var.radius>;vS=2.0;speed=0.12} @origin
+  - particles{p=soul;amount=10;hS=<skill.var.radius>;vS=1.5;speed=0.08} @origin
+  - particlering{p=reddust;color=#ff6600;size=1.5;amount=20;radius=<skill.var.radius>;points=20;y=0.3} @origin
+  - particlering{p=reddust;color=#00ccff;size=1.5;amount=20;radius=<skill.var.radius>;points=20;y=1.2} @origin
+  - particlering{p=reddust;color=#ffff00;size=1.5;amount=20;radius=<skill.var.radius>;points=20;y=2.0} @origin
+  - particlering{p=reddust;color=#8800ff;size=1.5;amount=20;radius=<skill.var.radius>;points=20;y=2.8} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+
+ApocalipseArcanoMk3_Ambient:
+  Skills:
+  - particlering{p=reddust;color=#8800ff;size=2.0;amount=45;radius=<skill.var.radius>;points=45;y=0.2} @origin
+  - particlering{p=reddust;color=#6600cc;size=1.5;amount=35;radius=<skill.var.radius>;points=35;y=1.0} @origin
+  - particlering{p=reddust;color=#0088ff;size=1.2;amount=28;radius=<skill.var.radius>;points=28;y=2.0} @origin
+  - particlering{p=reddust;color=#00ccff;size=1.0;amount=22;radius=<skill.var.radius>;points=22;y=3.0} @origin
+  - particles{p=large_smoke;amount=20;hS=<skill.var.radius>;vS=4.0;y=0.5;speed=0.15} @origin
+  - particles{p=witch;amount=18;hS=<skill.var.radius>;vS=2.5;y=1.0;speed=0.12} @origin
+  - particles{p=portal;amount=22;hS=<skill.var.radius>;vS=3.0;y=0.5;speed=0.6} @origin
+  - particles{p=enchant;amount=15;hS=<skill.var.radius>;vS=2.0;y=0.5;speed=0.3} @origin
+  - particles{p=soul;amount=5;hS=<skill.var.radius>;vS=2.0;y=1.0;speed=0.04} @origin
+
+ApocalipseArcanoMk3_Finale:
+  Skills:
+  - sound{s=entity.generic.explode;v=1.0;p=0.2} @origin
+  - sound{s=entity.wither.death;v=1.0;p=0.8} @origin
+  - sound{s=entity.ender_dragon.death;v=0.8;p=1.2} @origin
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=0.3} @origin
+  - sound{s=entity.warden.sonic_boom;v=0.6;p=0.6} @origin
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - midgardDamage{a=<skill.var.damage>} @EntitiesInRadius{r=<skill.var.radius>}
+  - particles{p=reddust;color=#8800ff;size=4.0;amount=150;hS=<skill.var.radius>;vS=5.0;y=1.0;speed=0.35} @origin
+  - particles{p=reddust;color=#6600cc;size=3.5;amount=100;hS=<skill.var.radius>;vS=4.0;y=1.0;speed=0.3} @origin
+  - particles{p=reddust;color=#0088ff;size=3.0;amount=70;hS=<skill.var.radius>;vS=3.0;y=1.0;speed=0.25} @origin
+  - particles{p=reddust;color=#00ccff;size=2.5;amount=50;hS=<skill.var.radius>;vS=2.5;y=1.0;speed=0.2} @origin
+  - particles{p=explosion;amount=15;hS=<skill.var.radius>;vS=2.0;y=1.0;speed=0.15} @origin
+  - particles{p=witch;amount=60;hS=<skill.var.radius>;vS=4.0;y=1.0;speed=0.3} @origin
+  - particles{p=dragon_breath;amount=40;hS=<skill.var.radius>;vS=3.0;y=0.5;speed=0.2} @origin
+  - particles{p=end_rod;amount=40;hS=<skill.var.radius>;vS=5.0;y=1.0;speed=0.08} @origin
+  - particles{p=reverse_portal;amount=40;hS=<skill.var.radius>;vS=4.0;y=1.0;speed=0.15} @origin
+  - particles{p=soul;amount=15;hS=<skill.var.radius>;vS=3.0;y=1.0;speed=0.08} @origin
+  - particles{p=totem;amount=30;hS=<skill.var.radius>;vS=3.0;y=1.0;speed=0.2} @origin
+  - particlering{p=reddust;color=#8800ff;size=3.0;amount=60;radius=<skill.var.radius>;points=60;y=0.3} @origin
+  - particlering{p=reddust;color=#6600cc;size=2.5;amount=50;radius=<skill.var.radius>;points=50;y=1.0} @origin
+  - particlering{p=reddust;color=#0088ff;size=2.0;amount=45;radius=<skill.var.radius>;points=45;y=2.0} @origin
+  - particlering{p=reddust;color=#00ccff;size=1.5;amount=40;radius=<skill.var.radius>;points=40;y=3.0} @origin
+  - particlering{p=reddust;color=#8800ff;size=1.2;amount=35;radius=<skill.var.radius>;points=35;y=4.0} @origin
+  - particlering{p=reddust;color=#6600cc;size=1.0;amount=30;radius=<skill.var.radius>;points=30;y=5.0} @origin

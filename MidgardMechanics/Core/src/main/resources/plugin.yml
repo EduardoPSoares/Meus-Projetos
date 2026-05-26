@@ -1,0 +1,7 @@
+name: MidgardCore
+version: '${project.version}'
+main: com.midgard.core.MidgardCore
+api-version: '1.21'
+description: Core framework for MidgardMechanics modules
+authors:
+  - MidgardMechanics

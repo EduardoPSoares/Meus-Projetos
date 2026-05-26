@@ -1,0 +1,131 @@
+fragmento_alma:
+  base:
+    material: GHAST_TEAR
+    name: "<blue>ꜰʀᴀɢᴍᴇɴᴛᴏ ᴅᴇ ᴀʟᴍᴀ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ꜰʀᴀɢᴍᴇɴᴛᴏ ᴅᴇ ᴀʟᴍᴀ. ᴄᴏɴᴛᴇᴍ ᴏ ᴇᴄᴏ ᴅᴇ ᴜᴍᴀ ᴀʟᴍᴀ ᴘᴇʀᴅɪᴅᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+cristal_arcano:
+  base:
+    material: AMETHYST_SHARD
+    name: "<blue>ᴄʀɪsᴛᴀʟ ᴀʀᴄᴀɴᴏ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ᴄʀɪsᴛᴀʟ ᴀʀᴄᴀɴᴏ. ʀᴇssᴏᴀ ᴄᴏᴍ ᴇɴᴇʀɢɪᴀ ᴍᴀɢɪᴄᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+po_estelar:
+  base:
+    material: GLOWSTONE_DUST
+    name: "<purple>ᴘᴏ ᴇsᴛᴇʟᴀʀ</purple>"
+    tier: EPIC
+    type: MATERIAL
+    description:
+    - "<gray>ᴘᴏ ᴇsᴛᴇʟᴀʀ. ᴄᴀɪᴅᴏ ᴅᴏs ᴄᴇᴜs.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴇsᴘᴇᴄɪᴀɪs.</gray>"
+    revision-id: 1
+
+coracao_dragao:
+  base:
+    material: DRAGON_EGG
+    name: "<gold>ᴄᴏʀᴀᴄᴀᴏ ᴅᴇ ᴅʀᴀɢᴀᴏ</gold>"
+    tier: LEGENDARY
+    type: MATERIAL
+    description:
+    - "<gray>ᴄᴏʀᴀᴄᴀᴏ ᴅᴇ ᴅʀᴀɢᴀᴏ. ᴀɪɴᴅᴀ ʙᴀᴛᴇ ᴄᴏᴍ ᴘᴏᴅᴇʀ ɪᴍᴇɴsᴏ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ʟᴇɴᴅᴀʀɪᴏs.</gray>"
+    revision-id: 1
+
+nucleo_divino:
+  base:
+    material: NETHER_STAR
+    name: "<light_purple>ɴᴜᴄʟᴇᴏ ᴅɪᴠɪɴᴏ</light_purple>"
+    tier: MYTHIC
+    type: MATERIAL
+    description:
+    - "<gray>ɴᴜᴄʟᴇᴏ ᴅɪᴠɪɴᴏ. ᴜᴍ ꜰʀᴀɢᴍᴇɴᴛᴏ ᴅᴇ ᴘᴏᴅᴇʀ ᴅɪᴠɪɴᴏ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs ᴍɪᴛɪᴄᴏs.</gray>"
+    revision-id: 1
+
+couro_curtido:
+  base:
+    material: LEATHER
+    name: "<white>ᴄᴏᴜʀᴏ ᴄᴜʀᴛɪᴅᴏ</white>"
+    tier: COMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴄᴏᴜʀᴏ ᴄᴜʀᴛɪᴅᴏ. ᴍᴀᴛᴇʀɪᴀʟ ʙᴀsɪᴄᴏ ᴘᴀʀᴀ ᴀʀᴍᴀᴅᴜʀᴀs ʟᴇᴠᴇs.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀs.</gray>"
+    revision-id: 1
+
+tecido_encantado:
+  base:
+    material: STRING
+    name: "<green>ᴛᴇᴄɪᴅᴏ ᴇɴᴄᴀɴᴛᴀᴅᴏ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴛᴇᴄɪᴅᴏ ᴇɴᴄᴀɴᴛᴀᴅᴏ. ᴛᴇᴄɪᴅᴏ ᴄᴏᴍ ꜰɪᴏs ᴍᴀɢɪᴄᴏs.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+escama_dragao:
+  base:
+    material: TURTLE_SCUTE
+    name: "<blue>ᴇsᴄᴀᴍᴀ ᴅᴇ ᴅʀᴀɢᴀᴏ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ᴇsᴄᴀᴍᴀ ᴅᴇ ᴅʀᴀɢᴀᴏ. ᴅᴜʀᴀ ᴄᴏᴍᴏ ᴅɪᴀᴍᴀɴᴛᴇ, ʟᴇᴠᴇ ᴄᴏᴍᴏ ᴘᴇɴᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+pergaminho_antigo:
+  base:
+    material: PAPER
+    name: "<green>ᴘᴇʀɢᴀᴍɪɴʜᴏ ᴀɴᴛɪɢᴏ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴘᴇʀɢᴀᴍɪɴʜᴏ ᴀɴᴛɪɢᴏ. ᴄᴏɴᴛᴇᴍ ᴄᴏɴʜᴇᴄɪᴍᴇɴᴛᴏ ᴇsǫᴜᴇᴄɪᴅᴏ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+osso_ancestral:
+  base:
+    material: BONE
+    name: "<blue>ᴏssᴏ ᴀɴᴄᴇsᴛʀᴀʟ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ᴏssᴏ ᴀɴᴄᴇsᴛʀᴀʟ. ᴅᴇ ᴄʀɪᴀᴛᴜʀᴀs ᴅᴇ ᴇʀᴀs ᴘᴀssᴀᴅᴀs.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+po_de_mithril:
+  base:
+    material: SUGAR
+    name: "<green>ᴘᴏ ᴅᴇ ᴍɪᴛʜʀɪʟ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ᴘᴏ ᴅᴇ ᴍɪᴛʜʀɪʟ. ᴘᴏᴅᴇ sᴇʀ ꜰᴜɴᴅɪᴅᴏ ᴇᴍ ʟɪɴɢᴏᴛᴇs.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+pedra_magica:
+  base:
+    material: LAPIS_LAZULI
+    name: "<blue>ᴘᴇᴅʀᴀ ᴍᴀɢɪᴄᴀ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ᴘᴇᴅʀᴀ ᴍᴀɢɪᴄᴀ. ᴄᴀɴᴀʟɪᴢᴀ ᴇɴᴇʀɢɪᴀs ᴍɪsᴛɪᴄᴀs.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1

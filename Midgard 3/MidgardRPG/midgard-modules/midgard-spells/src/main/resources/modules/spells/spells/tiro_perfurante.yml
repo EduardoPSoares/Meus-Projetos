@@ -1,0 +1,82 @@
+name: "<green>ᴛɪʀᴏ ᴘᴇʀꜰᴜʀᴀɴᴛᴇ</green>"
+mythic-skill: "TiroPerfurante"
+spell-type: COMMON
+
+cooldown:
+  base: 12.0
+  per-level: -0.4
+mana:
+  base: 12.0
+  per-level: -0.4
+stamina: 22.0
+
+max-level: 10
+
+requirements:
+  class: "Arqueiro"
+  level: 8
+
+icon:
+  material: TRIDENT
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<green><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></green>"
+  - ""
+  - "<gray>ᴅɪsᴘᴀʀᴀ ᴜᴍᴀ ꜰʟᴇᴄʜᴀ ǫᴜᴇ ᴘᴇʀꜰᴜʀᴀ</gray>"
+  - "<gray>ᴀ ᴀʀᴍᴀᴅᴜʀᴀ ᴅᴏ ɪɴɪᴍɪɢᴏ, ɪɢɴᴏʀᴀɴᴅᴏ</gray>"
+  - "<gray>ᴘᴀʀᴛᴇ ᴅᴀ ᴅᴇꜰᴇsᴀ.</gray>"
+  - ""
+  - "<green><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></green>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ᴘᴇɴᴇᴛʀᴀᴄᴀᴏ ᴅᴇ ᴀʀᴍᴀᴅᴜʀᴀ:<green>{armor_pen}%</green>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴀʀǫᴜᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>8</yellow>"
+
+variables:
+  damage:
+    base: 20.0
+    per-level: 5.0
+  armor_pen:
+    base: 10.0
+    per-level: 3.0
+
+milestones:
+  3:
+    visual: "tiro_perfurante_spark"
+    mechanic-override: "TiroPerfuranteMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "tiro_perfurante_pierce"
+    mechanic-override: "TiroPerfuranteMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.arrow.shoot"
+    volume: 1.0
+    pitch: 1.4
+  cast-finish:
+    sound: "item.trident.hit"
+    volume: 1.0
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

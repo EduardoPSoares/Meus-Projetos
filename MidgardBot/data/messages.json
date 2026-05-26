@@ -1,0 +1,184 @@
+{
+  "whitelist": {
+    "approved": {
+      "title": "Whitelist Aprovada! Bem-vindo(a) a Midgard!",
+      "description": "**Parabéns, {user}!**\n\nSua jornada em Midgard está prestes a começar! Estamos felizes em recebê-lo(a) em nosso mundo. Prepare-se para criar histórias e aventuras inesquecíveis.",
+      "image": "attachment://aprovado.png",
+      "thumbnail": "{user_avatar}",
+      "color": "#2ECC71",
+      "fields": [
+        {
+          "name": "🎮 Como Entrar no Servidor",
+          "value": "**🖥️ Java Edition**\n> `jogar.midgard.com`",
+          "inline": false
+        },
+        {
+          "name": "📚 Primeiros Passos em Midgard",
+          "value": "1️⃣ **Conecte-se** ao servidor usando o IP acima.\n2️⃣ **Explore o spawn** para conhecer as regras e o ambiente.\n3️⃣ **Interaja** com outros jogadores e comece a criar sua história.\n4️⃣ **Divirta-se** e construa sua lenda!",
+          "inline": false
+        },
+        {
+          "name": "🔗 Links Úteis",
+          "value": "> 📦 [Loja Oficial](https://loja.midgard.com) — Itens e vantagens exclusivas.",
+          "inline": false
+        }
+      ]
+    },
+    "rejected": {
+      "title": "Análise de Whitelist Concluída",
+      "description": "Sua whitelist foi **REPROVADA**.\n\nInfelizmente, sua história não atendeu aos requisitos desta vez. Mas não desanime! Você pode tentar novamente em breve.",
+      "image": "attachment://reprovado.png",
+      "thumbnail": "{user_avatar}",
+      "color": "#E74C3C",
+      "fields": [
+        {
+          "name": "📝 Motivo da Reprovação",
+          "value": "> {reason}",
+          "inline": false
+        }
+      ]
+    },
+    "dm_rejected": {
+      "title": "❌ Atualização sobre sua Whitelist",
+      "description": "Olá, analisamos sua aplicação para o **Midgard RPG** e, infelizmente, ela não foi aprovada desta vez.",
+      "image": "attachment://reprovado.png",
+      "color": "#E74C3C",
+      "fields": [
+        {
+          "name": "📝 Motivo da Reprovação",
+          "value": "> {reason}",
+          "inline": false
+        },
+        {
+          "name": "💡 Dica",
+          "value": "Respostas mais detalhadas e criativas têm muito mais chance de aprovação. Não desista!",
+          "inline": false
+        }
+      ]
+    },
+    "staff_approved": {
+      "title": "Whitelist Aprovada",
+      "description": "O candidato {user} foi aprovado com sucesso!\nO resultado foi enviado no canal público.",
+      "color": "#2ECC71",
+      "fields": []
+    },
+    "staff_rejected": {
+      "title": "Whitelist Reprovada",
+      "description": "O candidato {user} foi reprovado.\nO resultado foi enviado no canal público.",
+      "color": "#E74C3C",
+      "fields": []
+    }
+  },
+  "welcome": {
+    "join": {
+      "title": "👋 Bem-vindo(a) a Midgard!",
+      "description": "Olá {user}, seja muito bem-vindo(a) ao nosso servidor!\n\n📜 **Leia as regras** para evitar punições.\n✅ **Faça sua Whitelist** para jogar no servidor.\n💬 **Interaja** com a comunidade nos canais de bate-papo.",
+      "color": "#00FFFF",
+      "fields": []
+    }
+  },
+  "ticket": {
+    "setup": {
+      "title": "📬 Central de Atendimento",
+      "description": "Bem-vindo ao canal oficial de suporte do **Midgard RPG**.\n\nPara iniciar um atendimento, selecione o departamento que melhor se adequa à sua necessidade no menu abaixo.\n\n**Antes de abrir um ticket:**\n• Verifique nossa **Wiki** ou canal de **FAQ**.\n• Evite abrir tickets desnecessários ou de brincadeira.\n• Seja claro e objetivo na descrição do seu problema.",
+      "image": "https://i.imgur.com/rLcL49T.png",
+      "thumbnail": "{guild_icon}",
+      "color": "#2F3136",
+      "footer": "Midgard RPG • Sistema de Atendimento",
+      "fields": [
+        {
+          "name": "⏰ Horário de Atendimento",
+          "value": "> **Segunda a Sexta:** 09:00 - 22:00\n> **Finais de Semana:** 10:00 - 20:00",
+          "inline": false
+        }
+      ]
+    },
+    "created": {
+      "title": "{emoji} Ticket de {user_name}",
+      "description": "Olá {user}!\n\nObrigado por entrar em contato. Um membro da nossa equipe irá atendê-lo em breve.\n\n**Enquanto aguarda:**\n> 📝 Descreva seu problema com detalhes.\n> 📸 Envie prints ou vídeos se necessário.\n> ⏳ Aguarde, não marque a staff desnecessariamente.",
+      "thumbnail": "{user_avatar}",
+      "color": "#3498DB",
+      "footer": "Ticket ID: {id} • Midgard RPG",
+      "fields": []
+    },
+    "closed_dm": {
+      "title": "📬 Atendimento Finalizado",
+      "description": "Olá, {user}! 👋\n\nSeu ticket foi encerrado com sucesso. Esperamos ter resolvido sua solicitação da melhor maneira possível.\n\n**👥 Equipe de Atendimento:**\n{staff_list}\n\n**⭐ Avalie nosso Atendimento**\nSua opinião é essencial para melhorarmos nossos serviços. Por favor, dedique um momento para avaliar sua experiência utilizando os botões abaixo.\n\n*Agradecemos por fazer parte da comunidade Midgard RPG!*",
+      "color": "#5865F2",
+      "fields": []
+    },
+    "support_label": "Suporte Técnico & Geral",
+    "support_desc": "Auxílio com jogabilidade ou sistema",
+    "support_mention": "<@&ID_DO_CARGO_SUPORTE>",
+    "report_label": "Denúncias & Infrações",
+    "report_desc": "Reportar conduta inadequada",
+    "report_mention": "<@&ID_DO_CARGO_DENUNCIA>",
+    "bug_label": "Relatório de Bugs",
+    "bug_desc": "Reportar falhas técnicas",
+    "bug_mention": "<@&ID_DO_CARGO_DEV>",
+    "lore_label": "Lore & Roleplay",
+    "lore_desc": "Aprovação de histórias e dúvidas de RP",
+    "lore_mention": "<@&ID_DO_CARGO_LORE>"
+  },
+  "moderation": {
+    "ban": {
+      "title": "🔨 Usuário Banido",
+      "description": "**Usuário:** {user_mention}\n**ID:** {user_id}\n\n**Motivo:**\n> {reason}\n\n**Aplicado por:** {staff_mention}",
+      "thumbnail": "{guild_icon}",
+      "color": "#E74C3C",
+      "fields": []
+    },
+    "warn": {
+      "title": "⚠️ Usuário Advertido",
+      "description": "**Usuário:** {user_mention}\n**ID:** {user_id}\n\n**Motivo:**\n> {reason}\n\n**ID da Advertência:** `{warn_id}`\n**Total de Advertências:** `{warn_count}`\n\n**Aplicado por:** {staff_mention}",
+      "thumbnail": "{guild_icon}",
+      "color": "#F1C40F",
+      "fields": []
+    },
+    "dm_warn": {
+      "title": "⚠️ Aviso de Moderação",
+      "description": "Você recebeu uma advertência no servidor **{guild_name}**.",
+      "thumbnail": "{guild_icon}",
+      "color": "#F1C40F",
+      "fields": [
+        {
+          "name": "Motivo",
+          "value": "> {reason}",
+          "inline": false
+        },
+        {
+          "name": "ID da Advertência",
+          "value": "`{warn_id}`",
+          "inline": true
+        }
+      ]
+    },
+    "unwarn": {
+      "title": "✅ Advertência Removida",
+      "description": "**Usuário:** {user_mention}\n**ID da Advertência:** `{warn_id}`\n\n**Removido por:** {staff_mention}",
+      "thumbnail": "{guild_icon}",
+      "color": "#2ECC71",
+      "fields": []
+    }
+  },
+  "general": {
+    "access_denied": {
+      "title": "Acesso Negado",
+      "description": "Você não tem permissão para isso.",
+      "color": "#E74C3C",
+      "fields": []
+    },
+    "success": {
+      "fields": []
+    },
+    "error": {
+      "fields": []
+    }
+  },
+  "resources": {
+    "img_welcome": "https://i.imgur.com/aSAj2iC.png",
+    "img_rejected": "https://i.imgur.com/dJt6p5f.png",
+    "img_whitelist_panel": "https://i.imgur.com/rLcL49T.png",
+    "img_submitted": "https://i.imgur.com/y7vRk9m.png"
+  }
+}

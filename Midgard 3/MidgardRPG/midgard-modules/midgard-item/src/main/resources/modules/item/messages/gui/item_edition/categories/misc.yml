@@ -1,0 +1,153 @@
+stats:
+  permanent_effects:
+    name: '<gradient:#55ffff:#00aaaa><b>🧪 ᴇꜰᴇɪᴛᴏꜱ ᴘᴇʀᴍᴀɴᴇɴᴛᴇꜱ</b></gradient>'
+    lore:
+      - '<gray>ᴇꜰᴇɪᴛᴏꜱ ᴅᴇ ᴘᴏᴄᴀᴏ ᴀᴘʟɪᴄᴀᴅᴏꜱ ᴘᴇʀᴍᴀɴᴇɴᴛᴇᴍᴇɴᴛᴇ ᴀᴏ ꜱᴇɢᴜʀᴀʀ/ᴠᴇꜱᴛɪʀ.'
+      - ''
+      - '<gray>ᴀᴛɪᴠᴏꜱ: <green>%size%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ ᴘᴏᴛɪᴏɴ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴜʟᴛɪᴍᴀ.'
+    hide_attributes: true
+
+  commands:
+    name: '<gradient:#aaaaaa:#555555><b>⌨ ᴄᴏᴍᴀɴᴅᴏꜱ</b></gradient>'
+    lore:
+      - '<gray>ʟɪꜱᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏꜱ ᴇxᴇᴄᴜᴛᴀᴅᴏꜱ ᴀᴏ ᴄʟɪᴄᴀʀ.'
+      - ''
+      - '<gray>ᴄᴏᴍᴀɴᴅᴏꜱ: <green>%size%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ</yellow>'
+    hide_attributes: true
+
+  item_abilities:
+    name: '<gradient:#ff55ff:#aa00aa><b>⚡ ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ ᴇꜱᴘᴇᴄɪᴀɪꜱ</b></gradient>'
+    lore:
+      - '<gray>ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ ᴅᴇ ɪᴛᴇɴꜱ ᴅᴏ ᴍᴍᴏɪᴛᴇᴍꜱ.'
+      - ''
+      - '<gray>ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ: <green>%size%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴄᴏɴꜰɪɢᴜʀᴀʀ ꜱᴋɪʟʟꜱ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴛᴏᴅᴀꜱ.'
+    hide_attributes: true
+
+  gem_sockets:
+    name: '<gradient:#55ff55:#00aa00><b>💎 ɢᴇᴍ ꜱᴏᴄᴋᴇᴛꜱ</b></gradient>'
+    lore:
+      - '<gray>ᴅᴇꜰɪɴᴇ ᴏꜱ ɢᴇᴍ ꜱᴛᴏɴᴇꜱ ᴠᴀᴢɪᴏꜱ.'
+      - ''
+      - '<gray>ꜱʟᴏᴛꜱ: <green>%size%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴄᴏɴꜰɪɢᴜʀᴀʀ ꜱʟᴏᴛꜱ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʟɪᴍᴘᴀʀ ꜱʟᴏᴛꜱ.'
+    hide_attributes: true
+
+  granted_permissions:
+    name: '<gradient:#55ff55:#00aa00><b>🔑 ᴘᴇʀᴍɪꜱꜱᴏᴇꜱ ᴇxᴛʀᴀꜱ</b></gradient>'
+    lore:
+      - '<gray>ᴘᴇʀᴍɪꜱꜱᴏᴇꜱ ᴅᴀᴅᴀꜱ ᴀᴏ ᴊᴏɢᴀᴅᴏʀ ᴇɴǫᴜᴀɴᴛᴏ ᴇʟᴇ ᴛᴇᴍ ᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ᴘᴇʀᴍꜱ: <green>%size%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  item_cooldown:
+    name: '<gradient:#ff5555:#aa0000><b>⏳ ᴄᴏᴏʟᴅᴏᴡɴ</b></gradient>'
+    lore:
+      - '<gray>ᴄᴏᴏʟᴅᴏᴡɴ ᴘᴀʀᴀ ᴏ ɪᴛᴇᴍ ᴘᴏᴅᴇʀ ꜱᴇʀ ᴜꜱᴀᴅᴏ ᴅᴇ ɴᴏᴠᴏ.'
+      - ''
+      - '<gray>ᴛᴇᴍᴘᴏ: <green>%value%ꜱ'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴛᴇᴍᴘᴏ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴄᴏᴏʟᴅᴏᴡɴ.'
+    hide_attributes: true
+
+  cooldown_reference:
+    name: '<gradient:#ff5555:#aa0000><b>🔗 ɢʀᴜᴘᴏ ᴅᴇ ᴄᴏᴏʟᴅᴏᴡɴ</b></gradient>'
+    lore:
+      - '<gray>ɪᴅ ᴄᴏᴍᴘᴀʀᴛɪʟʜᴀᴅᴏ ᴅᴏ ᴄᴏᴏʟᴅᴏᴡɴ.'
+      - ''
+      - '<gray>ʀᴇꜰ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ɪᴅ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɪɴᴅɪᴠɪᴅᴜᴀʟ (ᴘᴀᴅʀᴀᴏ).'
+    hide_attributes: true
+
+  soulbound:
+    name: '<gradient:#aa00aa:#550055><b>⛓ ꜱᴏᴜʟʙᴏᴜɴᴅ (ᴠɪɴᴄᴜʟᴏ)</b></gradient>'
+    lore:
+      - '<gray>ᴘʀᴇɴᴅᴇ ᴏ ɪᴛᴇᴍ ᴀᴏ ᴊᴏɢᴀᴅᴏʀ.'
+      - ''
+      - '<gray>ɴɪᴠᴇʟ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ɴɪᴠᴇʟ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ᴅᴇꜱᴠɪɴᴄᴜʟᴀʀ.'
+    hide_attributes: true
+
+  custom_sounds:
+    name: '<gradient:#ffaa00:#aa5500><b>🎵 ꜱᴏɴꜱ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴏꜱ</b></gradient>'
+    lore:
+      - '<gray>ꜱᴏɴꜱ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴏꜱ ᴘᴀʀᴀ ᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ᴄᴏɴꜰɪɢᴜʀᴀᴅᴏꜱ: <green>%size%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ꜱᴏɴꜱ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ᴜꜱᴀʀ ᴘᴀᴅʀᴀᴏ.'
+    hide_attributes: true
+
+  success_rate:
+    name: '<gradient:#00ff00:#00aa00><b>🎲 ᴛᴀxᴀ ᴅᴇ ꜱᴜᴄᴇꜱꜱᴏ</b></gradient>'
+    lore:
+      - '<gray>ᴛᴀxᴀ ᴅᴇ ꜱᴜᴄᴇꜱꜱᴏ ᴀᴏ ᴀᴘʟɪᴄᴀʀ ᴇᴍ ᴏᴜᴛʀᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ᴄʜᴀɴᴄᴇ: <green>%value%%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄʜᴀɴᴄᴇ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ 100% (ᴘᴀᴅʀᴀᴏ).'
+    hide_attributes: true
+
+  crafting:
+    name: '<gradient:#ffaa00:#aa5500><b>🛠 ʀᴇᴄᴇɪᴛᴀꜱ ᴅᴇ ᴄʀᴀꜰᴛɪɴɢ</b></gradient>'
+    lore:
+      - '<gray>ᴘᴇʀᴍɪᴛᴇ ᴄʀɪᴀʀ ᴇꜱᴛᴇ ɪᴛᴇᴍ ɴᴀ ʙᴀɴᴄᴀᴅᴀ ᴅᴇ ᴛʀᴀʙᴀʟʜᴏ.'
+      - ''
+      - '<gray>ʀᴇᴄᴇɪᴛᴀꜱ: <green>%size%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ʀᴇᴄᴇɪᴛᴀꜱ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  crafting_recipe_permission:
+    name: '<gradient:#ff5555:#aa0000><b>🔒 ᴘᴇʀᴍɪꜱꜱᴀᴏ ᴅᴇ ᴄʀᴀꜰᴛ</b></gradient>'
+    lore:
+      - '<gray>ᴘᴇʀᴍɪꜱꜱᴀᴏ ᴘᴀʀᴀ ᴜᴛɪʟɪᴢᴀʀ ᴇꜱᴛᴀ ʀᴇᴄᴇɪᴛᴀ.'
+      - ''
+      - '<gray>ᴘᴇʀᴍ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴘᴇʀᴍɪꜱꜱᴀᴏ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʟɪʙᴇʀᴀʀ.'
+    hide_attributes: true
+
+  camera_overlay:
+    name: '<gradient:#55ffff:#00aaaa><b>🎥 ᴄᴀᴍᴇʀᴀ ᴏᴠᴇʀʟᴀʏ</b></gradient>'
+    lore:
+      - '<gray>ɪᴍᴀɢᴇᴍ ᴇxɪʙɪᴅᴀ ɴᴀᴏ ʜᴜᴅ ᴀᴏ ᴜꜱᴀʀ ᴏ ɪᴛᴇᴍ.'
+      - ''
+      - '<gray>ᴏᴠᴇʀʟᴀʏ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ ɪᴍᴀɢᴇᴍ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true
+
+  myluck:
+    name: '<gradient:#55ff55:#00aa00><b>🍀 ꜱᴏʀᴛᴇ (ʟᴜᴄᴋ)</b></gradient>'
+    lore:
+      - '<gray>ᴀᴜᴍᴇɴᴛᴀ ᴀ ꜱᴏʀᴛᴇ ᴅᴏ ᴊᴏɢᴀᴅᴏʀ.'
+      - ''
+      - '<gray>ʙᴏɴᴜꜱ: <green>%value%'
+      - ''
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴠᴀʟᴏʀ.'
+      - '<yellow>» ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ.'
+    hide_attributes: true

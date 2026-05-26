@@ -1,0 +1,22 @@
+coin_pouch_tier3:
+  base:
+    material: BUNDLE
+    name: '<gold>ʙᴏʟsᴀ ᴅᴇ ᴍᴏᴇᴅᴀs ɪɪɪ</gold>'
+    tier: EPIC
+    type: MISCELLANEOUS
+    model-data: 1012
+  mechanics:
+    lore:
+      - '<gray>ʀᴀʀɪᴅᴀᴅᴇ:<purple><bold>ᴇᴘɪᴄᴏ</bold></purple>'
+      - ''
+      - '<gray>ᴜᴍᴀ ʙᴏʟsᴀ ʟᴇɴᴅᴀʀɪᴀ ǫᴜᴇ ᴄᴏʟᴇᴛᴀ</gray>'
+      - '<gray>ᴍᴏᴇᴅᴀs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀᴍᴇɴᴛᴇ.</gray>'
+      - ''
+      - '<purple><bold>✦ ɪɴꜰᴏʀᴍᴀᴄᴏᴇs ✦</bold></purple>'
+      - ''
+      - '<gray>ᴄᴀᴘᴀᴄɪᴅᴀᴅᴇ:<white>100.000.000</white> <gray>ᴍᴏᴇᴅᴀs</gray>'
+      - '<gray>ᴇsᴘᴀᴄᴏ:<white>54</white> <gray>sʟᴏᴛs</gray>'
+      - '<gray>ᴄᴏɴᴛᴇᴍ:<green>0</green>'
+      - '<dark_gray><i>ᴄᴏᴍᴘᴀᴄᴛᴀᴄᴀᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀ: ᴀᴛɪᴠᴀᴅᴀ</i></dark_gray>'
+      - ''
+      - '<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɢᴇʀᴇɴᴄɪᴀʀ</gray>'

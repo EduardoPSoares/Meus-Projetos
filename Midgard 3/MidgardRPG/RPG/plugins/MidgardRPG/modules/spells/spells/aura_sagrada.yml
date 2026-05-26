@@ -1,0 +1,75 @@
+name: "<gold>ᴀᴜʀᴀ sᴀɢʀᴀᴅᴀ</gold>"
+mythic-skill: "AuraSagrada"
+spell-type: PASSIVE
+
+cooldown:
+  base: 0.0
+  per-level: 0.0
+mana:
+  base: 0.0
+  per-level: 0.0
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Clerigo"
+  level: 5
+
+icon:
+  material: GLOWSTONE_DUST
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴘᴀssɪᴠᴀ</bold></gold>"
+  - ""
+  - "<gray>ᴜᴍᴀ ᴀᴜʀᴀ sᴀɢʀᴀᴅᴀ ᴇɴᴠᴏʟᴠᴇ ᴏ ᴄʟᴇʀɪɢᴏ,</gray>"
+  - "<gray>ᴄᴜʀᴀɴᴅᴏ ʟᴇɴᴛᴀᴍᴇɴᴛᴇ ᴀ sɪ ᴍᴇsᴍᴏ ᴇ</gray>"
+  - "<gray>ᴀʟɪᴀᴅᴏs ᴘʀᴏxɪᴍᴏs ᴀ ᴄᴀᴅᴀ sᴇɢᴜɴᴅᴏ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ✦</bold></gold>"
+  - ""
+  - "<gray>ᴄᴜʀᴀ ᴘᴏʀ sᴇɢᴜɴᴅᴏ:<gold>{heal_per_sec}</gold>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴄʟᴇʀɪɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  heal_per_sec:
+    base: 1.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "aura_sagrada_light"
+    mechanic-override: "AuraSagradaMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "aura_sagrada_radiance"
+    mechanic-override: "AuraSagradaMk3"
+    stat-bonus:
+      vitality: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 3
+    vitality: 2
+
+sounds:
+  cast-start:
+    sound: "block.beacon.ambient"
+    volume: 0.4
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.experience_orb.pickup"
+    volume: 0.5
+    pitch: 1.4
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

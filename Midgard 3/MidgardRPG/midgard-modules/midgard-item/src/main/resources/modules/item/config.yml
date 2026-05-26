@@ -1,0 +1,117 @@
+# ==============================================================================
+#                        CONFIGURAÇíO DE ITENS - MIDGARD RPG
+# ==============================================================================
+
+settings:
+  # Habilitar debug não console
+  debug: false
+  
+  # Lore padrão para stats (opcional, para formatação automática futura)
+  lore-format:
+    layout:
+      - "{tier}"
+      - "{displayed-type}"
+      - "{stats}"
+      - "{sockets}"
+      - "{abilities}"
+      - "{elements}"
+      - "{lore}"
+    
+    stats:
+      ATTACK_DAMAGE: "<gray>» Dano: <white>{value}"
+      ATTACK_SPEED: "<gray>» Vel. de Ataque: <white>{value}"
+      DODGE_RATING: "<gray>■ Taxa de Esquiva: <green>+{value}%"
+      MAX_HEALTH: "<red>♥ Vida: <green>+{value}"
+      MAX_MANA: "<aqua>■ Mana Máxima: <green>+{value}"
+      MAX_MANA_REGENERATION: "<aqua>■ Regeneração de Mana: <green>+{value}"
+      
+      FIRE_DAMAGE: "<red>♨ {value} {name}"
+      ICE_DAMAGE: "<aqua>❄ {value} {name}"
+      LIGHT_DAMAGE: "<yellow>☀ {value} {name}"
+      DARKNESS_DAMAGE: "<dark_purple>🌑 {value} {name}"
+      DIVINE_DAMAGE: "<gold>✨ {value} {name}"
+      
+      default: "<gray>■ {name}: <white>{value}"
+
+    sockets:
+      empty: "<gray>◆ Engaste de {type} Vazio"
+      filled: "<gray>◆ {gem_name}"
+      separator: "<dark_gray><strikethrough>                                </strikethrough>"
+
+    abilities:
+      passive: "<gray>{name} <dark_gray>| <gold>PASSIVA"
+      active: "<gray>{name} <dark_gray>| <aqua>ATIVO"
+      cooldown: "<gray>⏱ {value}s de Cooldown"
+      separator: "<dark_gray><strikethrough>                                </strikethrough>"
+
+guis:
+  item_edition:
+    title: "<gradient:#55ffff:#00aaaa><bold>✦ Edição de Item ✦</bold></gradient> <gray>%id%"
+    rows: 6
+    items:
+      get_item:
+        slot: 2
+        material: EMERALD
+        name: "<green>✔ ᴏʙᴛᴇʀ ɪᴛᴇᴍ"
+        lore:
+          - "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴘᴇɢᴀʀ ᴇsᴛᴇ ɪᴛᴇᴍ."
+      display_item:
+        slot: 4
+      close:
+        slot: 6
+        material: BARRIER
+        name: "<red>✖ ꜰᴇᴄʜᴀʀ"
+      previous_page:
+        slot: 27
+        material: ARROW
+        name: "<green>← ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ"
+      next_page:
+        slot: 35
+        material: ARROW
+        name: "<green>ᴘʀᴏxɪᴍᴀ ᴘᴀɢɪɴᴀ →"
+      back:
+        slot: 49
+        material: ARROW
+        name: "<yellow>← ᴠᴏʟᴛᴀʀ"
+
+  item_browser:
+    title: "<gradient:#55ffff:#00aaaa><bold>✦ ɴᴀᴠᴇɢᴀᴅᴏʀ ᴅᴇ ɪᴛᴇɴs ✦</bold></gradient>"
+    rows: 6
+    items:
+      delete_mode:
+        slot: 47
+        material: RED_DYE
+        name: "<red>✖ ᴅᴇʟᴇᴛᴀʀ ɪᴛᴇᴍ"
+      create_item:
+        slot: 51
+        material: EMERALD
+        name: "<green>✔ ᴄʀɪᴀʀ ɴᴏᴠᴏ ɪᴛᴇᴍ"
+      previous_page:
+        slot: 18
+        material: ARROW
+        name: "<green>← ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ"
+      next_page:
+        slot: 26
+        material: ARROW
+        name: "<green>ᴘʀᴏxɪᴍᴀ ᴘᴀɢɪɴᴀ →"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "<red>✖ ꜰᴇᴄʜᴀʀ"
+
+  type_browser:
+    title: "<gradient:#55ffff:#00aaaa><bold>✦ ᴄᴀᴛᴇɢᴏʀɪᴀs ✦</bold></gradient>"
+    rows: 6
+    items:
+      previous_page:
+        slot: 18
+        material: ARROW
+        name: "<green>← ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ"
+      next_page:
+        slot: 26
+        material: ARROW
+        name: "<green>ᴘʀᴏxɪᴍᴀ ᴘᴀɢɪɴᴀ →"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "<red>✖ ꜰᴇᴄʜᴀʀ"

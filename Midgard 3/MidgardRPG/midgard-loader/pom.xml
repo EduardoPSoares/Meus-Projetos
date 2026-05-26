@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>me.ray.midgard</groupId>
+        <artifactId>MidgardRPG</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>midgard-loader</artifactId>
+    <name>midgard-loader</name>
+
+    <dependencies>
+        <!-- Folia API -->
+        <dependency>
+            <groupId>dev.folia</groupId>
+            <artifactId>folia-api</artifactId>
+        </dependency>
+
+        <!-- External APIs (provided) -->
+        <dependency>
+            <groupId>io.lumine</groupId>
+            <artifactId>Mythic-Dist</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.oliver</groupId>
+            <artifactId>FancyNpcs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.comphenix.protocol</groupId>
+            <artifactId>ProtocolLib</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+        </dependency>
+
+        <!-- Módulos internos -->
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-commands</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-combat</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-classes</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-item</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-spells</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-mythicmobs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-essentials</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-character</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-performance</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-economy</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-races</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-professions</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.ray.midgard</groupId>
+            <artifactId>midgard-security</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- NMS v1_21 requer o server jar instalado no repo local (ver midgard-nms/v1_21/pom.xml) -->
+    <!-- Para incluir NMS: mvnw package -Pnms -->
+    <profiles>
+        <profile>
+            <id>nms</id>
+            <dependencies>
+                <dependency>
+                    <groupId>me.ray.midgard</groupId>
+                    <artifactId>midgard-nms-v1_21</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <shadedArtifactAttached>false</shadedArtifactAttached>
+                            <artifactSet>
+                                <excludes>
+                                    <exclude>com.github.Angeschossen:LandsAPI</exclude>
+                                </excludes>
+                            </artifactSet>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/maven/**</exclude>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Copia o JAR final para RPG/plugins após o package -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-to-plugins</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <copy file="${project.build.directory}/${project.build.finalName}.jar"
+                                      todir="${project.basedir}/../RPG/plugins"
+                                      overwrite="true"/>
+                                <echo message="Plugin copiado para: RPG/plugins"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,21 @@
+coin_pouch_tier1:
+  base:
+    material: BUNDLE
+    name: '<#cd7f32>ʙᴏʟsᴀ ᴅᴇ ᴍᴏᴇᴅᴀs ɪ</#cd7f32>'
+    tier: UNCOMMON
+    type: MISCELLANEOUS
+    model-data: 1010
+  mechanics:
+    lore:
+      - '<gray>ʀᴀʀɪᴅᴀᴅᴇ:<green><bold>ɪɴᴄᴏᴍᴜᴍ</bold></green>'
+      - ''
+      - '<gray>ᴜᴍᴀ ʙᴏʟsᴀ ᴅᴇ ᴄᴏᴜʀᴏ ǫᴜᴇ ᴄᴏʟᴇᴛᴀ</gray>'
+      - '<gray>ᴍᴏᴇᴅᴀs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀᴍᴇɴᴛᴇ.</gray>'
+      - ''
+      - '<green><bold>✦ ɪɴꜰᴏʀᴍᴀᴄᴏᴇs ✦</bold></green>'
+      - ''
+      - '<gray>ᴄᴀᴘᴀᴄɪᴅᴀᴅᴇ:<white>10.000</white> <gray>ᴍᴏᴇᴅᴀs</gray>'
+      - '<gray>ᴇsᴘᴀᴄᴏ:<white>9</white> <gray>sʟᴏᴛs</gray>'
+      - '<gray>ᴄᴏɴᴛᴇᴍ:<green>0</green>'
+      - ''
+      - '<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ɢᴇʀᴇɴᴄɪᴀʀ</gray>'

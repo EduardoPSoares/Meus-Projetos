@@ -1,0 +1,135 @@
+# Configuração Geral do Módulo de Spells
+general:
+  debug: false
+  show_cast_messages: true
+
+# Progressão interna da spell (uso contínuo)
+progression:
+  uses_per_cast: 1
+  mutation_unlock_uses_default: 20
+  level_uses: 25
+
+# Configuração de Combos Padrão (Slot -> Sequência)
+# 4 combos para os 4 spells ativáveis (3 comuns + 1 ultimate)
+combos:
+  1: "RRR"
+  2: "RLR"
+  3: "RRL"
+  4: "RLL"
+
+# Configuração da GUI de Spells
+gui:
+  title: "<dark_gray>✦ <white>ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴍᴀɢɪᴄᴀs</white>"
+  rows: 5
+  # Slots de equip (row 3: posições 28, 29, 33, 34)
+  slots: [28, 29, 33, 34]
+  
+  background_item:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  
+  items:
+    info:
+      slot: 4
+      material: NETHER_STAR
+      name: "<white>sᴜᴀs ʜᴀʙɪʟɪᴅᴀᴅᴇs</white>"
+    reset:
+      slot: 45
+      material: BARRIER
+      name: "<red>ʟɪᴍᴘᴀʀ sʟᴏᴛs</red>"
+    style:
+      slot: 49
+      material: COMPASS
+      name: "<aqua>ᴇsᴛɪʟᴏ ᴅᴇ ᴄᴏɴᴊᴜʀᴀᴄᴀᴏ</aqua>"
+    help:
+      slot: 53
+      material: BOOK
+      name: "<aqua>ᴀᴊᴜᴅᴀ</aqua>"
+
+  # Modo Skill Bar (4 slots)
+  skill_bar:
+    slots: [20, 21, 23, 24]
+    filled_item:
+      material: ENCHANTED_BOOK
+      name_format: "<green>%spell_name%"
+    empty_item:
+      material: BLACK_STAINED_GLASS_PANE
+      name_format: "<gray>sʟᴏᴛ %slot% · ᴠᴀᴢɪᴏ"
+    invalid_item:
+      material: BARRIER
+      name_format: "<red>sʟᴏᴛ %slot% · ɪɴᴠᴀʟɪᴅᴏ"
+
+  # Modo Combo (4 slots)
+  combo:
+    slots: [20, 21, 23, 24]
+    filled_item:
+      material: ENCHANTED_BOOK
+      name_format: "<green>%spell_name%"
+    empty_item:
+      material: BLACK_STAINED_GLASS_PANE
+      name_format: "<gray>sʟᴏᴛ %slot% · ᴠᴀᴢɪᴏ"
+    invalid_item:
+      material: BARRIER
+      name_format: "<red>sʟᴏᴛ %slot% · ɪɴᴠᴀʟɪᴅᴏ"
+
+# ══════════════════════════════════════════════
+#  SPELL XP SYSTEM
+# ══════════════════════════════════════════════
+spell-xp:
+  enabled: true
+  base-per-cast: 10.0
+  mob-kill-bonus: 25.0
+  pvp-bonus: 50.0
+  retention-rate: 0.5
+  # XP necessário para cada nível (índice = nível)
+  # Se o nível exceder a tabela, usa fórmula: 100 * level^1.5
+  xp-per-level:
+    - 0     # nível 0 (não usado)
+    - 100   # nível 1 -> 2
+    - 200   # nível 2 -> 3
+    - 350   # nível 3 -> 4
+    - 500   # nível 4 -> 5
+    - 700   # nível 5 -> 6
+    - 900   # nível 6 -> 7
+    - 1200  # nível 7 -> 8
+    - 1500  # nível 8 -> 9
+    - 2000  # nível 9 -> 10
+    - 2500  # nível 10 -> 11
+    - 3000  # nível 11 -> 12
+    - 3600  # nível 12 -> 13
+    - 4200  # nível 13 -> 14
+    - 5000  # nível 14 -> 15
+    - 6000  # nível 15 -> 16
+    - 7000  # nível 16 -> 17
+    - 8000  # nível 17 -> 18
+    - 9500  # nível 18 -> 19
+    - 11000 # nível 19 -> 20
+    - 13000 # nível 20 -> 21
+    - 15000 # nível 21 -> 22
+    - 17500 # nível 22 -> 23
+    - 20000 # nível 23 -> 24
+    - 23000 # nível 24 -> 25
+    - 26000 # nível 25 -> 26
+    - 30000 # nível 26 -> 27
+    - 35000 # nível 27 -> 28
+    - 40000 # nível 28 -> 29
+    - 50000 # nível 29 -> 30
+
+# ══════════════════════════════════════════════
+#  DEFAULTS (valores padrão para spells)
+# ══════════════════════════════════════════════
+defaults:
+  interrupt-threshold: 0.0
+  sounds:
+    cast-start:
+      sound: ENTITY_ENDER_DRAGON_FLAP
+      volume: 0.5
+      pitch: 1.5
+    cast-finish:
+      sound: ENTITY_PLAYER_LEVELUP
+      volume: 0.5
+      pitch: 2.0
+    cast-fail:
+      sound: BLOCK_NOTE_BLOCK_BASS
+      volume: 1.0
+      pitch: 0.5

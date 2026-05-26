@@ -1,0 +1,237 @@
+# ============================================
+# Heavy Armor Sets - Tanks
+# ============================================
+
+# --- Guardiao Set (LEGENDARY) ---
+
+guardiao_elmo:
+  base:
+    material: NETHERITE_HELMET
+    name: "<gold>ᴇʟᴍᴏ ᴅᴏ ɢᴜᴀʀᴅɪᴀᴏ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴇʟᴍᴏ ᴅᴏs ɢᴜᴀʀᴅɪᴀᴇs ᴀɴᴄᴇsᴛʀᴀɪs,</gray>"
+    - "<gray>ᴘʀᴏᴛᴇɢᴇ ᴄᴏɴᴛʀᴀ ᴀs ꜰᴏʀᴄᴀs ᴅᴏ ᴄᴀᴏs.</gray>"
+    revision-id: 1
+    armor: 28
+    defense: 22
+    strength: 10
+    max-health: 50
+    damage-reduction: 6
+    block-rating: 5
+    knockback-resistance: 4
+    required-level: 50
+
+guardiao_peitoral:
+  base:
+    material: NETHERITE_CHESTPLATE
+    name: "<gold>ᴘᴇɪᴛᴏʀᴀʟ ᴅᴏ ɢᴜᴀʀᴅɪᴀᴏ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ᴘᴇɪᴛᴏʀᴀʟ ɪᴍᴘᴇɴᴇᴛʀᴀᴠᴇʟ ᴅᴏ ɢᴜᴀʀᴅɪᴀᴏ,</gray>"
+    - "<gray>ɴᴇɴʜᴜᴍ ɢᴏʟᴘᴇ ᴘᴏᴅᴇ ᴘᴀssᴀʀ.</gray>"
+    revision-id: 1
+    armor: 36
+    defense: 26
+    strength: 14
+    max-health: 60
+    damage-reduction: 8
+    block-rating: 6
+    knockback-resistance: 5
+    required-level: 50
+
+guardiao_calcas:
+  base:
+    material: NETHERITE_LEGGINGS
+    name: "<gold>ᴄᴀʟᴄᴀs ᴅᴏ ɢᴜᴀʀᴅɪᴀᴏ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ꜰᴏʀᴊᴀᴅᴀs ᴘᴀʀᴀ ᴏs ɢᴜᴀʀᴅɪᴀᴇs,</gray>"
+    - "<gray>ɪɴᴀʙᴀʟᴀᴠᴇɪs ᴄᴏᴍᴏ ᴜᴍᴀ ᴍᴜʀᴀʟʜᴀ.</gray>"
+    revision-id: 1
+    armor: 32
+    defense: 24
+    strength: 12
+    max-health: 55
+    damage-reduction: 7
+    block-rating: 5
+    knockback-resistance: 4
+    required-level: 50
+
+guardiao_botas:
+  base:
+    material: NETHERITE_BOOTS
+    name: "<gold>ʙᴏᴛᴀs ᴅᴏ ɢᴜᴀʀᴅɪᴀᴏ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ᴅᴏ ɢᴜᴀʀᴅɪᴀᴏ ᴀɴᴄᴇsᴛʀᴀʟ,</gray>"
+    - "<gray>ᴇɴʀᴀɪᴢᴀᴍ ᴏ ᴘᴏʀᴛᴀᴅᴏʀ ɴᴏ sᴏʟᴏ.</gray>"
+    revision-id: 1
+    armor: 24
+    defense: 18
+    strength: 8
+    max-health: 40
+    damage-reduction: 5
+    block-rating: 4
+    knockback-resistance: 3
+    required-level: 50
+
+# --- Berserker Set (LEGENDARY) ---
+
+berserker_elmo:
+  base:
+    material: NETHERITE_HELMET
+    name: "<gold>ᴇʟᴍᴏ ʙᴇʀsᴇʀᴋᴇʀ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴇʟᴍᴏ ᴅᴏs ʙᴇʀsᴇʀᴋᴇʀs ᴅᴇ ᴍɪᴅɢᴀʀᴅ,</gray>"
+    - "<gray>ᴀ ꜰᴜʀɪᴀ ᴄᴏɴsᴏᴍᴇ ᴛᴏᴅᴏ ᴍᴇᴅᴏ.</gray>"
+    revision-id: 1
+    armor: 22
+    defense: 16
+    strength: 14
+    max-health: 40
+    critical-strike-chance: 4
+    lifesteal: 3
+    required-level: 50
+
+berserker_peitoral:
+  base:
+    material: NETHERITE_CHESTPLATE
+    name: "<gold>ᴘᴇɪᴛᴏʀᴀʟ ʙᴇʀsᴇʀᴋᴇʀ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ᴘᴇɪᴛᴏʀᴀʟ ᴍᴀʀᴄᴀᴅᴏ ᴘᴏʀ ᴄɪᴄᴀᴛʀɪᴢᴇs,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ꜰᴇʀɪᴅᴀ ᴀᴜᴍᴇɴᴛᴀ ᴀ ꜰᴜʀɪᴀ.</gray>"
+    revision-id: 1
+    armor: 30
+    defense: 20
+    strength: 18
+    max-health: 50
+    critical-strike-chance: 5
+    lifesteal: 4
+    required-level: 50
+
+berserker_calcas:
+  base:
+    material: NETHERITE_LEGGINGS
+    name: "<gold>ᴄᴀʟᴄᴀs ʙᴇʀsᴇʀᴋᴇʀ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ᴛɪɴɢɪᴅᴀs ᴅᴇ sᴀɴɢᴜᴇ,</gray>"
+    - "<gray>ᴀ ᴍᴀʀᴄᴀ ᴅᴇ ᴜᴍ ᴠᴇʀᴅᴀᴅᴇɪʀᴏ ʙᴇʀsᴇʀᴋᴇʀ.</gray>"
+    revision-id: 1
+    armor: 26
+    defense: 18
+    strength: 16
+    max-health: 45
+    critical-strike-chance: 4
+    lifesteal: 3
+    required-level: 50
+
+berserker_botas:
+  base:
+    material: NETHERITE_BOOTS
+    name: "<gold>ʙᴏᴛᴀs ʙᴇʀsᴇʀᴋᴇʀ</gold>"
+    tier: LEGENDARY
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ᴅᴏ ʙᴇʀsᴇʀᴋᴇʀ ɪᴍᴘᴀʀᴀᴠᴇʟ,</gray>"
+    - "<gray>ᴀᴠᴀɴᴄᴀ sᴇᴍ ʜᴇsɪᴛᴀᴄᴀᴏ.</gray>"
+    revision-id: 1
+    armor: 20
+    defense: 14
+    strength: 12
+    max-health: 35
+    critical-strike-chance: 3
+    movement-speed: 4
+    required-level: 50
+
+# --- Titan Set (MYTHIC) ---
+
+titan_elmo:
+  base:
+    material: NETHERITE_HELMET
+    name: "<light_purple>ᴇʟᴍᴏ ᴅᴏ ᴛɪᴛᴀ</light_purple>"
+    tier: MYTHIC
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴇʟᴍᴏ ꜰᴏʀᴊᴀᴅᴏ ᴘᴇʟᴏs ᴛɪᴛᴀs,</gray>"
+    - "<gray>ɪᴍʙᴜɪᴅᴏ ᴄᴏᴍ ᴘᴏᴅᴇʀ ᴘʀɪᴍᴏʀᴅɪᴀʟ.</gray>"
+    revision-id: 1
+    armor: 36
+    defense: 28
+    strength: 14
+    max-health: 70
+    damage-reduction: 8
+    block-rating: 8
+    knockback-resistance: 6
+    thorns: 3
+    required-level: 60
+
+titan_peitoral:
+  base:
+    material: NETHERITE_CHESTPLATE
+    name: "<light_purple>ᴘᴇɪᴛᴏʀᴀʟ ᴅᴏ ᴛɪᴛᴀ</light_purple>"
+    tier: MYTHIC
+    type: ARMOR
+    description:
+    - "<gray>ᴏ ᴘᴇɪᴛᴏʀᴀʟ ᴅᴏs ᴛɪᴛᴀs ᴀɴᴛɪɢᴏs,</gray>"
+    - "<gray>ɪɴᴅᴇsᴛʀᴜᴛɪᴠᴇʟ ᴄᴏᴍᴏ ᴀ ᴍᴏɴᴛᴀɴʜᴀ.</gray>"
+    revision-id: 1
+    armor: 44
+    defense: 34
+    strength: 18
+    max-health: 80
+    damage-reduction: 10
+    block-rating: 10
+    knockback-resistance: 8
+    thorns: 5
+    required-level: 60
+
+titan_calcas:
+  base:
+    material: NETHERITE_LEGGINGS
+    name: "<light_purple>ᴄᴀʟᴄᴀs ᴅᴏ ᴛɪᴛᴀ</light_purple>"
+    tier: MYTHIC
+    type: ARMOR
+    description:
+    - "<gray>ᴄᴀʟᴄᴀs ꜰᴏʀᴊᴀᴅᴀs ᴘᴇʟᴏs ᴛɪᴛᴀs,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ᴘᴀssᴏ ꜰᴀᴢ ᴀ ᴛᴇʀʀᴀ ᴛʀᴇᴍᴇʀ.</gray>"
+    revision-id: 1
+    armor: 40
+    defense: 30
+    strength: 16
+    max-health: 75
+    damage-reduction: 9
+    block-rating: 9
+    knockback-resistance: 7
+    thorns: 4
+    required-level: 60
+
+titan_botas:
+  base:
+    material: NETHERITE_BOOTS
+    name: "<light_purple>ʙᴏᴛᴀs ᴅᴏ ᴛɪᴛᴀ</light_purple>"
+    tier: MYTHIC
+    type: ARMOR
+    description:
+    - "<gray>ʙᴏᴛᴀs ᴅᴏs ᴛɪᴛᴀs ᴅᴇ ᴍɪᴅɢᴀʀᴅ,</gray>"
+    - "<gray>ɴᴇɴʜᴜᴍᴀ ꜰᴏʀᴄᴀ ᴘᴏᴅᴇ ᴍᴏᴠᴇ-ʟᴏs.</gray>"
+    revision-id: 1
+    armor: 32
+    defense: 24
+    strength: 12
+    max-health: 60
+    damage-reduction: 7
+    block-rating: 6
+    knockback-resistance: 5
+    thorns: 3
+    required-level: 60

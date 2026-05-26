@@ -1,0 +1,9 @@
+me\ray\midgard\modules\essentials\data\EssentialsDataTest.class
+me\ray\midgard\modules\essentials\listener\CommandBlockerListenerTest$CommandBlockingTests.class
+me\ray\midgard\modules\essentials\manager\TeleportHistoryManagerTest.class
+me\ray\midgard\modules\essentials\listener\CommandBlockerListenerTest$WarpNameValidationTests.class
+me\ray\midgard\modules\essentials\listener\CommandBlockerListenerTest.class
+me\ray\midgard\modules\essentials\command\EssentialsBaseCommandTest.class
+me\ray\midgard\modules\essentials\listener\CommandBlockerListenerTest$GetSuffixCommandTests.class
+me\ray\midgard\modules\essentials\listener\CommandBlockerListenerTest$NormalizeTests.class
+me\ray\midgard\modules\essentials\command\EssentialsBaseCommandTest$TestCommand.class

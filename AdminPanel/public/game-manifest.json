@@ -1,0 +1,2809 @@
+{
+  "version": "1.0.11",
+  "previous_version": "1.0.10",
+  "update_mode": "manifest",
+  "required": true,
+  "base_url": "https://pub-5359fa4ead8743cbbc40f1166dd089f1.r2.dev/",
+  "notes": "Atualizacao publicada automaticamente pelo painel",
+  "generated_at": "2026-05-18T06:27:44.191Z",
+  "file_count": 460,
+  "total_size": 18871975687,
+  "files": [
+    {
+      "path": "Bin64/api-ms-win-core-file-l1-2-0.dll",
+      "size": 18696,
+      "hash": "322d963d2a2aefd784e99697c59d494853d69bed8efd4b445f59292930a6b165",
+      "mtime": "2026-05-16T18:43:35.555Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-core-file-l2-1-0.dll",
+      "size": 18696,
+      "hash": "1ea267a2e6284f17dd548c6f2285e19f7edb15d6e737a55391140ce5cb95225e",
+      "mtime": "2026-05-16T18:43:35.816Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-core-localization-l1-2-0.dll",
+      "size": 21256,
+      "hash": "a07cc878ab5595aacd4ab229a6794513f897bd7ad14bcec353793379146b2094",
+      "mtime": "2026-05-16T18:43:36.061Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-core-processthreads-l1-1-1.dll",
+      "size": 19208,
+      "hash": "fe760614903e6d46a1be508dccb65cf6929d792a1db2c365fc937f2a8a240504",
+      "mtime": "2026-05-16T18:43:36.323Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-core-synch-l1-2-0.dll",
+      "size": 19208,
+      "hash": "59c14541107f5f2b94bbf8686efee862d20114bcc9828d279de7bf664d721132",
+      "mtime": "2026-05-16T18:43:36.589Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-core-timezone-l1-1-0.dll",
+      "size": 19208,
+      "hash": "48eb5b52227b6fb5be70cb34009c8da68356b62f3e707db56af957338ba82720",
+      "mtime": "2026-05-16T18:43:36.836Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-convert-l1-1-0.dll",
+      "size": 22792,
+      "hash": "83678f181f46fe77f8afe08bfc48aebb0b4154ad45b2efe9bfadc907313f6087",
+      "mtime": "2026-05-16T18:43:37.087Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-environment-l1-1-0.dll",
+      "size": 19208,
+      "hash": "f7c6c7ea22edd2f8bd07aa5b33cbce862ef1dcdc2226eb130e0018e02ff91dc1",
+      "mtime": "2026-05-16T18:43:37.346Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-filesystem-l1-1-0.dll",
+      "size": 20744,
+      "hash": "610332203d29ab218359e291401bf091bb1db1a6d7ed98ab9a7a9942384b8e27",
+      "mtime": "2026-05-16T18:43:37.590Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-heap-l1-1-0.dll",
+      "size": 19720,
+      "hash": "af47aebe065af2f045a19f20ec7e54a6e73c0c3e9a5108a63095a7232b75381a",
+      "mtime": "2026-05-16T18:43:37.833Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-locale-l1-1-0.dll",
+      "size": 19208,
+      "hash": "b3b6ee98aca14cf5bc9f3bc7897bc23934bf85fc4bc25b7506fe4cd9a767047a",
+      "mtime": "2026-05-16T18:43:38.085Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-math-l1-1-0.dll",
+      "size": 27912,
+      "hash": "a25d0654deb0cea1aef189ba2174d0f13bdf52f098d3a9ec36d15e4bfb30c499",
+      "mtime": "2026-05-16T18:43:38.357Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-multibyte-l1-1-0.dll",
+      "size": 26888,
+      "hash": "dff24441df89a02dde1cd984e4d3820845bafdff105458ed10d510126117115b",
+      "mtime": "2026-05-16T18:43:38.622Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-runtime-l1-1-0.dll",
+      "size": 23304,
+      "hash": "371a44ab91614a8c26d159beb872a7b43f569cb5fac8ada99ace98f264a3b503",
+      "mtime": "2026-05-16T18:43:38.863Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-stdio-l1-1-0.dll",
+      "size": 24840,
+      "hash": "0189cbd84dea035763a7e52225e0f1a7dcec402734885413add324bffe688577",
+      "mtime": "2026-05-16T18:43:39.119Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-string-l1-1-0.dll",
+      "size": 24840,
+      "hash": "885309eb86dccd8e234ba05e13fe0bf59ab3db388ebfbf6b4fd6162d8e287e82",
+      "mtime": "2026-05-16T18:43:39.379Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-time-l1-1-0.dll",
+      "size": 21256,
+      "hash": "00ac02d39b7b16406850e02ca4a6101f45d6f7b4397cc9e069f2ce800b8500b9",
+      "mtime": "2026-05-16T18:43:39.643Z"
+    },
+    {
+      "path": "Bin64/api-ms-win-crt-utility-l1-1-0.dll",
+      "size": 19208,
+      "hash": "984306a3547be2f48483d68d0466b21dda9db4be304bedc9ffdb953c26cac5a1",
+      "mtime": "2026-05-16T18:45:39.167Z"
+    },
+    {
+      "path": "Bin64/cohtml.WindowsDesktop.dll",
+      "size": 4771840,
+      "hash": "18617d020640a29e069dcf70149cd084d32642a5b932f9e8a59c60560142f929",
+      "mtime": "2026-05-16T17:55:07.964Z"
+    },
+    {
+      "path": "Bin64/CrashRpt1402.dll",
+      "size": 203264,
+      "hash": "045ef7db4554f87fe74cae7c15c1998532709f691b73dd744d1dc20b0d4d77a6",
+      "mtime": "2026-05-16T17:55:08.361Z"
+    },
+    {
+      "path": "Bin64/Cry3DEngine.dll",
+      "size": 3819008,
+      "hash": "80d5f5d69f9baf5bd02319033d76c045089a57221162a97e69c529dc3624113c",
+      "mtime": "2026-05-16T17:55:08.977Z"
+    },
+    {
+      "path": "Bin64/CryAction.dll",
+      "size": 6774272,
+      "hash": "d601ffda5a03ecf0b08db2969c9a5c00892051eee5deda518fd3cffb03274190",
+      "mtime": "2026-05-16T17:55:09.703Z"
+    },
+    {
+      "path": "Bin64/CryAISystem.dll",
+      "size": 6516224,
+      "hash": "9d865cda7dbb7f1e17d260237323b7ebf2a15cd84b866140c63c0ecc827acee6",
+      "mtime": "2026-05-16T17:55:10.450Z"
+    },
+    {
+      "path": "Bin64/CryAnimation.dll",
+      "size": 3171840,
+      "hash": "9ae94b08c7471d4803666a29c141aadc52b6b06182f3d8c3e18c89ca0304b90c",
+      "mtime": "2026-05-16T17:55:11.086Z"
+    },
+    {
+      "path": "Bin64/CryEntitySystem.dll",
+      "size": 1416192,
+      "hash": "76c29bc7138c3146249b5917be8bd7f39a486d73f1dcdd32f1d8444494eb284f",
+      "mtime": "2026-05-16T17:55:11.653Z"
+    },
+    {
+      "path": "Bin64/CryFont.dll",
+      "size": 479744,
+      "hash": "33768d1f5c194ee84c8a035c1b443fff43fee1db724d65b4c443f8381098fcd7",
+      "mtime": "2026-05-16T17:55:12.122Z"
+    },
+    {
+      "path": "Bin64/CryGame.dll",
+      "size": 15443456,
+      "hash": "076d89c6179096e8f66143396e29225863a571790b0387e78b13db8887256575",
+      "mtime": "2026-05-16T17:55:13.398Z"
+    },
+    {
+      "path": "Bin64/CryInput.dll",
+      "size": 202752,
+      "hash": "3335fc4ed68cc80839d87505af868d72dbe60a0fe78da6af51c7af2cf3666c23",
+      "mtime": "2026-05-16T17:55:14.063Z"
+    },
+    {
+      "path": "Bin64/CryMovie.dll",
+      "size": 777216,
+      "hash": "a25b5592dae805acb144d07b75c2d511ae2a5c8157d2b6e8e3dad9337d751f25",
+      "mtime": "2026-05-16T17:55:15.073Z"
+    },
+    {
+      "path": "Bin64/CryNetwork.dll",
+      "size": 2114560,
+      "hash": "651f3aa33ca9b5aa7920fa8aaa1883e1f9fed9c637bb718425120f05e2975362",
+      "mtime": "2026-05-16T17:55:15.962Z"
+    },
+    {
+      "path": "Bin64/CryOnline.dll",
+      "size": 1432576,
+      "hash": "21269613210714ce2aadb75a01ca89ae44a525003c7a11435198152864b98704",
+      "mtime": "2026-05-16T17:55:16.820Z"
+    },
+    {
+      "path": "Bin64/CryPhysics.dll",
+      "size": 2615296,
+      "hash": "42d08275a26e78d4054247248d3891ba528a1e0683da7b89f4391780d3a48d60",
+      "mtime": "2026-05-16T17:55:17.713Z"
+    },
+    {
+      "path": "Bin64/CryRenderD3D9.dll",
+      "size": 4987392,
+      "hash": "e29c5e22f19e37cc601c1d46873be8b946e9c8e1061110d9a762b9f52cbe900d",
+      "mtime": "2026-05-16T17:55:18.585Z"
+    },
+    {
+      "path": "Bin64/CryRenderNULL.dll",
+      "size": 2120704,
+      "hash": "96f8fb3470b960af020d2b2518a5a8340eb4defdc98abae9fa9aab605992058d",
+      "mtime": "2026-05-16T17:55:19.518Z"
+    },
+    {
+      "path": "Bin64/CryScriptSystem.dll",
+      "size": 945152,
+      "hash": "12f3dc22d455cc9a958441bf7b594e26cea55240137d06af33c016790e9206ec",
+      "mtime": "2026-05-16T17:55:20.450Z"
+    },
+    {
+      "path": "Bin64/CrySoundSystem.dll",
+      "size": 1235456,
+      "hash": "c851f45da5b908b85d492194099249f793cfa690064554750caffa9936d25195",
+      "mtime": "2026-05-16T17:55:21.231Z"
+    },
+    {
+      "path": "Bin64/CrySystem.dll",
+      "size": 7064064,
+      "hash": "97e9a829c17b2b2ca11b92424ff643ce9a050d4e1a7687be990441e1d6e7cc01",
+      "mtime": "2026-05-16T17:55:22.302Z"
+    },
+    {
+      "path": "Bin64/D3DX9_42.dll",
+      "size": 2475352,
+      "hash": "1d6f5aa25ac2f1e55d3fd89cd5b33edd4de3709bf0353c75ab8645cebc087fa5",
+      "mtime": "2026-05-16T17:55:23.377Z"
+    },
+    {
+      "path": "Bin64/discord_game_sdk.dll",
+      "size": 3838264,
+      "hash": "67dd357dae8e5d919d71ef7cbd2d328e9126ae510440d24ecaa141b729f60f95",
+      "mtime": "2026-05-16T17:55:25.007Z"
+    },
+    {
+      "path": "Bin64/fmod_event_netL64.dll",
+      "size": 566784,
+      "hash": "9548f7a4ad0171c786a62b21c51965675fb25f858481a9c06dc1e9a3139404ae",
+      "mtime": "2026-05-16T17:55:25.889Z"
+    },
+    {
+      "path": "Bin64/fmod_eventL64.dll",
+      "size": 513536,
+      "hash": "22c442ab690b99da7d20c437eb3eb070e8f828ced431abd3512d772e55d9db18",
+      "mtime": "2026-05-16T17:55:26.815Z"
+    },
+    {
+      "path": "Bin64/fmodexL64.dll",
+      "size": 1516544,
+      "hash": "9ce5e71c5c3722531120e3a07cc7e1a72f8962eafb901a6050b41bad5fc42fef",
+      "mtime": "2026-05-16T17:55:27.845Z"
+    },
+    {
+      "path": "Bin64/Game.exe",
+      "size": 294480,
+      "hash": "5359d542cb587f3f177f8c2eb4c5c0f44a36e93c3d8d90e74426988962102507",
+      "mtime": "2026-05-16T17:55:28.649Z"
+    },
+    {
+      "path": "Bin64/GfeSDK.dll",
+      "size": 4228392,
+      "hash": "b1e8741516854cc179bd772e4801c1eac76b14659a7e2cdc7352fdad0030ef47",
+      "mtime": "2026-05-16T17:55:29.657Z"
+    },
+    {
+      "path": "Bin64/GFSDK_GSA.win64.dll",
+      "size": 169984,
+      "hash": "6fd1888a7d1b73a4be67b6eab04f62e8fd09abbf9558fd78eb0cc25d112889b4",
+      "mtime": "2026-05-16T17:55:30.270Z"
+    },
+    {
+      "path": "Bin64/libTIFF64.dll",
+      "size": 562176,
+      "hash": "618580d6e71a972abcde8dec4c8612575a0661c9d2468b626efe493e8fe6a39e",
+      "mtime": "2026-05-16T17:55:31.055Z"
+    },
+    {
+      "path": "Bin64/mfc140.dll",
+      "size": 5588768,
+      "hash": "6a87787eed419be35551b3503053f0f357bc29170a001065247039c77a00ecd6",
+      "mtime": "2026-05-16T17:55:32.233Z"
+    },
+    {
+      "path": "Bin64/msvcp140.dll",
+      "size": 625808,
+      "hash": "29206a9a3abb8962593312edc6fb5aaa76a86fae8f24c1e1718707001b8df3dd",
+      "mtime": "2026-05-16T17:55:33.023Z"
+    },
+    {
+      "path": "Bin64/ocevogyv.dll",
+      "size": 1879208,
+      "hash": "c58f017d90197370ecde17c532b4a71f57c00871df8fbee048e7d92409d5a93a",
+      "mtime": "2026-05-16T17:55:33.816Z"
+    },
+    {
+      "path": "Bin64/online.cfg",
+      "size": 112,
+      "hash": "c88ee58893c9228438c91a4ff3500556e5accf38b28dc4a50a4bc9ce81fbc0f1",
+      "mtime": "2026-05-18T06:09:17.972Z"
+    },
+    {
+      "path": "Bin64/OptickCore.dll",
+      "size": 163840,
+      "hash": "0f58c00745f562f7c81f494fc4ba9d80a50f584be2f5001a3c41203d682c67fc",
+      "mtime": "2026-05-16T17:55:35.071Z"
+    },
+    {
+      "path": "Bin64/ortp_x64.dll",
+      "size": 227456,
+      "hash": "0e14aec2752cf0a1a93e2c4248b08dbdbb970476c01a85b55aef4d41d835c9e8",
+      "mtime": "2026-05-16T17:55:35.791Z"
+    },
+    {
+      "path": "Bin64/pcnsl.exe",
+      "size": 1215240,
+      "hash": "a261128f1ef96e0f50dd8bebfa963bd2dd0e84e27712e86d82597880c370e37e",
+      "mtime": "2026-05-16T17:55:36.720Z"
+    },
+    {
+      "path": "Bin64/RenoirCore.WindowsDesktop.dll",
+      "size": 1536112,
+      "hash": "2d7aab59da7d86486e9c9e904eddf0b76e5e0d6fab0f613d088c33cdbdd09dd9",
+      "mtime": "2026-05-16T17:55:37.592Z"
+    },
+    {
+      "path": "Bin64/SHAllocator.dll",
+      "size": 8192,
+      "hash": "fd2483f22646c2d7a61728706aa8864fec9005afc735b64264cf2601c03fea0f",
+      "mtime": "2026-05-16T17:55:38.065Z"
+    },
+    {
+      "path": "Bin64/sonus.dll",
+      "size": 13439488,
+      "hash": "f12f9f6cf1172ea12f9024ab2afa1533076edcfd70e52e2768626fa09b1302a8",
+      "mtime": "2026-05-16T17:55:39.181Z"
+    },
+    {
+      "path": "Bin64/steam_api64.dll",
+      "size": 288032,
+      "hash": "e61ac9a9ac216d56abc70aaeefedc11708ef45aa1aa48f1dd313adfd9aa99150",
+      "mtime": "2026-05-16T17:55:40.104Z"
+    },
+    {
+      "path": "Bin64/steam_appid.txt",
+      "size": 6,
+      "hash": "5cbc4a748dcc9f3ab495d802d7194c00329e8b3a1a40efc471f030c6198d97e1",
+      "mtime": "2026-05-16T17:55:40.582Z"
+    },
+    {
+      "path": "Bin64/ToolkitPro1340vc140x64.dll",
+      "size": 9525248,
+      "hash": "ad51db45ee9f45035589bd6e12a14956d41be5fe2ad9d2fe5b85b829b78720a4",
+      "mtime": "2026-05-16T17:55:41.574Z"
+    },
+    {
+      "path": "Bin64/ucrtbase.dll",
+      "size": 1016584,
+      "hash": "8a91052ef261b5fbf3223ae9ce789af73dfe1e9b0ba5bdbc4d564870a24f2bae",
+      "mtime": "2026-05-16T17:55:42.628Z"
+    },
+    {
+      "path": "Bin64/v8_libbase.dll",
+      "size": 130048,
+      "hash": "2822d659013ef51c6ab65cc4c9fd091d389322811f8b0cea7b680c17579b7a52",
+      "mtime": "2026-05-16T17:55:43.206Z"
+    },
+    {
+      "path": "Bin64/v8.dll",
+      "size": 13771264,
+      "hash": "1923a34c0e6c5e465deefc0f4fbbc7f7164d7fe479d2b0320473543627e81fd4",
+      "mtime": "2026-05-16T17:55:44.767Z"
+    },
+    {
+      "path": "Bin64/vcruntime140_1.dll",
+      "size": 45032,
+      "hash": "09c0876a9422c6fdb1796d61198a2ed0494b2190cfe63ebc04450f3ded2c3a57",
+      "mtime": "2026-05-16T17:55:45.468Z"
+    },
+    {
+      "path": "Bin64/vcruntime140.dll",
+      "size": 87200,
+      "hash": "02fcb91909ed2ecc68b62bceaca7b8d8319e7d625e599756c170db631237da69",
+      "mtime": "2026-05-16T17:55:46.020Z"
+    },
+    {
+      "path": "Bin64/vivoxsdk_x64.dll",
+      "size": 5200512,
+      "hash": "42b48c6dff8977acc9e75a66baca1c0ae15ad688949bf6e4ce66f336f8545abf",
+      "mtime": "2026-05-16T17:55:46.912Z"
+    },
+    {
+      "path": "Engine/Engine.pak",
+      "size": 30061,
+      "hash": "dc1c20997f6837a1d771891d1954b19f4ed4db52961194958ed8555221e91a31",
+      "mtime": "2026-05-16T17:55:47.558Z"
+    },
+    {
+      "path": "Engine/ShaderCache.pak",
+      "size": 93516484,
+      "hash": "3f51e68b944449f827cbc8d8f6ac01d77f0bdd39f8e83068817451353ea11922",
+      "mtime": "2026-05-16T17:55:50.740Z"
+    },
+    {
+      "path": "Engine/ShadersBin.pak",
+      "size": 5647529,
+      "hash": "d8ac591f2a8d96202057e4d9f95736324c998c6320e546faadeb324cbe7363e0",
+      "mtime": "2026-05-16T17:55:51.815Z"
+    },
+    {
+      "path": "Game/Animations.pak",
+      "size": 172553160,
+      "hash": "dc241c3ce5cc04879a45130358ccfb320855aa0859ea52dcc75e29a7ced81b08",
+      "mtime": "2026-05-16T17:55:56.696Z"
+    },
+    {
+      "path": "Game/GameData.pak",
+      "size": 289618003,
+      "hash": "ac7772652cdafb42613d017845e30c0f4168761b84ef44fdb922c626b145104b",
+      "mtime": "2026-05-04T02:03:06.000Z"
+    },
+    {
+      "path": "Game/GameScriptsC_x64.pak",
+      "size": 1390392,
+      "hash": "fb810ce86804b75b0c33f2dc40667f92fd2dc37b23d1358e28693b62d17a47a8",
+      "mtime": "2026-05-04T01:41:12.000Z"
+    },
+    {
+      "path": "Game/GameScriptsC_x86.pak",
+      "size": 1369570,
+      "hash": "ecc8a0f4d4f5a8cce331e3f1bae052ff73e7902ab60459c034be39c7cf3eab33",
+      "mtime": "2026-05-04T01:41:14.000Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_base/level.pak",
+      "size": 38282,
+      "hash": "0eafa6cc4f5dd4f0862e66351f6557278b6f843ad9e0d5cfd59faffbc8a30e86",
+      "mtime": "2026-05-16T17:56:05.425Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_base/terraintexture.pak",
+      "size": 650754,
+      "hash": "3e6d59db14dfed13c1139f6b6063b4b97838499fcb472b24414a946e6ee338dd",
+      "mtime": "2026-05-16T17:56:06.308Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_junction01/level.pak",
+      "size": 11606646,
+      "hash": "a4676f1c09f17a1c268289d8d7e6a2e0059f8b77d7bff709e310022b34d76baa",
+      "mtime": "2026-05-16T17:56:07.403Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_junction01/terraintexture.pak",
+      "size": 1440657,
+      "hash": "c6c726ef22a328120db8a7e64ad4416caa121132cfc64c59ae4bb40ea3124435",
+      "mtime": "2026-05-16T17:56:08.208Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_junction02/level.pak",
+      "size": 11633889,
+      "hash": "d2a578741320ec2717364b7f6ca9c494ff078828b1b0638edb9a900330326d03",
+      "mtime": "2026-05-16T17:56:09.647Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_junction02/terraintexture.pak",
+      "size": 806994,
+      "hash": "1d8cc085ab81fc21cfb43e53b3c449db903469c380448fe71f8b34fd6b78fb0a",
+      "mtime": "2026-05-16T17:56:10.600Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_junction03/level.pak",
+      "size": 8893615,
+      "hash": "53473e39db294961d3d5df7ca45424fd9e3e2288fdba217ada842f514e7a7bbb",
+      "mtime": "2026-05-16T17:56:11.970Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_junction03/terraintexture.pak",
+      "size": 550969,
+      "hash": "42a06f18c2f36a886f4b1b2ce4c449d301f2007adbbc8d0f398d86cc1c57942e",
+      "mtime": "2026-05-16T17:56:12.789Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_junction04/level.pak",
+      "size": 944820,
+      "hash": "439619ce365696c9128ef4f7c89ab6f5028c124e6de90df09e729cec6fab037a",
+      "mtime": "2026-05-16T17:56:13.522Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_junction04/terraintexture.pak",
+      "size": 4723,
+      "hash": "47bbb0bb0d017aeea2db5b1bffb547ace1421899af9949b6d10251d449ca13e1",
+      "mtime": "2026-05-16T17:56:14.016Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_junction05/level.pak",
+      "size": 13106781,
+      "hash": "e7f9455ac3d5db160af8a1a391234fe546d2f3e5855f8fd0f0360df83b15758f",
+      "mtime": "2026-05-16T17:56:15.244Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_junction05/terraintexture.pak",
+      "size": 1590662,
+      "hash": "eb48bfa3639c4ded057ee3422539614a4b3715dccd17b2141559841111b0852f",
+      "mtime": "2026-05-16T17:56:16.211Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path01/level.pak",
+      "size": 12241526,
+      "hash": "16c4c2d34e8ae640db0b2f10ae7d5f80f313e98bf8f3343c9d264e58099f9752",
+      "mtime": "2026-05-16T17:56:17.481Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path01/terraintexture.pak",
+      "size": 192587,
+      "hash": "97fcbe69b1527dee3cd9cc41c3368b8a354f46ff98fded71257481232d1e057f",
+      "mtime": "2026-05-16T17:56:18.102Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path02/level.pak",
+      "size": 11999074,
+      "hash": "f4f2dbea7eb989852bcdb0388e33dd18da6c879504828e25a0c37417cbf7df4b",
+      "mtime": "2026-05-16T17:56:19.248Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path02/terraintexture.pak",
+      "size": 246685,
+      "hash": "5ea257fed6a75d815afc743a720d30b437aa038a8bde4c3fdf3bf5ff158b809c",
+      "mtime": "2026-05-16T17:56:20.040Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path03/level.pak",
+      "size": 12100877,
+      "hash": "c99e40fa98c6d40075718585f3f1e57656080155de1a15aaed6d9cca5ca619cf",
+      "mtime": "2026-05-16T17:56:21.221Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path03/terraintexture.pak",
+      "size": 495154,
+      "hash": "24460a4d0fa5d6be0845d73a031e36f491091584deb77feca687605b7dc3076c",
+      "mtime": "2026-05-16T17:56:22.391Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path04/level.pak",
+      "size": 1603683,
+      "hash": "4c22f1363e7defda52c7e2a05346a5a706bc0bec9f1016b9b875fafbea16f8ae",
+      "mtime": "2026-05-16T17:56:23.181Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path04/terraintexture.pak",
+      "size": 482848,
+      "hash": "fe39dd239932faadb3b63c117cb1e28f208eb871d0ccd2697297dd46bdfe3c1e",
+      "mtime": "2026-05-16T17:56:24.042Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path05/level.pak",
+      "size": 3840564,
+      "hash": "26304e7ad6f837922b00cba3fab2598894879f98fc3fdb21481b3edf939757be",
+      "mtime": "2026-05-16T17:56:29.316Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path05/terraintexture.pak",
+      "size": 193244,
+      "hash": "a4d87669b870efb785ef2b411cd5b4174f317d75f32691a3e24332b66ba33e4a",
+      "mtime": "2026-05-16T17:56:29.974Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path06/level.pak",
+      "size": 1146454,
+      "hash": "a59dc97d17f725d4c902a4e43050476af6a86d7cca337132abfa05fcc1169e8d",
+      "mtime": "2026-05-16T17:56:30.762Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path06/terraintexture.pak",
+      "size": 9874,
+      "hash": "cea2a85c48ee74d6f4b7e9669be86520f6a4799fc2e6c858e0856e38916ee9c9",
+      "mtime": "2026-05-16T17:56:31.244Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path07/level.pak",
+      "size": 1795916,
+      "hash": "1b4c99c1b8b240aaf6061b7f1d0da0f52c497b88c93ba19946e997ed362e3d43",
+      "mtime": "2026-05-16T17:56:32.065Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path07/terraintexture.pak",
+      "size": 461354,
+      "hash": "78a35656f8c9ac7482f13c5cabf3f21fa1ed6b765fb5a1529d6b6a7fc92ed16c",
+      "mtime": "2026-05-16T17:56:32.833Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path08/level.pak",
+      "size": 4125422,
+      "hash": "f5129b85cf839addc7eec0a6a7a7beff28bffc0cd453caeaecb08174d9327203",
+      "mtime": "2026-05-16T17:56:33.667Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path08/terraintexture.pak",
+      "size": 720531,
+      "hash": "424a46d6653cf2ad09bf38bf43f74efd2180208ea91784514223bad6847a194c",
+      "mtime": "2026-05-16T17:56:34.606Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path09/level.pak",
+      "size": 1853419,
+      "hash": "7ac8d66b8f7b4e2fa1b422cdeb0ff000dda2e8adfc60225a1fb2808b4e9aa18f",
+      "mtime": "2026-05-16T17:56:35.413Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path09/terraintexture.pak",
+      "size": 783230,
+      "hash": "ddf88f5681aa643c97628229c353bcf1a8b649f553cde976bc7e3e6ae497b0ce",
+      "mtime": "2026-05-16T17:56:36.245Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path10/level.pak",
+      "size": 2282227,
+      "hash": "4bea1864dbb580d53b9093fadf83f202a9103bfc3fb8d3c512b5f764f23df361",
+      "mtime": "2026-05-16T17:56:37.157Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path10/terraintexture.pak",
+      "size": 27446,
+      "hash": "6bf0e38b8a78a701da11cee8d6447bbd45de30dadec01d3a26bd6bf594df03ee",
+      "mtime": "2026-05-16T17:56:37.648Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path11/level.pak",
+      "size": 1439219,
+      "hash": "b474a6604ea7e3ae7c870d23d982545a11d482853288d57899415c23eb3ccbdb",
+      "mtime": "2026-05-16T17:56:38.407Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path11/terraintexture.pak",
+      "size": 26888,
+      "hash": "6d3ff79a925a9fa5da56c6037392fc0309b892ae162889e9390cf0bb2402130c",
+      "mtime": "2026-05-16T17:56:39.157Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path12/level.pak",
+      "size": 5033335,
+      "hash": "d560e9124c760a1889203ee43fff7652aaba20e19d42b58eec95ad9c77d51cf6",
+      "mtime": "2026-05-16T17:56:40.167Z"
+    },
+    {
+      "path": "Game/Levels/afghan/afghan_path12/terraintexture.pak",
+      "size": 492015,
+      "hash": "24221e4ad1483b4fed1e36b9265cb408d0beacdb803e6edf840544bb22aee24f",
+      "mtime": "2026-05-16T17:56:40.965Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_base/level.pak",
+      "size": 45807,
+      "hash": "611cb57259ee9ad30e66a344a39601ff1d5169f621b92302fc1a4639ef7e123f",
+      "mtime": "2026-05-16T17:56:41.476Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_base/terraintexture.pak",
+      "size": 650754,
+      "hash": "3e6d59db14dfed13c1139f6b6063b4b97838499fcb472b24414a946e6ee338dd",
+      "mtime": "2026-05-16T17:56:42.190Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_junction01/level.pak",
+      "size": 547954,
+      "hash": "0e1e6c35ae52508083e7b284dfd89241f999cfffc15e20a785b7a13edaa8ef68",
+      "mtime": "2026-05-16T17:56:43.111Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_junction01/terraintexture.pak",
+      "size": 20563,
+      "hash": "de29d26e32f7fb4c351d12e7e22ca86924877f9008a0dbefeace8641e2df7d2c",
+      "mtime": "2026-05-16T17:56:43.587Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_junction04/level.pak",
+      "size": 1802648,
+      "hash": "b65f6b86efcd55ba2e6fe6cdb36d47e0b1c2027d278720eaf98da513b3de588f",
+      "mtime": "2026-05-16T17:56:44.790Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_junction04/terraintexture.pak",
+      "size": 5194,
+      "hash": "2b3774d11358311f937a8c17c76fa41a7390cb8ff2fac8432bb4f3abd3341a82",
+      "mtime": "2026-05-16T17:56:45.349Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_path01/level.pak",
+      "size": 4654405,
+      "hash": "1c9247dc40e6ba6aa9ef906b0527fe034b81e12e82afad371680ab9c638eb5ab",
+      "mtime": "2026-05-16T17:56:46.189Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_path01/terraintexture.pak",
+      "size": 25497,
+      "hash": "833187fccf9f6b10a10c2c76314d5ec9d8c989e00925f3b6c9ff723307d5e7c0",
+      "mtime": "2026-05-16T17:56:46.682Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_path03/level.pak",
+      "size": 2560748,
+      "hash": "b791809a5f796dee578938e22ad6d01e5006207a1f21edac7f3567c0866e28e1",
+      "mtime": "2026-05-16T17:56:47.459Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_path03/terraintexture.pak",
+      "size": 46785,
+      "hash": "87b5bdc56fd96223754f39ba3bab6506b92a6c1901e12701f56efafe006472f0",
+      "mtime": "2026-05-16T17:56:48.003Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_path05/level.pak",
+      "size": 2565167,
+      "hash": "42bf8011fadec7deea02abc68384aaa99347512966cc35d1838ac607758aedf0",
+      "mtime": "2026-05-16T17:56:48.915Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_path05/terraintexture.pak",
+      "size": 33654,
+      "hash": "32361b303dd2b44cb6be604b55e8b43676d7f233dedde92ef9c0ce498cab43d1",
+      "mtime": "2026-05-16T17:56:49.532Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_path06/level.pak",
+      "size": 1484500,
+      "hash": "0eae0fb7f2565fe53005a21664e7a4902b289d9f0e0d7659ee1014323eaecc0f",
+      "mtime": "2026-05-16T17:56:50.324Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_path06/terraintexture.pak",
+      "size": 9860,
+      "hash": "545e63e8e4cbf74b994bf486779b357aee970b8e2c7720e67a8747d326651c8e",
+      "mtime": "2026-05-16T17:56:50.842Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_path08/level.pak",
+      "size": 5531744,
+      "hash": "213b10394ea0cb95a63d70d8cf981dda5aa3ef77a50b87c089a08df196fa0753",
+      "mtime": "2026-05-16T17:56:51.705Z"
+    },
+    {
+      "path": "Game/Levels/africa/africa_path08/terraintexture.pak",
+      "size": 78862,
+      "hash": "d7efd058410a0418c51c6105b8f384a848a4623bee405aa2b98563393db528aa",
+      "mtime": "2026-05-16T17:56:52.258Z"
+    },
+    {
+      "path": "Game/Levels/arena/coliseum_base/level.pak",
+      "size": 739483,
+      "hash": "2a9af2738f2ef3a7cb81659e70cfab82e2711c97b9e0591ae825225dea1462d6",
+      "mtime": "2026-05-16T17:56:52.966Z"
+    },
+    {
+      "path": "Game/Levels/arena/coliseum_base/terraintexture.pak",
+      "size": 16840,
+      "hash": "0b27e3ca1c054fa20dea9115d4e8be88538218bad6b98cc02a5833ad60b7ed8b",
+      "mtime": "2026-05-16T17:56:53.463Z"
+    },
+    {
+      "path": "Game/Levels/arena/coliseum_boss/level.pak",
+      "size": 240834,
+      "hash": "33cd705992161caa081031e06936ea7c49a54e5ebfba9eba71bfc9388bdcdc5b",
+      "mtime": "2026-05-16T17:56:54.186Z"
+    },
+    {
+      "path": "Game/Levels/arena/coliseum_boss/terraintexture.pak",
+      "size": 30731,
+      "hash": "53aba7a474ce603bd3559e9b525573ff07f72a92df7330f40db3498b1389e91e",
+      "mtime": "2026-05-16T17:56:54.702Z"
+    },
+    {
+      "path": "Game/Levels/arena/coliseum/level.pak",
+      "size": 1079313,
+      "hash": "4c9b04cb4337fd8d14fbf54ed182c95de11be659527731cfcec9ec6c01dea62f",
+      "mtime": "2026-05-16T17:56:55.628Z"
+    },
+    {
+      "path": "Game/Levels/arena/coliseum/terraintexture.pak",
+      "size": 30731,
+      "hash": "53aba7a474ce603bd3559e9b525573ff07f72a92df7330f40db3498b1389e91e",
+      "mtime": "2026-05-16T17:56:56.134Z"
+    },
+    {
+      "path": "Game/Levels/bw_hideout_xmass/level.pak",
+      "size": 672564,
+      "hash": "b5e963f266628ecaf581b37cb33e719f40cc34bc359a9188d9b51569b32c0022",
+      "mtime": "2026-05-16T17:56:56.798Z"
+    },
+    {
+      "path": "Game/Levels/bw_hideout_xmass/terraintexture.pak",
+      "size": 77637,
+      "hash": "d35f766f6ce1dbdfcd37cdfd40b549927f65a3bfb08888a16f21b112ca74900c",
+      "mtime": "2026-05-16T17:56:57.314Z"
+    },
+    {
+      "path": "Game/Levels/bw_hideout/level.pak",
+      "size": 582579,
+      "hash": "2a99165fb57af40247f050df34c14c3bc22263afc24729350222320d1c2f05d1",
+      "mtime": "2026-05-16T17:56:57.989Z"
+    },
+    {
+      "path": "Game/Levels/bw_hideout/terraintexture.pak",
+      "size": 77637,
+      "hash": "d35f766f6ce1dbdfcd37cdfd40b549927f65a3bfb08888a16f21b112ca74900c",
+      "mtime": "2026-05-16T17:56:58.527Z"
+    },
+    {
+      "path": "Game/Levels/china/china_base/level.pak",
+      "size": 36251,
+      "hash": "2e12b0356ea52af2a4559cf501133f6e5a7d319fef0c8f1ffa4b7b498c572bcd",
+      "mtime": "2026-05-16T17:56:59.014Z"
+    },
+    {
+      "path": "Game/Levels/china/china_base/terraintexture.pak",
+      "size": 62158,
+      "hash": "663629929f5b2b6b40f4ba685d83364a931070ef138916615bf5d87fc1fa37d9",
+      "mtime": "2026-05-16T17:56:59.502Z"
+    },
+    {
+      "path": "Game/Levels/china/china_junction01/level.pak",
+      "size": 11445047,
+      "hash": "cfa4987ed231ef11090418ed3d96d93786167e69cd219653eeb77f5447914f5e",
+      "mtime": "2026-05-16T17:57:00.585Z"
+    },
+    {
+      "path": "Game/Levels/china/china_junction01/terraintexture.pak",
+      "size": 1440320,
+      "hash": "d165686b6eb7c81a9e90bd6c01dbf577e3cbcdd26b6b79704f71e405874e106d",
+      "mtime": "2026-05-16T17:57:01.362Z"
+    },
+    {
+      "path": "Game/Levels/china/china_junction02/level.pak",
+      "size": 3552827,
+      "hash": "dc9dc55193d832c6066bb770af2bb41377dcddab690d3c048302345c31c3887b",
+      "mtime": "2026-05-16T17:57:02.212Z"
+    },
+    {
+      "path": "Game/Levels/china/china_junction02/terraintexture.pak",
+      "size": 84758,
+      "hash": "6939dede93c6f31c9d458f62e23df4e6c0ae307f95a599e4b651aac5585b121c",
+      "mtime": "2026-05-16T17:57:02.857Z"
+    },
+    {
+      "path": "Game/Levels/china/china_junction03/level.pak",
+      "size": 13454373,
+      "hash": "34fd1d7d5caddc898ce2006caf3f1cc8d27e6b2258cf183a98347b5db89a0c0e",
+      "mtime": "2026-05-16T17:57:04.109Z"
+    },
+    {
+      "path": "Game/Levels/china/china_junction03/terraintexture.pak",
+      "size": 1440320,
+      "hash": "d165686b6eb7c81a9e90bd6c01dbf577e3cbcdd26b6b79704f71e405874e106d",
+      "mtime": "2026-05-16T17:57:04.928Z"
+    },
+    {
+      "path": "Game/Levels/china/china_junction04/level.pak",
+      "size": 11666492,
+      "hash": "ad4f116a684843d9cfd2530f4be7af0011cc5e0d18cd3858003fc77dfa4f0cb0",
+      "mtime": "2026-05-16T17:57:06.098Z"
+    },
+    {
+      "path": "Game/Levels/china/china_junction04/terraintexture.pak",
+      "size": 1350921,
+      "hash": "4c10fe4b7ba336061be0960329ad96b088fe405bf8063dcb66dc63080bc8d64c",
+      "mtime": "2026-05-16T17:57:06.870Z"
+    },
+    {
+      "path": "Game/Levels/china/china_junction05/level.pak",
+      "size": 959486,
+      "hash": "716e60ab71e6b44c83e9f384bd6617afa2a7a2b0b3e586f9114e35bccb40def9",
+      "mtime": "2026-05-16T17:57:07.595Z"
+    },
+    {
+      "path": "Game/Levels/china/china_junction05/terraintexture.pak",
+      "size": 10443,
+      "hash": "2073d5d162f4aac56a2d3d5d3ea7a2c3c9664c4b5f166537dcd6cd1689638db1",
+      "mtime": "2026-05-16T17:57:08.140Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path01/level.pak",
+      "size": 1047429,
+      "hash": "0d9126959e82c3902cda3fa570c89f83faed09e4f363694ace04beee6161ee72",
+      "mtime": "2026-05-16T17:57:08.923Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path01/terraintexture.pak",
+      "size": 4134,
+      "hash": "9d52f884f58c0e4882b033cf0758d3939792084094b93aaed78f38191f9fe562",
+      "mtime": "2026-05-16T17:57:09.410Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path02/level.pak",
+      "size": 1234521,
+      "hash": "f980700ca9e92e06058f79ff26bd93c347826d13443198c32c7a59ee47509aca",
+      "mtime": "2026-05-16T17:57:10.232Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path02/terraintexture.pak",
+      "size": 343,
+      "hash": "271d4ed05bd90579dae552fb61ec17898309420ecd96a064129b36fb5e85364c",
+      "mtime": "2026-05-16T17:57:10.863Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path03/level.pak",
+      "size": 1375376,
+      "hash": "9b9a243154ebde780ca2605aab9616550e303a1fb337f4f3c0045c13a2664bdc",
+      "mtime": "2026-05-16T17:57:11.666Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path03/terraintexture.pak",
+      "size": 383,
+      "hash": "051a305a568559035dcc0056bf11f720d71a0b36c244622e4e31c016ca5bc722",
+      "mtime": "2026-05-16T17:57:12.154Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path04/level.pak",
+      "size": 1225115,
+      "hash": "c380c60ea2515b7170db201759c92168e74ac9a5e20e23865a331d00d0710aad",
+      "mtime": "2026-05-16T17:57:12.919Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path04/terraintexture.pak",
+      "size": 15009,
+      "hash": "af4d5c88a9bdc74f25e6ff1d6aa6a6372da80df2186d428ff9ee32ca15da9b2f",
+      "mtime": "2026-05-16T17:57:13.410Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path05/level.pak",
+      "size": 1895533,
+      "hash": "dede5e0e1f4a71f3b2be4dca83bbfa045dc765787d0d29a015fd0475c62f7bf3",
+      "mtime": "2026-05-16T17:57:14.422Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path05/terraintexture.pak",
+      "size": 15546,
+      "hash": "7d06679b5b405083ad6c72f4e3b0c9bb6eaeddf1b002eafbbbe2adbdcbae2615",
+      "mtime": "2026-05-16T17:57:14.909Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path06/level.pak",
+      "size": 1108179,
+      "hash": "92400172b2dbcb179ee2ad20c8dc80cc6bd233024ba67f7ea5fe338f5ff5a395",
+      "mtime": "2026-05-16T17:57:15.787Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path06/terraintexture.pak",
+      "size": 343,
+      "hash": "271d4ed05bd90579dae552fb61ec17898309420ecd96a064129b36fb5e85364c",
+      "mtime": "2026-05-16T17:57:16.253Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path07/level.pak",
+      "size": 1073510,
+      "hash": "104a9360e3d644e782067e28bf1ecd22877ab993c3f02816321188d73a2103ae",
+      "mtime": "2026-05-16T17:57:17.155Z"
+    },
+    {
+      "path": "Game/Levels/china/china_path07/terraintexture.pak",
+      "size": 343,
+      "hash": "271d4ed05bd90579dae552fb61ec17898309420ecd96a064129b36fb5e85364c",
+      "mtime": "2026-05-16T17:57:17.810Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_base/level.pak",
+      "size": 33367,
+      "hash": "95345bc1513ae6e789f743a8f44731138392d7e1d0376d63ff436e4f528da7a9",
+      "mtime": "2026-05-16T17:57:18.292Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_base/terraintexture.pak",
+      "size": 62158,
+      "hash": "663629929f5b2b6b40f4ba685d83364a931070ef138916615bf5d87fc1fa37d9",
+      "mtime": "2026-05-16T17:57:18.927Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_junction01/level.pak",
+      "size": 611534,
+      "hash": "9268b5c293afc5a1e3388a29761ebbf0f904f38e5f5c14c18da53c05e74dbc68",
+      "mtime": "2026-05-16T17:57:19.636Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_junction01/terraintexture.pak",
+      "size": 32773,
+      "hash": "83486e12bf894e2139960edfa9d8eb9bc92dad7a8dece1d96e0d46d5f8eea433",
+      "mtime": "2026-05-16T17:57:20.197Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_junction02/level.pak",
+      "size": 1626727,
+      "hash": "d8071b9740da5448d98c9cb1facf8328efe8fa4cf30ed78632a537234cb6ff29",
+      "mtime": "2026-05-16T17:57:21.180Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_junction02/terraintexture.pak",
+      "size": 61298,
+      "hash": "632a8cc8e4fe4ae0a59882d6079484befee89b53937bc921d536a6f132551cd8",
+      "mtime": "2026-05-16T17:57:21.748Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_junction03/level.pak",
+      "size": 1772343,
+      "hash": "1d15ab1302773ab595f444ad70628c821936a0e6cf36f4354cbc4657a6055db8",
+      "mtime": "2026-05-16T17:57:22.651Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_junction03/terraintexture.pak",
+      "size": 9194,
+      "hash": "6fb24759c5a1ca9dd677ace9c472091ab068f6ff278366addfffa4d205b659a9",
+      "mtime": "2026-05-16T17:57:23.201Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_junction04/level.pak",
+      "size": 3586204,
+      "hash": "07b7b16192ceb6943e04c02cbba915d62848f865a10c580e6fc482571129566d",
+      "mtime": "2026-05-16T17:57:23.997Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_junction04/terraintexture.pak",
+      "size": 76733,
+      "hash": "30053a1e98a1ca770ddef5e488b966a4cbc13b6b1f70c7906b7d5273445e78f7",
+      "mtime": "2026-05-16T17:57:24.763Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_junction05/level.pak",
+      "size": 1527831,
+      "hash": "bc62e2dbf9d7106d18e2dabd5d66f7336c30eb47859f5f4d2211964c014e7034",
+      "mtime": "2026-05-16T17:57:25.596Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_junction05/terraintexture.pak",
+      "size": 34677,
+      "hash": "f02b49dde1ec466a5d49e8c576cf86eae14474a6298a62cc32187f994ad41e7c",
+      "mtime": "2026-05-16T17:57:26.075Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path01/level.pak",
+      "size": 3738968,
+      "hash": "e236c551de2b83263980d94275b6d3ddc6ffe8d0c50c49dd0f3d08ab09ebfac2",
+      "mtime": "2026-05-16T17:57:27.173Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path01/terraintexture.pak",
+      "size": 524577,
+      "hash": "c510eb1ded5089e9476a92ac4e9d3eb65f31099299f381ef9d0be87358ef3edf",
+      "mtime": "2026-05-16T17:57:27.966Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path02/level.pak",
+      "size": 991261,
+      "hash": "b5618147fdf91b7d0922ec16b78b5a0b5f81ba4cd95e11bb05b3ff31b804dd37",
+      "mtime": "2026-05-16T17:57:28.766Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path02/terraintexture.pak",
+      "size": 14512,
+      "hash": "a1ece0c365081df9eee0e8bae54bf693829ca1d67b9e9a3dcb504c4c007f2738",
+      "mtime": "2026-05-16T17:57:29.269Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path03/level.pak",
+      "size": 1798540,
+      "hash": "67748db70cd40d3a5b5d157d03e1d8c8b82e9841f3141863485d1edee3512610",
+      "mtime": "2026-05-16T17:57:30.123Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path03/terraintexture.pak",
+      "size": 54108,
+      "hash": "b82d9250daef9b9ce3db0dd08b2c6023c650050f649fb5a80ea03a9f2febfc4a",
+      "mtime": "2026-05-16T17:57:30.605Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path04/level.pak",
+      "size": 1245235,
+      "hash": "92275da20487a601f2ac29abec0c9231904a968e4a647574234d78db526d2998",
+      "mtime": "2026-05-16T17:57:31.450Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path04/terraintexture.pak",
+      "size": 153186,
+      "hash": "5ab7eed081ff04bceff4a4e16f309e7e5564c541f480be2537815bc3a31b2fe0",
+      "mtime": "2026-05-16T17:57:32.207Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path05/level.pak",
+      "size": 1348880,
+      "hash": "dc44efda6042843cb9b2178befc56be27100bcf6c35bda240a1b1e257968df7a",
+      "mtime": "2026-05-16T17:57:33.005Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path05/terraintexture.pak",
+      "size": 13082,
+      "hash": "8c2a792710dfee0b71895c06f3beb4a162f0459e78941fbc274f1e49991b56ad",
+      "mtime": "2026-05-16T17:57:33.649Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path06/level.pak",
+      "size": 1035550,
+      "hash": "12bba8944e53386a34297b391ac1ec8b1c90570b9838c8d85bc2d7acfff3fb90",
+      "mtime": "2026-05-16T17:57:35.224Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path06/terraintexture.pak",
+      "size": 5525,
+      "hash": "08b4daf5aa7419a80d61b561a00508d834b960ab19be79e8e15c788322f2680c",
+      "mtime": "2026-05-16T17:57:35.701Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path07/level.pak",
+      "size": 1035090,
+      "hash": "b5f40d510e64682c836b139e26fc75bcb68ffe3e92b5ce3420ccf9c6726be64a",
+      "mtime": "2026-05-16T17:57:36.478Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path07/terraintexture.pak",
+      "size": 3999,
+      "hash": "700d87a5f8bfd2ff2769e927569dd788d878aa7105a1c9e48aebf75b24dfa755",
+      "mtime": "2026-05-16T17:57:37.031Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path08/level.pak",
+      "size": 1710085,
+      "hash": "b566e74d956ca03f0b5216d0bb34b59c7667432da411013601903070aa4f1af7",
+      "mtime": "2026-05-16T17:57:37.824Z"
+    },
+    {
+      "path": "Game/Levels/favela/favela_path08/terraintexture.pak",
+      "size": 73657,
+      "hash": "686aa366244a8b04089a29332124f2e5517fa186104e9f6b43281f79081ec866",
+      "mtime": "2026-05-16T17:57:38.355Z"
+    },
+    {
+      "path": "Game/Levels/Initiation/level.pak",
+      "size": 2141315,
+      "hash": "86c1b3d82fabf06c64512cfc67c6a15c539558d21055c50677aab67192492f68",
+      "mtime": "2026-05-16T17:57:39.190Z"
+    },
+    {
+      "path": "Game/Levels/Initiation/terraintexture.pak",
+      "size": 1607,
+      "hash": "ed9da74cd81c825063cdeb28e4d44a7d68d53ced5a2f5454a9bb7930679ebfc4",
+      "mtime": "2026-05-16T17:57:39.777Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_breach/level.pak",
+      "size": 3640851,
+      "hash": "936d30cc05c8b7c35cb68996509ba875a9915418d4ff3a9e3205756e8a39d04f",
+      "mtime": "2026-05-16T17:57:40.644Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_breach/terraintexture.pak",
+      "size": 76835,
+      "hash": "b8183d01026eec0d70ade6ae591f78025feab179113ce84688245deb31fa241c",
+      "mtime": "2026-05-16T17:57:41.259Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_construction/level.pak",
+      "size": 3303582,
+      "hash": "5120224022ba7afcc257cf6f094f319556ac1e5d504de0fc47c9638d3c5948cb",
+      "mtime": "2026-05-16T17:57:42.250Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_construction/terraintexture.pak",
+      "size": 132594,
+      "hash": "181ca2b6a37093203d8d24d5e299384abbdfb2a6042214419af648f781e22cbe",
+      "mtime": "2026-05-16T17:57:42.999Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_deposit/level.pak",
+      "size": 268525,
+      "hash": "6ca85f670e89c95dc3e657029532a6bfa7a79fc7b67101488140c85cb6ce33d1",
+      "mtime": "2026-05-16T17:57:43.624Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_deposit/terraintexture.pak",
+      "size": 1141,
+      "hash": "fcdf42e93fa2c2dad9f852232f0d07937902c66bef24b0a921d3c214dc11013a",
+      "mtime": "2026-05-16T17:57:44.152Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_longway/level.pak",
+      "size": 1148848,
+      "hash": "2764898df0d44fb550e80ee474d32611386479ce36eca1c06f979297f08ddf17",
+      "mtime": "2026-05-16T17:57:44.905Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_longway/terraintexture.pak",
+      "size": 1466446,
+      "hash": "86431dfbc19c463c5d223ad1040640e85a54392c32827650887d7a5ca409a249",
+      "mtime": "2026-05-16T17:57:45.738Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_quarry/level.pak",
+      "size": 3133403,
+      "hash": "500990feffbdddef68bfafc4786986c782eb55e00148fa29a784c566fead69c7",
+      "mtime": "2026-05-16T17:57:46.516Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_quarry/terraintexture.pak",
+      "size": 72517,
+      "hash": "591e417b1ab8c4e3eb84b903a533cba0ea89493aca9aff02fba8f39a31114b52",
+      "mtime": "2026-05-16T17:57:47.052Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_vault/level.pak",
+      "size": 930991,
+      "hash": "f7b0b436ab51ae47a8c48eb10749c1ea949c465b857a748158594cfd5f6011cd",
+      "mtime": "2026-05-16T17:57:48.136Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ctf_vault/terraintexture.pak",
+      "size": 41807,
+      "hash": "4dee86160737ed6d3ac27ba9eacf7a85de72811f9ca028741544339fcad6f018",
+      "mtime": "2026-05-16T17:57:48.645Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dmn_armageddon/level.pak",
+      "size": 3461625,
+      "hash": "df5401215fc894440f08fc4cf39b6ce1f92da5e4821771ab6119a9346a0d07ad",
+      "mtime": "2026-05-16T17:57:49.617Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dmn_armageddon/terraintexture.pak",
+      "size": 199084,
+      "hash": "8c7d134e7829ead2323668598cd5b2e0042dede478ea351222bad7fcb8ed6c34",
+      "mtime": "2026-05-16T17:57:50.229Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dmn_sirius/level.pak",
+      "size": 575907,
+      "hash": "e214ab48e9647ebf69809f9489443e655854e1eb1e1881eaa9ed3ef49e7817fb",
+      "mtime": "2026-05-16T17:57:51.115Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dmn_sirius/terraintexture.pak",
+      "size": 39690,
+      "hash": "636d7af07b39247fd1b273949562914acf5623da56029653bbdc36cf62db0208",
+      "mtime": "2026-05-16T17:57:51.719Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dmn_subzero/level.pak",
+      "size": 1322350,
+      "hash": "4d1fe3e77840a6a4d0e87686140f445fe817c8d963cf1c5e0271e3a556486385",
+      "mtime": "2026-05-16T17:57:52.632Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dmn_subzero/terraintexture.pak",
+      "size": 5497,
+      "hash": "c9908a8d9580562609ab35b5ff32881a71187e6a7c0ef2655aa369e877563fe7",
+      "mtime": "2026-05-16T17:57:53.177Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dst_afghan/level.pak",
+      "size": 2720537,
+      "hash": "61d08a0e2b88abb7784604750329ab34b469396e90438afd2e9be84199d36343",
+      "mtime": "2026-05-16T17:57:54.025Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dst_afghan/terraintexture.pak",
+      "size": 412310,
+      "hash": "6532b99d7f79e56dcc3b5b277b5e5e203c85a0239f3d83aef22b855856f9106e",
+      "mtime": "2026-05-16T17:57:54.688Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dst_lighthouse/level.pak",
+      "size": 1490363,
+      "hash": "bae2a4098c5fcb0003261db68ec6bdc3dc88ea2d8d21e3fbc276d41269e1852b",
+      "mtime": "2026-05-16T17:57:55.576Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dst_lighthouse/terraintexture.pak",
+      "size": 116596,
+      "hash": "9a1bf964d389dd857064027003611ae44e08a821df7f460f34681e27a3c4b520",
+      "mtime": "2026-05-16T17:57:56.096Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dst_mars/level.pak",
+      "size": 1693882,
+      "hash": "6a2fe0797f20af13cbe39eadcad16599b20fd44e45e9b3ee558b3314f826187e",
+      "mtime": "2026-05-16T17:57:57.103Z"
+    },
+    {
+      "path": "Game/Levels/pvp/dst_mars/terraintexture.pak",
+      "size": 9062,
+      "hash": "8b42aca23611c002b84dc48734eb5fef3b102deb4705c3fd68e86a9faea50410",
+      "mtime": "2026-05-16T17:57:57.661Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_bunker/level.pak",
+      "size": 592924,
+      "hash": "b51c973009cd7bcaf5e1c28c376620e592eeace0ce8e0cece078d685acfdb81f",
+      "mtime": "2026-05-16T17:57:58.338Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_bunker/terraintexture.pak",
+      "size": 9504,
+      "hash": "1a0df2f86e2b9d45c270a8278f7a93a253340bcf25b0a964c27698fdd7df898f",
+      "mtime": "2026-05-16T17:57:58.805Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_downtown/level.pak",
+      "size": 1175729,
+      "hash": "49cb97ba15647892dcab223f43a83a627299098448725914dd01b82f19eaad9f",
+      "mtime": "2026-05-16T17:58:00.105Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_downtown/terraintexture.pak",
+      "size": 38867,
+      "hash": "4c184bb19faed51094741cba63c326fe783a4ee93948309a21cbf11c32d5511d",
+      "mtime": "2026-05-16T17:58:00.592Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_forest/level.pak",
+      "size": 1023861,
+      "hash": "fd19e67fa403d26660f807330a0966952aa54931d3d09b1559cf350bf23951e6",
+      "mtime": "2026-05-16T17:58:01.335Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_forest/terraintexture.pak",
+      "size": 1446332,
+      "hash": "ba935f47065185e179aa3e4b38ecd847330ba7082bc8a401ef8acef4c9362e8d",
+      "mtime": "2026-05-16T17:58:02.217Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_japan/level.pak",
+      "size": 1521823,
+      "hash": "790a37aa4e63adb6b3daf5615fd755be7ac54c79d06963e203568852dc8f07e2",
+      "mtime": "2026-05-16T17:58:03.085Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_japan/terraintexture.pak",
+      "size": 8503,
+      "hash": "5256ba5dfc70a922b91e4cf60ca0470a6c23da855b23fa4b1f9f3aa7a325f25e",
+      "mtime": "2026-05-16T17:58:03.535Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_motel/level.pak",
+      "size": 1121948,
+      "hash": "4a5e94e21d09ba9c847b973fcad3b11eed0cec26b17adcc4f485c8d154a6e4e2",
+      "mtime": "2026-05-16T17:58:04.370Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_motel/terraintexture.pak",
+      "size": 1533,
+      "hash": "9d50d39a49a2103d3eff3b9be4d3640f482d75d3dacacc78dbc05cb950bf9477",
+      "mtime": "2026-05-16T17:58:04.948Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_train/level.pak",
+      "size": 1162260,
+      "hash": "9963b0d3c4e3a9c8da2e71d87413943457fae1b6109d95ce4bd48b0a1285bfed",
+      "mtime": "2026-05-16T17:58:05.771Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_train/terraintexture.pak",
+      "size": 12312,
+      "hash": "4f87639cd418489a90b4be09bf4d494a69f5ed9512da4e765999910ea47eef0d",
+      "mtime": "2026-05-16T17:58:06.236Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_widestreet_up/level.pak",
+      "size": 765854,
+      "hash": "44ec2bfa5d938c423da3e0af8f670033e1532bb3e480b0b96b9a36667a15c10c",
+      "mtime": "2026-05-16T17:58:06.968Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ffa_widestreet_up/terraintexture.pak",
+      "size": 3863,
+      "hash": "e70d9f90ca0bce1a1db641c1797188e4d035012209dfc8c34401e5b15e3de50c",
+      "mtime": "2026-05-16T17:58:07.448Z"
+    },
+    {
+      "path": "Game/Levels/pvp/hnt_africa/level.pak",
+      "size": 2517234,
+      "hash": "888ce96442db96cedc3fbb7fecaed9a31d890b7e8f4b22455a6bc457b3e706cf",
+      "mtime": "2026-05-16T17:58:08.341Z"
+    },
+    {
+      "path": "Game/Levels/pvp/hnt_africa/terraintexture.pak",
+      "size": 17786,
+      "hash": "e4b84588c2893ca76aba5b082498c62f4aafc7ce1a3ebfeb99d4faa83d137c66",
+      "mtime": "2026-05-16T17:58:08.843Z"
+    },
+    {
+      "path": "Game/Levels/pvp/hnt_night_motel/level.pak",
+      "size": 5055243,
+      "hash": "39452dea1c6c37fc17485b0b2259009e8c853e02b68bca1b6141e24002175130",
+      "mtime": "2026-05-16T17:58:09.983Z"
+    },
+    {
+      "path": "Game/Levels/pvp/hnt_night_motel/terraintexture.pak",
+      "size": 17882,
+      "hash": "f155421ec1d44d94d1adcffacc4bce6d6f3675b579306c7ebf6cf4df862a7113",
+      "mtime": "2026-05-16T17:58:10.502Z"
+    },
+    {
+      "path": "Game/Levels/pvp/hnt_winter/level.pak",
+      "size": 1879590,
+      "hash": "64db3152c9aa0d681f650e56a6a1ba2a89332020098685c8a9bb8a5fefc9f753",
+      "mtime": "2026-05-16T17:58:11.377Z"
+    },
+    {
+      "path": "Game/Levels/pvp/hnt_winter/terraintexture.pak",
+      "size": 58142,
+      "hash": "7b44ee57388ce9077c017c9193b22fd5262e2779d3b3c1e02aeadc820cdd7d8c",
+      "mtime": "2026-05-16T17:58:11.889Z"
+    },
+    {
+      "path": "Game/Levels/pvp/lms_mojave/level.pak",
+      "size": 6385130,
+      "hash": "376c34a21bd0d090a527dad1cca200718a94b1f6d52356734eeb948850e638d8",
+      "mtime": "2026-05-16T17:58:12.891Z"
+    },
+    {
+      "path": "Game/Levels/pvp/lms_mojave/terraintexture.pak",
+      "size": 172710,
+      "hash": "b3bb4aba3ad82f93d881c850c55e175ceb995dec8e523645f1dfb60ef200f7a8",
+      "mtime": "2026-05-16T17:58:13.725Z"
+    },
+    {
+      "path": "Game/Levels/pvp/lms_pripyat/level.pak",
+      "size": 7339136,
+      "hash": "e1163046cd3f95e03af886e467fd054526648afba71723ae1953ee78d133cbf1",
+      "mtime": "2026-05-16T17:58:14.722Z"
+    },
+    {
+      "path": "Game/Levels/pvp/lms_pripyat/terraintexture.pak",
+      "size": 131836,
+      "hash": "0ad1a2c252495f9d9de433d4b19223796d505fb4e2b909e6dd12f4f9900c9699",
+      "mtime": "2026-05-16T17:58:15.313Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_afghan_up/level.pak",
+      "size": 1868863,
+      "hash": "4933e196ceb1df47691110974b2789e63712df69c1d4993c3b02e11881a1de29",
+      "mtime": "2026-05-16T17:58:16.190Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_afghan_up/terraintexture.pak",
+      "size": 90529,
+      "hash": "e81e1960c38a46444ade95a13e132509ce2e4c845aae54dd0fe8878c90682696",
+      "mtime": "2026-05-16T17:58:16.751Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_bridges_up/level.pak",
+      "size": 1258638,
+      "hash": "835948b43cc73b2f3bbb3d33ba0e99c0e4fe2d2e4ec6f5bc2d1d38ca7418fac5",
+      "mtime": "2026-05-16T17:58:17.613Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_bridges_up/terraintexture.pak",
+      "size": 1442877,
+      "hash": "7bfeedd2d0ce5c50bc0ba56d0c39950cdd7f39a1a33bdda936b530bf47f6c7e4",
+      "mtime": "2026-05-16T17:58:18.377Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_D17/level.pak",
+      "size": 1026424,
+      "hash": "53815d09dde9eecbf829e9aca88efb7841bb7a1ca3cd94a75cdc44d7e3064936",
+      "mtime": "2026-05-16T17:58:19.247Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_D17/terraintexture.pak",
+      "size": 32615,
+      "hash": "5b22e97e9ea5195ea36dae14f62475485c7f9482c960570e5e3fe15b6d0ffa32",
+      "mtime": "2026-05-16T17:58:19.891Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_destination/level.pak",
+      "size": 647124,
+      "hash": "b4fc002650bb9c26276cece0d79c3ab22a0b4ee788952cc4c615df801dd767cc",
+      "mtime": "2026-05-16T17:58:20.692Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_destination/terraintexture.pak",
+      "size": 1653,
+      "hash": "a012435112eea60a97abece545085493ae79b513c17f4fff464613d8b2d7a6ca",
+      "mtime": "2026-05-16T17:58:21.240Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_district/level.pak",
+      "size": 1232057,
+      "hash": "5ea819308201a3f14fd2783c88b13dce8124784156b5398db39502af43fa918f",
+      "mtime": "2026-05-16T17:58:21.973Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_district/terraintexture.pak",
+      "size": 35294,
+      "hash": "24208c1d257a94d5e155f22142933a6d75560378f0384bc4b9e56e6ea1efb585",
+      "mtime": "2026-05-16T17:58:22.517Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_factory_up/level.pak",
+      "size": 1093226,
+      "hash": "3fbe99faf10ede41425a09e64d14811546c74d14f227eece336bcb20e01a65fc",
+      "mtime": "2026-05-16T17:58:23.231Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_factory_up/terraintexture.pak",
+      "size": 77524,
+      "hash": "6d9206e80fba9cab4aab4fa9d330d94c90af03bc2419dc30c348a306fc7a146b",
+      "mtime": "2026-05-16T17:58:23.920Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_palace/level.pak",
+      "size": 1059739,
+      "hash": "17a71d44607a8a7dbefbb4a739c1c11ffdff500fbabb589852e1d21446b30ce1",
+      "mtime": "2026-05-16T17:58:24.741Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_palace/terraintexture.pak",
+      "size": 929,
+      "hash": "6a82e50c3db10368e5cb528dacbe0acb1817dbe159a935acd6951bda2e2fca91",
+      "mtime": "2026-05-16T17:58:25.345Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_pyramid/level.pak",
+      "size": 3505748,
+      "hash": "2c5cd84ab97f358cca3b4365bc6d31b98b266833ab4e39bb93c0b959393a6b94",
+      "mtime": "2026-05-16T17:58:26.220Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_pyramid/terraintexture.pak",
+      "size": 44410,
+      "hash": "3e3126091dcc46a8f6b9e65c0e0274c6834cc06211e365439933d13ef1529626",
+      "mtime": "2026-05-16T17:58:27.086Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_trailerpark/level.pak",
+      "size": 3353768,
+      "hash": "be6cbeb933f2de5c7675544a5ffb80799204dd5f6eb320d6d58bd1e49dd394ba",
+      "mtime": "2026-05-16T17:58:27.972Z"
+    },
+    {
+      "path": "Game/Levels/pvp/ptb_trailerpark/terraintexture.pak",
+      "size": 1040472,
+      "hash": "905e995972e3cbdb1ff7164cf217de48250d6bc45fd7732fc4a4d2f48edbca80",
+      "mtime": "2026-05-16T17:58:29.304Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_blackgold_up/level.pak",
+      "size": 2227666,
+      "hash": "de3fe287189558b7328d7f349bba2365c88b3421e5df41d731a3e445365a44ae",
+      "mtime": "2026-05-16T17:58:30.137Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_blackgold_up/terraintexture.pak",
+      "size": 217627,
+      "hash": "a581968e7beffb692aea20808a0569c668029e26dee3fe128e7f4f309cde840c",
+      "mtime": "2026-05-16T17:58:30.899Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_blackmamba/level.pak",
+      "size": 1614574,
+      "hash": "3c6977fa9f8ebe3fc298e85372b74644a72cf40720b2a7c0a1c7de45ba0e2136",
+      "mtime": "2026-05-16T17:58:31.942Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_blackmamba/terraintexture.pak",
+      "size": 47293,
+      "hash": "165df7aa477985ffe7a9f159ddcbf2797dc5f480fb2c38b812fa6a627059cf03",
+      "mtime": "2026-05-16T17:58:32.401Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_blackwood/level.pak",
+      "size": 1670986,
+      "hash": "9090e1518918d4c1c967f0a26b1f572a76bea993f96a1738c2412048c5019fd4",
+      "mtime": "2026-05-16T18:45:39.742Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_blackwood/terraintexture.pak",
+      "size": 3764,
+      "hash": "0ab60a8076478f65613f9ec2a368013b1b44dc7a76cbb9f6d919e3e939d24118",
+      "mtime": "2026-05-16T18:45:40.089Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_highhill/level.pak",
+      "size": 1397989,
+      "hash": "520ab7716d9600a2c146def6c4009402d42fb167c4a7281e4850f0253923207f",
+      "mtime": "2026-05-16T18:45:40.619Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_highhill/terraintexture.pak",
+      "size": 699211,
+      "hash": "50dae073ba483ae8f9b93acf3d2ab2ea620c89d59c65a182ea03c48a39dd5725",
+      "mtime": "2026-05-16T18:45:41.402Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_invasion/level.pak",
+      "size": 1546216,
+      "hash": "7e3a42823c64f1e669d9218c72f1487f502803bdffafb5cab554c305b2ac5a4f",
+      "mtime": "2026-05-16T18:45:41.932Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_invasion/terraintexture.pak",
+      "size": 545438,
+      "hash": "6d7bea153d38ccd7ac07c1a45a33fc4572ff3f911b04c5f5cfc4d8a5e569e7a6",
+      "mtime": "2026-05-16T18:45:42.362Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_wharf/level.pak",
+      "size": 4083075,
+      "hash": "2c37cd766143799e640f7d775227462f73811bd0ad5c8f181ddf8ff42a252ade",
+      "mtime": "2026-05-16T18:45:43.322Z"
+    },
+    {
+      "path": "Game/Levels/pvp/stm_wharf/terraintexture.pak",
+      "size": 77873,
+      "hash": "5c100fb92be7c38be0fd09cefce96dedcf8b005fcdd0723adf5d2f402fb1f1f5",
+      "mtime": "2026-05-16T18:45:43.794Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tbs_deepwater/level.pak",
+      "size": 726827,
+      "hash": "93b588396211155b182945e485d45c7ac0205896a3c33deae86dc7772fb19ba2",
+      "mtime": "2026-05-16T18:45:44.208Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tbs_deepwater/terraintexture.pak",
+      "size": 191,
+      "hash": "aa21cdee350e8bec4cd43142beb81f35f0bd100b002728b21b99f44a8c50c8ba",
+      "mtime": "2026-05-16T18:45:44.665Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tbs_hawkrock/level.pak",
+      "size": 1224663,
+      "hash": "b1028907fbfac73bf1f07e76f59cb51a6a82595d59265ecf8ad35fe30c61f060",
+      "mtime": "2026-05-16T18:45:45.201Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tbs_hawkrock/terraintexture.pak",
+      "size": 22523,
+      "hash": "33c287ab6c3fb82a58309b7009b6a703e96546c4bd37770f84488a289f13829b",
+      "mtime": "2026-05-16T18:45:45.551Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tbs_waterfalling/level.pak",
+      "size": 1109235,
+      "hash": "258e800fa54616f9e770fdf291b3daa699cd173ca53d19f9a388305398750007",
+      "mtime": "2026-05-16T18:45:46.070Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tbs_waterfalling/terraintexture.pak",
+      "size": 88231,
+      "hash": "e39793c0654614b7581e4321ef2a2f0e55b3661dab05e491692814b1356bb5db",
+      "mtime": "2026-05-16T18:45:46.461Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_airbase/level.pak",
+      "size": 387886,
+      "hash": "2fd3de63ff8ab1f6fce1ffd22b7d4dd0044068abe869b94a2cf07c6b491e3c47",
+      "mtime": "2026-05-16T18:45:46.919Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_airbase/terraintexture.pak",
+      "size": 32914,
+      "hash": "84d2dce424d8fa7b8c2efb8300ef644b3b3c2c4a257fa40cd109b98c6c633265",
+      "mtime": "2026-05-16T18:45:47.273Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_aul/level.pak",
+      "size": 1199005,
+      "hash": "10536a08f90777f3075eb101b216247ed5a3fffed62d33441cf06b4c4d42a891",
+      "mtime": "2026-05-16T18:45:48.101Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_aul/terraintexture.pak",
+      "size": 219255,
+      "hash": "a90f59f84f4847d4eeb9baf9f2037ee339a95ffe4274123b888b513832c2f613",
+      "mtime": "2026-05-16T18:45:48.630Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_codenameD18/level.pak",
+      "size": 936236,
+      "hash": "e76c22bfd5b915a7ddbb18240853ba2566f9426000d4d6c8fc5f5684d45bea9a",
+      "mtime": "2026-05-16T18:45:49.387Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_codenameD18/terraintexture.pak",
+      "size": 36512,
+      "hash": "6897cd0b300df5b2fa296c58e8b5da4531bfa0ee8b17fb65f6423eeac1338d28",
+      "mtime": "2026-05-16T18:45:49.859Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_crossriver/level.pak",
+      "size": 504413,
+      "hash": "4812c849578a7c0bc8822b505444f7aedf03a7c2e62ce97fc37c9e6018efc13c",
+      "mtime": "2026-05-16T18:45:50.631Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_crossriver/terraintexture.pak",
+      "size": 4126,
+      "hash": "d7bee89a777f12c419457c13c66f1a720734468831e033fb03943027faa97606",
+      "mtime": "2026-05-16T18:45:51.076Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_dock/level.pak",
+      "size": 791141,
+      "hash": "97373f958359e2f480bac7ae2bf7da6e489fcb05478046faff53ccf6d8ac8d36",
+      "mtime": "2026-05-16T18:45:51.491Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_dock/terraintexture.pak",
+      "size": 53637,
+      "hash": "f40d0879d5080c3a8195953fda10fc290cda1e061f395d82bdb28f30ce06eb79",
+      "mtime": "2026-05-16T18:45:51.847Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_downtown/level.pak",
+      "size": 1182962,
+      "hash": "861d1545ad0cc0731fbf7dda80fdeb264fe37a6cf27c23960b7420aa00d9e72e",
+      "mtime": "2026-05-16T18:45:52.457Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_downtown/terraintexture.pak",
+      "size": 38867,
+      "hash": "4c184bb19faed51094741cba63c326fe783a4ee93948309a21cbf11c32d5511d",
+      "mtime": "2026-05-16T18:45:52.800Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_farm/level.pak",
+      "size": 1022827,
+      "hash": "3d1d0994b2e176e8482574063285fa83003e52d68543af413c80f6613599e0f9",
+      "mtime": "2026-05-16T18:46:38.585Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_farm/terraintexture.pak",
+      "size": 70973,
+      "hash": "0d5ca0ba9eb1341fdb670e3914ab105c73a2d18f351ddb99c0f9c1526ed2c67e",
+      "mtime": "2026-05-16T18:46:38.848Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_ghost_town/level.pak",
+      "size": 570049,
+      "hash": "356de7ac6a4bd14eaeed26b43f7e804f0b86ce8b090b2aecb096ab91b0b65aa5",
+      "mtime": "2026-05-16T18:46:39.198Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_ghost_town/terraintexture.pak",
+      "size": 5837,
+      "hash": "09a8cb5d8a337290c10c1f8125e3ebd38aaf421f8290b62c42c58f6ccf2498ff",
+      "mtime": "2026-05-16T18:46:38.797Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_hangar_up/level.pak",
+      "size": 164535,
+      "hash": "aff0154ac052a0b145b0ef9436b05a8fee8392ff9a9c62003ffa058f14c6d44f",
+      "mtime": "2026-05-16T18:46:39.144Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_hangar_up/terraintexture.pak",
+      "size": 43046,
+      "hash": "6f6c74400669c94a98b421d0f18fcfeaf642eeb8d6e2a5417e52fe80f6121d0d",
+      "mtime": "2026-05-16T18:46:39.240Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_motel/level.pak",
+      "size": 1111367,
+      "hash": "4957033c6190125bb3336cd27565f984b0681e34a7632a2e8932ed51eb48bd9d",
+      "mtime": "2026-05-16T18:46:39.406Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_motel/terraintexture.pak",
+      "size": 439978,
+      "hash": "3613d307e8569db73939b3a0bf93cadad6a4d2d0f7df89b44cc7d77dba5025f0",
+      "mtime": "2026-05-16T18:46:39.815Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_oildepotv3/level.pak",
+      "size": 360683,
+      "hash": "ad76a93ef6f43faf6710fdcb6e86e69be6018990f3a2633f94c916328ac86885",
+      "mtime": "2026-05-16T18:46:39.798Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_oildepotv3/terraintexture.pak",
+      "size": 46305,
+      "hash": "e08a0aa7f8d45982d2146902d17e585d75d8ffe849aae74227912d82dd8a4a8b",
+      "mtime": "2026-05-16T18:46:39.690Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_residential/level.pak",
+      "size": 3486859,
+      "hash": "63d06cf05aa4ab116d84f04339733c32a04c48e5f0e90d998544a1050d25dfff",
+      "mtime": "2026-05-16T18:46:40.054Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_residential/terraintexture.pak",
+      "size": 1031648,
+      "hash": "073c49fa8802ac6eba3b9acb5d950148381b1905746c804fb02d6c713c7e1984",
+      "mtime": "2026-05-16T18:46:40.393Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_shuttle/level.pak",
+      "size": 430512,
+      "hash": "095b0f3195a1fd2e447e881c2630f8eb624ba0ff84dfd8d963db2391126ab25c",
+      "mtime": "2026-05-16T18:46:40.538Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_shuttle/terraintexture.pak",
+      "size": 44109,
+      "hash": "e34ce874091e43ae90f9329694e628b50f07686d8e6a6fd2f64a0e1f275d6af4",
+      "mtime": "2026-05-16T18:46:40.153Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_sirius/level.pak",
+      "size": 426742,
+      "hash": "f762874b0ac00bc4fc5aa2d6e2c0c5b89791a4502bd3e0be87b2ce1f6e470bea",
+      "mtime": "2026-05-16T18:46:41.039Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_sirius/terraintexture.pak",
+      "size": 39690,
+      "hash": "636d7af07b39247fd1b273949562914acf5623da56029653bbdc36cf62db0208",
+      "mtime": "2026-05-16T18:46:40.513Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_streetwars/level.pak",
+      "size": 1039494,
+      "hash": "173e81d89e912b7312d97765a7405c9992dfa89e87aa8bd4566c9d461c5c91df",
+      "mtime": "2026-05-16T18:46:40.903Z"
+    },
+    {
+      "path": "Game/Levels/pvp/tdm_streetwars/terraintexture.pak",
+      "size": 4691,
+      "hash": "1875b88d28830d169cadb1db17d0768ddfde6cee8578fbf686a23ba6c878255d",
+      "mtime": "2026-05-16T18:46:41.011Z"
+    },
+    {
+      "path": "Game/Levels/survival/africa_survival_base/level.pak",
+      "size": 182782,
+      "hash": "f0480d6afacdb3ee5ba86cea1c34812cac1873a72b00b702273086ba2b177a76",
+      "mtime": "2026-05-16T18:46:41.023Z"
+    },
+    {
+      "path": "Game/Levels/survival/africa_survival_base/terraintexture.pak",
+      "size": 650754,
+      "hash": "3e6d59db14dfed13c1139f6b6063b4b97838499fcb472b24414a946e6ee338dd",
+      "mtime": "2026-05-16T18:46:41.380Z"
+    },
+    {
+      "path": "Game/Levels/survival/africa_survival/level.pak",
+      "size": 2760567,
+      "hash": "ea1e3636e6677825b9c39e49a45e521455001038e47393254b1bc9b261660b6c",
+      "mtime": "2026-05-16T18:46:41.498Z"
+    },
+    {
+      "path": "Game/Levels/survival/africa_survival/terraintexture.pak",
+      "size": 1056,
+      "hash": "b69cfd42e39fe8be1854bbd729623701db5f7002c2afddb5c90a35e5d60b7e36",
+      "mtime": "2026-05-16T18:46:41.373Z"
+    },
+    {
+      "path": "Game/Levels/survival/anubis_act1/level.pak",
+      "size": 1979374,
+      "hash": "3c079fc1da3bc77d7c746e9725be58603b18518ba17fa811b6d34400dac1e82e",
+      "mtime": "2026-05-16T18:46:41.622Z"
+    },
+    {
+      "path": "Game/Levels/survival/anubis_act1/terraintexture.pak",
+      "size": 14495,
+      "hash": "f67118e8461ed8622da4441092522b4b8ca12d9a5237bea7dc6559f33ec00a64",
+      "mtime": "2026-05-16T18:46:41.814Z"
+    },
+    {
+      "path": "Game/Levels/survival/anubis_act2/level.pak",
+      "size": 7474860,
+      "hash": "f6429d989020457730e9fe1d794d208a5d5283d6e0869d956c8b5996e85218dd",
+      "mtime": "2026-05-16T18:46:42.264Z"
+    },
+    {
+      "path": "Game/Levels/survival/anubis_act2/terraintexture.pak",
+      "size": 42865,
+      "hash": "e1c738fdc1ba00aa4ba9294416647bad2c3ee01aa8dee95ff2cb2d6995f365ed",
+      "mtime": "2026-05-16T18:46:41.904Z"
+    },
+    {
+      "path": "Game/Levels/survival/anubis_act3/level.pak",
+      "size": 3844220,
+      "hash": "3224142ba565fcb81a8202e591c297371b846081208ba5bac0f0717d72c8cb72",
+      "mtime": "2026-05-16T18:46:42.423Z"
+    },
+    {
+      "path": "Game/Levels/survival/anubis_act3/terraintexture.pak",
+      "size": 25548,
+      "hash": "10552a24682905a2fc69f791beb9fbc2e8c49df03fc5b87f5b94a3f8d2920fbf",
+      "mtime": "2026-05-16T18:46:42.184Z"
+    },
+    {
+      "path": "Game/Levels/survival/anubis_base/level.pak",
+      "size": 731720,
+      "hash": "58d66b04a27b4483619283cef6dc8139448905d62e455faec21ed23c2ef7e2e9",
+      "mtime": "2026-05-16T18:46:42.559Z"
+    },
+    {
+      "path": "Game/Levels/survival/anubis_base/terraintexture.pak",
+      "size": 650754,
+      "hash": "3e6d59db14dfed13c1139f6b6063b4b97838499fcb472b24414a946e6ee338dd",
+      "mtime": "2026-05-16T18:46:43.087Z"
+    },
+    {
+      "path": "Game/Levels/survival/chernobyl/chernobyl_act1/level.pak",
+      "size": 3927140,
+      "hash": "5268fccfc9080ff731708b0ee25b6b0af1f109c7e7b462e3c7d548a659b5c974",
+      "mtime": "2026-05-16T18:46:42.763Z"
+    },
+    {
+      "path": "Game/Levels/survival/chernobyl/chernobyl_act1/terraintexture.pak",
+      "size": 68978,
+      "hash": "c4b3081323e901dad37ecd8f94422368bb3b445a64ee3cbcd2832bf3cdfdc33f",
+      "mtime": "2026-05-16T18:46:42.831Z"
+    },
+    {
+      "path": "Game/Levels/survival/chernobyl/chernobyl_act2/level.pak",
+      "size": 3264711,
+      "hash": "d5e63e3db6eac85b476bd71dc0a749f3f9900d52c296c4516344b7104ab471f5",
+      "mtime": "2026-05-16T18:46:43.652Z"
+    },
+    {
+      "path": "Game/Levels/survival/chernobyl/chernobyl_act2/terraintexture.pak",
+      "size": 32759,
+      "hash": "04f9e9b9782af2b5a65068e66bfeec4d615d2c17e82a38ea60da927feaabeca8",
+      "mtime": "2026-05-16T18:46:43.179Z"
+    },
+    {
+      "path": "Game/Levels/survival/chernobyl/chernobyl_act3/level.pak",
+      "size": 1188262,
+      "hash": "b77f8206311d8eaeb8a899e6ff7c71bd2bf85b6a0da60af9cf67aa60b80dbbc2",
+      "mtime": "2026-05-16T18:46:43.296Z"
+    },
+    {
+      "path": "Game/Levels/survival/chernobyl/chernobyl_act3/terraintexture.pak",
+      "size": 33578,
+      "hash": "4346ef6ce8ca354cb0964aa708982b09476e3741ebd3db5639cbf7aad1bdc2d7",
+      "mtime": "2026-05-16T18:46:43.442Z"
+    },
+    {
+      "path": "Game/Levels/survival/chernobyl/chernobyl_base/level.pak",
+      "size": 778158,
+      "hash": "b08eb654a8420920f81ab9fe04a6d26fc3f1ca8bd6d4512a1f68f84f105f61cd",
+      "mtime": "2026-05-16T18:46:43.687Z"
+    },
+    {
+      "path": "Game/Levels/survival/chernobyl/chernobyl_base/terraintexture.pak",
+      "size": 650754,
+      "hash": "3e6d59db14dfed13c1139f6b6063b4b97838499fcb472b24414a946e6ee338dd",
+      "mtime": "2026-05-16T18:46:43.930Z"
+    },
+    {
+      "path": "Game/Levels/survival/china_survival/level.pak",
+      "size": 3041005,
+      "hash": "bacdbb88486829a014a657a50a024dcd67ff46ff980c0fc6fa6fb6700f5cbeca",
+      "mtime": "2026-05-16T18:46:48.476Z"
+    },
+    {
+      "path": "Game/Levels/survival/china_survival/terraintexture.pak",
+      "size": 12021,
+      "hash": "eec48b98f78ff7ad6e9d843c6a249a1bdf05855f8cd4179fa1f5099251d689f6",
+      "mtime": "2026-05-16T18:46:44.043Z"
+    },
+    {
+      "path": "Game/Levels/survival/escape/escape_act1/level.pak",
+      "size": 2022974,
+      "hash": "750c14bb0ed4112a037b965d4f619b87feab4de0008306a9eca6083cb845f87a",
+      "mtime": "2026-05-16T18:46:44.247Z"
+    },
+    {
+      "path": "Game/Levels/survival/escape/escape_act1/terraintexture.pak",
+      "size": 33422,
+      "hash": "44aba2c1521f4e472b9dffc791cde2638eac60179ca61279c7ad06e8e2f3d963",
+      "mtime": "2026-05-16T18:46:44.297Z"
+    },
+    {
+      "path": "Game/Levels/survival/escape/escape_act2/level.pak",
+      "size": 3110560,
+      "hash": "2ed17bbd073a6ed2e93261795f192f18ebf3c6ce5b06181cbc0427c614bdf9ed",
+      "mtime": "2026-05-16T18:46:44.666Z"
+    },
+    {
+      "path": "Game/Levels/survival/escape/escape_act2/terraintexture.pak",
+      "size": 18618,
+      "hash": "0c16f4f590da7eebaa1182667e2015cfb1004808fff6b593e5a1f4bb38d489d6",
+      "mtime": "2026-05-16T18:46:44.612Z"
+    },
+    {
+      "path": "Game/Levels/survival/escape/escape_act3/level.pak",
+      "size": 2377275,
+      "hash": "f6fe879dc0fe2bff49c855a421ce5aed39ba288a8a96e4c3c9394f1928921f6c",
+      "mtime": "2026-05-16T18:46:44.790Z"
+    },
+    {
+      "path": "Game/Levels/survival/escape/escape_act3/terraintexture.pak",
+      "size": 21583,
+      "hash": "c5cd77689c328413551d95ba339cf8805b03fcdef416e575f8620050449b029d",
+      "mtime": "2026-05-16T18:46:45.146Z"
+    },
+    {
+      "path": "Game/Levels/survival/escape/escape_base/level.pak",
+      "size": 765970,
+      "hash": "0571db07ec3f4f1123a2be6a6959f72cd42e3700cba82649b441b5a8a88fc76d",
+      "mtime": "2026-05-16T18:46:45.201Z"
+    },
+    {
+      "path": "Game/Levels/survival/escape/escape_base/terraintexture.pak",
+      "size": 650754,
+      "hash": "3e6d59db14dfed13c1139f6b6063b4b97838499fcb472b24414a946e6ee338dd",
+      "mtime": "2026-05-16T18:46:45.754Z"
+    },
+    {
+      "path": "Game/Levels/survival/escape/escape_intro/level.pak",
+      "size": 1373524,
+      "hash": "fa4c3d3686809918c35ef54ff638818be9de8085421cac1ca9e6d35e412d5f92",
+      "mtime": "2026-05-16T18:46:45.865Z"
+    },
+    {
+      "path": "Game/Levels/survival/escape/escape_intro/terraintexture.pak",
+      "size": 31449,
+      "hash": "200529bba999cec89cc3d8171bd76b266218df98e933c0e470b807af2d429ae4",
+      "mtime": "2026-05-16T18:46:45.797Z"
+    },
+    {
+      "path": "Game/Levels/survival/icebreaker/icebreaker_act1/level.pak",
+      "size": 3991948,
+      "hash": "12117b5c0dee413d142d130393cb56cccb64699d7aea7d0d5e0c80666a943bbd",
+      "mtime": "2026-05-16T18:46:47.261Z"
+    },
+    {
+      "path": "Game/Levels/survival/icebreaker/icebreaker_act1/terraintexture.pak",
+      "size": 165712,
+      "hash": "64a214c2ea271f47d1eeda0e8f4d788c961700c981966ca40749c06ff2b2d96a",
+      "mtime": "2026-05-16T18:46:46.440Z"
+    },
+    {
+      "path": "Game/Levels/survival/icebreaker/icebreaker_act2/level.pak",
+      "size": 2778366,
+      "hash": "8cb013d6b1330b3e96752a2d39d25d5dcc6814327f001b7b3e3563355310150f",
+      "mtime": "2026-05-16T18:46:47.101Z"
+    },
+    {
+      "path": "Game/Levels/survival/icebreaker/icebreaker_act2/terraintexture.pak",
+      "size": 12826,
+      "hash": "f620c55765f182f088720ac9df8b3348530023f5b97df6342a02148b63ce24d2",
+      "mtime": "2026-05-16T18:46:46.779Z"
+    },
+    {
+      "path": "Game/Levels/survival/icebreaker/icebreaker_act3/level.pak",
+      "size": 1990943,
+      "hash": "556471a8a70ad02feaf707eed1cf2127be5779f551024b45d1cd7b602fe0cae5",
+      "mtime": "2026-05-16T18:46:47.380Z"
+    },
+    {
+      "path": "Game/Levels/survival/icebreaker/icebreaker_act3/terraintexture.pak",
+      "size": 63165,
+      "hash": "5c7e8a5de9673d18a9b45af1d1c925b10c7064a877a8a4f953d77f0ea517cdac",
+      "mtime": "2026-05-16T18:46:47.518Z"
+    },
+    {
+      "path": "Game/Levels/survival/icebreaker/icebreaker_act4_boss/level.pak",
+      "size": 1389568,
+      "hash": "c08b9f7da162f113b03bd7c4887027586d7d3b122264f7fca92049d2ffdfd806",
+      "mtime": "2026-05-16T18:46:47.804Z"
+    },
+    {
+      "path": "Game/Levels/survival/icebreaker/icebreaker_act4_boss/terraintexture.pak",
+      "size": 5427,
+      "hash": "ab0100c5ec3ed74797f71053004b16b025e171cbfdb6055769e73f9219670e46",
+      "mtime": "2026-05-16T18:46:47.781Z"
+    },
+    {
+      "path": "Game/Levels/survival/icebreaker/icebreaker_base/level.pak",
+      "size": 743921,
+      "hash": "930dfb3ddb09447c0dc4fbcd31cc747e53eddf39754b898672c77bc0a413ad8a",
+      "mtime": "2026-05-16T18:46:48.071Z"
+    },
+    {
+      "path": "Game/Levels/survival/icebreaker/icebreaker_base/terraintexture.pak",
+      "size": 16840,
+      "hash": "0b27e3ca1c054fa20dea9115d4e8be88538218bad6b98cc02a5833ad60b7ed8b",
+      "mtime": "2026-05-16T18:46:48.119Z"
+    },
+    {
+      "path": "Game/Levels/survival/japan/japan_act1/level.pak",
+      "size": 4776824,
+      "hash": "d09812cd70cd60667785e9de9d7855dfeff8f87fb131cb4364e32184496e8644",
+      "mtime": "2026-05-16T18:46:48.957Z"
+    },
+    {
+      "path": "Game/Levels/survival/japan/japan_act1/terraintexture.pak",
+      "size": 67366,
+      "hash": "a3018f3788b3a86a4675ef3ce843bc57cea25520da7c8b44f0e583df00109ae7",
+      "mtime": "2026-05-16T18:46:48.569Z"
+    },
+    {
+      "path": "Game/Levels/survival/japan/japan_act2/level.pak",
+      "size": 2366937,
+      "hash": "38721a9b1e80374f15252ce912a2e387fb6e87e4c2e2c9e14d938e2e930702a9",
+      "mtime": "2026-05-16T18:46:48.833Z"
+    },
+    {
+      "path": "Game/Levels/survival/japan/japan_act2/terraintexture.pak",
+      "size": 27614,
+      "hash": "240476f6c9180c4a41a1a409cb1c9fe224d8c1cf20f70e9a7afaee3eb03173cc",
+      "mtime": "2026-05-16T18:46:48.902Z"
+    },
+    {
+      "path": "Game/Levels/survival/japan/japan_act3/level.pak",
+      "size": 1872663,
+      "hash": "fbdddfde106b52cd3895b8eec614d82cad2fa5cd234fbd36122589300f29f6df",
+      "mtime": "2026-05-16T18:46:49.052Z"
+    },
+    {
+      "path": "Game/Levels/survival/japan/japan_act3/terraintexture.pak",
+      "size": 3530,
+      "hash": "085bf89b787a1ec527996a5d81cd17c9045e386d9b1587a9f5c53037e980b920",
+      "mtime": "2026-05-16T18:46:49.427Z"
+    },
+    {
+      "path": "Game/Levels/survival/japan/japan_act4/level.pak",
+      "size": 3120594,
+      "hash": "606c1779ceac17796bbf054c82d99a00ef7bf3273f64d06e7d168ed2aee5f4b2",
+      "mtime": "2026-05-16T18:46:49.700Z"
+    },
+    {
+      "path": "Game/Levels/survival/japan/japan_act4/terraintexture.pak",
+      "size": 3530,
+      "hash": "085bf89b787a1ec527996a5d81cd17c9045e386d9b1587a9f5c53037e980b920",
+      "mtime": "2026-05-16T18:46:49.363Z"
+    },
+    {
+      "path": "Game/Levels/survival/japan/japan_base/level.pak",
+      "size": 107591,
+      "hash": "b9618f8813d089fbe86f25d2710d694520cfaaac7a99c935a77022b9cb4feee7",
+      "mtime": "2026-05-16T18:46:49.544Z"
+    },
+    {
+      "path": "Game/Levels/survival/japan/japan_base/terraintexture.pak",
+      "size": 3530,
+      "hash": "085bf89b787a1ec527996a5d81cd17c9045e386d9b1587a9f5c53037e980b920",
+      "mtime": "2026-05-16T18:46:49.745Z"
+    },
+    {
+      "path": "Game/Levels/survival/mars/mars_act1/level.pak",
+      "size": 6843178,
+      "hash": "e17504b489406223c0c00637dd2dc3ff0259e6b4beb77f69008faa4e6d3f79d4",
+      "mtime": "2026-05-16T18:46:50.328Z"
+    },
+    {
+      "path": "Game/Levels/survival/mars/mars_act1/terraintexture.pak",
+      "size": 629712,
+      "hash": "dd12b18012b9f39ed51e13cc8363d572740133b18744dde62a8198f2115fb2e1",
+      "mtime": "2026-05-16T18:46:49.968Z"
+    },
+    {
+      "path": "Game/Levels/survival/mars/mars_act2/level.pak",
+      "size": 1611622,
+      "hash": "a97f3b83cb313a003e3ddc21b935697e0922ef77cd4f4f90c65f9c325e5a3287",
+      "mtime": "2026-05-16T18:46:50.752Z"
+    },
+    {
+      "path": "Game/Levels/survival/mars/mars_act2/terraintexture.pak",
+      "size": 174039,
+      "hash": "b02cfda22b3b5ad82e9d0b9989a3d61c1bbecae7d1a25d6e21abf6773defe350",
+      "mtime": "2026-05-16T18:46:50.143Z"
+    },
+    {
+      "path": "Game/Levels/survival/mars/mars_act3/level.pak",
+      "size": 5044809,
+      "hash": "05bcf4f8a4d687fa31a57fa8be9bc0fa5529ac9e2e6490d5b9395355ea0cbbce",
+      "mtime": "2026-05-16T18:46:50.593Z"
+    },
+    {
+      "path": "Game/Levels/survival/mars/mars_act3/terraintexture.pak",
+      "size": 279171,
+      "hash": "ecaa3b3848ed82764c3d53d2f302b7e48388d39c00c68be15e69389fd97d4f95",
+      "mtime": "2026-05-16T18:46:50.814Z"
+    },
+    {
+      "path": "Game/Levels/survival/mars/mars_act4/level.pak",
+      "size": 8306048,
+      "hash": "4542972b4712d752cdeab8e047129ac795c473ea72daf7ee1ee300d24fb366f5",
+      "mtime": "2026-05-16T18:46:50.981Z"
+    },
+    {
+      "path": "Game/Levels/survival/mars/mars_act4/terraintexture.pak",
+      "size": 322348,
+      "hash": "49c6a8f306733b5baf9b6ad1ea2385e115e707b9b56941b04b06310e29f2ca2b",
+      "mtime": "2026-05-16T18:46:51.046Z"
+    },
+    {
+      "path": "Game/Levels/survival/mars/mars_base/level.pak",
+      "size": 125446,
+      "hash": "b91e060ed0fc95016a10aa3e8889cdd1d135c83302c59d76c527f860e96e9cad",
+      "mtime": "2026-05-16T18:46:51.207Z"
+    },
+    {
+      "path": "Game/Levels/survival/raid/raid_base/level.pak",
+      "size": 82712,
+      "hash": "b24399dffe918efcf13d54f8974ff1c075b378d55b7e6104de618778c5b534fa",
+      "mtime": "2026-05-16T18:46:51.237Z"
+    },
+    {
+      "path": "Game/Levels/survival/raid/raid_base/terraintexture.pak",
+      "size": 3530,
+      "hash": "085bf89b787a1ec527996a5d81cd17c9045e386d9b1587a9f5c53037e980b920",
+      "mtime": "2026-05-16T18:46:51.465Z"
+    },
+    {
+      "path": "Game/Levels/survival/raid/raid/level.pak",
+      "size": 6610281,
+      "hash": "e03162d0abaa05309b299b87e5986ef4fae4c51a85bdf4e96b3ae9244fed11da",
+      "mtime": "2026-05-16T18:46:51.877Z"
+    },
+    {
+      "path": "Game/Levels/survival/raid/raid/terraintexture.pak",
+      "size": 192132,
+      "hash": "0fc7e67e49ff4b48cb7f12eec9e451630bc1cdb4cff7d8fb834a93701ca164e7",
+      "mtime": "2026-05-16T18:46:51.640Z"
+    },
+    {
+      "path": "Game/Levels/survival/snow_fortress_act1/level.pak",
+      "size": 2853939,
+      "hash": "c4cc1083893a51c29ee5995ef083f020b73d5633e21ad1ace99e05f66276ca79",
+      "mtime": "2026-05-16T18:46:51.980Z"
+    },
+    {
+      "path": "Game/Levels/survival/snow_fortress_act1/terraintexture.pak",
+      "size": 46768,
+      "hash": "599a65b13f57c24f8fc80d22cf95af44141f7441a0799312bc33470ad8b1bbde",
+      "mtime": "2026-05-16T18:46:51.808Z"
+    },
+    {
+      "path": "Game/Levels/survival/snow_fortress_act2/level.pak",
+      "size": 2352193,
+      "hash": "58be755bc39d7ee314503573611014a561863bae87c8517ed1809e6b8195c83b",
+      "mtime": "2026-05-16T18:46:52.498Z"
+    },
+    {
+      "path": "Game/Levels/survival/snow_fortress_act2/terraintexture.pak",
+      "size": 7262,
+      "hash": "c4ee07758ce3e0c7e3875bcff8d2c4349e165babeee35cf8b8615a9ad4a3f20c",
+      "mtime": "2026-05-16T18:46:52.198Z"
+    },
+    {
+      "path": "Game/Levels/survival/snow_fortress_act3_boss/level.pak",
+      "size": 1183990,
+      "hash": "2e2d88363b098eca6ee734c6291d77e881be870acb15ed0ec12c1d1ab69d2695",
+      "mtime": "2026-05-16T18:46:52.316Z"
+    },
+    {
+      "path": "Game/Levels/survival/snow_fortress_act3_boss/terraintexture.pak",
+      "size": 7496,
+      "hash": "9d12544a191c666a0558e0be53b880e3fb83911c49f0b1496fba6e0b427a436a",
+      "mtime": "2026-05-16T18:46:52.359Z"
+    },
+    {
+      "path": "Game/Levels/survival/snow_fortress_act3/level.pak",
+      "size": 2499771,
+      "hash": "2be513523383d978d6186b1376fb832928ab460be21bee3f278be4678d4fad14",
+      "mtime": "2026-05-16T18:46:52.705Z"
+    },
+    {
+      "path": "Game/Levels/survival/snow_fortress_act3/terraintexture.pak",
+      "size": 5497,
+      "hash": "f64ce826e586d2661439ae200a92e073cee8ff33f5b81aeb0339295a96fe37f3",
+      "mtime": "2026-05-16T18:46:52.809Z"
+    },
+    {
+      "path": "Game/Levels/survival/snow_fortress_base/level.pak",
+      "size": 202923,
+      "hash": "4add6e7b8e8eacea6c921b813a11d8538c0bdd1ce9570337b952f92ad76a120e",
+      "mtime": "2026-05-16T18:46:52.885Z"
+    },
+    {
+      "path": "Game/Levels/survival/snow_fortress_base/terraintexture.pak",
+      "size": 62158,
+      "hash": "663629929f5b2b6b40f4ba685d83364a931070ef138916615bf5d87fc1fa37d9",
+      "mtime": "2026-05-16T18:46:52.875Z"
+    },
+    {
+      "path": "Game/Levels/survival/survival_base/level.pak",
+      "size": 168674,
+      "hash": "55d8165fa80a86bbf65e2a061ee4ab5acb0740fc08e61391d41c09b3930a6c87",
+      "mtime": "2026-05-16T18:46:53.081Z"
+    },
+    {
+      "path": "Game/Levels/survival/survival_base/terraintexture.pak",
+      "size": 62158,
+      "hash": "663629929f5b2b6b40f4ba685d83364a931070ef138916615bf5d87fc1fa37d9",
+      "mtime": "2026-05-16T18:46:53.188Z"
+    },
+    {
+      "path": "Game/Levels/survival/zombie_tower_base/level.pak",
+      "size": 68649,
+      "hash": "f06cc4f43cc744807c3875873f243e63d7e49d7fe629bf80c151009ebb3eac1d",
+      "mtime": "2026-05-16T18:46:53.302Z"
+    },
+    {
+      "path": "Game/Levels/survival/zombie_tower_base/terraintexture.pak",
+      "size": 49117,
+      "hash": "226f8bde86e8e696b104eb3b53c49d0a3c30e26b91a1027c3b32faaa5169149d",
+      "mtime": "2026-05-16T18:46:53.293Z"
+    },
+    {
+      "path": "Game/Levels/survival/zombie_tower/level.pak",
+      "size": 4594202,
+      "hash": "7025d36c6b398402bd7b7852119bbae2f58cda8dd576f537d1c9bd3cee311576",
+      "mtime": "2026-05-16T18:46:53.900Z"
+    },
+    {
+      "path": "Game/Levels/survival/zombie_tower/terraintexture.pak",
+      "size": 15752,
+      "hash": "5ed5dae38aa6f2f40223a0f553ce661eeef972138dd264e9933bdef61861017a",
+      "mtime": "2026-05-16T18:46:53.552Z"
+    },
+    {
+      "path": "Game/Levels/Tutorial/advanced/level.pak",
+      "size": 1372609,
+      "hash": "7ee90fe9f21c0ff9524d50305f381410b159de9cbcf3177cac769fce406b0bed",
+      "mtime": "2026-05-16T18:46:54.002Z"
+    },
+    {
+      "path": "Game/Levels/Tutorial/advanced/terraintexture.pak",
+      "size": 54207,
+      "hash": "39b615536fce6f1bcc1bb9af4ee292ae8e2665894126847d31c529c05511d74e",
+      "mtime": "2026-05-16T18:46:53.818Z"
+    },
+    {
+      "path": "Game/Levels/Tutorial/engineer/level.pak",
+      "size": 1832965,
+      "hash": "85baf1b92820ab5c7b9b384989d49fbd18b95d0cccfe28063f3770096fadc8f7",
+      "mtime": "2026-05-16T18:46:54.062Z"
+    },
+    {
+      "path": "Game/Levels/Tutorial/engineer/terraintexture.pak",
+      "size": 11272,
+      "hash": "ada70f8651974daf3c3bad5fac787a5458a04c60552be81e5c41e95fb77d8ffa",
+      "mtime": "2026-05-16T18:46:54.170Z"
+    },
+    {
+      "path": "Game/Levels/Tutorial/medic/level.pak",
+      "size": 1346047,
+      "hash": "6b3722b729a32348bd85395f48cd0ff310fdfaeaf55b21ee9f3ccc97371092a8",
+      "mtime": "2026-05-16T18:46:54.644Z"
+    },
+    {
+      "path": "Game/Levels/Tutorial/medic/terraintexture.pak",
+      "size": 12228,
+      "hash": "b34cceac995c852ae0e1dae746251143b9eca61d876f463a1804ea216cb8aeaf",
+      "mtime": "2026-05-16T18:46:54.445Z"
+    },
+    {
+      "path": "Game/Levels/Tutorial/soldier/level.pak",
+      "size": 2180200,
+      "hash": "7964569437596d9e2d17d28adff6955d00524b03edefe480ed3446fdbdadf29f",
+      "mtime": "2026-05-16T18:46:54.669Z"
+    },
+    {
+      "path": "Game/Levels/Tutorial/soldier/terraintexture.pak",
+      "size": 18575,
+      "hash": "44c7ec5fbe4c5631cc3b6ef0fe839745833889ac1854757e8c2b9c943aaee540",
+      "mtime": "2026-05-16T18:46:54.521Z"
+    },
+    {
+      "path": "Game/Levels/zombie/zombie_base/level.pak",
+      "size": 182228,
+      "hash": "ea16f34fb663e6e5f3894b2f88169aab13355b5cfd99de287c05d7618072af15",
+      "mtime": "2026-05-16T18:46:55.005Z"
+    },
+    {
+      "path": "Game/Levels/zombie/zombie_base/terraintexture.pak",
+      "size": 49117,
+      "hash": "226f8bde86e8e696b104eb3b53c49d0a3c30e26b91a1027c3b32faaa5169149d",
+      "mtime": "2026-05-16T18:46:54.944Z"
+    },
+    {
+      "path": "Game/Levels/zombie/zombie_convoy/level.pak",
+      "size": 4373874,
+      "hash": "30a265bdccfd008af849ca7000f578d301e814630908ca937c66fe9b60e2c350",
+      "mtime": "2026-05-16T18:46:55.147Z"
+    },
+    {
+      "path": "Game/Levels/zombie/zombie_convoy/terraintexture.pak",
+      "size": 710384,
+      "hash": "1fa6efde68a09e492e4cccc190d49ac6db1ca194f8bfb43915f409c9741cf529",
+      "mtime": "2026-05-16T18:46:55.592Z"
+    },
+    {
+      "path": "Game/Libs/Config/MasterServer/game_modes_config.xml",
+      "size": 16587,
+      "hash": "be4bd1bfb5c9aee7a55cf4bf22885b8e1e9899711f27c03e6b24781fde0dfa68",
+      "mtime": "2026-05-14T01:05:11.573Z"
+    },
+    {
+      "path": "Game/Libs/Missions/Default.xml",
+      "size": 562,
+      "hash": "a2c27551939d38a396818550f952e225a38e605ff58e293b6e86cf51d69827aa",
+      "mtime": "2026-05-16T18:46:55.339Z"
+    },
+    {
+      "path": "Game/Localized/CrashRpt/crashrpt_lang_BR.ini",
+      "size": 8214,
+      "hash": "0b27ee8347e0a2e47b89f03ea9439592980dc61fd0b6a69afa007f7febbb8574",
+      "mtime": "2026-05-16T18:46:55.341Z"
+    },
+    {
+      "path": "Game/Localized/CrashRpt/crashrpt_lang_DE.ini",
+      "size": 9150,
+      "hash": "04251129dce1602cfaa4f5383321b08d6f246352efb8014f73b07d852db365d6",
+      "mtime": "2026-05-16T18:46:55.607Z"
+    },
+    {
+      "path": "Game/Localized/CrashRpt/crashrpt_lang_EN.ini",
+      "size": 8214,
+      "hash": "0b27ee8347e0a2e47b89f03ea9439592980dc61fd0b6a69afa007f7febbb8574",
+      "mtime": "2026-05-16T18:46:55.704Z"
+    },
+    {
+      "path": "Game/Localized/CrashRpt/crashrpt_lang_FR.ini",
+      "size": 9340,
+      "hash": "d5f1b9b1250ce19bbff16bdba2aa45b1d3596694d9db40ba1b6eb68fce2abfca",
+      "mtime": "2026-05-16T18:46:55.835Z"
+    },
+    {
+      "path": "Game/Localized/CrashRpt/crashrpt_lang_PL.ini",
+      "size": 8214,
+      "hash": "0b27ee8347e0a2e47b89f03ea9439592980dc61fd0b6a69afa007f7febbb8574",
+      "mtime": "2026-05-16T18:46:56.204Z"
+    },
+    {
+      "path": "Game/Localized/CrashRpt/crashrpt_lang_RU.ini",
+      "size": 8632,
+      "hash": "4f9a7757b3ec386e277c4c8955d7aacf025d8b94549d079d6e5527064cb5b07e",
+      "mtime": "2026-05-16T18:46:56.012Z"
+    },
+    {
+      "path": "Game/Localized/CrashRpt/crashrpt_lang_TR.ini",
+      "size": 8214,
+      "hash": "0b27ee8347e0a2e47b89f03ea9439592980dc61fd0b6a69afa007f7febbb8574",
+      "mtime": "2026-05-16T18:46:56.087Z"
+    },
+    {
+      "path": "Game/Localized/CrashRpt/crashrpt_lang_VN.ini",
+      "size": 8214,
+      "hash": "0b27ee8347e0a2e47b89f03ea9439592980dc61fd0b6a69afa007f7febbb8574",
+      "mtime": "2026-05-16T18:46:56.186Z"
+    },
+    {
+      "path": "Game/Localized/Russian.pak",
+      "size": 426694684,
+      "hash": "5c2f7000088a9f69ee602c819045b3bc29313f51cd439404a65c93235128f21b",
+      "mtime": "2026-05-04T02:03:48.000Z"
+    },
+    {
+      "path": "Game/Localized/Video/F1_blue.usm",
+      "size": 4276576,
+      "hash": "c04cefc79a3ff880cbfd6066d8975294c70e944978f2764168d4b64c7d2e7ac1",
+      "mtime": "2026-05-16T18:46:57.055Z"
+    },
+    {
+      "path": "Game/Localized/Video/Logo_CryEngine3.usm",
+      "size": 2106144,
+      "hash": "572272840d852773c1165037ba58bff410413b1d42098fab0619dc19759765d2",
+      "mtime": "2026-05-16T18:46:57.139Z"
+    },
+    {
+      "path": "Game/Localized/Video/Logo_Crytek.usm",
+      "size": 2090240,
+      "hash": "eee590655e920fd599d6323e8c2fa31028350a41b672078d1fb08db1e7b5b6ac",
+      "mtime": "2026-05-16T18:46:57.025Z"
+    },
+    {
+      "path": "Game/Localized/Video/Logo_MailRU.usm",
+      "size": 4136224,
+      "hash": "d86da50a39000f0c0169ee25b1ef4bb6b8704f60de04719a4f32360383bb87a3",
+      "mtime": "2026-05-16T18:46:57.290Z"
+    },
+    {
+      "path": "Game/Localized/Video/Logo_MyGames.usm",
+      "size": 4170112,
+      "hash": "efca6d69be4100e95da6fa7b738c91d100b17e544f37efbbdae91c47e723afb6",
+      "mtime": "2026-05-16T18:46:57.764Z"
+    },
+    {
+      "path": "Game/Localized/Video/RandomBox_Shaker1.usm",
+      "size": 1597920,
+      "hash": "5c4f214dfc52bc0d2e7ea096ee74fdd10001df3fdfcfa0f6cd3cd2605485cb51",
+      "mtime": "2026-05-16T18:46:59.525Z"
+    },
+    {
+      "path": "Game/Localized/Video/RandomBox_Shaker2.usm",
+      "size": 1671040,
+      "hash": "11eafacac6889e4075062f892128d93c11f956a41d4ba90d5b9289be51b67aa0",
+      "mtime": "2026-05-16T18:46:57.758Z"
+    },
+    {
+      "path": "Game/Localized/Video/RandomBox_Shaker3.usm",
+      "size": 1641024,
+      "hash": "0d8d3566c108d2ddae3b01b424971ee276e8b681a6c0baa834b250917ee4c7d8",
+      "mtime": "2026-05-16T18:46:57.771Z"
+    },
+    {
+      "path": "Game/Localized/Video/RandomBox_Shaker4.usm",
+      "size": 1552224,
+      "hash": "29a65992853e915516c01a2ea1bc4cd312f756f22e2d402bcd0b5d8b46b1381c",
+      "mtime": "2026-05-16T18:46:58.207Z"
+    },
+    {
+      "path": "Game/Localized/Video/RandomBox_Shaker5.usm",
+      "size": 1600448,
+      "hash": "eaa6a375caea0c1dc9fa7add927a5d4975e7fae90e840ca9635f485d4065a563",
+      "mtime": "2026-05-16T18:46:58.279Z"
+    },
+    {
+      "path": "Game/Music.pak",
+      "size": 410912040,
+      "hash": "7a56d2c2bef2a5a1e7ca9f2a9eb91c47b4c89e33c8b9d37f47e872d1906c79d9",
+      "mtime": "2026-05-16T18:47:32.700Z"
+    },
+    {
+      "path": "Game/Objects_Afghan.pak",
+      "size": 90235227,
+      "hash": "188b64a4ac943651f8e328cdcdf2759e83492008e96f2af816fbc6f18384a3c7",
+      "mtime": "2026-05-16T18:47:04.324Z"
+    },
+    {
+      "path": "Game/Objects_Architecture_Other.pak",
+      "size": 666733136,
+      "hash": "1706a94356dc2acb640a58b0bbca5eb66e7edd6f207321f3bd216982f3294e89",
+      "mtime": "2026-05-16T18:47:48.816Z"
+    },
+    {
+      "path": "Game/Objects_Architecture_survival_Other.pak",
+      "size": 767755345,
+      "hash": "c88c7de6549288046e256b415f1144a6844915f5190e182809932d503d0ae446",
+      "mtime": "2026-05-16T18:48:06.143Z"
+    },
+    {
+      "path": "Game/Objects_Attachments.pak",
+      "size": 496493367,
+      "hash": "2aa84f31471ec03a1d7ad8542667844392e1c05c797c0e4f995bf3679e15cfa5",
+      "mtime": "2026-05-16T18:47:57.094Z"
+    },
+    {
+      "path": "Game/Objects_Characters_ai.pak",
+      "size": 312476863,
+      "hash": "f8c170879f479e87879bd8a86db6f10b8bb095430e0eedf603747735a72b1153",
+      "mtime": "2026-05-16T18:48:02.136Z"
+    },
+    {
+      "path": "Game/Objects_Characters_Other.pak",
+      "size": 1299930913,
+      "hash": "64e429ec8ec069b4aa06c5c73191d61f8aa4076d5784b769a236d08b4a82a72a",
+      "mtime": "2026-05-16T18:49:33.205Z"
+    },
+    {
+      "path": "Game/Objects_Characters_shared.pak",
+      "size": 117900541,
+      "hash": "082e58e237b9a2cd48bab24b779962820075227550499c72e5a77c394b86f0af",
+      "mtime": "2026-05-16T18:48:07.457Z"
+    },
+    {
+      "path": "Game/Objects_Effects.pak",
+      "size": 14807933,
+      "hash": "42405c168fb7e3b8e058569cc3da44a7e450569352fcb8e50a5c02f0d106dda7",
+      "mtime": "2026-05-16T18:48:04.340Z"
+    },
+    {
+      "path": "Game/Objects_Favela.pak",
+      "size": 52340414,
+      "hash": "340ff6d66e10ceafd04e78ed6aecb11da4426cbf60b4528b9edfb7c819cd48fa",
+      "mtime": "2026-05-16T18:48:09.064Z"
+    },
+    {
+      "path": "Game/Objects_Generic_Hideout.pak",
+      "size": 791926060,
+      "hash": "c76401d5f19b9839d72eb658e02ac2c568c99a1304def7cc66dbd656c293b508",
+      "mtime": "2026-05-16T18:49:07.419Z"
+    },
+    {
+      "path": "Game/Objects_Kosovo_City.pak",
+      "size": 48298141,
+      "hash": "a3a4cbdcefc178946fe26aefa5eaeef3ec023e3efa2ea6e50c13f75b47d01149",
+      "mtime": "2026-05-16T18:48:12.077Z"
+    },
+    {
+      "path": "Game/Objects_Kosovo.pak",
+      "size": 49821853,
+      "hash": "ccf69c6535459b0d782b64f383c0915ba31cbbef72f7f5685215cccaa330784c",
+      "mtime": "2026-05-16T18:48:14.305Z"
+    },
+    {
+      "path": "Game/Objects_Natural.pak",
+      "size": 420910404,
+      "hash": "418190c99f93a4ab6c1b9306c7e34f7bab285e4f617bd628686dce2c2633abd7",
+      "mtime": "2026-05-16T18:48:47.078Z"
+    },
+    {
+      "path": "Game/Objects_Other.pak",
+      "size": 10337167,
+      "hash": "51a24eace05bf975876902e9a1da74600073819e6172c19fe3d3e2e249a6d1b7",
+      "mtime": "2026-05-16T18:48:23.616Z"
+    },
+    {
+      "path": "Game/Objects_Props.pak",
+      "size": 513815648,
+      "hash": "9e9505858c6146a18acb773c4bd360a0d60b123f487c1c1d5f155cf56f9f9bc5",
+      "mtime": "2026-05-16T18:49:03.731Z"
+    },
+    {
+      "path": "Game/Objects_Vehicles.pak",
+      "size": 516043554,
+      "hash": "ac9d5575d943083c966233f1a1df50500c23924e5a043de4ac860a97b1306ee1",
+      "mtime": "2026-05-16T18:49:31.697Z"
+    },
+    {
+      "path": "Game/Objects_Weapons_ar.pak",
+      "size": 1690703333,
+      "hash": "0ae23445fce63501e6256ccf04d236061fcab7fae2cb5835bf78da20c94e2073",
+      "mtime": "2026-05-16T18:51:35.046Z"
+    },
+    {
+      "path": "Game/Objects_Weapons_shg.pak",
+      "size": 1675866301,
+      "hash": "c1810c5685b9d1fd59bc0652b3447669a33cb97589b6589f47716abd550fcf6e",
+      "mtime": "2026-05-16T18:51:28.267Z"
+    },
+    {
+      "path": "Game/Objects_Weapons_smg.pak",
+      "size": 1819639456,
+      "hash": "8d8f0c0129a5778399ff8545c216c8ecf7013498a3ce94bd1571770322fe50b7",
+      "mtime": "2026-05-16T18:58:12.359Z"
+    },
+    {
+      "path": "Game/Objects_Weapons_sr.pak",
+      "size": 1527012172,
+      "hash": "638aaf0de49b95de48abb534457253a0023dc9dc8c6140b46476ea13a1d918ca",
+      "mtime": "2026-05-16T18:51:41.598Z"
+    },
+    {
+      "path": "Game/Objects_Weapons_xmas.pak",
+      "size": 60245335,
+      "hash": "a9708692deccda98de5983c60417a37b1322aeb75e07f234cb3461b51c5b8f55",
+      "mtime": "2026-05-16T18:51:34.752Z"
+    },
+    {
+      "path": "Game/Objects_Weapons.pak",
+      "size": 1965121814,
+      "hash": "a231d2d7edc2358aaa23dee105fa991dfc70e8dd17388413e8dd7c8d50f85454",
+      "mtime": "2026-05-16T18:58:19.445Z"
+    },
+    {
+      "path": "Game/Sounds_Ar.pak",
+      "size": 43596522,
+      "hash": "e3c2656ca8e8c8b1f5ee75095fe13667c50497e280ac9899a00dd63510c0a0f6",
+      "mtime": "2026-05-16T18:51:38.952Z"
+    },
+    {
+      "path": "Game/Sounds_Characters.pak",
+      "size": 11003648,
+      "hash": "555e47cc3182a74480f46f64de98af8717177a2f1a55854cb82046dff0455bc4",
+      "mtime": "2026-05-16T18:51:42.325Z"
+    },
+    {
+      "path": "Game/Sounds_Environment_str.pak",
+      "size": 34828110,
+      "hash": "8f73b2b71a36c9e10df30a24d545eb72d67f8593643bcbc71300e87b4d884299",
+      "mtime": "2026-05-16T18:51:44.007Z"
+    },
+    {
+      "path": "Game/Sounds_Environment.pak",
+      "size": 41586748,
+      "hash": "a37e4d16d6165e8321bf9d235157e97e88c3aed4275007dffc016a1367949bb9",
+      "mtime": "2026-05-16T18:51:46.639Z"
+    },
+    {
+      "path": "Game/Sounds_Other.pak",
+      "size": 663832526,
+      "hash": "a74224f71daf3c15fe42bde5c0dd6e63d544ff37c171a48f180c618460d3a4ff",
+      "mtime": "2026-05-16T18:57:30.176Z"
+    },
+    {
+      "path": "Game/Sounds_Physics.pak",
+      "size": 20063428,
+      "hash": "d69d7c9647a00d9adb1427cf5d36afa673cea28094b36331d1cb91759ffccb1a",
+      "mtime": "2026-05-16T18:56:51.926Z"
+    },
+    {
+      "path": "Game/Sounds_Shg.pak",
+      "size": 19223950,
+      "hash": "70618da8302ea5dbd49ed9f02bffdfaf6d01e50ea247de95869605bfbde7ffe0",
+      "mtime": "2026-05-16T18:52:25.383Z"
+    },
+    {
+      "path": "Game/Sounds_Smg.pak",
+      "size": 32736986,
+      "hash": "6754baa06b554c24ba0498fc933e4a82ff0d6a816943ef72b61bb7a3b356a4b7",
+      "mtime": "2026-05-16T18:52:26.318Z"
+    },
+    {
+      "path": "Game/Sounds_Sr.pak",
+      "size": 22228326,
+      "hash": "5f2241db2a534c44581119f9fdbb1bb2b64ebd9a2b715f270efe7b1e694bf2a3",
+      "mtime": "2026-05-16T18:52:25.438Z"
+    },
+    {
+      "path": "Game/Sounds_Vo.pak",
+      "size": 836420,
+      "hash": "4239bd3ea996d814cc3f5d47cc43bb7820224af635ba2b411149520d91d60d9b",
+      "mtime": "2026-05-16T18:52:24.561Z"
+    },
+    {
+      "path": "Game/Textures_Levels_Afghan.pak",
+      "size": 312822,
+      "hash": "cd65b04d357cb374b767ebcf76a79849a3bdaf326de8ffaac52c09459a8dff2d",
+      "mtime": "2026-05-16T18:52:25.319Z"
+    },
+    {
+      "path": "Game/Textures_Levels_Favela.pak",
+      "size": 216469,
+      "hash": "789818996c49cb6b935f374b2433566d7c9d67e82c721687cb5f87f87147ec1d",
+      "mtime": "2026-05-16T18:52:25.824Z"
+    },
+    {
+      "path": "Game/Textures_Levels_PVP.pak",
+      "size": 4344817,
+      "hash": "8a9d9de1b360828ee39e06cabe4e813c98d79c2dd57abfe52b3731381d3a8e46",
+      "mtime": "2026-05-16T18:52:26.371Z"
+    },
+    {
+      "path": "Game/Textures_Levels_Test_Levels.pak",
+      "size": 12938853,
+      "hash": "c5d9b2beda8d1ceadec97094cdaaf741dd90f988f1c64af078296a8fcf5c1ace",
+      "mtime": "2026-05-16T17:09:32.746Z"
+    },
+    {
+      "path": "Game/Textures_Other.pak",
+      "size": 13559743,
+      "hash": "37fd07c22aa4752123e48098e496e9d5741c69745156283772aee44014f56934",
+      "mtime": "2026-05-16T18:52:26.560Z"
+    },
+    {
+      "path": "Game/Textures_Textures.pak",
+      "size": 1030367061,
+      "hash": "3755442145dba6b96b55970a9d7f3d4e4c0c2989cd3fe352e0740f45f4ee1efe",
+      "mtime": "2026-05-16T18:52:48.422Z"
+    },
+    {
+      "path": "Game/Z_Other.pak",
+      "size": 74144,
+      "hash": "b079d24e6ef3bc98e9143a0f3d327203014906a64913d90889382d0ba3df04b2",
+      "mtime": "2026-05-18T06:23:48.544Z"
+    },
+    {
+      "path": "Game/Z_Other.pak.bak_name_input",
+      "size": 74998,
+      "hash": "109d25cb6a78c8abe3d7a8763345602affe70b9c55e54ec41a1fc7651afc6c09",
+      "mtime": "2026-05-04T01:41:14.000Z"
+    },
+    {
+      "path": "online.cfg",
+      "size": 346,
+      "hash": "8582214f1384d4e65665aa7f814338a5923aab7b069b25f122ff878f05a83da4",
+      "mtime": "2026-05-18T03:56:22.091Z"
+    }
+  ],
+  "changed_files": [
+    {
+      "path": "Bin64/online.cfg",
+      "size": 112,
+      "hash": "c88ee58893c9228438c91a4ff3500556e5accf38b28dc4a50a4bc9ce81fbc0f1",
+      "mtime": "2026-05-18T06:09:17.972Z"
+    },
+    {
+      "path": "Game/Z_Other.pak",
+      "size": 74144,
+      "hash": "b079d24e6ef3bc98e9143a0f3d327203014906a64913d90889382d0ba3df04b2",
+      "mtime": "2026-05-18T06:23:48.544Z"
+    },
+    {
+      "path": "Game/Z_Other.pak.bak_name_input",
+      "size": 74998,
+      "hash": "109d25cb6a78c8abe3d7a8763345602affe70b9c55e54ec41a1fc7651afc6c09",
+      "mtime": "2026-05-04T01:41:14.000Z"
+    },
+    {
+      "path": "online.cfg",
+      "size": 346,
+      "hash": "8582214f1384d4e65665aa7f814338a5923aab7b069b25f122ff878f05a83da4",
+      "mtime": "2026-05-18T03:56:22.091Z"
+    }
+  ],
+  "changed_count": 4,
+  "removed_files": [
+    {
+      "path": "Bin64/AbrirJogo.bat",
+      "size": 1123,
+      "hash": "44efd22fc6c32db52b14edf70b265f0c9823916f84e65bfbf14ead9715557d74",
+      "mtime": "2026-05-16T19:06:09.660Z"
+    }
+  ],
+  "removed_count": 1
+}

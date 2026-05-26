@@ -1,0 +1,10 @@
+me\ray\midgard\modules\races\data\RaceDataTest.class
+me\ray\midgard\modules\races\manager\RaceLevelManagerTest.class
+me\ray\midgard\modules\races\api\TraitTriggerTest.class
+me\ray\midgard\modules\races\PlayerLifecycleTest.class
+me\ray\midgard\modules\races\event\RaceEventTest.class
+me\ray\midgard\modules\races\registry\TraitRegistryTest.class
+me\ray\midgard\modules\races\model\RaceTest.class
+me\ray\midgard\modules\races\trait\AttributeModifierTraitTest$1.class
+me\ray\midgard\modules\races\trait\AttributeModifierTraitTest.class
+me\ray\midgard\modules\races\model\ConfiguredTraitTest.class

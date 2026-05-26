@@ -1,0 +1,62 @@
+display-name: '<blue>ɢᴜᴀʀᴅɪᴀᴏ</blue>'
+icon: SHIELD
+lore:
+  - '<gray>ᴛɪᴘᴏ:<blue><bold>ᴛᴀɴǫᴜᴇ</bold></blue>'
+  - ''
+  - '<gray>ɢᴜᴀʀᴅɪᴏᴇs sᴀᴏ ᴘʀᴏᴛᴇᴛᴏʀᴇs ɪɴᴀʙᴀʟᴀᴠᴇɪs,</gray>'
+  - '<gray>ᴅᴇꜰᴇɴᴅᴇɴᴅᴏ sᴇᴜs ᴀʟɪᴀᴅᴏs ᴄᴏᴍ ᴇsᴄᴜᴅᴏ</gray>'
+  - '<gray>ᴇ ꜰᴇ ɪɴᴀʙᴀʟᴀᴠᴇʟ.</gray>'
+  - ''
+  - '<yellow><bold>✦ ᴇsᴛɪʟᴏ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ ✦</bold></yellow>'
+  - ''
+  - '<gray>• ᴅᴀɴᴏ:<yellow>ᴍᴇᴅɪᴏ</yellow>'
+  - '<gray>• ᴅᴇꜰᴇsᴀ:<dark_red>ᴍᴜɪᴛᴏ ᴀʟᴛᴀ</dark_red>'
+  - '<gray>• ᴀʟᴄᴀɴᴄᴇ:<yellow>ʙᴀɪxᴏ</yellow>'
+attributes:
+  base:
+    strength: 5
+    defense: 12
+    vitality: 12
+    intelligence: 3
+    dexterity: 3
+  per-level:
+    defense: 2
+    vitality: 1.5
+    strength: 0.5
+health:
+  base: 25
+  per-level: 6
+mana:
+  base: 15
+  per-level: 2
+skills:
+  ESCUDO_DIVINO:
+    level: 1
+    type: passive
+  FORTALEZA_INTERIOR:
+    level: 5
+    type: passive
+  BLOQUEAR:
+    level: 1
+    type: active
+  PROTEGER_ALIADO:
+    level: 3
+    type: active
+  CONTRA_ATAQUE:
+    level: 5
+    type: active
+  ESCUDO_SAGRADO:
+    level: 8
+    type: active
+  MURALHA_DE_ACO:
+    level: 10
+    type: active
+  AGREGAR:
+    level: 12
+    type: active
+  BASTIAO_IMORTAL:
+    level: 15
+    type: ultimate
+  BARREIRA_ABSOLUTA:
+    level: 20
+    type: ultimate

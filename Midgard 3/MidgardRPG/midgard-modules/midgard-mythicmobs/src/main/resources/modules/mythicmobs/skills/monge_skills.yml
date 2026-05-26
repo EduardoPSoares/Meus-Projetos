@@ -1,0 +1,960 @@
+# ============================================================================
+#  ███╗   ███╗ ██████╗ ███╗   ██╗ ██████╗ ███████╗
+#  ████╗ ████║██╔═══██╗████╗  ██║██╔════╝ ██╔════╝
+#  ██╔████╔██║██║   ██║██╔██╗ ██║██║  ███╗█████╗
+#  ██║╚██╔╝██║██║   ██║██║╚██╗██║██║   ██║██╔══╝
+#  ██║ ╚═╝ ██║╚██████╔╝██║ ╚████║╚██████╔╝███████╗
+#  ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
+#
+#  Monge (Monk / Martial Artist) — Master of Chi and Unarmed Combat
+#  White (#ffffff) | Cyan (#00ccff) | Chi Gold (#ffdd44)
+#  Orange (#ff8800) | Wind Green (#88ff88)
+#
+#  Minecraft 1.21.1 — Folia Compatible
+#  All dynamic values use <skill.var.VARIABLE_NAME> syntax
+#  Custom mechanics: midgardDamage, midgardShield
+# ============================================================================
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  1. FLUXO INTERIOR — Inner Flow (PASSIVE)                                 ║
+# ║  The monk channels chi through their body, enhancing attack speed/damage.  ║
+# ║  Variables: damage_bonus (5.0 base / 2.0 per level)                       ║
+# ║  Milestones: lvl3=fluxo_interior_chi, lvl5=fluxo_interior_energy          ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+FluxoInterior:
+  Skills:
+  - skill{s=FluxoInterior_Cast} @self
+
+FluxoInterior_Cast:
+  Skills:
+  - sound{s=entity.experience_orb.pickup;v=0.5;p=1.8} @self
+  - particles{p=end_rod;amount=8;hS=0.4;vS=0.6;y=0.5;speed=0.02} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#00ccff;amount=10;hS=0.5;vS=0.5;y=0.5;size=1.0;speed=0} @self
+  - particles{p=enchanted_hit;amount=6;hS=0.3;vS=0.4;y=0.8;speed=0.03} @self
+  - midgardDamage{type=CHI;bonus=<skill.var.damage_bonus>} @self
+
+# --- Mk2 (Milestone: fluxo_interior_chi) ---
+FluxoInteriorMk2:
+  Skills:
+  - skill{s=FluxoInteriorMk2_Cast} @self
+
+FluxoInteriorMk2_Cast:
+  Skills:
+  - sound{s=entity.experience_orb.pickup;v=0.6;p=1.6} @self
+  - particles{p=end_rod;amount=14;hS=0.5;vS=0.8;y=0.5;speed=0.03} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#00ccff;amount=16;hS=0.6;vS=0.6;y=0.5;size=1.3;speed=0} @self
+  - particles{p=enchanted_hit;amount=10;hS=0.4;vS=0.5;y=0.8;speed=0.04} @self
+  - particles{p=snowflake;amount=4;hS=0.3;vS=0.3;y=0.6;speed=0.01} @self
+  # Chi flow orbital
+  - orbital{auraName=fluxo_chi;bulletType=ITEM;bulletItem=PRISMARINE_CRYSTALS;radius=1.0;points=3;interval=1;duration=999999;oy=0.8} @self
+  - midgardDamage{type=CHI;bonus=<skill.var.damage_bonus>} @self
+
+# --- Mk3 (Milestone: fluxo_interior_energy) ---
+FluxoInteriorMk3:
+  Skills:
+  - skill{s=FluxoInteriorMk3_Cast} @self
+
+FluxoInteriorMk3_Cast:
+  Skills:
+  - sound{s=entity.experience_orb.pickup;v=0.7;p=1.4} @self
+  - sound{s=block.beacon.activate;v=0.3;p=1.8} @self
+  - particles{p=end_rod;amount=22;hS=0.6;vS=1.0;y=0.5;speed=0.04} @self
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffdd44;amount=22;hS=0.7;vS=0.8;y=0.5;size=1.6;speed=0} @self
+  - particles{p=enchanted_hit;amount=14;hS=0.5;vS=0.6;y=0.8;speed=0.05} @self
+  - particles{p=snowflake;amount=8;hS=0.4;vS=0.5;y=0.6;speed=0.02} @self
+  - particles{p=flash;amount=1;hS=0;vS=0;y=1.0;speed=0} @self
+  # Inner energy double orbital
+  - orbital{auraName=fluxo_energy_inner;bulletType=ITEM;bulletItem=PRISMARINE_CRYSTALS;radius=0.8;points=3;interval=1;duration=999999;oy=0.6} @self
+  - orbital{auraName=fluxo_energy_outer;bulletType=ITEM;bulletItem=AMETHYST_SHARD;radius=1.4;points=5;interval=1;duration=999999;oy=1.0} @self
+  - midgardDamage{type=CHI;bonus=<skill.var.damage_bonus>} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  2. CORPO DE FERRO — Iron Body (PASSIVE)                                  ║
+# ║  The monk's body hardens through discipline, granting damage resistance.   ║
+# ║  Variables: damage_reduction (3.0 base / 1.5 per level)                   ║
+# ║  Milestones: lvl3=corpo_ferro_harden, lvl5=corpo_ferro_steel              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+CorpoDeFerro:
+  Skills:
+  - skill{s=CorpoDeFerro_Cast} @self
+
+CorpoDeFerro_Cast:
+  Skills:
+  - sound{s=item.armor.equip_iron;v=0.5;p=1.3} @self
+  - particles{p=dust_color_transition;color1=#8c8c8c;color2=#c0c0c0;amount=10;hS=0.5;vS=0.6;y=0.5;size=1.0;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=8;hS=0.4;vS=0.5;y=0.3;speed=0.03} @self
+  - particles{p=enchanted_hit;amount=5;hS=0.3;vS=0.3;y=0.5;speed=0.02} @self
+  - midgardShield{reduction=<skill.var.damage_reduction>} @self
+
+# --- Mk2 (Milestone: corpo_ferro_harden) ---
+CorpoDeFerroMk2:
+  Skills:
+  - skill{s=CorpoDeFerroMk2_Cast} @self
+
+CorpoDeFerroMk2_Cast:
+  Skills:
+  - sound{s=item.armor.equip_iron;v=0.6;p=1.1} @self
+  - sound{s=block.anvil.land;v=0.4;p=1.5} @self
+  - particles{p=dust_color_transition;color1=#666666;color2=#c0c0c0;amount=16;hS=0.6;vS=0.8;y=0.5;size=1.4;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=14;hS=0.5;vS=0.6;y=0.3;speed=0.05} @self
+  - particles{p=enchanted_hit;amount=8;hS=0.4;vS=0.4;y=0.5;speed=0.03} @self
+  - particles{p=end_rod;amount=4;hS=0.3;vS=0.3;y=0.8;speed=0.01} @self
+  # Hardened body orbital
+  - orbital{auraName=corpo_harden;bulletType=ITEM;bulletItem=IRON_NUGGET;radius=1.0;points=4;interval=1;duration=999999;oy=0.5} @self
+  - midgardShield{reduction=<skill.var.damage_reduction>} @self
+
+# --- Mk3 (Milestone: corpo_ferro_steel) ---
+CorpoDeFerroMk3:
+  Skills:
+  - skill{s=CorpoDeFerroMk3_Cast} @self
+
+CorpoDeFerroMk3_Cast:
+  Skills:
+  - sound{s=item.armor.equip_netherite;v=0.7;p=1.0} @self
+  - sound{s=block.anvil.land;v=0.5;p=0.8} @self
+  - particles{p=dust_color_transition;color1=#4a4a4a;color2=#ffffff;amount=24;hS=0.7;vS=1.0;y=0.5;size=1.8;speed=0} @self
+  - particles{p=block_crack;m=IRON_BLOCK;amount=20;hS=0.6;vS=0.8;y=0.3;speed=0.08} @self
+  - particles{p=enchanted_hit;amount=12;hS=0.5;vS=0.5;y=0.5;speed=0.04} @self
+  - particles{p=end_rod;amount=8;hS=0.4;vS=0.6;y=0.8;speed=0.02} @self
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ffffff;amount=6;hS=0.3;vS=0.4;y=1.0;size=1.0;speed=0} @self
+  # Steel body double orbital
+  - orbital{auraName=corpo_steel_inner;bulletType=ITEM;bulletItem=IRON_NUGGET;radius=0.8;points=4;interval=1;duration=999999;oy=0.4} @self
+  - orbital{auraName=corpo_steel_outer;bulletType=ITEM;bulletItem=ECHO_SHARD;radius=1.4;points=6;interval=1;duration=999999;oy=0.8} @self
+  - midgardShield{reduction=<skill.var.damage_reduction>} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  3. SOCO TROVÃO — Thunder Punch (COMMON)                                  ║
+# ║  A devastating electrified punch that sends enemies flying.               ║
+# ║  Variables: damage (14.0 base / 3.5 per level)                            ║
+# ║  Milestones: lvl3=soco_trovao_spark, lvl5=soco_trovao_thunder             ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+SocoTrovao:
+  Skills:
+  - skill{s=SocoTrovao_Cast} @self
+
+SocoTrovao_Cast:
+  Skills:
+  # Wind-up punch
+  - sound{s=entity.player.attack.knockback;v=1.0;p=1.2} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#00ccff;amount=6;hS=0.2;vS=0.2;y=1.0;size=0.8;speed=0} @forward{f=1;lockpitch=true}
+  - delay 2
+  # Thunder punch impact
+  - skill{s=SocoTrovao_Impact} @self
+
+SocoTrovao_Impact:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=0.8;p=1.5} @self
+  - sound{s=entity.player.attack.strong;v=1.2;p=0.8} @self
+  - midgardDamage{a=<skill.var.damage>;type=LIGHTNING} @EntitiesInCone{angle=50;range=4;rotation=0;length=4}
+  - throw{velocity=1.5;velocityY=0.4} @EntitiesInCone{angle=50;range=4;rotation=0;length=4}
+  # Electric spark particles
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffffff;amount=15;hS=0.6;vS=0.3;y=1.0;size=1.2;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=enchanted_hit;amount=10;hS=0.5;vS=0.3;y=1.0;speed=0.1} @forward{f=2;lockpitch=true}
+  - particles{p=crit;amount=8;hS=0.4;vS=0.2;y=1.0;speed=0.06} @forward{f=2;lockpitch=true}
+  - particles{p=end_rod;amount=5;hS=0.3;vS=0.4;y=1.0;speed=0.05} @forward{f=2;lockpitch=true}
+
+# --- Mk2 (Milestone: soco_trovao_spark) ---
+SocoTrovaoMk2:
+  Skills:
+  - skill{s=SocoTrovaoMk2_Cast} @self
+
+SocoTrovaoMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.knockback;v=1.0;p=1.0} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#00ccff;amount=10;hS=0.3;vS=0.3;y=1.0;size=1.0;speed=0} @forward{f=1;lockpitch=true}
+  - particles{p=end_rod;amount=4;hS=0.2;vS=0.2;y=1.0;speed=0.03} @forward{f=1;lockpitch=true}
+  - delay 2
+  - skill{s=SocoTrovaoMk2_Impact} @self
+
+SocoTrovaoMk2_Impact:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=1.0;p=1.3} @self
+  - sound{s=entity.player.attack.strong;v=1.3;p=0.7} @self
+  - midgardDamage{a=<skill.var.damage>;type=LIGHTNING} @EntitiesInCone{angle=55;range=4.5;rotation=0;length=4.5}
+  - throw{velocity=2.0;velocityY=0.5} @EntitiesInCone{angle=55;range=4.5;rotation=0;length=4.5}
+  # Enhanced electric sparks
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffdd44;amount=22;hS=0.8;vS=0.4;y=1.0;size=1.5;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=enchanted_hit;amount=16;hS=0.6;vS=0.4;y=1.0;speed=0.12} @forward{f=2.5;lockpitch=true}
+  - particles{p=crit;amount=12;hS=0.5;vS=0.3;y=1.0;speed=0.08} @forward{f=2.5;lockpitch=true}
+  - particles{p=end_rod;amount=8;hS=0.4;vS=0.5;y=1.0;speed=0.06} @forward{f=2.5;lockpitch=true}
+  - particles{p=flash;amount=1;hS=0;vS=0;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+
+# --- Mk3 (Milestone: soco_trovao_thunder) ---
+SocoTrovaoMk3:
+  Skills:
+  - skill{s=SocoTrovaoMk3_Cast} @self
+
+SocoTrovaoMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.knockback;v=1.2;p=0.8} @self
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffdd44;amount=14;hS=0.3;vS=0.4;y=1.0;size=1.2;speed=0} @forward{f=1;lockpitch=true}
+  - particles{p=end_rod;amount=8;hS=0.3;vS=0.3;y=1.0;speed=0.04} @forward{f=1;lockpitch=true}
+  - delay 2
+  - skill{s=SocoTrovaoMk3_Impact} @self
+
+SocoTrovaoMk3_Impact:
+  Skills:
+  - sound{s=entity.lightning_bolt.thunder;v=1.2;p=1.0} @self
+  - sound{s=entity.player.attack.strong;v=1.5;p=0.6} @self
+  - sound{s=entity.lightning_bolt.impact;v=0.8;p=1.2} @self
+  - midgardDamage{a=<skill.var.damage>;type=LIGHTNING} @EntitiesInCone{angle=60;range=5;rotation=0;length=5}
+  - throw{velocity=2.5;velocityY=0.6} @EntitiesInCone{angle=60;range=5;rotation=0;length=5}
+  # Full thunder storm punch
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffffff;amount=30;hS=1.0;vS=0.5;y=1.0;size=2.0;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=enchanted_hit;amount=22;hS=0.8;vS=0.5;y=1.0;speed=0.15} @forward{f=3;lockpitch=true}
+  - particles{p=crit;amount=16;hS=0.6;vS=0.4;y=1.0;speed=0.1} @forward{f=3;lockpitch=true}
+  - particles{p=end_rod;amount=14;hS=0.5;vS=0.6;y=1.0;speed=0.08} @forward{f=3;lockpitch=true}
+  - particles{p=flash;amount=2;hS=0;vS=0;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ff8800;amount=10;hS=0.8;vS=0.3;y=0.5;size=1.5;speed=0} @forward{f=3;lockpitch=true}
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  4. CHUTE GIRATÓRIO — Spinning Kick (COMMON)                              ║
+# ║  A whirlwind roundhouse kick striking all enemies in a circle.            ║
+# ║  Variables: damage (16.0 base / 4.0 per level)                            ║
+# ║  Milestones: lvl3=chute_giratorio_spin, lvl5=chute_giratorio_whirl        ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+ChuteGiratorio:
+  Skills:
+  - skill{s=ChuteGiratorio_Cast} @self
+
+ChuteGiratorio_Cast:
+  Skills:
+  # Spin wind-up
+  - sound{s=entity.player.attack.sweep;v=1.0;p=1.0} @self
+  - particles{p=sweep_attack;amount=4;hS=0.2;vS=0.1;y=0.8;speed=0} @self
+  - delay 1
+  # Spinning kick impact
+  - skill{s=ChuteGiratorio_Impact} @self
+
+ChuteGiratorio_Impact:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.3;p=0.9} @self
+  - sound{s=entity.player.attack.knockback;v=0.8;p=1.1} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @EntitiesInRadius{r=3.5}
+  # 360° sweep particles
+  - particles{p=sweep_attack;amount=12;hS=2.0;vS=0.2;y=0.8;speed=0} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#88ff88;amount=15;hS=2.5;vS=0.3;y=0.6;size=1.0;speed=0} @self
+  - particles{p=cloud;amount=8;hS=2.0;vS=0.2;y=0.3;speed=0.05} @self
+  - particles{p=enchanted_hit;amount=6;hS=2.0;vS=0.2;y=0.8;speed=0.05} @self
+
+# --- Mk2 (Milestone: chute_giratorio_spin) ---
+ChuteGiratorioMk2:
+  Skills:
+  - skill{s=ChuteGiratorioMk2_Cast} @self
+
+ChuteGiratorioMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.0;p=0.9} @self
+  - particles{p=sweep_attack;amount=6;hS=0.3;vS=0.1;y=0.8;speed=0} @self
+  - particles{p=snowflake;amount=4;hS=0.4;vS=0.2;y=0.6;speed=0.02} @self
+  - delay 1
+  - skill{s=ChuteGiratorioMk2_Impact} @self
+
+ChuteGiratorioMk2_Impact:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.5;p=0.8} @self
+  - sound{s=entity.player.attack.knockback;v=1.0;p=1.0} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @EntitiesInRadius{r=4.0}
+  # Enhanced 360° sweep
+  - particles{p=sweep_attack;amount=18;hS=2.5;vS=0.3;y=0.8;speed=0} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#88ff88;amount=22;hS=3.0;vS=0.4;y=0.6;size=1.4;speed=0} @self
+  - particles{p=cloud;amount=12;hS=2.5;vS=0.3;y=0.3;speed=0.07} @self
+  - particles{p=enchanted_hit;amount=10;hS=2.5;vS=0.3;y=0.8;speed=0.07} @self
+  - particles{p=snowflake;amount=8;hS=2.0;vS=0.3;y=0.5;speed=0.04} @self
+
+# --- Mk3 (Milestone: chute_giratorio_whirl) ---
+ChuteGiratorioMk3:
+  Skills:
+  - skill{s=ChuteGiratorioMk3_Cast} @self
+
+ChuteGiratorioMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.2;p=0.8} @self
+  - particles{p=sweep_attack;amount=8;hS=0.4;vS=0.2;y=0.8;speed=0} @self
+  - particles{p=snowflake;amount=6;hS=0.5;vS=0.3;y=0.6;speed=0.03} @self
+  - particles{p=end_rod;amount=4;hS=0.3;vS=0.3;y=1.0;speed=0.02} @self
+  - delay 1
+  - skill{s=ChuteGiratorioMk3_Impact} @self
+
+ChuteGiratorioMk3_Impact:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.8;p=0.7} @self
+  - sound{s=entity.player.attack.knockback;v=1.2;p=0.9} @self
+  - sound{s=entity.iron_golem.attack;v=0.6;p=1.3} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL} @EntitiesInRadius{r=4.5}
+  - throw{velocity=0.8;velocityY=0.3} @EntitiesInRadius{r=4.5}
+  # Whirlwind 360° sweep
+  - particles{p=sweep_attack;amount=25;hS=3.0;vS=0.4;y=0.8;speed=0} @self
+  - particles{p=dust_color_transition;color1=#88ff88;color2=#00ccff;amount=30;hS=3.5;vS=0.5;y=0.6;size=1.8;speed=0} @self
+  - particles{p=cloud;amount=18;hS=3.0;vS=0.4;y=0.3;speed=0.1} @self
+  - particles{p=enchanted_hit;amount=16;hS=3.0;vS=0.4;y=0.8;speed=0.1} @self
+  - particles{p=snowflake;amount=14;hS=2.5;vS=0.5;y=0.5;speed=0.06} @self
+  - particles{p=end_rod;amount=8;hS=2.0;vS=0.5;y=1.0;speed=0.04} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  5. PALMA DE BUDA — Buddha Palm (COMMON)                                  ║
+# ║  An open-palm strike releasing a chi shockwave that pushes enemies away.   ║
+# ║  Variables: damage (18.0 base / 4.5 per level)                            ║
+# ║  Milestones: lvl3=palma_buda_chi, lvl5=palma_buda_shockwave               ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+PalmaDeBuda:
+  Skills:
+  - skill{s=PalmaDeBuda_Cast} @self
+
+PalmaDeBuda_Cast:
+  Skills:
+  # Open palm charge
+  - sound{s=entity.iron_golem.attack;v=0.8;p=1.3} @self
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ffffff;amount=8;hS=0.2;vS=0.2;y=1.0;size=1.0;speed=0} @forward{f=1;lockpitch=true}
+  - delay 2
+  # Palm strike shockwave
+  - skill{s=PalmaDeBuda_Impact} @self
+
+PalmaDeBuda_Impact:
+  Skills:
+  - sound{s=entity.warden.sonic_boom;v=0.7;p=1.5} @self
+  - sound{s=entity.player.attack.strong;v=1.0;p=0.9} @self
+  - midgardDamage{a=<skill.var.damage>;type=CHI} @EntitiesInCone{angle=60;range=5;rotation=0;length=5}
+  - throw{velocity=2.0;velocityY=0.5} @EntitiesInCone{angle=60;range=5;rotation=0;length=5}
+  # Chi shockwave burst
+  - particles{p=sonic_boom;amount=1;hS=0;vS=0;y=1.0;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ffffff;amount=18;hS=1.0;vS=0.4;y=1.0;size=1.5;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=end_rod;amount=10;hS=0.8;vS=0.3;y=1.0;speed=0.08} @forward{f=3;lockpitch=true}
+  - particles{p=cloud;amount=8;hS=0.6;vS=0.3;y=0.5;speed=0.1} @forward{f=2;lockpitch=true}
+  - particles{p=enchanted_hit;amount=6;hS=0.5;vS=0.3;y=1.0;speed=0.05} @forward{f=2;lockpitch=true}
+
+# --- Mk2 (Milestone: palma_buda_chi) ---
+PalmaDeBudaMk2:
+  Skills:
+  - skill{s=PalmaDeBudaMk2_Cast} @self
+
+PalmaDeBudaMk2_Cast:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=1.0;p=1.1} @self
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#00ccff;amount=12;hS=0.3;vS=0.3;y=1.0;size=1.2;speed=0} @forward{f=1;lockpitch=true}
+  - particles{p=end_rod;amount=5;hS=0.2;vS=0.2;y=1.0;speed=0.03} @forward{f=1;lockpitch=true}
+  - delay 2
+  - skill{s=PalmaDeBudaMk2_Impact} @self
+
+PalmaDeBudaMk2_Impact:
+  Skills:
+  - sound{s=entity.warden.sonic_boom;v=0.9;p=1.3} @self
+  - sound{s=entity.player.attack.strong;v=1.2;p=0.8} @self
+  - midgardDamage{a=<skill.var.damage>;type=CHI} @EntitiesInCone{angle=65;range=5.5;rotation=0;length=5.5}
+  - throw{velocity=2.5;velocityY=0.5} @EntitiesInCone{angle=65;range=5.5;rotation=0;length=5.5}
+  # Enhanced chi shockwave
+  - particles{p=sonic_boom;amount=1;hS=0;vS=0;y=1.0;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#00ccff;amount=25;hS=1.3;vS=0.5;y=1.0;size=1.8;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=end_rod;amount=16;hS=1.0;vS=0.4;y=1.0;speed=0.1} @forward{f=3.5;lockpitch=true}
+  - particles{p=cloud;amount=12;hS=0.8;vS=0.4;y=0.5;speed=0.12} @forward{f=2.5;lockpitch=true}
+  - particles{p=enchanted_hit;amount=10;hS=0.7;vS=0.4;y=1.0;speed=0.07} @forward{f=2.5;lockpitch=true}
+  - particles{p=flash;amount=1;hS=0;vS=0;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+
+# --- Mk3 (Milestone: palma_buda_shockwave) ---
+PalmaDeBudaMk3:
+  Skills:
+  - skill{s=PalmaDeBudaMk3_Cast} @self
+
+PalmaDeBudaMk3_Cast:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=1.2;p=0.9} @self
+  - sound{s=block.beacon.activate;v=0.4;p=1.5} @self
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ff8800;amount=16;hS=0.4;vS=0.4;y=1.0;size=1.5;speed=0} @forward{f=1;lockpitch=true}
+  - particles{p=end_rod;amount=8;hS=0.3;vS=0.3;y=1.0;speed=0.04} @forward{f=1;lockpitch=true}
+  - delay 2
+  - skill{s=PalmaDeBudaMk3_Impact} @self
+
+PalmaDeBudaMk3_Impact:
+  Skills:
+  - sound{s=entity.warden.sonic_boom;v=1.2;p=1.0} @self
+  - sound{s=entity.player.attack.strong;v=1.5;p=0.6} @self
+  - sound{s=entity.generic.explode;v=0.6;p=1.5} @self
+  - midgardDamage{a=<skill.var.damage>;type=CHI} @EntitiesInCone{angle=70;range=6;rotation=0;length=6}
+  - throw{velocity=3.2;velocityY=0.6} @EntitiesInCone{angle=70;range=6;rotation=0;length=6}
+  # Devastating chi shockwave
+  - particles{p=sonic_boom;amount=2;hS=0.5;vS=0;y=1.0;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ff8800;amount=35;hS=1.8;vS=0.6;y=1.0;size=2.2;speed=0} @forward{f=3.5;lockpitch=true}
+  - particles{p=end_rod;amount=22;hS=1.3;vS=0.5;y=1.0;speed=0.12} @forward{f=4;lockpitch=true}
+  - particles{p=cloud;amount=18;hS=1.2;vS=0.5;y=0.5;speed=0.15} @forward{f=3;lockpitch=true}
+  - particles{p=enchanted_hit;amount=14;hS=1.0;vS=0.5;y=1.0;speed=0.1} @forward{f=3;lockpitch=true}
+  - particles{p=flash;amount=2;hS=0;vS=0;y=1.0;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#ffdd44;amount=10;hS=1.5;vS=0.3;y=0.3;size=1.5;speed=0} @forward{f=4;lockpitch=true}
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  6. RAJADA DE GOLPES — Flurry of Blows (COMMON)                           ║
+# ║  A barrage of rapid punches pummeling the target with relentless fury.     ║
+# ║  Variables: damage (22.0 base / 5.0 per level)                            ║
+# ║  Milestones: lvl3=rajada_golpes_flurry, lvl5=rajada_golpes_storm          ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+RajadaDeGolpes:
+  Skills:
+  - skill{s=RajadaDeGolpes_Cast} @self
+
+RajadaDeGolpes_Cast:
+  Skills:
+  # Stance
+  - sound{s=entity.player.attack.sweep;v=0.8;p=1.4} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#00ccff;amount=6;hS=0.3;vS=0.2;y=1.0;size=0.8;speed=0} @self
+  - delay 1
+  # Rapid punches
+  - skill{s=RajadaDeGolpes_Flurry} @self
+
+RajadaDeGolpes_Flurry:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.0;p=1.3;repeat=5;repeati=3} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL;repeat=5;repeati=3} @EntitiesInCone{angle=40;range=3;rotation=0;length=3}
+  # Impact particles per hit
+  - particles{p=crit;amount=4;hS=0.3;vS=0.2;y=1.0;speed=0.05;repeat=5;repeati=3} @forward{f=1.5;lockpitch=true}
+  - particles{p=enchanted_hit;amount=3;hS=0.2;vS=0.2;y=1.0;speed=0.04;repeat=5;repeati=3} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#00ccff;amount=4;hS=0.3;vS=0.2;y=1.0;size=0.8;speed=0;repeat=5;repeati=3} @forward{f=1.5;lockpitch=true}
+  # Final hit emphasis
+  - delay 15
+  - sound{s=entity.player.attack.knockback;v=1.2;p=0.8} @self
+  - particles{p=sweep_attack;amount=3;hS=0.4;vS=0.2;y=0.8;speed=0} @forward{f=2;lockpitch=true}
+
+# --- Mk2 (Milestone: rajada_golpes_flurry) ---
+RajadaDeGolpesMk2:
+  Skills:
+  - skill{s=RajadaDeGolpesMk2_Cast} @self
+
+RajadaDeGolpesMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=0.9;p=1.3} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#00ccff;amount=10;hS=0.4;vS=0.3;y=1.0;size=1.0;speed=0} @self
+  - particles{p=end_rod;amount=4;hS=0.2;vS=0.2;y=1.0;speed=0.02} @self
+  - delay 1
+  - skill{s=RajadaDeGolpesMk2_Flurry} @self
+
+RajadaDeGolpesMk2_Flurry:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.2;p=1.2;repeat=5;repeati=3} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL;repeat=5;repeati=3} @EntitiesInCone{angle=45;range=3.5;rotation=0;length=3.5}
+  # Enhanced flurry particles
+  - particles{p=crit;amount=6;hS=0.4;vS=0.3;y=1.0;speed=0.07;repeat=5;repeati=3} @forward{f=1.5;lockpitch=true}
+  - particles{p=enchanted_hit;amount=5;hS=0.3;vS=0.3;y=1.0;speed=0.06;repeat=5;repeati=3} @forward{f=1.5;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffdd44;amount=5;hS=0.4;vS=0.3;y=1.0;size=1.0;speed=0;repeat=5;repeati=3} @forward{f=1.5;lockpitch=true}
+  - particles{p=end_rod;amount=2;hS=0.2;vS=0.2;y=1.0;speed=0.03;repeat=5;repeati=3} @forward{f=1.5;lockpitch=true}
+  # Final hit
+  - delay 15
+  - sound{s=entity.player.attack.knockback;v=1.4;p=0.7} @self
+  - particles{p=sweep_attack;amount=5;hS=0.5;vS=0.2;y=0.8;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=flash;amount=1;hS=0;vS=0;y=1.0;speed=0} @forward{f=1.5;lockpitch=true}
+
+# --- Mk3 (Milestone: rajada_golpes_storm) ---
+RajadaDeGolpesMk3:
+  Skills:
+  - skill{s=RajadaDeGolpesMk3_Cast} @self
+
+RajadaDeGolpesMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.0;p=1.2} @self
+  - sound{s=entity.iron_golem.attack;v=0.4;p=1.5} @self
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffdd44;amount=14;hS=0.5;vS=0.4;y=1.0;size=1.2;speed=0} @self
+  - particles{p=end_rod;amount=6;hS=0.3;vS=0.3;y=1.0;speed=0.03} @self
+  - delay 1
+  - skill{s=RajadaDeGolpesMk3_Flurry} @self
+
+RajadaDeGolpesMk3_Flurry:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.4;p=1.1;repeat=5;repeati=3} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL;repeat=5;repeati=3} @EntitiesInCone{angle=50;range=4;rotation=0;length=4}
+  # Storm of punches
+  - particles{p=crit;amount=8;hS=0.5;vS=0.4;y=1.0;speed=0.1;repeat=5;repeati=3} @forward{f=2;lockpitch=true}
+  - particles{p=enchanted_hit;amount=7;hS=0.4;vS=0.3;y=1.0;speed=0.08;repeat=5;repeati=3} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ff8800;amount=6;hS=0.5;vS=0.3;y=1.0;size=1.3;speed=0;repeat=5;repeati=3} @forward{f=2;lockpitch=true}
+  - particles{p=end_rod;amount=4;hS=0.3;vS=0.3;y=1.0;speed=0.05;repeat=5;repeati=3} @forward{f=2;lockpitch=true}
+  # Devastating final hit
+  - delay 15
+  - sound{s=entity.player.attack.knockback;v=1.6;p=0.6} @self
+  - sound{s=entity.iron_golem.attack;v=0.7;p=1.0} @self
+  - particles{p=sweep_attack;amount=8;hS=0.6;vS=0.3;y=0.8;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=flash;amount=2;hS=0;vS=0;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+  - particles{p=dust_color_transition;color1=#ff8800;color2=#ffdd44;amount=12;hS=0.8;vS=0.4;y=0.8;size=1.5;speed=0} @forward{f=2.5;lockpitch=true}
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  7. PASSO DO VENTO — Wind Step (COMMON)                                   ║
+# ║  The monk becomes the wind itself, dashing forward with blinding speed.    ║
+# ║  Variables: duration (3.0 base / 0.3 per level)                           ║
+# ║  Milestones: lvl3=passo_vento_dash, lvl5=passo_vento_gale                 ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+PassoDoVento:
+  Skills:
+  - skill{s=PassoDoVento_Cast} @self
+
+PassoDoVento_Cast:
+  Skills:
+  # Wind burst launch
+  - sound{s=entity.player.attack.sweep;v=0.8;p=1.6} @self
+  - sound{s=entity.horse.gallop;v=0.5;p=1.5} @self
+  - lunge{velocity=1.5;velocityY=0.2} @self
+  - potion{type=SPEED;duration=<skill.var.duration>;level=2;hasParticles=false} @self
+  # Wind trail
+  - particles{p=cloud;amount=12;hS=0.3;vS=0.2;y=0.3;speed=0.05} @self
+  - particles{p=dust_color_transition;color1=#88ff88;color2=#ffffff;amount=10;hS=0.4;vS=0.3;y=0.5;size=1.0;speed=0} @self
+  - particles{p=snowflake;amount=6;hS=0.3;vS=0.2;y=0.4;speed=0.03} @self
+  - particles{p=end_rod;amount=4;hS=0.2;vS=0.3;y=0.8;speed=0.02} @self
+
+# --- Mk2 (Milestone: passo_vento_dash) ---
+PassoDoVentoMk2:
+  Skills:
+  - skill{s=PassoDoVentoMk2_Cast} @self
+
+PassoDoVentoMk2_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=0.9;p=1.5} @self
+  - sound{s=entity.horse.gallop;v=0.6;p=1.4} @self
+  - sound{s=entity.phantom.flap;v=0.5;p=1.8} @self
+  - lunge{velocity=2.0;velocityY=0.2} @self
+  - potion{type=SPEED;duration=<skill.var.duration>;level=3;hasParticles=false} @self
+  # Enhanced wind dash trail
+  - particles{p=cloud;amount=18;hS=0.4;vS=0.3;y=0.3;speed=0.07} @self
+  - particles{p=dust_color_transition;color1=#88ff88;color2=#00ccff;amount=16;hS=0.5;vS=0.4;y=0.5;size=1.3;speed=0} @self
+  - particles{p=snowflake;amount=10;hS=0.4;vS=0.3;y=0.4;speed=0.05} @self
+  - particles{p=end_rod;amount=6;hS=0.3;vS=0.4;y=0.8;speed=0.04} @self
+  - particles{p=enchanted_hit;amount=5;hS=0.3;vS=0.2;y=0.6;speed=0.03} @self
+
+# --- Mk3 (Milestone: passo_vento_gale) ---
+PassoDoVentoMk3:
+  Skills:
+  - skill{s=PassoDoVentoMk3_Cast} @self
+
+PassoDoVentoMk3_Cast:
+  Skills:
+  - sound{s=entity.player.attack.sweep;v=1.0;p=1.4} @self
+  - sound{s=entity.horse.gallop;v=0.7;p=1.3} @self
+  - sound{s=entity.phantom.flap;v=0.6;p=1.6} @self
+  - sound{s=entity.breeze.shoot;v=0.5;p=1.2} @self
+  - lunge{velocity=2.5;velocityY=0.3} @self
+  - potion{type=SPEED;duration=<skill.var.duration>;level=4;hasParticles=false} @self
+  # Gale force wind trail
+  - particles{p=cloud;amount=25;hS=0.5;vS=0.4;y=0.3;speed=0.1} @self
+  - particles{p=dust_color_transition;color1=#88ff88;color2=#ffffff;amount=22;hS=0.6;vS=0.5;y=0.5;size=1.6;speed=0} @self
+  - particles{p=snowflake;amount=14;hS=0.5;vS=0.4;y=0.4;speed=0.07} @self
+  - particles{p=end_rod;amount=10;hS=0.4;vS=0.5;y=0.8;speed=0.06} @self
+  - particles{p=enchanted_hit;amount=8;hS=0.4;vS=0.3;y=0.6;speed=0.05} @self
+  # Gale pushback on nearby enemies
+  - throw{velocity=1.0;velocityY=0.3} @EntitiesInRadius{r=2.5}
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#88ff88;amount=12;hS=1.5;vS=0.3;y=0.3;size=1.2;speed=0} @self
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  8. GOLPE DO DRAGÃO — Dragon Strike (COMMON)                              ║
+# ║  A devastating chi-infused punch that channels the spirit of the dragon.   ║
+# ║  Variables: damage (28.0 base / 6.0 per level)                            ║
+# ║  Milestones: lvl3=golpe_dragao_flame, lvl5=golpe_dragao_inferno           ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+GolpeDoDragao:
+  Skills:
+  - skill{s=GolpeDoDragao_Cast} @self
+
+GolpeDoDragao_Cast:
+  Skills:
+  # Dragon chi charge
+  - sound{s=entity.iron_golem.attack;v=1.0;p=0.8} @self
+  - particles{p=dust_color_transition;color1=#ff8800;color2=#ffdd44;amount=10;hS=0.3;vS=0.3;y=1.0;size=1.2;speed=0} @forward{f=0.5;lockpitch=true}
+  - particles{p=flame;amount=6;hS=0.2;vS=0.2;y=1.0;speed=0.03} @forward{f=0.5;lockpitch=true}
+  - delay 3
+  # Dragon strike impact
+  - skill{s=GolpeDoDragao_Impact} @self
+
+GolpeDoDragao_Impact:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=1.5;p=0.6} @self
+  - sound{s=entity.player.attack.strong;v=1.5;p=0.7} @self
+  - midgardDamage{a=<skill.var.damage>;type=CHI} @EntitiesInCone{angle=40;range=4;rotation=0;length=4}
+  # Dragon fire chi impact
+  - particles{p=dust_color_transition;color1=#ff8800;color2=#ffdd44;amount=25;hS=0.8;vS=0.4;y=1.0;size=1.8;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=flame;amount=14;hS=0.6;vS=0.3;y=1.0;speed=0.08} @forward{f=2.5;lockpitch=true}
+  - particles{p=enchanted_hit;amount=10;hS=0.5;vS=0.3;y=1.0;speed=0.06} @forward{f=2;lockpitch=true}
+  - particles{p=crit;amount=8;hS=0.4;vS=0.3;y=1.0;speed=0.05} @forward{f=2;lockpitch=true}
+  - particles{p=end_rod;amount=6;hS=0.3;vS=0.4;y=1.0;speed=0.04} @forward{f=2;lockpitch=true}
+
+# --- Mk2 (Milestone: golpe_dragao_flame) ---
+GolpeDoDragaoMk2:
+  Skills:
+  - skill{s=GolpeDoDragaoMk2_Cast} @self
+
+GolpeDoDragaoMk2_Cast:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=1.0;p=0.7} @self
+  - sound{s=entity.blaze.ambient;v=0.4;p=1.2} @self
+  - particles{p=dust_color_transition;color1=#ff8800;color2=#ffdd44;amount=14;hS=0.4;vS=0.4;y=1.0;size=1.4;speed=0} @forward{f=0.5;lockpitch=true}
+  - particles{p=flame;amount=10;hS=0.3;vS=0.3;y=1.0;speed=0.04} @forward{f=0.5;lockpitch=true}
+  - particles{p=end_rod;amount=4;hS=0.2;vS=0.2;y=1.0;speed=0.02} @forward{f=0.5;lockpitch=true}
+  - delay 3
+  - skill{s=GolpeDoDragaoMk2_Impact} @self
+
+GolpeDoDragaoMk2_Impact:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=1.8;p=0.5} @self
+  - sound{s=entity.player.attack.strong;v=1.8;p=0.6} @self
+  - sound{s=entity.blaze.shoot;v=0.6;p=0.8} @self
+  - midgardDamage{a=<skill.var.damage>;type=CHI} @EntitiesInCone{angle=45;range=4.5;rotation=0;length=4.5}
+  # Dragon flame chi
+  - particles{p=dust_color_transition;color1=#ff8800;color2=#ffdd44;amount=32;hS=1.0;vS=0.5;y=1.0;size=2.0;speed=0} @forward{f=3;lockpitch=true}
+  - particles{p=flame;amount=20;hS=0.8;vS=0.4;y=1.0;speed=0.1} @forward{f=3;lockpitch=true}
+  - particles{p=enchanted_hit;amount=14;hS=0.6;vS=0.4;y=1.0;speed=0.08} @forward{f=2.5;lockpitch=true}
+  - particles{p=crit;amount=12;hS=0.5;vS=0.4;y=1.0;speed=0.07} @forward{f=2.5;lockpitch=true}
+  - particles{p=end_rod;amount=10;hS=0.4;vS=0.5;y=1.0;speed=0.06} @forward{f=2.5;lockpitch=true}
+  - particles{p=flash;amount=1;hS=0;vS=0;y=1.0;speed=0} @forward{f=2;lockpitch=true}
+
+# --- Mk3 (Milestone: golpe_dragao_inferno) ---
+GolpeDoDragaoMk3:
+  Skills:
+  - skill{s=GolpeDoDragaoMk3_Cast} @self
+
+GolpeDoDragaoMk3_Cast:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=1.2;p=0.6} @self
+  - sound{s=entity.blaze.ambient;v=0.5;p=1.0} @self
+  - sound{s=entity.ender_dragon.growl;v=0.3;p=1.8} @self
+  - particles{p=dust_color_transition;color1=#ff8800;color2=#ffdd44;amount=20;hS=0.5;vS=0.5;y=1.0;size=1.8;speed=0} @forward{f=0.5;lockpitch=true}
+  - particles{p=flame;amount=14;hS=0.3;vS=0.4;y=1.0;speed=0.05} @forward{f=0.5;lockpitch=true}
+  - particles{p=end_rod;amount=8;hS=0.3;vS=0.3;y=1.0;speed=0.03} @forward{f=0.5;lockpitch=true}
+  - particles{p=soul_fire_flame;amount=4;hS=0.2;vS=0.2;y=1.0;speed=0.02} @forward{f=0.5;lockpitch=true}
+  - delay 3
+  - skill{s=GolpeDoDragaoMk3_Impact} @self
+
+GolpeDoDragaoMk3_Impact:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=2.0;p=0.4} @self
+  - sound{s=entity.player.attack.strong;v=2.0;p=0.5} @self
+  - sound{s=entity.ender_dragon.growl;v=0.5;p=1.5} @self
+  - midgardDamage{a=<skill.var.damage>;type=CHI} @EntitiesInCone{angle=50;range=5;rotation=0;length=5}
+  # Dragon inferno chi — devastating
+  - particles{p=dust_color_transition;color1=#ff8800;color2=#ffdd44;amount=45;hS=1.3;vS=0.6;y=1.0;size=2.5;speed=0} @forward{f=3.5;lockpitch=true}
+  - particles{p=flame;amount=28;hS=1.0;vS=0.5;y=1.0;speed=0.12} @forward{f=3.5;lockpitch=true}
+  - particles{p=soul_fire_flame;amount=10;hS=0.6;vS=0.4;y=1.0;speed=0.06} @forward{f=3;lockpitch=true}
+  - particles{p=enchanted_hit;amount=18;hS=0.8;vS=0.5;y=1.0;speed=0.1} @forward{f=3;lockpitch=true}
+  - particles{p=crit;amount=16;hS=0.6;vS=0.5;y=1.0;speed=0.09} @forward{f=3;lockpitch=true}
+  - particles{p=end_rod;amount=14;hS=0.5;vS=0.6;y=1.0;speed=0.08} @forward{f=3;lockpitch=true}
+  - particles{p=flash;amount=2;hS=0;vS=0;y=1.0;speed=0} @forward{f=2.5;lockpitch=true}
+  - particles{p=lava;amount=6;hS=0.8;vS=0.3;y=0.5;speed=0} @forward{f=3;lockpitch=true}
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  9. MIL PUNHOS — Thousand Fists (ULTIMATE)                                ║
+# ║  An unstoppable barrage of fists raining down upon all nearby foes.        ║
+# ║  Variables: damage (45.0 base / 10.0 per level)                           ║
+# ║  Milestones: lvl3=mil_punhos_flurry, lvl5=mil_punhos_barrage              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+MilPunhos:
+  Skills:
+  - skill{s=MilPunhos_Cast} @self
+
+MilPunhos_Cast:
+  Skills:
+  # Stance — chi concentration
+  - sound{s=entity.iron_golem.attack;v=0.8;p=1.5} @self
+  - sound{s=block.beacon.activate;v=0.5;p=1.2} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#ffdd44;amount=15;hS=0.5;vS=0.5;y=0.8;size=1.2;speed=0} @self
+  - particles{p=end_rod;amount=10;hS=0.4;vS=0.5;y=0.5;speed=0.03} @self
+  - delay 4
+  # Unleash thousand fists
+  - skill{s=MilPunhos_Barrage} @self
+
+MilPunhos_Barrage:
+  Skills:
+  # Ultra-rapid punches in expanding AoE
+  - sound{s=entity.player.attack.strong;v=1.3;p=1.4;repeat=10;repeati=2} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL;repeat=10;repeati=2} @EntitiesInRadius{r=4}
+  # Impact particles per punch
+  - particles{p=crit;amount=5;hS=2.5;vS=0.3;y=1.0;speed=0.08;repeat=10;repeati=2} @self
+  - particles{p=enchanted_hit;amount=4;hS=2.5;vS=0.3;y=1.0;speed=0.06;repeat=10;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#00ccff;amount=5;hS=2.5;vS=0.3;y=0.8;size=1.0;speed=0;repeat=10;repeati=2} @self
+  - particles{p=sweep_attack;amount=2;hS=2.0;vS=0.2;y=0.8;speed=0;repeat=10;repeati=2} @self
+  # Crescendo finale
+  - delay 20
+  - skill{s=MilPunhos_Finale} @self
+
+MilPunhos_Finale:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=1.5;p=0.7} @self
+  - sound{s=entity.player.attack.knockback;v=1.5;p=0.6} @self
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ffffff;amount=30;hS=3.0;vS=0.5;y=1.0;size=2.0;speed=0} @self
+  - particles{p=end_rod;amount=15;hS=2.5;vS=0.5;y=0.8;speed=0.1} @self
+  - particles{p=flash;amount=2;hS=0;vS=0;y=1.0;speed=0} @self
+  - particles{p=sweep_attack;amount=8;hS=2.5;vS=0.3;y=0.8;speed=0} @self
+  - throw{velocity=1.5;velocityY=0.4} @EntitiesInRadius{r=4}
+
+# --- Mk2 (Milestone: mil_punhos_flurry) ---
+MilPunhosMk2:
+  Skills:
+  - skill{s=MilPunhosMk2_Cast} @self
+
+MilPunhosMk2_Cast:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=0.9;p=1.3} @self
+  - sound{s=block.beacon.activate;v=0.6;p=1.0} @self
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffdd44;amount=20;hS=0.6;vS=0.6;y=0.8;size=1.5;speed=0} @self
+  - particles{p=end_rod;amount=14;hS=0.5;vS=0.6;y=0.5;speed=0.04} @self
+  - particles{p=enchanted_hit;amount=6;hS=0.4;vS=0.4;y=0.8;speed=0.03} @self
+  - delay 4
+  - skill{s=MilPunhosMk2_Barrage} @self
+
+MilPunhosMk2_Barrage:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.5;p=1.3;repeat=10;repeati=2} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL;repeat=10;repeati=2} @EntitiesInRadius{r=5}
+  # Enhanced flurry particles
+  - particles{p=crit;amount=7;hS=3.0;vS=0.4;y=1.0;speed=0.1;repeat=10;repeati=2} @self
+  - particles{p=enchanted_hit;amount=6;hS=3.0;vS=0.4;y=1.0;speed=0.08;repeat=10;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffdd44;amount=6;hS=3.0;vS=0.4;y=0.8;size=1.3;speed=0;repeat=10;repeati=2} @self
+  - particles{p=sweep_attack;amount=3;hS=2.5;vS=0.3;y=0.8;speed=0;repeat=10;repeati=2} @self
+  - particles{p=end_rod;amount=3;hS=2.0;vS=0.3;y=1.0;speed=0.04;repeat=10;repeati=2} @self
+  # Crescendo finale
+  - delay 20
+  - skill{s=MilPunhosMk2_Finale} @self
+
+MilPunhosMk2_Finale:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=1.8;p=0.6} @self
+  - sound{s=entity.player.attack.knockback;v=1.8;p=0.5} @self
+  - sound{s=entity.warden.sonic_boom;v=0.5;p=1.5} @self
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ff8800;amount=40;hS=3.5;vS=0.6;y=1.0;size=2.2;speed=0} @self
+  - particles{p=end_rod;amount=22;hS=3.0;vS=0.6;y=0.8;speed=0.12} @self
+  - particles{p=flash;amount=3;hS=0;vS=0;y=1.0;speed=0} @self
+  - particles{p=sweep_attack;amount=12;hS=3.0;vS=0.4;y=0.8;speed=0} @self
+  - particles{p=sonic_boom;amount=1;hS=0;vS=0;y=1.0;speed=0} @self
+  - throw{velocity=2.0;velocityY=0.5} @EntitiesInRadius{r=5}
+
+# --- Mk3 (Milestone: mil_punhos_barrage) ---
+MilPunhosMk3:
+  Skills:
+  - skill{s=MilPunhosMk3_Cast} @self
+
+MilPunhosMk3_Cast:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=1.0;p=1.2} @self
+  - sound{s=block.beacon.activate;v=0.7;p=0.8} @self
+  - sound{s=entity.ender_dragon.growl;v=0.3;p=1.8} @self
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ff8800;amount=28;hS=0.7;vS=0.7;y=0.8;size=1.8;speed=0} @self
+  - particles{p=end_rod;amount=18;hS=0.6;vS=0.7;y=0.5;speed=0.05} @self
+  - particles{p=enchanted_hit;amount=10;hS=0.5;vS=0.5;y=0.8;speed=0.04} @self
+  - particles{p=flash;amount=1;hS=0;vS=0;y=1.0;speed=0} @self
+  - delay 4
+  - skill{s=MilPunhosMk3_Barrage} @self
+
+MilPunhosMk3_Barrage:
+  Skills:
+  - sound{s=entity.player.attack.strong;v=1.8;p=1.2;repeat=10;repeati=2} @self
+  - midgardDamage{a=<skill.var.damage>;type=PHYSICAL;repeat=10;repeati=2} @EntitiesInRadius{r=6}
+  # Absolute barrage
+  - particles{p=crit;amount=10;hS=3.5;vS=0.5;y=1.0;speed=0.12;repeat=10;repeati=2} @self
+  - particles{p=enchanted_hit;amount=8;hS=3.5;vS=0.5;y=1.0;speed=0.1;repeat=10;repeati=2} @self
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ff8800;amount=8;hS=3.5;vS=0.5;y=0.8;size=1.6;speed=0;repeat=10;repeati=2} @self
+  - particles{p=sweep_attack;amount=4;hS=3.0;vS=0.4;y=0.8;speed=0;repeat=10;repeati=2} @self
+  - particles{p=end_rod;amount=5;hS=2.5;vS=0.5;y=1.0;speed=0.06;repeat=10;repeati=2} @self
+  - particles{p=flame;amount=3;hS=2.0;vS=0.3;y=0.8;speed=0.04;repeat=10;repeati=2} @self
+  # Devastating finale
+  - delay 20
+  - skill{s=MilPunhosMk3_Finale} @self
+
+MilPunhosMk3_Finale:
+  Skills:
+  - sound{s=entity.iron_golem.attack;v=2.0;p=0.5} @self
+  - sound{s=entity.player.attack.knockback;v=2.0;p=0.4} @self
+  - sound{s=entity.warden.sonic_boom;v=0.8;p=1.2} @self
+  - sound{s=entity.generic.explode;v=0.5;p=1.5} @self
+  - particles{p=dust_color_transition;color1=#ff8800;color2=#ffdd44;amount=55;hS=4.0;vS=0.8;y=1.0;size=2.5;speed=0} @self
+  - particles{p=end_rod;amount=30;hS=3.5;vS=0.8;y=0.8;speed=0.15} @self
+  - particles{p=flash;amount=4;hS=0;vS=0;y=1.0;speed=0} @self
+  - particles{p=sweep_attack;amount=16;hS=3.5;vS=0.5;y=0.8;speed=0} @self
+  - particles{p=sonic_boom;amount=2;hS=0.5;vS=0;y=1.0;speed=0} @self
+  - particles{p=flame;amount=12;hS=3.0;vS=0.5;y=0.5;speed=0.08} @self
+  - throw{velocity=3.0;velocityY=0.6} @EntitiesInRadius{r=6}
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  10. DESPERTAR DO CHI — Chi Awakening (ULTIMATE)                          ║
+# ║  The monk transcends mortal limits, unleashing their full chi potential.   ║
+# ║  Variables: damage (55.0/12.0), attribute_bonus (15.0/3.0)                ║
+# ║  Milestones: lvl3=despertar_chi_aura, lvl5=despertar_chi_transcend        ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# --- Base ---
+DespertarDoChi:
+  Skills:
+  - skill{s=DespertarDoChi_Cast} @self
+
+DespertarDoChi_Cast:
+  Skills:
+  # Phase 1 — Chi concentration
+  - sound{s=block.beacon.activate;v=1.0;p=0.8} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#ffdd44;amount=20;hS=0.6;vS=1.0;y=0.5;size=1.5;speed=0} @self
+  - particles{p=end_rod;amount=16;hS=0.5;vS=1.2;y=0.3;speed=0.03} @self
+  - particles{p=enchanted_hit;amount=10;hS=0.4;vS=0.8;y=0.5;speed=0.05} @self
+  - delay 5
+  # Phase 2 — Power-up buff
+  - skill{s=DespertarDoChi_Buff} @self
+  - delay 10
+  # Phase 3 — Devastating AoE strike
+  - skill{s=DespertarDoChi_Strike} @self
+
+DespertarDoChi_Buff:
+  Skills:
+  - sound{s=block.beacon.power_select;v=1.0;p=1.2} @self
+  - sound{s=entity.experience_orb.pickup;v=0.8;p=0.6} @self
+  - potion{type=STRENGTH;duration=200;level=<skill.var.attribute_bonus>;hasParticles=false} @self
+  - potion{type=SPEED;duration=200;level=2;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=200;level=1;hasParticles=false} @self
+  # Golden chi aura eruption
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ffffff;amount=35;hS=1.0;vS=1.5;y=0.5;size=2.0;speed=0} @self
+  - particles{p=end_rod;amount=25;hS=0.8;vS=2.0;y=0.3;speed=0.05} @self
+  - particles{p=flash;amount=2;hS=0;vS=0;y=1.0;speed=0} @self
+
+DespertarDoChi_Strike:
+  Skills:
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.0} @self
+  - sound{s=entity.iron_golem.attack;v=1.5;p=0.5} @self
+  - sound{s=entity.generic.explode;v=0.6;p=1.3} @self
+  - midgardDamage{a=<skill.var.damage>;type=CHI} @EntitiesInRadius{r=6}
+  - throw{velocity=2.0;velocityY=0.5} @EntitiesInRadius{r=6}
+  # Chi explosion
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ff8800;amount=40;hS=4.0;vS=0.8;y=1.0;size=2.5;speed=0} @self
+  - particles{p=end_rod;amount=20;hS=3.5;vS=0.8;y=0.5;speed=0.1} @self
+  - particles{p=sonic_boom;amount=2;hS=0.5;vS=0;y=1.0;speed=0} @self
+  - particles{p=flash;amount=3;hS=0;vS=0;y=1.0;speed=0} @self
+  - particles{p=sweep_attack;amount=10;hS=3.0;vS=0.3;y=0.8;speed=0} @self
+
+# --- Mk2 (Milestone: despertar_chi_aura) ---
+DespertarDoChiMk2:
+  Skills:
+  - skill{s=DespertarDoChiMk2_Cast} @self
+
+DespertarDoChiMk2_Cast:
+  Skills:
+  # Phase 1 — Enhanced chi concentration
+  - sound{s=block.beacon.activate;v=1.2;p=0.7} @self
+  - sound{s=entity.experience_orb.pickup;v=0.5;p=1.5} @self
+  - particles{p=dust_color_transition;color1=#ffffff;color2=#ffdd44;amount=28;hS=0.7;vS=1.2;y=0.5;size=1.8;speed=0} @self
+  - particles{p=end_rod;amount=22;hS=0.6;vS=1.5;y=0.3;speed=0.04} @self
+  - particles{p=enchanted_hit;amount=14;hS=0.5;vS=1.0;y=0.5;speed=0.06} @self
+  - particles{p=snowflake;amount=6;hS=0.4;vS=0.5;y=0.8;speed=0.02} @self
+  - delay 5
+  # Phase 2 — Power-up buff with aura
+  - skill{s=DespertarDoChiMk2_Buff} @self
+  - delay 10
+  # Phase 3 — Devastating AoE strike
+  - skill{s=DespertarDoChiMk2_Strike} @self
+
+DespertarDoChiMk2_Buff:
+  Skills:
+  - sound{s=block.beacon.power_select;v=1.2;p=1.0} @self
+  - sound{s=entity.experience_orb.pickup;v=1.0;p=0.5} @self
+  - potion{type=STRENGTH;duration=200;level=<skill.var.attribute_bonus>;hasParticles=false} @self
+  - potion{type=SPEED;duration=200;level=3;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=200;level=2;hasParticles=false} @self
+  # Golden chi aura — enhanced
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#00ccff;amount=45;hS=1.3;vS=2.0;y=0.5;size=2.2;speed=0} @self
+  - particles{p=end_rod;amount=30;hS=1.0;vS=2.5;y=0.3;speed=0.06} @self
+  - particles{p=flash;amount=3;hS=0;vS=0;y=1.0;speed=0} @self
+  # Chi aura orbital
+  - orbital{auraName=despertar_chi_aura;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=1.5;points=5;interval=1;duration=200;oy=1.0} @self
+
+DespertarDoChiMk2_Strike:
+  Skills:
+  - sound{s=entity.warden.sonic_boom;v=1.2;p=0.8} @self
+  - sound{s=entity.iron_golem.attack;v=1.8;p=0.4} @self
+  - sound{s=entity.generic.explode;v=0.8;p=1.2} @self
+  - midgardDamage{a=<skill.var.damage>;type=CHI} @EntitiesInRadius{r=7}
+  - throw{velocity=2.5;velocityY=0.6} @EntitiesInRadius{r=7}
+  # Chi explosion — enhanced
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ff8800;amount=55;hS=5.0;vS=1.0;y=1.0;size=2.8;speed=0} @self
+  - particles{p=end_rod;amount=28;hS=4.5;vS=1.0;y=0.5;speed=0.12} @self
+  - particles{p=sonic_boom;amount=2;hS=0.5;vS=0;y=1.0;speed=0} @self
+  - particles{p=flash;amount=4;hS=0;vS=0;y=1.0;speed=0} @self
+  - particles{p=sweep_attack;amount=14;hS=4.0;vS=0.4;y=0.8;speed=0} @self
+  - particles{p=flame;amount=10;hS=3.0;vS=0.5;y=0.5;speed=0.06} @self
+  - particles{p=enchanted_hit;amount=12;hS=3.5;vS=0.5;y=1.0;speed=0.08} @self
+
+# --- Mk3 (Milestone: despertar_chi_transcend) ---
+DespertarDoChiMk3:
+  Skills:
+  - skill{s=DespertarDoChiMk3_Cast} @self
+
+DespertarDoChiMk3_Cast:
+  Skills:
+  # Phase 1 — Transcendent chi awakening
+  - sound{s=block.beacon.activate;v=1.5;p=0.5} @self
+  - sound{s=entity.ender_dragon.growl;v=0.4;p=1.8} @self
+  - sound{s=entity.experience_orb.pickup;v=0.6;p=1.2} @self
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ffffff;amount=40;hS=0.8;vS=1.5;y=0.5;size=2.2;speed=0} @self
+  - particles{p=end_rod;amount=30;hS=0.7;vS=2.0;y=0.3;speed=0.05} @self
+  - particles{p=enchanted_hit;amount=18;hS=0.6;vS=1.2;y=0.5;speed=0.08} @self
+  - particles{p=snowflake;amount=10;hS=0.5;vS=0.8;y=0.8;speed=0.03} @self
+  - particles{p=flash;amount=2;hS=0;vS=0;y=1.0;speed=0} @self
+  - delay 5
+  # Phase 2 — Transcendent buff
+  - skill{s=DespertarDoChiMk3_Buff} @self
+  - delay 10
+  # Phase 3 — Cataclysmic AoE strike
+  - skill{s=DespertarDoChiMk3_Strike} @self
+
+DespertarDoChiMk3_Buff:
+  Skills:
+  - sound{s=block.beacon.power_select;v=1.5;p=0.8} @self
+  - sound{s=entity.experience_orb.pickup;v=1.2;p=0.4} @self
+  - sound{s=block.beacon.deactivate;v=0.8;p=2.0} @self
+  - potion{type=STRENGTH;duration=300;level=<skill.var.attribute_bonus>;hasParticles=false} @self
+  - potion{type=SPEED;duration=300;level=4;hasParticles=false} @self
+  - potion{type=RESISTANCE;duration=300;level=3;hasParticles=false} @self
+  - potion{type=REGENERATION;duration=300;level=1;hasParticles=false} @self
+  # Transcendent chi eruption
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ffffff;amount=60;hS=1.5;vS=2.5;y=0.5;size=2.5;speed=0} @self
+  - particles{p=end_rod;amount=40;hS=1.2;vS=3.0;y=0.3;speed=0.08} @self
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffdd44;amount=20;hS=1.0;vS=2.0;y=0.5;size=1.5;speed=0} @self
+  - particles{p=flash;amount=4;hS=0;vS=0;y=1.0;speed=0} @self
+  # Transcendent double orbital
+  - orbital{auraName=despertar_transcend_inner;bulletType=ITEM;bulletItem=GOLD_NUGGET;radius=1.2;points=5;interval=1;duration=300;oy=0.8} @self
+  - orbital{auraName=despertar_transcend_outer;bulletType=ITEM;bulletItem=AMETHYST_SHARD;radius=2.0;points=7;interval=1;duration=300;oy=1.2} @self
+
+DespertarDoChiMk3_Strike:
+  Skills:
+  - sound{s=entity.warden.sonic_boom;v=1.5;p=0.7} @self
+  - sound{s=entity.iron_golem.attack;v=2.0;p=0.3} @self
+  - sound{s=entity.generic.explode;v=1.0;p=1.0} @self
+  - sound{s=entity.lightning_bolt.thunder;v=0.8;p=0.8} @self
+  - midgardDamage{a=<skill.var.damage>;type=CHI} @EntitiesInRadius{r=8}
+  - throw{velocity=3.5;velocityY=0.8} @EntitiesInRadius{r=8}
+  # Cataclysmic chi explosion
+  - particles{p=dust_color_transition;color1=#ffdd44;color2=#ffffff;amount=75;hS=6.0;vS=1.2;y=1.0;size=3.0;speed=0} @self
+  - particles{p=dust_color_transition;color1=#ff8800;color2=#ffdd44;amount=40;hS=5.0;vS=1.0;y=0.5;size=2.5;speed=0} @self
+  - particles{p=end_rod;amount=40;hS=5.5;vS=1.2;y=0.5;speed=0.15} @self
+  - particles{p=sonic_boom;amount=3;hS=1.0;vS=0;y=1.0;speed=0} @self
+  - particles{p=flash;amount=5;hS=0;vS=0;y=1.0;speed=0} @self
+  - particles{p=sweep_attack;amount=20;hS=5.0;vS=0.5;y=0.8;speed=0} @self
+  - particles{p=flame;amount=18;hS=4.0;vS=0.8;y=0.5;speed=0.1} @self
+  - particles{p=enchanted_hit;amount=18;hS=4.5;vS=0.8;y=1.0;speed=0.12} @self
+  - particles{p=soul_fire_flame;amount=8;hS=3.0;vS=0.5;y=0.5;speed=0.05} @self
+  - particles{p=dust_color_transition;color1=#00ccff;color2=#ffffff;amount=20;hS=4.0;vS=0.8;y=1.2;size=2.0;speed=0} @self
+
+
+# ============================================================================
+#  END OF MONGE SKILLS — 10 spells × 3 tiers = 30 skill definitions
+# ============================================================================

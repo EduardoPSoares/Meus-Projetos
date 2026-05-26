@@ -1,0 +1,231 @@
+# ============================================
+# MIDGARD COMBAT MODULE - MESSAGES
+# ============================================
+# Formato: Small Caps Unicode para estilo visual
+
+# ============================================
+# MODO DE COMBATE
+# ============================================
+combat_mode:
+  enabled: "<red>⚔</red> <gray>ᴍᴏᴅᴏ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ ᴀᴛɪᴠᴀᴅᴏ.</gray>"
+  disabled: "<green>✔</green> <gray>ᴍᴏᴅᴏ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ.</gray>"
+  
+  warning_5s: "<yellow>⚠</yellow> <gray>ᴄᴏᴍʙᴀᴛᴇ ᴛᴇʀᴍɪɴᴀ ᴇᴍ <red>5 sᴇɢᴜɴᴅᴏs</red><gray>...</gray>"
+  warning_3s: "<yellow>⚠</yellow> <gray>ᴄᴏᴍʙᴀᴛᴇ ᴛᴇʀᴍɪɴᴀ ᴇᴍ <red>3 sᴇɢᴜɴᴅᴏs</red><gray>...</gray>"
+  expired: "<green>✔</green> <gray>ᴠᴏᴄᴇ sᴀɪᴜ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ.</gray>"
+  
+  cannot_logout: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴅᴇsʟᴏɢᴀʀ ᴇᴍ ᴄᴏᴍʙᴀᴛᴇ.</gray>"
+  cannot_teleport: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ sᴇ ᴛᴇʟᴇᴘᴏʀᴛᴀʀ ᴇᴍ ᴄᴏᴍʙᴀᴛᴇ.</gray>"
+  cannot_use_command: "<red>✖</red> <gray>ᴄᴏᴍᴀɴᴅᴏ ʙʟᴏԡᴜᴇᴀᴅᴏ ᴅᴜʀᴀɴᴛᴇ ᴄᴏᴍʙᴀᴛᴇ.</gray>"
+  
+  time_remaining: "<gray>ᴛᴇᴍᴘᴏ ʀᴇsᴛᴀɴᴛᴇ: <red>%time%s</red>"
+  opponent: "<gray>ᴏᴘᴏɴᴇɴᴛᴇ: <red>%target%</red>"
+
+# ============================================
+# COMBATE ELEMENTAL
+# ============================================
+elemental:
+  fire: "<red>🔥 ꜰᴏɢᴏ</red>"
+  water: "<blue>💧 ᴀɢᴜᴀ</blue>"
+  earth: "<gold>⛰ ᴛᴇʀʀᴀ</gold>"
+  air: "<gray>💨 ᴀʀ</gray>"
+  ice: "<aqua>❄ ɢᴇʟᴏ</aqua>"
+  thunder: "<yellow>⚡ ʀᴀɪᴏ</yellow>"
+  light: "<yellow>☀ ʟᴜz</yellow>"
+  darkness: "<dark_purple>🌙 ᴛʀᴇᴠᴀs</dark_purple>"
+  divine: "<light_purple>✦ ᴅɪᴠɪɴᴏ</light_purple>"
+  
+  burning: "<red>🔥</red> <gray>ᴠᴏᴄᴇ ᴇsᴛᴀ ԡᴜᴇɪᴍᴀɴᴅᴏ: <red>-%damage% ❤/s</red>"
+  frozen: "<aqua>❄</aqua> <gray>ᴠᴏᴄᴇ ᴇsᴛᴀ ᴄᴏɴɢᴇʟᴀᴅᴏ. <dark_gray>(ᴍᴏᴠɪᴍᴇɴᴛᴏ ʀᴇᴅᴜzɪᴅᴏ)</dark_gray>"
+  shocked: "<yellow>⚡</yellow> <gray>ᴠᴏᴄᴇ ᴇsᴛᴀ ᴇʟᴇᴛʀɪzᴀᴅᴏ: <yellow>-%damage% ❤/s</yellow>"
+  poisoned: "<green>☠</green> <gray>ᴠᴏᴄᴇ ᴇsᴛᴀ ᴇɴᴠᴇɴᴇɴᴀᴅᴏ: <green>-%damage% ❤/s</green>"
+  
+  resistance_high: "<green>↑</green> <gray>ʀᴇsɪsᴛᴇɴᴄɪᴀ: <green>+%amount%%</green>"
+  resistance_low: "<red>↓</red> <gray>ꜰʀᴀԡᴜᴇzᴀ: <red>-%amount%%</red>"
+  immunity: "<gold>★</gold> <gray>ɪᴍᴜɴɪᴅᴀᴅᴇ: %element%"
+
+# ============================================
+# STATUS E REGENERAÇÃO
+# ============================================
+status:
+  stamina_low: "<yellow>⚠</yellow> <gray>sᴜᴀ sᴛᴀᴍɪɴᴀ ᴇsᴛᴀ ʙᴀɪxᴀ.</gray>"
+  stamina_exhausted: "<red>⚠</red> <gray>ᴠᴏᴄᴇ ᴇsᴛᴀ ᴇxᴀᴜsᴛᴏ.</gray>"
+  health_regenerated: "<green>+%amount% ❤</green>"
+  mana_regenerated: "<blue>+%amount% 💧</blue>"
+
+# ============================================
+# PROGRESSÃO DE COMBATE
+# ============================================
+progression:
+  combat_level_up: "<yellow>⚔ ᴄᴏᴍʙᴀᴛ ʟᴇᴠᴇʟ ᴜᴘ!</yellow> <gray>ɴɪᴠᴇʟ <white>%level%</white><gray>!</gray>"
+  xp_gained: "<gray>+<yellow>%xp%</yellow> xᴘ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ</gray>"
+  xp_indicator: "<yellow>+%xp% xᴘ</yellow>"
+
+mob:
+  unknown_name: "Desconhecido"
+
+# ============================================
+# COMANDOS E ADMIN
+# ============================================
+commands:
+  xp:
+    help_title: "<aqua>ᴍɪᴅɢᴀʀᴅ ᴄᴏᴍʙᴀᴛ xᴘ</aqua>"
+    help_lines:
+      - "<white>/rpg admin xp add <player> <amount></white> <gray>- ᴀᴅɪᴄɪᴏɴᴀ xᴘ</gray>"
+      - "<white>/rpg admin xp set <player> <amount></white> <gray>- ᴅᴇꜰɪɴᴇ xᴘ</gray>"
+      - "<white>/rpg admin xp take <player> <amount></white> <gray>- ʀᴇᴍᴏᴠᴇ xᴘ</gray>"
+    usage_add: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/rpg admin xp add <player> <amount></white>"
+    usage_set: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/rpg admin xp set <player> <amount></white>"
+    usage_take: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/rpg admin xp take <player> <amount></white>"
+    success_add: "<green>✔</green> <gray>xᴘ ᴀᴅɪᴄɪᴏɴᴀᴅᴏ ᴘᴀʀᴀ <aqua>%player%</aqua><gray>: <yellow>%amount%</yellow><gray>.</gray>"
+    success_set: "<green>✔</green> <gray>xᴘ ᴅᴇ <aqua>%player%</aqua> <gray>ᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ <yellow>%xp%</yellow><gray>.</gray>"
+    success_take: "<green>✔</green> <gray>xᴘ ʀᴇᴍᴏᴠɪᴅᴏ ᴅᴇ <aqua>%player%</aqua><gray>: <yellow>%amount%</yellow><gray>.</gray>"
+
+errors:
+  no_permission: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ɪssᴏ.</gray>"
+  player_not_found: "<red>✖</red> <gray>ᴊᴏɢᴀᴅᴏʀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ: <white>%player%</white><gray>.</gray>"
+  profile_error: "<red>✖</red> <gray>ᴘᴇʀꜰɪʟ ᴅᴏ ᴊᴏɢᴀᴅᴏʀ ɴᴀᴏ ᴄᴀʀʀᴇɢᴀᴅᴏ.</gray>"
+  invalid_number: "<red>✖</red> <gray>ɴᴜᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ.</gray>"
+
+# ============================================
+# ARMAS E EQUIPAMENTOS
+# ============================================
+weapons:
+  equipped: "<green>✔</green> <gray>ᴇǫᴜɪᴘᴀᴅᴏ: <white>%weapon%</white>"
+  unequipped: "<yellow>⚠</yellow> <gray>ᴅᴇsᴇǫᴜɪᴘᴀᴅᴏ: <white>%weapon%</white>"
+  durability_low: "<yellow>⚠</yellow> <white>%weapon%</white> <gray>ᴇsᴛᴀ ǫᴜᴇʙʀᴀɴᴅᴏ: <red>%durability%</red>"
+  durability_broken: "<red>✖</red> <white>%weapon%</white> <gray>ǫᴜᴇʙʀᴏᴜ.</gray>"
+  durability_repaired: "<green>✔</green> <white>%weapon%</white> <gray>ʀᴇᴘᴀʀᴀᴅᴏ.</gray>"
+  skill_activated: "<gold>★</gold> <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴀᴛɪᴠᴀᴅᴀ: <yellow>%skill%</yellow>"
+  skill_cooldown: "<red>⏱</red> <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴇᴍ ʀᴇᴄᴀʀɢᴀ: <white>%time%s</white>"
+  enchant_triggered: "<light_purple>✦</light_purple> <light_purple>%enchant%</light_purple> <gray>ᴀᴛɪᴠᴀᴅᴏ.</gray>"
+
+# ============================================
+# DUMMY (PVP TEST)
+# ============================================
+dummy:
+  usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/rpg admin dummy <create|clear> [type]</white>"
+  indicator_test: "<green>✔</green> <gray>ɪɴᴅɪᴄᴀᴅᴏʀ ᴅᴇ ᴛᴇsᴛᴇ ᴇɴᴠɪᴀᴅᴏ.</gray>"
+  nms_test: "<green>✔</green> <gray>ᴘᴀᴄᴏᴛᴇ ɴᴍs ᴇɴᴠɪᴀᴅᴏ.</gray>"
+  nms_null: "<red>✖</red> <gray>ʜᴀɴᴅʟᴇʀ ɴᴍs ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ.</gray>"
+  nms_error: "<red>✖</red> <gray>ᴇʀʀᴏ ᴀᴏ ᴇɴᴠɪᴀʀ ᴘᴀᴄᴏᴛᴇ ɴᴍs: <white>%error%</white>"
+  removed: "<green>✔</green> <gray>ʀᴇᴍᴏᴠɪᴅᴏs <white>%count%</white> <gray>ᴅᴜᴍᴍɪᴇs.</gray>"
+  display_name: "<red><bold>%type% ʙᴏɴᴇᴄᴏ</bold></red> <dark_gray>[</dark_gray><green>||||||||||||||||||||</green><dark_gray>]</dark_gray>"
+  spawn:
+    warn_unknown: "<yellow>⚠</yellow> <gray>ᴛɪᴘᴏ <white>%type%</white> <gray>ᴅᴇsᴄᴏɴʜᴇᴄɪᴅᴏ. ᴄʀɪᴀɴᴅᴏ ᴘᴀᴅʀᴀᴏ.</gray>"
+    success: "<green>✔</green> <gray>ʙᴏɴᴇᴄᴏ <white>%type%</white> <gray>ᴄʀɪᴀᴅᴏ.</gray>"
+    error: "<red>✖</red> <gray>ᴇʀʀᴏ ᴀᴏ sᴘᴀᴡɴᴀʀ ᴅᴜᴍᴍʏ: <white>%error%</white>"
+
+# ============================================
+# DESCRIÇÕES DE COMANDOS
+# ============================================
+command:
+  xp_description: "Gerencia XP de combate"
+  dummy_description: "Cria e gerencia bonecos de treino (DPS dummy)"
+  dummy_usage: "/rpg admin dummy [spawn|clear|indicator]"
+
+# ============================================
+# DEBUG SCOREBOARD
+# ============================================
+debug:
+  scoreboard_info: "<gold>⚔ Info"
+  scoreboard_damage: "<gold>💥 Dano"
+  scoreboard_details: "<gold>📝 Detalhes"
+  attacker_label: "Atk"
+  source_label: "Src"
+  element_label: "Elem"
+  base_label: "Base"
+  final_label: "Final"
+  environment: "Ambiente"
+
+# ============================================
+# NOMES DE ATRIBUTOS
+# ============================================
+attributes:
+  fire_damage: "Dano de Fogo"
+  ice_damage: "Dano de Gelo"
+  light_damage: "Dano de Luz"
+  darkness_damage: "Dano de Escuridão"
+  divine_damage: "Dano Divino"
+  earth_damage: "Dano de Terra"
+  thunder_damage: "Dano de Trovão"
+  water_damage: "Dano de Água"
+  air_damage: "Dano de Ar"
+  fire_defense: "Defesa de Fogo"
+  ice_defense: "Defesa de Gelo"
+  light_defense: "Defesa de Luz"
+  darkness_defense: "Defesa de Escuridão"
+  divine_defense: "Defesa Divina"
+  earth_defense: "Defesa de Terra"
+  thunder_defense: "Defesa de Trovão"
+  water_defense: "Defesa de Água"
+  air_defense: "Defesa de Ar"
+  max_health: "Vida Máxima"
+  health_regen: "Regeneração de Vida"
+  health_regen_amp: "Amp. de Regen. de Vida"
+  mana_regen_amp: "Amp. de Regen. de Mana"
+  stamina_regen_amp: "Amp. de Regen. de Estamina"
+  xp_bonus: "Bônus de XP"
+  loot_bonus: "Bônus de Saque"
+  mana_steal: "Roubo de Mana"
+  strength: "Força"
+  intelligence: "Inteligência"
+  dexterity: "Destreza"
+  agility: "Agilidade"
+  vitality: "Vitalidade"
+  defense: "Defesa"
+  critical_chance: "Chance Crítica"
+  critical_damage: "Dano Crítico"
+  block_power: "Poder de Bloqueio"
+  block_rating: "Taxa de Bloqueio"
+  dodge_rating: "Taxa de Esquiva"
+  parry_rating: "Taxa de Aparar"
+  armor: "Armadura"
+  armor_toughness: "Resistência de Armadura"
+  skill_critical_chance: "Chance Crítica de Hab."
+  skill_critical_damage: "Dano Crítico de Hab."
+  block_cooldown_reduction: "Red. Recarga Bloqueio"
+  dodge_cooldown_reduction: "Red. Recarga Esquiva"
+  parry_cooldown_reduction: "Red. Recarga Aparar"
+  weapon_damage: "Dano de Arma"
+  physical_damage: "Dano Físico"
+  magic_damage: "Dano Mágico"
+  magic_resistance: "Resistência Mágica"
+  attack_speed: "Velocidade de Ataque"
+  skill_damage: "Dano de Habilidade"
+  projectile_damage: "Dano de Projétil"
+  undead_damage: "Dano vs Mortos-Vivos"
+  damage_reduction: "Redução de Dano"
+  fall_damage_reduction: "Red. Dano de Queda"
+  projectile_damage_reduction: "Red. Dano de Projétil"
+  physical_damage_reduction: "Red. Dano Físico"
+  magic_damage_reduction: "Red. Dano Mágico"
+  pve_damage_reduction: "Red. Dano JvA"
+  pvp_damage_reduction: "Red. Dano JvJ"
+  spell_vampirism: "Vampirismo Mágico"
+  knockback_resistance: "Resist. à Impulsão"
+  max_stellium: "Stellium Máximo"
+  max_absorption: "Absorção Máxima"
+  max_health_regen: "Regen. Vida Máxima"
+  max_stamina_regen: "Regen. Estamina Máxima"
+  max_mana: "Mana Máxima"
+  mana_regen: "Regeneração de Mana"
+  max_stamina: "Estamina Máxima"
+  stamina_regen: "Regen. de Estamina"
+  speed: "Velocidade"
+  luck: "Sorte"
+  cooldown_reduction: "Redução de Recarga"
+  life_steal: "Roubo de Vida"
+  thorns: "Espinhos"
+  armor_penetration: "Penetração de Armadura"
+  armor_penetration_flat: "Pen. Armadura (Fixa)"
+  magic_penetration: "Penetração Mágica"
+  magic_penetration_flat: "Pen. Mágica (Fixa)"
+  accuracy: "Precisão"
+  critical_resistance: "Resistência Crítica"
+  max_mana_regen: "Regen. Mana Máxima"
+  dot_damage_reduction: "Red. Dano Contínuo"
+  skill_damage_bonus: "Bônus Dano de Hab."
+  skill_damage_reduction: "Red. Dano de Hab."
+  minion_damage: "Dano de Lacaios"
+  minion_damage_reduction: "Red. Dano de Lacaios"

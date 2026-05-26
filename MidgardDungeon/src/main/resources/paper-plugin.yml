@@ -1,0 +1,8 @@
+name: MidgardDungeon
+version: '1.0-SNAPSHOT'
+main: me.ray.midgardDungeon.MidgardDungeon
+api-version: '1.21'
+softdepend:
+  - MythicMobs
+  - MMOCore
+  - Vault

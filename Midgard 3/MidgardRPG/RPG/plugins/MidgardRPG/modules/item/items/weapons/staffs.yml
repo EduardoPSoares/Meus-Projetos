@@ -1,0 +1,203 @@
+cajado_aprendiz:
+  base:
+    material: STICK
+    name: "<white>ᴄᴀᴊᴀᴅᴏ ᴅᴏ ᴀᴘʀᴇɴᴅɪᴢ</white>"
+    tier: COMMON
+    type: STAFF
+    description:
+    - "<gray>ᴜᴍ ᴄᴀᴊᴀᴅᴏ sɪᴍᴘʟᴇs ᴅᴇ ᴍᴀᴅᴇɪʀᴀ,</gray>"
+    - "<gray>ᴏ ᴘʀɪᴍᴇɪʀᴏ ᴘᴀssᴏ ɴᴏ ᴄᴀᴍɪɴʜᴏ ᴅᴀ ᴍᴀɢɪᴀ.</gray>"
+    revision-id: 1
+    magic-damage: 5
+    intelligence: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_cajado_aprendiz:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "LAPIS_LAZULI"
+            4: "STICK"
+            7: "STICK"
+
+cajado_arcano:
+  base:
+    material: STICK
+    name: "<green>ᴄᴀᴊᴀᴅᴏ ᴀʀᴄᴀɴᴏ</green>"
+    tier: UNCOMMON
+    type: STAFF
+    description:
+    - "<gray>ɪᴍʙᴜɪᴅᴏ ᴄᴏᴍ ᴇɴᴇʀɢɪᴀ ᴀʀᴄᴀɴᴀ,</gray>"
+    - "<gray>ᴀᴍᴘʟɪꜰɪᴄᴀ ᴏ ᴘᴏᴅᴇʀ ᴍᴀɢɪᴄᴏ ᴅᴏ ᴘᴏʀᴛᴀᴅᴏʀ.</gray>"
+    revision-id: 1
+    magic-damage: 10
+    intelligence: 6
+    max-mana: 20
+    crafting:
+      enabled: true
+      recipes:
+        craft_cajado_arcano:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:po_de_mithril"
+            4: "STICK"
+            7: "STICK"
+
+cajado_elementar:
+  base:
+    material: BLAZE_ROD
+    name: "<blue>ᴄᴀᴊᴀᴅᴏ ᴇʟᴇᴍᴇɴᴛᴀʀ</blue>"
+    tier: RARE
+    type: STAFF
+    description:
+    - "<gray>ᴄᴀɴᴀʟɪᴢᴀ ᴏ ᴘᴏᴅᴇʀ ᴅᴏs ᴇʟᴇᴍᴇɴᴛᴏs,</gray>"
+    - "<gray>ꜰᴏɢᴏ ᴇ ɢᴇʟᴏ ᴅᴀɴᴄᴀᴍ ᴇᴍ sᴜᴀ ᴘᴏɴᴛᴀ.</gray>"
+    revision-id: 1
+    magic-damage: 17
+    intelligence: 8
+    max-mana: 40
+    fire-damage: 5
+    ice-damage: 5
+    crafting:
+      enabled: true
+      recipes:
+        craft_cajado_elementar:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:cristal_arcano"
+            4: "midgard:essencia_fogo"
+            7: "midgard:essencia_gelo"
+
+cajado_do_abismo:
+  base:
+    material: BLAZE_ROD
+    name: "<purple>ᴄᴀᴊᴀᴅᴏ ᴅᴏ ᴀʙɪsᴍᴏ</purple>"
+    tier: EPIC
+    type: STAFF
+    description:
+    - "<gray>ᴇxᴛʀᴀɪᴅᴏ ᴅᴀs ᴘʀᴏꜰᴜɴᴅᴇᴢᴀs ᴅᴏ ᴀʙɪsᴍᴏ,</gray>"
+    - "<gray>sᴇᴜ ᴘᴏᴅᴇʀ sᴏᴍʙʀɪᴏ ᴄᴏɴsᴏᴍᴇ ᴀ ʟᴜᴢ ᴀᴏ ʀᴇᴅᴏʀ.</gray>"
+    revision-id: 1
+    magic-damage: 28
+    intelligence: 12
+    max-mana: 60
+    darkness-damage: 10
+    skill-damage: 8
+    required-level: 38
+
+cetro_eterno:
+  base:
+    material: BLAZE_ROD
+    name: "<gold>ᴄᴇᴛʀᴏ ᴇᴛᴇʀɴᴏ</gold>"
+    tier: LEGENDARY
+    type: STAFF
+    description:
+    - "<gray>ᴜᴍ ᴄᴇᴛʀᴏ ꜰᴏʀᴊᴀᴅᴏ ᴀɴᴛᴇs ᴅᴏ ᴛᴇᴍᴘᴏ,</gray>"
+    - "<gray>sᴜᴀ ᴍᴀɢɪᴀ ᴅɪᴠɪɴᴀ ᴇᴄᴏᴀ ᴘᴇʟᴀ ᴇᴛᴇʀɴɪᴅᴀᴅᴇ.</gray>"
+    revision-id: 1
+    magic-damage: 42
+    intelligence: 18
+    max-mana: 100
+    divine-damage: 15
+    skill-damage: 12
+    cooldown-reduction: 8
+    required-level: 52
+
+varinha_aprendiz:
+  base:
+    material: STICK
+    name: "<white>ᴠᴀʀɪɴʜᴀ ᴅᴏ ᴀᴘʀᴇɴᴅɪᴢ</white>"
+    tier: COMMON
+    type: WAND
+    description:
+    - "<gray>ᴜᴍᴀ ᴠᴀʀɪɴʜᴀ sɪᴍᴘʟᴇs ᴅᴇ ᴍᴀᴅᴇɪʀᴀ,</gray>"
+    - "<gray>ɪᴅᴇᴀʟ ᴘᴀʀᴀ ᴏs ᴘʀɪᴍᴇɪʀᴏs ꜰᴇɪᴛɪᴄᴏs.</gray>"
+    revision-id: 1
+    magic-damage: 4
+    intelligence: 2
+    max-mana: 10
+    crafting:
+      enabled: true
+      recipes:
+        craft_varinha_aprendiz:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "GOLD_NUGGET"
+            4: "STICK"
+
+varinha_arcana:
+  base:
+    material: STICK
+    name: "<green>ᴠᴀʀɪɴʜᴀ ᴀʀᴄᴀɴᴀ</green>"
+    tier: UNCOMMON
+    type: WAND
+    description:
+    - "<gray>ᴇɴᴄᴀɴᴛᴀᴅᴀ ᴄᴏᴍ ᴇɴᴇʀɢɪᴀ ᴀʀᴄᴀɴᴀ,</gray>"
+    - "<gray>ᴘᴇʀᴍɪᴛᴇ ᴄᴏɴᴊᴜʀᴀᴄᴏᴇs ᴍᴀɪs ʀᴀᴘɪᴅᴀs.</gray>"
+    revision-id: 1
+    magic-damage: 8
+    intelligence: 5
+    max-mana: 25
+    attack-speed: 0.15
+    crafting:
+      enabled: true
+      recipes:
+        craft_varinha_arcana:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:po_de_mithril"
+            4: "STICK"
+
+varinha_elemental:
+  base:
+    material: BLAZE_ROD
+    name: "<blue>ᴠᴀʀɪɴʜᴀ ᴇʟᴇᴍᴇɴᴛᴀʟ</blue>"
+    tier: RARE
+    type: WAND
+    description:
+    - "<gray>ᴜᴍᴀ ᴠᴀʀɪɴʜᴀ ǫᴜᴇ ᴄᴀɴᴀʟɪᴢᴀ ᴏ ꜰᴏɢᴏ,</gray>"
+    - "<gray>ᴀᴄᴇʟᴇʀᴀɴᴅᴏ ᴏ ꜰʟᴜxᴏ ᴅᴇ ᴍᴀɢɪᴀ ᴇʟᴇᴍᴇɴᴛᴀʀ.</gray>"
+    revision-id: 1
+    magic-damage: 15
+    intelligence: 7
+    max-mana: 35
+    fire-damage: 4
+    cooldown-reduction: 3
+    crafting:
+      enabled: true
+      recipes:
+        craft_varinha_elemental:
+          type: SHAPED
+          output: 1
+          shaped: true
+          ingredients:
+            1: "midgard:cristal_arcano"
+            4: "midgard:essencia_fogo"
+
+varinha_suprema:
+  base:
+    material: BLAZE_ROD
+    name: "<purple>ᴠᴀʀɪɴʜᴀ sᴜᴘʀᴇᴍᴀ</purple>"
+    tier: EPIC
+    type: WAND
+    description:
+    - "<gray>ᴀ ᴠᴀʀɪɴʜᴀ sᴜᴘʀᴇᴍᴀ ɪʀʀᴀᴅɪᴀ ʟᴜᴢ ᴘᴜʀᴀ,</gray>"
+    - "<gray>ᴀᴍᴘʟɪꜰɪᴄᴀɴᴅᴏ ᴛᴏᴅᴀs ᴀs ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴍᴀɢɪᴄᴀs.</gray>"
+    revision-id: 1
+    magic-damage: 25
+    intelligence: 11
+    max-mana: 50
+    light-damage: 8
+    cooldown-reduction: 5
+    skill-damage: 6
+    required-level: 36

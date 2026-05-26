@@ -1,0 +1,79 @@
+name: "<yellow>ᴘᴜʀɪꜰɪᴄᴀʀ</yellow>"
+mythic-skill: "Purificar"
+spell-type: COMMON
+
+cooldown:
+  base: 8.0
+  per-level: -0.3
+mana:
+  base: 22.0
+  per-level: -0.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Clerigo"
+  level: 5
+
+icon:
+  material: GHAST_TEAR
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<yellow><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></yellow>"
+  - ""
+  - "<gray>ᴘᴜʀɪꜰɪᴄᴀ ᴏ ᴀʟᴠᴏ, ʀᴇᴍᴏᴠᴇɴᴅᴏ ᴛᴏᴅᴏs</gray>"
+  - "<gray>ᴏs ᴇꜰᴇɪᴛᴏs ɴᴇɢᴀᴛɪᴠᴏs ᴇ ᴠᴇɴᴇɴᴏs</gray>"
+  - "<gray>ᴀᴛɪᴠᴏs ᴅᴏ ᴀʟɪᴀᴅᴏ.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴄᴜʀᴀ:<green>{heal}</green>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴄʟᴇʀɪɢᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  heal:
+    base: 10.0
+    per-level: 3.0
+
+milestones:
+  3:
+    visual: "purificar_cleanse"
+    mechanic-override: "PurificarMk2"
+    stat-bonus:
+      intelligence: 1.0
+  5:
+    visual: "purificar_holy"
+    mechanic-override: "PurificarMk3"
+    stat-bonus:
+      vitality: 2.0
+
+mastery:
+  attribute-bonus:
+    intelligence: 3
+    vitality: 2
+
+sounds:
+  cast-start:
+    sound: "entity.illusioner.cast_spell"
+    volume: 0.8
+    pitch: 1.4
+  cast-finish:
+    sound: "entity.player.levelup"
+    volume: 0.6
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

@@ -1,0 +1,636 @@
+# ============================================
+# MIDGARD PERFORMANCE MODULE - MESSAGES
+# ============================================
+
+# ============================================
+# PREFIX E BRANDING
+# ============================================
+prefix: "<yellow>ᴘᴇʀꜰ</yellow> "
+
+# ============================================
+# COMMAND MESSAGES
+# ============================================
+command:
+  only_players: "<red>✖</red> <gray>ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏ ᴘᴏᴅᴇ sᴇʀ ᴜsᴀᴅᴏ ᴘᴏʀ ᴊᴏɢᴀᴅᴏʀᴇs.</gray>"
+  help_footer: "  <dark_gray>ᴜsᴇ <yellow>/perf help</yellow> <dark_gray>ᴘᴀʀᴀ ᴠᴇʀ ᴛᴏᴅᴏs ᴏs ᴄᴏᴍᴀɴᴅᴏs.</dark_gray>"
+  header: "<dark_gray>═══════════════════════════════════════</dark_gray>"
+  description: "Módulo de monitoramento de performance"
+  usage: "/perf [subcomando]"
+
+# ============================================
+# DASHBOARD MESSAGES
+# ============================================
+dashboard:
+  title: "<yellow>ᴘᴇʀꜰᴏʀᴍᴀɴᴄᴇ ᴅᴀsʜʙᴏᴀʀᴅ</yellow>"
+  health: " <gray>sᴀᴜᴅᴇ:"
+  tps_label: "  <gray>⏱ ᴛᴘs:"
+  mspt_label: "  <gray>⚡ ᴍsᴘᴛ: "
+  mspt_median: "<gray>ᴍᴇᴅɪᴀɴᴀ │ "
+  mspt_p95: "<gray>ᴘ95 │ "
+  mspt_max: "<gray>ᴍᴀx"
+  ram_label: "  <gray>💾 ʀᴀᴍ: "
+  ram_suffix: "<gray>/"
+  cpu_label: "  <gray>💻 ᴄᴘᴜ: "
+  cpu_process: " <dark_gray>(ᴘʀᴏᴄᴇssᴏ) │ "
+  cpu_system: " <dark_gray>(sɪsᴛᴇᴍᴀ)"
+  gc_label: "  <gray>🗑 ɢᴄ: <white>"
+  gc_total: " <gray>ᴛᴏᴛᴀʟ"
+  modules_none: "  <gray>ɴᴇɴʜᴜᴍ ᴍᴏᴅᴜʟᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ."
+  events_none: "  <gray>ɴᴇɴʜᴜᴍ ᴇᴠᴇɴᴛᴏ ʟᴇɴᴛᴏ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ."
+  commands_none: "  <gray>ɴᴇɴʜᴜᴍ ᴄᴏᴍᴀɴᴅᴏ ʟᴇɴᴛᴏ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ."
+
+# ============================================
+# ERROR MESSAGES
+# ============================================
+errors:
+  spark_required: "<red>✖</red> <gray>sᴘᴀʀᴋ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ. ɪɴsᴛᴀʟᴇ ᴏ ᴘʟᴜɢɪɴ <white>sᴘᴀʀᴋ</white> ᴘᴀʀᴀ ᴜsᴀʀ ᴇsᴛᴇ ᴍᴏᴅᴜʟᴏ.</gray>"
+  unavailable: "<red>✖</red> <gray>ɴᴀᴏ ᴅɪsᴘᴏɴɪᴠᴇʟ</gray>"
+  spark_desc_1: "  <gray>ᴏ ᴍᴏᴅᴜʟᴏ ᴅᴇ ᴘᴇʀꜰᴏʀᴍᴀɴᴄᴇ ʀᴇǫᴜᴇʀ ᴏ sᴘᴀʀᴋ ᴘʀᴏꜰɪʟᴇʀ"
+  spark_desc_2: "  <gray>ᴘᴀʀᴀ ꜰᴏʀɴᴇᴄᴇʀ ᴍᴇᴛʀɪᴄᴀs ᴘʀᴇᴄɪsᴀs ᴅᴏ sᴇʀᴠɪᴅᴏʀ."
+
+tps:
+  title: "<white>⏱ ᴛᴘs ᴍᴏɴɪᴛᴏʀ <dark_gray>(sᴘᴀʀᴋ)</dark_gray>"
+  windows: "  <gray>ᴊᴀɴᴇʟᴀs ᴅᴇ ᴛᴇᴍᴘᴏ:</gray>"
+  diagnosis: "  <gray>ᴅɪᴀɢɴᴏsᴛɪᴄᴏ: %color%%message%</gray>"
+
+mspt:
+  title: "<white>⚡ ᴍsᴘᴛ ᴍᴏɴɪᴛᴏʀ <dark_gray>(ᴍɪʟʟɪsᴇᴄᴏɴᴅs ᴘᴇʀ ᴛɪᴄᴋ)</dark_gray>"
+  last_10s: "  <yellow>ᴜʟᴛɪᴍᴏs 10 sᴇɢᴜɴᴅᴏs:</yellow>"
+  last_1m: "  <yellow>ᴜʟᴛɪᴍᴏ ᴍɪɴᴜᴛᴏ:</yellow>"
+  stats: "    <gray>%type%: %color%%value%ᴍs</gray>"
+  warning: "  <dark_gray>⚠ 50ᴍs = 1 ᴛɪᴄᴋ. ᴠᴀʟᴏʀᴇs > 50ᴍs ᴄᴀᴜsᴀᴍ ʟᴀɢ.</dark_gray>"
+
+memory:
+  title: "<white>💾 ᴍᴇᴍᴏʀʏ ᴍᴏɴɪᴛᴏʀ</white>"
+  used: "  <gray>ᴜsᴀᴅᴏ: %color%%value% ᴍʙ</gray>"
+  free: "  <gray>ʟɪᴠʀᴇ: <green>%value% ᴍʙ</green></gray>"
+  allocated: "  <gray>ᴛᴏᴛᴀʟ ᴀʟᴏᴄᴀᴅᴏ: <aqua>%value% ᴍʙ</aqua></gray>"
+  max: "  <gray>ᴍᴀxɪᴍᴏ (xᴍx): <white>%value% ᴍʙ</white></gray>"
+  gc_title: "  <gray>ɢᴀʀʙᴀɢᴇ ᴄᴏʟʟᴇᴄᴛɪᴏɴ:</gray>"
+  gc_collections: "    <dark_gray>ᴄᴏʟᴇᴛᴀs: <white>%value%</white></dark_gray>"
+  gc_total_time: "    <dark_gray>ᴛᴇᴍᴘᴏ ᴛᴏᴛᴀʟ: <white>%value%</white></dark_gray>"
+  gc_avg_time: "    <dark_gray>ᴛᴇᴍᴘᴏ ᴍᴇᴅɪᴏ: <white>%value%ᴍs</white></dark_gray>"
+
+cpu:
+  title: "<white>💻 ᴄᴘᴜ ᴍᴏɴɪᴛᴏʀ</white>"
+  process: "  <yellow>ᴘʀᴏᴄᴇssᴏ ᴊᴀᴠᴀ:</yellow>"
+  system: "  <yellow>sɪsᴛᴇᴍᴀ:</yellow>"
+
+gc:
+  title: "<white>🗑 ɢᴀʀʙᴀɢᴇ ᴄᴏʟʟᴇᴄᴛɪᴏɴ</white>"
+  total_collections: "  <gray>ᴛᴏᴛᴀʟ ᴅᴇ ᴄᴏʟᴇᴛᴀs: <white>%value%</white></gray>"
+  total_time: "  <gray>ᴛᴇᴍᴘᴏ ᴛᴏᴛᴀʟ ᴇᴍ ɢᴄ: <white>%value%</white></gray>"
+  avg_time: "  <gray>ᴛᴇᴍᴘᴏ ᴍᴇᴅɪᴏ ᴘᴏʀ ᴄᴏʟᴇᴛᴀ: <white>%value%ᴍs</white></gray>"
+  frequency: "  <gray>ꜰʀᴇǫᴜᴇɴᴄɪᴀ ᴍᴇᴅɪᴀ: <white>%value%s</white></gray>"
+  collectors: "  <yellow>ᴄᴏʟᴇᴛᴏʀᴇs:</yellow>"
+  collector_stats: "    <gray>%name%: <white>%count% <gray>ᴄᴏʟᴇᴛᴀs, <white>%avg%ᴍs <gray>ᴍᴇᴅɪᴀ</gray>"
+
+modules:
+  title: "<white>📦 ᴀɴᴀʟɪsᴇ ᴅᴇ ᴍᴏᴅᴜʟᴏs</white>"
+  analyzer_error: "<red>ᴀɴᴀʟʏzᴇʀ ɴᴀᴏ ɪɴɪᴄɪᴀʟɪzᴀᴅᴏ</red>"
+  stats: "      <dark_gray>ɪɴɪᴛ: %color%%time%ᴍs <dark_gray>│ ᴏᴘs: <gray>%ops% <dark_gray>│ ʟɪsᴛᴇɴᴇʀs: <gray>%listeners%</dark_gray>"
+
+events:
+  title: "<white>📡 ᴀɴᴀʟɪsᴇ ᴅᴇ ᴇᴠᴇɴᴛᴏs</white>"
+  total_listeners: "  <gray>ᴛᴏᴛᴀʟ ᴅᴇ ʟɪsᴛᴇɴᴇʀs: <white>%value%</white></gray>"
+  unique_events: "  <gray>ᴇᴠᴇɴᴛᴏs ᴜɴɪᴄᴏs: <white>%value%</white></gray>"
+  slowest: "  <yellow>ᴛᴏᴘ ᴇᴠᴇɴᴛᴏs ᴍᴀɪs ʟᴇɴᴛᴏs:</yellow>"
+  stats: "      <gray>ᴍᴀx: %max%ᴍs │ ᴇxᴇᴄᴜᴄᴏᴇs: %count%</gray>"
+
+commands:
+  title: "<white>⌨ ᴀɴᴀʟɪsᴇ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs</white>"
+  total_commands: "  <gray>ᴛᴏᴛᴀʟ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs: <white>%value%</white></gray>"
+  total_executions: "  <gray>ᴛᴏᴛᴀʟ ᴅᴇ ᴇxᴇᴄᴜᴄᴏᴇs: <white>%value%</white></gray>"
+  slowest: "  <yellow>ᴄᴏᴍᴀɴᴅᴏs ᴍᴀɪs ʟᴇɴᴛᴏs:</yellow>"
+  stats: "      <gray>ᴍᴀx: %max%ᴍs │ ᴇxᴇᴄᴜᴄᴏᴇs: %count%"
+
+profiler:
+  title: "<white>⚙ ᴘʀᴏꜰɪʟᴇʀ sᴛᴀᴛs</white>"
+  tracked: "  <gray>ᴏᴘᴇʀᴀᴄᴏᴇs ʀᴀsᴛʀᴇᴀᴅᴀs: <white>%value%</white></gray>"
+  total_exec: "  <gray>ᴛᴏᴛᴀʟ ᴅᴇ ᴇxᴇᴄᴜᴄᴏᴇs: <white>%value%</white></gray>"
+  total_time: "  <gray>ᴛᴇᴍᴘᴏ ᴛᴏᴛᴀʟ: <white>%value%ᴍs</white></gray>"
+  slowest: "  <yellow>ᴛᴏᴘ 10 ᴏᴘᴇʀᴀᴄᴏᴇs ᴍᴀɪs ʟᴇɴᴛᴀs:</yellow>"
+  stats: "       <dark_gray>ᴍᴀx: %max%ᴍs │ ᴜʟᴛɪᴍᴀ: %last%ᴍs │ ᴄᴏᴜɴᴛ: %count%</dark_gray>"
+
+report:
+  title: "<yellow>ʀᴇʟᴀᴛᴏʀɪᴏ ᴅᴇ ᴘᴇʀꜰᴏʀᴍᴀɴᴄᴇ</yellow>"
+  score: "  <white>sᴄᴏʀᴇ: %color%%score%/100 <dark_gray>[%color%%grade%<dark_gray>]</dark_gray>"
+  generated: "  <dark_gray>ɢᴇʀᴀᴅᴏ ᴇᴍ: %time%</dark_gray>"
+  spark_status: "  <dark_gray>sᴘᴀʀᴋ: %status%</dark_gray>"
+  spark_active: "<green>Ativo</green>"
+  spark_inactive: "<red>Inativo</red>"
+  issues_detected: "  <red>⚠ ᴘʀᴏʙʟᴇᴍᴀs ᴅᴇᴛᴇᴄᴛᴀᴅᴏs: %count%</red>"
+  issues_none: "  <green>✔ ɴᴇɴʜᴜᴍ ᴘʀᴏʙʟᴇᴍᴀ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ!</green>"
+  more_issues: "    <dark_gray>... ᴇ ᴍᴀɪs %count% ᴘʀᴏʙʟᴇᴍᴀs</dark_gray>"
+  recommendations: "  <yellow>📋 ʀᴇᴄᴏᴍᴇɴᴅᴀᴄᴏᴇs:</yellow>"
+  footer: "  <dark_gray>ᴜsᴇ <yellow>/perf issues <dark_gray>ᴘᴀʀᴀ ᴅᴇᴛᴀʟʜᴇs ᴅᴏs ᴘʀᴏʙʟᴇᴍᴀs</dark_gray>"
+
+diagnose:
+  title: "<white>🩺 ᴅɪᴀɢɴᴏsᴛɪᴄᴏ ᴅᴇ sᴀᴜᴅᴇ</white>"
+  status: "  <gray>sᴛᴀᴛᴜs ɢᴇʀᴀʟ: %color%%icon% %label%</gray>"
+  line: "  %color%%icon% <gray>%name%: %color%%message%</gray>"
+
+issues:
+  title: "<white>⚠ ᴘʀᴏʙʟᴇᴍᴀs ᴅᴇᴛᴇᴄᴛᴀᴅᴏs</white>"
+  suggestion: "    <dark_gray>💡 %suggestion%</dark_gray>"
+
+watcher:
+  title: "<white>👁 ʜᴇᴀʟᴛʜ ᴡᴀᴛᴄʜᴇʀ</white>"
+  not_init: "  <red>ᴡᴀᴛᴄʜᴇʀ ɴᴀᴏ ɪɴɪᴄɪᴀʟɪzᴀᴅᴏ</red>"
+  checks: "  <gray>ᴄʜᴇᴄᴋs ʀᴇᴀʟɪzᴀᴅᴏs: <white>%value%</white></gray>"
+  alerts: "  <gray>ᴀʟᴇʀᴛᴀs ᴅɪsᴘᴀʀᴀᴅᴏs: <yellow>%value%</yellow></gray>"
+  active_alerts: "  <gray>ᴀʟᴇʀᴛᴀs ᴀᴛɪᴠᴏs:</gray>"
+  alert_status: "    <gray>%name%: %status%</gray>"
+  active: "<red>⚠ ᴀᴛɪᴠᴏ</red>"
+  ok: "<green>ᴏᴋ</green>"
+  alert_tps: "<red>⚠ TPS baixo detectado: %.1f</red>"
+  alert_memory: "<red>⚠ Uso de memória alto: %.1f%%</red>"
+  alert_tps_low: "<red>⚠ TPS baixo detectado: %.1f</red>"
+  alert_memory_high: "<red>⚠ Uso de memória alto: %.1f%%</red>"
+  status_healthy: "<green>Saudável</green>"
+  status_warning: "<yellow>Atenção</yellow>"
+  status_critical: "<red>Crítico</red>"
+
+clear:
+  success: "<green>✔ ᴛᴏᴅᴀs ᴀs ᴇsᴛᴀᴛɪsᴛɪᴄᴀs ꜰᴏʀᴀᴍ ʟɪᴍᴘᴀs.</green>"
+
+help:
+  title: "<yellow>ᴀᴊᴜᴅᴀ ᴅᴇ ᴘᴇʀꜰᴏʀᴍᴀɴᴄᴇ</yellow>"
+  gui: "  <yellow>▸ ɪɴᴛᴇʀꜰᴀᴄᴇ ɢʀᴀꜰɪᴄᴀ</yellow>"
+  dashboard: "  <yellow>▸ ᴅᴀsʜʙᴏᴀʀᴅ</yellow>"
+  spark: "  <yellow>▸ ᴍᴇᴛʀɪᴄᴀs sᴘᴀʀᴋ</yellow>"
+  analysis: "  <yellow>▸ ᴀɴᴀʟɪsᴇ ᴍɪᴅɢᴀʀᴅ</yellow>"
+  diagnosis: "  <yellow>▸ ᴅɪᴀɢɴᴏsᴛɪᴄᴏ</yellow>"
+  utils: "  <yellow>▸ ᴜᴛɪʟɪᴛᴀʀɪᴏs</yellow>"
+  spark_warn: "  <red>⚠ sᴘᴀʀᴋ ɴᴀᴏ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ! ᴀʟɢᴜᴍᴀs ᴍᴇᴛʀɪᴄᴀs ɪɴᴅɪsᴘᴏɴɪᴠᴇɪs.</red>"
+  download: "  <gray>ʙᴀɪxᴇ ᴇᴍ: <aqua>sᴘᴀʀᴋ.ʟᴜᴄᴋᴏ.ᴍᴇ</aqua></gray>"
+  line_gui: "    <yellow>/perf gui <dark_gray>.............. <gray>✨ ᴀʙʀᴇ ᴅᴀsʜʙᴏᴀʀᴅ ɪɴᴛᴇʀᴀᴛɪᴠᴏ"
+  line_dashboard: "    <yellow>/perf <dark_gray>................... <gray>ᴠɪsᴀᴏ ɢᴇʀᴀʟ ᴅᴏ sᴇʀᴠɪᴅᴏʀ"
+  line_tps: "    <yellow>/perf tps <dark_gray>............... <gray>ᴛᴘs (1ᴍ, 5ᴍ, 15ᴍ)"
+  line_mspt: "    <yellow>/perf mspt <dark_gray>.............. <gray>ᴍɪʟʟɪsᴇᴄᴏɴᴅs ᴘᴇʀ ᴛɪᴄᴋ"
+  line_memory: "    <yellow>/perf memory <dark_gray>............ <gray>ʜᴇᴀᴘ ᴜsᴀᴅᴏ/ᴛᴏᴛᴀʟ/ᴍᴀx"
+  line_cpu: "    <yellow>/perf cpu <dark_gray>............... <gray>ᴄᴘᴜ ᴘʀᴏᴄᴇssᴏ/sɪsᴛᴇᴍᴀ"
+  line_gc: "    <yellow>/perf gc <dark_gray>................ <gray>ɢᴀʀʙᴀɢᴇ ᴄᴏʟʟᴇᴄᴛɪᴏɴ sᴛᴀᴛs"
+  line_modules: "    <yellow>/perf modules <dark_gray>........... <gray>sᴛᴀᴛᴜs ᴅᴇ ᴄᴀᴅᴀ ᴍᴏᴅᴜʟᴏ"
+  line_events: "    <yellow>/perf events <dark_gray>............ <gray>ʟɪsᴛᴇɴᴇʀs ʀᴇɢɪsᴛʀᴀᴅᴏs"
+  line_commands: "    <yellow>/perf commands <dark_gray>.......... <gray>ᴘʀᴏꜰɪʟɪɴɢ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs"
+  line_profiler: "    <yellow>/perf profiler <dark_gray>.......... <gray>ᴛᴏᴘ ᴏᴘᴇʀᴀᴄᴏᴇs ʟᴇɴᴛᴀs"
+  line_report: "    <yellow>/perf report <dark_gray>............ <gray>ʀᴇʟᴀᴛᴏʀɪᴏ ᴄᴏᴍ sᴄᴏʀᴇ/ɢʀᴀᴅᴇ"
+  line_diagnose: "    <yellow>/perf diagnose <dark_gray>.......... <gray>ᴅɪᴀɢɴᴏsᴛɪᴄᴏ ᴅᴇ sᴀᴜᴅᴇ"
+  line_issues: "    <yellow>/perf issues <dark_gray>............ <gray>ʟɪsᴛᴀ ᴘʀᴏʙʟᴇᴍᴀs ᴅᴇᴛᴇᴄᴛᴀᴅᴏs"
+  line_watcher: "    <yellow>/perf watcher <dark_gray>........... <gray>ʜᴇᴀʟᴛʜ ᴡᴀᴛᴄʜᴇʀ sᴛᴀᴛᴜs"
+  line_clear: "    <yellow>/perf clear <dark_gray>............. <gray>ʟɪᴍᴘᴀʀ ᴇsᴛᴀᴛɪsᴛɪᴄᴀs"
+  line_help: "    <yellow>/perf help <dark_gray>.............. <gray>ᴇsᴛᴀ ᴍᴇɴsᴀɢᴇᴍ"
+
+# ============================================
+# DIAGNOSIS (SparkPerformanceManager)
+# ============================================
+diagnosis:
+  unavailable: "Dados indisponíveis"
+  tps:
+    excellent: "%.1f TPS - Excelente"
+    good: "%.1f TPS - Bom"
+    warning: "%.1f TPS - Atenção necessária"
+    critical: "%.1f TPS - CRÍTICO! Lag severo"
+    severe: "%.1f TPS - SEVERO! Servidor sob stress extremo"
+  mspt:
+    excellent: "%.1fms mediana - Excelente"
+    good: "%.1fms mediana - Bom"
+    warning: "%.1fms mediana - Limite do tick"
+    critical: "%.1fms mediana - Ticks atrasados!"
+  cpu:
+    excellent: "%.1f%% uso - Excelente"
+    good: "%.1f%% uso - Bom"
+    warning: "%.1f%% uso - Alto"
+    critical: "%.1f%% uso - CRÍTICO!"
+  gc:
+    excellent: "Frequência baixa - Normal"
+    good: "Frequência moderada"
+    warning: "GC frequente - Possível memory pressure"
+    critical: "GC muito frequente - Memory leak provável!"
+  memory:
+    excellent: "%.1f%% usado - Excelente"
+    good: "%.1f%% usado - Bom"
+    warning: "%.1f%% usado - Alto"
+    critical: "%.1f%% usado - CRÍTICO!"
+    severe: "%.1f%% usado - EMERGÊNCIA! OOM iminente"
+  health:
+    excellent: "Excelente"
+    good: "Bom"
+    warning: "Atenção"
+    critical: "Crítico"
+    severe: "Severo"
+    unknown: "Desconhecido"
+
+# ============================================
+# PERFORMANCE REPORT (PerformanceReport)
+# ============================================
+performance:
+  report:
+    issue:
+      tps-low:
+        title: "TPS Baixo"
+        suggestion: "Verifique entidades, redstone, hoppers e plugins pesados"
+      mspt-high:
+        title: "MSPT Alto"
+        suggestion: "Ticks estão demorando demais - identifique operações síncronas pesadas"
+      memory-high:
+        title: "Memória Alta"
+        suggestion: "Considere aumentar heap ou verificar memory leaks"
+      cpu-high:
+        title: "CPU Alta"
+        suggestion: "Identifique processos intensivos ou loops infinitos"
+      gc-frequent:
+        title: "GC Frequente"
+        suggestion: "Muitas alocações de objetos - otimize uso de memória"
+      slow-module:
+        title: "Módulo Lento: "
+        init-time: "Tempo de inicialização: %dms"
+        suggestion: "Otimize onEnable() ou mova operações para async"
+      moderate-module:
+        title: "Módulo Moderado: "
+        suggestion: "Considere lazy loading ou async init"
+      slow-operation:
+        title: "Operação Lenta: "
+        description: "Tempo máximo: %dms (%d execuções)"
+        suggestion: "Otimize ou mova para thread async"
+      slow-listener:
+        title: "Listener Lento: "
+        description: "%s - %dms máximo"
+        suggestion: "Mova lógica pesada para async ou otimize"
+      slow-command:
+        title: "Comando Lento: /"
+        description: "Tempo máximo: %dms"
+        suggestion: "Comandos devem executar rapidamente - use async para operações pesadas"
+    recommendation:
+      tps-optimization:
+        title: "Otimização de TPS"
+        step1: "Execute /spark profiler para identificar gargalos"
+        step2: "Verifique entidades excessivas em chunks"
+        step3: "Reduza hoppers e redstone complexa"
+        step4: "Use Paper's async chunk loading"
+      memory-optimization:
+        title: "Otimização de Memória"
+        step1: "Execute /spark heapsummary para análise de heap"
+        step2: "Verifique cache de dados não liberados"
+        step3: "Use object pooling para objetos frequentes"
+        step4: "Considere aumentar -Xmx se necessário"
+      module-optimization:
+        title: "Otimização de Módulos"
+        step1: "Mova I/O para CompletableFuture"
+        step2: "Implemente lazy loading para recursos pesados"
+        step3: "Cache resultados de operações frequentes"
+        step4: "Use BukkitScheduler para tarefas não-críticas"
+      many-listeners:
+        title: "Muitos Event Listeners"
+        step1: "Considere combinar listeners relacionados"
+        step2: "Use event priorities corretamente"
+        step3: "Evite listeners em eventos de alta frequência"
+      many-operations:
+        title: "Muitas Operações Rastreadas"
+        step1: "Limite uso do profiler em produção"
+        step2: "Use sampling ao invés de tracing completo"
+      install-spark:
+        title: "Instale o Spark Profiler"
+        step1: "Spark fornece métricas precisas de TPS/MSPT/CPU"
+        step2: "Permite profiling detalhado de threads"
+        step3: "Análise de heap e GC em tempo real"
+        step4: "Download: https://spark.lucko.me/"
+    category:
+      memory: "Memória"
+      module: "Módulo"
+      event: "Evento"
+      command: "Comando"
+      operation: "Operação"
+    priority:
+      high: "Alta"
+      medium: "Média"
+      low: "Baixa"
+
+# ============================================
+# GUI - MAIN DASHBOARD (PerformanceMainGui)
+# ============================================
+gui:
+  main:
+    title: "<yellow>⚡ Performance Dashboard</yellow>"
+    click_details: "<yellow>Clique para detalhes"
+    health:
+      name: "✦ Saúde Geral"
+      status_description: "<gray>Status geral do servidor"
+      tps_label: "<dark_gray>▸ TPS: "
+      memory_label: "<dark_gray>▸ Memória: "
+      cpu_label: "<dark_gray>▸ CPU: "
+      click: "<yellow>Clique para diagnóstico completo"
+    tps:
+      name: "<white>⏱ TPS"
+      description: "<gray>Ticks Por Segundo"
+      value_format: "{value} TPS"
+      label_5s: "<dark_gray>▸ 5s: "
+      label_1m: "<dark_gray>▸ 1m: "
+      label_5m: "<dark_gray>▸ 5m: "
+      unavailable: "<red>Spark não disponível"
+    mspt:
+      name: "<white>⚡ MSPT"
+      description: "<gray>Milliseconds Per Tick"
+      value_format: "{value}ms mediana"
+      label_min: "<dark_gray>▸ Min: "
+      label_p95: "<dark_gray>▸ P95: "
+      label_max: "<dark_gray>▸ Max: "
+      unavailable: "<red>Spark não disponível"
+    memory:
+      name: "<white>💾 Memória"
+      description: "<gray>Uso de memória Heap"
+      value_format: "{used}MB / {max}MB"
+      used_label: "<dark_gray>▸ Uso: "
+      free_format: "<dark_gray>▸ Livre: <green>{value}MB"
+      allocated_format: "<dark_gray>▸ Alocado: <aqua>{value}MB"
+      unavailable: "<red>Dados não disponíveis"
+    cpu:
+      name: "<white>💻 CPU"
+      description: "<gray>Uso de CPU"
+      value_format: "{value}"
+      label_10s: "<dark_gray>▸ 10s: "
+      label_1m: "<dark_gray>▸ 1m: "
+      label_15m: "<dark_gray>▸ 15m: "
+      unavailable: "<red>Spark não disponível"
+    modules:
+      name: "<white>📦 Módulos"
+      description: "<gray>Análise de módulos Midgard"
+      active_format: "<dark_gray>▸ Ativos: <green>{enabled}<gray>/{total}"
+      total_ops_format: "<dark_gray>▸ Operações: <white>{value}"
+      analyzer_unavailable: "<red>Analyzer não disponível"
+      click: "<yellow>Clique para análise detalhada"
+    issues:
+      name: "<red>⚠ Problemas"
+      description: "<gray>Problemas detectados"
+      critical_count: "<red>⚠ {count} problema(s) crítico(s)!"
+      no_critical: "<green>✔ Nenhum problema crítico"
+      click: "<yellow>Clique para ver problemas"
+    report:
+      name: "<yellow>📊 Relatório"
+      description: "<gray>Relatório de performance"
+      score_format: "<dark_gray>▸ Score: {color}{score}/100 [{grade}]"
+      issues_format: "<dark_gray>▸ Problemas: <white>{count}"
+      recommendations_format: "<dark_gray>▸ Recomendações: <white>{count}"
+      click: "<yellow>Clique para relatório completo"
+    gc:
+      name: "<white>🗑 GC"
+      description: "<gray>Garbage Collection"
+      collections_format: "<dark_gray>▸ Coletas: <white>{value}"
+      total_time_format: "<dark_gray>▸ Tempo: <white>{value}"
+      avg_format: "<dark_gray>▸ Média: <white>{value}ms"
+      unavailable: "<red>Dados não disponíveis"
+    watcher:
+      name: "<white>👁 Watcher"
+      description: "<gray>Health Watcher status"
+      checks_format: "<dark_gray>▸ Checks: <white>{value}"
+      alerts_format: "<dark_gray>▸ Alertas: <yellow>{value}"
+      tps_label: "<dark_gray>▸ TPS: "
+      ram_label: "<dark_gray>▸ RAM: "
+      cpu_label: "<dark_gray>▸ CPU: "
+      alert: "<red>⚠ Alerta"
+      ok: "<green>OK"
+      not_initialized: "<red>Watcher não inicializado"
+    refresh:
+      name: "<yellow>🔄 Atualizar</yellow>"
+      description: "<gray>Atualizar dados em tempo real"
+      auto_disabled: "<dark_gray>Auto-refresh desativado"
+      click: "<yellow>Clique para atualizar"
+    close:
+      name: "<red>✖ Fechar"
+      click: "<gray>Fechar dashboard"
+    spark_warning:
+      name: "<red>⚠ Spark Necessário</red>"
+      not_detected: "<red>Spark não detectado!</red>"
+      requires_line1: "<gray>O módulo de Performance requer</gray>"
+      requires_line2: "<gray>o Spark para métricas precisas.</gray>"
+      download: "<gray>Baixe em: <aqua>spark.lucko.me</aqua>"
+
+  # ============================================
+  # GUI - REPORT (ReportGui)
+  # ============================================
+  report:
+    title: "<yellow>📊 Relatório de Performance</yellow>"
+    score:
+      name: "<yellow>⭐ Score Geral</yellow>"
+      description: "<gray>Pontuação geral do servidor"
+      value: "<dark_gray>▸ Score: {color}{score}/100"
+      grade: "<dark_gray>▸ Grade: {color}{grade}"
+      timestamp: "<dark_gray>▸ Gerado: <white>{time}"
+      spark_status: "<dark_gray>▸ Spark: {status}"
+      spark_active: "<green>Ativo"
+      spark_inactive: "<red>Inativo"
+    metrics:
+      name: "<aqua>📈 Métricas</aqua>"
+      description: "<gray>Métricas do servidor"
+      tps: "<dark_gray>▸ TPS: {color}{value}"
+      mspt: "<dark_gray>▸ MSPT: {color}{value}ms"
+      memory: "<dark_gray>▸ Memória: {color}{value}%"
+      cpu: "<dark_gray>▸ CPU: {color}{value}%"
+    issues:
+      name: "<red>⚠ Problemas ({count})</red>"
+      description: "<gray>Problemas detectados"
+      none: "<green>✔ Nenhum problema detectado!"
+      item: "{color}▸ {title}"
+      suggestion: "  <dark_gray>💡 {suggestion}"
+      more: "<dark_gray>... e mais {count} problemas"
+    recommendations:
+      name: "<yellow>💡 Recomendações ({count})</yellow>"
+      description: "<gray>Sugestões de otimização"
+      none: "<green>✔ Nenhuma recomendação"
+      item: "<yellow>▸ {title} <dark_gray>[{priority}]"
+      step: "  <gray>• {step}"
+    nav:
+      back: "<yellow>← Voltar"
+      back_lore: "<gray>Voltar ao Dashboard"
+      refresh: "<yellow>🔄 Atualizar</yellow>"
+      refresh_lore: "<gray>Gerar novo relatório"
+
+  # ============================================
+  # GUI - METRICS DETAIL (MetricsDetailGui)
+  # ============================================
+  metrics:
+    time:
+      5s: "5 segundos"
+      10s: "10 segundos"
+      1m: "1 minuto"
+      5m: "5 minutos"
+      15m: "15 minutos"
+    tps:
+      current-name: "⏱ TPS Atual"
+      current-lore: "<gray>Ticks Por Segundo atual"
+      target: "<dark_gray>Meta:</dark_gray> <white>20.00 TPS</white>"
+      window-lore: "<gray>Média de TPS nos últimos"
+      info-name: "<aqua>ℹ O que é TPS?"
+      info-desc1: "<gray>O TPS (Ticks Per Second) mede"
+      info-desc2: "<gray>quantos ticks o servidor processa"
+      info-desc3: "<gray>por segundo."
+      info-excellent: "<green>20 TPS <dark_gray>= Perfeito"
+      info-good: "<yellow>17-19 TPS <dark_gray>= Bom"
+      info-moderate: "<gold>15-17 TPS <dark_gray>= Lag leve"
+      info-severe: "<red><15 TPS <dark_gray>= Lag severo"
+    mspt:
+      current-name: "⚡ MSPT Atual"
+      current-lore: "<gray>Tempo por tick (mediana)"
+      limit: "<dark_gray>Limite: <white>50ms / tick"
+      stat-min: "Mínimo"
+      stat-median: "Mediana"
+      stat-p95: "P95"
+      stat-max: "Máximo"
+      window-10s: "<gray>Últimos 10 segundos"
+      window-1m: "<gray>Último minuto"
+      info-name: "<aqua>ℹ O que é MSPT?"
+      info-desc1: "<gray>MSPT (Milliseconds Per Tick)"
+      info-desc2: "<gray>mede quanto tempo o servidor"
+      info-desc3: "<gray>leva para processar cada tick."
+      info-excellent: "<green><30ms <dark_gray>= Excelente"
+      info-good: "<yellow>30-40ms <dark_gray>= Bom"
+      info-moderate: "<gold>40-50ms <dark_gray>= Limite"
+      info-severe: "<red>>50ms <dark_gray>= Lag!"
+    memory:
+      current-name: "💾 Memória Heap"
+      current-lore: "<gray>Uso atual de memória Heap"
+      used-name: "<red>Usado"
+      used-lore: "<gray>Memória em uso pelo JVM"
+      free-name: "<green>Livre"
+      free-lore: "<gray>Memória disponível"
+      allocated-name: "<aqua>Alocado"
+      allocated-lore: "<gray>Memória alocada pelo SO"
+      max-name: "<white>Máximo (Xmx)"
+      max-lore: "<gray>Máximo definido (-Xmx)"
+      gc-name: "<gray>🗑 Coletor de Lixo</gray>"
+      gc-collections: "<gray>Coletas: <white>"
+      gc-time: "<gray>Tempo: <white>"
+      gc-click: "<yellow>Clique para detalhes de GC"
+    cpu:
+      current-name: "💻 CPU Processo"
+      current-lore: "<gray>Uso de CPU pelo processo Java"
+      process-label: "<yellow>Processo</yellow>"
+      system-label: "<aqua>Sistema</aqua>"
+      process-avg: "<gray>Média do processo nos últimos"
+      system-avg: "<gray>Média do sistema nos últimos"
+    gc:
+      main-name: "<gray>🗑 Coletor de Lixo</gray>"
+      main-lore: "<gray>Estatísticas de Garbage Collection"
+      total-collections: "<white>Total de coletas: <green>"
+      total-time: "<white>Tempo total: <yellow>"
+      avg-time: "<white>Tempo médio: <aqua>"
+      frequency: "<white>Frequência: "
+      frequency-suffix: "s entre coletas"
+      collector-lore: "<gray>Coletor de garbage individual"
+      collector-collections: "<white>Coletas: <green>"
+      collector-total-time: "<white>Tempo total: <yellow>"
+      collector-avg-time: "<white>Tempo médio: <aqua>"
+      info-name: "<aqua>ℹ O que é GC?"
+      info-desc1: "<gray>O Garbage Collector libera"
+      info-desc2: "<gray>memória de objetos não usados."
+      info-normal: "<green>Frequência > 60s <dark_gray>= Normal"
+      info-moderate: "<yellow>30-60s <dark_gray>= Moderado"
+      info-pressure: "<red><30s <dark_gray>= Memory pressure"
+    diagnose:
+      health-name: "✦ Saúde Geral"
+      health-lore: "<gray>Status geral do servidor"
+      comp-tps: "TPS"
+      comp-mspt: "MSPT"
+      comp-cpu: "CPU"
+      comp-memory: "Memória"
+      comp-gc: "GC"
+      component: "<dark_gray>Componente: <white>"
+      level: "<dark_gray>Nível: "
+    nav:
+      back: "<yellow>← Voltar"
+      back-lore: "<gray>Voltar ao Dashboard"
+      refresh: "<yellow>🔄 Atualizar</yellow>"
+      refresh-lore: "<gray>Atualizar dados"
+    spark:
+      warning-name: "<red>⚠ Spark Necessário</red>"
+      not-detected: "<red>Spark não detectado!</red>"
+      requires1: "<gray>O módulo de Performance requer</gray>"
+      requires2: "<gray>o Spark para métricas precisas.</gray>"
+      download: "<gray>Baixe em:<aqua>spark.lucko.me</aqua>"
+    unavailable:
+      name: "<red>⚠ Indisponível</red>"
+      not-available: "<red>{metric} não disponível"
+      not-collected1: "<gray>Esta métrica não está sendo"
+      not-collected2: "<gray>coletada pelo Spark no momento."
+
+  # ============================================
+  # GUI - MODULES ANALYSIS (ModulesAnalysisGui)
+  # ============================================
+  modules:
+    title: "<yellow>📦 Módulos</yellow>"
+    no-modules:
+      title: "<red>Sem Módulos"
+      not-found: "<gray>Nenhum módulo encontrado."
+      no-analyzer: "<dark_gray>O analyzer não detectou módulos"
+      not-initialized: "<dark_gray>ou ainda não foi inicializado."
+    module-item:
+      status-label: "<gray>Status: "
+      active: "<green>Ativo"
+      inactive: "<red>Desativado"
+      health-label: "<gray>Saúde: "
+      init-time: "<gray>⏱ Init: "
+      operations: "<gray>⚙ Operações: <white>"
+      listeners: "<gray>📡 Listeners: <white>"
+      profiled-time: "<gray>📊 Tempo profiled: "
+      slowest-ops: "<yellow>Operações mais lentas:"
+    summary:
+      title: "<yellow>📊 Resumo</yellow>"
+      description: "<gray>Resumo da análise de módulos"
+      active-modules: "<dark_gray>▸ Módulos ativos: <green>{0}<gray>/{1}"
+      total-operations: "<dark_gray>▸ Total operações: <white>{0}"
+      total-time: "<dark_gray>▸ Tempo total: <white>{0}ms"
+      total-listeners: "<dark_gray>▸ Listeners: <white>{0}"
+      slow-init: "<yellow>⚠ {0} módulo(s) com init lento"
+      critical-ops: "<red>⚠ {0} operação(ões) crítica(s)"
+    navigation:
+      back: "<yellow>← Voltar"
+      back-lore: "<gray>Voltar ao Dashboard"
+      page-info: "<white>Página {0}/{1}"
+      page-lore: "<gray>Página {0} de {1}"
+      total-modules: "<dark_gray>Total: {0} módulos"
+      previous: "<yellow>← Anterior"
+      next: "<yellow>Próxima →"
+      go-to-page: "<gray>Ir para página {0}"
+      refresh: "<yellow>🔄 Atualizar</yellow>"
+      refresh-lore: "<gray>Atualizar dados"
+
+  # ============================================
+  # GUI - ISSUES (IssuesGui)
+  # ============================================
+  issues:
+    title: "<red>⚠ Problemas Detectados</red>"
+    no-issues:
+      title: "<green>✔ Tudo OK!"
+      detected: "<green>Nenhum problema detectado!"
+      server-running: "<gray>O servidor está funcionando"
+      within-parameters: "<gray>dentro dos parâmetros normais."
+      keep-monitoring: "<dark_gray>Continue monitorando para"
+      identify-future: "<dark_gray>identificar problemas futuros."
+    item:
+      severity: "Severidade: %s"
+      category: "<gray>Categoria: <white>%s"
+      suggestion-label: "<yellow>💡 Sugestão:"
+    summary:
+      title: "<yellow>📊 Resumo</yellow>"
+      description: "<gray>Resumo de problemas detectados"
+      total: "<dark_gray>Total: <white>%s problema(s)"
+      severe: "<dark_red>⚠ Severos: %s"
+      critical: "<red>⚠ Críticos: %s"
+      warnings: "<yellow>⚠ Avisos: %s"
+      info: "<green>ℹ Informações: %s"
+      no-issues: "<green>✔ Nenhum problema!"
+      auto-detect-1: "<dark_gray>Problemas são detectados"
+      auto-detect-2: "<dark_gray>automaticamente com base nas"
+      auto-detect-3: "<dark_gray>métricas de performance."
+    nav:
+      back: "<yellow>← Voltar"
+      back-lore: "<gray>Voltar ao Dashboard"
+      page-title: "<white>Página %s/%s"
+      page-of: "<gray>Página %s de %s"
+      total-issues: "<dark_gray>Total: %s problemas"
+      previous: "<yellow>← Anterior"
+      next: "<yellow>Próxima →"
+      go-to-page: "<gray>Ir para página %s"
+      refresh: "<yellow>🔄 Atualizar</yellow>"
+      refresh-lore: "<gray>Atualizar análise"

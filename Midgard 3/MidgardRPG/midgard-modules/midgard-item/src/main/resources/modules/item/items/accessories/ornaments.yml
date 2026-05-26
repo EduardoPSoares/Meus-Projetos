@@ -1,0 +1,95 @@
+amuleto_sorte:
+  base:
+    material: FLOWER_POT
+    name: "<green>ᴀᴍᴜʟᴇᴛᴏ ᴅᴀ sᴏʀᴛᴇ</green>"
+    tier: UNCOMMON
+    type: ORNAMENT
+    description:
+    - "<gray>ᴅɪᴢᴇᴍ ǫᴜᴇ ᴇsᴛᴇ ᴀᴍᴜʟᴇᴛᴏ</gray>"
+    - "<gray>ᴛʀᴀᴢ sᴏʀᴛᴇ ᴀᴏ ᴘᴏʀᴛᴀᴅᴏʀ.</gray>"
+    revision-id: 1
+    dodge-rating: 3
+    critical-strike-chance: 2
+    movement-speed: 2
+
+colar_vampirico:
+  base:
+    material: FLOWER_POT
+    name: "<blue>ᴄᴏʟᴀʀ ᴠᴀᴍᴘɪʀɪᴄᴏ</blue>"
+    tier: RARE
+    type: ORNAMENT
+    description:
+    - "<gray>ᴜᴍ ᴄᴏʟᴀʀ sᴏᴍʙʀɪᴏ ǫᴜᴇ</gray>"
+    - "<gray>sᴇ ᴀʟɪᴍᴇɴᴛᴀ ᴅᴀ ᴠɪᴅᴀ ᴀʟʜᴇɪᴀ.</gray>"
+    revision-id: 1
+    lifesteal: 4
+    max-health: 15
+    attack-speed: 0.15
+    darkness-damage: 3
+
+amuleto_arcano:
+  base:
+    material: FLOWER_POT
+    name: "<blue>ᴀᴍᴜʟᴇᴛᴏ ᴀʀᴄᴀɴᴏ</blue>"
+    tier: RARE
+    type: ORNAMENT
+    description:
+    - "<gray>ᴜᴍ ᴀᴍᴜʟᴇᴛᴏ ᴇɴᴄᴀɴᴛᴀᴅᴏ ᴄᴏᴍ</gray>"
+    - "<gray>ᴇɴᴇʀɢɪᴀ ᴀʀᴄᴀɴᴀ ᴘᴜʀᴀ.</gray>"
+    revision-id: 1
+    intelligence: 5
+    max-mana: 25
+    skill-damage: 3
+    mana-regeneration: 2
+
+colar_do_rei:
+  base:
+    material: FLOWER_POT
+    name: "<purple>ᴄᴏʟᴀʀ ᴅᴏ ʀᴇɪ</purple>"
+    tier: EPIC
+    type: ORNAMENT
+    description:
+    - "<gray>ᴜsᴀᴅᴏ ᴘᴇʟᴏs ʀᴇɪs ᴅᴇ ᴏᴜᴛʀᴏʀᴀ,</gray>"
+    - "<gray>sɪᴍʙᴏʟɪᴢᴀ ᴀᴜᴛᴏʀɪᴅᴀᴅᴇ ᴇ ꜰᴏʀᴄᴀ.</gray>"
+    revision-id: 1
+    max-health: 30
+    strength: 8
+    defense: 6
+    damage-reduction: 3
+    required-level: 38
+
+coroa_real:
+  base:
+    material: FLOWER_POT
+    name: "<gold>ᴄᴏʀᴏᴀ ʀᴇᴀʟ</gold>"
+    tier: LEGENDARY
+    type: ORNAMENT
+    description:
+    - "<gray>ᴀ ᴄᴏʀᴏᴀ ᴅᴏs ᴀɴᴛɪɢᴏs ʀᴇɪs,</gray>"
+    - "<gray>ꜰᴇɪᴛᴀ ᴅᴇ ᴏᴜʀᴏ ᴇ ᴘᴇᴅʀᴀs ᴘʀᴇᴄɪᴏsᴀs.</gray>"
+    revision-id: 1
+    max-health: 45
+    strength: 12
+    intelligence: 12
+    critical-strike-chance: 5
+    cooldown-reduction: 4
+    required-level: 50
+
+pingente_eterno:
+  base:
+    material: FLOWER_POT
+    name: "<light_purple>ᴘɪɴɢᴇɴᴛᴇ ᴇᴛᴇʀɴᴏ</light_purple>"
+    tier: MYTHIC
+    type: ORNAMENT
+    description:
+    - "<gray>ᴜᴍ ᴘɪɴɢᴇɴᴛᴇ ǫᴜᴇ ᴛʀᴀɴsᴄᴇɴᴅᴇ</gray>"
+    - "<gray>ᴏ ᴛᴇᴍᴘᴏ ᴇ ᴀ ᴍᴏʀᴛᴀʟɪᴅᴀᴅᴇ.</gray>"
+    revision-id: 1
+    max-health: 60
+    max-mana: 60
+    strength: 10
+    intelligence: 10
+    health-regeneration: 4
+    mana-regeneration: 4
+    damage-reduction: 5
+    required-level: 60

@@ -1,0 +1,796 @@
+# ============================================
+# MIDGARD ITEM MODULE - MESSAGES
+# ============================================
+
+# ============================================
+# COMMON MESSAGES
+# ============================================
+common:
+  level_requirement: "<red>✖</red> <gray>ɴɪᴠᴇʟ ɴᴇᴄᴇꜱꜱᴀʀɪᴏ: <white>%level%</white>.</gray>"
+  class_requirement: "<red>✖</red> <gray>ꜱᴜᴀ ᴄʟᴀꜱꜱᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴜꜱᴀʀ ᴇꜱᴛᴇ ɪᴛᴇᴍ.</gray>"
+  previous_page: "<yellow>← ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</yellow>"
+  next_page: "<yellow>ᴘʀᴏxɪᴍᴀ ᴘᴀɢɪɴᴀ →</yellow>"
+  updated_to_latest: "<green>✔</green> <gray>ɪᴛᴇᴍ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ ᴘᴀʀᴀ ᴀ ᴠᴇʀꜱᴀᴏ ᴍᴀɪꜱ ʀᴇᴄᴇɴᴛᴇ.</gray>"
+  no: "<red>ɴᴀᴏ</red>"
+  yes: "<green>ꜱɪᴍ</green>"
+  click_to_toggle: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ.</gray>"
+  back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+  in_development: "<red>⚠ ᴇᴍ ᴅᴇꜱᴇɴᴠᴏʟᴠɪᴍᴇɴᴛᴏ</red>"
+  item_added: "<green>✔</green> <gray>ɪᴛᴇᴍ ᴏʙᴛɪᴅᴏ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ.</gray>"
+
+# ============================================
+# COMMAND MESSAGES
+# ============================================
+command:
+  received: "<green>✔</green> <gray>ᴠᴏᴄᴇ ʀᴇᴄᴇʙᴇᴜ <white>%s</white>.</gray>"
+  reload-success: "<aqua>⟳</aqua> <gray>ᴄᴏɴꜰɪɢᴜʀᴀᴄᴏᴇꜱ ᴅᴇ ɪᴛᴇɴꜱ ʀᴇᴄᴀʀʀᴇɢᴀᴅᴀꜱ.</gray>"
+  no-permission: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ᴘᴇʀᴍɪꜱꜱᴀᴏ ᴘᴀʀᴀ ɪꜱꜱᴏ.</gray>"
+  unknown: "<red>✖</red> <gray>ꜱᴜʙᴄᴏᴍᴀɴᴅᴏ ᴅᴇꜱᴄᴏɴʜᴇᴄɪᴅᴏ.</gray>"
+  usage: "<red>✖</red> <gray>ᴜꜱᴏ ᴄᴏʀʀᴇᴛᴏ: <white>/ɪᴛᴇᴍ <arg> ...</white></gray>"
+  item-not-found: "<red>✖</red> <gray>ɪᴛᴇᴍ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ: <white>%s</white></gray>"
+  invalid-amount: "<red>✖</red> <gray>ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ɪɴᴠᴀʟɪᴅᴀ.</gray>"
+
+chat:
+  cancelled: "<yellow>⚠</yellow> <gray>ᴏᴘᴇʀᴀᴄᴀᴏ ᴄᴀɴᴄᴇʟᴀᴅᴀ.</gray>"
+  error_processing: "<red>✖</red> <gray>ᴇʀʀᴏ ᴀᴏ ᴘʀᴏᴄᴇꜱꜱᴀʀ ᴇɴᴛʀᴀᴅᴀ.</gray>"
+
+# ============================================
+# EQUIP MESSAGES
+# ============================================
+equip:
+  stack_occupied: "<red>✖</red> <gray>ᴠᴏᴄᴇ ᴊᴀ ᴇꜱᴛᴀ ᴜꜱᴀɴᴅᴏ ᴜᴍ ɪᴛᴇᴍ ᴅᴇꜱᴛᴇ ᴛɪᴘᴏ.</gray>"
+  invalid_slot: "<red>✖</red> <gray>ᴇꜱᴛᴇ ɪᴛᴇᴍ ɴᴀᴏ ᴘᴏᴅᴇ ꜱᴇʀ ᴇǫᴜɪᴘᴀᴅᴏ ᴀǫᴜɪ.</gray>"
+
+# ============================================
+# RESTRICTION MESSAGES
+# ============================================
+restriction:
+  drop: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴅʀᴏᴘᴀʀ ᴇꜱᴛᴇ ɪᴛᴇᴍ.</gray>"
+
+# ============================================
+# GEM MESSAGES
+# ============================================
+gem:
+  applied_success: "<green>✔</green> <gray>ɢᴇᴍᴀ ᴀᴘʟɪᴄᴀᴅᴀ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ!</gray>"
+
+# ============================================
+# STAT DISPLAY NAMES
+# ============================================
+stat:
+  attack-damage: "Dano"
+  attack-speed: "Velocidade de Ataque"
+  critical-strike-chance: "Chance de Crítico"
+  critical-strike-power: "Dano Crítico"
+  block-power: "Poder de Bloqueio"
+  block-rating: "Taxa de Bloqueio"
+  dodge-rating: "Esquiva"
+  parry-rating: "Aparar"
+  armor: "Armadura"
+  armor-toughness: "Resistência de Armadura"
+  max-health: "Vida Máxima"
+  max-mana: "Mana Máxima"
+  max-stamina: "Stamina Máxima"
+  movement-speed: "Velocidade de Movimento"
+  two-handed: "Duas Mãos"
+  unbreakable: "Indestrutível"
+  required-level: "Nível Necessário"
+  skill-critical-strike-chance: "Chance de Crítico de Habilidade"
+  skill-critical-strike-power: "Dano Crítico de Habilidade"
+  block-cooldown-reduction: "Redução de Cooldown de Bloqueio"
+  dodge-cooldown-reduction: "Redução de Cooldown de Esquiva"
+  parry-cooldown-reduction: "Redução de Cooldown de Aparar"
+  cooldown-reduction: "Redução de Cooldown"
+  skill-damage: "Dano de Habilidade"
+  projectile-damage: "Dano de Projétil"
+  magic-damage: "Dano Mágico"
+  undead-damage: "Dano contra Mortos-Vivos"
+  damage-reduction: "Redução de Dano"
+  defense: "Defesa"
+  fall-damage-reduction: "Redução de Dano de Queda"
+  projectile-damage-reduction: "Redução de Dano de Projétil"
+  physical-damage-reduction: "Redução de Dano Físico"
+  magic-damage-reduction: "Redução de Dano Mágico"
+  fire-damage-reduction: "Redução de Dano de Fogo"
+  lifesteal: "Roubo de Vida"
+  pve-damage-reduction: "Redução de Dano PvE"
+  pvp-damage-reduction: "Redução de Dano PvP"
+  spell-vampirism: "Vampirismo de Feitiço"
+  gravity: "Gravidade"
+  knockback-resistance: "Resistência a Repulsão"
+  max-mana-regeneration: "Regeneração de Mana Máxima"
+  stamina-regeneration: "Regeneração de Stamina"
+  max-stamina-regeneration: "Regeneração de Stamina Máxima"
+  max-stellium: "Stellium Máximo"
+  max-absorption: "Absorção Máxima"
+  additional-experience: "Experiência Adicional"
+  health-regeneration: "Regeneração de Vida"
+  max-health-regeneration: "Regeneração de Vida Máxima"
+  myluck: "Sorte"
+  mana-regeneration: "Regeneração de Mana"
+  success-rate: "Taxa de Sucesso"
+  safe-fall-distance: "Distância de Queda Segura"
+  scale: "Escala"
+  step-height: "Altura do Degrau"
+  burning-time: "Tempo de Queima"
+  jump-strength: "Força do Pulo"
+  explosion-knockback-resistance: "Resistência a Repulsão de Explosão"
+  mining-efficiency: "Eficiência de Mineração"
+  movement-efficiency: "Eficiência de Movimento"
+  bonus-oxygen: "Oxigênio Bônus"
+  sneaking-speed: "Velocidade Agachado"
+  submerged-mining-speed: "Velocidade de Mineração Submersa"
+  sweeping-damage-ratio: "Taxa de Dano de Varredura"
+  water-movement-efficiency: "Eficiência de Movimento na Água"
+  mining-speed: "Velocidade de Mineração"
+  block-interaction-range: "Alcance de Interação com Blocos"
+  entity-interaction-range: "Alcance de Interação com Entidades"
+  fall-damage-multiplier: "Multiplicador de Dano de Queda"
+  item-cooldown: "Cooldown do Item"
+  fire-damage: "Dano de Fogo"
+  ice-damage: "Dano de Gelo"
+  light-damage: "Dano de Luz"
+  darkness-damage: "Dano de Escuridão"
+  divine-damage: "Dano Divino"
+  strength: "Força"
+  intelligence: "Inteligência"
+  dexterity: "Destreza"
+  accuracy: "Precisão"
+  critical-resistance: "Resistência Crítica"
+  thorns: "Espinhos"
+  magic-resistance: "Resistência Mágica"
+  armor-penetration: "Penetração de Armadura"
+  armor-penetration-flat: "Penetração de Armadura (Flat)"
+  magic-penetration: "Penetração Mágica"
+  magic-penetration-flat: "Penetração Mágica (Flat)"
+  ice-damage-reduction: "Redução de Dano de Gelo"
+  light-damage-reduction: "Redução de Dano de Luz"
+  darkness-damage-reduction: "Redução de Dano de Escuridão"
+  divine-damage-reduction: "Redução de Dano Divino"
+  socket_type:
+    weapon: "ᴀʀᴍᴀ"
+    armor: "ᴀʀᴍᴀᴅᴜʀᴀ"
+    accessory: "ᴀᴄᴇꜱꜱᴏʀɪᴏ"
+    any: "ǫᴜᴀʟǫᴜᴇʀ"
+
+# ============================================
+# GUI - EDITOR
+# ============================================
+gui:
+  editors:
+    string:
+      cleared: "<green>✔</green> <gray>ᴠᴀʟᴏʀ ᴅᴇ <white>%prompt%</white> ʟɪᴍᴘᴏ.</gray>"
+    list:
+      cleared: "<green>✔</green> <gray>ʟɪꜱᴛᴀ <white>%title%</white> ʟɪᴍᴘᴀ.</gray>"
+      updated: "<green>✔</green> <gray>ʟɪꜱᴛᴀ <white>%title%</white> ᴀᴛᴜᴀʟɪᴢᴀᴅᴀ.</gray>"
+    stat_range:
+      examples: "<gray>ᴇxᴇᴍᴘʟᴏꜱ: <white>10<gray>, <white>10-20<gray>, <white>10 > 20"
+
+  item_edition:
+    messages:
+      material-updated: "<green>✔</green> <gray>ᴍᴀᴛᴇʀɪᴀʟ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ ᴠɪᴀ ɪɴᴠᴇɴᴛᴀʀɪᴏ!</gray>"
+    values:
+      none: "ɴᴇɴʜᴜᴍ"
+      enabled: "<green>ᴀᴛɪᴠᴀᴅᴏ"
+      disabled: "<red>ᴅᴇꜱᴀᴛɪᴠᴀᴅᴏ"
+      list: "ʟɪꜱᴛᴀ"
+      map: "ᴍᴀᴘᴀ"
+      present: "ᴘʀᴇꜱᴇɴᴛᴇ"
+  editor:
+    enter-prompt: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ <white>%s</white> ɴᴏ ᴄʜᴀᴛ (ᴏᴜ <red>ᴄᴀɴᴄᴇʟ</red> ᴘᴀʀᴀ ᴄᴀɴᴄᴇʟᴀʀ).</gray>"
+    enter-prompt-cancel: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ <white>%s</white> ɴᴏ ᴄʜᴀᴛ (ᴏᴜ <red>ᴄᴀɴᴄᴇʟ</red> ᴘᴀʀᴀ ᴄᴀɴᴄᴇʟᴀʀ).</gray>"
+    invalid-number: "<red>✖</red> <gray>ɴᴜᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ.</gray>"
+    reset: "<green>✔</green> <gray><white>%s</white> ʀᴇᴅᴇꜰɪɴɪᴅᴏ!</gray>"
+    updated: "<green>✔</green> <gray><white>%s</white> ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ!</gray>"
+    invalid-material: "<red>✖</red> <gray>ᴍᴀᴛᴇʀɪᴀʟ ɪɴᴠᴀʟɪᴅᴏ: <white>%material%</white></gray>"
+    invalid-biome: "<red>✖</red> <gray>ʙɪᴏᴍᴀ ɪɴᴠᴀʟɪᴅᴏ! ᴠᴇʀɪꜰɪǫᴜᴇ ᴀ ɢʀᴀꜰɪᴀ.</gray>"
+    invalid-particle: "<red>✖</red> <gray>ᴛɪᴘᴏ ᴅᴇ ᴘᴀʀᴛɪᴄᴜʟᴀ ɪɴᴠᴀʟɪᴅᴏ!</gray>"
+    
+    prompt:
+      display-name: "ɴᴏᴍᴇ ᴅᴇ ᴇxɪʙɪᴄᴀᴏ"
+      lore-format: "ꜰᴏʀᴍᴀᴛᴏ ᴅᴀ ʟᴏʀᴇ"
+      max-stack-size: "ᴛᴀᴍᴀɴʜᴏ ᴅᴏ ꜱᴛᴀᴄᴋ"
+      nbt-tags: "ᴛᴀɢꜱ ɴʙᴛ"
+      custom-tooltip: "ᴛᴏᴏʟᴛɪᴘ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴀ"
+      vanilla-tooltip-style: "ᴇꜱᴛɪʟᴏ ᴠᴀɴɪʟʟᴀ"
+      displayed-type: "ᴛɪᴘᴏ ᴇxɪʙɪᴅᴏ"
+      base-item-damage: "ᴅᴀɴᴏ ʙᴀꜱᴇ"
+      custom-model-data: "ᴄᴜꜱᴛᴏᴍ ᴍᴏᴅᴇʟ ᴅᴀᴛᴀ"
+      custom-model-data-strings: "ᴄᴍᴅ ꜱᴛʀɪɴɢꜱ"
+      custom-model-data-floats: "ᴄᴍᴅ ꜰʟᴏᴀᴛꜱ"
+      item-model: "ɪᴛᴇᴍ ᴍᴏᴅᴇʟ"
+      item-tier: "ᴛɪᴇʀ ᴅᴏ ɪᴛᴇᴍ"
+      max-custom-durability: "ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ ᴄᴜꜱᴛᴏᴍ"
+      max-vanilla-durability: "ᴅᴜʀᴀʙɪʟɪᴅᴀᴅᴇ ᴠᴀɴɪʟʟᴀ"
+      item-particles: "ᴘᴀʀᴛɪᴄᴜʟᴀꜱ"
+      required-level: "ɴɪᴠᴇʟ ɴᴇᴄᴇꜱꜱᴀʀɪᴏ"
+      item-set: "ꜱᴇᴛ ᴅᴇ ɪᴛᴇɴꜱ"
+      required-biomes: "ʙɪᴏᴍᴀꜱ"
+      camera-overlay: "ᴄᴀᴍᴇʀᴀ ᴏᴠᴇʀʟᴀʏ"
+      permanent-effects: "ᴇꜰᴇɪᴛᴏꜱ"
+      granted-permissions: "ᴘᴇʀᴍɪꜱꜱᴏᴇꜱ"
+      cooldown-reference: "ɢʀᴜᴘᴏ ᴅᴇ ᴄᴏᴏʟᴅᴏᴡɴ"
+      crafting-recipe-permission: "ᴘᴇʀᴍɪꜱꜱᴀᴏ ᴅᴇ ᴄʀᴀꜰᴛ"
+      custom-sounds: "ꜱᴏɴꜱ"
+      compatible-types: "ᴛɪᴘᴏꜱ ᴄᴏᴍᴘᴀᴛɪᴠᴇɪꜱ"
+      compatible-ids: "ɪᴅꜱ ᴄᴏᴍᴘᴀᴛɪᴠᴇɪꜱ"
+      compatible-materials: "ᴍᴀᴛᴇʀɪᴀɪꜱ ᴄᴏᴍᴘᴀᴛɪᴠᴇɪꜱ"
+      repair-reference: "ʀᴇꜰ. ᴅᴇ ʀᴇᴘᴀʀᴏ"
+      item-abilities: "ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ"
+      gem-sockets: "ꜱᴏᴄᴋᴇᴛꜱ"
+      trim-material: "ᴍᴀᴛᴇʀɪᴀʟ ᴅᴏ ᴛʀɪᴍ"
+      trim-pattern: "ᴘᴀᴅʀᴀᴏ ᴅᴏ ᴛʀɪᴍ"
+      browser-index: "ɪɴᴅɪᴄᴇ ᴅᴏ ɴᴀᴠᴇɢᴀᴅᴏʀ"
+      permission: "ᴘᴇʀᴍɪꜱꜱᴀᴏ ᴅᴇ ᴜꜱᴏ"
+
+    numeric:
+      title: "ᴇᴅɪᴛᴏʀ ɴᴜᴍᴇʀɪᴄᴏ: %name%"
+      confirm: "<green>ᴄᴏɴꜰɪʀᴍᴀʀ</green>"
+      cancel: "<red>ᴠᴏʟᴛᴀʀ</red>"
+      reset: "<red>ʀᴇᴅᴇꜰɪɴɪʀ (0)</red>"
+      type-chat: "<gold>ᴅɪɢɪᴛᴀʀ ɴᴏ ᴄʜᴀᴛ</gold>"
+      current: "<yellow>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <white>%value%</white></yellow>"
+      click-type: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅɪɢɪᴛᴀʀ ᴜᴍ ᴠᴀʟᴏʀ</gray>"
+      invalid-number: "<red>✖</red> <gray>ɴᴜᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ.</gray>"
+
+    text:
+      title: "ᴇᴅɪᴛᴏʀ ᴅᴇ ᴛᴇxᴛᴏ: %name%"
+      current: "<yellow>ᴛᴇxᴛᴏ ᴀᴛᴜᴀʟ:</yellow>"
+      edit: "<green>ᴇᴅɪᴛᴀʀ ɴᴏ ᴄʜᴀᴛ</green>"
+      clear: "<red>ʟɪᴍᴘᴀʀ ᴛᴇxᴛᴏ</red>"
+      cancel: "<red>ᴠᴏʟᴛᴀʀ / ᴄᴀɴᴄᴇʟᴀʀ</red>"
+      click-edit: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅɪɢɪᴛᴀʀ ᴜᴍ ɴᴏᴠᴏ ᴛᴇxᴛᴏ</gray>"
+      click-clear: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʟɪᴍᴘᴀʀ ᴏ ᴛᴇxᴛᴏ</gray>"
+
+  # String List Editor (Lore, Description, etc)
+  string_list_editor:
+    title: "ᴇᴅɪᴛᴏʀ ᴅᴇ ʟɪꜱᴛᴀ"
+    lore:
+      edit: "<gray>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ʟɪɴʜᴀ"
+      delete: "<red>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ʟɪɴʜᴀ"
+    buttons:
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+      add: "<green>+ ᴀᴅɪᴄɪᴏɴᴀʀ ʟɪɴʜᴀ</green>"
+    prompts:
+      new-line: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴀ ɴᴏᴠᴀ ʟɪɴʜᴀ ɴᴏ ᴄʜᴀᴛ:</gray>"
+      edit-line: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ɴᴏᴠᴏ ᴄᴏɴᴛᴇᴜᴅᴏ ᴅᴀ ʟɪɴʜᴀ:</gray>"
+
+  # Damage Type Editor
+  damage_type_editor:
+    title: "ᴇᴅɪᴛᴏʀ ᴅᴇ ᴛɪᴘᴏꜱ ᴅᴇ ᴅᴀɴᴏ"
+    lore:
+      right_click_reset: "<red>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇꜱᴇᴛᴀʀ (100%)"
+      current_value: "<gray>ᴠᴀʟᴏʀ ᴀᴛᴜᴀʟ: <white>%value%</white>"
+      click_edit: "<yellow>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ</yellow>"
+    messages:
+      reset: "<green>✔</green> <gray>ᴅᴀɴᴏ ʀᴇꜱᴇᴛᴀᴅᴏ ᴘᴀʀᴀ 100%.</gray>"
+      updated: "<green>✔</green> <gray>ᴅᴀɴᴏ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ ᴘᴀʀᴀ <white>%value%%</white>.</gray>"
+
+  equippable_model_selection:
+    title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴍᴏᴅᴇʟᴏ"
+    prompt: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ɪᴅ ᴅᴀ ᴛᴇxᴛᴜʀᴀ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴀ:</gray>"
+    success: "<green>✔</green> <gray>ᴍᴏᴅᴇʟᴏ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ ᴘᴀʀᴀ: <white>%s</white></gray>"
+    items:
+      iron:
+        name: "<white>ꜰᴇʀʀᴏ</white>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ꜰᴇʀʀᴏ"]
+      gold:
+        name: "<yellow>ᴏᴜʀᴏ</yellow>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ᴏᴜʀᴏ"]
+      diamond:
+        name: "<aqua>ᴅɪᴀᴍᴀɴᴛᴇ</aqua>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ᴅɪᴀᴍᴀɴᴛᴇ"]
+      netherite:
+        name: "<dark_gray>ɴᴇᴛʜᴇʀɪᴛᴇ</dark_gray>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ɴᴇᴛʜᴇʀɪᴛᴇ"]
+      leather:
+        name: "<red>ᴄᴏᴜʀᴏ</red>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ᴄᴏᴜʀᴏ"]
+      custom:
+        name: "<yellow>ᴄᴜꜱᴛᴏᴍ ɪᴅ</yellow>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅɪɢɪᴛᴀʀ ɪᴅ ᴍᴀɴᴜᴀʟ"]
+
+  equippable_slot_selection:
+    title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ꜱʟᴏᴛ ᴅᴇ ᴇǫᴜɪᴘᴀᴍᴇɴᴛᴏ"
+    items:
+      head:
+        name: "<green>ᴄᴀʙᴇᴄᴀ (ʜᴇᴀᴅ)</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ʜᴇᴀᴅ"]
+      chest:
+        name: "<green>ᴘᴇɪᴛᴏʀᴀʟ (ᴄʜᴇꜱᴛ)</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ᴄʜᴇꜱᴛ"]
+      legs:
+        name: "<green>ᴄᴀʟᴄᴀꜱ (ʟᴇɢꜱ)</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ʟᴇɢꜱ"]
+      feet:
+        name: "<green>ʙᴏᴛᴀꜱ (ꜰᴇᴇᴛ)</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ꜰᴇᴇᴛ"]
+      off_hand:
+        name: "<green>ᴍᴀᴏ ꜱᴇᴄᴜɴᴅᴀʀɪᴀ (ᴏꜰꜰ_ʜᴀɴᴅ)</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ᴏꜰꜰ_ʜᴀɴᴅ"]
+      hand:
+        name: "<green>ᴍᴀᴏ ᴘʀɪɴᴄɪᴘᴀʟ (ʜᴀɴᴅ)</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ ᴄᴏᴍᴏ ʜᴀɴᴅ"]
+      none:
+        name: "<red>ɴᴇɴʜᴜᴍ / ʟɪᴍᴘᴀʀ</red>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ꜱʟᴏᴛ ᴅᴇ ᴇǫᴜɪᴘᴀᴍᴇɴᴛᴏ"]
+
+  ingredient_selection:
+    title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ɪɴɢʀᴇᴅɪᴇɴᴛᴇ"
+    minecraft_item:
+      name: "<green>ɪᴛᴇᴍ ᴠᴀɴɪʟʟᴀ</green>"
+      lore: "<gray>ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴜᴍ ᴍᴀᴛᴇʀɪᴀʟ ᴅᴏ ᴍɪɴᴇᴄʀᴀꜰᴛ</gray>"
+    midgard_item:
+      name: "<aqua>ɪᴛᴇᴍ ᴍɪᴅɢᴀʀᴅ</aqua>"
+      lore: "<gray>ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴜᴍ ɪᴛᴇᴍ ᴄᴜꜱᴛᴏᴍɪᴢᴀᴅᴏ</gray>"
+
+  enchantment_selection:
+    title: "ᴇᴅɪᴛᴏʀ ᴅᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏꜱ"
+    prompt_level: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ɴɪᴠᴇʟ ᴘᴀʀᴀ <white>%s</white> (1-255):</gray>"
+    added: "<green>✔</green> <gray>ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏ <white>%s</white> (ɴɪᴠᴇʟ %d) ᴀᴅɪᴄɪᴏɴᴀᴅᴏ.</gray>"
+    removed: "<green>✔</green> <gray>ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏ <white>%s</white> ʀᴇᴍᴏᴠɪᴅᴏ.</gray>"
+    active: "<green>✔ ᴀᴛɪᴠᴏ</green>"
+    buttons:
+      previous_page: "<yellow>← ᴀɴᴛᴇʀɪᴏʀ</yellow>"
+      next_page: "<yellow>ᴘʀᴏxɪᴍᴀ →</yellow>"
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+    item_lore:
+      - "<gray>ɴɪᴠᴇʟ: <white>%level%</white>"
+      - ""
+      - "<yellow>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ: <gray>ᴅᴇꜰɪɴɪʀ ɴɪᴠᴇʟ</gray>"
+      - "<red>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ: <gray>ʀᴇᴍᴏᴠᴇʀ</gray>"
+      - ""
+      - "<dark_gray>ɪᴅ: %id%</dark_gray>"
+
+  class_requirement_selection:
+    title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴄʟᴀꜱꜱᴇ"
+    error:
+      module_disabled: "<red>✖</red> <gray>ᴍᴏᴅᴜʟᴏ ᴅᴇ ᴄʟᴀꜱꜱᴇꜱ ᴅᴇꜱᴀᴛɪᴠᴀᴅᴏ!</gray>"
+    item:
+      name: "<green>%s</green>"
+      lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ ᴄᴏᴍᴏ ʀᴇǫᴜɪꜱɪᴛᴏ."]
+      lore_selected: ["<green>✔ ꜱᴇʟᴇᴄɪᴏɴᴀᴅᴏ", "", "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ."]
+    messages:
+      removed: "<green>✔</green> <gray>ᴛᴏᴅᴀꜱ ᴀꜱ ᴄʟᴀꜱꜱᴇꜱ ʀᴇᴍᴏᴠɪᴅᴀꜱ.</gray>"
+      removed_class: "<red>✖</red> <gray>ᴄʟᴀꜱꜱᴇ <white>%s</white> ʀᴇᴍᴏᴠɪᴅᴀ.</gray>"
+      set: "<green>✔</green> <gray>ᴄʟᴀꜱꜱᴇ <white>%s</white> ᴀᴅɪᴄɪᴏɴᴀᴅᴀ.</gray>"
+    buttons:
+      previous_page: "<yellow>← ᴀɴᴛᴇʀɪᴏʀ</yellow>"
+      next_page: "<yellow>ᴘʀᴏxɪᴍᴀ →</yellow>"
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+      clear:
+        name: "<red>ʀᴇᴍᴏᴠᴇʀ ʀᴇǫᴜɪꜱɪᴛᴏ</red>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ʀᴇǫᴜɪꜱɪᴛᴏ ᴅᴇ ᴄʟᴀꜱꜱᴇ"]
+
+  ability_selection:
+    title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ʜᴀʙɪʟɪᴅᴀᴅᴇ"
+    active: "<green>✔ ᴀᴛɪᴠᴀᴅᴏ</green>"
+    item:
+      name: "<green>%s</green>"
+      lore:
+        - "<gray>ɪᴅ: <white>%id%</white>"
+        - "<gray>ᴛɪᴘᴏ: <white>%type%</white>"
+        - "<gray>ᴄᴏᴏʟᴅᴏᴡɴ: <white>%cooldown%ꜱ</white>"
+        - ""
+        - "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ/ʀᴇᴍᴏᴠᴇʀ</yellow>"
+    messages:
+      added: "<green>✔</green> <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇ <white>%s</white> ᴀᴅɪᴄɪᴏɴᴀᴅᴀ.</gray>"
+      removed: "<green>✔</green> <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇ <white>%s</white> ʀᴇᴍᴏᴠɪᴅᴀ.</gray>"
+    buttons:
+      previous_page: "<yellow>← ᴀɴᴛᴇʀɪᴏʀ</yellow>"
+      next_page: "<yellow>ᴘʀᴏxɪᴍᴀ →</yellow>"
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+
+  potion_effect_selection:
+    title: "ᴇꜰᴇɪᴛᴏꜱ ᴘᴇʀᴍᴀɴᴇɴᴛᴇꜱ"
+    item:
+      name: "<green>%s</green>"
+      click_to_add: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ</gray>"
+      lore:
+        - "<gray>ɴɪᴠᴇʟ: <white>%level%</white>"
+        - ""
+        - "<yellow>ᴇꜱǫ: <gray>ᴇᴅɪᴛᴀʀ ɴɪᴠᴇʟ</gray>"
+        - "<red>ᴅɪʀ: <gray>ʀᴇᴍᴏᴠᴇʀ</gray>"
+    messages:
+      added: "<green>✔</green> <gray>ᴇꜰᴇɪᴛᴏ <white>%s</white> ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ.</gray>"
+      removed: "<green>✔</green> <gray>ᴇꜰᴇɪᴛᴏ <white>%s</white> ʀᴇᴍᴏᴠɪᴅᴏ.</gray>"
+      prompt_level: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ɴɪᴠᴇʟ ᴅᴏ ᴇꜰᴇɪᴛᴏ (0=ɴɪᴠᴇʟ 1):</gray>"
+    buttons:
+      previous_page: "<yellow>← ᴀɴᴛᴇʀɪᴏʀ</yellow>"
+      next_page: "<yellow>ᴘʀᴏxɪᴍᴀ →</yellow>"
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+      add:
+        name: "<green>ᴀᴅɪᴄɪᴏɴᴀʀ ᴇꜰᴇɪᴛᴏ</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ ɴᴏᴠᴏ ᴇꜰᴇɪᴛᴏ"]
+
+  socket_configuration:
+    title: "ᴄᴏɴꜰɪɢᴜʀᴀʀ ꜱᴏᴄᴋᴇᴛꜱ"
+    item:
+      name: "<green>ꜱᴏᴄᴋᴇᴛ #%d</green>"
+      lore:
+        - "<gray>ᴛɪᴘᴏ: <white>%type%</white>"
+        - ""
+        - "<yellow>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ</yellow>"
+    messages:
+      added: "<green>✔</green> <gray>ꜱᴏᴄᴋᴇᴛ ᴀᴅɪᴄɪᴏɴᴀᴅᴏ.</gray>"
+      removed: "<green>✔</green> <gray>ꜱᴏᴄᴋᴇᴛ ʀᴇᴍᴏᴠɪᴅᴏ.</gray>"
+    buttons:
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+      add:
+        name: "<green>ᴀᴅɪᴄɪᴏɴᴀʀ ɴᴏᴠᴏ ꜱᴏᴄᴋᴇᴛ</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʙʀɪʀ ᴏ ᴍᴇɴᴜ ᴅᴇ ꜱᴇʟᴇᴄᴀᴏ</gray>"]
+
+  socket_type_selection:
+    title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴛɪᴘᴏ ᴅᴇ ꜱᴏᴄᴋᴇᴛ"
+    color_selected: "<green>ꜱᴇʟᴇᴄɪᴏɴᴀᴅᴏ: %color%</green>"
+    color_unselected: "<gray>%color%</gray>"
+    add_button:
+      name: "<yellow>ᴀᴅɪᴄɪᴏɴᴀʀ %socket%</yellow>"
+      lore: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ ᴇꜱᴛᴇ ꜱᴏᴄᴋᴇᴛ</gray>"
+    buttons:
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+
+  particle_editor:
+    title: "ᴇᴅɪᴛᴏʀ ᴅᴇ ᴘᴀʀᴛɪᴄᴜʟᴀꜱ"
+    item:
+      name: "<green>ᴘᴀʀᴛɪᴄᴜʟᴀ ᴀᴛᴜᴀʟ</green>"
+      lore:
+        - "<gray>ᴛɪᴘᴏ: <white>%type%</white>"
+        - "<gray>ǫᴛᴅ: <white>%count%</white>"
+        - "<gray>ᴏꜰꜰꜱᴇᴛ: <white>%offsetX%, %offsetY%, %offsetZ%</white>"
+        - "<gray>ᴠᴇʟ: <white>%speed%</white>"
+        - "<gray>ᴅᴀᴅᴏꜱ: <white>%data%</white>"
+    messages:
+      updated: "<green>✔</green> <gray>ᴘᴀʀᴛɪᴄᴜʟᴀ ᴀᴛᴜᴀʟɪᴢᴀᴅᴀ.</gray>"
+      prompt_type: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ᴛɪᴘᴏ (ᴇx: ꜰʟᴀᴍᴇ):</gray>"
+      prompt_count: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴀ ǫᴜᴀɴᴛɪᴅᴀᴅᴇ:</gray>"
+      prompt_offset: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ᴏꜰꜰꜱᴇᴛ (x,ʏ,ᴢ):</gray>"
+      prompt_speed: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴀ ᴠᴇʟᴏᴄɪᴅᴀᴅᴇ:</gray>"
+      prompt_data: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴅᴀᴅᴏꜱ ᴇxᴛʀᴀꜱ:</gray>"
+    buttons:
+      type: "<yellow>ᴅᴇꜰɪɴɪʀ ᴛɪᴘᴏ</yellow>"
+      count: "<yellow>ᴅᴇꜰɪɴɪʀ ǫᴛᴅ</yellow>"
+      offset: "<yellow>ᴅᴇꜰɪɴɪʀ ᴏꜰꜰꜱᴇᴛ</yellow>"
+      speed: "<yellow>ᴅᴇꜰɪɴɪʀ ᴠᴇʟ</yellow>"
+      data: "<yellow>ᴅᴇꜰɪɴɪʀ ᴅᴀᴅᴏꜱ</yellow>"
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+      clear: "<red>ʀᴇᴍᴏᴠᴇʀ ᴘᴀʀᴛɪᴄᴜʟᴀ</red>"
+
+  sound_editor:
+    title: "ᴇᴅɪᴛᴏʀ ᴅᴇ ꜱᴏɴꜱ"
+    item:
+      name: "<green>%s</green>"
+      lore:
+        - "<gray>ꜱᴏᴍ: <white>%sound%</white>"
+        - "<gray>ᴠᴏʟ: <white>%volume%</white>"
+        - "<gray>ᴘɪᴛᴄʜ: <white>%pitch%</white>"
+        - ""
+        - "<red>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ</red>"
+    messages:
+      added: "<green>✔</green> <gray>ꜱᴏᴍ ᴀᴅɪᴄɪᴏɴᴀᴅᴏ.</gray>"
+      removed: "<green>✔</green> <gray>ꜱᴏᴍ ʀᴇᴍᴏᴠɪᴅᴏ.</gray>"
+      prompt_sound: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ɴᴏᴍᴇ ᴅᴏ ꜱᴏᴍ (ᴇx: ʙʟᴏᴄᴋ_ᴀɴᴠɪʟ_ᴜꜱᴇ):</gray>"
+      prompt_volume: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ᴠᴏʟᴜᴍᴇ:</gray>"
+      prompt_pitch: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ᴘɪᴛᴄʜ:</gray>"
+    buttons:
+      add:
+        name: "<green>ᴀᴅɪᴄɪᴏɴᴀʀ ꜱᴏᴍ</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ ꜱᴏᴍ"]
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+
+  biome_selection:
+    title: "ʙɪᴏᴍᴀꜱ ʀᴇǫᴜᴇʀɪᴅᴏꜱ"
+    item:
+      name: "<green>%biome%</green>"
+      lore: ["<red>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ</red>"]
+    messages:
+      added: "<green>✔</green> <gray>ʙɪᴏᴍᴀ <white>%biome%</white> ᴀᴅɪᴄɪᴏɴᴀᴅᴏ.</gray>"
+      removed: "<green>✔</green> <gray>ʙɪᴏᴍᴀ <white>%biome%</white> ʀᴇᴍᴏᴠɪᴅᴏ.</gray>"
+      prompt: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ʙɪᴏᴍᴀ (ᴇx: ꜰᴏʀᴇꜱᴛ):</gray>"
+    buttons:
+      add:
+        name: "<green>ᴀᴅɪᴄɪᴏɴᴀʀ ʙɪᴏᴍᴀ</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ ʙɪᴏᴍᴀ"]
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+
+  nbt_editor:
+    title: "ᴇᴅɪᴛᴏʀ ᴅᴇ ɴʙᴛ"
+    item:
+      name: "<green>ɴʙᴛ ᴀᴛᴜᴀʟ</green>"
+      lore:
+        - "<gray>ᴊꜱᴏɴ:</gray>"
+        - "<white>%json%</white>"
+        - ""
+        - "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ ᴊꜱᴏɴ</yellow>"
+    messages:
+      updated: "<green>✔</green> <gray>ɴʙᴛ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ.</gray>"
+      invalid: "<red>✖</red> <gray>ᴊꜱᴏɴ ɪɴᴠᴀʟɪᴅᴏ!</gray>"
+      prompt: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ᴊꜱᴏɴ (ᴏᴜ 'ᴄᴀɴᴄᴇʟ'):</gray>"
+    buttons:
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+      clear: "<red>ʟɪᴍᴘᴀʀ ɴʙᴛ</red>"
+
+  tier_selection:
+    title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴛɪᴇʀ"
+    item:
+      name: "<green>%tier%</green>"
+      lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ꜱᴇʟᴇᴄɪᴏɴᴀʀ"]
+    messages:
+      updated: "<green>✔</green> <gray>ᴛɪᴇʀ ᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ <white>%tier%</white></gray>"
+    buttons:
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+
+  item_set_selection:
+    title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ꜱᴇᴛ"
+    item:
+      name: "<green>%set%</green>"
+      lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴇꜱᴛᴇ ꜱᴇᴛ"]
+    messages:
+      updated: "<green>✔</green> <gray>ꜱᴇᴛ ᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ: <white>%set%</white></gray>"
+    buttons:
+      back: "<red>ᴠᴏʟᴛᴀʀ</red>"
+
+  revision_configuration:
+    title: "ᴄᴏɴꜰɪɢᴜʀᴀᴄᴀᴏ ᴅᴇ ʀᴇᴠɪꜱᴀᴏ"
+    enabled_config: "<gray>ᴀᴛɪᴠᴀᴅᴏ: %s</gray>"
+    toggles:
+      keep_lore:
+        name: "<yellow>ᴍᴀɴᴛᴇʀ ʟᴏʀᴇ</yellow>"
+        lore: ["<gray>ɪᴍᴘᴇᴅᴇ ǫᴜᴇ ᴀ ʟᴏʀᴇ ꜱᴇᴊᴀ ᴀᴛᴜᴀʟɪᴢᴀᴅᴀ."]
+      keep_name:
+        name: "<yellow>ᴍᴀɴᴛᴇʀ ɴᴏᴍᴇ</yellow>"
+        lore: ["<gray>ɪᴍᴘᴇᴅᴇ ǫᴜᴇ ᴏ ɴᴏᴍᴇ ꜱᴇᴊᴀ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ."]
+      keep_enchantments:
+        name: "<yellow>ᴍᴀɴᴛᴇʀ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏꜱ</yellow>"
+        lore: ["<gray>ɪᴍᴘᴇᴅᴇ ǫᴜᴇ ᴇɴᴄᴀɴᴛᴀᴍᴇɴᴛᴏꜱ ꜱᴇᴊᴀᴍ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏꜱ."]
+      keep_external_sh:
+        name: "<yellow>ᴍᴀɴᴛᴇʀ ᴅᴀᴅᴏꜱ ᴇxᴛᴇʀɴᴏꜱ</yellow>"
+        lore: ["<gray>ᴍᴀɴᴛᴇᴍ ᴅᴀᴅᴏꜱ ᴅᴇ ᴏᴜᴛʀᴏꜱ ᴘʟᴜɢɪɴꜱ."]
+      keep_upgrades:
+        name: "<yellow>ᴍᴀɴᴛᴇʀ ᴜᴘɢʀᴀᴅᴇꜱ</yellow>"
+        lore: ["<gray>ᴍᴀɴᴛᴇᴍ ᴜᴘɢʀᴀᴅᴇꜱ ᴀᴘʟɪᴄᴀᴅᴏꜱ."]
+      keep_gem_stones:
+        name: "<yellow>ᴍᴀɴᴛᴇʀ ɢᴇᴍᴀꜱ</yellow>"
+        lore: ["<gray>ᴍᴀɴᴛᴇᴍ ɢᴇᴍᴀꜱ ᴀᴘʟɪᴄᴀᴅᴀꜱ."]
+      keep_soulbind:
+        name: "<yellow>ᴍᴀɴᴛᴇʀ ꜱᴏᴜʟʙɪɴᴅ</yellow>"
+        lore: ["<gray>ᴍᴀɴᴛᴇᴍ ᴏ ᴠɪɴᴄᴜʟᴏ ᴅᴇ ᴀʟᴍᴀ."]
+    revision_id:
+      name: "<aqua>ɪᴅ ᴅᴇ ʀᴇᴠɪꜱᴀᴏ</aqua>"
+      lore:
+        - "<gray>ᴀᴛᴜᴀʟ: <white>%value%</white>"
+        - ""
+        - "<yellow>ᴇꜱǫ: <gray>ᴅɪᴍɪɴᴜɪʀ</gray>"
+        - "<yellow>ᴅɪʀ: <gray>ᴀᴜᴍᴇɴᴛᴀʀ</gray>"
+
+  material_list_selection:
+    title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴍᴀᴛᴇʀɪᴀɪꜱ"
+    item:
+      name: "<green>%material%</green>"
+      lore: ["<red>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ</red>"]
+    messages:
+      added: "<green>✔</green> <gray>ᴍᴀᴛᴇʀɪᴀʟ <white>%material%</white> ᴀᴅɪᴄɪᴏɴᴀᴅᴏ.</gray>"
+      removed: "<green>✔</green> <gray>ᴍᴀᴛᴇʀɪᴀʟ <white>%material%</white> ʀᴇᴍᴏᴠɪᴅᴏ.</gray>"
+      prompt: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ᴍᴀᴛᴇʀɪᴀʟ (ᴇx: ꜱᴛᴏɴᴇ):</gray>"
+    buttons:
+      add:
+        name: "<green>ᴀᴅɪᴄɪᴏɴᴀʀ ᴍᴀᴛᴇʀɪᴀʟ</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ"]
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+
+  material_selection:
+    category_lore: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴠᴇʀ <white>%count%</white> <gray>ɪᴛᴇɴꜱ."
+
+  upgrade:
+    title: "ꜱɪꜱᴛᴇᴍᴀ ᴅᴇ ᴍᴇʟʜᴏʀɪᴀ"
+    info_name: "<yellow>ɪɴꜰᴏʀᴍᴀᴄᴏᴇꜱ</yellow>"
+    max_level_reached: "<red>ɴɪᴠᴇʟ ᴍᴀxɪᴍᴏ ᴀᴛɪɴɢɪᴅᴏ!</red>"
+    current_level: "<gray>ɴɪᴠᴇʟ ᴀᴛᴜᴀʟ: <white>"
+    next_level: "<gray>ᴘʀᴏxɪᴍᴏ ɴɪᴠᴇʟ: <white>"
+    success_chance: "<gray>ᴄʜᴀɴᴄᴇ ᴅᴇ ꜱᴜᴄᴇꜱꜱᴏ: <green>"
+    break_chance: "<red>ᴄʜᴀɴᴄᴇ ᴅᴇ ǫᴜᴇʙʀᴀ: "
+    downgrade_chance: "<yellow>ᴄʜᴀɴᴄᴇ ᴅᴇ ʀᴇʙᴀɪxᴀᴍᴇɴᴛᴏ: "
+    cost: "<gray>ᴄᴜꜱᴛᴏ: <white>"
+    materials_sufficient: "<green>✔ ᴍᴀᴛᴇʀɪᴀɪꜱ ꜱᴜꜰɪᴄɪᴇɴᴛᴇꜱ</green>"
+    materials_insufficient: "<red>✖ ᴍᴀᴛᴇʀɪᴀɪꜱ ɪɴꜱᴜꜰɪᴄɪᴇɴᴛᴇꜱ</red>"
+    place_item_hint: "<gray>ᴄᴏʟᴏǫᴜᴇ ᴜᴍ ɪᴛᴇᴍ ᴘᴀʀᴀ ᴍᴇʟʜᴏʀᴀʀ.</gray>"
+    confirm_button: "<green>ᴄᴏɴꜰɪʀᴍᴀʀ ᴍᴇʟʜᴏʀɪᴀ</green>"
+    waiting_items: "<red>ᴀɢᴜᴀʀᴅᴀɴᴅᴏ ɪᴛᴇɴꜱ...</red>"
+    success_message: "<green>✔</green> <gray>ᴍᴇʟʜᴏʀɪᴀ ʀᴇᴀʟɪᴢᴀᴅᴀ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ!</gray>"
+    fail_message: "<red>✖</red> <gray>ᴀ ᴍᴇʟʜᴏʀɪᴀ ꜰᴀʟʜᴏᴜ.</gray>"
+    break_message: "<red>✖</red> <gray>ᴏ ɪᴛᴇᴍ ǫᴜᴇʙʀᴏᴜ!</gray>"
+    downgrade_message: "<yellow>⚠</yellow> <gray>ᴏ ɪᴛᴇᴍ ꜰᴏɪ ʀᴇʙᴀɪxᴀᴅᴏ!</gray>"
+    error_message: "<red>✖</red> <gray>ᴇʀʀᴏ ᴀᴏ ᴍᴇʟʜᴏʀᴀʀ ɪᴛᴇᴍ.</gray>"
+
+  trim_editor:
+    title: "ᴇᴅɪᴛᴏʀ ᴅᴇ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ"
+    item:
+      name: "<green>ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ</green>"
+      lore:
+        - "<gray>ᴍᴀᴛ: <white>%material%</white>"
+        - "<gray>ᴘᴀᴅ: <white>%pattern%</white>"
+        - ""
+        - "<yellow>ᴇꜱǫ: <gray>ᴇᴅɪᴛᴀʀ ᴍᴀᴛᴇʀɪᴀʟ</gray>"
+        - "<yellow>ᴅɪʀ: <gray>ᴇᴅɪᴛᴀʀ ᴘᴀᴅʀᴀᴏ</gray>"
+    messages:
+      updated: "<green>✔</green> <gray>ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ.</gray>"
+      prompt_material: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ᴍᴀᴛᴇʀɪᴀʟ:</gray>"
+      prompt_pattern: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ᴘᴀᴅʀᴀᴏ:</gray>"
+    buttons:
+      back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+      clear: "<red>ʀᴇᴍᴏᴠᴇʀ ᴀᴄᴀʙᴀᴍᴇɴᴛᴏ</red>"
+
+  browser:
+    category-lore: "<gray>ᴇxɪꜱᴛᴇᴍ <yellow>%count%</yellow> <gray>ɪᴛᴇɴꜱ ɴᴇꜱᴛᴇ ᴛɪᴘᴏ."
+    click-to-delete-item: "<red>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇʟᴇᴛᴀʀ</red>"
+    click-to-get: "<green>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴏʙᴛᴇʀ</green>"
+    shift-click-to-edit: "<yellow>ꜱʜɪꜰᴛ+ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ</yellow>"
+    previous-page: "<yellow>← ᴀɴᴛᴇʀɪᴏʀ</yellow>"
+    next-page: "<yellow>ᴘʀᴏxɪᴍᴀ →</yellow>"
+    close: "<red>ꜰᴇᴄʜᴀʀ</red>"
+    buttons:
+      delete:
+        name: "<red>ᴍᴏᴅᴏ ᴅᴇʟᴇᴛᴀʀ</red>"
+        mode-active: "<green>✔ ᴍᴏᴅᴏ ᴅᴇ ᴅᴇʟᴇᴄᴀᴏ ᴀᴛɪᴠᴏ</green>"
+        click-to-delete: "<gray>ᴄʟɪǫᴜᴇ ᴇᴍ ᴜᴍ ɪᴛᴇᴍ ᴘᴀʀᴀ ᴅᴇʟᴇᴛᴀʀ</gray>"
+        click-to-cancel: "<red>ᴄʟɪǫᴜᴇ ᴀǫᴜɪ ɴᴏᴠᴀᴍᴇɴᴛᴇ ᴘᴀʀᴀ ᴄᴀɴᴄᴇʟᴀʀ</red>"
+        click-to-enable: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴍᴏᴅᴏ ᴅᴇʟᴇᴛᴀʀ</gray>"
+      create:
+        name: "<green>ᴄʀɪᴀʀ ɴᴏᴠᴏ ɪᴛᴇᴍ</green>"
+      back:
+        name: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+    messages:
+      enter-id: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ɪᴅ ᴅᴏ ɴᴏᴠᴏ ɪᴛᴇᴍ:</gray>"
+      cancel-abort: "<gray>ᴅɪɢɪᴛᴇ <red>ᴄᴀɴᴄᴇʟ</red> ᴘᴀʀᴀ ᴄᴀɴᴄᴇʟᴀʀ.</gray>"
+    delete-confirmation:
+      title: "<red>ᴅᴇʟᴇᴛᴀʀ %s?</red>"
+      success: "<green>✔</green> <gray>ɪᴛᴇᴍ ʀᴇᴍᴏᴠɪᴅᴏ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ.</gray>"
+      confirm:
+        name: "<green>ᴄᴏɴꜰɪʀᴍᴀʀ ᴅᴇʟᴇᴄᴀᴏ</green>"
+        lore: "<gray>ᴇꜱᴛᴀ ᴀᴄᴀᴏ ɴᴀᴏ ᴘᴏᴅᴇ ꜱᴇʀ ᴅᴇꜱꜰᴇɪᴛᴀ!"
+      cancel:
+        name: "<red>ᴄᴀɴᴄᴇʟᴀʀ</red>"
+
+  crafting_gui:
+    error:
+      recipe_not_found: "<red>✖</red> <gray>ʀᴇᴄᴇɪᴛᴀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ.</gray>"
+    type_selection:
+      title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴛɪᴘᴏ ᴅᴇ ʀᴇᴄᴇɪᴛᴀ"
+      click_to_manage: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ɢᴇʀᴇɴᴄɪᴀʀ ʀᴇᴄᴇɪᴛᴀꜱ"]
+      types:
+        smithing: "<yellow>ꜱᴍɪᴛʜɪɴɢ (ᴍᴇꜱᴀ ᴅᴇ ꜰᴇʀʀᴇɪʀᴏ)</yellow>"
+        super_shaped: "<gold>ꜱᴜᴘᴇʀ ꜱʜᴀᴘᴇᴅ (5x5)</gold>"
+        smoker: "<red>ꜱᴍᴏᴋᴇʀ (ᴅᴇꜰᴜᴍᴀᴅᴏʀ)</red>"
+        furnace: "<red>ꜰᴜʀɴᴀᴄᴇ (ꜰᴏʀɴᴀʟʜᴀ)</red>"
+        shaped: "<green>ꜱʜᴀᴘᴇᴅ (ꜰᴏʀᴍᴀᴛᴀᴅᴏ)</green>"
+        mega_shaped: "<gold>ᴍᴇɢᴀ ꜱʜᴀᴘᴇᴅ (6x6)</gold>"
+        campfire: "<red>ᴄᴀᴍᴘꜰɪʀᴇ (ꜰᴏɢᴜᴇɪʀᴀ)</red>"
+        shapeless: "<aqua>ꜱʜᴀᴘᴇʟᴇꜱꜱ (ꜱᴇᴍ ꜰᴏʀᴍᴀ)</aqua>"
+        blast_furnace: "<red>ʙʟᴀꜱᴛ ꜰᴜʀɴᴀᴄᴇ (ᴀʟᴛᴏ ꜰᴏʀɴᴏ)</red>"
+        forge: "<gold>ꜰᴏʀᴊᴀ (ᴍᴇꜱᴀ ᴅᴇ ꜰᴏʀᴊᴀ)</gold>"
+        smelting: "<light_purple>ꜰᴜɴᴅɪᴄᴀᴏ (ꜱᴍᴇʟᴛᴇʀʏ)</light_purple>"
+    configuration:
+      title: "ᴄᴏɴꜰɪɢᴜʀᴀʀ ʀᴇᴄᴇɪᴛᴀ"
+      created: "<green>✔</green> <gray>ʀᴇᴄᴇɪᴛᴀ ᴄʀɪᴀᴅᴀ ᴄᴏᴍ ꜱᴜᴄᴇꜱꜱᴏ!</gray>"
+      recipe_item:
+        name: "<green>ʀᴇᴄᴇɪᴛᴀ: %type%</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ"]
+      new_recipe:
+        name: "<green>+ ɴᴏᴠᴀ ʀᴇᴄᴇɪᴛᴀ</green>"
+        lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀᴅɪᴄɪᴏɴᴀʀ ɴᴏᴠᴀ ʀᴇᴄᴇɪᴛᴀ"]
+    editor:
+      common:
+        back: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+        get_item:
+          name: "<green>ᴏʙᴛᴇʀ ɪᴛᴇᴍ ʀᴇꜱᴜʟᴛᴀᴅᴏ</green>"
+          lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʀᴇᴄᴇʙᴇʀ ᴏ ɪᴛᴇᴍ"]
+        output_amount:
+          name: "<yellow>ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ ꜱᴀɪᴅᴀ</yellow>"
+          lore: ["<gray>ǫᴜᴀɴᴛɪᴅᴀᴅᴇ: <white>%amount%</white>"]
+        output_mode:
+          name: "<yellow>ᴍᴏᴅᴏ ᴅᴇ ꜱᴀɪᴅᴀ</yellow>"
+          lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ"]
+        hide_book:
+          name: "<yellow>ᴏᴄᴜʟᴛᴀʀ ᴅᴏ ʟɪᴠʀᴏ ᴅᴇ ʀᴇᴄᴇɪᴛᴀꜱ</yellow>"
+          lore: ["<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ"]
+          hidden: "<red>✔ ᴏᴄᴜʟᴛᴏ</red>"
+          shown: "<green>✔ ᴠɪꜱɪᴠᴇʟ</green>"
+        experience:
+          name: "<yellow>ᴇxᴘᴇʀɪᴇɴᴄɪᴀ</yellow>"
+          lore: ["<gray>xᴘ: <white>%xp%</white>"]
+        duration:
+          name: "<yellow>ᴅᴜʀᴀᴄᴀᴏ (ᴛɪᴄᴋꜱ)</yellow>"
+          lore: ["<gray>ᴛᴇᴍᴘᴏ: <white>%time%</white>"]
+        separator: "<gray>▬▬▬▬▬▬▬▬▬</gray>"
+        current-value: "<gray>ᴀᴛᴜᴀʟ: <white>%value%</white>"
+        template-optional: "<gray>ᴛᴇᴍᴘʟᴀᴛᴇ (ᴏᴘᴄɪᴏɴᴀʟ)</gray>"
+        no_item: "<dark_gray>ꜱʟᴏᴛ ᴠᴀᴢɪᴏ</dark_gray>"
+        item_added: "<green>✔</green> <gray>ɪᴛᴇᴍ ᴀᴅɪᴄɪᴏɴᴀᴅᴏ ᴀ ʀᴇᴄᴇɪᴛᴀ!</gray>"
+      forge:
+        title: "ᴇᴅɪᴛᴏʀ ᴅᴇ ʀᴇᴄᴇɪᴛᴀ: ꜰᴏʀᴊᴀ"
+        difficulty_name: "<yellow>ᴅɪꜰɪᴄᴜʟᴅᴀᴅᴇ</yellow>"
+        difficulty_lore1: "<gray>ᴅᴇꜰɪɴᴇ ᴀ ᴅɪꜰɪᴄᴜʟᴅᴀᴅᴇ ᴅᴀ ꜰᴏʀᴊᴀ."
+        difficulty_lore2: "<gray>ᴠᴀʟᴏʀᴇꜱ ᴍᴀɪᴏʀᴇꜱ ʀᴇᴅᴜᴢᴇᴍ ᴀ ᴄʜᴀɴᴄᴇ"
+        difficulty_lore3: "<gray>ᴅᴇ ꜱᴜᴄᴇꜱꜱᴏ ᴅᴏ ᴊᴏɢᴀᴅᴏʀ."
+        difficulty_current: "<gray>ᴀᴛᴜᴀʟ: <white>"
+        click_edit: "<yellow>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ</yellow>"
+        click_reset: "<red>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇꜱᴇᴛᴀʀ</red>"
+        min_level_name: "<yellow>ɴɪᴠᴇʟ ᴍɪɴɪᴍᴏ</yellow>"
+        min_level_lore1: "<gray>ɴɪᴠᴇʟ ᴍɪɴɪᴍᴏ ᴅᴀ ᴘʀᴏꜰɪꜱꜱᴀᴏ"
+        min_level_lore2: "<gray>ᴅᴇ ꜰᴇʀʀᴇɪʀᴏ ɴᴇᴄᴇꜱꜱᴀʀɪᴏ."
+        min_level_current: "<gray>ᴀᴛᴜᴀʟ: <white>"
+        tier_name: "<yellow>ᴛɪᴇʀ ᴅᴀ ꜰᴏʀᴊᴀ</yellow>"
+        tier_lore1: "<gray>ᴅᴇꜰɪɴᴇ ǫᴜᴀʟ ᴛɪᴇʀ ᴅᴇ ꜰᴏʀᴊᴀ"
+        tier_lore2: "<gray>ᴇ ɴᴇᴄᴇꜱꜱᴀʀɪᴏ ᴘᴀʀᴀ ᴇꜱᴛᴀ ʀᴇᴄᴇɪᴛᴀ."
+        tier_current: "<gray>ᴀᴛᴜᴀʟ: <white>"
+        tier_click: "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ</yellow>"
+        tier_cycle: "<gray>ᴄɪᴄʟᴏ: ʙᴀꜱɪᴄ → ᴀᴅᴠᴀɴᴄᴇᴅ → ᴇxᴘᴇʀᴛ → ᴍᴀꜱᴛᴇʀ"
+        recipe_id_name: "<yellow>ɪᴅ ᴅᴀ ʀᴇᴄᴇɪᴛᴀ</yellow>"
+        recipe_id_lore1: "<gray>ᴅᴇꜰɪɴᴇ ᴏ ɪᴅ ᴅᴀ ʀᴇᴄᴇɪᴛᴀ"
+        recipe_id_lore2: "<gray>ɴᴏ ꜱɪꜱᴛᴇᴍᴀ ᴅᴇ ꜰᴏʀᴊᴀ."
+        recipe_id_current: "<gray>ᴀᴛᴜᴀʟ: <white>"
+        recipe_id_click: "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ</yellow>"
+        none: "ɴᴇɴʜᴜᴍ"
+        separator: "<gray>▬▬▬▬▬▬▬▬▬</gray>"
+        primary_metal: "<gold>ᴍᴇᴛᴀʟ ᴘʀɪᴍᴀʀɪᴏ</gold>"
+        secondary_1: "<yellow>ᴍᴀᴛᴇʀɪᴀʟ ꜱᴇᴄᴜɴᴅᴀʀɪᴏ 1</yellow>"
+        secondary_2: "<yellow>ᴍᴀᴛᴇʀɪᴀʟ ꜱᴇᴄᴜɴᴅᴀʀɪᴏ 2</yellow>"
+        secondary_3: "<yellow>ᴍᴀᴛᴇʀɪᴀʟ ꜱᴇᴄᴜɴᴅᴀʀɪᴏ 3</yellow>"
+        secondary_4: "<yellow>ᴍᴀᴛᴇʀɪᴀʟ ꜱᴇᴄᴜɴᴅᴀʀɪᴏ 4</yellow>"
+        ingredient_current: "<gray>ᴀᴛᴜᴀʟ: <white>"
+        click_swap: "<yellow>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴛʀᴏᴄᴀʀ</yellow>"
+        click_remove: "<red>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ</red>"
+        invalid_suffix: "<red>(ɪɴᴠᴀʟɪᴅᴏ)</red>"
+        item_not_found: "<red>ɪᴛᴇᴍ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ: </red>"
+        required: "<red>✖ ᴏʙʀɪɢᴀᴛᴏʀɪᴏ</red>"
+        optional: "<gray>ᴏᴘᴄɪᴏɴᴀʟ</gray>"
+        click_set: "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅᴇꜰɪɴɪʀ</yellow>"
+        prompt_output_amount: "ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ ꜱᴀɪᴅᴀ"
+        prompt_difficulty: "ᴅɪꜰɪᴄᴜʟᴅᴀᴅᴇ (1-10)"
+        prompt_min_level: "ɴɪᴠᴇʟ ᴍɪɴɪᴍᴏ"
+        prompt_recipe_id: "ɪᴅ ᴅᴀ ʀᴇᴄᴇɪᴛᴀ ᴅᴇ ꜰᴏʀᴊᴀ"
+      smelting:
+        title: "ᴇᴅɪᴛᴏʀ ᴅᴇ ʀᴇᴄᴇɪᴛᴀ: ꜰᴜɴᴅɪᴄᴀᴏ"
+        min_temp_name: "<yellow>ᴛᴇᴍᴘᴇʀᴀᴛᴜʀᴀ ᴍɪɴɪᴍᴀ</yellow>"
+        min_temp_lore1: "<gray>ᴅᴇꜰɪɴᴇ ᴀ ᴛᴇᴍᴘᴇʀᴀᴛᴜʀᴀ ᴍɪɴɪᴍᴀ"
+        min_temp_lore2: "<gray>ᴅᴀ ꜱᴍᴇʟᴛᴇʀʏ ɴᴇᴄᴇꜱꜱᴀʀɪᴀ."
+        min_temp_current: "<gray>ᴀᴛᴜᴀʟ: <white>"
+        click_edit: "<yellow>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ</yellow>"
+        click_reset_temp: "<red>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇꜱᴇᴛᴀʀ (800°ᴄ)</red>"
+        add_metal_name: "<green>ᴀᴅɪᴄɪᴏɴᴀʀ ᴍᴇᴛᴀʟ</green>"
+        add_metal_lore1: "<gray>ᴀᴅɪᴄɪᴏɴᴀ ᴜᴍ ᴍᴇᴛᴀʟ ꜰᴜɴᴅɪᴅᴏ"
+        add_metal_lore2: "<gray>ᴀ ᴇꜱᴛᴀ ʀᴇᴄᴇɪᴛᴀ."
+        add_metal_click: "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ꜱᴇʟᴇᴄɪᴏɴᴀʀ</yellow>"
+        separator: "<gray>▬▬▬▬▬▬▬▬▬</gray>"
+        metal_amount: "<gray>ǫᴜᴀɴᴛɪᴅᴀᴅᴇ: <white>"
+        click_edit_amount: "<yellow>ᴄʟɪǫᴜᴇ ᴇꜱǫᴜᴇʀᴅᴏ ᴘᴀʀᴀ ᴇᴅɪᴛᴀʀ</yellow>"
+        click_remove: "<red>ᴄʟɪǫᴜᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ</red>"
+        empty_slot: "<dark_gray>ꜱʟᴏᴛ ᴠᴀᴢɪᴏ</dark_gray>"
+        empty_slot_hint: "<gray>ᴀᴅɪᴄɪᴏɴᴇ ᴜᴍ ᴍᴇᴛᴀʟ ᴀᴄɪᴍᴀ</gray>"
+        prompt_output_amount: "ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇ ꜱᴀɪᴅᴀ"
+        prompt_metal_amount: "<yellow>✎</yellow> <gray>ᴅɪɢɪᴛᴇ ᴀ ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴇᴍ ᴍʙ ᴘᴀʀᴀ: </gray>"
+        prompt_min_temp: "ᴛᴇᴍᴘᴇʀᴀᴛᴜʀᴀ ᴍɪɴɪᴍᴀ"
+        metal_selection_title: "ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴍᴇᴛᴀʟ"
+        click_select: "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ꜱᴇʟᴇᴄɪᴏɴᴀʀ</yellow>"
+        back_arrow: "<red>← ᴠᴏʟᴛᴀʀ</red>"
+        metal:
+          IRON: "<white>ꜰᴇʀʀᴏ</white>"
+          GOLD: "<yellow>ᴏᴜʀᴏ</yellow>"
+          COPPER: "<gold>ᴄᴏʙʀᴇ</gold>"
+          NETHERITE_SCRAP: "<dark_gray>ꜱᴜᴄᴀᴛᴀ ᴅᴇ ɴᴇᴛʜᴇʀɪᴛᴇ</dark_gray>"
+          EMERALD: "<green>ᴇꜱᴍᴇʀᴀʟᴅᴀ</green>"
+          DIAMOND: "<aqua>ᴅɪᴀᴍᴀɴᴛᴇ</aqua>"
+          AMETHYST: "<light_purple>ᴀᴍᴇᴛɪꜱᴛᴀ</light_purple>"
+          QUARTZ: "<white>ǫᴜᴀʀᴛᴢᴏ</white>"
+          LAPIS: "<blue>ʟᴀᴘɪꜱ</blue>"
+          REDSTONE: "<red>ʀᴇᴅꜱᴛᴏɴᴇ</red>"
+          BRONZE: "<gold>ʙʀᴏɴᴢᴇ</gold>"
+          STEEL: "<gray>ᴀᴄᴏ</gray>"
+          MANYULLYN: "<dark_purple>ᴍᴀɴʏᴜʟʟʏɴ</dark_purple>"
+          OBSIDIAN_ALLOY: "<dark_gray>ʟɪɢᴀ ᴅᴇ ᴏʙꜱɪᴅɪᴀɴᴀ</dark_gray>"
+          ROSE_GOLD: "<light_purple>ᴏᴜʀᴏ ʀᴏꜱᴇ</light_purple>"
+          ELECTRUM: "<yellow>ᴇʟᴇᴄᴛʀᴜᴍ</yellow>"
+          KNIGHTSLIME: "<green>ᴋɴɪɢʜᴛꜱʟɪᴍᴇ</green>"
+
+messages:
+  editing: "<green>✔</green> <gray>ᴇᴅɪᴛᴀɴᴅᴏ ɪᴛᴇᴍ: <white>%s</white></gray>"
+  no-editor: "<red>✖</red> <gray>ɴᴇɴʜᴜᴍᴀ ꜱᴇꜱꜱᴀᴏ ᴅᴇ ᴇᴅɪᴄᴀᴏ ᴀᴛɪᴠᴀ.</gray>"

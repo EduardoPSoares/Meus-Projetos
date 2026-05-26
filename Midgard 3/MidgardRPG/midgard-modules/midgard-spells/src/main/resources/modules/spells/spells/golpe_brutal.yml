@@ -1,0 +1,79 @@
+name: "<red>ɢᴏʟᴘᴇ ʙʀᴜᴛᴀʟ</red>"
+mythic-skill: "GolpeBrutal"
+spell-type: COMMON
+
+cooldown:
+  base: 6.0
+  per-level: -0.2
+mana:
+  base: 15.0
+  per-level: -0.3
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guerreiro"
+  level: 1
+
+icon:
+  material: IRON_AXE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<red><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></red>"
+  - ""
+  - "<gray>ᴅᴇsꜰᴇʀᴇ ᴜᴍ ɢᴏʟᴘᴇ ʙʀᴜᴛᴀʟ ᴄᴏᴍ</gray>"
+  - "<gray>ꜰᴏʀᴄᴀ ᴅᴇᴠᴀsᴛᴀᴅᴏʀᴀ ɴᴏ ɪɴɪᴍɪɢᴏ</gray>"
+  - "<gray>ᴀ sᴜᴀ ꜰʀᴇɴᴛᴇ.</gray>"
+  - ""
+  - "<red><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></red>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>1</yellow>"
+
+variables:
+  damage:
+    base: 12.0
+    per-level: 3.5
+
+milestones:
+  3:
+    visual: "brutal_impact"
+    mechanic-override: "GolpeBrutalMk2"
+    stat-bonus:
+      strength: 1.0
+  5:
+    visual: "brutal_flame"
+    mechanic-override: "GolpeBrutalMk3"
+    stat-bonus:
+      strength: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 5
+
+sounds:
+  cast-start:
+    sound: "entity.player.attack.sweep"
+    volume: 1.0
+    pitch: 0.8
+  cast-finish:
+    sound: "entity.player.attack.strong"
+    volume: 1.0
+    pitch: 0.6
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

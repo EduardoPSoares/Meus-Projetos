@@ -1,0 +1,50 @@
+name: MidgardVanish
+version: 1.0.0
+main: midgardvanish.MidgardVanish
+api-version: '1.21'
+description: Plugin de vanish usando NMS para Minecraft 1.21.4
+softdepend: [Essentials, nChat, TAB]
+
+commands:
+  vanish:
+    description: Ativa/desativa o vanish
+    usage: /vanish [player]
+    aliases: [v]
+    permission: midgardvanish.use
+  vanishlist:
+    description: Lista todos os jogadores em vanish
+    usage: /vanishlist
+    aliases: [vlist]
+    permission: midgardvanish.use
+  vanishtp:
+    description: Teleporta silenciosamente para um jogador
+    usage: /vanishtp <player>
+    aliases: [vtp]
+    permission: midgardvanish.use
+  vanishviewer:
+    description: Gerencia jogadores que podem ver um vanished especifico
+    usage: /vanishviewer <jogador>
+    aliases: [vviewer]
+    permission: midgardvanish.viewer
+  vanishsettings:
+    description: Abre o menu de configuracoes do vanish
+    usage: /vanishsettings
+    aliases: [vsettings]
+    permission: midgardvanish.use
+
+permissions:
+  midgardvanish.use:
+    description: Permite usar o comando /vanish
+    default: op
+  midgardvanish.others:
+    description: Permite colocar outros jogadores em vanish
+    default: op
+  midgardvanish.see:
+    description: Permite ver todos os jogadores em vanish (staff)
+    default: op
+  midgardvanish.viewer:
+    description: Permite gerenciar viewers do vanish
+    default: op
+  midgardvanish.interact:
+    description: Permite abrir inventario de jogadores em vanish
+    default: op

@@ -1,0 +1,139 @@
+# ==============================================================================
+#                    CONFIGURAÇíO PRINCIPAL DO MIDGARDRPG
+# ==============================================================================
+# Bem-vindo à configuração principal do MidgardRPG!
+# 
+# Este arquivo controla as configurações essenciais do servidor:
+# - Conexão com banco de dados (MySQL/SQLite)
+# - Configuração do Redis (opcional, para multi-servidor)
+# - Ativação/Desativação de módulos
+#
+# IMPORTANTE: Após alterar este arquivo, use /midgard reload para aplicar
+#             as mudanças sem reiniciar o servidor.
+#
+# ==============================================================================
+
+# ==============================================================================
+#                           CONFIGURAÇíO GERAL
+# ==============================================================================
+settings:
+  # Ativar modo debug
+  # Mostra logs detalhados no console (útil para desenvolvimento)
+  debug: false
+
+# ==============================================================================
+#                           CONFIGURAÇíO DO BANCO DE DADOS
+# ==============================================================================
+# O banco de dados armazena todas as informações dos jogadores, itens,
+# progressão, etc.
+#
+# Tipos suportados:
+#   - mysql: Recomendado para servidores com múltiplos jogadores
+#            Requer um servidor MySQL/MariaDB rodando
+#   - sqlite: Ideal para servidores menores ou testes
+#             Armazena tudo em um arquivo local (midgard.db)
+#
+# DICA: Para produção, sempre use MySQL para melhor performance!
+# ==============================================================================
+database:
+  # Tipo de banco de dados: "mysql" ou "sqlite"
+  type: mysql
+  
+  # ============================================================================
+  # CONFIGURAÇÕES MYSQL (Apenas se type: mysql)
+  # ============================================================================
+  # Host do servidor MySQL (geralmente localhost se estiver no mesmo servidor)
+  host: localhost
+  
+  # Porta do MySQL (padrão: 3306)
+  port: 3306
+  
+  # Nome do banco de dados (crie-o manualmente antes de usar!)
+  # IMPORTANTE: Certifique-se de que o banco já existe no MySQL
+  database: midgard
+  
+  # Usuário do MySQL
+  username: root
+  
+  # Senha do MySQL (deixe vazio "" se não houver senha)
+  # SEGURANÇA: Não use 'root' sem senha em produção!
+  password: ""
+  
+  # Usar SSL para conexão (recomendado para conexões remotas)
+  use-ssl: false
+
+# ==============================================================================
+#                           CONFIGURAÇíO DO REDIS
+# ==============================================================================
+# Redis é usado para sincronização em tempo real entre múltiplos servidores
+# (útil para setups BungeeCord/Velocity).
+#
+# Funcionalidades habilitadas com Redis:
+# - Sincronização de dados entre servidores
+# - Chat global entre servidores
+# - Sincronização de sessões de jogadores
+# - Notificações em tempo real
+#
+# Se você tem apenas UM servidor, deixe enabled: false
+# ==============================================================================
+redis:
+  # Ativar/Desativar Redis
+  # false = Desabilitado (padrão para servidores únicos)
+  # true  = Habilitado (requer servidor Redis rodando)
+  enabled: false
+  
+  # Host do servidor Redis (geralmente localhost)
+  host: localhost
+  
+  # Porta do Redis (padrão: 6379)
+  port: 6379
+  
+  # Senha do Redis (deixe vazio "" se não houver senha)
+  password: ""
+  
+  # Usar SSL para conexão Redis
+  use-ssl: false
+
+# ==============================================================================
+#                           MÓDULOS DO MIDGARDRPG
+# ==============================================================================
+# Controle quais módulos estão ativos no servidor.
+# 
+# true  = Módulo habilitado e carregado
+# false = Módulo desabilitado (não será carregado)
+#
+# DICA: Desative módulos que você não usa para melhorar a performance!
+# ==============================================================================
+modules:
+  # Sistema de combate (danos, habilidades, PvP/PvE)
+  combat: true
+  
+  # Comandos essenciais (home, warp, teleport, etc.)
+  essentials: true
+  
+  # Sistema de classes (guerreiro, mago, arqueiro, etc.)
+  classes: true
+  
+  # Sistema de itens (armas, armaduras, equipamentos customizados)
+  item: true
+  
+  # Sistema de personagens (atributos, níveis, progressão)
+  character: true
+  
+  # Sistema de feitiços e habilidades mágicas
+  spells: true
+  
+  # Otimizações de performance (recomendado manter ativado)
+  performance: true
+  
+  # Sistema de segurança (anti-cheat, proteções)
+  security: true
+  
+  # Sistema de raças (seleção, traits, evolução)
+  races: true
+  
+  # Sistema de economia (moedas, transações)
+  economy: true
+  
+  # Sistema de comandos customizados
+  commands: true

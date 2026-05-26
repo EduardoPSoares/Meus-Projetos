@@ -1,0 +1,84 @@
+name: "<dark_blue>ʙᴀʀʀᴇɪʀᴀ ᴀʙsᴏʟᴜᴛᴀ</dark_blue>"
+mythic-skill: "BarreiraAbsoluta"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 60.0
+  per-level: -0.5
+mana:
+  base: 80.0
+  per-level: -1.5
+stamina: 0.0
+
+max-level: 10
+
+requirements:
+  class: "Guardiao"
+  level: 20
+
+icon:
+  material: END_CRYSTAL
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_blue><bold>ᴍᴀɢɪᴀ sᴜᴘʀᴇᴍᴀ</bold></dark_blue>"
+  - ""
+  - "<gray>ᴄʀɪᴀ ᴜᴍᴀ ʙᴀʀʀᴇɪʀᴀ ᴀʙsᴏʟᴜᴛᴀ ǫᴜᴇ</gray>"
+  - "<gray>ᴘʀᴏᴛᴇɢᴇ ᴛᴏᴅᴏs ᴏs ᴀʟɪᴀᴅᴏs</gray>"
+  - "<gray>ᴘʀᴏxɪᴍᴏs, ᴀʙsᴏʀᴠᴇɴᴅᴏ ᴜᴍᴀ</gray>"
+  - "<gray>ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴍᴀssɪᴠᴀ ᴅᴇ ᴅᴀɴᴏ.</gray>"
+  - ""
+  - "<blue><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ᴅᴀ ᴍᴀɢɪᴀ ✦</bold></blue>"
+  - ""
+  - "<gray>ᴇsᴄᴜᴅᴏ:<blue>{shield_amount}</blue>"
+  - "<gray>ᴅᴜʀᴀᴄᴀᴏ:<blue>{duration}s</blue>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - ""
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<blue>ɢᴜᴀʀᴅɪᴀᴏ</blue>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>20</yellow>"
+
+variables:
+  shield_amount:
+    base: 50.0
+    per-level: 10.0
+  duration:
+    base: 8.0
+    per-level: 0.5
+
+milestones:
+  3:
+    visual: "barrier_glow"
+    mechanic-override: "BarreiraAbsolutaMk2"
+    stat-bonus:
+      defense: 2.0
+  5:
+    visual: "barrier_absolute"
+    mechanic-override: "BarreiraAbsolutaMk3"
+    stat-bonus:
+      defense: 4.0
+
+mastery:
+  attribute-bonus:
+    defense: 10
+
+sounds:
+  cast-start:
+    sound: "block.beacon.activate"
+    volume: 1.0
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.wither.spawn"
+    volume: 1.0
+    pitch: 1.2
+  cast-fail:
+    sound: "item.shield.break"
+    volume: 0.5
+    pitch: 0.8

@@ -1,0 +1,65 @@
+gema_bruta_rubi:
+  base:
+    material: REDSTONE
+    name: "<blue>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ ʀᴜʙɪ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ ʀᴜʙɪ. ᴘᴏᴅᴇ sᴇʀ ʀᴇꜰɪɴᴀᴅᴀ ᴘᴏʀ ᴜᴍ ᴊᴏᴀʟʜᴇɪʀᴏ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ᴊᴏɪᴀs ᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+gema_bruta_safira:
+  base:
+    material: LAPIS_LAZULI
+    name: "<blue>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ sᴀꜰɪʀᴀ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ sᴀꜰɪʀᴀ. ᴀᴢᴜʟ ᴇ ɴᴀᴏ ʟᴀᴘɪᴅᴀᴅᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ᴊᴏɪᴀs ᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+gema_bruta_esmeralda:
+  base:
+    material: EMERALD
+    name: "<blue>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ ᴇsᴍᴇʀᴀʟᴅᴀ</blue>"
+    tier: RARE
+    type: MATERIAL
+    description:
+    - "<gray>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ ᴇsᴍᴇʀᴀʟᴅᴀ. ᴠᴇʀᴅᴇ ᴇ ʙʀᴜᴛᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ᴊᴏɪᴀs ᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+gema_bruta_diamante:
+  base:
+    material: DIAMOND
+    name: "<purple>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ ᴅɪᴀᴍᴀɴᴛᴇ</purple>"
+    tier: EPIC
+    type: MATERIAL
+    description:
+    - "<gray>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ ᴅɪᴀᴍᴀɴᴛᴇ. ᴘʀᴇᴄɪsᴀ ᴅᴇ ᴜᴍ ᴄᴏʀᴛᴇ ᴇsᴘᴇᴄɪᴀʟɪsᴛᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ᴊᴏɪᴀs ᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+gema_bruta_ametista:
+  base:
+    material: AMETHYST_SHARD
+    name: "<green>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ ᴀᴍᴇᴛɪsᴛᴀ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ ᴀᴍᴇᴛɪsᴛᴀ. ʀᴏxᴀ ᴇ ᴏᴘᴀᴄᴀ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ᴊᴏɪᴀs ᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1
+
+gema_bruta_topazio:
+  base:
+    material: GOLD_NUGGET
+    name: "<green>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ ᴛᴏᴘᴀᴢɪᴏ</green>"
+    tier: UNCOMMON
+    type: MATERIAL
+    description:
+    - "<gray>ɢᴇᴍᴀ ʙʀᴜᴛᴀ ᴅᴇ ᴛᴏᴘᴀᴢɪᴏ. ᴀᴍᴀʀᴇʟᴀ ᴇ ǫᴜᴇɴᴛᴇ.</gray>"
+    - "<gray>ᴜsᴀᴅᴏ ɴᴀ ꜰᴀʙʀɪᴄᴀᴄᴀᴏ ᴅᴇ ᴊᴏɪᴀs ᴇ ɪᴛᴇɴs.</gray>"
+    revision-id: 1

@@ -1,0 +1,15 @@
+title: ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴍᴀᴛᴇʀɪᴀʟ
+updated: '<green>ᴍᴀᴛᴇʀɪᴀʟ ᴀᴛᴜᴀʟɪᴢᴀᴅᴏ ᴘᴀʀᴀ %s'
+item_name: '<yellow>%s'
+item_lore:
+  - '<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴇꜱᴛᴇ ᴍᴀᴛᴇʀɪᴀʟ'
+  - '<gray>ᴘᴀʀᴀ ᴏ ɪᴛᴇᴍ.'
+categories:
+  weapons: ᴀʀᴍᴀꜱ
+  armor: ᴀʀᴍᴀᴅᴜʀᴀꜱ
+  tools: ꜰᴇʀʀᴀᴍᴇɴᴛᴀꜱ
+  consumables: ᴄᴏɴꜱᴜᴍ�ᴠᴇɪꜱ
+  blocks: ʙʟᴏᴄᴏꜱ
+  resources: ʀᴇᴄᴜʀꜱᴏꜱ
+  miscellaneous: ᴅɪᴠᴇʀꜱᴀᴏꜱ
+category_lore: '<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴠᴇʀ <white>%d <gray>ɪᴛᴇɴꜱ.'

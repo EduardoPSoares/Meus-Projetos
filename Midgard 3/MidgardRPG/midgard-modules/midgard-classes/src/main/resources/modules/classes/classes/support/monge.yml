@@ -1,0 +1,62 @@
+display-name: '<aqua>ᴍᴏɴɢᴇ</aqua>'
+icon: RABBIT_FOOT
+lore:
+  - '<gray>ᴛɪᴘᴏ:<aqua><bold>ᴀʀᴛɪsᴛᴀ ᴍᴀʀᴄɪᴀʟ</bold></aqua>'
+  - ''
+  - '<gray>ᴍᴏɴɢᴇs ᴅᴏᴍɪɴᴀᴍ ᴀs ᴀʀᴛᴇs ᴍᴀʀᴄɪᴀɪs,</gray>'
+  - '<gray>ᴜsᴀɴᴅᴏ ᴄᴏʀᴘᴏ ᴇ ᴇsᴘɪʀɪᴛᴏ ᴄᴏᴍᴏ ᴀʀᴍᴀ</gray>'
+  - '<gray>ᴘᴀʀᴀ ᴅᴇsᴛʀᴜɪʀ sᴇᴜs ɪɴɪᴍɪɢᴏs.</gray>'
+  - ''
+  - '<yellow><bold>✦ ᴇsᴛɪʟᴏ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ ✦</bold></yellow>'
+  - ''
+  - '<gray>• ᴅᴀɴᴏ:<red>ᴀʟᴛᴏ</red>'
+  - '<gray>• ᴅᴇꜰᴇsᴀ:<yellow>ᴍᴇᴅɪᴀ</yellow>'
+  - '<gray>• ᴀʟᴄᴀɴᴄᴇ:<yellow>ʙᴀɪxᴏ</yellow>'
+attributes:
+  base:
+    strength: 8
+    defense: 5
+    vitality: 7
+    intelligence: 4
+    dexterity: 10
+  per-level:
+    strength: 1.5
+    dexterity: 1.5
+    vitality: 0.5
+health:
+  base: 19
+  per-level: 4
+mana:
+  base: 15
+  per-level: 3
+skills:
+  FLUXO_INTERIOR:
+    level: 1
+    type: passive
+  CORPO_DE_FERRO:
+    level: 5
+    type: passive
+  SOCO_TROVAO:
+    level: 1
+    type: active
+  CHUTE_GIRATORIO:
+    level: 3
+    type: active
+  PALMA_DE_BUDA:
+    level: 5
+    type: active
+  RAJADA_DE_GOLPES:
+    level: 8
+    type: active
+  PASSO_DO_VENTO:
+    level: 10
+    type: active
+  GOLPE_DO_DRAGAO:
+    level: 12
+    type: active
+  MIL_PUNHOS:
+    level: 15
+    type: ultimate
+  DESPERTAR_DO_CHI:
+    level: 20
+    type: ultimate

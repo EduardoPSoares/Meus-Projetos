@@ -1,0 +1,78 @@
+name: "<green>ꜰʟᴇᴄʜᴀ ᴅᴏ ᴅᴇsᴛɪɴᴏ</green>"
+mythic-skill: "FlechaDoDestino"
+spell-type: ULTIMATE
+
+cooldown:
+  base: 60.0
+  per-level: -1.5
+mana:
+  base: 30.0
+  per-level: -0.8
+stamina: 50.0
+
+max-level: 10
+
+requirements:
+  class: "Arqueiro"
+  level: 20
+
+icon:
+  material: CROSSBOW
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<green><bold>ᴜʟᴛɪᴍᴀᴛᴇ</bold></green>"
+  - ""
+  - "<gray>ᴅɪsᴘᴀʀᴀ ᴜᴍᴀ ꜰʟᴇᴄʜᴀ ʟᴇɴᴅᴀʀɪᴀ ǫᴜᴇ</gray>"
+  - "<gray>ʀᴀsɢᴀ ᴏ ᴄᴇᴜ, ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ ᴍᴀssɪᴠᴏ</gray>"
+  - "<gray>ᴀᴏ ᴀʟᴠᴏ ᴀᴛɪɴɢɪᴅᴏ ᴘᴇʟᴏ ᴅᴇsᴛɪɴᴏ.</gray>"
+  - ""
+  - "<green><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></green>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴀʀǫᴜᴇɪʀᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>20</yellow>"
+
+variables:
+  damage:
+    base: 60.0
+    per-level: 12.0
+
+milestones:
+  3:
+    visual: "flecha_destino_glow"
+    mechanic-override: "FlechaDoDestinoMk2"
+    stat-bonus:
+      dexterity: 2.0
+  5:
+    visual: "flecha_destino_divine"
+    mechanic-override: "FlechaDoDestinoMk3"
+    stat-bonus:
+      dexterity: 3.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "item.trident.throw"
+    volume: 1.0
+    pitch: 0.6
+  cast-finish:
+    sound: "entity.lightning_bolt.impact"
+    volume: 1.0
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

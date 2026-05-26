@@ -1,0 +1,190 @@
+# Configuração do Menu de Seleção de Classes
+title: "<white>ᴇꜱᴄᴏʟʜᴀ ꜱᴜᴀ ᴄʟᴀꜱꜱᴇ</white>"
+size: 45
+
+items:
+
+  # ── Linha 1: Combatentes & Magos ──
+
+  guerreiro:
+    material: IRON_SWORD
+    name: "<red>⚔ ɢᴜᴇʀʀᴇɪʀᴏ</red>"
+    lore:
+      - "<dark_gray>ᴄʟᴀꜱꜱᴇ ᴅᴇ ᴄᴏᴍʙᴀᴛᴇ</dark_gray>"
+      - ""
+      - "<gray>ᴍᴇꜱᴛʀᴇ ᴅᴏ ᴄᴏᴍʙᴀᴛᴇ ᴄᴏʀᴘᴏ ᴀ ᴄᴏʀᴘᴏ,</gray>"
+      - "<gray>ᴅᴇꜱꜰᴇʀɪɴᴅᴏ ɢᴏʟᴘᴇꜱ ᴅᴇᴠᴀꜱᴛᴀᴅᴏʀᴇꜱ</gray>"
+      - "<gray>ᴄᴏᴍ ꜰᴏʀᴄᴀ ʙʀᴜᴛᴀ.</gray>"
+      - ""
+      - "<gray>ᴀᴛʀɪʙᴜᴛᴏꜱ:</gray>"
+      - "<gray> • ꜰᴏʀᴄᴀ: </gray><white>ᴀʟᴛᴀ</white>"
+      - "<gray> • ᴅᴇꜰᴇꜱᴀ: </gray><white>ᴀʟᴛᴀ</white>"
+      - "<gray> • ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - "<gray> • ᴅᴇꜱᴛʀᴇᴢᴀ: </gray><white>ᴍᴇᴅɪᴀ</white>"
+      - ""
+      - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ</gray>"
+    slot: 10
+    action: "select_class: guerreiro"
+    flags: [HIDE_ATTRIBUTES]
+
+  guardiao:
+    material: SHIELD
+    name: "<blue>🛡 ɢᴜᴀʀᴅɪᴀᴏ</blue>"
+    lore:
+      - "<dark_gray>ᴛᴀɴǫᴜᴇ</dark_gray>"
+      - ""
+      - "<gray>ᴘʀᴏᴛᴇᴛᴏʀ ɪɴᴀʙᴀʟᴀᴠᴇʟ, ᴅᴇꜰᴇɴᴅᴇ</gray>"
+      - "<gray>ꜱᴇᴜꜱ ᴀʟɪᴀᴅᴏꜱ ᴄᴏᴍ ᴇꜱᴄᴜᴅᴏ</gray>"
+      - "<gray>ᴇ ꜰᴇ ɪɴᴀʙᴀʟᴀᴠᴇʟ.</gray>"
+      - ""
+      - "<gray>ᴀᴛʀɪʙᴜᴛᴏꜱ:</gray>"
+      - "<gray> • ꜰᴏʀᴄᴀ: </gray><white>ᴍᴇᴅɪᴀ</white>"
+      - "<gray> • ᴅᴇꜰᴇꜱᴀ: </gray><white>ᴍᴜɪᴛᴏ ᴀʟᴛᴀ</white>"
+      - "<gray> • ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - "<gray> • ᴅᴇꜱᴛʀᴇᴢᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - ""
+      - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ</gray>"
+    slot: 12
+    action: "select_class: guardiao"
+    flags: [HIDE_ATTRIBUTES]
+
+  mago:
+    material: BLAZE_ROD
+    name: "<aqua>✨ ᴍᴀɢᴏ</aqua>"
+    lore:
+      - "<dark_gray>ᴍᴀɢᴏ ᴇʟᴇᴍᴇɴᴛᴀʟ</dark_gray>"
+      - ""
+      - "<gray>ᴅᴏᴍɪɴᴀ ᴀꜱ ꜰᴏʀᴄᴀꜱ ᴇʟᴇᴍᴇɴᴛᴀɪꜱ,</gray>"
+      - "<gray>ᴅᴇꜱᴛʀᴜɪɴᴅᴏ ɪɴɪᴍɪɢᴏꜱ ᴀ ᴅɪꜱᴛᴀɴᴄɪᴀ</gray>"
+      - "<gray>ᴄᴏᴍ ꜰᴇɪᴛɪᴄᴏꜱ ᴀʀᴄᴀɴᴏꜱ.</gray>"
+      - ""
+      - "<gray>ᴀᴛʀɪʙᴜᴛᴏꜱ:</gray>"
+      - "<gray> • ꜰᴏʀᴄᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - "<gray> • ᴅᴇꜰᴇꜱᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - "<gray> • ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ: </gray><white>ᴍᴜɪᴛᴏ ᴀʟᴛᴀ</white>"
+      - "<gray> • ᴅᴇꜱᴛʀᴇᴢᴀ: </gray><white>ᴍᴇᴅɪᴀ</white>"
+      - ""
+      - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ</gray>"
+    slot: 14
+    action: "select_class: mago"
+    flags: [HIDE_ATTRIBUTES]
+
+  necromante:
+    material: WITHER_SKELETON_SKULL
+    name: "<light_purple>☠ ɴᴇᴄʀᴏᴍᴀɴᴛᴇ</light_purple>"
+    lore:
+      - "<dark_gray>ɪɴᴠᴏᴄᴀᴅᴏʀ ꜱᴏᴍʙʀɪᴏ</dark_gray>"
+      - ""
+      - "<gray>ᴄᴏᴍᴀɴᴅᴀ ᴀꜱ ꜰᴏʀᴄᴀꜱ ᴅᴀ ᴍᴏʀᴛᴇ,</gray>"
+      - "<gray>ɪɴᴠᴏᴄᴀɴᴅᴏ ᴄʀɪᴀᴛᴜʀᴀꜱ ꜱᴏᴍʙʀɪᴀꜱ</gray>"
+      - "<gray>ᴇ ᴅʀᴇɴᴀɴᴅᴏ ᴀ ᴠɪᴅᴀ ᴅᴏꜱ ɪɴɪᴍɪɢᴏꜱ.</gray>"
+      - ""
+      - "<gray>ᴀᴛʀɪʙᴜᴛᴏꜱ:</gray>"
+      - "<gray> • ꜰᴏʀᴄᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - "<gray> • ᴅᴇꜰᴇꜱᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - "<gray> • ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ: </gray><white>ᴀʟᴛᴀ</white>"
+      - "<gray> • ᴅᴇꜱᴛʀᴇᴢᴀ: </gray><white>ᴍᴇᴅɪᴀ</white>"
+      - ""
+      - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ</gray>"
+    slot: 16
+    action: "select_class: necromante"
+    flags: [HIDE_ATTRIBUTES]
+
+  # ── Linha 2: Agilidade & Suporte ──
+
+  arqueiro:
+    material: BOW
+    name: "<green>🏹 ᴀʀǫᴜᴇɪʀᴏ</green>"
+    lore:
+      - "<dark_gray>ᴀᴛɪʀᴀᴅᴏʀ</dark_gray>"
+      - ""
+      - "<gray>ᴍᴇꜱᴛʀᴇ ᴅᴏ ᴀʀᴄᴏ, ᴀᴛɪɴɢɪɴᴅᴏ</gray>"
+      - "<gray>ᴀʟᴠᴏꜱ ᴀ ɢʀᴀɴᴅᴇ ᴅɪꜱᴛᴀɴᴄɪᴀ</gray>"
+      - "<gray>ᴄᴏᴍ ᴘʀᴇᴄɪꜱᴀᴏ ᴍᴏʀᴛᴀʟ.</gray>"
+      - ""
+      - "<gray>ᴀᴛʀɪʙᴜᴛᴏꜱ:</gray>"
+      - "<gray> • ꜰᴏʀᴄᴀ: </gray><white>ᴍᴇᴅɪᴀ</white>"
+      - "<gray> • ᴅᴇꜰᴇꜱᴀ: </gray><white>ᴍᴇᴅɪᴀ</white>"
+      - "<gray> • ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - "<gray> • ᴅᴇꜱᴛʀᴇᴢᴀ: </gray><white>ᴀʟᴛᴀ</white>"
+      - ""
+      - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ</gray>"
+    slot: 19
+    action: "select_class: arqueiro"
+    flags: [HIDE_ATTRIBUTES]
+
+  ladino:
+    material: IRON_NUGGET
+    name: "<gray>🗡 ʟᴀᴅɪɴᴏ</gray>"
+    lore:
+      - "<dark_gray>ᴀꜱꜱᴀꜱꜱɪɴᴏ</dark_gray>"
+      - ""
+      - "<gray>ᴀꜱꜱᴀꜱꜱɪɴᴏ ꜰᴜʀᴛɪᴠᴏ, ᴀᴛᴀᴄᴀɴᴅᴏ</gray>"
+      - "<gray>ᴅᴀꜱ ꜱᴏᴍʙʀᴀꜱ ᴄᴏᴍ ɢᴏʟᴘᴇꜱ</gray>"
+      - "<gray>ʀᴀᴘɪᴅᴏꜱ ᴇ ʟᴇᴛᴀɪꜱ.</gray>"
+      - ""
+      - "<gray>ᴀᴛʀɪʙᴜᴛᴏꜱ:</gray>"
+      - "<gray> • ꜰᴏʀᴄᴀ: </gray><white>ᴍᴇᴅɪᴀ</white>"
+      - "<gray> • ᴅᴇꜰᴇꜱᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - "<gray> • ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - "<gray> • ᴅᴇꜱᴛʀᴇᴢᴀ: </gray><white>ᴍᴜɪᴛᴏ ᴀʟᴛᴀ</white>"
+      - ""
+      - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ</gray>"
+    slot: 21
+    action: "select_class: ladino"
+    flags: [HIDE_ATTRIBUTES]
+
+  clerigo:
+    material: GOLDEN_APPLE
+    name: "<gold>✦ ᴄʟᴇʀɪɢᴏ</gold>"
+    lore:
+      - "<dark_gray>ꜱᴜᴘᴏʀᴛᴇ ꜱᴀɢʀᴀᴅᴏ</dark_gray>"
+      - ""
+      - "<gray>ᴄᴀɴᴀʟɪᴢᴀ ᴏ ᴘᴏᴅᴇʀ ᴅɪᴠɪɴᴏ,</gray>"
+      - "<gray>ᴄᴜʀᴀɴᴅᴏ ꜰᴇʀɪᴅᴀꜱ ᴇ ᴘʀᴏᴛᴇɢᴇɴᴅᴏ</gray>"
+      - "<gray>ᴀʟɪᴀᴅᴏꜱ ᴄᴏᴍ ʙᴇɴᴄᴀᴏꜱ ꜱᴀɢʀᴀᴅᴀꜱ.</gray>"
+      - ""
+      - "<gray>ᴀᴛʀɪʙᴜᴛᴏꜱ:</gray>"
+      - "<gray> • ꜰᴏʀᴄᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - "<gray> • ᴅᴇꜰᴇꜱᴀ: </gray><white>ᴍᴇᴅɪᴀ</white>"
+      - "<gray> • ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ: </gray><white>ᴀʟᴛᴀ</white>"
+      - "<gray> • ᴅᴇꜱᴛʀᴇᴢᴀ: </gray><white>ʙᴀɪxᴀ</white>"
+      - ""
+      - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ</gray>"
+    slot: 23
+    action: "select_class: clerigo"
+    flags: [HIDE_ATTRIBUTES]
+
+  monge:
+    material: RABBIT_FOOT
+    name: "<white>☯ ᴍᴏɴɢᴇ</white>"
+    lore:
+      - "<dark_gray>ᴀʀᴛɪꜱᴛᴀ ᴍᴀʀᴄɪᴀʟ</dark_gray>"
+      - ""
+      - "<gray>ᴅᴏᴍɪɴᴀ ᴀꜱ ᴀʀᴛᴇꜱ ᴍᴀʀᴄɪᴀɪꜱ,</gray>"
+      - "<gray>ᴜꜱᴀɴᴅᴏ ᴄᴏʀᴘᴏ ᴇ ᴇꜱᴘɪʀɪᴛᴏ</gray>"
+      - "<gray>ᴄᴏᴍᴏ ᴀʀᴍᴀ ʟᴇᴛᴀʟ.</gray>"
+      - ""
+      - "<gray>ᴀᴛʀɪʙᴜᴛᴏꜱ:</gray>"
+      - "<gray> • ꜰᴏʀᴄᴀ: </gray><white>ᴀʟᴛᴀ</white>"
+      - "<gray> • ᴅᴇꜰᴇꜱᴀ: </gray><white>ᴍᴇᴅɪᴀ</white>"
+      - "<gray> • ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ: </gray><white>ᴍᴇᴅɪᴀ</white>"
+      - "<gray> • ᴅᴇꜱᴛʀᴇᴢᴀ: </gray><white>ᴀʟᴛᴀ</white>"
+      - ""
+      - "<yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇꜱᴄᴏʟʜᴇʀ</gray>"
+    slot: 25
+    action: "select_class: monge"
+    flags: [HIDE_ATTRIBUTES]
+
+  # ── Info ──
+
+  info:
+    material: BOOK
+    name: "<yellow>📚 ɢᴜɪᴀ ᴅᴀꜱ ᴄʟᴀꜱꜱᴇꜱ</yellow>"
+    lore:
+      - "<gray>ᴄᴏᴍᴘᴀʀᴇ ᴇꜱᴛɪʟᴏꜱ ᴇ ʙᴏɴᴜꜱ</gray>"
+      - "<gray>ᴀɴᴛᴇꜱ ᴅᴇ ᴅᴇᴄɪᴅɪʀ.</gray>"
+      - ""
+      - "<red>⚠</red> <gray>ᴇꜱᴛᴀ ᴅᴇᴄɪꜱᴀᴏ ᴇ ᴘᴇʀᴍᴀɴᴇɴᴛᴇ.</gray>"
+    slot: 40
+    flags: [HIDE_ATTRIBUTES]

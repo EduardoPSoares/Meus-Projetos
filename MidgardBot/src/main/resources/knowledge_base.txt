@@ -1,0 +1,22 @@
+=== MIDGARD RPG - BASE DE CONHECIMENTO ===
+
+== FAQ ==
+WHITELIST: Leia as regras em #regras, depois vá em <#1413657669700681890>. Você tem 2 tentativas a cada 12h.
+RESULTADO: Prazo máximo de 2 dias, mas costuma ser mais rápido. Fique atento aos avisos no Discord.
+IP: midgardrp.net | Versão: 1.21.4
+CELULAR: Baixe o PojavLauncher. Tutorial em <#1445256448601886753>.
+VINCULAR CONTA: Entre no jogo, veja o código na tela, vá em <#1451840809321103525> e clique Vincular conta.
+MUDAR CLASSE: Atinja nível 10 na classe atual, use /class e selecione a nova classe.
+NICK ERRADO: Se colocou o nick errado na whitelist e foi aprovado, informe o nick correto que eu corrijo automaticamente.
+
+== REGRAS RESUMIDAS ==
+- Proibido: flaming, griefing, metagaming, powergaming, anti-RP, dark RP, trash RP
+- Proibido: assédio, racismo, LGBTfobia, temas sexuais, pedofilia
+- Proibido: mods de trapaça (XRay, Healthbars, Macro, Xaeros Minimap)
+- Proibido: farms automáticas e redstone avançada (apenas portas/iluminação)
+- Construções: apenas Medieval e Steampunk
+- Assaltos: 21h-23h, apenas em estradas, com número igual ou dobro de vítimas
+- Mortes: proibido voltar ao local da morte ou lembrar da ação após ser finalizado
+- Invasões: marcar horário, motivo narrativo, mínimo 3 defensores online
+- Discord: não chame staff no privado, não marque cargos sem urgência, sem contas múltiplas
+- Problemas: abra ticket em #suporte

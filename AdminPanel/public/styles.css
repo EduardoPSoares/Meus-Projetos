@@ -1,0 +1,8 @@
+@import url('./styles/core/theme.css');
+@import url('./styles/domains/ui.css');
+@import url('./styles/domains/services.css');
+@import url('./styles/domains/players.css');
+@import url('./styles/domains/shop.css');
+@import url('./styles/domains/rewards.css');
+@import url('./styles/domains/launcher.css');
+@import url('./styles/panel.css');

@@ -1,0 +1,20 @@
+name: MidgardLoremakers
+version: '1.0-SNAPSHOT'
+main: me.ray.midgardLoremakers.MidgardLoremakers
+api-version: '1.21.4'
+authors: [ ray ]
+description: Painel web embutido para criacao e organizacao de livros com token e SQLite.
+
+commands:
+  loremaker:
+    description: Abre o livro com acesso ao painel do LoreMaker.
+    usage: /loremaker [token|reload|import|give <jogador> <id>]
+    permission: midgardloremakers.use
+
+permissions:
+  midgardloremakers.use:
+    description: Permite abrir o painel do Midgard LoreMaker.
+    default: true
+  midgardloremakers.reload:
+    description: Permite recarregar a configuracao e reiniciar o painel web do Midgard LoreMaker.
+    default: op

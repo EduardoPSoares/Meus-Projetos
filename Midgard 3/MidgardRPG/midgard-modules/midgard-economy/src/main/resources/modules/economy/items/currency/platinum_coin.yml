@@ -1,0 +1,21 @@
+platinum_coin:
+  base:
+    material: NETHERITE_INGOT
+    name: '<gradient:#e5e4e2:#b0b0b0>ᴍᴏᴇᴅᴀ ᴅᴇ ᴘʟᴀᴛɪɴᴀ</gradient>'
+    tier: EPIC
+    type: MISCELLANEOUS
+    model-data: 1004
+  mechanics:
+    nbt-tags: "currency:1000000"
+    lore:
+      - '<gray>ᴛɪᴘᴏ:<purple><bold>ᴍᴏᴇᴅᴀ ᴇᴘɪᴄᴀ</bold></purple>'
+      - ''
+      - '<gray>ᴀ ᴍᴏᴇᴅᴀ ᴍᴀɪs ᴠᴀʟɪᴏsᴀ ᴅᴇ ᴍɪᴅɢᴀʀᴅ,</gray>'
+      - '<gray>ᴇǫᴜɪᴠᴀʟᴇɴᴛᴇ ᴀ 100 ᴍᴏᴇᴅᴀs ᴅᴇ ᴏᴜʀᴏ.</gray>'
+      - '<gray>ᴀᴘᴇɴᴀs ᴏs ᴍᴀɪs ᴘᴏᴅᴇʀᴏsᴏs ᴅᴏ</gray>'
+      - '<gray>ʀᴇɪɴᴏ ᴘᴏssᴜᴇᴍ ᴇssᴀ ʀᴀʀɪᴅᴀᴅᴇ.</gray>'
+      - ''
+      - '<gradient:#e5e4e2:#b0b0b0><bold>✦ ʀɪǫᴜᴇᴢᴀ sᴜᴘʀᴇᴍᴀ ✦</bold></gradient>'
+      - ''
+      - '<light_purple><bold>✦ ᴠᴀʟᴏʀ: 1.000.000 ʙʀᴏɴᴢᴇ ✦</bold></light_purple>'
+      - ''

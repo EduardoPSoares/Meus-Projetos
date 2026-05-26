@@ -1,0 +1,27 @@
+# ==============================================================================
+# SKILLS ELEMENTAIS (MIDGARD RPG)
+# ==============================================================================
+# Coloque este arquivo na pasta /plugins/MythicMobs/Skills/
+# ==============================================================================
+
+# Skill que lança o projétil
+IceBolt:
+  Skills:
+  - message{m="<aqua>[IceMage] <white>Lança de Gelo!"} @PlayersInRadius{r=20}
+  # Lança uma bola de neve (SNOWBALL)
+  # bulletType=ITEM define que o projétil terá a aparência de um item
+  # material=SNOWBALL define que esse item é uma bola de neve
+  - projectile{bulletType=ITEM;material=SNOWBALL;v=20;i=1;onSpawn=IceBolt-Setup;onHit=IceBolt-Hit} @target
+
+# Configura o projétil (Adiciona a tag na entidade Bola de Neve)
+IceBolt-Setup:
+  Skills:
+  - addtag{t=midgard.damage.ice} @self
+  - effect:particles{p=snowflake;amount=5;speed=0.01} @self ~onTimer:2
+
+# O que acontece quando acerta
+IceBolt-Hit:
+  Skills:
+  # Dano Elemental de Gelo (15) - Substitui o dano físico
+  - midgarddamage{amount=15;element=ICE;type=MAGICAL} @target
+  - effect:particles{p=block_crack;m=ICE;amount=20} @target

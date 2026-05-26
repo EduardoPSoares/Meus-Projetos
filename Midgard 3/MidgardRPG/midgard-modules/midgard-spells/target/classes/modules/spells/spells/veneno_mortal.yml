@@ -1,0 +1,82 @@
+name: "<dark_purple>ᴠᴇɴᴇɴᴏ ᴍᴏʀᴛᴀʟ</dark_purple>"
+mythic-skill: "VenenoMortal"
+spell-type: COMMON
+
+cooldown:
+  base: 10.0
+  per-level: -0.3
+mana:
+  base: 18.0
+  per-level: -0.5
+stamina: 15.0
+
+max-level: 10
+
+requirements:
+  class: "Ladino"
+  level: 5
+
+icon:
+  material: SPIDER_EYE
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<dark_purple><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></dark_purple>"
+  - ""
+  - "<gray>ᴀᴘʟɪᴄᴀ ᴜᴍ ᴠᴇɴᴇɴᴏ ʟᴇᴛᴀʟ ɴᴀ ʟᴀᴍɪɴᴀ,</gray>"
+  - "<gray>ᴄᴀᴜsᴀɴᴅᴏ ᴅᴀɴᴏ ᴄᴏɴᴛɪɴᴜᴏ ᴀᴏ ᴀʟᴠᴏ</gray>"
+  - "<gray>ᴀᴛɪɴɢɪᴅᴏ ᴘᴏʀ ᴀʟɢᴜɴs sᴇɢᴜɴᴅᴏs.</gray>"
+  - ""
+  - "<dark_purple><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></dark_purple>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - "<gray>ᴅᴀɴᴏ ᴅᴇ ᴠᴇɴᴇɴᴏ:<dark_green>{poison_damage}/s</dark_green>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ʟᴀᴅɪɴᴏ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>5</yellow>"
+
+variables:
+  damage:
+    base: 8.0
+    per-level: 2.5
+  poison_damage:
+    base: 4.0
+    per-level: 1.5
+
+milestones:
+  3:
+    visual: "veneno_mortal_drip"
+    mechanic-override: "VenenoMortalMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "veneno_mortal_toxic"
+    mechanic-override: "VenenoMortalMk3"
+    stat-bonus:
+      dexterity: 2.0
+
+mastery:
+  attribute-bonus:
+    dexterity: 5
+
+sounds:
+  cast-start:
+    sound: "entity.spider.ambient"
+    volume: 0.8
+    pitch: 1.2
+  cast-finish:
+    sound: "entity.spider.hurt"
+    volume: 0.6
+    pitch: 1.0
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

@@ -1,0 +1,11 @@
+name: MidgardMaintenance
+version: 1.0
+main: me.ray.midgardspigot.MidgardSpigot
+api-version: 1.21
+authors: [Ray]
+softdepend: [MMOCore, ReviveMe, MidgardPermaDeath]
+commands:
+  mmaintenance:
+    description: Comandos de manutencao
+    permission: midgard.admin
+    aliases: [mmaint]

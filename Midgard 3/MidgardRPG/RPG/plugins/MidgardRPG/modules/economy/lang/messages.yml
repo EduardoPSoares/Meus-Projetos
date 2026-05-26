@@ -1,0 +1,71 @@
+# ============================================
+# MIDGARD ECONOMY - MENSAGENS
+# Formato: Small Caps Unicode para estilo visual
+# Sistema de moedas: Bronze, Prata, Ouro, Platina
+# ============================================
+
+pouch:
+  use_item_give: "<yellow>⚠</yellow> <gray>ᴜsᴇ <white>/item give coin_pouch_tier1</white> <gray>ᴘᴀʀᴀ ᴘᴇɢᴀʀ ᴜᴍᴀ ʙᴏʟsᴀ.</gray>"
+  gui:
+    title: "<white>ʙᴏʟsᴀ ᴅᴇ ᴍᴏᴇᴅᴀs</white>"
+  error:
+    no_permission: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ᴘᴇʀᴍɪssᴀᴏ ᴘᴀʀᴀ ᴜsᴀʀ ᴇsᴛᴀ ʙᴏʟsᴀ.</gray>"
+    inception: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏᴅᴇ ᴄᴏʟᴏᴄᴀʀ ʙᴏʟsᴀs ᴅᴇɴᴛʀᴏ ᴅᴇ ʙᴏʟsᴀs.</gray>"
+    not_found: "<red>✖</red> <gray>ᴇʀʀᴏ: ʙᴏʟsᴀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ.</gray>"
+    not_found_save: "<yellow>⚠</yellow> <gray>ʙᴏʟsᴀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ ᴘᴀʀᴀ sᴀʟᴠᴀʀ. ɪᴛᴇɴs ᴅʀᴏᴘᴀᴅᴏs ɴᴏ ᴄʜᴀᴏ.</gray>"
+    capacity_exceeded: "<red>✖</red> <gray>ᴀ ʙᴏʟsᴀ ᴇsᴛᴀ ᴄʜᴇɪᴀ. <dark_gray>(ᴄᴀᴘᴀᴄɪᴅᴀᴅᴇ ᴇxᴄᴇᴅɪᴅᴀ)</dark_gray>"
+  lore:
+    capacity: "<gray>ᴄᴀᴘᴀᴄɪᴅᴀᴅᴇ: <white>%capacity%</white> <gray>ᴍᴏᴇᴅᴀs</gray>"
+    contains: "<gray>ᴄᴏɴᴛᴇᴍ: <green>%amount%</green>"
+    marker_capacity: "ᴄᴀᴘᴀᴄɪᴅᴀᴅᴇ:"
+    marker_contains: "ᴄᴏɴᴛᴇᴍ:"
+
+currency:
+  format: "%amount% ✦"
+  inventory_full_drop: "<yellow>⚠</yellow> <gray>ɪɴᴠᴇɴᴛᴀʀɪᴏ ᴄʜᴇɪᴏ. ᴀʟɢᴜᴍᴀs ᴍᴏᴇᴅᴀs ᴄᴀɪʀᴀᴍ ɴᴏ ᴄʜᴀᴏ.</gray>"
+  error:
+    too_large: "<red>✖</red> <gray>ᴛʀᴀɴsᴀᴄᴀᴏ ᴍᴜɪᴛᴏ ɢʀᴀɴᴅᴇ ᴘᴀʀᴀ sᴇʀ ᴘʀᴏᴄᴇssᴀᴅᴀ ꜰɪsɪᴄᴀᴍᴇɴᴛᴇ.</gray>"
+
+balance:
+  header: "<gold><bold>✦</bold></gold> <aqua>sᴜᴀ ᴇᴄᴏɴᴏᴍɪᴀ:</aqua>"
+  physical: "<gray>ᴄᴀʀᴛᴇɪʀᴀ (ꜰɪsɪᴄᴏ): <white>%amount% ✦</white>"
+  other: "<gold><bold>✦</bold></gold> <aqua>ᴇᴄᴏɴᴏᴍɪᴀ ᴅᴇ %player%:</aqua>"
+
+admin:
+  help:
+    header: "<aqua>ᴄᴏᴍᴀɴᴅᴏs ᴅᴇ ᴇᴄᴏɴᴏᴍɪᴀ ᴀᴅᴍɪɴɪsᴛʀᴀᴛɪᴠᴀ:</aqua>"
+    give: "<white>/rpg admin econ give <jogador> <quantia></white> <gray>- ᴅᴀʀ ᴍᴏᴇᴅᴀs</gray>"
+    take: "<white>/rpg admin econ take <jogador> <quantia></white> <gray>- ʀᴇᴍᴏᴠᴇʀ ᴍᴏᴇᴅᴀs</gray>"
+    set: "<white>/rpg admin econ set <jogador> <quantia></white> <gray>- ᴅᴇꜰɪɴɪʀ sᴀʟᴅᴏ</gray>"
+    balance: "<white>/rpg admin econ balance [jogador]</white> <gray>- ᴠᴇʀ sᴀʟᴅᴏ</gray>"
+    pouch: "<white>/rpg admin econ pouch</white> <gray>- ɢᴇʀᴇɴᴄɪᴀ ʙᴏʟsᴀs ᴅᴇ ᴍᴏᴇᴅᴀs</gray>"
+    reload: "<white>/rpg admin econ reload</white> <gray>- ʀᴇᴄᴀʀʀᴇɢᴀ ᴄᴏɴꜰɪɢᴜʀᴀᴄᴏᴇs ᴅᴇ ᴇᴄᴏɴᴏᴍɪᴀ</gray>"
+  give:
+    usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/rpg admin econ give <jogador> <quantidade></white>"
+    success_sender: "<green>✔</green> <gray>ᴠᴏᴄᴇ ᴅᴇᴜ <white>%amount%</white> <gray>ᴍᴏᴇᴅᴀs ᴘᴀʀᴀ <aqua>%target%</aqua><gray>.</gray>"
+    success_target: "<green>✔</green> <gray>ᴠᴏᴄᴇ ʀᴇᴄᴇʙᴇᴜ <white>%amount%</white> <gray>ᴍᴏᴇᴅᴀs ᴅᴇ ᴜᴍ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ.</gray>"
+  take:
+    usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/rpg admin econ take <jogador> <quantidade></white>"
+    success_sender: "<green>✔</green> <gray>ᴠᴏᴄᴇ ʀᴇᴍᴏᴠᴇᴜ <white>%amount%</white> <gray>ᴍᴏᴇᴅᴀs ᴅᴇ <aqua>%target%</aqua><gray>.</gray>"
+    success_target: "<red>✖</red> <gray>ᴜᴍ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ʀᴇᴍᴏᴠᴇᴜ <white>%amount%</white> <gray>ᴍᴏᴇᴅᴀs ᴅᴇ sᴜᴀ ᴄᴀʀᴛᴇɪʀᴀ.</gray>"
+    insufficient: "<red>✖</red> <gray>ᴏ ᴊᴏɢᴀᴅᴏʀ ɴᴀᴏ ᴘᴏssᴜɪ ᴍᴏᴇᴅᴀs sᴜꜰɪᴄɪᴇɴᴛᴇs.</gray>"
+  set:
+    usage: "<yellow>⚠</yellow> <gray>ᴜsᴏ: <white>/rpg admin econ set <jogador> <quantidade></white>"
+    success_sender: "<green>✔</green> <gray>sᴀʟᴅᴏ ᴅᴇ <aqua>%target%</aqua> <gray>ᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ <white>%amount%</white> <gray>ᴍᴏᴇᴅᴀs.</gray>"
+    success_target: "<yellow>⚠</yellow> <gray>sᴇᴜ sᴀʟᴅᴏ ꜰᴏɪ ᴅᴇꜰɪɴɪᴅᴏ ᴘᴀʀᴀ <white>%amount%</white> <gray>ᴍᴏᴇᴅᴀs.</gray>"
+    negative: "<red>✖</red> <gray>ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ɴᴀᴏ ᴘᴏᴅᴇ sᴇʀ ɴᴇɢᴀᴛɪᴠᴀ.</gray>"
+  
+error:
+  no_permission: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴛᴇᴍ ᴘᴇʀᴍɪssᴀᴏ.</gray>"
+  invalid_number: "<red>✖</red> <gray>ɴᴜᴍᴇʀᴏ ɪɴᴠᴀʟɪᴅᴏ. ᴜsᴇ ꜰᴏʀᴍᴀᴛᴏs ᴄᴏᴍᴏ 100, 1ᴋ, 1.5ᴍ.</gray>"
+  player_only: "<red>✖</red> <gray>ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴇ ᴀᴘᴇɴᴀs ᴘᴀʀᴀ ᴊᴏɢᴀᴅᴏʀᴇs.</gray>"
+  player_not_found: "<red>✖</red> <gray>ᴊᴏɢᴀᴅᴏʀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ.</gray>"
+  positive_amount: "<red>✖</red> <gray>ǫᴜᴀɴᴛɪᴅᴀᴅᴇ ᴅᴇᴠᴇ sᴇʀ ᴘᴏsɪᴛɪᴠᴀ.</gray>"
+  empty_input: "<red>✖</red> <gray>ᴇɴᴛʀᴀᴅᴀ ᴠᴀᴢɪᴀ.</gray>"
+  must_specify_player: "<yellow>⚠</yellow> <gray>ᴇsᴘᴇᴄɪꜰɪǫᴜᴇ ᴜᴍ ᴊᴏɢᴀᴅᴏʀ.</gray>"
+
+command:
+  economy_description: "Gerencia suas moedas e bolsa"
+  economy_usage: "/mideco [compact|decompact]"
+  economy_admin_description: "Gerencia economia e moedas do servidor (admin)"
+  economy_admin_usage: "/rpg admin econ <give|take|set|balance|compact|decompact|pouch|reload> [args]"

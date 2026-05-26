@@ -1,0 +1,116 @@
+ceifador_de_almas:
+  base:
+    material: NETHERITE_SWORD
+    name: "<light_purple>ᴄᴇɪꜰᴀᴅᴏʀ ᴅᴇ ᴀʟᴍᴀs</light_purple>"
+    tier: MYTHIC
+    type: GREATSWORD
+    description:
+    - "<gray>ᴜᴍᴀ ʟᴀᴍɪɴᴀ ᴀᴍᴀʟᴅɪᴄᴏᴀᴅᴀ ǫᴜᴇ ᴄᴇɪꜰᴀ ᴀʟᴍᴀs,</gray>"
+    - "<gray>ᴄᴀᴅᴀ ᴠɪᴅᴀ ᴄᴇɪꜰᴀᴅᴀ ꜰᴏʀᴛᴀʟᴇᴄᴇ sᴇᴜ ᴘᴏʀᴛᴀᴅᴏʀ.</gray>"
+    revision-id: 1
+    attack-damage: 58
+    strength: 20
+    critical-strike-chance: 10
+    critical-strike-power: 30
+    darkness-damage: 20
+    lifesteal: 8
+    max-health: 50
+    two-handed: 1
+    required-level: 60
+
+frostmourne:
+  base:
+    material: NETHERITE_SWORD
+    name: "<light_purple>ꜰʀᴏsᴛᴍᴏᴜʀɴᴇ</light_purple>"
+    tier: MYTHIC
+    type: GREATSWORD
+    description:
+    - "<gray>ᴀ ʟᴀᴍɪɴᴀ ᴄᴏɴɢᴇʟᴀᴅᴀ ᴅᴀ ᴍᴏʀᴛᴇ,</gray>"
+    - "<gray>sᴇᴜ ᴛᴏǫᴜᴇ ɢᴇʟɪᴅᴏ ᴄᴏɴsᴏᴍᴇ ᴀ ᴠɪᴅᴀ ᴅᴏs ᴠɪᴠᴏs.</gray>"
+    revision-id: 1
+    attack-damage: 55
+    strength: 18
+    ice-damage: 25
+    critical-strike-power: 25
+    armor-penetration: 12
+    max-health: 60
+    two-handed: 1
+    required-level: 60
+
+arco_de_artemis:
+  base:
+    material: BOW
+    name: "<light_purple>ᴀʀᴄᴏ ᴅᴇ ᴀʀᴛᴇᴍɪs</light_purple>"
+    tier: MYTHIC
+    type: BOW
+    description:
+    - "<gray>ᴏ ᴀʀᴄᴏ ᴅᴀ ᴅᴇᴜsᴀ ᴅᴀ ᴄᴀᴄᴀ,</gray>"
+    - "<gray>sᴜᴀs ꜰʟᴇᴄʜᴀs ᴅᴇ ʟᴜᴢ ᴊᴀᴍᴀɪs ᴇʀʀᴀᴍ ᴏ ᴀʟᴠᴏ.</gray>"
+    revision-id: 1
+    attack-damage: 52
+    dexterity: 20
+    projectile-damage: 28
+    critical-strike-chance: 15
+    critical-strike-power: 25
+    light-damage: 15
+    movement-speed: 8
+    required-level: 60
+
+bastao_de_merlin:
+  base:
+    material: BLAZE_ROD
+    name: "<red>ʙᴀsᴛᴀᴏ ᴅᴇ ᴍᴇʀʟɪɴ</red>"
+    tier: ARTIFACT
+    type: STAFF
+    description:
+    - "<gray>ᴏ ʙᴀsᴛᴀᴏ ᴅᴏ ᴍᴀɪᴏʀ ᴍᴀɢᴏ ǫᴜᴇ ᴊᴀ ᴇxɪsᴛɪᴜ,</gray>"
+    - "<gray>ᴄᴀɴᴀʟɪᴢᴀ ᴛᴏᴅᴏs ᴏs ᴇʟᴇᴍᴇɴᴛᴏs ᴅᴀ ᴄʀɪᴀᴄᴀᴏ.</gray>"
+    revision-id: 1
+    magic-damage: 72
+    intelligence: 25
+    max-mana: 150
+    skill-damage: 18
+    cooldown-reduction: 12
+    divine-damage: 20
+    fire-damage: 15
+    ice-damage: 15
+    required-level: 65
+
+ragnarok:
+  base:
+    material: NETHERITE_SWORD
+    name: "<red>ʀᴀɢɴᴀʀᴏᴋ</red>"
+    tier: ARTIFACT
+    type: SWORD
+    description:
+    - "<gray>ᴀ ᴇsᴘᴀᴅᴀ ᴅᴏ ꜰɪᴍ ᴅᴏs ᴛᴇᴍᴘᴏs,</gray>"
+    - "<gray>sᴜᴀ ʟᴀᴍɪɴᴀ ᴄᴀʀʀᴇɢᴀ ᴏ ᴘᴏᴅᴇʀ ᴅᴀ ᴅᴇsᴛʀᴜɪᴄᴀᴏ ᴇᴛᴇʀɴᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 75
+    strength: 22
+    critical-strike-chance: 12
+    critical-strike-power: 35
+    fire-damage: 20
+    darkness-damage: 20
+    lifesteal: 6
+    max-health: 80
+    required-level: 65
+
+durandal:
+  base:
+    material: NETHERITE_SWORD
+    name: "<light_purple>ᴅᴜʀᴀɴᴅᴀʟ</light_purple>"
+    tier: MYTHIC
+    type: SWORD
+    description:
+    - "<gray>ᴀ ʟᴀᴍɪɴᴀ ɪɴᴅᴇsᴛʀᴜᴛɪᴠᴇʟ ᴅᴏ ᴘᴀʟᴀᴅɪɴᴏ,</gray>"
+    - "<gray>ʙᴇɴᴅɪᴛᴀ ᴄᴏᴍ ᴘʀᴏᴛᴇᴄᴀᴏ ᴅɪᴠɪɴᴀ ᴇ ꜰᴏʀᴄᴀ sᴀɢʀᴀᴅᴀ.</gray>"
+    revision-id: 1
+    attack-damage: 55
+    strength: 19
+    defense: 10
+    critical-strike-chance: 8
+    divine-damage: 18
+    max-health: 60
+    armor: 8
+    required-level: 60

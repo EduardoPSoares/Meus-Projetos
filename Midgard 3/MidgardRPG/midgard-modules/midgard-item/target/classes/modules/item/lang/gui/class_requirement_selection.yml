@@ -1,0 +1,20 @@
+title: ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴄʟᴀꜱꜱᴇ ɴᴇᴄᴇꜱꜱᴀʀɪᴀ
+error:
+  module_disabled: <red>ᴏ ᴍᴏᴅᴜʟᴏ ᴅᴇ ᴄʟᴀꜱꜱᴇꜱ ɴᴀᴏ ᴇꜱᴛᴀ ᴀᴛɪᴠᴀᴅᴏ!
+item:
+  name: "<yellow>%s"
+  lore:
+    - "<gray>ɪᴅ: %s"
+    - ''
+    - "<green>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ꜱᴇʟᴇᴄɪᴏɴᴀʀ ᴇꜱᴛᴀ ᴄʟᴀꜱꜱᴇ"
+buttons:
+  previous_page: <green>ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ
+  next_page: <green>ᴘʀᴏxɪᴍᴀ ᴘᴀɢɪɴᴀ
+  back: <red>ᴠᴏʟᴛᴀʀ
+  clear:
+    name: <yellow>ʟɪᴍᴘᴀʀ ʀᴇǫᴜɪꜱɪᴛᴏ
+    lore:
+      - <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʀᴇᴍᴏᴠᴇʀ ᴏ ʀᴇǫᴜɪꜱɪᴛᴏ ᴅᴇ ᴄʟᴀꜱꜱᴇ
+messages:
+  removed: "<green>ʀᴇǫᴜɪꜱɪᴛᴏ ᴅᴇ ᴄʟᴀꜱꜱᴇ ʀᴇᴍᴏᴠɪᴅᴏ."
+  set: "<green>ᴄʟᴀꜱꜱᴇ ɴᴇᴄᴇꜱꜱᴀʀɪᴀ ᴅᴇꜰɪɴɪᴅᴀ ᴘᴀʀᴀ: %s"

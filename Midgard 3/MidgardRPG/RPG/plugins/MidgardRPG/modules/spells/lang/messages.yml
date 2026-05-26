@@ -1,0 +1,615 @@
+# ══════════════════════════════════════════════
+#  MIDGARD SPELLS — MENSAGENS
+# ══════════════════════════════════════════════
+
+# ──────────────────────────────────────────────
+#  MENU PRINCIPAL DE MAGIAS
+# ──────────────────────────────────────────────
+main_gui:
+  title: "<white>ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴍᴀɢɪᴄᴀs</white>"
+
+  # ── Visão Geral ──
+  overview:
+    tag_passive:   "<aqua>◆ ᴘᴀssɪᴠᴀ</aqua>"
+    tag_common:    "<green>◆ ʜᴀʙɪʟɪᴅᴀᴅᴇ</green>"
+    tag_ultimate:  "<gold>★ ᴜʟᴛɪᴍᴀᴛᴇ</gold>"
+    always_active: "<dark_aqua>✦ sᴇᴍᴘʀᴇ ᴀᴛɪᴠᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀᴍᴇɴᴛᴇ</dark_aqua>"
+
+    # Stats com preview de level up (Fase 1)
+    stat_cooldown:       "<gray>⏱ ʀᴇᴄᴀʀɢᴀ: <white>%value%s</white></gray>"
+    stat_cooldown_lvlup: "<gray>⏱ ʀᴇᴄᴀʀɢᴀ: <white>%value%s</white> <dark_gray>→</dark_gray> <green>%next%s</green></gray>"
+    stat_mana:           "<blue>✦ ᴍᴀɴᴀ: <white>%value%</white></blue>"
+    stat_mana_lvlup:     "<blue>✦ ᴍᴀɴᴀ: <white>%value%</white> <dark_gray>→</dark_gray> <green>%next%</green></blue>"
+    stat_stamina:        "<yellow>✦ sᴛᴀᴍɪɴᴀ: <white>%value%</white></yellow>"
+    stat_stamina_lvlup:  "<yellow>✦ sᴛᴀᴍɪɴᴀ: <white>%value%</white> <dark_gray>→</dark_gray> <green>%next%</green></yellow>"
+
+    # Spells bloqueadas
+    locked_passive:
+      name: "<dark_gray>✖ ᴘᴀssɪᴠᴀ ʙʟᴏǫᴜᴇᴀᴅᴀ</dark_gray>"
+      lore:
+        - "<dark_gray>ᴅᴇsʙʟᴏǫᴜᴇɪᴇ ᴘʀᴏɢʀᴇᴅɪɴᴅᴏ</dark_gray>"
+        - "<dark_gray>ᴄᴏᴍ sᴜᴀ ᴄʟᴀssᴇ.</dark_gray>"
+    locked_common:
+      name: "<dark_gray>✖ ʜᴀʙɪʟɪᴅᴀᴅᴇ ʙʟᴏǫᴜᴇᴀᴅᴀ</dark_gray>"
+      lore:
+        - "<dark_gray>ᴅᴇsʙʟᴏǫᴜᴇɪᴇ ᴘʀᴏɢʀᴇᴅɪɴᴅᴏ</dark_gray>"
+        - "<dark_gray>ᴄᴏᴍ sᴜᴀ ᴄʟᴀssᴇ.</dark_gray>"
+    locked_ultimate:
+      name: "<dark_gray>✖ ᴜʟᴛɪᴍᴀᴛᴇ ʙʟᴏǫᴜᴇᴀᴅᴀ</dark_gray>"
+      lore:
+        - "<dark_gray>ᴅᴇsʙʟᴏǫᴜᴇɪᴇ ᴇᴍ ɴɪᴠᴇʟ ᴀʟᴛᴏ</dark_gray>"
+        - "<dark_gray>ᴄᴏᴍ sᴜᴀ ᴄʟᴀssᴇ.</dark_gray>"
+
+  # ── Slots de Equip ──
+  slots:
+    empty:
+      name: "<gray>sʟᴏᴛ %slot% · ᴠᴀzɪᴏ</gray>"
+      lore:
+        - "<dark_gray>ɴᴇɴʜᴜᴍᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴇǫᴜɪᴘᴀᴅᴀ.</dark_gray>"
+        - ""
+        - "<yellow>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇǫᴜɪᴘᴀʀ</yellow>"
+    empty_combo:
+      lore:
+        - "<dark_gray>ɴᴇɴʜᴜᴍᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴇǫᴜɪᴘᴀᴅᴀ.</dark_gray>"
+        - "<gray>ᴄᴏᴍʙᴏ: <gold>%sequence%</gold></gray>"
+        - ""
+        - "<yellow>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇǫᴜɪᴘᴀʀ</yellow>"
+    skillbar_filled:
+      lore:
+        - "<gray>sʟᴏᴛ <white>%slot%</white> · ʙᴀʀʀᴀ ᴅᴇ ᴀᴛᴀʟʜᴏs</gray>"
+        - ""
+        - "<yellow>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴛʀᴏᴄᴀʀ</yellow>"
+    combo_filled:
+      lore:
+        - "<gray>ᴄᴏᴍʙᴏ: <gold>%sequence%</gold></gray>"
+        - ""
+        - "<yellow>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴛʀᴏᴄᴀʀ</yellow>"
+    invalid:
+      name: "<red>sʟᴏᴛ %slot% · ɪɴᴠᴀʟɪᴅᴏ</red>"
+      lore:
+        - "<dark_gray>ʜᴀʙɪʟɪᴅᴀᴅᴇ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ.</dark_gray>"
+        - ""
+        - "<yellow>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʀᴇᴄᴏɴꜰɪɢᴜʀᴀʀ</yellow>"
+    passive_empty:
+      name: "<dark_gray>ᴘᴀssɪᴠᴀ · ᴠᴀzɪᴏ</dark_gray>"
+      lore:
+        - "<dark_gray>ɴᴇɴʜᴜᴍᴀ ᴘᴀssɪᴠᴀ ᴅɪsᴘᴏɴɪᴠᴇʟ.</dark_gray>"
+    on_cooldown: "<red>⏱ ᴇᴍ ʀᴇᴄᴀʀɢᴀ: <white>%time%s</white></red>"
+    selected: "<aqua>▸ sᴇʟᴇᴄɪᴏɴᴀᴅᴏ — ᴄʟɪǫᴜᴇ ᴇᴍ ᴏᴜᴛʀᴏ sʟᴏᴛ ᴘᴀʀᴀ ᴛʀᴏᴄᴀʀ</aqua>"
+
+  # ── Tags de Tipo (usadas em múltiplas GUIs) ──
+  type_tags:
+    passive:  "<aqua>ᴘᴀssɪᴠᴀ</aqua>"
+    common:   "<green>ᴄᴏᴍᴜᴍ</green>"
+    ultimate: "<gold>ᴜʟᴛɪᴍᴀᴛᴇ</gold>"
+
+  # ── Itens do Menu Principal ──
+  items:
+    ultimate:
+      lore_tag:        "<gold>ᴜʟᴛɪᴍᴀᴛᴇ</gold>"
+      click_to_swap:   "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴛʀᴏᴄᴀʀ</yellow>"
+      empty_name:      "<gold>ᴜʟᴛɪᴍᴀᴛᴇ</gold>"
+      empty_lore:      "<dark_gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇǫᴜɪᴘᴀʀ</dark_gray>"
+    passive:
+      lore_tag:        "<aqua>ᴘᴀssɪᴠᴀ</aqua>"
+      always_active:   "<gray>sᴇᴍᴘʀᴇ ᴀᴛɪᴠᴀ</gray>"
+    locked:
+      name_ultimate:   "<dark_gray>ᴜʟᴛɪᴍᴀᴛᴇ</dark_gray>"
+      name_passive:    "<dark_gray>ᴘᴀssɪᴠᴀ</dark_gray>"
+      lore:            "<gray>ɴᴀᴏ ᴅᴇsʙʟᴏǫᴜᴇᴀᴅᴀ</gray>"
+    common:
+      skillbar_tag:    "<green>ᴄᴏᴍᴜᴍ</green> <dark_gray>•</dark_gray> <white>sʟᴏᴛ %slot%</white>"
+      combo_tag:       "<green>ᴄᴏᴍᴜᴍ</green> <dark_gray>•</dark_gray> <white>%combo%</white>"
+      click_to_swap:   "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴛʀᴏᴄᴀʀ</yellow>"
+    empty_slot:
+      name:            "<gray>sʟᴏᴛ %slot%</gray>"
+      lore:            "<dark_gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇǫᴜɪᴘᴀʀ</dark_gray>"
+    controls:
+      style_skillbar:  "<white>sᴋɪʟʟʙᴀʀ</white>"
+      style_combo:     "<white>ᴄᴏᴍʙᴏ</white>"
+      style_click:     "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴛʀᴏᴄᴀʀ</yellow>"
+      upgrade_name:    "<white>ᴜᴘɢʀᴀᴅᴇs</white>"
+      upgrade_lore:    "<yellow>ᴠᴇʀ ᴛᴏᴅᴀs ᴀs sᴘᴇʟʟs</yellow>"
+
+  # ── Formato de Stats (Compartilhado) ──
+  stats_format:        "<gray>⏱ %cd%s <blue>✦ %mana%</blue>"
+  stats_format_stamina: "  <gold>⚡ %stamina%</gold>"
+
+  # ── Botões ──
+  buttons:
+    reset:
+      name: "<red>✖ ʀᴇsᴇᴛᴀʀ sʟᴏᴛs</red>"
+      lore:
+        - "<gray>ʀᴇᴍᴏᴠᴇ ᴛᴏᴅᴀs ᴀs ʜᴀʙɪʟɪᴅᴀᴅᴇs</gray>"
+        - "<gray>ᴅᴏs sʟᴏᴛs ᴅᴇ ᴀᴛᴀʟʜᴏ.</gray>"
+        - ""
+        - "<yellow>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ʀᴇsᴇᴛᴀʀ</yellow>"
+    reset_confirm:
+      name: "<red><bold>✖ ᴄᴏɴꜰɪʀᴍᴀʀ ʀᴇsᴇᴛ?</bold></red>"
+      lore:
+        - "<red>ᴄʟɪǫᴜᴇ ɴᴏᴠᴀᴍᴇɴᴛᴇ ᴘᴀʀᴀ ᴄᴏɴꜰɪʀᴍᴀʀ!</red>"
+        - ""
+        - "<gray>ᴛᴏᴅᴏs ᴏs sʟᴏᴛs sᴇʀᴀᴏ ʟɪᴍᴘᴏs.</gray>"
+    style_skillbar:
+      name: "<yellow>⚔ ᴍᴏᴅᴏ: <white>ʙᴀʀʀᴀ ᴅᴇ ᴀᴛᴀʟʜᴏs</white></yellow>"
+      lore:
+        - "<gray>ᴜsᴇ ᴏs ᴀᴛᴀʟʜᴏs ɴᴜᴍᴇʀɪᴄᴏs</gray>"
+        - "<gray>ᴘᴀʀᴀ ᴄᴏɴᴊᴜʀᴀʀ ʜᴀʙɪʟɪᴅᴀᴅᴇs.</gray>"
+        - ""
+        - "<yellow>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ</yellow>"
+    style_combo:
+      name: "<yellow>⚔ ᴍᴏᴅᴏ: <light_purple>ᴄᴏᴍʙᴏ</light_purple></yellow>"
+      lore:
+        - "<gray>ᴜsᴇ <yellow>ʟ</yellow> ᴇ <light_purple>ʀ</light_purple> ᴘᴀʀᴀ ᴄᴏᴍʙᴏs.</gray>"
+        - ""
+        - "<yellow>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ</yellow>"
+    upgrade:
+      name: "<green>✦ ᴘʀᴏɢʀᴇssᴀᴏ ᴅᴇ ᴍᴀɢɪᴀs</green>"
+      lore:
+        - "<gray>ᴠᴇᴊᴀ ᴏ ᴘʀᴏɢʀᴇssᴏ ᴅᴀs sᴜᴀs</gray>"
+        - "<gray>ʜᴀʙɪʟɪᴅᴀᴅᴇs, ɴɪᴠᴇɪs ᴇ ᴍᴀʀᴄᴏs.</gray>"
+        - ""
+        - "<yellow>▸ ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʙʀɪʀ</yellow>"
+
+  # ── Cores de Nome por Tipo ──
+  spell_color:
+    passive:  "<aqua>"
+    common:   "<white>"
+    ultimate: "<gold>"
+
+  # ── Menu de Ajuda (GUI interativa) ──
+  help:
+    title: "<white>ᴀᴊᴜᴅᴀ: ᴍᴀɢɪᴀs</white>"
+    topics:
+      overview:
+        name: "<white>ᴠɪsᴀᴏ ɢᴇʀᴀʟ</white>"
+        lore:
+          - "<gray>ᴀᴘʀᴇɴᴅᴀ sᴏʙʀᴇ ᴏ sɪsᴛᴇᴍᴀ</gray>"
+          - "<gray>ᴅᴇ ᴍᴀɢɪᴀs ᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇs.</gray>"
+      modes:
+        name: "<white>ᴍᴏᴅᴏs ᴅᴇ ᴄᴏɴᴊᴜʀᴀᴄᴀᴏ</white>"
+        lore:
+          - "<gray>ᴇxɪsᴛᴇᴍ ᴅᴏɪs ᴍᴏᴅᴏs:</gray>"
+          - "<gray>sᴋɪʟʟʙᴀʀ ᴇ ᴄᴏᴍʙᴏ.</gray>"
+      skillbar:
+        name: "<white>ʙᴀʀʀᴀ ᴅᴇ ᴀᴛᴀʟʜᴏs</white>"
+        lore:
+          - "<gray>ᴜsᴇ ᴀs ᴛᴇᴄʟᴀs ɴᴜᴍᴇʀɪᴄᴀs</gray>"
+          - "<gray>ᴘᴀʀᴀ ᴄᴏɴᴊᴜʀᴀʀ ʜᴀʙɪʟɪᴅᴀᴅᴇs.</gray>"
+      combo:
+        name: "<white>sɪsᴛᴇᴍᴀ ᴅᴇ ᴄᴏᴍʙᴏs</white>"
+        lore:
+          - "<gray>ᴄᴏᴍʙɪɴᴇ ᴄʟɪǫᴜᴇs ᴇsǫᴜᴇʀᴅᴏ</gray>"
+          - "<gray>ᴇ ᴅɪʀᴇɪᴛᴏ ᴘᴀʀᴀ ᴄᴏɴᴊᴜʀᴀʀ.</gray>"
+      reset:
+        name: "<white>ʀᴇsᴇᴛᴀʀ sʟᴏᴛs</white>"
+        lore:
+          - "<gray>ʀᴇᴍᴏᴠᴇ ᴛᴏᴅᴀs ᴀs ᴍᴀɢɪᴀs</gray>"
+          - "<gray>ᴅᴏs sʟᴏᴛs ᴅᴇ ᴀᴛᴀʟʜᴏ.</gray>"
+      tips:
+        name: "<white>ᴅɪᴄᴀs</white>"
+        lore:
+          - "<gray>ᴄᴏɴsᴜʟᴛᴇ ᴅɪᴄᴀs ᴜᴛᴇɪs</gray>"
+          - "<gray>ᴘᴀʀᴀ ᴍᴇʟʜᴏʀᴀʀ sᴇᴜ ᴊᴏɢᴏ.</gray>"
+
+  # ── Mensagens de Chat ──
+  messages:
+    mode_changed_skillbar: "<green>✦</green> <gray>ᴍᴏᴅᴏ ᴀʟᴛᴇʀᴀᴅᴏ ᴘᴀʀᴀ <white>ʙᴀʀʀᴀ ᴅᴇ ᴀᴛᴀʟʜᴏs</white>.</gray>"
+    mode_changed_combo:    "<green>✦</green> <gray>ᴍᴏᴅᴏ ᴀʟᴛᴇʀᴀᴅᴏ ᴘᴀʀᴀ <light_purple>ᴄᴏᴍʙᴏ</light_purple>.</gray>"
+    reset_success:         "<green>✦</green> <gray>ᴛᴏᴅᴏs ᴏs sʟᴏᴛs ꜰᴏʀᴀᴍ ʟɪᴍᴘᴏs.</gray>"
+    reset_cancelled:       "<gray>ʀᴇsᴇᴛ ᴄᴀɴᴄᴇʟᴀᴅᴏ.</gray>"
+    passive_toggled_on:    "<green>✦</green> <white>%spell%</white> <gray>ᴀᴛɪᴠᴀᴅᴀ.</gray>"
+    passive_toggled_off:   "<yellow>⚠</yellow> <white>%spell%</white> <gray>ᴅᴇsᴀᴛɪᴠᴀᴅᴀ.</gray>"
+    passive_no_mana:       "<red>✖</red> <white>%spell%</white> <gray>ᴅᴇsᴀᴛɪᴠᴀᴅᴀ — ᴍᴀɴᴀ ɪɴsᴜꜰɪᴄɪᴇɴᴛᴇ.</gray>"
+
+  # ── Menu de Ajuda ──
+  help_chat:
+    title:    "<gray>══ <white>✦ ᴀᴊᴜᴅᴀ: ᴍᴀɢɪᴀs</white> <gray>══</gray>"
+    passive:  "<aqua>◆ ᴘᴀssɪᴠᴀ</aqua> <dark_gray>—</dark_gray> <gray>sᴇᴍᴘʀᴇ ᴀᴛɪᴠᴀ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀᴍᴇɴᴛᴇ.</gray>"
+    common:   "<green>◆ ʜᴀʙɪʟɪᴅᴀᴅᴇs</green> <dark_gray>—</dark_gray> <gray>4 ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴄᴏᴍᴜɴs ᴄᴏᴍ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ.</gray>"
+    ultimate: "<gold>★ ᴜʟᴛɪᴍᴀᴛᴇ</gold> <dark_gray>—</dark_gray> <gray>ᴘᴏᴅᴇʀ ᴍᴀxɪᴍᴏ, ᴅɪsᴘᴏɴɪᴠᴇʟ ᴇᴍ ɴɪᴠᴇʟ ᴀʟᴛᴏ.</gray>"
+
+  # ── Novo Info Button ──
+  info:
+    name: "<aqua>ɪɴꜰᴏʀᴍᴀᴄᴏᴇs</aqua>"
+    total_spells: "<gray>ᴛᴏᴛᴀʟ ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇs: <white>%total%</white></gray>"
+    common_count: "<white>ᴄᴏᴍᴜɴs: <white>%count%</white></white>"
+    ultimate_count: "<gold>ᴜʟᴛɪᴍᴀᴛᴇs: <white>%count%</white></gold>"
+    passive_count: "<aqua>ᴘᴀssɪᴠᴀs: <white>%count%</white></aqua>"
+    casting_style: "<yellow>ᴇsᴛɪʟᴏ: %style%</yellow>"
+    style_skillbar: "<white>ʙᴀʀʀᴀ ᴅᴇ ᴀᴛᴀʟʜᴏs</white>"
+    style_combo: "<light_purple>ᴄᴏᴍʙᴏ</light_purple>"
+
+  # ── Settings Button ──
+  settings:
+    name: "<yellow>ᴄᴏɴꜰɪɢᴜʀᴀᴄᴏᴇs</yellow>"
+    current_style: "<gray>ᴇsᴛɪʟᴏ ᴀᴛᴜᴀʟ: %style%</gray>"
+    style_skillbar: "<white>ʙᴀʀʀᴀ ᴅᴇ ᴀᴛᴀʟʜᴏs</white>"
+    style_combo: "<light_purple>ᴄᴏᴍʙᴏ</light_purple>"
+    click_to_toggle: "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴛᴇʀɴᴀʀ</yellow>"
+
+  # ── Upgrade Button ──
+  upgrade:
+    name: "<green>ᴘʀᴏɢʀᴇssᴀᴏ</green>"
+    lore: "<gray>ᴠᴇʀ ᴘʀᴏɢʀᴇssᴏ ᴅᴀs sᴘᴇʟʟs</gray>"
+
+# ──────────────────────────────────────────────
+#  MENU DE SELEÇÃO DE SPELLS
+# ──────────────────────────────────────────────
+spell_selection:
+  title: "<white>sᴇʟᴇᴄɪᴏɴᴀʀ ʜᴀʙɪʟɪᴅᴀᴅᴇ</white>"
+
+  header:
+    name: "<white>sʟᴏᴛ %slot%</white>"
+    lore: "<gray>ᴇsᴄᴏʟʜᴀ ᴜᴍᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ</gray>"
+
+  item:
+    level: "<gray>ɴɪᴠᴇʟ <white>%level%</white><dark_gray>/<gray>%max%</gray></dark_gray></gray>"
+    stats: "<gray>⏱ %cd%s<dark_gray>|</dark_gray> <blue>✦ %mana%</blue>"
+    locked: "<red>✖ ʙʟᴏǫᴜᴇᴀᴅᴏ</red>"
+    click_equip: "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇǫᴜɪᴘᴀʀ</yellow>"
+
+  clear:
+    name: "<red>ʟɪᴍᴘᴀʀ sʟᴏᴛ</red>"
+    lore: "<gray>ʀᴇᴍᴏᴠᴇ ᴀ ʜᴀʙɪʟɪᴅᴀᴅᴇ ᴅᴇsᴛᴇ sʟᴏᴛ</gray>"
+
+  nav:
+    previous: "<gray>← ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</gray>"
+    next: "<gray>ᴘʀᴏxɪᴍᴀ ᴘᴀɢɪɴᴀ →</gray>"
+
+  messages:
+    cleared: "<green>✦</green> <gray>sʟᴏᴛ <white>%slot%</white> ʟɪᴍᴘᴏ.</gray>"
+    equipped_skillbar: "<green>✦</green> <white>%spell%</white> <gray>ᴇǫᴜɪᴘᴀᴅᴀ ɴᴏ sʟᴏᴛ <white>%slot%</white>.</gray>"
+    equipped_combo: "<green>✦</green> <white>%spell%</white> <gray>ᴠɪɴᴄᴜʟᴀᴅᴀ ᴀᴏ ᴄᴏᴍʙᴏ <gold>%combo%</gold>.</gray>"
+
+# ──────────────────────────────────────────────
+#  MENU DE SELEÇÃO DE SPELLS
+# ──────────────────────────────────────────────
+# ──────────────────────────────────────────────
+#  MENU DE SELEÇÃO DE ULTIMATE
+# ──────────────────────────────────────────────
+ultimate_gui:
+  title: "<gold>ᴜʟᴛɪᴍᴀᴛᴇ</gold>"
+  back_button: "<gray>← ᴠᴏʟᴛᴀʀ</gray>"
+
+  empty:
+    name: "<gray>ɴᴇɴʜᴜᴍᴀ ᴜʟᴛɪᴍᴀᴛᴇ</gray>"
+    lore: "<dark_gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏssᴜɪ ᴜʟᴛɪᴍᴀᴛᴇs</dark_gray>"
+
+  showcase:
+    type_tag: "<gold>★ ᴜʟᴛɪᴍᴀᴛᴇ</gold>"
+    stats_header: "<gray>ᴀᴛʀɪʙᴜᴛᴏs:</gray>"
+    cooldown: "<gray>⏱ ʀᴇᴄᴀʀɢᴀ: <white>%value%s</white></gray>"
+    mana: "<blue>✦ ᴍᴀɴᴀ: <white>%value%</white></blue>"
+    stamina: "<yellow>⚡ sᴛᴀᴍɪɴᴀ: <white>%value%</white></yellow>"
+    cast_time: "<gray>⌛ ᴄᴀɴᴀʟɪzᴀᴄᴀᴏ: <white>%value%s</white></gray>"
+    level: "<gray>ɴɪᴠᴇʟ: <white>%level%</white><dark_gray>/<gray>%max%</gray></dark_gray></gray>"
+    equipped_badge: "<green>✓ ᴇǫᴜɪᴘᴀᴅᴀ</green>"
+    requirements_header: "<red>ʀᴇǫᴜɪsɪᴛᴏs:</red>"
+    navigation: "<dark_gray>%current% de %total%</dark_gray>"
+
+  nav:
+    previous: "<gray>← ᴀɴᴛᴇʀɪᴏʀ</gray>"
+    next: "<gray>ᴘʀᴏxɪᴍᴀ →</gray>"
+
+  equip:
+    locked_name: "<red>ʙʟᴏǫᴜᴇᴀᴅᴀ</red>"
+    locked_lore: "<gray>ɴᴀᴏ ᴀᴛᴇɴᴅᴇ ᴏs ʀᴇǫᴜɪsɪᴛᴏs</gray>"
+    equipped_name: "<green>ᴇǫᴜɪᴘᴀᴅᴀ</green>"
+    equipped_lore: "<gray>ᴇsᴛᴀ ᴜʟᴛɪᴍᴀᴛᴇ ᴊᴀ ᴇsᴛᴀ ᴇᴍ ᴜsᴏ</gray>"
+    available_name: "<yellow>ᴇǫᴜɪᴘᴀʀ</yellow>"
+    available_lore: "<gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴇǫᴜɪᴘᴀʀ</gray>"
+
+  messages:
+    equipped: "<gold>★</gold> <white>%spell%</white> <gray>ᴇǫᴜɪᴘᴀᴅᴀ!</gray>"
+    already_equipped: "<yellow>⚠</yellow> <gray>ᴇsᴛᴀ ᴜʟᴛɪᴍᴀᴛᴇ ᴊᴀ ᴇsᴛᴀ ᴇǫᴜɪᴘᴀᴅᴀ.</gray>"
+    requirements_failed: "<red>✖</red> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴀᴛᴇɴᴅᴇ ᴏs ʀᴇǫᴜɪsɪᴛᴏs.</gray>"
+
+# ──────────────────────────────────────────────
+#  CONJURAÇÃO
+# ──────────────────────────────────────────────
+casting:
+  mode_enabled:    "<green>✦</green> <gray>ᴄᴏɴᴊᴜʀᴀᴄᴀᴏ ᴀᴛɪᴠᴀᴅᴀ.</gray>"
+  mode_disabled:   "<yellow>⚠</yellow> <gray>ᴄᴏɴᴊᴜʀᴀᴄᴀᴏ ᴅᴇsᴀᴛɪᴠᴀᴅᴀ.</gray>"
+  already_casting: "<yellow>⚠</yellow> <gray>ᴠᴏᴄᴇ ᴊᴀ ᴇsᴛᴀ ᴄᴀɴᴀʟɪzᴀɴᴅᴏ.</gray>"
+  passive_spell:   "<yellow>⚠</yellow> <gray>ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴘᴀssɪᴠᴀs sᴀᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀs.</gray>"
+  on_cooldown:     "<red>⏱</red> <white>%spell%</white> <gray>ᴇᴍ ʀᴇᴄᴀʀɢᴀ: <white>%time%s</white>.</gray>"
+  no_mana:         "<red>✖</red> <gray>ᴍᴀɴᴀ ɪɴsᴜꜰɪᴄɪᴇɴᴛᴇ.</gray>"
+  no_stamina:      "<red>✖</red> <gray>sᴛᴀᴍɪɴᴀ ɪɴsᴜꜰɪᴄɪᴇɴᴛᴇ.</gray>"
+  interrupted:     "<red>✖</red> <gray>ᴄᴏɴᴊᴜʀᴀᴄᴀᴏ ɪɴᴛᴇʀʀᴏᴍᴘɪᴅᴀ: <white>%reason%</white>.</gray>"
+  spell_cast:      "<gold>★</gold> <white>%spell%</white> <gray>ᴄᴏɴᴊᴜʀᴀᴅᴏ!</gray>"
+  spell_queued:    "<gray>⏱ <white>%spell%</white> ᴇɴꜰɪʟᴇɪʀᴀᴅᴀ...</gray>"
+  interrupt_reasons:
+    movement: "ᴍᴏᴠɪᴍᴇɴᴛᴏ"
+    damage:   "ᴅᴀɴᴏ"
+    disconnect: "ᴅᴇsᴄᴏɴᴇxᴀᴏ"
+
+# ──────────────────────────────────────────────
+#  COMBOS
+# ──────────────────────────────────────────────
+combo:
+  display_format: "<gray>ᴄᴏᴍʙᴏ: <gold>%combo%</gold></gray>"
+  failed:         "<red>✖</red> <gray>ᴄᴏᴍʙᴏ ɪɴᴠᴀʟɪᴅᴏ.</gray>"
+  visual:
+    left:  "<yellow>◀</yellow>"
+    right: "<light_purple>▶</light_purple>"
+  input:
+    separator: " <dark_gray>·</dark_gray> "
+    done:      "<green>✓</green>"
+  custom:
+    prompt:           "<yellow>✦</yellow> <gray>ᴅɪɢɪᴛᴇ ᴏ ᴄᴏᴍʙᴏ ᴘᴀʀᴀ ᴏ sʟᴏᴛ <white>%slot%</white> (ᴇx: <gold>ʟʀʟ</gold>):</gray>"
+    set_success:      "<green>✦</green> <gray>ᴄᴏᴍʙᴏ ᴀʟᴛᴇʀᴀᴅᴏ ᴘᴀʀᴀ <gold>%combo%</gold>.</gray>"
+    conflict:         "<red>✖</red> <gray>ᴄᴏᴍʙᴏ <gold>%combo%</gold> ᴊᴀ ᴇsᴛᴀ ᴇᴍ ᴜsᴏ.</gray>"
+    invalid_format:   "<red>✖</red> <gray>ᴜsᴇ ᴀᴘᴇɴᴀs <yellow>ʟ</yellow> ᴇ <light_purple>ʀ</light_purple> (2-4 ᴄᴀʀᴀᴄᴛᴇʀᴇs).</gray>"
+    cancelled:        "<gray>ᴇᴅɪᴄᴀᴏ ᴅᴇ ᴄᴏᴍʙᴏ ᴄᴀɴᴄᴇʟᴀᴅᴀ.</gray>"
+
+# ──────────────────────────────────────────────
+#  ERROS
+# ──────────────────────────────────────────────
+errors:
+  no_permission:      "<red>✖</red> <gray>sᴇᴍ ᴘᴇʀᴍɪssᴀᴏ.</gray>"
+  system_error:       "<red>✖</red> <gray>sɪsᴛᴇᴍᴀ ɪɴᴅɪsᴘᴏɴɪᴠᴇʟ.</gray>"
+  spell_not_found:    "<red>✖</red> <gray>ᴍᴀɢɪᴀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴀ: <white>%spell%</white>.</gray>"
+  profile_not_loaded: "<red>✖</red> <gray>ᴘᴇʀꜰɪʟ ɴᴀᴏ ᴄᴀʀʀᴇɢᴀᴅᴏ.</gray>"
+  invalid_slot:       "<red>✖</red> <gray>sʟᴏᴛ ɪɴᴠᴀʟɪᴅᴏ <dark_gray>(ᴜsᴇ 0-4)</dark_gray>.</gray>"
+  config_error:       "<red>✖</red> <gray>ᴇʀʀᴏ ɴᴀ ᴄᴏɴꜰɪɢᴜʀᴀᴄᴀᴏ ᴅᴀ sᴋɪʟʟ <white>%skill%</white>.</gray>"
+  invalid_level:      "<red>✖</red> <gray>ɴɪᴠᴇʟ ɪɴᴠᴀʟɪᴅᴏ.</gray>"
+  player_not_found:   "<red>✖</red> <gray>ᴊᴏɢᴀᴅᴏʀ ɴᴀᴏ ᴇɴᴄᴏɴᴛʀᴀᴅᴏ.</gray>"
+  no_class:           "<red>✖</red> <gray>ᴇsᴄᴏʟʜᴀ ᴜᴍᴀ ᴄʟᴀssᴇ ᴘʀɪᴍᴇɪʀᴏ.</gray>"
+
+# ──────────────────────────────────────────────
+#  COMANDOS
+# ──────────────────────────────────────────────
+commands:
+  help_lines:
+    - ""
+    - "<gray>══ <yellow>✦ ᴍɪᴅɢᴀʀᴅ sᴘᴇʟʟs</yellow> <gray>══</gray>"
+    - ""
+    - "<yellow>/rpg spell</yellow> <dark_gray>—</dark_gray> <gray>ᴀʙʀᴇ ᴏ ᴍᴇɴᴜ ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇs</gray>"
+    - "<yellow>/rpg spell help</yellow> <dark_gray>—</dark_gray> <gray>ᴍᴏsᴛʀᴀ ᴇsᴛᴀ ᴀᴊᴜᴅᴀ</gray>"
+    - "<yellow>/rpg spell info <spell></yellow> <dark_gray>—</dark_gray> <gray>ᴅᴇᴛᴀʟʜᴇs ᴅᴇ ᴜᴍᴀ ᴍᴀɢɪᴀ</gray>"
+    - "<yellow>/rpg spell upgrade [spell]</yellow> <dark_gray>—</dark_gray> <gray>ᴍᴇɴᴜ ᴅᴇ ᴘʀᴏɢʀᴇssᴀᴏ</gray>"
+    - "<yellow>/rpg spell learn <spell> [player]</yellow> <dark_gray>—</dark_gray> <gray>ᴀᴘʀᴇɴᴅᴇʀ ᴍᴀɢɪᴀ</gray>"
+    - "<yellow>/rpg spell unlearn <spell> [player]</yellow> <dark_gray>—</dark_gray> <gray>ʀᴇᴍᴏᴠᴇʀ ᴍᴀɢɪᴀ</gray>"
+    - "<yellow>/rpg spell bind <0-4> <spell></yellow> <dark_gray>—</dark_gray> <gray>ᴠɪɴᴄᴜʟᴀʀ ᴀ ᴜᴍ sʟᴏᴛ</gray>"
+    - "<yellow>/rpg spell setlevel <spell> <lv> [player]</yellow> <dark_gray>—</dark_gray> <gray>ᴅᴇꜰɪɴɪʀ ɴɪᴠᴇʟ</gray>"
+    - ""
+
+  usage_bind:     "<red>✖</red> <gray>ᴜsᴏ: <yellow>/rpg spell bind <sʟᴏᴛ 0-4> <sᴘᴇʟʟɪᴅ></yellow></gray>"
+  usage_combo:    "<red>✖</red> <gray>ᴜsᴏ: <yellow>/rpg spell combo <sᴇǫ> <sᴘᴇʟʟɪᴅ></yellow></gray>"
+  usage_setlevel: "<red>✖</red> <gray>ᴜsᴏ: <yellow>/rpg spell setlevel <sᴘᴇʟʟ> <ʟᴇᴠᴇʟ> [ᴊᴏɢᴀᴅᴏʀ]</yellow></gray>"
+  usage_info:     "<red>✖</red> <gray>ᴜsᴏ: <yellow>/rpg spell info <sᴘᴇʟʟ></yellow></gray>"
+  usage_learn:    "<red>✖</red> <gray>ᴜsᴏ: <yellow>/rpg spell learn <sᴘᴇʟʟ> [ᴊᴏɢᴀᴅᴏʀ]</yellow></gray>"
+  usage_unlearn:  "<red>✖</red> <gray>ᴜsᴏ: <yellow>/rpg spell unlearn <sᴘᴇʟʟ> [ᴊᴏɢᴀᴅᴏʀ]</yellow></gray>"
+
+  spell_bound:      "<green>✦</green> <white>%spell%</white> <gray>ᴠɪɴᴄᴜʟᴀᴅᴀ ᴀᴏ sʟᴏᴛ <white>%slot%</white>.</gray>"
+  combo_bound:      "<green>✦</green> <white>%spell%</white> <gray>ᴠɪɴᴄᴜʟᴀᴅᴀ ᴀᴏ ᴄᴏᴍʙᴏ <gold>%combo%</gold>.</gray>"
+  setlevel_success: "<green>✦</green> <gray>ɴɪᴠᴇʟ ᴅᴇ <white>%spell%</white> ᴅᴇꜰɪɴɪᴅᴏ ᴄᴏᴍᴏ <white>%level%</white> ᴘᴀʀᴀ <white>%target%</white>.</gray>"
+  level_exceeds_max: "<red>✖</red> <gray>ɴɪᴠᴇʟ ᴍᴀxɪᴍᴏ ᴅᴇ <white>%spell%</white> ᴇ <white>%max%</white>.</gray>"
+  learn_success:    "<green>✦</green> <white>%spell%</white> <gray>ᴀᴘʀᴇɴᴅɪᴅᴀ ᴘᴏʀ <white>%target%</white>.</gray>"
+  unlearn_success:  "<green>✦</green> <white>%spell%</white> <gray>ʀᴇᴍᴏᴠɪᴅᴀ ᴅᴇ <white>%target%</white>.</gray>"
+  already_learned:  "<yellow>⚠</yellow> <white>%target%</white> <gray>ᴊᴀ ᴄᴏɴʜᴇᴄᴇ <white>%spell%</white>.</gray>"
+  not_learned:      "<yellow>⚠</yellow> <white>%target%</white> <gray>ɴᴀᴏ ᴄᴏɴʜᴇᴄᴇ <white>%spell%</white>.</gray>"
+
+  info:
+    header:          "<gray>══ <white>%spell%</white> <gray>══</gray>"
+    current_level:   "  <gray>ɴɪᴠᴇʟ: <white>%level%</white></gray>"
+    mana_cost:       "  <blue>✦ ᴍᴀɴᴀ: <white>%value%</white></blue>"
+    cooldown:        "  <gray>⏱ ʀᴇᴄᴀʀɢᴀ: <white>%value%s</white></gray>"
+    variables_header: "  <yellow>ᴠᴀʀɪᴀᴠᴇɪs:</yellow>"
+    variable_format: "  <yellow>%key%</yellow><dark_gray>:</dark_gray> <white>%value%</white> <dark_gray>(ʙᴀsᴇ: %base%)</dark_gray>"
+    variable_simple: "  <yellow>%key%</yellow><dark_gray>:</dark_gray> <white>%value%</white>"
+
+  description: "ɢᴇʀᴇɴᴄɪᴀ ᴍᴀɢɪᴀs ᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇs ᴅᴏ ᴊᴏɢᴀᴅᴏʀ"
+  usage: "/rpg spell [bind|combo|list|info|learn|unlearn]"
+
+  usage_givescroll: "<red>✖</red> <gray>ᴜsᴏ: <yellow>/rpg spell givescroll <ᴜɴʟᴇᴀʀɴɪɴɢ|ʟᴇᴀʀɴɪɴɢ|ʀᴇsᴘᴇᴄ> [sᴘᴇʟʟ] [ᴊᴏɢᴀᴅᴏʀ]</yellow></gray>"
+  invalid_scroll_type: "<red>✖</red> <gray>ᴛɪᴘᴏ ᴅᴇ ᴘᴇʀɢᴀᴍɪɴʜᴏ ɪɴᴠᴀʟɪᴅᴏ. ᴜsᴇ: <yellow>ᴜɴʟᴇᴀʀɴɪɴɢ, ʟᴇᴀʀɴɪɴɢ, ʀᴇsᴘᴇᴄ</yellow></gray>"
+  scroll_given:     "<green>✦</green> <gray>ᴘᴇʀɢᴀᴍɪɴʜᴏ <white>%type%</white> ᴅᴀᴅᴏ ᴘᴀʀᴀ <white>%target%</white>.</gray>"
+  usage_top:        "<red>✖</red> <gray>ᴜsᴏ: <yellow>/rpg spell top [ᴄᴀsᴛs|ᴍᴀsᴛᴇʀʏ|ʟᴇᴠᴇʟ]</yellow></gray>"
+
+# ──────────────────────────────────────────────
+#  REQUISITOS
+# ──────────────────────────────────────────────
+requirements:
+  level_needed:      "<red>✖ ɴɪᴠᴇʟ ɴᴇᴄᴇssᴀʀɪᴏ: <white>%level%</white></red>"
+  attribute_needed:  "<red>✖ ᴀᴛʀɪʙᴜᴛᴏ <white>%attribute%</white> ɴᴇᴄᴇssᴀʀɪᴏ: <white>%value%</white></red>"
+  class_needed:      "<red>✖ ᴄʟᴀssᴇ ɴᴇᴄᴇssᴀʀɪᴀ: <white>%class%</white></red>"
+  permission_needed: "<red>✖ ᴘᴇʀᴍɪssᴀᴏ ɴᴇᴄᴇssᴀʀɪᴀ.</red>"
+
+# ──────────────────────────────────────────────
+#  ACTION BAR
+# ──────────────────────────────────────────────
+actionbar:
+  separator:   "<dark_gray> | </dark_gray>"
+  error:       "<red>?</red>"
+  combo_hint:  "<gray>ᴜsᴇ <yellow>ʟ</yellow> ᴇ <light_purple>ʀ</light_purple> ᴘᴀʀᴀ ᴇxᴇᴄᴜᴛᴀʀ ᴄᴏᴍʙᴏs</gray>"
+  combo_count: "<dark_gray>(%count% ᴇǫᴜɪᴘᴀᴅᴏs)</dark_gray>"
+  skill:
+    ultimate_format:  "<gold>★ %name%</gold>"
+    empty:            "<dark_gray>%slot%: —</dark_gray>"
+    ready:            "<green>%slot%: %spell%</green>"
+    ready_no_mana:    "<dark_red>%slot%: %spell% <gray>(ᴍᴀɴᴀ)</gray></dark_red>"
+    ready_no_stamina: "<dark_red>%slot%: %spell% <gray>(sᴛᴀᴍɪɴᴀ)</gray></dark_red>"
+    cooldown:         "<red>%slot%: %spell% (%time%s)</red>"
+    passive:          "<aqua>0: %spell% ✦</aqua>"
+    queued:           "<yellow>%slot%: %spell% ⏱</yellow>"
+
+# ──────────────────────────────────────────────
+#  SPELL XP
+# ──────────────────────────────────────────────
+xp:
+  gained:    "<green>+%xp% xᴘ</green> <gray>ᴇᴍ <white>%spell%</white></gray>"
+  level_up:  "<gold>★</gold> <white>%spell%</white> <gray>sᴜʙɪᴜ ᴘᴀʀᴀ ɴɪᴠᴇʟ <yellow>%level%</yellow>!</gray>"
+
+# ──────────────────────────────────────────────
+#  MILESTONES
+# ──────────────────────────────────────────────
+milestones:
+  achieved: "<gold>✦</gold> <gray>ᴍᴀʀᴄᴏ ᴀʟᴄᴀɴᴄᴀᴅᴏ ᴇᴍ <white>%spell%</white> <gray>ɴᴏ ɴɪᴠᴇʟ <yellow>%level%</yellow>!</gray>"
+
+# ──────────────────────────────────────────────
+#  MASTERY
+# ──────────────────────────────────────────────
+mastery:
+  achieved: "<light_purple>★</light_purple> <gray>ᴠᴏᴄᴇ <gold>ᴅᴏᴍɪɴᴏᴜ</gold> <white>%spell%</white><gray>! ʙᴏɴᴜs ᴘᴇʀᴍᴀɴᴇɴᴛᴇs ᴀᴘʟɪᴄᴀᴅᴏs.</gray>"
+
+# ──────────────────────────────────────────────
+#  CHANNELING (BossBar)
+# ──────────────────────────────────────────────
+channeling:
+  bossbar_title: "<yellow>ᴄᴏɴᴊᴜʀᴀɴᴅᴏ <white>%spell%</white> <gray>— %time%</gray></yellow>"
+
+# ──────────────────────────────────────────────
+#  SCROLLS (Pergaminhos)
+# ──────────────────────────────────────────────
+scrolls:
+  names:
+    unlearning: "<red>ᴘᴇʀɢᴀᴍɪɴʜᴏ ᴅᴇ ᴅᴇsᴀᴘʀᴇɴᴅɪzᴀᴅᴏ</red>"
+    learning:   "<green>ᴘᴇʀɢᴀᴍɪɴʜᴏ ᴅᴇ ᴀᴘʀᴇɴᴅɪzᴀᴅᴏ — %spell%</green>"
+    respec:     "<light_purple>ᴘᴇʀɢᴀᴍɪɴʜᴏ ᴅᴇ ʀᴇsᴘᴇᴄ</light_purple>"
+  lore:
+    unlearning:
+      - "<gray>ᴜsᴇ ᴘᴀʀᴀ ᴅᴇsᴀᴘʀᴇɴᴅᴇʀ ᴜᴍᴀ ᴍᴀɢɪᴀ.</gray>"
+      - "<gray>ᴏ ɴɪᴠᴇʟ sᴇʀᴀ ᴘᴀʀᴄɪᴀʟᴍᴇɴᴛᴇ sᴀʟᴠᴏ</gray>"
+      - "<gray>ɴᴀ ᴍᴇᴍᴏʀɪᴀ ᴅᴏ ᴘᴇʀsᴏɴᴀɢᴇᴍ.</gray>"
+    learning:
+      - "<gray>ᴜsᴇ ᴘᴀʀᴀ ᴀᴘʀᴇɴᴅᴇʀ <white>%spell%</white>.</gray>"
+      - "<gray>sᴇ ᴊᴀ ᴄᴏɴʜᴇᴄᴇᴜ ᴀɴᴛᴇs, ᴘᴀʀᴛᴇ</gray>"
+      - "<gray>ᴅᴏ ɴɪᴠᴇʟ sᴇʀᴀ ʀᴇsᴛᴀᴜʀᴀᴅᴀ.</gray>"
+    respec:
+      - "<gray>ᴜsᴇ ᴘᴀʀᴀ ᴅᴇsᴀᴘʀᴇɴᴅᴇʀ ᴛᴏᴅᴀs</gray>"
+      - "<gray>ᴀs sᴜᴀs ᴍᴀɢɪᴀs ᴅᴇ ᴜᴍᴀ ᴠᴇz.</gray>"
+      - "<gray>ᴏs ɴɪᴠᴇɪs sᴇʀᴀᴏ ᴘᴀʀᴄɪᴀʟᴍᴇɴᴛᴇ</gray>"
+      - "<gray>sᴀʟᴠᴏs ɴᴀ ᴍᴇᴍᴏʀɪᴀ.</gray>"
+  messages:
+    unlearn_no_target:    "<yellow>⚠</yellow> <gray>ᴇsᴛᴇ ᴘᴇʀɢᴀᴍɪɴʜᴏ ɴᴀᴏ ᴛᴇᴍ ᴀʟᴠᴏ. ᴜsᴇ <yellow>/rpg spell unlearn</yellow> ᴏᴜ ᴀ ɢᴜɪ.</gray>"
+    learn_no_target:      "<yellow>⚠</yellow> <gray>ᴇsᴛᴇ ᴘᴇʀɢᴀᴍɪɴʜᴏ ɴᴀᴏ ᴛᴇᴍ ᴜᴍᴀ ᴍᴀɢɪᴀ ᴀssᴏᴄɪᴀᴅᴀ.</gray>"
+    not_learned:          "<yellow>⚠</yellow> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴄᴏɴʜᴇᴄᴇ <white>%spell%</white>.</gray>"
+    already_learned:      "<yellow>⚠</yellow> <gray>ᴠᴏᴄᴇ ᴊᴀ ᴄᴏɴʜᴇᴄᴇ <white>%spell%</white>.</gray>"
+    unlearn_success:      "<green>✦</green> <gray>ᴠᴏᴄᴇ ᴅᴇsᴀᴘʀᴇɴᴅᴇᴜ <white>%spell%</white>. ᴏ ɴɪᴠᴇʟ ꜰᴏɪ sᴀʟᴠᴏ ɴᴀ ᴍᴇᴍᴏʀɪᴀ.</gray>"
+    learn_success:        "<green>✦</green> <gray>ᴠᴏᴄᴇ ᴀᴘʀᴇɴᴅᴇᴜ <white>%spell%</white>!</gray>"
+    memory_restored:      "<aqua>✦</aqua> <gray>ᴍᴇᴍᴏʀɪᴀ ʀᴇsᴛᴀᴜʀᴀᴅᴀ! <white>%spell%</white> ᴄᴏᴍᴇᴄᴀ ɴᴏ ɴɪᴠᴇʟ <yellow>%level%</yellow>.</gray>"
+    respec_success:       "<light_purple>✦</light_purple> <gray>ʀᴇsᴘᴇᴄ ᴄᴏᴍᴘʟᴇᴛᴏ! <white>%count%</white> ᴍᴀɢɪᴀs ᴅᴇsᴀᴘʀᴇɴᴅɪᴅᴀs.</gray>"
+    no_spells_to_respec:  "<yellow>⚠</yellow> <gray>ᴠᴏᴄᴇ ɴᴀᴏ ᴘᴏssᴜɪ ᴍᴀɢɪᴀs ᴘᴀʀᴀ ʀᴇsᴘᴇᴄ.</gray>"
+
+# ──────────────────────────────────────────────
+#  LEADERBOARD
+# ──────────────────────────────────────────────
+# ──────────────────────────────────────────────
+#  MENU DE UPGRADE / PROGRESSÃO
+# ──────────────────────────────────────────────
+upgrade_gui:
+  title: "<white>ᴘʀᴏɢʀᴇssᴀᴏ</white>"
+  level_suffix: " <gray>Lv.%level%"
+
+  header:
+    name: "<aqua>ᴘʀᴏɢʀᴇssᴀᴏ ᴅᴇ ᴍᴀɢɪᴀs</aqua>"
+    lore: "<gray>ᴠɪsᴜᴀʟɪzᴇ sᴜᴀ ᴇᴠᴏʟᴜᴄᴀᴏ</gray>"
+
+  item:
+    level: "<gray>ɴɪᴠᴇʟ <white>%level%</white><dark_gray>/<gray>%max%</gray></dark_gray></gray>"
+    xp: "<gray>xᴘ: <white>%current%</white><dark_gray>/<gray>%needed%</gray></dark_gray></gray>"
+    bar: "<dark_gray>[</dark_gray>%bar%<dark_gray>]</dark_gray> <gray>%percent%%</gray>"
+    mastered: "<light_purple>★ ᴅᴏᴍɪɴᴀᴅᴀ</light_purple>"
+    max_level: "<gold>✦ ɴɪᴠᴇʟ ᴍᴀxɪᴍᴏ</gold>"
+    click_to_view: "<yellow>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴠᴇʀ ᴅᴇᴛᴀʟʜᴇs</yellow>"
+
+  nav:
+    previous: "<gray>← ᴘᴀɢɪɴᴀ ᴀɴᴛᴇʀɪᴏʀ</gray>"
+    next: "<gray>ᴘʀᴏxɪᴍᴀ ᴘᴀɢɪɴᴀ →</gray>"
+    home: "<gray>⌂ ᴠᴏʟᴛᴀʀ</gray>"
+
+  # ── Detalhes da Spell ──
+  detail:
+    title: "<white>%spell%</white>"
+    back_button: "<gray>← ᴠᴏʟᴛᴀʀ</gray>"
+    type_level: "%type% <dark_gray>•</dark_gray> <white>ɴɪᴠᴇʟ %level%/%max%</white>"
+    xp_progress: "<yellow>%xp%/%xp_needed% xᴘ</yellow> <dark_gray>(%percent%%)</dark_gray>"
+    max_level_badge: "<gold>✦ ɴɪᴠᴇʟ ᴍᴀxɪᴍᴏ</gold>"
+    milestones_label: "<gray>ᴍᴀʀᴄᴏs: </gray>"
+    milestone_achieved_dot: "<green>●</green>"
+    milestone_locked_dot: "<dark_gray>○</dark_gray>"
+    mastery_badge: "<gold>✦ ᴍᴀᴇsᴛʀɪᴀ ᴀʟᴄᴀɴᴄᴀᴅᴀ</gold>"
+    xp_bar_max: "<gold>✦ ᴍᴀxɪᴍᴏ</gold>"
+    xp_bar_percent: "<yellow>%percent%%</yellow>"
+
+    # Info principal
+    level_display:
+      name: "<green>ɴɪᴠᴇʟ %level%</green>"
+      lore:
+        - "<gray>ɴɪᴠᴇʟ ᴀᴛᴜᴀʟ: <white>%level%</white><dark_gray>/<gray>%max%</gray></dark_gray></gray>"
+        - ""
+        - "<gray>ᴜsᴇ ᴀ ᴍᴀɢɪᴀ ᴘᴀʀᴀ ɢᴀɴʜᴀʀ xᴘ</gray>"
+        - "<gray>ᴇ sᴜʙɪʀ ᴅᴇ ɴɪᴠᴇʟ.</gray>"
+
+    # XP
+    xp_display:
+      name: "<aqua>ᴇxᴘᴇʀɪᴇɴᴄɪᴀ</aqua>"
+      lore:
+        - "<gray>xᴘ ᴀᴛᴜᴀʟ: <white>%xp%</white><dark_gray>/<gray>%xp_needed%</gray></dark_gray></gray>"
+        - "%bar%"
+        - "<gray>ᴘʀᴏɢʀᴇssᴏ: <white>%percent%%</white></gray>"
+      lore_maxed:
+        - "<light_purple>★ ɴɪᴠᴇʟ ᴍᴀxɪᴍᴏ ᴀᴛɪɴɢɪᴅᴏ!</light_purple>"
+        - ""
+        - "<gray>ɴᴀᴏ ᴇ ᴘᴏssɪᴠᴇʟ ᴀᴄᴜᴍᴜʟᴀʀ ᴍᴀɪs xᴘ.</gray>"
+
+    # Next Level Preview
+    next_level:
+      name: "<yellow>ᴘʀᴏxɪᴍᴏ ɴɪᴠᴇʟ: %next_level%</yellow>"
+      lore_header: "<gray>ᴀᴏ ᴀᴛɪɴɢɪʀ ᴏ ɴɪᴠᴇʟ <white>%next_level%</white>:</gray>"
+      no_next: "<gold>✦ ɴɪᴠᴇʟ ᴍᴀxɪᴍᴏ ᴀʟᴄᴀɴᴄᴀᴅᴏ!</gold>"
+
+    # Stats comparison
+    stats:
+      cooldown:       "<gray>⏱ ʀᴇᴄᴀʀɢᴀ: <white>%current%s</white> <dark_gray>→</dark_gray> <green>%next%s</green></gray>"
+      cooldown_max:   "<gray>⏱ ʀᴇᴄᴀʀɢᴀ: <white>%current%s</white></gray>"
+      mana:           "<blue>✦ ᴍᴀɴᴀ: <white>%current%</white> <dark_gray>→</dark_gray> <green>%next%</green></blue>"
+      mana_max:       "<blue>✦ ᴍᴀɴᴀ: <white>%current%</white></blue>"
+      stamina:        "<yellow>✦ sᴛᴀᴍɪɴᴀ: <white>%current%</white> <dark_gray>→</dark_gray> <green>%next%</green></yellow>"
+      stamina_max:    "<yellow>✦ sᴛᴀᴍɪɴᴀ: <white>%current%</white></yellow>"
+
+    # Milestones
+    milestone:
+      name_achieved:  "<green>✦ ᴍᴀʀᴄᴏ — ɴɪᴠᴇʟ %level%</green>"
+      name_next:      "<yellow>✦ ᴍᴀʀᴄᴏ — ɴɪᴠᴇʟ %level%</yellow>"
+      name_locked:    "<dark_gray>✖ ᴍᴀʀᴄᴏ — ɴɪᴠᴇʟ %level%</dark_gray>"
+      lore_achieved:
+        - "<green>✓ ᴄᴏɴǫᴜɪsᴛᴀᴅᴏ!</green>"
+      lore_next:
+        - "<yellow>⏳ ᴘʀᴏxɪᴍᴏ ᴍᴀʀᴄᴏ</yellow>"
+        - "<gray>ᴀʟᴄᴀɴᴄᴇ ᴏ ɴɪᴠᴇʟ <white>%level%</white></gray>"
+      lore_locked:
+        - "<dark_gray>ʙʟᴏǫᴜᴇᴀᴅᴏ</dark_gray>"
+        - "<dark_gray>ᴀʟᴄᴀɴᴄᴇ ᴏ ɴɪᴠᴇʟ <white>%level%</white></dark_gray>"
+
+    # Mastery display
+    mastery:
+      name_achieved:  "<light_purple>★ ᴍᴀᴇsᴛʀɪᴀ ᴄᴏɴǫᴜɪsᴛᴀᴅᴀ!</light_purple>"
+      lore_achieved:
+        - "<gray>ᴠᴏᴄᴇ ᴅᴏᴍɪɴᴏᴜ ᴇsᴛᴀ ᴍᴀɢɪᴀ!</gray>"
+        - "<gray>ʙᴏɴᴜs ᴘᴇʀᴍᴀɴᴇɴᴛᴇs ᴀᴛɪᴠᴏs:</gray>"
+      bonus_line:     "<gray>  + <white>%attribute%</white>: <green>+%value%</green></gray>"
+      name_locked:    "<dark_gray>★ ᴍᴀᴇsᴛʀɪᴀ</dark_gray>"
+      lore_locked:
+        - "<dark_gray>ᴀʟᴄᴀɴᴄᴇ ᴏ ɴɪᴠᴇʟ ᴍᴀxɪᴍᴏ</dark_gray>"
+        - "<dark_gray>ᴘᴀʀᴀ ᴅᴏᴍɪɴᴀʀ ᴇsᴛᴀ ᴍᴀɢɪᴀ.</dark_gray>"
+
+    # Buttons
+    buttons:
+      back:
+        name: "<gray>← ᴠᴏʟᴛᴀʀ</gray>"
+        lore:
+          - "<dark_gray>ᴠᴏʟᴛᴀ ᴀ ʟɪsᴛᴀ ᴅᴇ ᴍᴀɢɪᴀs.</dark_gray>"
+
+  # Chat messages
+  messages:
+    opened_list:     "<green>✦</green> <gray>ᴀʙʀɪɴᴅᴏ ᴍᴇɴᴜ ᴅᴇ ᴘʀᴏɢʀᴇssᴀᴏ...</gray>"
+
+# ──────────────────────────────────────────────
+#  LEADERBOARD
+# ──────────────────────────────────────────────
+leaderboard:
+  header: "<gray>══ <yellow>✦ ᴛᴏᴘ ᴍᴀɢᴏs — %type%</yellow> <gray>══</gray>"
+  entry:  "<gray>%rank%. <white>%player%</white> <dark_gray>—</dark_gray> <yellow>%value%</yellow></gray>"

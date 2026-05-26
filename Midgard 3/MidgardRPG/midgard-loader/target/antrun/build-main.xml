@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <copy file="C:\Projetos\Midgard 3\MidgardRPG\midgard-loader\target/midgard-loader-1.0.0-SNAPSHOT.jar" todir="C:\Projetos\Midgard 3\MidgardRPG\midgard-loader/../RPG/plugins" overwrite="true" />
+    <echo message="Plugin copiado para: RPG/plugins" />
+  </target>
+</project>

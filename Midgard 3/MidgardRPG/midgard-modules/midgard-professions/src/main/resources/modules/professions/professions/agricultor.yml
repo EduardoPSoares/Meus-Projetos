@@ -1,0 +1,139 @@
+# ============================================
+# AGRICULTOR - Definição e Recompensas
+# ============================================
+
+definition:
+  menu-icon: DIAMOND_HOE
+  gradient: "<gradient:#4ade80:#16a34a>"
+  description: "Cultive a terra, colha plantações e cuide dos campos para ganhar XP."
+  bonuses:
+    - "<green>▸ Rendimento agrícola</green>"
+    - "<green>▸ Eficiência de crescimento</green>"
+    - "<green>▸ Chance de colheita extra</green>"
+    - "<green>▸ Stamina rural</green>"
+  xp-source-icon: WHEAT_SEEDS
+  extra-button-icon: COMPOSTER
+  extra-button-name: "<green>Afinidade Agrícola"
+  extra-button-lore:
+    - "<gray>Visualize seus bônus de cultivo"
+    - "<gray>e eficiência com a terra."
+
+rewards:
+  1:
+    name: "Aprendiz Agrícola"
+    bonuses:
+      - "+2% rendimento agrícola"
+  5:
+    bonuses:
+      - "+5% rendimento agrícola"
+      - "+3% chance de colheita extra"
+  10:
+    name: "Fazendeiro"
+    bonuses:
+      - "+10% rendimento agrícola"
+    ability: "Colheita Abundante"
+    ability-desc: "Colhe plantações num raio de 3x3."
+  15:
+    bonuses:
+      - "+5% eficiência de crescimento"
+    perks:
+      - "Colheita 5% mais rápida"
+  20:
+    bonuses:
+      - "+15% rendimento agrícola"
+  25:
+    name: "Agricultor Habilidoso"
+    bonuses:
+      - "+8% chance de colheita extra"
+    ability: "Replantio Automático"
+    ability-desc: "Replanta automaticamente ao colher."
+  30:
+    bonuses:
+      - "+20% rendimento agrícola"
+  40:
+    bonuses:
+      - "+10% eficiência de crescimento"
+    perks:
+      - "Stamina rural +5%"
+  50:
+    name: "Mestre Agrícola"
+    bonuses:
+      - "+30% rendimento agrícola"
+    ability: "Solo Fértil"
+    ability-desc: "Plantações adjacentes crescem 25% mais rápido."
+  75:
+    name: "Grão-Mestre"
+    bonuses:
+      - "+15% chance de colheita extra"
+    perks:
+      - "Resistência a pragas"
+  100:
+    name: "Lenda da Agricultura"
+    bonuses:
+      - "+50% rendimento agrícola"
+    ability: "Colheita Precisa"
+    ability-desc: "Colheita perfeita — sempre rende o máximo."
+    perks:
+      - "Título: Lenda da Agricultura"
+
+# ============================================
+# FONTES DE XP
+# ============================================
+# block-break: XP ao colher plantações (material do bloco)
+# block-place: XP ao plantar (material do bloco colocado)
+xp-config:
+  block-break:
+    WHEAT: 5.0
+    CARROTS: 5.0
+    POTATOES: 5.0
+    BEETROOTS: 6.0
+    NETHER_WART: 8.0
+    MELON: 4.0
+    PUMPKIN: 4.0
+    SUGAR_CANE: 3.0
+    COCOA: 6.0
+    SWEET_BERRY_BUSH: 4.0
+    BAMBOO: 2.0
+    CACTUS: 3.0
+    KELP_PLANT: 2.0
+  block-place:
+    WHEAT: 2.0
+    CARROTS: 2.0
+    POTATOES: 2.0
+    BEETROOTS: 2.0
+    NETHER_WART: 3.0
+    SUGAR_CANE: 1.0
+    SWEET_BERRY_BUSH: 2.0
+    COCOA: 3.0
+    MELON_STEM: 2.0
+    PUMPKIN_STEM: 2.0
+
+# ============================================
+# PENALIDADES PARA NÃO-AGRICULTORES
+# ============================================
+# Jogadores sem a profissão de Agricultor ativa sofrem estas penalidades
+# ao colher plantações e cultivar.
+penalties:
+  enabled: true
+  show-message: true
+
+  # Apenas crops/plantações sofrem penalidade
+  affected-materials:
+    - WHEAT
+    - CARROTS
+    - POTATOES
+    - BEETROOTS
+    - NETHER_WART
+    - MELON
+    - PUMPKIN
+    - SUGAR_CANE
+    - COCOA
+    - SWEET_BERRY_BUSH
+
+  # Penalidade ao colher plantações
+  block:
+    drop-chance: 0.40          # 40% de chance de dropar (colheita reduzida)
+    effect:
+      type: SLOWNESS            # Trabalho braçal pesado
+      duration: 60              # 3 segundos
+      amplifier: 0              # Nível I

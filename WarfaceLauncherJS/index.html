@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warface Survivor — Launcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="launcher">
+
+  <!-- TITLEBAR -->
+  <div class="titlebar">
+    <div class="logo-area">
+      <div class="logo-badge">WF</div>
+      <div>
+        <div class="logo-name">WARFACE SURVIVOR</div>
+        <div class="logo-sub"></div>
+      </div>
+    </div>
+    <div class="titlebar-controls">
+      <div class="tctl tctl-min" id="btn-minimize"></div>
+      <div class="tctl tctl-max" id="btn-maximize"></div>
+      <div class="tctl tctl-close" id="btn-close"></div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-scan"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="side-dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <div class="slide-bg" id="slide-bg"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag" id="hero-tag">OPERAÇÃO ATIVA</div>
+      <div class="hero-title" id="hero-title">BLACKOUT<br><span>PROTOCOL</span></div>
+      <div class="hero-desc" id="hero-desc">// NOVO MAPA · MODO RESGATE · PATCH 2.1.4</div>
+    </div>
+
+    <div class="news-dots" id="news-dots">
+      <div class="ndot active"></div>
+      <div class="ndot"></div>
+      <div class="ndot"></div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-area">
+
+    <!-- LEFT -->
+    <div class="left-panel">
+      <div class="section-label">Novidades</div>
+
+      <div id="news-container"></div>
+
+      <!-- UPDATE BAR -->
+      <div class="update-bar">
+        <div class="upd-label">
+          <div class="upd-status" id="upd-status">● VERIFICANDO ARQUIVOS...</div>
+          <div class="upd-pct" id="pct">0%</div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="pbar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-panel">
+      <div class="section-label">Status</div>
+
+      <div class="stat-row">
+        <div class="stat-key"><div class="stat-indicator si-online" id="server-indicator"></div> SERVIDOR</div>
+        <div class="stat-val" id="server-status">ONLINE</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-key"><div class="stat-indicator si-info"></div> JOGADORES</div>
+        <div class="stat-val blue" id="stat-jogadores">0</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-key"><div class="stat-indicator si-busy"></div> PARTIDAS</div>
+        <div class="stat-val gold" id="stat-partidas">0</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-key"><div class="stat-indicator si-info"></div> VERSÃO</div>
+        <div class="stat-val" id="stat-versao">--</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-key"><div class="stat-indicator si-online"></div> UPTIME</div>
+        <div class="stat-val" id="stat-uptime">--</div>
+      </div>
+
+      <button class="play-btn" id="btn-play">LOGIN</button>
+
+      <div class="account-action" id="account-panel">
+        <button class="create-account-btn" id="btn-open-account">CRIAR CONTA</button>
+        <div class="account-status-msg" id="account-status-msg">Crie uma conta nova ou use LOGIN para entrar.</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- VERSION BAR -->
+  <div class="version-bar">
+    <div class="ver-text">WF-SURVIVOR v2.1.4 · © 2026 OFFICIAL RELEASE</div>
+    <div class="ping-display">
+      <div class="ping-bars">
+        <div class="ping-bar pb1"></div>
+        <div class="ping-bar pb2"></div>
+        <div class="ping-bar pb3"></div>
+        <div class="ping-bar pb4"></div>
+      </div>
+      <div class="ping-ms" id="ping-display">--ms</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- UPDATE OVERLAY -->
+<div class="update-overlay hidden" id="update-overlay">
+  <div class="update-modal">
+    <div class="update-spinner" id="update-spinner"></div>
+    <div class="update-title" id="update-title">ATUALIZANDO</div>
+    <div class="update-desc" id="update-desc">Aguarde...</div>
+    <div class="update-version-info hidden" id="update-version-info">
+      <div><span>Atual</span><strong id="update-current-version">--</strong></div>
+      <div><span>Nova</span><strong id="update-target-version">--</strong></div>
+    </div>
+    <div class="update-progress-block hidden" id="update-progress-block">
+      <div class="update-progress-track"><div class="update-progress-fill" id="update-overlay-pbar"></div></div>
+      <div class="update-progress-meta" id="update-progress-meta">0 MB / 0 MB</div>
+    </div>
+    <div class="update-error hidden" id="update-error"></div>
+    <div class="update-actions hidden" id="update-actions">
+      <button class="update-action-btn secondary" id="update-cancel-btn" type="button">CANCELAR</button>
+      <button class="update-action-btn" id="update-retry-btn" type="button">TENTAR NOVAMENTE</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="renderer.js"></script>
+
+</body>
+</html>
+

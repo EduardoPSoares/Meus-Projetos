@@ -1,0 +1,627 @@
+# MAX_HEALTH
+# KNOCKBACK_RESISTANCE
+# MOVEMENT_SPEED
+# ATTACK_DAMAGE
+# ATTACK_SPEED
+# ARMOR
+# ARMOR_TOUGHNESS
+# LUCK
+
+# If you are using version 1.21 or higher, additional default player attributes are available.
+# You can find the full list of attributes in the Spigot Javadocs.
+
+# Classes are similar to races in how they are created, with many shared options for consistency
+# and ease of use. Both classes and races share several features.
+
+# The primary distinction between the two is that class attributes act as modifiers. These attributes
+# add to or subtract from the base attributes of a race. For example:
+# - If a race provides 10.0 health and the class adds 2.0 health, the total player health will be 12.0.
+# Classes effectively increase or decrease attributes based on their configuration.
+
+# Classes also support the 'executeCommand' feature, which works identically to races.
+# Commands are defined in the regular `config.yml` and use the `====` ending for execution.
+
+# IMPORTANT NOTES:
+# 1. Classes can be used within the MrPremiumAddons configuration for additional customization.
+# 2. A class and a race must have unique names. If they share the same name, the plugin will break.
+
+# Adding Attributes to Races:
+# - Use the `passiveAttributes` list to add attributes to a race.
+# - Specify the attribute name followed by a value to add to the base race attribute.
+# Example:
+#   MAX_HEALTH 10.0  # Adds 10 extra health to the race's base health.
+
+# SKILLS LIST:
+# - The `skills` list is a placeholder for future updates and should not be modified.
+# - Future updates will introduce hardcoded skill types. Until then, abilities can be added
+#   to classes or races, allowing for extensive customization.
+
+other:
+
+  # Cooldown timer, is in MINUTES, NEVER PUT THIS NUMBER INTO NEGATIVES
+  cooldown: 1440
+
+  # default Class upon joining
+  # If you want a random default Class replace this with '{randomClass}'
+  # dont forget the single quotation marks aka these things -> '
+  # or else the random thing wont work
+  defaultClass: 'None'
+
+  # Gui display name
+  guiName: 'Choosing Class'
+
+  # Gui head player display name
+  guiPlayerDisplay: 'You'
+
+  # Gui slot number for player head
+  guiPlayerDisplayNumber: 4
+
+  # Amount of slots the GUI has, max is 54
+  guiSlots: 36
+
+  # Amount of slots the GUI has, max is 54
+  treeGuiSlots: 54
+
+  # Disable the display names in the GUI for the classes, in both the gui and tree
+  # This will disable the display names for the classes in the GUI
+  disableGuiDisplayNames: false
+
+  # Item for forwardClick
+  forwardClickItem: 'PAPER'
+
+  # When this slot is clicked, open up next GUI list
+  forwardClick: 35
+
+  # Next page
+  forwardClickDisplay: 'Next page'
+
+  # Paper item
+  backwardClickItem: 'PAPER'
+
+  # Previous page
+  backwardClick: 18
+
+  backwardClickDisplay: 'Previous page'
+
+  # Lore hovering over the player head, yes this supports PAPI
+  guiPlayerLore:
+    - 'Class: {class}'
+
+  treeNonSlots: 'BLACK_STAINED_GLASS_PANE'
+
+  treeName: 'Your Class tree'
+
+
+classes:
+  None:
+    displayName: '&7None'
+    material: 'BOOK'
+    guiPage: 1
+    slot: 11
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8&l==================================='
+      - '&7&l           #e1a583/ None'
+      - '&8&l==================================='
+      - '&7A mysterious class known as "None".'
+      - '&7Their secrets are well kept and unknown.'
+      - '&7Those who choose this path are a blank slate,'
+      - '&7with the potential to become anything.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'null'
+    executeCommandUponSwitching:
+      - 'null'
+  Swordmaster:
+    displayName: '&cSwordmaster'
+    material: 'IRON_SWORD'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 12
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l==================================='
+      - '&c&l              Swordmaster Class           '
+      - '&4&l==================================='
+      - '&7A master of the sword, capable of devastating foes.'
+      - '&7By honing your swordsmanship, you gain extra attack speed'
+      - '&7 and strike fear into the hearts of your enemies.'
+      - '&7Gain &a#00ff00/2 &7extra attack speed and become a force to be reckoned with.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'ATTACK_SPEED 2.0'
+    executeCommandUponSwitching:
+      - 'null'
+  BladeDancer:
+    displayName: '&cBlade Dancer'
+    material: 'DIAMOND_SWORD'
+    guiPage: 1
+    isSubClass: true
+    subClassType: 'Swordmaster'
+    treeSlot: 22
+    levelRequire: 0
+    slot: 12
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&4&l==================================='
+      - '&c&l              Blade Dancer Class    '
+      - '&4&l==================================='
+      - '&7Graceful yet deadly, the Blade Dancer is a master of the sword, wielding it with a finesse that few can match.'
+      - '&7With a blade that dances to their will, they can strike down foes in an instant, leaving no room for defiance.'
+      - '&7By honing your swordsmanship to a level of mastery, you gain unparalleled attack speed,'
+      - '&7striking fear into the hearts of your enemies and becoming a force to be reckoned with.'
+      - '&7Gain &a#00ff00/5 &7extra attack speed, and let your blade sing the song of battle.'
+      - ' '
+      - '&7Shift right-clicking a diamond sword unleashes a devastating short-range AOE attack,'
+      - '&7a dance of death that leaves no survivors in its wake.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'ATTACK_SPEED 5.0'
+    executeCommandUponSwitching:
+      - 'null'
+  Tanker:
+    displayName: '&2Tanker'
+    material: 'SHIELD'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 13
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&2&l==============================='
+      - '&a&l           Tanker               '
+      - '&2&l==============================='
+      - '&7With the Tanker class, you take on'
+      - '&7the role of a tank on the battlefield.'
+      - '&7You are able to absorb more damage than'
+      - '&7any other class, making you an unstoppable'
+      - '&7force to be reckoned with. '
+      - '&7By toughening up and training with the Tanker,'
+      - '&7you gain an additional &c#ff0000/2 &7hearts,'
+      - '&7making you nearly invincible in combat.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'MAX_HEALTH 4.0'
+    executeCommandUponSwitching:
+      - 'null'
+  Speedster:
+    displayName: '&2Speedster'
+    material: 'FEATHER'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 14
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8==============================='
+      - '&2      Speedster Class&2      '
+      - '&8==============================='
+      - '&7Master the art of hit-and-run tactics with the Speedster Class.'
+      - '&7But beware, it takes true skill to execute properly.'
+      - '&7Gain a permanent boost to your speed to stay one step ahead of your foes.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'MOVEMENT_SPEED 0.01'
+    executeCommandUponSwitching:
+      - 'null'
+  HeavyHitter:
+    displayName: '&2Heavy Hitter'
+    material: 'BEDROCK'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 15
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8=================================='
+      - '&2    Heavy Hitter Class&2      '
+      - '&8=================================='
+      - '&7Unleash devastating blows with the power of this class'
+      - '&7With unrivaled strength and precision, you can take down even the toughest foes'
+      - '&7Gain a formidable boost of &c1.5 &7extra damage per hit'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'ATTACK_DAMAGE 3.0'
+    executeCommandUponSwitching:
+      - 'null'
+  TheGambler:
+    displayName: '&6Gambler Hitter'
+    material: 'GOLD_INGOT'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 16
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&e&l=================================='
+      - '&6&l       The Gambler Class'
+      - '&e&l=================================='
+      - '&7Bring a little risk into your life with The Gambler class.'
+      - '&7Increase your luck tenfold with this daring class.'
+      - '&7Gain &6+10 &7luck and watch your fortune rise.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'LUCK 10.0'
+    executeCommandUponSwitching:
+      - 'null'
+  Immovable:
+    displayName: '&2Immovable'
+    material: 'STONE'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 10
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8==============================='
+      - '&7     &2 The Immovable Class'
+      - '&8==============================='
+      - '&7Become an unstoppable force with this class'
+      - '&7Never be knocked back, no matter the strength of your foes'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'KNOCKBACK_RESISTANCE 10.0'
+    executeCommandUponSwitching:
+      - 'null'
+  ArcaneMage:
+    displayName: '&5Arcane Mage'
+    material: 'ENCHANTED_BOOK'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 19
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8==============================='
+      - '&5      Arcane Mage Class&5      '
+      - '&8==============================='
+      - '&5Master of the arcane, this class starts their journey to learn magic..'
+      - '&5But beware, it takes true skill to execute properly.'
+      - '&5Gain increased health, but slower movement and reduced combat abilities.'
+      - '&7Increases max health by &25.'
+      - '&7Increases luck by &22.'
+      - '&7Decreases movement speed by &40.01.'
+      - '&7Decreases attack damage by &42.'
+      - '&7Decreases attack speed by &40.2.'
+      - '&7Decreases armor by &41.'
+      - '&7Decreases armor toughness by &42.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'MAX_HEALTH 5'
+      - 'MOVEMENT_SPEED -0.01'
+      - 'ATTACK_DAMAGE -2'
+      - 'ATTACK_SPEED -0.2'
+      - 'ARMOR -1'
+      - 'ARMOR_TOUGHNESS -2'
+      - 'LUCK 2'
+    executeCommandUponSwitching:
+      - 'null'
+  EldritchWizard:
+    displayName: '&5Eldritch Mage'
+    material: 'ENCHANTED_BOOK'
+    guiPage: 1
+    isSubClass: true
+    subClassType: 'ArcaneMage'
+    treeSlot: 22
+    levelRequire: 60
+    slot: 19
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8==============================='
+      - '&5      Eldritch Wizard Class&5      '
+      - '&8==============================='
+      - '&5Master of the arcane, this class wields powerful magic to decimate their enemies.'
+      - '&5But beware, it takes true skill to execute properly.'
+      - '&5Same stats as Arcane Mage, however you gain multiple spells'
+      - "&7Chanting 'Iron, Rise!' will summon an iron golem."
+      - "&7Chanting 'Fire, Rise!' will summon a blaze."
+      - "&7Shift right clicking blue dye in the air will give you a speed boost."
+      - "&7Shift right clicking yellow dye in the air will give you a jump boost."
+      - "&7Shift right clicking green dye in the air will give you a instant heal."
+      - "&7Shift right purple dye in the air will heal any entities around you."
+      - "&7Right clicking red dye in the air will shoot a poison beam where you are looking."
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'MAX_HEALTH 5'
+      - 'MOVEMENT_SPEED -0.01'
+      - 'ATTACK_DAMAGE -2'
+      - 'ATTACK_SPEED -0.2'
+      - 'ARMOR -1'
+      - 'ARMOR_TOUGHNESS -2'
+      - 'LUCK 2'
+    executeCommandUponSwitching:
+      - 'null'
+  Juggernaut:
+    displayName: '&6Juggernaut'
+    material: 'IRON_CHESTPLATE'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 20
+    lvlType: 'TANKER'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8==============================='
+      - '&6      &6Juggernaut Class&6      '
+      - '&8==============================='
+      - '&6Unstoppable and indestructible, this class is a force to be reckoned with.'
+      - '&6Gain increased health, knockback resistance and armor, but slower movement and reduced attack speed.'
+      - '&7Increases max health by &210.'
+      - '&7Increases knockback resistance by &210.'
+      - '&7Increases armor by &25.'
+      - '&7Increases armor toughness by &23.'
+      - '&7Decreases luck by &42.'
+      - '&7Decreases movement speed by &40.002.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'MAX_HEALTH 10'
+      - 'KNOCKBACK_RESISTANCE 1.0'
+      - 'MOVEMENT_SPEED -0.02'
+      - 'ATTACK_DAMAGE 3'
+      - 'ATTACK_SPEED -0.1'
+      - 'ARMOR 5'
+      - 'ARMOR_TOUGHNESS 3'
+      - 'LUCK -2'
+    executeCommandUponSwitching:
+      - 'null'
+  Swiftblade:
+    displayName: '&9Swiftblade'
+    material: 'DIAMOND_SWORD'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 21
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 4
+    xpPerLevel: 42
+    lore:
+      - '&8==============================='
+      - '&9      Swiftblade Class&9      '
+      - '&8==============================='
+      - '&9A blur on the battlefield, this class moves with incredible speed and slashes with deadly precision.'
+      - '&9Gain a permanent boost to your speed and agility, allowing you to dart around the battlefield and strike with lightning-fast reflexes.'
+      - '&7Increases movement speed by &20.05.'
+      - '&7Increases attack speed by &21.'
+      - '&7Increases attack damage by &21.'
+      - '&7Increases luck by &21.'
+      - '&7Decreases max health by &42.'
+      - '&7Decreases armor by &43.'
+      - '&7Decreases armor toughness by &41.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'MAX_HEALTH -2'
+      - 'MOVEMENT_SPEED 0.05'
+      - 'ATTACK_DAMAGE 1'
+      - 'ATTACK_SPEED 0.3'
+      - 'ARMOR -3'
+      - 'ARMOR_TOUGHNESS -1'
+      - 'LUCK 1'
+    executeCommandUponSwitching:
+      - 'null'
+  Berserker:
+    displayName: '&cBerserker'
+    material: 'IRON_AXE'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 22
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 4
+    xpPerLevel: 50
+    lore:
+      - '&8==============================='
+      - '&4      &cBerserker Class&4      '
+      - '&8==============================='
+      - '&cWith a howl that strikes fear into the hearts of their foes, this class becomes a whirlwind of death and destruction.'
+      - '&cGain a permanent boost to your damage and attack speed, allowing you to tear through enemies with wild abandon.'
+      - '&7Increases attack damage by &25.'
+      - '&7Increases attack speed by &20.1.'
+      - '&7Increases health by &25.'
+      - '&7Decreases armor by &43.'
+      - '&7Decreases armor toughness by &42.'
+      - '&7Decreases luck by &42.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'MAX_HEALTH 5'
+      - 'ATTACK_DAMAGE 5'
+      - 'ATTACK_SPEED 0.1'
+      - 'ARMOR -3'
+      - 'ARMOR_TOUGHNESS -2'
+      - 'LUCK -2'
+    executeCommandUponSwitching:
+      - 'null'
+  Paladin:
+    displayName: '&6Paladin'
+    material: 'DIAMOND_CHESTPLATE'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 23
+    lvlType: 'COMBAT'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 24
+    lore:
+      - '&8==============================='
+      - '&7      &6Paladin Class&7      '
+      - '&8==============================='
+      - '&6A righteous warrior, this class shines with holy light as they defend the innocent and smite evil.'
+      - '&6Gain bonuses to armor and damage, and a small increase to health.'
+      - '&7Increases max health by &25.'
+      - '&7Increases attack damage by &22.'
+      - '&7Increases armor by &23.'
+      - '&7Increases armor toughness by &43.'
+      - '&7Increases luck by &41.'
+      - '&7Decreases movement speed by &40.002.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'MAX_HEALTH 5'
+      - 'MOVEMENT_SPEED -0.002'
+      - 'ATTACK_DAMAGE 2'
+      - 'ATTACK_SPEED -0.1'
+      - 'ARMOR 3'
+      - 'ARMOR_TOUGHNESS 3'
+      - 'LUCK 1'
+    executeCommandUponSwitching:
+      - 'null'
+  WitchDoctor:
+    displayName: '&2Witch Doctor'
+    material: 'BONE_BLOCK'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 24
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 3
+    xpPerLevel: 45
+    lore:
+      - '&8==============================='
+      - '&2      #00cc00/Witch Doctor Class&2      '
+      - '&8==============================='
+      - '&7A master of the dark arts, this class can summon zombies by chanting ancient incantations.'
+      - '&7They have a natural resistance and can move swiftly through the forest.'
+      - '&7Increases max health by &23.'
+      - '&7Increases armor by &22.'
+      - '&7Increases armor toughness by &21.'
+      - '&7Increases movement speed by &20.2.'
+      - '&7Increases luck by &21.'
+      - '&7Decreases knockback resistance by &40.02.'
+      - '&7Decreases attack damage by &42.'
+      - '&7Chanting Lorem Ipsum will summon five zombies.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'MAX_HEALTH 3'
+      - 'KNOCKBACK_RESISTANCE -0.2'
+      - 'MOVEMENT_SPEED 0.02'
+      - 'ATTACK_DAMAGE -2'
+      - 'ARMOR 2'
+      - 'ARMOR_TOUGHNESS 1'
+      - 'LUCK 1'
+    executeCommandUponSwitching:
+      - 'null'
+  Ninja:
+    displayName: '&7Ninja'
+    material: 'IRON_NUGGET'
+    guiPage: 1
+    isSubClass: false
+    subClassType: ''
+    treeSlot: 4
+    levelRequire: 0
+    slot: 25
+    lvlType: 'RUNNING'
+    maxLevel: 100
+    gainXP: 2
+    xpPerLevel: 20
+    lore:
+      - '&8==============================='
+      - '&7      #757575/Ninja Class&7      '
+      - '&8==============================='
+      - '&7A silent and deadly fighter, this class excels in the art of assassination and stealth.'
+      - '&7They have a natural speed and agility, but are weak to attacks.'
+      - '&7Increases attack speed by &20.1.'
+      - '&7Increases movement speed by &20.015.'
+      - '&7Increases armor by &21.'
+      - '&7Increases armor toughness by &21.'
+      - '&7Decreases max health by &42.'
+      - '&7Decreases knockback resistance by &40.1.'
+      - '&7Decreases magic resistance by &40.2.'
+      - '&7Decreases luck by &42.'
+    skills:
+      - 'null'
+    passiveAttributes:
+      - 'MAX_HEALTH -2'
+      - 'KNOCKBACK_RESISTANCE -0.1'
+      - 'MOVEMENT_SPEED 0.015'
+      - 'ATTACK_SPEED 0.1'
+      - 'ARMOR 1'
+      - 'ARMOR_TOUGHNESS 1'
+      - 'LUCK -2'
+    executeCommandUponSwitching:
+      - 'null'
+
+levelup: '&aYou leveled up! Your new class level is {level}'
+cooldownMessage: '&4You still have a cooldown! {time} minutes remaining until you may choose another class!'
+chosenClass: '&aYou have chosen the class &2{class}'
+listClasses: '&aKnown classes are &2{classes}'
+setPlayersLevel: '&aSet players class level to {lvl}'
+switchUserClass: '&aSpecified players class is now {class}'
+

@@ -1,0 +1,79 @@
+name: "<gold>ʀᴀᴊᴀᴅᴀ ᴅᴇ ɢᴏʟᴘᴇs</gold>"
+mythic-skill: "RajadaDeGolpes"
+spell-type: COMMON
+
+cooldown:
+  base: 12.0
+  per-level: -0.4
+mana:
+  base: 18.0
+  per-level: -0.5
+stamina: 25.0
+
+max-level: 10
+
+requirements:
+  class: "Monge"
+  level: 8
+
+icon:
+  material: BLAZE_ROD
+  material-locked: COAL
+
+description:
+  - "<gray>ᴛɪᴘᴏ:<gold><bold>ᴍᴀɢɪᴀ ᴄᴏᴍᴜᴍ</bold></gold>"
+  - ""
+  - "<gray>ᴅᴇsꜰᴇʀᴇ ᴜᴍᴀ ʀᴀᴊᴀᴅᴀ ᴅᴇ ɢᴏʟᴘᴇs</gray>"
+  - "<gray>ʀᴀᴘɪᴅᴏs ɴᴏ ɪɴɪᴍɪɢᴏ, ᴀᴛɪɴɢɪɴᴅᴏ-ᴏ</gray>"
+  - "<gray>ᴍᴜʟᴛɪᴘʟᴀs ᴠᴇᴢᴇs ᴇᴍ sᴇɢᴜɴᴅᴏs.</gray>"
+  - ""
+  - "<gold><bold>✦ ᴀᴛʀɪʙᴜᴛᴏs ✦</bold></gold>"
+  - ""
+  - "<gray>ᴅᴀɴᴏ:<red>{damage}</red>"
+  - ""
+  - "<yellow><bold>✦ ᴄᴜsᴛᴏ ᴇ ʀᴇᴄᴀʀɢᴀ ✦</bold></yellow>"
+  - "<gray>ᴄᴜsᴛᴏ ᴅᴇ ᴍᴀɴᴀ:<aqua>{mana}</aqua>"
+  - "<gray>ᴛᴇᴍᴘᴏ ᴅᴇ ʀᴇᴄᴀʀɢᴀ:<yellow>{cooldown}s</yellow>"
+
+description-locked:
+  - "<gray>ᴛɪᴘᴏ:<dark_gray><bold>ʙʟᴏǫᴜᴇᴀᴅᴏ</bold></dark_gray>"
+  - ""
+  - "<red><bold>✖ ʀᴇǫᴜɪsɪᴛᴏs</bold></red>"
+  - "<gray>ᴄʟᴀssᴇ:<red>ᴍᴏɴɢᴇ</red>"
+  - "<gray>ɴɪᴠᴇʟ:<yellow>8</yellow>"
+
+variables:
+  damage:
+    base: 22.0
+    per-level: 5.0
+
+milestones:
+  3:
+    visual: "rajada_golpes_flurry"
+    mechanic-override: "RajadaDeGolpesMk2"
+    stat-bonus:
+      dexterity: 1.0
+  5:
+    visual: "rajada_golpes_storm"
+    mechanic-override: "RajadaDeGolpesMk3"
+    stat-bonus:
+      strength: 2.0
+
+mastery:
+  attribute-bonus:
+    strength: 3
+    dexterity: 2
+
+sounds:
+  cast-start:
+    sound: "entity.player.attack.sweep"
+    volume: 1.0
+    pitch: 1.4
+  cast-finish:
+    sound: "entity.player.attack.crit"
+    volume: 1.0
+    pitch: 1.2
+  cast-fail:
+    sound: "entity.villager.no"
+    volume: 0.5
+    pitch: 0.8

@@ -1,0 +1,314 @@
+# ============================================================
+# Configuração do Modulo Character — Painel do Herói
+# ============================================================
+# Layout (6 rows):
+#   Row 0: [  ] [  ] [  ] [  ] [HEAD] [  ] [  ] [  ] [  ]
+#   Row 1: [RAC] [  ] [MH ] [HEL] [CHE ] [BOT] [OH ] [  ] [CMB]
+#   Row 2: [SPL] [  ] [  ] [  ] [LEG ] [  ] [  ] [  ] [ATR]
+#   Row 3: [SKT] [  ] [  ] [  ] [BOO ] [  ] [  ] [  ] [ECO]
+#   Row 4: [PRF] [  ] [  ] [  ] [  ]   [  ] [  ] [  ] [  ]
+#   Row 5: [  ] [  ] [  ] [  ] [  ]   [  ] [  ] [  ] [  ]
+# ============================================================
+enabled: true
+
+menu:
+  title: ᴘᴀɪɴᴇʟ ᴅᴏ ʜᴇʀᴏɪ
+  rows: 6
+  
+  # Preenchimento de espaços vazios
+  filler:
+    enabled: true
+    material: BLACK_STAINED_GLASS_PANE
+    name: ' '
+  
+  # ===========================================
+  # Paper Doll — Equipamentos do jogador
+  # ===========================================
+  equipment:
+    helmet:
+      slot: 12
+      placeholder:
+        material: IRON_HELMET
+        name: <dark_gray>ᴄᴀᴘᴀᴄᴇᴛᴇ
+        lore:
+        - <dark_gray>ɴᴇɴʜᴜᴍ ᴄᴀᴘᴀᴄᴇᴛᴇ ᴇǫᴜɪᴘᴀᴅᴏ
+        flags:
+        - HIDE_ATTRIBUTES
+    chestplate:
+      slot: 13
+      placeholder:
+        material: IRON_CHESTPLATE
+        name: <dark_gray>ᴘᴇɪᴛᴏʀᴀʟ
+        lore:
+        - <dark_gray>ɴᴇɴʜᴜᴍ ᴘᴇɪᴛᴏʀᴀʟ ᴇǫᴜɪᴘᴀᴅᴏ
+        flags:
+        - HIDE_ATTRIBUTES
+    boots:
+      slot: 14
+      placeholder:
+        material: IRON_BOOTS
+        name: <dark_gray>ʙᴏᴛᴀꜱ
+        lore:
+        - <dark_gray>ɴᴇɴʜᴜᴍᴀ ʙᴏᴛᴀ ᴇǫᴜɪᴘᴀᴅᴀ
+        flags:
+        - HIDE_ATTRIBUTES
+    leggings:
+      slot: 22
+      placeholder:
+        material: IRON_LEGGINGS
+        name: <dark_gray>ᴄᴀʟᴄᴀ
+        lore:
+        - <dark_gray>ɴᴇɴʜᴜᴍᴀ ᴄᴀʟᴄᴀ ᴇǫᴜɪᴘᴀᴅᴀ
+        flags:
+        - HIDE_ATTRIBUTES
+    mainhand:
+      slot: 11
+      placeholder:
+        material: IRON_SWORD
+        name: <dark_gray>ᴍᴀᴏ ᴘʀɪɴᴄɪᴘᴀʟ
+        lore:
+        - <dark_gray>ɴᴇɴʜᴜᴍ ɪᴛᴇᴍ ɴᴀ ᴍᴀᴏ ᴘʀɪɴᴄɪᴘᴀʟ
+        flags:
+        - HIDE_ATTRIBUTES
+    offhand:
+      slot: 15
+      placeholder:
+        material: SHIELD
+        name: <dark_gray>ᴍᴀᴏ ꜱᴇᴄᴜɴᴅᴀʀɪᴀ
+        lore:
+        - <dark_gray>ɴᴇɴʜᴜᴍ ɪᴛᴇᴍ ɴᴀ ᴍᴀᴏ ꜱᴇᴄᴜɴᴅᴀʀɪᴀ
+        flags:
+        - HIDE_ATTRIBUTES
+  
+  # ===========================================
+  # Items do Painel
+  # ===========================================
+  items:
+    
+    # ── CENTRO TOPO — Resumo do Personagem ──
+    character_info:
+      slot: 4
+      material: PLAYER_HEAD
+      skull_owner: '%player_name%'
+      name: <white>%player_name%
+      lore:
+      - ''
+      - ' <gray>ᴄʟᴀꜱꜱᴇ: <white>%class_name%'
+      - ' <gray>ʀᴀᴄᴀ: <white>%race_name%'
+      - ' <gray>ɴɪᴠᴇʟ: <white>%class_level%'
+      - ''
+      - ' <red>❤</red> <gray>ᴠɪᴅᴀ: <white>%health%<gray>/<white>%max_health%'
+      - ' <aqua>✦</aqua> <gray>ᴍᴀɴᴀ: <white>%mana%<gray>/<white>%max_mana%'
+      - ''
+      - ' <yellow>✧</yellow> <gray>xᴘ: <white>%xp_percent%'
+    
+    # ── COLUNA ESQUERDA — Progressão ──
+    race:
+      slot: 9
+      material: NETHER_STAR
+      name: <gold>⚝ <white>ʀᴀᴄᴀ
+      action: open_race_menu
+      lore:
+      - ''
+      - ' <gray>ʀᴀᴄᴀ ᴀᴛᴜᴀʟ: <white>%race_name%'
+      - ' <gray>ɴɪᴠᴇʟ ᴅᴀ ʀᴀᴄᴀ: <white>%race_level%'
+      - ''
+      - ' <yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴠᴇʀ ᴅᴇᴛᴀʟʜᴇꜱ'
+    
+    spells:
+      slot: 18
+      material: BLAZE_POWDER
+      name: <light_purple>✦ <white>ᴍᴀɢɪᴀꜱ
+      action: open_spell_menu
+      lore:
+      - ''
+      - ' <gray>ᴍᴀɢɪᴀꜱ ᴀᴘʀᴇɴᴅɪᴅᴀꜱ: <white>%spells_learned%'
+      - ' <gray>ᴍᴀɢɪᴀꜱ ᴅᴏᴍɪɴᴀᴅᴀꜱ: <white>%spells_mastered%'
+      - ' <gray>ᴜʟᴛɪᴍᴀᴛᴇ: <white>%ultimate_name%'
+      - ''
+      - ' <yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ɢᴇʀᴇɴᴄɪᴀʀ'
+    
+    skill_tree:
+      slot: 27
+      material: ENCHANTED_BOOK
+      name: <green>✿ <white>ᴀʀᴠᴏʀᴇ ᴅᴇ ʜᴀʙɪʟɪᴅᴀᴅᴇꜱ
+      action: open_skill_tree
+      lore:
+      - ''
+      - ' <gray>ᴘᴏɴᴛᴏꜱ ᴅɪꜱᴘᴏɴɪᴠᴇɪꜱ: <green>%skill_points%'
+      - ' <gray>ɴᴏꜱ ᴅᴇꜱʙʟᴏǫᴜᴇᴀᴅᴏꜱ: <white>%skill_nodes_unlocked%'
+      - ''
+      - ' <yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʙʀɪʀ'
+    
+    professions:
+      slot: 36
+      material: ANVIL
+      name: <gold>⚒ <white>ᴘʀᴏꜰɪꜱꜱᴏᴇꜱ
+      action: open_forge_menu
+      lore:
+      - ''
+      - ' <gray>ɴɪᴠᴇʟ ᴅᴇ ꜰᴏʀᴊᴀ: <white>%forge_level%'
+      - ' <gray>ᴇꜱᴘᴇᴄɪᴀʟɪᴢᴀᴄᴀᴏ: <white>%forge_spec%'
+      - ' <gray>ʀᴇᴄᴇɪᴛᴀꜱ: <white>%recipes_unlocked%'
+      - ''
+      - ' <yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʙʀɪʀ'
+    
+    # ── COLUNA DIREITA — Stats e Recursos ──
+    combat_stats:
+      slot: 17
+      material: IRON_SWORD
+      name: <red>⚔ <white>ᴄᴏᴍʙᴀᴛᴇ
+      flags:
+      - HIDE_ATTRIBUTES
+      lore:
+      - ''
+      - ' <red>❤</red> <gray>ᴠɪᴅᴀ: <white>%health%<gray>/<white>%max_health%'
+      - ' <gray>ʀᴇɢᴇɴ: <white>%health_regen%<gray>/ꜱ'
+      - ''
+      - ' <dark_green>⚔</dark_green> <gray>ᴅᴀɴᴏ ꜰɪꜱɪᴄᴏ: <white>%damage%'
+      - ' <light_purple>✦</light_purple> <gray>ᴅᴀɴᴏ ᴍᴀɢɪᴄᴏ: <white>%spell_damage%'
+      - ''
+      - ' <aqua>ᴅᴇꜰᴇꜱᴀꜱ:</aqua>'
+      - '  <dark_green>ᴛᴇʀʀᴀ</dark_green> %defense_earth% <yellow>ᴛʀᴏᴠᴀᴏ</yellow>
+        %defense_thunder%'
+      - '  <aqua>ᴀɢᴜᴀ</aqua> %defense_water% <red>ꜰᴏɢᴏ</red> %defense_fire%'
+      - '  <white>ᴀʀ</white> %defense_air%'
+    
+    attributes:
+      slot: 26
+      material: DIAMOND
+      name: <aqua>◆ <white>ᴀᴛʀɪʙᴜᴛᴏꜱ
+      action: open_attribute_menu
+      lore:
+      - ''
+      - ' <gray>ᴘᴏɴᴛᴏꜱ ᴅɪꜱᴘᴏɴɪᴠᴇɪꜱ: <green>%available_points%'
+      - ''
+      - ' <dark_green>ꜰᴏʀᴄᴀ:</dark_green> <white>%strength_pts%'
+      - ' <yellow>ᴅᴇꜱᴛʀᴇᴢᴀ:</yellow> <white>%dexterity_pts%'
+      - ' <aqua>ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ:</aqua> <white>%intelligence_pts%'
+      - ' <red>ᴅᴇꜰᴇꜱᴀ:</red> <white>%defense_pts%'
+      - ' <white>ᴀɢɪʟɪᴅᴀᴅᴇ: <white>%agility_pts%'
+      - ''
+      - ' <yellow>▶</yellow> <gray>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴅɪꜱᴛʀɪʙᴜɪʀ'
+    
+    economy:
+      slot: 35
+      material: GOLD_INGOT
+      name: <gold>$ <white>ᴄᴀʀᴛᴇɪʀᴀ
+      lore:
+      - ''
+      - ' <gray>ꜱᴀʟᴅᴏ ᴛᴏᴛᴀʟ: <gold>%balance% <gray>ᴍᴏᴇᴅᴀꜱ'
+      - ''
+      - ' <dark_gray>ᴠᴀʟᴏʀ ᴇᴍ ᴍᴏᴇᴅᴀꜱ ᴅᴇ ᴄᴏʙʀᴇ'
+      - ' <dark_gray>ɴᴏ ꜱᴇᴜ ɪɴᴠᴇɴᴛᴀʀɪᴏ'
+
+# ===========================================
+# Sub-menu de Alocação de Atributos
+# ===========================================
+attribute-menu:
+  title: ᴀᴛʀɪʙᴜᴛᴏꜱ
+  rows: 4
+  
+  filler:
+    enabled: true
+    material: BLACK_STAINED_GLASS_PANE
+    name: ' '
+  
+  # Item central com info de pontos
+  header:
+    slot: 4
+    material: PLAYER_HEAD
+    skull_owner: '%player_name%'
+    name: <white>%player_name%
+    lore:
+    - ''
+    - ' <gray>ᴘᴏɴᴛᴏꜱ ᴅɪꜱᴘᴏɴɪᴠᴇɪꜱ: <green>%available_points%<gray>/<white>%max_points%'
+    - ' <gray>ᴄʟᴀꜱꜱᴇ: <white>%class_name%'
+    - ''
+    - ' <green>ᴄʟɪǫᴜᴇ-ᴇꜱǫᴜᴇʀᴅᴏ <gray>ɴᴏ ᴀᴛʀɪʙᴜᴛᴏ: <white>+1 ᴘᴏɴᴛᴏ'
+    - ' <green>ꜱʜɪꜰᴛ+ᴄʟɪǫᴜᴇ <gray>ɴᴏ ᴀᴛʀɪʙᴜᴛᴏ: <white>+5 ᴘᴏɴᴛᴏꜱ'
+  
+  items:
+    strength:
+      slot: 10
+      material: LIME_DYE
+      attribute: strength
+      name: <dark_green>⚔ ꜰᴏʀᴄᴀ
+      lore:
+      - ''
+      - ' <gray>ᴀᴛᴜᴀʟ: <aqua>%strength_pts% <gray>ᴘᴛꜱ'
+      - ' <gray>ᴛᴏᴛᴀʟ: %strength%'
+      - ''
+      - ' <gray>ᴀᴜᴍᴇɴᴛᴀ ᴅᴀɴᴏ ɢᴇʀᴀʟ ᴇ'
+      - ' <gray>ᴅᴀɴᴏ ᴅᴇ <dark_green>ᴛᴇʀʀᴀ'
+      - ''
+      - ' <green>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴏᴄᴀʀ'
+    
+    dexterity:
+      slot: 12
+      material: YELLOW_DYE
+      attribute: dexterity
+      name: <yellow>⚡ ᴅᴇꜱᴛʀᴇᴢᴀ
+      lore:
+      - ''
+      - ' <gray>ᴀᴛᴜᴀʟ: <aqua>%dexterity_pts% <gray>ᴘᴛꜱ'
+      - ' <gray>ᴛᴏᴛᴀʟ: %dexterity%'
+      - ''
+      - ' <gray>ᴀᴜᴍᴇɴᴛᴀ ᴄʜᴀɴᴄᴇ ᴅᴇ ᴄʀɪᴛɪᴄᴏ'
+      - ' <gray>ᴇ ᴅᴀɴᴏ ᴅᴇ <yellow>ᴛʀᴏᴠᴀᴏ'
+      - ''
+      - ' <green>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴏᴄᴀʀ'
+    
+    intelligence:
+      slot: 14
+      material: LIGHT_BLUE_DYE
+      attribute: intelligence
+      name: <aqua>✦ ɪɴᴛᴇʟɪɢᴇɴᴄɪᴀ
+      lore:
+      - ''
+      - ' <gray>ᴀᴛᴜᴀʟ: <aqua>%intelligence_pts% <gray>ᴘᴛꜱ'
+      - ' <gray>ᴛᴏᴛᴀʟ: %intelligence%'
+      - ''
+      - ' <gray>ᴀᴜᴍᴇɴᴛᴀ ᴍᴀɴᴀ, ᴅᴀɴᴏ ᴅᴇ'
+      - ' <aqua>ᴀɢᴜᴀ <gray>ᴇ ʀᴇᴅᴜᴢ ᴄᴜꜱᴛᴏ ᴅᴇ ꜰᴇɪᴛɪᴄᴏ'
+      - ''
+      - ' <green>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴏᴄᴀʀ'
+    
+    defense:
+      slot: 16
+      material: RED_DYE
+      attribute: defense
+      name: <red>⛊ ᴅᴇꜰᴇꜱᴀ
+      lore:
+      - ''
+      - ' <gray>ᴀᴛᴜᴀʟ: <aqua>%defense_pts% <gray>ᴘᴛꜱ'
+      - ' <gray>ᴛᴏᴛᴀʟ: %defense%'
+      - ''
+      - ' <gray>ʀᴇᴅᴜᴢ ᴅᴀɴᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴇ'
+      - ' <gray>ᴀᴜᴍᴇɴᴛᴀ ᴅᴀɴᴏ ᴅᴇ <red>ꜰᴏɢᴏ'
+      - ''
+      - ' <green>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴏᴄᴀʀ'
+    
+    agility:
+      slot: 22
+      material: WHITE_DYE
+      attribute: agility
+      name: <white>✧ ᴀɢɪʟɪᴅᴀᴅᴇ
+      lore:
+      - ''
+      - ' <gray>ᴀᴛᴜᴀʟ: <aqua>%agility_pts% <gray>ᴘᴛꜱ'
+      - ' <gray>ᴛᴏᴛᴀʟ: %agility%'
+      - ''
+      - ' <gray>ᴀᴜᴍᴇɴᴛᴀ ᴄʜᴀɴᴄᴇ ᴅᴇ ᴅᴇꜱᴠɪᴏ'
+      - ' <gray>ᴇ ᴅᴀɴᴏ ᴅᴇ <white>ᴀʀ'
+      - ''
+      - ' <green>ᴄʟɪǫᴜᴇ ᴘᴀʀᴀ ᴀʟᴏᴄᴀʀ'
+    
+    back:
+      slot: 31
+      material: ARROW
+      name: <gray>← ᴠᴏʟᴛᴀʀ
+      action: back
+      lore:
+      - ''
+      - ' <gray>ᴠᴏʟᴛᴀ ᴀᴏ ᴘᴀɪɴᴇʟ ᴅᴏ ʜᴇʀᴏɪ'
