@@ -58,15 +58,7 @@ Sou uma pessoa dedicada, com facilidade para aprender e vontade de crescer na á
 
 Tenho consciência de que ainda estou no início da carreira, mas estou disposto a aprender, ouvir feedbacks e evoluir com a prática.
 
-## Disponibilidade
-
-- Cidade atual: Mato Grosso do Sul
-- Disponibilidade para mudança: Rio Grande do Sul
-- Interesse em atuação presencial ou híbrida
-
 ## Contato
 
-- **E-mail:** [preencher]
-- **Telefone/WhatsApp:** [preencher]
-- **GitHub:** [preencher]
-- **LinkedIn:** [preencher]
+- **E-mail:** pessoaeduardosoares@gmail.com
+- **Telefone/WhatsApp:** +55 67 98215-8600
