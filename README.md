@@ -61,4 +61,3 @@ Tenho consciência de que ainda estou no início da carreira, mas estou disposto
 ## Contato
 
 - **E-mail:** pessoaeduardosoares@gmail.com
-- **Telefone/WhatsApp:** +55 67 98215-8600
